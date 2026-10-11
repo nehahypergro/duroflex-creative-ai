@@ -1,0 +1,34 @@
+{
+  "requestedEngineLabel": "ChatGPT image 2.0",
+  "documentedModelId": "gpt-image-2",
+  "documentedSnapshot": "gpt-image-2-2026-04-21",
+  "verifiedAt": "2026-10-04",
+  "documentationUrls": [
+    "https://developers.openai.com/api/docs/models/gpt-image-2",
+    "https://developers.openai.com/api/docs/guides/image-prompting"
+  ],
+  "documentedCapabilities": {
+    "textInput": true,
+    "imageInput": true,
+    "imageOutput": true,
+    "generation": true,
+    "editing": true,
+    "outputFormats": [
+      "png",
+      "jpeg",
+      "webp"
+    ],
+    "imageFidelity": "high; input_fidelity omitted",
+    "size": "flexible subject to provider constraints; runtime validation pending"
+  },
+  "configurationStatus": "pending",
+  "accountAccess": "unverified",
+  "connectorModelMapping": "unverified",
+  "liveIntegration": false,
+  "generationStatus": "not-run",
+  "limits": [
+    "A documented model identifier does not establish connector configuration or account access.",
+    "Requested placement canvas may require a supported generation canvas and a separately reviewed complete-image export; no automatic resize or compositor is implemented.",
+    "Exact text rendering, identity fidelity and brand fit must be inspected in actual output."
+  ]
+}

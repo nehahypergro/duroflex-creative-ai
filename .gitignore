@@ -1,0 +1,20 @@
+node_modules/
+.env
+.env.local
+*.log
+.DS_Store
+output/
+clone-manifest.json
+
+# Private campaign state, generated media, local trials and credential files.
+work/
+clone-verification.json
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.pending
+__pycache__/
+*.pyc

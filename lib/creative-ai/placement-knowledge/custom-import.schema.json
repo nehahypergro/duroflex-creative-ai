@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:creative-ai:placement-knowledge:custom-import.schema.json",
+  "type": "object",
+  "properties": {
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "platform": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "placement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assetType": {
+            "type": "string",
+            "minLength": 1
+          },
+          "channel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "market": {
+            "type": "string",
+            "minLength": 1
+          },
+          "useCase": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canvas": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "height": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "unit": {
+                "enum": [
+                  "px",
+                  "mm",
+                  "in"
+                ]
+              },
+              "ratio": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "certification": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "width",
+              "height",
+              "unit"
+            ],
+            "additionalProperties": false
+          },
+          "nativeFields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "required": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "maxChars": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "countMethod": {
+                  "enum": [
+                    "unicode-code-points",
+                    "utf16-code-units",
+                    "grapheme-clusters",
+                    "unspecified"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "required"
+              ],
+              "additionalProperties": false,
+              "dependentRequired": {
+                "maxChars": [
+                  "countMethod"
+                ]
+              }
+            }
+          },
+          "exportContract": {
+            "type": "object",
+            "properties": {
+              "formats": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "maxBytes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "formats"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "platform",
+          "publisher",
+          "placement",
+          "assetType",
+          "canvas"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^user:"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verifiedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "limitations": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "url",
+        "verifiedAt"
+      ],
+      "additionalProperties": false
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "rows",
+    "source"
+  ],
+  "additionalProperties": false
+}

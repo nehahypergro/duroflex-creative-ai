@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "agentId": "marketing-strategist",
+  "status": "planned-not-run",
+  "qualifiedReviewerValidationOccurred": false,
+  "purpose": "Develop expertise through annotated examples, critique and qualified review when available; no human career experience is claimed.",
+  "caseMatrix": [
+    "Missing objective and audience",
+    "Conflicting essential product facts",
+    "Explicit requirement versus inferred preference",
+    "Awareness versus action assignment",
+    "Verified landing facts versus unavailable destination",
+    "Cross-market cultural uncertainty",
+    "Meta creative observations with no performance evidence",
+    "Narrow assignment with only one viable route",
+    "Format-only WHO versus actual customer situation",
+    "Layout-only BY versus customer-facing proposition",
+    "Exact destination URL and action proof versus homepage-only evidence",
+    "Awareness introduction without invented pain"
+  ],
+  "hardFailureCriteria": [
+    "Fabricated product/offer/testimonial/claim",
+    "Misclassified or unsupported evidence",
+    "Essential conflict hidden",
+    "Explicit brand requirement violated",
+    "Positioning changed without assignment authorization",
+    "Predicted conversions or winning-ad assertion from library visibility",
+    "Downstream copy/design ownership crossed",
+    "Customer hypothesis labeled as measured without eligible customer/campaign facts",
+    "Destination verified using evidence from a different page",
+    "Explicit desired action silently changed"
+  ],
+  "qualitativeRubricAfterHardPass": [
+    "Customer relevance",
+    "Product truth and proof applicability",
+    "Brand fit and recognition continuity",
+    "Distinctiveness without invented recognition data",
+    "Clarity and hierarchy",
+    "Channel and destination fit",
+    "Strongest objection and tradeoffs",
+    "Useful uncertainty and falsifiable evaluation hypothesis"
+  ],
+  "reviewProcedure": "Qualified reviewers independently annotate hard failures and concise reasons for preferences across supported routes. Preserve disagreements and source coverage. Multiple passes by the same model are not independent evidence. No reviewer score threshold or inter-rater performance is claimed yet.",
+  "improvementProcedure": "Revise principles or examples when verified critique reveals a failure, version changes, rerun software regressions, and evaluate on held-out cases. Keep software checks, expert assessment and campaign outcomes as separate evidence classes.",
+  "futureOutcomeEvaluation": "Where authorized and measurable, compare strategies with suitable controls and relevant measures. Account for audience, media, execution, destination and measurement differences; do not attribute outcomes solely to strategy without an adequate design."
+}

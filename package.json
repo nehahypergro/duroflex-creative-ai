@@ -1,0 +1,19 @@
+{
+  "name": "duroflex-group-creative-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Independent Duroflex group Creative AI studio with isolated Duroflex and Sleepyhead workspaces",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/creative-ai/*.test.js tests/group-workspace.test.js"
+  },
+  "engines": {
+    "node": ">=20.9"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^2.4.5",
+    "sharp": "^0.34.5"
+  }
+}

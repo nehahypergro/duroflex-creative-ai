@@ -1,0 +1,121 @@
+{
+  "type": "object",
+  "properties": {
+    "assignmentId": {
+      "type": "string"
+    },
+    "conceptId": {
+      "type": "string"
+    },
+    "placementId": {
+      "type": "string"
+    },
+    "packageHash": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "finished",
+        "pending",
+        "failed"
+      ]
+    },
+    "artifact": {
+      "type": "object",
+      "properties": {
+        "origin": {
+          "type": "string",
+          "enum": [
+            "generated",
+            "synthetic-placeholder"
+          ]
+        },
+        "imageData": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "origin",
+        "imageData"
+      ],
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "passed",
+            "failed",
+            "pending"
+          ]
+        },
+        "evidenceStatus": {
+          "type": "string",
+          "enum": [
+            "runtime-review",
+            "synthetic-simulation",
+            "pending"
+          ]
+        },
+        "artifactHash": {
+          "type": "string"
+        },
+        "packageHash": {
+          "type": "string"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pass",
+                  "fail",
+                  "pending"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "status",
+              "note"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "status",
+        "evidenceStatus",
+        "artifactHash",
+        "packageHash",
+        "checks"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "assignmentId",
+    "conceptId",
+    "placementId",
+    "packageHash",
+    "status",
+    "artifact",
+    "review"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/graphic-designer/result/v1"
+}

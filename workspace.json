@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "name": "Duroflex Group Creative AI",
+  "brands": [
+    {
+      "id": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "Duroflex",
+      "brandUrl": "https://www.duroflexworld.com/"
+    },
+    {
+      "id": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "name": "Sleepyhead",
+      "brandUrl": "https://mysleepyhead.com/"
+    }
+  ],
+  "defaultBrandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "port": 1842,
+  "productProtectionRequired": true,
+  "trustWebsiteProductImages": true,
+  "productHandlingMode": "reference-led"
+}

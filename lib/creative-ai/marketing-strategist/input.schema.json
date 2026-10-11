@@ -1,0 +1,450 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/marketing-strategist/input/v1",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "assignment": {
+      "type": "object",
+      "properties": {
+        "goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "brief": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "productName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "objective": {
+          "type": "string",
+          "enum": [
+            "awareness",
+            "consideration",
+            "action",
+            "retention",
+            "other"
+          ]
+        },
+        "objectiveDetail": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "audience": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "market": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "offerFactIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 180
+              },
+              "channel": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "specificationStatus": {
+                "type": "string",
+                "enum": [
+                  "supplied",
+                  "pending"
+                ]
+              },
+              "constraints": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "minItems": 0,
+                "maxItems": 100
+              },
+              "dimensions": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "width",
+                  "height"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "channel",
+              "specificationStatus",
+              "constraints"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 30
+        },
+        "buyingSituation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "buyingBarrier": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "desiredAction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "landingPageUrl": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "goal",
+        "brief",
+        "formats"
+      ],
+      "additionalProperties": false
+    },
+    "research": {
+      "type": "object",
+      "description": "Existing dossier payload: runtime delegates to lib/brand-dossier/contract.js validateResearch. The broader researcher contract remains pending; this boundary is not its replacement."
+    },
+    "guardian": {
+      "type": "object",
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "minItems": 0,
+                "maxItems": 100
+              }
+            },
+            "required": [
+              "id",
+              "text",
+              "sourceIds"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "preferences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "minItems": 0,
+                "maxItems": 100
+              }
+            },
+            "required": [
+              "id",
+              "text",
+              "sourceIds"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "establishedPositioningFactIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "minItems": 0,
+          "maxItems": 100
+        }
+      },
+      "required": [
+        "requirements",
+        "preferences",
+        "establishedPositioningFactIds"
+      ],
+      "additionalProperties": false
+    },
+    "additionalSources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 180
+          },
+          "reference": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "collectedAt": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "available",
+              "partial",
+              "unavailable"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "site",
+              "product",
+              "guidelines",
+              "asset",
+              "social",
+              "meta",
+              "customer",
+              "campaign",
+              "destination",
+              "user"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "reference",
+          "collectedAt",
+          "status",
+          "kind"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "product",
+              "offer",
+              "customer",
+              "campaign",
+              "destination",
+              "brand"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "supported",
+              "conflicted",
+              "unverified"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "minItems": 0,
+            "maxItems": 100
+          },
+          "essential": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "text",
+          "status",
+          "sourceIds",
+          "essential"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "factIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "minItems": 0,
+            "maxItems": 100
+          },
+          "requirementIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "minItems": 0,
+            "maxItems": 100
+          },
+          "essential": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "description",
+          "factIds",
+          "requirementIds",
+          "essential"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "version",
+    "assignment",
+    "research",
+    "guardian",
+    "additionalSources",
+    "facts",
+    "conflicts"
+  ],
+  "additionalProperties": false
+}

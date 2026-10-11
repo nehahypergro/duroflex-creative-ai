@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "agentId": "creative-reviewer",
+  "assignmentId": "synthetic-bottle-assignment",
+  "conceptId": "concept-c355b7d5eaa141c0-continuity",
+  "route": "continuity",
+  "placementId": "synthetic-small-square",
+  "packageHash": "3e6f1e1a1ff7cd87c1aea719ed390cd12855ca7b81e1ff668fc7e904f34d607f",
+  "artifactHash": "f0b9771f9529c5bfe3fc4b09c461b30c6fe62ba3ba98d1c277cb45122d00aab1",
+  "evidenceMode": "synthetic-simulation",
+  "decision": "revise",
+  "score": 95,
+  "qualityVerified": true,
+  "qualityScores": [
+    {
+      "criterion": "communication",
+      "score": 95,
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "communication",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "usedInScore": true
+    },
+    {
+      "criterion": "brandRecognition",
+      "score": 95,
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "brandRecognition",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "usedInScore": true
+    },
+    {
+      "criterion": "placementFit",
+      "score": 95,
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "placementFit",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "usedInScore": true
+    },
+    {
+      "criterion": "visualCraft",
+      "score": 95,
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "visualCraft",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "usedInScore": true
+    },
+    {
+      "criterion": "emotionalAudienceFit",
+      "score": 95,
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "emotionalAudienceFit",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "usedInScore": true
+    }
+  ],
+  "versionBindings": {
+    "conceptHash": "57d9a0d0a3ee093bfba570fe70419ce9de4832e7e3f3f126815285e20391d64b",
+    "copyHash": "6dabe9a7933af28d0dd3b4f39f1e699315c6f1a20f3c14417b32a633d44e085e",
+    "artHash": "d562b9202542c2743d7b8e2480b8f6208d276d3d4b7cb2851c50451d548d3f31",
+    "brandHash": "2c260a403a3a5e9a8044d1216f1fcd5dbbebc067c1fc63e6c2af51157cc0397f",
+    "placementHash": "40f4155ecdc1af3f22aab206d10b073f5b58e4f1470b87de2f3b84fa06b02ffb"
+  },
+  "policy": {
+    "version": 1,
+    "threshold": 75,
+    "minimumEvidenceConfidence": 0.7,
+    "maxCorrectionCycles": 1,
+    "weights": {
+      "communication": 30,
+      "brandRecognition": 25,
+      "placementFit": 20,
+      "visualCraft": 15,
+      "emotionalAudienceFit": 10
+    },
+    "criticalCriteria": [
+      "logo-identity",
+      "product-identity",
+      "supported-claims",
+      "exact-required-copy",
+      "required-text-legibility",
+      "mandatory-brand-rules",
+      "verified-upload-constraints",
+      "reference-boundary"
+    ],
+    "status": "initial-uncalibrated-policy",
+    "limits": [
+      "Weights, threshold and confidence floor are starting policy, not empirical performance or human approval guarantees.",
+      "Inferred preferences are advisory; exploration is evaluated for its own concept intent.",
+      "Rendering tolerance is criterion-specific; exact wording remains exact, while identity is compared semantically rather than by pixel equality."
+    ]
+  },
+  "criticalChecks": [
+    {
+      "criterion": "logo-identity",
+      "status": "not-applicable",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "logo-identity",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "applicabilityReason": "Synthetic practice review, not inspection.",
+      "tolerance": "Semantic rendering tolerance only; wording unchanged."
+    },
+    {
+      "criterion": "product-identity",
+      "status": "not-applicable",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "product-identity",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "applicabilityReason": "Synthetic practice review, not inspection.",
+      "tolerance": "Semantic rendering tolerance only; wording unchanged."
+    },
+    {
+      "criterion": "supported-claims",
+      "status": "pass",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "supported-claims",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "applicabilityReason": "Synthetic practice review, not inspection.",
+      "tolerance": "Semantic rendering tolerance only; wording unchanged."
+    },
+    {
+      "criterion": "exact-required-copy",
+      "status": "fail",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "exact-required-copy",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "applicabilityReason": "Synthetic practice review, not inspection.",
+      "tolerance": "Semantic rendering tolerance only; wording unchanged."
+    },
+    {
+      "criterion": "required-text-legibility",
+      "status": "pass",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "required-text-legibility",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "applicabilityReason": "Synthetic practice review, not inspection.",
+      "tolerance": "Semantic rendering tolerance only; wording unchanged."
+    },
+    {
+      "criterion": "mandatory-brand-rules",
+      "status": "pass",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "mandatory-brand-rules",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": [
+          "no-medical",
+          "fixture-palette"
+        ]
+      },
+      "applicabilityReason": "Synthetic practice review, not inspection.",
+      "tolerance": "Semantic rendering tolerance only; wording unchanged."
+    },
+    {
+      "criterion": "verified-upload-constraints",
+      "status": "pass",
+      "confidence": 1,
+      "evidence": {
+        "method": "raster-measurement",
+        "observation": "Decoded 200×200 png; 1088 bytes.",
+        "expected": "Applicable verified mandatory upload rules; unknown algorithms remain unknown.",
+        "location": "whole image/file",
+        "sourceIds": [
+          "google-upload"
+        ],
+        "ruleIds": [
+          "google-upload-file",
+          "google-upload-small-square"
+        ]
+      },
+      "applicabilityReason": "Only mandatory verified-primary/user-specified placement rules are critical.",
+      "tolerance": "Use publisher exact dimensions/file limits; preserve ambiguous byte convention."
+    },
+    {
+      "criterion": "reference-boundary",
+      "status": "pass",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion.",
+        "expected": "reference-boundary",
+        "location": "whole synthetic image",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "applicabilityReason": "Synthetic practice review, not inspection.",
+      "tolerance": "Semantic rendering tolerance only; wording unchanged."
+    }
+  ],
+  "findings": [
+    {
+      "id": "synthetic-finding",
+      "criterion": "exact-required-copy",
+      "severity": "critical",
+      "authority": "policy",
+      "defect": "Synthetic declared discrepancy; no actual defect detection occurred.",
+      "location": "headline area",
+      "confidence": 1,
+      "evidence": {
+        "method": "synthetic-simulation",
+        "observation": "Authored comparison assertion only.",
+        "expected": "Exact headline and concept communication.",
+        "location": "headline area",
+        "sourceIds": [
+          "review-policy"
+        ],
+        "ruleIds": []
+      },
+      "correction": "Regenerate exact headline while preserving the rest of the intended composition.",
+      "preserve": [
+        "locked-copy",
+        "product-identity",
+        "brand-rules"
+      ],
+      "cause": "generated-typo",
+      "comparison": [
+        {
+          "stage": "artwork",
+          "observation": "Synthetic stage comparison; not inspected.",
+          "referenceId": "3e6f1e1a1ff7cd87c1aea719ed390cd12855ca7b81e1ff668fc7e904f34d607f"
+        },
+        {
+          "stage": "copy",
+          "observation": "Synthetic stage comparison; not inspected.",
+          "referenceId": "3e6f1e1a1ff7cd87c1aea719ed390cd12855ca7b81e1ff668fc7e904f34d607f"
+        }
+      ]
+    }
+  ],
+  "routing": [
+    {
+      "findingId": "synthetic-finding",
+      "status": "targeted-correction",
+      "owner": "graphic-designer",
+      "downstream": [
+        "graphic-designer",
+        "creative-reviewer"
+      ],
+      "reason": "Earliest erroneous decision supported by the declared evidence comparison.",
+      "correction": "Regenerate exact headline while preserving the rest of the intended composition.",
+      "preserve": [
+        "locked-copy",
+        "product-identity",
+        "brand-rules"
+      ]
+    }
+  ],
+  "verificationDependencies": [],
+  "userNote": "Synthetic review simulation; no live creative inspection. Corrections remain.",
+  "artifactAvailable": true,
+  "limits": [
+    "Initial weights/threshold are uncalibrated; no human-approval or effectiveness guarantee.",
+    "Evidence is supplied evaluator attestation; no OCR, vision or semantic evaluator is connected.",
+    "Numerical raster checks are performed independently and cannot establish creative quality.",
+    "Exploration differences from observed historical style are not mandatory-rule failures."
+  ],
+  "reviewHash": "85cd56236814c02554ed952a67bf938ffad723ba0320a01f4d310082a854ed8a"
+}

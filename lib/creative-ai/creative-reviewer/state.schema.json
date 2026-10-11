@@ -1,0 +1,138 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "number"
+    },
+    "unitKey": {
+      "type": "string"
+    },
+    "assignmentId": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    },
+    "placementId": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "initial-review",
+        "correction-planned",
+        "final-review",
+        "terminal"
+      ]
+    },
+    "correctionCycles": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "maxCorrectionCycles": {
+      "const": 1
+    },
+    "currentPackageHash": {
+      "type": "string"
+    },
+    "currentArtifactHash": {
+      "type": "string"
+    },
+    "authorizationId": {
+      "type": "string"
+    },
+    "initialReportHash": {
+      "type": "string"
+    },
+    "finalReportHash": {
+      "type": "string"
+    },
+    "delivery": {
+      "type": "string",
+      "enum": [
+        "none",
+        "ready",
+        "flagged-cap-reached",
+        "no-output",
+        "verification-pending"
+      ]
+    },
+    "lastAvailable": {},
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "phase": {
+            "type": "string"
+          },
+          "packageHash": {
+            "type": "string"
+          },
+          "artifactHash": {
+            "type": "string"
+          },
+          "reviewHash": {
+            "type": "string"
+          },
+          "decision": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "phase",
+          "packageHash",
+          "artifactHash",
+          "reviewHash",
+          "decision"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "verificationRecovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "previousReportHash",
+        "reportHash"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "reserved",
+            "complete"
+          ]
+        },
+        "previousReportHash": {
+          "type": "string"
+        },
+        "reportHash": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "version",
+    "unitKey",
+    "assignmentId",
+    "route",
+    "placementId",
+    "phase",
+    "correctionCycles",
+    "maxCorrectionCycles",
+    "currentPackageHash",
+    "currentArtifactHash",
+    "authorizationId",
+    "initialReportHash",
+    "finalReportHash",
+    "delivery",
+    "lastAvailable",
+    "history"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/creative-reviewer/state/v1"
+}

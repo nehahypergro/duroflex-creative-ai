@@ -1,0 +1,1257 @@
+{
+  "version": "1.0.0",
+  "verifiedAt": "2026-10-04",
+  "definition": "Included = actionable partial verified requirements; conditional = job/publisher inputs or evidence needed; unavailable = official source access prevented adoption; future = deferred, not selectable.",
+  "inventory": [
+    {
+      "profileId": "google-upload-small-square",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-vertical-rectangle",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-square",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-triple-widescreen",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-inline-rectangle",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-large-rectangle",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-netboard",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-skyscraper",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-wide-skyscraper",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-half-page",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-portrait",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-banner",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-leaderboard",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-top-banner",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-large-leaderboard",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-billboard",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-panorama",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-mobile-banner-300",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-mobile-banner-320",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-large-mobile-banner",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention; verify acceptance near boundary"
+      ]
+    },
+    {
+      "profileId": "google-upload-pl-billboard",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention"
+      ]
+    },
+    {
+      "profileId": "google-upload-pl-double-billboard",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention"
+      ]
+    },
+    {
+      "profileId": "google-upload-pl-triple-billboard",
+      "family": "uploaded-display",
+      "status": "included",
+      "gaps": [
+        "KB byte convention"
+      ]
+    },
+    {
+      "profileId": "google-rda",
+      "family": "responsive-advertising",
+      "status": "included",
+      "gaps": [
+        "Character counting exact algorithm",
+        "Displayed crops and combinations",
+        "Image file formats not given by selected sources"
+      ]
+    },
+    {
+      "profileId": "google-demand-gen",
+      "family": "responsive-advertising",
+      "status": "included",
+      "gaps": [
+        "Character counting exact algorithm",
+        "Displayed crops and combinations",
+        "Image file format/size not given by this dedicated page"
+      ]
+    },
+    {
+      "profileId": "google-pmax",
+      "family": "responsive-advertising",
+      "status": "included",
+      "gaps": [
+        "Character counting exact algorithm",
+        "Displayed crops and combinations"
+      ]
+    },
+    {
+      "profileId": "linkedin-image-landscape",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Hard native text ceilings/count algorithm",
+        "Supported orientation ratios beyond published recommendations",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "linkedin-image-square",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Hard native text ceilings/count algorithm",
+        "Supported orientation ratios beyond published recommendations",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "linkedin-image-vertical",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Hard native text ceilings/count algorithm",
+        "Supported orientation ratios beyond published recommendations",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "linkedin-carousel",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Hard text limits and counting",
+        "Exact crop requirements",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "linkedin-document",
+      "family": "documents",
+      "status": "included",
+      "gaps": [
+        "Publisher word/character algorithm",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "pinterest-standard",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Exact character counting",
+        "Safe zone reference canvas for organic Pin",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "pinterest-organic",
+      "family": "social-organic",
+      "status": "included",
+      "gaps": [
+        "Exact character counting",
+        "Safe zone reference canvas for organic Pin",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "pinterest-carousel-non-sales",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Exact character counting",
+        "Safe zone reference canvas for organic Pin",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "x-standalone",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Exact weighted Unicode/link counts",
+        "Image dimensions for standalone/website-card",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "x-website-card",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Exact weighted Unicode/link counts",
+        "Image dimensions for standalone/website-card",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "x-app-button",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Exact weighted Unicode/link counts",
+        "Image dimensions for standalone/website-card",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "x-website-carousel",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Exact weighted Unicode/link counts",
+        "Image dimensions for standalone/website-card",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "x-app-carousel",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Exact weighted Unicode/link counts",
+        "Image dimensions for standalone/website-card",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "x-organic-photo",
+      "family": "social-organic",
+      "status": "included",
+      "gaps": [
+        "Account text limit/count method",
+        "Ratios/crops",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "reddit-feed",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Byte/count conventions",
+        "Rendered crop"
+      ]
+    },
+    {
+      "profileId": "reddit-conversation",
+      "family": "social-paid",
+      "status": "included",
+      "gaps": [
+        "Byte/count conventions",
+        "Rendered crop"
+      ]
+    },
+    {
+      "profileId": "tiktok-network-interstitial",
+      "family": "uploaded-display",
+      "status": "conditional",
+      "gaps": [
+        "Native field requirements/counting",
+        "Safe areas",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "tiktok-network-app-open",
+      "family": "uploaded-display",
+      "status": "conditional",
+      "gaps": [
+        "Native field requirements/counting",
+        "Safe areas",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "tiktok-network-native",
+      "family": "uploaded-display",
+      "status": "conditional",
+      "gaps": [
+        "Native field requirements/counting",
+        "Safe areas",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "tiktok-network-banner",
+      "family": "uploaded-display",
+      "status": "conditional",
+      "gaps": [
+        "Native field requirements/counting",
+        "Safe areas",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "tiktok-network-exclusive-banner",
+      "family": "uploaded-display",
+      "status": "conditional",
+      "gaps": [
+        "Native field requirements/counting",
+        "Safe areas",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "tiktok-takeover",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Safe-zone template",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "tiktok-feed-carousel",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Current count/resolution/file limits",
+        "Required audio; outside pure static delivery"
+      ]
+    },
+    {
+      "profileId": "meta-facebook-feed",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "Dimensions/ratios",
+        "File types/size",
+        "Native required fields/limits/counting",
+        "Crop and safe-area reference canvas"
+      ]
+    },
+    {
+      "profileId": "meta-facebook-story",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "Dimensions/ratios",
+        "File types/size",
+        "Native required fields/limits/counting",
+        "Crop and safe-area reference canvas"
+      ]
+    },
+    {
+      "profileId": "meta-facebook-carousel",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "Dimensions/ratios",
+        "File types/size",
+        "Native required fields/limits/counting",
+        "Crop and safe-area reference canvas"
+      ]
+    },
+    {
+      "profileId": "meta-facebook-organic-feed",
+      "family": "social-organic",
+      "status": "unavailable",
+      "gaps": [
+        "Organic dimensions/file/count/text requirements"
+      ]
+    },
+    {
+      "profileId": "meta-facebook-organic-story",
+      "family": "social-organic",
+      "status": "unavailable",
+      "gaps": [
+        "Organic dimensions/file/count/text requirements"
+      ]
+    },
+    {
+      "profileId": "meta-facebook-organic-carousel",
+      "family": "social-organic",
+      "status": "unavailable",
+      "gaps": [
+        "Organic dimensions/file/count/text requirements"
+      ]
+    },
+    {
+      "profileId": "meta-instagram-feed",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "Dimensions/ratios",
+        "File types/size",
+        "Native required fields/limits/counting",
+        "Crop and safe-area reference canvas"
+      ]
+    },
+    {
+      "profileId": "meta-instagram-story",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "Dimensions/ratios",
+        "File types/size",
+        "Native required fields/limits/counting",
+        "Crop and safe-area reference canvas"
+      ]
+    },
+    {
+      "profileId": "meta-instagram-carousel",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "Dimensions/ratios",
+        "File types/size",
+        "Native required fields/limits/counting",
+        "Crop and safe-area reference canvas"
+      ]
+    },
+    {
+      "profileId": "meta-instagram-organic-feed",
+      "family": "social-organic",
+      "status": "unavailable",
+      "gaps": [
+        "Organic dimensions/file/count/text requirements"
+      ]
+    },
+    {
+      "profileId": "meta-instagram-organic-story",
+      "family": "social-organic",
+      "status": "unavailable",
+      "gaps": [
+        "Organic dimensions/file/count/text requirements"
+      ]
+    },
+    {
+      "profileId": "meta-instagram-organic-carousel",
+      "family": "social-organic",
+      "status": "unavailable",
+      "gaps": [
+        "Organic dimensions/file/count/text requirements"
+      ]
+    },
+    {
+      "profileId": "meta-right-column",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Image eligibility and technical/native specs"
+      ]
+    },
+    {
+      "profileId": "meta-marketplace",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Image eligibility and technical/native specs"
+      ]
+    },
+    {
+      "profileId": "meta-search",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Image eligibility and technical/native specs"
+      ]
+    },
+    {
+      "profileId": "meta-reels-still-eligibility",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Image eligibility and technical/native specs"
+      ]
+    },
+    {
+      "profileId": "meta-audience-network-native",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Image eligibility and technical/native specs"
+      ]
+    },
+    {
+      "profileId": "meta-collection-cover",
+      "family": "social-paid",
+      "status": "conditional",
+      "gaps": [
+        "Image eligibility and technical/native specs"
+      ]
+    },
+    {
+      "profileId": "snapchat-single-image",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "File/dimension/count specs",
+        "Native required fields/limits"
+      ]
+    },
+    {
+      "profileId": "snapchat-story",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "File/dimension/count specs",
+        "Native required fields/limits"
+      ]
+    },
+    {
+      "profileId": "snapchat-collection",
+      "family": "social-paid",
+      "status": "unavailable",
+      "gaps": [
+        "File/dimension/count specs",
+        "Native required fields/limits"
+      ]
+    },
+    {
+      "profileId": "owned-hero",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "owned-promotional-banner",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "owned-in-app-banner",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "owned-modal-offer",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "owned-social-share-preview",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "owned-landing-page-card",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "owned-blog-feature-image",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "owned-web-infographic",
+      "family": "owned-web-app",
+      "status": "conditional",
+      "gaps": [
+        "Template-specific pixel/file limits",
+        "Safe-area overlays",
+        "Applicable accessibility requirement"
+      ]
+    },
+    {
+      "profileId": "email-hero",
+      "family": "email",
+      "status": "conditional",
+      "gaps": [
+        "Provider upload ceiling",
+        "Display width/DPR",
+        "Dark-mode crop and image blocking"
+      ]
+    },
+    {
+      "profileId": "email-offer-card",
+      "family": "email",
+      "status": "conditional",
+      "gaps": [
+        "Provider upload ceiling",
+        "Display width/DPR",
+        "Dark-mode crop and image blocking"
+      ]
+    },
+    {
+      "profileId": "email-newsletter-infographic",
+      "family": "email",
+      "status": "conditional",
+      "gaps": [
+        "Provider upload ceiling",
+        "Display width/DPR",
+        "Dark-mode crop and image blocking"
+      ]
+    },
+    {
+      "profileId": "email-signature-banner",
+      "family": "email",
+      "status": "conditional",
+      "gaps": [
+        "Provider upload ceiling",
+        "Display width/DPR",
+        "Dark-mode crop and image blocking"
+      ]
+    },
+    {
+      "profileId": "notification-ios-standard",
+      "family": "notifications",
+      "status": "conditional",
+      "gaps": [
+        "Native hard limits/count method",
+        "Provider payload-byte ceiling",
+        "Image attachment type/size/dimension",
+        "Expanded/collapsed display"
+      ]
+    },
+    {
+      "profileId": "notification-ios-rich-attachment",
+      "family": "notifications",
+      "status": "conditional",
+      "gaps": [
+        "Native hard limits/count method",
+        "Provider payload-byte ceiling",
+        "Image attachment type/size/dimension",
+        "Expanded/collapsed display"
+      ]
+    },
+    {
+      "profileId": "notification-android-standard",
+      "family": "notifications",
+      "status": "conditional",
+      "gaps": [
+        "Native hard limits/count method",
+        "Provider payload-byte ceiling",
+        "Image attachment type/size/dimension",
+        "Expanded/collapsed display"
+      ]
+    },
+    {
+      "profileId": "notification-android-big-picture",
+      "family": "notifications",
+      "status": "conditional",
+      "gaps": [
+        "Native hard limits/count method",
+        "Provider payload-byte ceiling",
+        "Image attachment type/size/dimension",
+        "Expanded/collapsed display"
+      ]
+    },
+    {
+      "profileId": "notification-web-standard",
+      "family": "notifications",
+      "status": "conditional",
+      "gaps": [
+        "Native hard limits/count method",
+        "Provider payload-byte ceiling",
+        "Image attachment type/size/dimension",
+        "Expanded/collapsed display"
+      ]
+    },
+    {
+      "profileId": "notification-web-rich-image",
+      "family": "notifications",
+      "status": "conditional",
+      "gaps": [
+        "Native hard limits/count method",
+        "Provider payload-byte ceiling",
+        "Image attachment type/size/dimension",
+        "Expanded/collapsed display"
+      ]
+    },
+    {
+      "profileId": "notification-owned-in-app-message",
+      "family": "notifications",
+      "status": "conditional",
+      "gaps": [
+        "Native hard limits/count method",
+        "Provider payload-byte ceiling",
+        "Image attachment type/size/dimension",
+        "Expanded/collapsed display"
+      ]
+    },
+    {
+      "profileId": "print-flyer",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-leaflet",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-poster",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-brochure",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-postcard",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-business-card",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-print-ad",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-retail-shelf-talker",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-packaging-insert",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "print-roll-up-banner",
+      "family": "print",
+      "status": "conditional",
+      "gaps": [
+        "Printer numeric specifications",
+        "Fold/crease/die-cut template",
+        "PDF standard/font/overprint requirements"
+      ]
+    },
+    {
+      "profileId": "ooh-billboard",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "ooh-street-furniture",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "ooh-transit-poster",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "ooh-vehicle-wrap",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "ooh-retail-sign",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "ooh-digital-screen-still",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "ooh-airport-panel",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "ooh-stadium-panel",
+      "family": "out-of-home",
+      "status": "conditional",
+      "gaps": [
+        "Operator size/ratio/bleed/DPI/color/file rules",
+        "Local content restrictions"
+      ]
+    },
+    {
+      "profileId": "merchant-primary",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Minimum effective-date conflict",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "shopify-product",
+      "family": "commerce",
+      "status": "included",
+      "gaps": [
+        "Theme display size",
+        "Byte convention",
+        "File types not specified by this source section"
+      ]
+    },
+    {
+      "profileId": "shopify-collection",
+      "family": "commerce",
+      "status": "included",
+      "gaps": [
+        "Theme display size",
+        "Byte convention",
+        "File types not specified by this source section"
+      ]
+    },
+    {
+      "profileId": "commerce-marketplace-main",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "commerce-marketplace-gallery",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "commerce-enhanced-product-content",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "commerce-catalog-cover",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "commerce-catalog-product-tile",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "commerce-price-list",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "commerce-restaurant-menu",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "commerce-comparison-chart",
+      "family": "commerce",
+      "status": "conditional",
+      "gaps": [
+        "Publisher restrictions on added text",
+        "Image/file/native limits",
+        "Locale/price update semantics"
+      ]
+    },
+    {
+      "profileId": "youtube-video-thumbnail-mobile",
+      "family": "related-static",
+      "status": "included",
+      "gaps": [
+        "Account eligibility",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "youtube-video-thumbnail-desktop",
+      "family": "related-static",
+      "status": "included",
+      "gaps": [
+        "Account eligibility",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "youtube-podcast-thumbnail-mobile",
+      "family": "related-static",
+      "status": "included",
+      "gaps": [
+        "Account eligibility",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "youtube-podcast-thumbnail-desktop",
+      "family": "related-static",
+      "status": "included",
+      "gaps": [
+        "Account eligibility",
+        "Byte convention"
+      ]
+    },
+    {
+      "profileId": "related-event-invitation",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-event-agenda",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-sponsorship-board",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-presentation-cover",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-sales-one-pager",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-downloadable-infographic",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-app-store-screenshot",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-business-profile-cover",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    },
+    {
+      "profileId": "related-qr-poster",
+      "family": "related-static",
+      "status": "conditional",
+      "gaps": [
+        "Publisher/client-specific requirements"
+      ]
+    }
+  ],
+  "future": [
+    {
+      "id": "video-motion",
+      "status": "future",
+      "reason": "Out of current static scope"
+    },
+    {
+      "id": "html5-amphtml",
+      "status": "future",
+      "reason": "Non-raster creative delivery/runtime not implemented"
+    },
+    {
+      "id": "full-marketplace-specific",
+      "status": "future",
+      "reason": "Amazon/eBay/retailer-specific templates require authoritative verification"
+    },
+    {
+      "id": "regional-publishers",
+      "status": "future",
+      "reason": "Local ad networks, publishers and printers require supplied specifications"
+    },
+    {
+      "id": "shorts-custom-thumbnail",
+      "status": "future",
+      "reason": "Current upload eligibility/workflow needs separate verification"
+    },
+    {
+      "id": "user-dimension-list",
+      "status": "future",
+      "reason": "User list pending; schema/import foundation ready"
+    },
+    {
+      "id": "all-conceivable-static",
+      "status": "future",
+      "reason": "Open-ended ecosystem; no universal exhaustive claim"
+    }
+  ]
+}

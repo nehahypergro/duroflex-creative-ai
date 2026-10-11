@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "assignment": {
+    "goal": "Explain the fictional bottle for consideration",
+    "brief": "Synthetic practice assignment: introduce the bottle without medical or environmental superiority claims.",
+    "productName": "Fictional Everyday Bottle",
+    "objective": "consideration",
+    "market": "Market unspecified",
+    "language": "English",
+    "formats": [
+      {
+        "id": "social-static",
+        "label": "Social static",
+        "channel": "Social feed",
+        "specificationStatus": "pending",
+        "constraints": []
+      }
+    ]
+  },
+  "research": {
+    "version": 1,
+    "event": "research.completed",
+    "researchId": "demo-template-v1",
+    "brandName": "Sample Brand",
+    "demo": true,
+    "completedAt": "2026-10-04T00:00:00Z",
+    "sources": [
+      {
+        "id": "sample",
+        "kind": "asset",
+        "status": "available",
+        "label": "Locally authored demonstration artwork",
+        "reference": "demo.js / fictional layout illustration",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "note": "Not an official brand asset."
+      },
+      {
+        "id": "site",
+        "kind": "site",
+        "status": "unavailable",
+        "label": "site evidence",
+        "reference": "Not supplied / not collected",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "note": "No live research or supplied document in this demonstration."
+      },
+      {
+        "id": "product",
+        "kind": "product",
+        "status": "unavailable",
+        "label": "product evidence",
+        "reference": "Not supplied / not collected",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "note": "No live research or supplied document in this demonstration."
+      },
+      {
+        "id": "guidelines",
+        "kind": "guidelines",
+        "status": "unavailable",
+        "label": "guidelines evidence",
+        "reference": "Not supplied / not collected",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "note": "No live research or supplied document in this demonstration."
+      },
+      {
+        "id": "social",
+        "kind": "social",
+        "status": "unavailable",
+        "label": "social evidence",
+        "reference": "Not supplied / not collected",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "note": "No live research or supplied document in this demonstration."
+      },
+      {
+        "id": "meta",
+        "kind": "meta",
+        "status": "unavailable",
+        "label": "meta evidence",
+        "reference": "Not supplied / not collected",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "note": "Advertiser identity and collection access unverified. No ads collected."
+      }
+    ],
+    "assets": [
+      {
+        "id": "art",
+        "kind": "reference",
+        "label": "Fictional layout study / sample artwork",
+        "sourceIds": [
+          "sample"
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "section": "overview",
+        "basis": "sample",
+        "title": "A concise brand introduction belongs here",
+        "text": "Summarize what the brand sells and whom it serves using supplied evidence. This is guidance for the template, not a brand finding.",
+        "sourceIds": []
+      },
+      {
+        "section": "identity",
+        "basis": "sample",
+        "title": "Show the visual character",
+        "text": "Use representative logos, product imagery, colors, and typography references. This fictional artwork demonstrates image placement only.",
+        "sourceIds": [
+          "sample"
+        ],
+        "assetIds": [
+          "art"
+        ]
+      },
+      {
+        "section": "opportunities",
+        "basis": "sample",
+        "direction": "continuity",
+        "title": "Carry forward proven brand cues",
+        "text": "Once evidence is supplied, describe which recognizable visual and verbal cues to retain.",
+        "sourceIds": []
+      },
+      {
+        "section": "opportunities",
+        "basis": "sample",
+        "direction": "exploration",
+        "title": "Make room for a new direction",
+        "text": "Separate creative hypotheses from observed patterns. Any proposed experiment should be marked as inference.",
+        "sourceIds": []
+      }
+    ]
+  },
+  "guardian": {
+    "requirements": [
+      {
+        "id": "no-medical",
+        "text": "Do not imply medical benefits.",
+        "sourceIds": [
+          "brief-source"
+        ]
+      }
+    ],
+    "preferences": [
+      {
+        "id": "calm",
+        "text": "Consider a calm, clear tone.",
+        "sourceIds": [
+          "brief-source"
+        ]
+      }
+    ],
+    "establishedPositioningFactIds": [
+      "positioning"
+    ]
+  },
+  "additionalSources": [
+    {
+      "id": "product-sheet",
+      "label": "Fictional supplied product sheet",
+      "reference": "Synthetic example / authored fixture, not official evidence",
+      "collectedAt": "2026-10-04T00:00:00Z",
+      "kind": "product",
+      "status": "available"
+    },
+    {
+      "id": "brief-source",
+      "label": "Fictional user brief and brand promise",
+      "reference": "Synthetic example / authored fixture",
+      "collectedAt": "2026-10-04T00:00:00Z",
+      "kind": "user",
+      "status": "available"
+    }
+  ],
+  "facts": [
+    {
+      "id": "capacity",
+      "kind": "product",
+      "text": "The fictional bottle holds 500 ml.",
+      "status": "supported",
+      "sourceIds": [
+        "product-sheet"
+      ],
+      "essential": true
+    },
+    {
+      "id": "positioning",
+      "kind": "brand",
+      "text": "Fictional established promise: uncomplicated everyday essentials.",
+      "status": "supported",
+      "sourceIds": [
+        "brief-source"
+      ],
+      "essential": true
+    }
+  ],
+  "conflicts": []
+}

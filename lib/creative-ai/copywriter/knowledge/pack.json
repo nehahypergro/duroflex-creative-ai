@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "agentId": "copywriter",
+  "reviewedAt": "2026-10-04",
+  "status": "Curated primary guidance adapted to this role; live performance and qualified evaluation pending",
+  "interpretation": "sourceSummary is a short source-grounded paraphrase. application, examples and critique are editorial adaptations for this product. All examples are synthetic, with no real campaign history or outcome. Principles are contextual tools, not prediction laws.",
+  "sources": [
+    {
+      "id": "value",
+      "title": "Strategyzer: Value proposition",
+      "url": "https://www.strategyzer.com/value-proposition",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Framework owner; practitioner synthesis, not campaign performance evidence."
+    },
+    {
+      "id": "test",
+      "title": "Strategyzer: Ways to test your value proposition and business model",
+      "url": "https://www.strategyzer.com/library/ways-to-test-your-value-proposition-and-business-model",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Framework owner; distinguish stated preferences and observed actions; study context matters."
+    },
+    {
+      "id": "cep",
+      "title": "Ehrenberg-Bass: Identifying and Prioritising Category Entry Points",
+      "url": "https://marketingscience.info/learn-with-us/commercial-research/identifying-and-prioritising-category-entry-points",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Institute research-service summary; no full underlying study or category-specific results supplied."
+    },
+    {
+      "id": "assets",
+      "title": "Ehrenberg-Bass: Distinctive Asset Measurement",
+      "url": "https://marketingscience.info/learn-with-us/commercial-research/distinctive-asset",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Institute research-service summary; actual recognition and brand linkage need measurement."
+    },
+    {
+      "id": "east",
+      "title": "Behavioural Insights Team: EAST, revised 2024",
+      "url": "https://www.bi.team/publications/east-four-simple-ways-to-apply-behavioural-insights/",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Framework creator; practical synthesis from policy/intervention settings; not an ad-response prediction model."
+    },
+    {
+      "id": "motivation",
+      "title": "Ryan and Deci (2000): Self-Determination Theory",
+      "url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Original authors, American Psychologist 55:68-78; motivation theory/review, not product-specific purchase evidence."
+    },
+    {
+      "id": "culture",
+      "title": "Markus and Kitayama (1991): Culture and the Self",
+      "url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Motivation/Markus_Kitayama_1991_Culture_and_the_self.pdf",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Original article, Psychological Review 98:224-253; university-hosted copy; historical conceptual framework with substantial within-group variation."
+    },
+    {
+      "id": "framing",
+      "title": "Tversky and Kahneman (1981): The Framing of Decisions and the Psychology of Choice",
+      "url": "https://psychology.hanover.edu/classes/Cognition/papers/tversky81.pdf",
+      "accessedAt": "2026-10-04",
+      "accessStatus": "verified-content",
+      "limitations": "Original article, Science 211:453-458; university-hosted copy; experimental decisions under risk, not static-ad conversion trials."
+    }
+  ],
+  "unavailableReferences": [
+    {
+      "url": "https://marketingscience.info/news-and-insights/brands-of-distinction",
+      "checkedAt": "2026-10-04",
+      "status": "fetch-failed",
+      "replacementSourceId": "assets"
+    },
+    {
+      "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/",
+      "checkedAt": "2026-10-04",
+      "status": "403-fetch-failed",
+      "replacementSourceId": "framing"
+    }
+  ],
+  "principles": [
+    {
+      "id": "customer-value",
+      "domain": "marketing",
+      "title": "Customer needs and value exchange",
+      "sourceIds": [
+        "value"
+      ],
+      "sourceSummary": "Relate a product to customer jobs, pains and gains; a customer profile is a hypothesis until investigated.",
+      "application": "State the relevant task, benefit and cost or effort of the exchange. Consider category alternatives and doing nothing without inventing competitor superiority.",
+      "limits": "Use when diagnosing relevance. A canvas does not establish customer demand or permission to change brand positioning.",
+      "syntheticExample": "Synthetic: a refillable bottle may suit carrying water to work; portability is a proposed benefit, not a measured preference.",
+      "counterexample": "Do not assert that commuters prefer this bottle without customer evidence."
+    },
+    {
+      "id": "feature-benefit",
+      "domain": "marketing",
+      "title": "Separate features, benefits and proof",
+      "sourceIds": [
+        "value"
+      ],
+      "sourceSummary": "Product attributes and customer outcomes are different parts of a value proposition.",
+      "application": "Trace the proposed benefit to an eligible product fact. Keep one primary proposition and supporting proof; preserve qualifiers and the established promise.",
+      "limits": "Use for message hierarchy. A plausible outcome is inference unless substantiated; the framework does not validate a claim.",
+      "syntheticExample": "Synthetic: a supplied 500 ml capacity is a fact; convenient desk use is an untested interpretation.",
+      "counterexample": "Capacity does not prove all-day hydration or superiority."
+    },
+    {
+      "id": "objective-context",
+      "domain": "marketing",
+      "title": "Match objective, journey and destination",
+      "sourceIds": [
+        "test"
+      ],
+      "sourceSummary": "Different tests produce different evidence; what people say and what they do may diverge.",
+      "application": "Define the intended action and where it happens. Awareness may prioritize recognition; consideration may explain a relevant fact; action must match the actual destination.",
+      "limits": "These are editorial assignment choices, not a fixed funnel or guaranteed sequence. Diagnose with available campaign evidence.",
+      "syntheticExample": "Synthetic: an awareness static introduces the product; a store-visit assignment needs verified location context.",
+      "counterexample": "Do not add Buy now when the supplied destination only collects enquiries."
+    },
+    {
+      "id": "buying-situation",
+      "domain": "brand",
+      "title": "Link brand memory to relevant situations",
+      "sourceIds": [
+        "cep"
+      ],
+      "sourceSummary": "Category entry points describe thoughts around category purchase situations and relate to mental availability.",
+      "application": "Use an evidenced buying or usage situation; when absent, label the proposed situation as assumption. Keep the brand recognizable while exploring a communication angle.",
+      "limits": "No category survey is included. This dossier cannot rank entry-point prevalence, prove memory strength or forecast sales.",
+      "syntheticExample": "Synthetic: consider carrying water during a commute as a candidate situation, pending audience evidence.",
+      "counterexample": "A repeated site phrase does not prove the most common buying trigger."
+    },
+    {
+      "id": "brand-recognition",
+      "domain": "brand",
+      "title": "Protect recognizable brand assets and continuity",
+      "sourceIds": [
+        "assets"
+      ],
+      "sourceSummary": "Brand-linked assets can support recognition; their value should be investigated rather than assumed from appearance.",
+      "application": "Respect guardian requirements and established positioning. Use observed assets as candidate continuity cues. Explain any exploration and its recognition tradeoff.",
+      "limits": "An attractive logo or frequent color is not measured distinctiveness. Cross-market linkage may differ.",
+      "syntheticExample": "Synthetic: preserve the supplied brand mark while exploring a new relevance angle.",
+      "counterexample": "Do not remove required branding because a novel direction receives a higher qualitative score."
+    },
+    {
+      "id": "attention-effort",
+      "domain": "behavior",
+      "title": "Attention, cognitive effort and clarity",
+      "sourceIds": [
+        "east"
+      ],
+      "sourceSummary": "EAST organizes practical interventions around ease, attractiveness, social context and timing.",
+      "application": "For a static, prioritize a relevant message and a comprehensible next step. Adapt information load to the selected format; dimensions pending means no invented layout specification.",
+      "limits": "Applying EAST to creative strategy is an editorial hypothesis. Attention is not comprehension, memory or purchase; no universal attention span is assumed.",
+      "syntheticExample": "Synthetic: a small mobile placement focuses on one supported proposition and a relevant action.",
+      "counterexample": "More visual salience or less text does not automatically establish better conversion."
+    },
+    {
+      "id": "motivation-emotion",
+      "domain": "behavior",
+      "title": "Motivation and emotion need context",
+      "sourceIds": [
+        "motivation"
+      ],
+      "sourceSummary": "Self-determination theory examines autonomy, competence, relatedness and social conditions supporting motivation.",
+      "application": "Consider a relevant emotional or practical benefit, but label audience motives as inference when unresearched. Preserve agency; choose fit to the task and cultural context.",
+      "limits": "A theory of motivation is not a formula for buying behavior. It does not prove every audience values the same emotional appeal.",
+      "syntheticExample": "Synthetic: propose everyday preparedness as an emotional angle for a bottle; test relevance before treating it as insight.",
+      "counterexample": "Do not claim an autonomy cue will make people buy or invent a psychological audience segment."
+    },
+    {
+      "id": "risk-trust",
+      "domain": "behavior",
+      "title": "Perceived risk, framing and supported reassurance",
+      "sourceIds": [
+        "framing"
+      ],
+      "sourceSummary": "Equivalent options framed differently can change preferences in experimental decisions; the model is approximate and not universal.",
+      "application": "Identify a supported objection and answer with applicable evidence, terms or limitations. Consider framing while keeping outcomes and costs truthful.",
+      "limits": "Trust guidance is an editorial application, not a finding that reassurance always works. Risk-choice experiments do not predict ad conversions.",
+      "syntheticExample": "Synthetic: if a replacement policy is supplied, communicate its exact scope as reassurance.",
+      "counterexample": "Do not fabricate guarantees, urgency, scarcity, testimonials or a numerical loss-aversion multiplier."
+    },
+    {
+      "id": "cultural-context",
+      "domain": "behavior",
+      "title": "Social context and cultural meaning",
+      "sourceIds": [
+        "culture"
+      ],
+      "sourceSummary": "Self-construals and social relationships can influence cognition, emotion and motivation, with diversity within cultural groups.",
+      "application": "Use supplied market and language context to identify questions for local review. Treat social proof as evidence only when authentic, relevant and attributable.",
+      "limits": "Do not assign a personality from nationality, language or demographic labels. A historical framework does not establish a current segment preference.",
+      "syntheticExample": "Synthetic: request review of a family-oriented angle when local relevance is uncertain.",
+      "counterexample": "Do not infer that every buyer in a country values family over independence."
+    },
+    {
+      "id": "evaluation",
+      "domain": "evaluation",
+      "title": "Learn through falsifiable hypotheses",
+      "sourceIds": [
+        "test"
+      ],
+      "sourceSummary": "Customer interviews and behavioral observation provide different kinds of evidence; observation conditions can affect behavior.",
+      "application": "Write an untested hypothesis, comparator, measure and failure condition. Track factual errors and qualified reviewer critique separately from future creative experiments.",
+      "limits": "Repeated agent critiques are not independent evidence. No qualified reviewer evaluation or campaign experiment has occurred for this foundation.",
+      "syntheticExample": "Synthetic: compare understanding of a proposition with an alternative using a planned comprehension task.",
+      "counterexample": "Do not label a Meta library observation a winning ad or claim an unrun test validated the strategy."
+    }
+  ]
+}

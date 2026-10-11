@@ -1,0 +1,308 @@
+[
+  {
+    "id": "google-upload",
+    "title": "Google uploaded display specifications",
+    "url": "https://support.google.com/google-ads/answer/1722096?hl=en",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Fixed image sizes, 150 KB cap and regional image inventory; separate from HTML5."
+  },
+  {
+    "id": "google-rda",
+    "title": "Google responsive display specifications",
+    "url": "https://support.google.com/google-ads/answer/17090561",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Native fields and image assets; 90-character description maximum."
+  },
+  {
+    "id": "google-rda-design",
+    "title": "Google responsive display creative guide",
+    "url": "https://support.google.com/google-ads/answer/9823397?hl=en",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Avoid added text/logo/buttons on responsive image assets; not a blanket prohibition on complete uploaded ads. Its 80-character descriptive advice differs from the technical maximum."
+  },
+  {
+    "id": "google-demand",
+    "title": "Google Demand Gen specifications",
+    "url": "https://support.google.com/google-ads/answer/17091672",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "At least one headline at 30 characters or fewer is now called out for Display serving/ad strength."
+  },
+  {
+    "id": "google-pmax",
+    "title": "Google Performance Max specifications",
+    "url": "https://support.google.com/google-ads/answer/17091269",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "At least one short headline of 15 characters or fewer; publisher weighting for double-width languages."
+  },
+  {
+    "id": "linkedin-image",
+    "title": "LinkedIn single image ads",
+    "url": "https://business.linkedin.com/advertise/ads/ads-guide/single-image-ads",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Landscape and square across desktop/mobile; portrait is mobile-only; native copy separate."
+  },
+  {
+    "id": "linkedin-carousel",
+    "title": "LinkedIn carousel ads",
+    "url": "https://business.linkedin.com/advertise/ads/sponsored-content/carousel-ads/specs",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Square cards, 2–10 cards, per-card/native fields distinct. Studio 2–6 is an operational limit."
+  },
+  {
+    "id": "linkedin-document",
+    "title": "LinkedIn document ads",
+    "url": "https://www.linkedin.com/help/lms/answer/a494940",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Document and native text limits; links only clickable after download. Raster proof is not accessible document delivery."
+  },
+  {
+    "id": "pinterest",
+    "title": "Pinterest creative guidance",
+    "url": "https://business.pinterest.com/en-gb/creative-best-practices/",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Product focus, vertical composition, concise overlays; native fields separate."
+  },
+  {
+    "id": "pinterest-ads",
+    "title": "Pinterest advertising specifications",
+    "url": "https://help.pinterest.com/en/business/article/pinterest-product-specs",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Desktop/in-app file caps and native fields. Background appearance can change in light/dark feeds."
+  },
+  {
+    "id": "x-ads",
+    "title": "X creative specifications",
+    "url": "https://help.x.com/en/business-and-advertising/creative-ad-specifications",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Native weighted text and image assets; expanded aspect-ratio options do not establish a typography minimum."
+  },
+  {
+    "id": "reddit",
+    "title": "Reddit image ad specifications",
+    "url": "https://www.business.reddit.com/learning-hub/articles/reddit-image-ad-specs",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Feed versus conversation thumbnail; native maximum differs from truncation recommendation."
+  },
+  {
+    "id": "tiktok-network",
+    "title": "TikTok Ad Network image specifications",
+    "url": "https://ads.tiktok.com/resources/help/article/specifications-for-pangle-ad-assets",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Network image sizes/caps and banner assets; not interchangeable with TikTok feed image carousel."
+  },
+  {
+    "id": "tiktok-takeover",
+    "title": "TikTok Reservation Takeover",
+    "url": "https://ads.tiktok.com/resources/help/article/about-tiktok-reservation-takeover?lang=en",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Reservation workflow; a still fallback is not a complete campaign."
+  },
+  {
+    "id": "snap-formats",
+    "title": "Snapchat format overview",
+    "url": "https://forbusiness.snapchat.com/advertising/ad-formats",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Current overview lists 720×1280 for single image/video; deeper eligibility depends on format and account."
+  },
+  {
+    "id": "snap-specs",
+    "title": "Snapchat detailed single image specifications",
+    "url": "https://businesshelp.snapchat.com/s/article/top-snap-specs?language=en_US",
+    "authority": "official-platform",
+    "status": "partial",
+    "checkedAt": "2026-10-09",
+    "scope": "Detailed help content was not readable in web extraction; do not certify exact safe-zone or file-cap changes."
+  },
+  {
+    "id": "meta",
+    "title": "Meta Instagram Story image guide",
+    "url": "https://www.facebook.com/business/ads-guide/update/image/instagram-story",
+    "authority": "official-platform",
+    "status": "unavailable",
+    "checkedAt": "2026-10-09",
+    "scope": "Redirected to login; numerical safe-zone claims from third-party sites were not adopted."
+  },
+  {
+    "id": "apple",
+    "title": "Apple notification guidance",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/notifications/",
+    "authority": "official-platform",
+    "status": "partial",
+    "checkedAt": "2026-10-09",
+    "scope": "JavaScript shell only in extraction; current detailed content not reverified."
+  },
+  {
+    "id": "android",
+    "title": "Android notification design",
+    "url": "https://developer.android.com/design/ui/mobile/guides/home-screen/notifications",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Native collapsed/expanded layouts and concise text recommendations, not an arbitrary image font size."
+  },
+  {
+    "id": "web-notifications",
+    "title": "WHATWG Notifications standard",
+    "url": "https://notifications.spec.whatwg.org/",
+    "authority": "technical-standard",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Browser native options; no universal rendered character capacity across agents."
+  },
+  {
+    "id": "merchant",
+    "title": "Google Merchant image link requirements",
+    "url": "https://support.google.com/merchants/answer/6324350?hl=en",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Clean exact product primary image; no added promotions or logo overlays. Effective-date size ambiguity remains separate."
+  },
+  {
+    "id": "shopify",
+    "title": "Shopify product media",
+    "url": "https://help.shopify.com/en/manual/products/product-media/product-media-types",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Theme controls rendered size and crop; upload maximum is not visible reading size."
+  },
+  {
+    "id": "youtube",
+    "title": "YouTube custom thumbnails",
+    "url": "https://support.google.com/youtube/answer/72431?hl=en",
+    "authority": "official-platform",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "3840×2160 recommended video image; device-specific file caps; minimum width 640 is distinct."
+  },
+  {
+    "id": "web-images",
+    "title": "Responsive images",
+    "url": "https://web.dev/learn/images/responsive-images",
+    "authority": "technical-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Resource pixels, display width and pixel density are separate."
+  },
+  {
+    "id": "mailchimp",
+    "title": "Mailchimp image design",
+    "url": "https://templates.mailchimp.com/design/images/",
+    "authority": "vendor-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Image crop, image-off fallback and live message. Legacy client examples do not establish 2026 client behavior universally."
+  },
+  {
+    "id": "mailchimp-mobile",
+    "title": "Mailchimp mobile design",
+    "url": "https://templates.mailchimp.com/design/mobile-friendliness/",
+    "authority": "vendor-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "16 px mobile body guidance. Old device examples are not a universal viewport specification."
+  },
+  {
+    "id": "w3c-contrast",
+    "title": "W3C contrast explanation",
+    "url": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum",
+    "authority": "technical-standard",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "4.5:1/3:1 with delivered-size thresholds and exceptions; not a universal ad-upload rule."
+  },
+  {
+    "id": "wai-images",
+    "title": "W3C Images tutorial",
+    "url": "https://www.w3.org/WAI/tutorials/images/",
+    "authority": "technical-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Meaningful text alternatives and live-text treatment; a flat PNG cannot certify full accessibility."
+  },
+  {
+    "id": "govuk-print",
+    "title": "GOV.UK accessible publishing",
+    "url": "https://www.gov.uk/guidance/publishing-accessible-documents",
+    "authority": "accessibility-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "12 pt minimum guidance for documents; scope differs from vendor printability."
+  },
+  {
+    "id": "govuk-formats",
+    "title": "GOV.UK accessible communication formats",
+    "url": "https://www.gov.uk/government/publications/inclusive-communication/accessible-communication-formats",
+    "authority": "accessibility-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Consider 14 pt for readers with sight loss; alternative formats matter."
+  },
+  {
+    "id": "moo",
+    "title": "MOO flyer production",
+    "url": "https://www.moo.com/us/flyers/design-guidelines-dyo",
+    "authority": "vendor-specific",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "8 pt production floor, vector PDF and 300 dpi photos; not universal comfort or another printer template."
+  },
+  {
+    "id": "vista",
+    "title": "VistaPrint flyer design",
+    "url": "https://www.vistaprint.com/hub/how-to-design-a-flyer",
+    "authority": "vendor-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "Hierarchy, grouped details, finishing and production checks. Examples can still have small essential text."
+  },
+  {
+    "id": "oaaa",
+    "title": "OAAA creative best practices",
+    "url": "https://oaaa.org/wp-content/uploads/2022/09/OAAA-Best-Practices-oct20-2021-spreads_2_.pdf",
+    "authority": "industry-guidance",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "2021 guide pages 24–29: distance, dwell time, seven-word benchmark and context. It describes suggestions, not operator approval law."
+  },
+  {
+    "id": "oaaa-examples",
+    "title": "OAAA published billboard examples",
+    "url": "https://oaaa.org/blog-posts/billboardsthatsparkjoy/",
+    "authority": "industry-examples",
+    "status": "available",
+    "checkedAt": "2026-10-09",
+    "scope": "2019 historical campaigns demonstrate hierarchy; no campaign performance claim or brand-style transfer."
+  }
+]

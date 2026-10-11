@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "flagged-cap-reached",
+        "no-output",
+        "verification-pending"
+      ]
+    },
+    "ready": {
+      "type": "boolean"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "reviewEvidenceMode": {
+      "type": "string"
+    },
+    "imageData": {},
+    "conceptId": {
+      "type": "string"
+    },
+    "placementId": {
+      "type": "string"
+    },
+    "fallbackToEarlierArtifact": {
+      "type": "boolean"
+    },
+    "note": {
+      "type": "string"
+    },
+    "conceptExplanation": {},
+    "compositionRationale": {},
+    "unresolved": {
+      "type": "array",
+      "items": {}
+    },
+    "reviewDecision": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "ready",
+    "imageData",
+    "note",
+    "conceptExplanation",
+    "compositionRationale",
+    "unresolved"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/creative-reviewer/delivery/v1"
+}

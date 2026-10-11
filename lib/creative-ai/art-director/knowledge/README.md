@@ -1,0 +1,1 @@
+Primary-source excerpts are summarized in original language with URLs, access date, application and limits in pack.json. Design practice is adapted editorially to this workflow; UI standards are not universal ad rules. Every good/bad example is synthetic. Placement rules are supplied separately by pinned context. No campaign or reviewer evaluation has occurred.

@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "agentId": "creative-reviewer",
+  "sources": [
+    {
+      "id": "gestalt",
+      "title": "Max Wertheimer, Laws of Organization in Perceptual Forms (1923), English translation, university mirror",
+      "url": "https://psychclassics.yorku.ca/Wertheimer/Forms/forms.htm",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "layout",
+      "title": "Google Material Design, Layout principles",
+      "url": "https://m1.material.io/layout/principles.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "type",
+      "title": "Google Material Design, Typography",
+      "url": "https://m1.material.io/style/typography.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "color",
+      "title": "Google Material Design, Color",
+      "url": "https://m1.material.io/style/color.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "imagery",
+      "title": "Google Material Design, Imagery",
+      "url": "https://m1.material.io/style/imagery.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "contrast",
+      "title": "W3C Understanding Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    }
+  ],
+  "principles": [
+    {
+      "id": "readable-message",
+      "sourceIds": [
+        "contrast",
+        "type"
+      ],
+      "sourceSummary": "Contrast, size and type treatment affect text readability.",
+      "application": "Inspect mandatory text at intended display size with surrounding imagery.",
+      "syntheticExample": "The brand font is legible in the actual placement, despite modest anti-aliasing differences.",
+      "counterexample": "Pass a tiny unreadable disclaimer because the headline looks attractive.",
+      "limits": "WCAG informs web accessibility; it is not universal ad certification or a vision evaluator.",
+      "evidenceType": "authored-review-policy-informed-by-primary-guidance"
+    },
+    {
+      "id": "evidence-comparison",
+      "sourceIds": [
+        "gestalt",
+        "layout"
+      ],
+      "sourceSummary": "Spatial grouping and reading order affect perceived relationships.",
+      "application": "Compare actual reading order to prescribed art and concept; separate artifact deviation from upstream design error.",
+      "syntheticExample": "Weak hierarchy prescribed in art routes to Art director.",
+      "counterexample": "Send every weak score to Graphic designer without examining the art specification.",
+      "limits": "Natural-language causal judgments are reviewer attestations requiring qualified validation.",
+      "evidenceType": "authored-review-policy-informed-by-primary-guidance"
+    },
+    {
+      "id": "brand-and-exploration",
+      "sourceIds": [
+        "imagery",
+        "type"
+      ],
+      "sourceSummary": "Coherent visual treatment can support consistent communication.",
+      "application": "Enforce explicit identity rules, while letting exploration change permitted setting and expression.",
+      "syntheticExample": "New scene preserves official logo/product and communicates the same strategy.",
+      "counterexample": "Fail exploration solely because its mood differs from old ads.",
+      "limits": "No measured brand-recognition or campaign-effectiveness claim is established.",
+      "evidenceType": "authored-review-policy-informed-by-primary-guidance"
+    },
+    {
+      "id": "quality-policy",
+      "sourceIds": [
+        "layout"
+      ],
+      "sourceSummary": "The scoring policy is authored for this product, informed by design practice.",
+      "application": "Use observable communication, recognition, fit, craft and audience reasons.",
+      "syntheticExample": "75 with all applicable critical checks passed meets the initial policy boundary.",
+      "counterexample": "95 overrides a false product claim or changed qualifier.",
+      "limits": "Weights/threshold/confidence floor are uncalibrated, not empirical guarantees.",
+      "evidenceType": "authored-review-policy-informed-by-primary-guidance"
+    },
+    {
+      "id": "bounded-correction",
+      "sourceIds": [
+        "layout"
+      ],
+      "sourceSummary": "The one-cycle limit is a user-authorized workflow policy.",
+      "application": "Consolidate all findings and dependent stages into one cycle, then deliver or stop honestly.",
+      "syntheticExample": "Final failed image arrives flagged with unresolved issues and intended-choice rationale.",
+      "counterexample": "Reopen a second cycle under a new art/package version.",
+      "limits": "No orchestration or absent evaluator is fabricated; producer persistence is required.",
+      "evidenceType": "authored-review-policy-informed-by-primary-guidance"
+    }
+  ],
+  "evaluation": {
+    "status": "pending-qualified-evaluation",
+    "required": [
+      "Representative real brand/placement review by qualified design and marketing reviewers",
+      "OCR plus actual-size visual text verification",
+      "Product/logo identity and implicit-claim comparisons",
+      "Routing cause agreement and unaffected-work preservation",
+      "Calibration of weights, threshold and confidence floor",
+      "False-positive checks on exploration and inferred style preferences"
+    ],
+    "limits": "Synthetic examples are authored critique cases, not prior campaign successes or human years of experience."
+  }
+}

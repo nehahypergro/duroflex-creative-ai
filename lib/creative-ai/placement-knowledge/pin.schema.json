@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:creative-ai:placement-knowledge:pin.schema.json",
+  "type": "object",
+  "properties": {
+    "profileId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profileVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "catalogVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "catalogDigest": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "profileId",
+    "profileVersion",
+    "catalogVersion",
+    "catalogDigest"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "unitKey": "1958d04caf4e291e5129316ded3013ae730c6bc264115adf98725f9d39606ed8",
+  "assignmentId": "synthetic-bottle-assignment",
+  "route": "continuity",
+  "placementId": "synthetic-small-square",
+  "phase": "terminal",
+  "correctionCycles": 1,
+  "maxCorrectionCycles": 1,
+  "currentPackageHash": "c453b970093e1cc72c833dc4a7e24549a332fca793131074af244839ccc704a8",
+  "currentArtifactHash": "f0b9771f9529c5bfe3fc4b09c461b30c6fe62ba3ba98d1c277cb45122d00aab1",
+  "authorizationId": "524aff1ebbe8c86266b7f4ffd5aae02a732636379287ea2cdce26206cc6d2dd5",
+  "initialReportHash": "85cd56236814c02554ed952a67bf938ffad723ba0320a01f4d310082a854ed8a",
+  "finalReportHash": "fe9e8f149d5b3241816434715924fda0eadc24457a4bc19b33b6c8f571fe91f8",
+  "delivery": "flagged-cap-reached",
+  "lastAvailable": {
+    "packageHash": "c453b970093e1cc72c833dc4a7e24549a332fca793131074af244839ccc704a8",
+    "artifactHash": "f0b9771f9529c5bfe3fc4b09c461b30c6fe62ba3ba98d1c277cb45122d00aab1",
+    "reviewEvidenceMode": "synthetic-simulation"
+  },
+  "history": [
+    {
+      "phase": "initial-review",
+      "packageHash": "3e6f1e1a1ff7cd87c1aea719ed390cd12855ca7b81e1ff668fc7e904f34d607f",
+      "artifactHash": "f0b9771f9529c5bfe3fc4b09c461b30c6fe62ba3ba98d1c277cb45122d00aab1",
+      "reviewHash": "85cd56236814c02554ed952a67bf938ffad723ba0320a01f4d310082a854ed8a",
+      "decision": "revise"
+    },
+    {
+      "phase": "final-review",
+      "packageHash": "c453b970093e1cc72c833dc4a7e24549a332fca793131074af244839ccc704a8",
+      "artifactHash": "f0b9771f9529c5bfe3fc4b09c461b30c6fe62ba3ba98d1c277cb45122d00aab1",
+      "reviewHash": "fe9e8f149d5b3241816434715924fda0eadc24457a4bc19b33b6c8f571fe91f8",
+      "decision": "revise"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "agentId": "brand-guardian",
+  "status": "Curated primary guidance adapted to this role; live performance and qualified evaluation pending",
+  "sources": [
+    {
+      "id": "gestalt",
+      "title": "Max Wertheimer, Laws of Organization in Perceptual Forms (1923), English translation, university mirror",
+      "url": "https://psychclassics.yorku.ca/Wertheimer/Forms/forms.htm",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "layout",
+      "title": "Google Material Design, Layout principles",
+      "url": "https://m1.material.io/layout/principles.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "type",
+      "title": "Google Material Design, Typography",
+      "url": "https://m1.material.io/style/typography.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "color",
+      "title": "Google Material Design, Color",
+      "url": "https://m1.material.io/style/color.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "imagery",
+      "title": "Google Material Design, Imagery",
+      "url": "https://m1.material.io/style/imagery.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "contrast",
+      "title": "W3C Understanding Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    }
+  ],
+  "principles": [
+    {
+      "id": "hierarchy",
+      "sourceIds": [
+        "layout"
+      ],
+      "sourceSummary": "Visual emphasis and spatial organization help establish a reading order.",
+      "application": "Give the primary message one focal point; balance mass, scale and empty space.",
+      "limits": "UI guidance is a practice reference, not a universal advertising grid.",
+      "syntheticExample": "One product silhouette balances a short headline.",
+      "counterexample": "Five equally large elements compete; no primary takeaway.",
+      "evidenceType": "editorial-application-of-primary-source"
+    },
+    {
+      "id": "grouping",
+      "sourceIds": [
+        "gestalt"
+      ],
+      "sourceSummary": "Proximity and similarity affect perceived grouping; factors can reinforce or compete.",
+      "application": "Group a qualifier with its claim; separate unrelated signals.",
+      "limits": "Original perception examples do not predict conversion or universal reading order.",
+      "syntheticExample": "A capacity qualifier sits visibly beside the capacity line.",
+      "counterexample": "A qualifier appears under an unrelated lifestyle claim.",
+      "evidenceType": "editorial-application-of-primary-source"
+    },
+    {
+      "id": "legibility",
+      "sourceIds": [
+        "contrast",
+        "type"
+      ],
+      "sourceSummary": "Text contrast, size and rendering affect accessibility; images of text are covered by the contrast guidance.",
+      "application": "Review full output at actual viewing size, including mandatory small print.",
+      "limits": "WCAG is a web accessibility reference, not publisher certification; fonts and contrast need rendered measurement.",
+      "syntheticExample": "Short high-contrast headline with comfortably visible qualifier.",
+      "counterexample": "Tiny pale text looks acceptable only when zoomed in.",
+      "evidenceType": "editorial-application-of-primary-source"
+    },
+    {
+      "id": "typography",
+      "sourceIds": [
+        "type"
+      ],
+      "sourceSummary": "Typography guidelines describe type scale, line height and language-specific needs.",
+      "application": "Specify hierarchy, alignment, font constraints and clear text zones without rewriting copy.",
+      "limits": "Do not copy a UI type scale as a mandatory ad specification; actual font fidelity remains untested.",
+      "syntheticExample": "Brand font supports two clear line lengths.",
+      "counterexample": "External reference type replaces the supplied brand font.",
+      "evidenceType": "editorial-application-of-primary-source"
+    },
+    {
+      "id": "contextual-color",
+      "sourceIds": [
+        "color"
+      ],
+      "sourceSummary": "The Material color system uses coordinated primary and accent roles and checks foreground/background accessibility.",
+      "application": "Assign palette roles consistent with supplied rules and scene contrast.",
+      "limits": "This does not establish universal emotional effects or a sales lift from any hue.",
+      "syntheticExample": "Brand accent marks the focal area; quiet background protects reading.",
+      "counterexample": "A mood board forces forbidden colors into the brand identity.",
+      "evidenceType": "editorial-application-of-primary-source"
+    },
+    {
+      "id": "imagery",
+      "sourceIds": [
+        "imagery"
+      ],
+      "sourceSummary": "Imagery guidance relates subject, focus and visual treatment to communication.",
+      "application": "Describe concrete scene, crop, light, camera angle and truthful product identity.",
+      "limits": "Editorial application to ads is a hypothesis; identity and implied claims need semantic review.",
+      "syntheticExample": "Ordinary departure setting supports the essentials concept.",
+      "counterexample": "Medical setting implies a benefit absent from product evidence.",
+      "evidenceType": "editorial-application-of-primary-source"
+    },
+    {
+      "id": "brand-recognition",
+      "sourceIds": [
+        "imagery",
+        "type"
+      ],
+      "sourceSummary": "Consistent visual treatment and typography support a coherent visual language.",
+      "application": "Lock supplied identity assets and execution rules across both routes.",
+      "limits": "Consistency is a practice inference here; no measured distinctive-asset strength is known.",
+      "syntheticExample": "Exploration changes setting while preserving the supplied product and logo.",
+      "counterexample": "External bottle appearance or logo leaks into the execution.",
+      "evidenceType": "editorial-application-of-primary-source"
+    },
+    {
+      "id": "placement-adaptation",
+      "sourceIds": [
+        "layout",
+        "type"
+      ],
+      "sourceSummary": "Layout and typography guidance require attention to the presentation context.",
+      "application": "Recompose focal point, reading flow and density for each pinned placement; retain source tiers and unknowns.",
+      "limits": "Publisher requirements come only from the separately versioned placement package; no universal safe margin is assumed.",
+      "syntheticExample": "A compact placement receives a simpler scene with exact copy still legible.",
+      "counterexample": "A tall poster is naively shrunk into a tiny banner.",
+      "evidenceType": "editorial-application-of-primary-source"
+    }
+  ]
+}

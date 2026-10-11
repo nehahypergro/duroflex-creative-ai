@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "agentId": "creative-director",
+  "reviewedAt": "2026-10-04",
+  "status": "curated-foundation-not-expert-validated",
+  "interpretation": "Short source-grounded summaries are separated from editorial application guidance. All examples/counterexamples are synthetic; no real campaign histories, outcomes or personal agency experience are claimed. Principles are contextual tools, not universal templates.",
+  "sources": [
+    {
+      "id": "creativity",
+      "title": "Runco and Jaeger (2012), The Standard Definition of Creativity",
+      "url": "https://disf.org/files/doc/2012runcojaegerstandarddefinition.pdf",
+      "accessedAt": "2026-10-04",
+      "limitations": "Original journal article hosted by DISF; definition/review, not effectiveness evidence for these concepts.",
+      "accessStatus": "verified-content"
+    },
+    {
+      "id": "analogy",
+      "title": "Gentner (1983), Structure-Mapping: A Theoretical Framework for Analogy",
+      "url": "https://groups.psych.northwestern.edu/gentner/papers/Gentner83.2b.pdf",
+      "accessedAt": "2026-10-04",
+      "limitations": "Original article hosted by author laboratory. Theory of analogy is not evidence that a particular visual metaphor will be understood.",
+      "accessStatus": "verified-content"
+    },
+    {
+      "id": "story",
+      "title": "Green and Brock (2000), The role of transportation in the persuasiveness of public narratives",
+      "url": "https://researchconnect.buffalo.edu/en/publications/the-role-of-transportation-in-the-persuasiveness-of-public-narrat/",
+      "accessedAt": "2026-10-04",
+      "limitations": "Author university record and abstract reviewed; full article not reviewed here. Narrative-reading experiments do not establish effects of a single static image.",
+      "accessStatus": "verified-abstract"
+    },
+    {
+      "id": "attention",
+      "title": "Daniel Simons Visual Cognition Lab research",
+      "url": "https://simonslab.com/research.html",
+      "accessedAt": "2026-10-04",
+      "limitations": "Researcher laboratory summary, not a complete study report; attention experiments do not provide ad-response rates or a universal attention span.",
+      "accessStatus": "verified-content"
+    },
+    {
+      "id": "brand",
+      "title": "Ehrenberg-Bass Distinctive Asset Measurement",
+      "url": "https://marketingscience.info/learn-with-us/commercial-research/distinctive-asset",
+      "accessedAt": "2026-10-04",
+      "limitations": "Institute service summary; actual recognition, attribution and asset strength require measurement.",
+      "accessStatus": "verified-content"
+    },
+    {
+      "id": "critique",
+      "title": "Stanford d.school Design Project Scoping Guide",
+      "url": "https://dschool.stanford.edu/tools/design-project-scoping-guide",
+      "accessedAt": "2026-10-04",
+      "limitations": "Framework-owner practice guide; iteration is not proof of quality, independent evidence or validated campaign impact.",
+      "accessStatus": "verified-content"
+    }
+  ],
+  "principles": [
+    {
+      "id": "strategy-expression",
+      "title": "Strategic creativity serves the assigned takeaway",
+      "sourceIds": [
+        "creativity"
+      ],
+      "sourceSummary": "Creativity combines originality with effectiveness or appropriateness; novelty alone is insufficient.",
+      "application": "Evaluate ideas against the same proposition and audience takeaway. Express the selected strategy rather than inventing a different brand promise.",
+      "limits": "Effectiveness here means assignment fit, not measured sales. No concept has qualified validation.",
+      "syntheticExample": "Synthetic: express an everyday bottle through departure preparation while preserving the capacity fact.",
+      "counterexample": "An unusual performance promise is not appropriate simply because it is novel."
+    },
+    {
+      "id": "concept-not-decoration",
+      "title": "A concept is a communicative relationship, not surface styling",
+      "sourceIds": [
+        "creativity"
+      ],
+      "sourceSummary": "Originality needs a context in which usefulness or appropriateness is judged.",
+      "application": "Describe what makes the idea work in one sentence. Separate the conceptual premise from final copy and layout. Develop two routes with materially different premises.",
+      "limits": "Literal duplicate detection cannot prove subjective originality or distinctness. There is no requirement for a universal idea template.",
+      "syntheticExample": "Synthetic: a departure ritual and a symbolic place in the daily routine are different premises for one proposition.",
+      "counterexample": "Changing a background color while keeping the same scene is not necessarily another concept."
+    },
+    {
+      "id": "metaphor",
+      "title": "Map the relevant relationship and inspect unintended claims",
+      "sourceIds": [
+        "analogy"
+      ],
+      "sourceSummary": "Analogy can transfer relational structure between domains rather than merely matching surface attributes.",
+      "application": "For a metaphor, identify the intended mapping, likely interpretation and where it breaks. Keep metaphorical meaning separate from literal product proof.",
+      "limits": "A plausible mapping is not evidence that the audience will understand it. Avoid metaphors that imply unsupported capabilities.",
+      "syntheticExample": "Synthetic: a bottle represented as a punctuation mark in a day suggests a routine pause; no medical effect is implied.",
+      "counterexample": "Showing a bottle as a battery must not imply proven energy or performance effects."
+    },
+    {
+      "id": "story-situation",
+      "title": "Use a relevant situation or story only when it clarifies",
+      "sourceIds": [
+        "story"
+      ],
+      "sourceSummary": "The reviewed abstract examines absorption into narratives and story-consistent beliefs and evaluations.",
+      "application": "A static can suggest a situation and an intended takeaway without a full plot. Use the brief\u2019s context; test whether the audience interprets the intended relationship.",
+      "limits": "Applying narrative findings to one static is an editorial hypothesis. Do not invent testimonials or real campaign histories.",
+      "syntheticExample": "Synthetic: departure preparation suggests when the bottle might enter a routine.",
+      "counterexample": "Do not label an invented customer success story as an authentic testimonial."
+    },
+    {
+      "id": "attention-interpretation",
+      "title": "Attention is selective; salience is not understanding",
+      "sourceIds": [
+        "attention"
+      ],
+      "sourceSummary": "People can miss visible events outside the focus of attention in laboratory tasks.",
+      "application": "Identify what must be noticed and understood. Challenge competing elements and unintended readings; let specialists resolve actual copy and visual hierarchy.",
+      "limits": "No fixed attention span, recall rate or conversion effect follows from this summary. Feasibility depends on the supplied format and final execution.",
+      "syntheticExample": "Synthetic: check whether a playful metaphor still lets viewers identify the actual product.",
+      "counterexample": "A surprising object alone does not prove the proposition was understood or remembered."
+    },
+    {
+      "id": "recognizable-brand",
+      "title": "Preserve brand connection while exploring a premise",
+      "sourceIds": [
+        "brand"
+      ],
+      "sourceSummary": "Brand-linked assets can support recognition; the institute advocates measuring their linkage and protecting them over time.",
+      "application": "Continuity uses supplied approved language and cues. Exploration varies the premise while preserving explicit requirements, established positioning and recognizability.",
+      "limits": "Observed repeated styling is not measured asset strength. No branding cue can be removed merely because exploration is desired.",
+      "syntheticExample": "Synthetic: retain a supplied brand mark and product identity in a new symbolic situation.",
+      "counterexample": "Do not call a fictional new color a famous brand asset or confuse exploration with rebranding."
+    },
+    {
+      "id": "refine-critique",
+      "title": "Make critique specific and bounded",
+      "sourceIds": [
+        "critique"
+      ],
+      "sourceSummary": "The guide treats project context, iteration and low-resolution prototypes as tools for advancing design work.",
+      "application": "Challenge clarity, relevance, truth, brand connection, distinction and feasibility. Record specific risks and refinements. Mandatory failures block the pair rather than selecting a favorite.",
+      "limits": "Repeated model passes are not independent evidence. Two bounded attempts represent workflow limits, not executed retries or validated improvement.",
+      "syntheticExample": "Synthetic: refine a metaphor after noticing it could imply an unsupported health benefit.",
+      "counterexample": "A high qualitative preference score cannot compensate for a false claim or mandatory-rule violation."
+    }
+  ]
+}

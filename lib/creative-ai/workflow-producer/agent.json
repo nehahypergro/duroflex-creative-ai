@@ -1,0 +1,1 @@
+{"version":1,"id":"workflow-producer","displayName":"Workflow producer","aliases":["producer-ledger"],"runtime":"activity-ledger-and-progress-projection-only","scope":"Persistent factual activity history and reviewer-ledger association; full producer engine pending","humanApprovalRequired":false,"inputSchema":"event-input.schema.json","outputSchema":"event.schema.json"}

@@ -1,0 +1,502 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "agentId": {
+      "const": "creative-reviewer"
+    },
+    "assignmentId": {
+      "type": "string"
+    },
+    "conceptId": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string",
+      "enum": [
+        "continuity",
+        "exploration"
+      ]
+    },
+    "placementId": {
+      "type": "string"
+    },
+    "packageHash": {
+      "type": "string"
+    },
+    "artifactHash": {
+      "type": "string"
+    },
+    "reviewHash": {
+      "type": "string"
+    },
+    "evidenceMode": {
+      "type": "string",
+      "enum": [
+        "runtime-attestation",
+        "synthetic-simulation",
+        "pending"
+      ]
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "revise",
+        "unable-to-verify"
+      ]
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "qualityVerified": {
+      "type": "boolean"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "criticalChecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "enum": [
+              "logo-identity",
+              "product-identity",
+              "supported-claims",
+              "exact-required-copy",
+              "required-text-legibility",
+              "mandatory-brand-rules",
+              "verified-upload-constraints",
+              "reference-boundary"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "unknown",
+              "not-applicable"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence": {
+            "type": "object",
+            "properties": {
+              "method": {
+                "type": "string",
+                "enum": [
+                  "raster-measurement",
+                  "ocr-attestation",
+                  "vision-attestation",
+                  "semantic-attestation",
+                  "synthetic-simulation",
+                  "unavailable",
+                  "technical-measurement"
+                ]
+              },
+              "observation": {
+                "type": "string"
+              },
+              "expected": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0
+              },
+              "ruleIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "method",
+              "observation",
+              "expected",
+              "location",
+              "sourceIds",
+              "ruleIds"
+            ],
+            "additionalProperties": false
+          },
+          "applicabilityReason": {
+            "type": "string"
+          },
+          "tolerance": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "criterion",
+          "status",
+          "confidence",
+          "evidence",
+          "applicabilityReason",
+          "tolerance"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "criterion": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "creative",
+              "advisory"
+            ]
+          },
+          "authority": {
+            "type": "string",
+            "enum": [
+              "explicit",
+              "verified-technical",
+              "policy",
+              "inferred"
+            ]
+          },
+          "defect": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence": {
+            "type": "object",
+            "properties": {
+              "method": {
+                "type": "string",
+                "enum": [
+                  "raster-measurement",
+                  "ocr-attestation",
+                  "vision-attestation",
+                  "semantic-attestation",
+                  "synthetic-simulation",
+                  "unavailable",
+                  "technical-measurement"
+                ]
+              },
+              "observation": {
+                "type": "string"
+              },
+              "expected": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0
+              },
+              "ruleIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "method",
+              "observation",
+              "expected",
+              "location",
+              "sourceIds",
+              "ruleIds"
+            ],
+            "additionalProperties": false
+          },
+          "correction": {
+            "type": "string"
+          },
+          "preserve": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0
+          },
+          "cause": {
+            "type": "string",
+            "enum": [
+              "generated-typo",
+              "copy-weak-wording",
+              "art-weak-hierarchy",
+              "art-direction-ignored",
+              "source-logo-wrong",
+              "logo-render-distorted",
+              "concept-strategy-mismatch",
+              "brand-rule-ambiguous",
+              "placement-spec-missing",
+              "uncertain"
+            ]
+          },
+          "comparison": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stage": {
+                  "type": "string",
+                  "enum": [
+                    "artwork",
+                    "generation-package",
+                    "art",
+                    "copy",
+                    "concept",
+                    "strategy",
+                    "brand-rules",
+                    "source-asset",
+                    "placement"
+                  ]
+                },
+                "observation": {
+                  "type": "string"
+                },
+                "referenceId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "stage",
+                "observation",
+                "referenceId"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "criterion",
+          "severity",
+          "authority",
+          "defect",
+          "location",
+          "confidence",
+          "evidence",
+          "correction",
+          "preserve",
+          "cause",
+          "comparison"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "routing": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "minItems": 0
+    },
+    "verificationDependencies": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "minItems": 0
+    },
+    "userNote": {
+      "type": "string"
+    },
+    "artifactAvailable": {
+      "type": "boolean"
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "qualityScores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "enum": [
+              "communication",
+              "brandRecognition",
+              "placementFit",
+              "visualCraft",
+              "emotionalAudienceFit"
+            ]
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence": {
+            "type": "object",
+            "properties": {
+              "method": {
+                "type": "string",
+                "enum": [
+                  "raster-measurement",
+                  "ocr-attestation",
+                  "vision-attestation",
+                  "semantic-attestation",
+                  "synthetic-simulation",
+                  "unavailable",
+                  "technical-measurement"
+                ]
+              },
+              "observation": {
+                "type": "string"
+              },
+              "expected": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0
+              },
+              "ruleIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "method",
+              "observation",
+              "expected",
+              "location",
+              "sourceIds",
+              "ruleIds"
+            ],
+            "additionalProperties": false
+          },
+          "usedInScore": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "criterion",
+          "score",
+          "confidence",
+          "evidence",
+          "usedInScore"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "versionBindings": {
+      "type": "object",
+      "properties": {
+        "conceptHash": {
+          "type": "string"
+        },
+        "copyHash": {
+          "type": "string"
+        },
+        "artHash": {
+          "type": "string"
+        },
+        "brandHash": {
+          "type": "string"
+        },
+        "placementHash": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "conceptHash",
+        "copyHash",
+        "artHash",
+        "brandHash",
+        "placementHash"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "agentId",
+    "assignmentId",
+    "conceptId",
+    "route",
+    "placementId",
+    "packageHash",
+    "artifactHash",
+    "reviewHash",
+    "evidenceMode",
+    "decision",
+    "score",
+    "qualityVerified",
+    "policy",
+    "criticalChecks",
+    "findings",
+    "routing",
+    "verificationDependencies",
+    "userNote",
+    "artifactAvailable",
+    "limits",
+    "qualityScores",
+    "versionBindings"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/creative-reviewer/output/v1"
+}

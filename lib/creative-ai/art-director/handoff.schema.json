@@ -1,0 +1,804 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "number"
+    },
+    "contract": {
+      "type": "string"
+    },
+    "agentId": {
+      "type": "string"
+    },
+    "automatic": {
+      "type": "boolean"
+    },
+    "humanApprovalRequired": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string"
+    },
+    "dispatchAllowed": {
+      "type": "boolean"
+    },
+    "assignmentId": {
+      "type": "string"
+    },
+    "inputHash": {
+      "type": "string"
+    },
+    "conceptIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "productionMode": {
+      "type": "string"
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "strategy": {
+          "type": "object"
+        },
+        "concepts": {
+          "type": "array",
+          "items": {}
+        },
+        "copy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "conceptId": {
+                "type": "string"
+              },
+              "placementId": {
+                "type": "string"
+              },
+              "fields": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "type": "string",
+                      "enum": [
+                        "headline",
+                        "body",
+                        "cta",
+                        "disclaimer",
+                        "brand",
+                        "other"
+                      ]
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "delivery": {
+                      "type": "string",
+                      "enum": [
+                        "embedded",
+                        "native"
+                      ]
+                    },
+                    "nativeFieldId": {
+                      "type": "string"
+                    },
+                    "proofFactIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 0
+                    },
+                    "requirement": {
+                      "type": "string",
+                      "enum": [
+                        "mandatory",
+                        "optional"
+                      ]
+                    },
+                    "locked": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "role",
+                    "text",
+                    "delivery",
+                    "nativeFieldId",
+                    "proofFactIds",
+                    "requirement",
+                    "locked"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "conceptId",
+              "placementId",
+              "fields"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 2
+        },
+        "lockedRules": {
+          "type": "array",
+          "items": {}
+        },
+        "placements": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "strategy",
+        "concepts",
+        "copy",
+        "lockedRules",
+        "placements"
+      ],
+      "additionalProperties": false
+    },
+    "packets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "specification": {
+            "type": "object",
+            "properties": {
+              "conceptId": {
+                "type": "string"
+              },
+              "route": {
+                "type": "string",
+                "enum": [
+                  "continuity",
+                  "exploration"
+                ]
+              },
+              "conceptHash": {
+                "type": "string"
+              },
+              "placementId": {
+                "type": "string"
+              },
+              "formatId": {
+                "type": "string"
+              },
+              "placementHash": {
+                "type": "string"
+              },
+              "copyHash": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "ready",
+                  "blocked"
+                ]
+              },
+              "focalCommunication": {
+                "type": "string"
+              },
+              "scene": {
+                "type": "string"
+              },
+              "composition": {
+                "type": "string"
+              },
+              "hierarchy": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "imageTreatment": {
+                "type": "string"
+              },
+              "camera": {
+                "type": "string"
+              },
+              "lighting": {
+                "type": "string"
+              },
+              "palette": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "typography": {
+                "type": "string"
+              },
+              "text": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "fieldId": {
+                      "type": "string"
+                    },
+                    "exactText": {
+                      "type": "string"
+                    },
+                    "delivery": {
+                      "type": "string",
+                      "enum": [
+                        "embedded",
+                        "native"
+                      ]
+                    },
+                    "nativeFieldId": {
+                      "type": "string"
+                    },
+                    "hierarchy": {
+                      "type": "number",
+                      "minimum": 1
+                    },
+                    "position": {
+                      "type": "string"
+                    },
+                    "font": {
+                      "type": "string"
+                    },
+                    "sizeDirection": {
+                      "type": "string"
+                    },
+                    "contrastDirection": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "fieldId",
+                    "exactText",
+                    "delivery",
+                    "nativeFieldId",
+                    "hierarchy",
+                    "position",
+                    "font",
+                    "sizeDirection",
+                    "contrastDirection"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "references": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "assetId": {
+                      "type": "string"
+                    },
+                    "roles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "background",
+                          "scene",
+                          "setting",
+                          "lighting",
+                          "camera-angle",
+                          "texture",
+                          "mood",
+                          "text",
+                          "typography",
+                          "layout",
+                          "logo",
+                          "product",
+                          "identity"
+                        ]
+                      },
+                      "minItems": 1
+                    },
+                    "instruction": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "assetId",
+                    "roles",
+                    "instruction"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "logo": {
+                "type": "object",
+                "properties": {
+                  "assetIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  },
+                  "treatment": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assetIds",
+                  "treatment"
+                ],
+                "additionalProperties": false
+              },
+              "product": {
+                "type": "object",
+                "properties": {
+                  "assetIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  },
+                  "treatment": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "assetIds",
+                  "treatment"
+                ],
+                "additionalProperties": false
+              },
+              "safeAreas": {
+                "type": "object",
+                "properties": {
+                  "direction": {
+                    "type": "string"
+                  },
+                  "sourceStatus": {
+                    "type": "string",
+                    "enum": [
+                      "verified-primary",
+                      "user-specified",
+                      "official-guidance",
+                      "heuristic",
+                      "unknown"
+                    ]
+                  },
+                  "ruleIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  },
+                  "sourceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "direction",
+                  "sourceStatus",
+                  "ruleIds",
+                  "sourceIds"
+                ],
+                "additionalProperties": false
+              },
+              "crop": {
+                "type": "object",
+                "properties": {
+                  "direction": {
+                    "type": "string"
+                  },
+                  "sourceStatus": {
+                    "type": "string",
+                    "enum": [
+                      "verified-primary",
+                      "user-specified",
+                      "official-guidance",
+                      "heuristic",
+                      "unknown"
+                    ]
+                  },
+                  "ruleIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  },
+                  "sourceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "direction",
+                  "sourceStatus",
+                  "ruleIds",
+                  "sourceIds"
+                ],
+                "additionalProperties": false
+              },
+              "viewingSize": {
+                "type": "object",
+                "properties": {
+                  "direction": {
+                    "type": "string"
+                  },
+                  "sourceStatus": {
+                    "type": "string",
+                    "enum": [
+                      "verified-primary",
+                      "user-specified",
+                      "official-guidance",
+                      "heuristic",
+                      "unknown"
+                    ]
+                  },
+                  "ruleIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  },
+                  "sourceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "direction",
+                  "sourceStatus",
+                  "ruleIds",
+                  "sourceIds"
+                ],
+                "additionalProperties": false
+              },
+              "lockedRules": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                },
+                "minItems": 0
+              },
+              "flexibleChoices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "dependencies": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "target": {
+                      "type": "string",
+                      "enum": [
+                        "copywriter",
+                        "brand-researcher",
+                        "brand-guardian",
+                        "workflow-producer",
+                        "creative-director"
+                      ]
+                    },
+                    "relatedIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 0
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "target",
+                    "relatedIds",
+                    "reason"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "reconciliation": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "target": {
+                      "const": "copywriter"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "aligned",
+                        "revision-required"
+                      ]
+                    },
+                    "fieldIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 0
+                    },
+                    "note": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "target",
+                    "status",
+                    "fieldIds",
+                    "note"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "checkCriteria": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "knowledgeApplications": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "principleId": {
+                      "type": "string"
+                    },
+                    "decision": {
+                      "type": "string"
+                    },
+                    "limit": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "principleId",
+                    "decision",
+                    "limit"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "brandGuidelineApplications": {
+                "type": "array",
+                "maxItems": 16,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "ruleId": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "why": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "ruleId",
+                    "decision",
+                    "why"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "conceptId",
+              "route",
+              "conceptHash",
+              "placementId",
+              "formatId",
+              "placementHash",
+              "copyHash",
+              "status",
+              "focalCommunication",
+              "scene",
+              "composition",
+              "hierarchy",
+              "imageTreatment",
+              "camera",
+              "lighting",
+              "palette",
+              "typography",
+              "text",
+              "references",
+              "logo",
+              "product",
+              "safeAreas",
+              "crop",
+              "viewingSize",
+              "lockedRules",
+              "flexibleChoices",
+              "rationale",
+              "dependencies",
+              "reconciliation",
+              "checkCriteria",
+              "knowledgeApplications"
+            ],
+            "additionalProperties": false
+          },
+          "artHash": {
+            "type": "string"
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "assetId": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "ownership": {
+                  "type": "string"
+                },
+                "brandName": {
+                  "type": "string"
+                },
+                "provenance": {
+                  "type": "string"
+                },
+                "sourceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "synthetic": {
+                  "type": "boolean"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "imageData": {
+                  "type": "string"
+                },
+                "roles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "instruction": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "assetId",
+                "label",
+                "ownership",
+                "brandName",
+                "provenance",
+                "sourceIds",
+                "synthetic",
+                "status",
+                "sha256",
+                "width",
+                "height",
+                "mime",
+                "imageData",
+                "roles",
+                "instruction"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "specification",
+          "artHash",
+          "attachments"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "internalDependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string"
+          },
+          "relatedIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "conceptId": {
+            "type": "string"
+          },
+          "placementId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "target",
+          "relatedIds",
+          "reason",
+          "conceptId",
+          "placementId"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "version",
+    "contract",
+    "agentId",
+    "automatic",
+    "humanApprovalRequired",
+    "status",
+    "dispatchAllowed",
+    "assignmentId",
+    "inputHash",
+    "conceptIds",
+    "productionMode",
+    "context",
+    "packets",
+    "internalDependencies"
+  ],
+  "additionalProperties": false
+}

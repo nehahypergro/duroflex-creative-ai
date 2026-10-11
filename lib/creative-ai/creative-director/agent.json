@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "creative-director",
+  "displayName": "Creative director",
+  "aliases": [],
+  "predecessors": [
+    "marketing-strategist",
+    "brand-guardian",
+    "brand-researcher"
+  ],
+  "successors": [
+    "copywriter",
+    "art-director"
+  ],
+  "coordinator": "workflow-producer",
+  "scope": "Two executable conceptual expressions of the selected strategy",
+  "inputSchema": "input.schema.json",
+  "outputSchema": "output.schema.json",
+  "knowledge": "knowledge/pack.json",
+  "instructions": "instructions.md",
+  "runtime": "context-assembly-and-handoff-builders-only",
+  "conceptRoutes": [
+    "continuity",
+    "exploration"
+  ],
+  "humanApprovalRequired": false,
+  "validationStatus": "Structural and provenance checks only; no qualified reviewer or campaign-effectiveness evaluation has occurred"
+}

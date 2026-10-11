@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "scope": "India production proof workflow for new print selections",
+  "presets": 43,
+  "fullRegression": {
+    "tests": 335,
+    "pass": 335,
+    "fail": 0,
+    "log": "work/production-proof-tests.log"
+  },
+  "finalFocused": {
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "log": "work/production-final-tests.log",
+    "change": "Unconfirmed operator file acceptance remains pending; explicit CMYK/PDF-X/vector requirement fails RGB raster export."
+  },
+  "visualInspection": {
+    "calibrationKitPages": 6,
+    "syntheticLeafletPacketPages": 4,
+    "allPagesInspected": true,
+    "browserScreenshot": "work/production-proof-browser.jpg"
+  },
+  "physicalMeasurementsPerformed": false,
+  "commercialOperatorConfirmed": false,
+  "manufactureAuthorized": false,
+  "paidProviderCalls": 0
+}

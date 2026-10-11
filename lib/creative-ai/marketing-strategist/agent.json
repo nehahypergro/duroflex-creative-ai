@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "id": "marketing-strategist",
+  "displayName": "Marketing strategist",
+  "aliases": [
+    "brand-strategist",
+    "Brand strategist"
+  ],
+  "predecessors": [
+    "brand-researcher",
+    "brand-guardian"
+  ],
+  "successor": "creative-director",
+  "coordinator": "workflow-producer",
+  "scope": "Assignment strategy within established brand positioning",
+  "inputSchema": "input.schema.json",
+  "outputSchema": "output.schema.json",
+  "knowledge": "knowledge/pack.json",
+  "instructions": "instructions.md",
+  "runtime": "context-assembly-only",
+  "humanApprovalRequired": false,
+  "validationStatus": "Software checks only; qualified reviewer evaluation has not occurred",
+  "responsibilities": [
+    "Identify customer buying situation and barrier with explicit evidence or hypothesis labels",
+    "Select one customer-facing proposition within established brand positioning",
+    "Bind product focus and message claims to eligible proof and state its limits",
+    "Preserve desired action and assess exact destination fit without inventing verification",
+    "Disclose the weakest assumption and request missing evidence before creative development"
+  ]
+}

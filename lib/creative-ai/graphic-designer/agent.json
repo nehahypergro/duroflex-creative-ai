@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "id": "graphic-designer",
+  "displayName": "Graphic designer",
+  "aliases": [],
+  "predecessors": [
+    "art-director",
+    "copywriter",
+    "brand-guardian",
+    "creative-director"
+  ],
+  "successors": [
+    "reviewer"
+  ],
+  "coordinator": "workflow-producer",
+  "inputSchema": "input.schema.json",
+  "outputSchema": "output.schema.json",
+  "knowledge": "knowledge/pack.json",
+  "instructions": "instructions.md",
+  "runtime": "generation-package-builders-and-review-boundary-only",
+  "humanApprovalRequired": false
+}

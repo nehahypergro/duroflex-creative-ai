@@ -1,0 +1,113 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "agentId": {
+      "const": "copywriter"
+    },
+    "decks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "conceptId": {
+            "type": "string"
+          },
+          "placementId": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string",
+                  "enum": [
+                    "headline",
+                    "body",
+                    "cta",
+                    "disclaimer",
+                    "brand",
+                    "other"
+                  ]
+                },
+                "text": {
+                  "type": "string"
+                },
+                "delivery": {
+                  "type": "string",
+                  "enum": [
+                    "embedded",
+                    "native"
+                  ]
+                },
+                "nativeFieldId": {
+                  "type": "string"
+                },
+                "proofFactIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 0
+                },
+                "requirement": {
+                  "type": "string",
+                  "enum": [
+                    "mandatory",
+                    "optional"
+                  ]
+                },
+                "locked": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "role",
+                "text",
+                "delivery",
+                "nativeFieldId",
+                "proofFactIds",
+                "requirement",
+                "locked"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "conceptId",
+          "placementId",
+          "fields"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "version",
+    "agentId",
+    "decks",
+    "rationale",
+    "unknowns"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,369 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "jobId": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "job.created",
+        "task.started",
+        "task.completed",
+        "task.failed",
+        "artifact.saved",
+        "handoff.sent",
+        "handoff.accepted",
+        "handoff.completed",
+        "dependency.waiting",
+        "dependency.resolved",
+        "version.superseded",
+        "review.decision",
+        "correction.planned",
+        "correction.used",
+        "delivery.ready",
+        "delivery.flagged",
+        "delivery.no-output",
+        "callback.rejected"
+      ]
+    },
+    "agent": {
+      "type": "string",
+      "enum": [
+        "workflow-producer",
+        "brand-researcher",
+        "brand-guardian",
+        "marketing-strategist",
+        "creative-director",
+        "copywriter",
+        "art-director",
+        "graphic-designer",
+        "creative-reviewer"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "conceptId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "route": {
+          "type": "string",
+          "enum": [
+            "continuity",
+            "exploration"
+          ]
+        },
+        "placementId": {
+          "type": "string",
+          "maxLength": 120
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "outcome": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "artifactRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "minItems": 0
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "minItems": 0
+    },
+    "upstreamHandoffIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "minItems": 0
+    },
+    "dependencyIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "minItems": 0
+    },
+    "unresolvedIssueRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 120
+      },
+      "minItems": 0
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "production-adapter",
+            "synthetic-fixture"
+          ]
+        },
+        "adapterId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "receiptId": {
+          "type": "string",
+          "maxLength": 120
+        }
+      },
+      "required": [
+        "mode",
+        "adapterId",
+        "receiptId"
+      ],
+      "additionalProperties": false
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "jobId": {
+              "type": "string",
+              "maxLength": 120
+            },
+            "assignmentId": {
+              "type": "string",
+              "maxLength": 120
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "production",
+                "demo"
+              ]
+            },
+            "concepts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "maxLength": 120
+                  },
+                  "route": {
+                    "type": "string",
+                    "enum": [
+                      "continuity",
+                      "exploration"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "route"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 2
+            },
+            "placements": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "maxLength": 120
+                  },
+                  "label": {
+                    "type": "string",
+                    "maxLength": 240
+                  }
+                },
+                "required": [
+                  "id",
+                  "label"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "jobId",
+            "assignmentId",
+            "mode",
+            "concepts",
+            "placements"
+          ],
+          "additionalProperties": false
+        },
+        "taskId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "taskKind": {
+          "type": "string",
+          "enum": [
+            "research",
+            "guardian",
+            "strategy",
+            "concepts",
+            "copy",
+            "art",
+            "reconciliation",
+            "generation",
+            "review"
+          ]
+        },
+        "handoffId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "targetAgent": {
+          "type": "string",
+          "enum": [
+            "workflow-producer",
+            "brand-researcher",
+            "brand-guardian",
+            "marketing-strategist",
+            "creative-director",
+            "copywriter",
+            "art-director",
+            "graphic-designer",
+            "creative-reviewer"
+          ]
+        },
+        "dependencyId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "artifact": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "maxLength": 120
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "dossier",
+                "brand-guide",
+                "strategy",
+                "concept",
+                "copy",
+                "art",
+                "package",
+                "image",
+                "review",
+                "delivery",
+                "source"
+              ]
+            },
+            "version": {
+              "type": "string",
+              "maxLength": 120
+            },
+            "reference": {
+              "type": "string",
+              "maxLength": 240
+            },
+            "hash": {
+              "type": "string",
+              "maxLength": 64
+            }
+          },
+          "required": [
+            "id",
+            "kind",
+            "version",
+            "reference",
+            "hash"
+          ],
+          "additionalProperties": false
+        },
+        "artifactId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "replacementArtifactId": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "reviewLink": {
+          "type": "object"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "eventId": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "sequence": {
+      "type": "number",
+      "minimum": 1
+    },
+    "recordedAt": {
+      "type": "string"
+    },
+    "previousHash": {
+      "type": "string"
+    },
+    "eventHash": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "jobId",
+    "idempotencyKey",
+    "type",
+    "agent",
+    "scope",
+    "description",
+    "outcome",
+    "artifactRefs",
+    "sourceRefs",
+    "upstreamHandoffIds",
+    "dependencyIds",
+    "unresolvedIssueRefs",
+    "evidence",
+    "details",
+    "eventId",
+    "sequence",
+    "recordedAt",
+    "previousHash",
+    "eventHash"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/workflow-producer/event/v1"
+}

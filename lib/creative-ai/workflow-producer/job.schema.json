@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "jobId": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "assignmentId": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "production",
+        "demo"
+      ]
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "continuity",
+              "exploration"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "route"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2
+    },
+    "placements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 240
+          }
+        },
+        "required": [
+          "id",
+          "label"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "jobId",
+    "assignmentId",
+    "mode",
+    "concepts",
+    "placements"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/workflow-producer/job/v1"
+}

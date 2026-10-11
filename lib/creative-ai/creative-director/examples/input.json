@@ -1,0 +1,450 @@
+{
+  "version": 1,
+  "assignmentId": "synthetic-bottle-assignment",
+  "strategyInput": {
+    "version": 1,
+    "assignment": {
+      "goal": "Explain the fictional bottle for consideration",
+      "brief": "Synthetic practice assignment: introduce the bottle without medical or environmental superiority claims.",
+      "productName": "Fictional Everyday Bottle",
+      "objective": "consideration",
+      "market": "Market unspecified",
+      "language": "English",
+      "formats": [
+        {
+          "id": "social-static",
+          "label": "Social static",
+          "channel": "Social feed",
+          "specificationStatus": "pending",
+          "constraints": []
+        }
+      ]
+    },
+    "research": {
+      "version": 1,
+      "event": "research.completed",
+      "researchId": "demo-template-v1",
+      "brandName": "Sample Brand",
+      "demo": true,
+      "completedAt": "2026-10-04T00:00:00Z",
+      "sources": [
+        {
+          "id": "sample",
+          "kind": "asset",
+          "status": "available",
+          "label": "Locally authored demonstration artwork",
+          "reference": "demo.js / fictional layout illustration",
+          "collectedAt": "2026-10-04T00:00:00Z",
+          "note": "Not an official brand asset."
+        },
+        {
+          "id": "site",
+          "kind": "site",
+          "status": "unavailable",
+          "label": "site evidence",
+          "reference": "Not supplied / not collected",
+          "collectedAt": "2026-10-04T00:00:00Z",
+          "note": "No live research or supplied document in this demonstration."
+        },
+        {
+          "id": "product",
+          "kind": "product",
+          "status": "unavailable",
+          "label": "product evidence",
+          "reference": "Not supplied / not collected",
+          "collectedAt": "2026-10-04T00:00:00Z",
+          "note": "No live research or supplied document in this demonstration."
+        },
+        {
+          "id": "guidelines",
+          "kind": "guidelines",
+          "status": "unavailable",
+          "label": "guidelines evidence",
+          "reference": "Not supplied / not collected",
+          "collectedAt": "2026-10-04T00:00:00Z",
+          "note": "No live research or supplied document in this demonstration."
+        },
+        {
+          "id": "social",
+          "kind": "social",
+          "status": "unavailable",
+          "label": "social evidence",
+          "reference": "Not supplied / not collected",
+          "collectedAt": "2026-10-04T00:00:00Z",
+          "note": "No live research or supplied document in this demonstration."
+        },
+        {
+          "id": "meta",
+          "kind": "meta",
+          "status": "unavailable",
+          "label": "meta evidence",
+          "reference": "Not supplied / not collected",
+          "collectedAt": "2026-10-04T00:00:00Z",
+          "note": "Advertiser identity and collection access unverified. No ads collected."
+        }
+      ],
+      "assets": [
+        {
+          "id": "art",
+          "kind": "reference",
+          "label": "Fictional layout study / sample artwork",
+          "sourceIds": [
+            "sample"
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "section": "overview",
+          "basis": "sample",
+          "title": "A concise brand introduction belongs here",
+          "text": "Summarize what the brand sells and whom it serves using supplied evidence. This is guidance for the template, not a brand finding.",
+          "sourceIds": []
+        },
+        {
+          "section": "identity",
+          "basis": "sample",
+          "title": "Show the visual character",
+          "text": "Use representative logos, product imagery, colors, and typography references. This fictional artwork demonstrates image placement only.",
+          "sourceIds": [
+            "sample"
+          ],
+          "assetIds": [
+            "art"
+          ]
+        },
+        {
+          "section": "opportunities",
+          "basis": "sample",
+          "direction": "continuity",
+          "title": "Carry forward proven brand cues",
+          "text": "Once evidence is supplied, describe which recognizable visual and verbal cues to retain.",
+          "sourceIds": []
+        },
+        {
+          "section": "opportunities",
+          "basis": "sample",
+          "direction": "exploration",
+          "title": "Make room for a new direction",
+          "text": "Separate creative hypotheses from observed patterns. Any proposed experiment should be marked as inference.",
+          "sourceIds": []
+        }
+      ]
+    },
+    "guardian": {
+      "requirements": [
+        {
+          "id": "no-medical",
+          "text": "Do not imply medical benefits.",
+          "sourceIds": [
+            "brief-source"
+          ]
+        }
+      ],
+      "preferences": [
+        {
+          "id": "calm",
+          "text": "Consider a calm, clear tone.",
+          "sourceIds": [
+            "brief-source"
+          ]
+        }
+      ],
+      "establishedPositioningFactIds": [
+        "positioning"
+      ]
+    },
+    "additionalSources": [
+      {
+        "id": "product-sheet",
+        "label": "Fictional supplied product sheet",
+        "reference": "Synthetic example / authored fixture, not official evidence",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "kind": "product",
+        "status": "available"
+      },
+      {
+        "id": "brief-source",
+        "label": "Fictional user brief and brand promise",
+        "reference": "Synthetic example / authored fixture",
+        "collectedAt": "2026-10-04T00:00:00Z",
+        "kind": "user",
+        "status": "available"
+      }
+    ],
+    "facts": [
+      {
+        "id": "capacity",
+        "kind": "product",
+        "text": "The fictional bottle holds 500 ml.",
+        "status": "supported",
+        "sourceIds": [
+          "product-sheet"
+        ],
+        "essential": true
+      },
+      {
+        "id": "positioning",
+        "kind": "brand",
+        "text": "Fictional established promise: uncomplicated everyday essentials.",
+        "status": "supported",
+        "sourceIds": [
+          "brief-source"
+        ],
+        "essential": true
+      }
+    ],
+    "conflicts": []
+  },
+  "strategy": {
+    "version": 1,
+    "agentId": "marketing-strategist",
+    "status": "ready",
+    "getWhoToBy": {
+      "statement": "Get people who carry water on routine outings, who are preparing to leave home, to consider whether the bottle fits their routine, by communicating the bottle's role as an uncomplicated everyday water-carrying option.",
+      "get": {
+        "text": "people who carry water on routine outings",
+        "basis": "assumption",
+        "sourceIds": [],
+        "factIds": [],
+        "briefField": "audience"
+      },
+      "who": {
+        "text": "are preparing to leave home",
+        "basis": "inference",
+        "sourceIds": [],
+        "factIds": [],
+        "briefField": "buyingSituation"
+      },
+      "to": {
+        "text": "consider whether the bottle fits their routine",
+        "basis": "inference",
+        "sourceIds": [],
+        "factIds": [],
+        "briefField": "desiredAction"
+      },
+      "by": {
+        "text": "communicating the bottle's role as an uncomplicated everyday water-carrying option",
+        "basis": "inference",
+        "sourceIds": [
+          "product-sheet"
+        ],
+        "factIds": [
+          "capacity"
+        ],
+        "briefField": "primaryProposition"
+      }
+    },
+    "brief": {
+      "objectiveType": "consideration",
+      "positioningFactIds": [
+        "positioning"
+      ],
+      "objective": {
+        "text": "Support product consideration by explaining a relevant use.",
+        "basis": "evidence",
+        "sourceIds": [
+          "brief-source"
+        ],
+        "factIds": []
+      },
+      "audience": {
+        "text": "People who carry water during routine outings.",
+        "basis": "assumption",
+        "sourceIds": [],
+        "factIds": []
+      },
+      "buyingSituation": {
+        "text": "Preparing to leave home for an everyday outing.",
+        "basis": "inference",
+        "sourceIds": [],
+        "factIds": []
+      },
+      "communicationProblem": {
+        "text": "The product may need a concrete usage context to feel relevant; no diagnosis has been measured.",
+        "basis": "inference",
+        "sourceIds": [],
+        "factIds": []
+      },
+      "primaryProposition": {
+        "text": "An everyday bottle for carrying water during routine outings.",
+        "basis": "inference",
+        "sourceIds": [
+          "product-sheet"
+        ],
+        "factIds": [
+          "capacity"
+        ]
+      },
+      "supportingClaims": [
+        {
+          "factId": "capacity",
+          "text": "The fictional bottle holds 500 ml.",
+          "sourceIds": [
+            "product-sheet"
+          ]
+        }
+      ],
+      "objections": [
+        {
+          "text": "Whether this capacity suits the outing remains an audience question.",
+          "basis": "inference",
+          "sourceIds": [],
+          "factIds": []
+        }
+      ],
+      "desiredAction": {
+        "text": "Learn about the product; confirm the actual destination before stronger action wording.",
+        "basis": "inference",
+        "sourceIds": [],
+        "factIds": []
+      },
+      "channelFormatImplications": [
+        {
+          "formatId": "social-static",
+          "implication": {
+            "text": "Prioritize one relevant proposition. Exact dimensions are pending; visual execution belongs downstream.",
+            "basis": "inference",
+            "sourceIds": [],
+            "factIds": []
+          }
+        }
+      ]
+    },
+    "alternatives": [
+      {
+        "id": "routine",
+        "direction": "Use-context relevance",
+        "primaryProposition": {
+          "text": "An everyday bottle for carrying water during routine outings.",
+          "basis": "inference",
+          "sourceIds": [
+            "product-sheet"
+          ],
+          "factIds": [
+            "capacity"
+          ]
+        },
+        "proofFactIds": [
+          "capacity"
+        ],
+        "principleIds": [
+          "customer-value",
+          "feature-benefit"
+        ],
+        "hardGate": "pass",
+        "violations": [],
+        "critique": {
+          "customerRelevance": "Routine outings are a relevance hypothesis; no customer research was supplied.",
+          "productTruth": "Capacity is the only supplied product claim. No hydration outcome is asserted.",
+          "brandFit": "Everyday use is consistent with the fictional essentials promise and medical-benefit exclusion.",
+          "distinctiveness": "Recognition depends on guardian assets; no linkage measurement exists.",
+          "clarity": "One product and one usage idea.",
+          "channelDestinationFit": "Feed context is supplied; exact dimensions and landing facts are pending.",
+          "strongestObjection": "The proposed routine may not matter to the actual audience."
+        },
+        "tradeoffs": [
+          "Concrete context improves specificity but depends on an unresearched situation."
+        ]
+      },
+      {
+        "id": "specification",
+        "direction": "Product specification clarity",
+        "primaryProposition": {
+          "text": "Help people assess whether a 500 ml bottle fits their routine.",
+          "basis": "inference",
+          "sourceIds": [
+            "product-sheet"
+          ],
+          "factIds": [
+            "capacity"
+          ]
+        },
+        "proofFactIds": [
+          "capacity"
+        ],
+        "principleIds": [
+          "feature-benefit"
+        ],
+        "hardGate": "pass",
+        "violations": [],
+        "critique": {
+          "customerRelevance": "Lets buyers assess fit; does not establish which situations they value.",
+          "productTruth": "Capacity is the only supplied product claim. No hydration outcome is asserted.",
+          "brandFit": "Everyday use is consistent with the fictional essentials promise and medical-benefit exclusion.",
+          "distinctiveness": "Recognition depends on guardian assets; no linkage measurement exists.",
+          "clarity": "One product and one usage idea.",
+          "channelDestinationFit": "Feed context is supplied; exact dimensions and landing facts are pending.",
+          "strongestObjection": "Capacity alone may not distinguish the brand."
+        },
+        "tradeoffs": [
+          "Less interpretive but may feel less relevant."
+        ]
+      }
+    ],
+    "selection": {
+      "directionId": "routine",
+      "reason": "Provisional use context adds a reason to consider the product while keeping the factual claim narrow.",
+      "materialTradeoffs": [
+        "Audience relevance is untested; specification clarity carries less interpretive risk."
+      ],
+      "alternativesNote": "Two materially different priorities considered: usage relevance and specification assessment."
+    },
+    "requirementChecks": [
+      {
+        "requirementId": "no-medical",
+        "status": "met",
+        "summary": "No health outcome or medical benefit proposed."
+      }
+    ],
+    "assumptions": [
+      {
+        "id": "audience",
+        "text": "Routine water carriers are the provisional audience.",
+        "reason": "The synthetic assignment has no audience research or audience instruction."
+      }
+    ],
+    "uncertainties": [
+      "Buying situation, local relevance and actual destination are unverified."
+    ],
+    "evidenceThatWouldChangeRecommendation": [
+      "Customer evidence that a different usage situation matters more."
+    ],
+    "testHypothesis": {
+      "statement": "The usage-context route may improve relevance without weakening product understanding.",
+      "comparison": "Usage-context route versus specification route, with comparable brand and format execution.",
+      "measure": "Planned relevance and product-understanding responses in a comprehension task.",
+      "falsification": "No relevance advantage or lower accurate product understanding.",
+      "limitations": "Untested; comprehension is not conversion. No media or campaign outcomes are supplied.",
+      "status": "untested"
+    },
+    "researchRequests": [
+      {
+        "question": "What destination and buying situations are relevant?",
+        "essential": false,
+        "relatedIds": []
+      }
+    ],
+    "sourceIds": [
+      "product-sheet",
+      "brief-source"
+    ],
+    "knowledgeApplications": [
+      {
+        "principleId": "customer-value",
+        "decision": "Consider a concrete customer task as the relevance route.",
+        "limit": "Customer task is an untested hypothesis."
+      },
+      {
+        "principleId": "feature-benefit",
+        "decision": "Keep capacity as fact and usage relevance as inference.",
+        "limit": "Capacity does not establish preference or a health outcome."
+      }
+    ],
+    "decisionSummary": "Synthetic practice summary: a provisional usage-context route was selected over a specification-first route. The capacity claim stays exact, the audience stays assumed, the brand promise stays intact and evaluation remains unrun."
+  },
+  "referenceCreativeIds": [
+    "art"
+  ],
+  "userPreferences": []
+}

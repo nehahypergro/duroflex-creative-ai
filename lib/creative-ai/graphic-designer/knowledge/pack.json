@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "agentId": "graphic-designer",
+  "status": "foundation; no live generation or evaluation",
+  "sources": [
+    {
+      "id": "openai-prompting",
+      "title": "OpenAI image prompting guide",
+      "url": "https://developers.openai.com/api/docs/guides/image-prompting",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04",
+      "scope": "Shared prompting guidance; illustrated current examples may use other models. Evaluate on the requested model."
+    },
+    {
+      "id": "openai-model",
+      "title": "OpenAI GPT Image 2 model documentation",
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04",
+      "scope": "Documented capabilities; connector mapping and account access unverified."
+    },
+    {
+      "id": "gestalt",
+      "title": "Max Wertheimer, Laws of Organization in Perceptual Forms (1923), English translation, university mirror",
+      "url": "https://psychclassics.yorku.ca/Wertheimer/Forms/forms.htm",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "layout",
+      "title": "Google Material Design, Layout principles",
+      "url": "https://m1.material.io/layout/principles.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "type",
+      "title": "Google Material Design, Typography",
+      "url": "https://m1.material.io/style/typography.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "color",
+      "title": "Google Material Design, Color",
+      "url": "https://m1.material.io/style/color.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "imagery",
+      "title": "Google Material Design, Imagery",
+      "url": "https://m1.material.io/style/imagery.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    },
+    {
+      "id": "contrast",
+      "title": "W3C Understanding Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "accessStatus": "verified-content",
+      "checkedAt": "2026-10-04"
+    }
+  ],
+  "principles": [
+    {
+      "id": "concrete-prompt",
+      "sourceIds": [
+        "openai-prompting"
+      ],
+      "evidenceType": "verified-provider-guidance-with-authored-application",
+      "sourceSummary": "Describe purpose, visible scene and treatment.",
+      "application": "Name the audience takeaway, subject, spatial reading order, light and materials.",
+      "syntheticExample": "A calm departure scene puts one bottle beside keys; headline occupies quiet upper left.",
+      "counterexample": "Premium cinematic viral luxury aesthetic, with no message or composition.",
+      "limits": "Appearance cues do not guarantee a physical camera simulation."
+    },
+    {
+      "id": "exact-text",
+      "sourceIds": [
+        "openai-prompting"
+      ],
+      "evidenceType": "verified-provider-guidance-with-authored-application",
+      "sourceSummary": "Quote exact text and specify typography/position.",
+      "application": "Quote each supplied embedded field, once, with its hierarchy and text zone.",
+      "syntheticExample": "Render \u201cAn everyday essential\u201d exactly once in the upper left.",
+      "counterexample": "Ask for a catchy headline or omit a qualifier to fit.",
+      "limits": "The generated words still require actual spelling and legibility review."
+    },
+    {
+      "id": "reference-roles",
+      "sourceIds": [
+        "openai-prompting"
+      ],
+      "evidenceType": "verified-provider-guidance-with-authored-application",
+      "sourceSummary": "Identify what image references should preserve or influence.",
+      "application": "Assign a separate allowed role to each numbered attachment.",
+      "syntheticExample": "Attachment 1 preserves product identity; external attachment 2 supplies background light only.",
+      "counterexample": "Blend every reference style, importing another brand\u2019s logo.",
+      "limits": "Our continuity/exploration restriction is an authored product policy, not a provider guarantee."
+    },
+    {
+      "id": "targeted-revision",
+      "sourceIds": [
+        "openai-prompting"
+      ],
+      "evidenceType": "verified-provider-guidance-with-authored-application",
+      "sourceSummary": "Check output and request focused corrections.",
+      "application": "Name the observed issue; retain exact copy, identity and unaffected choices.",
+      "syntheticExample": "Increase headline contrast while preserving words, bottle shape and palette rules.",
+      "counterexample": "Make it better, with no inspected issue or preservation instruction.",
+      "limits": "No output was inspected in these synthetic examples."
+    },
+    {
+      "id": "design-hierarchy",
+      "sourceIds": [
+        "layout"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "Visual emphasis and spatial organization help establish a reading order.",
+      "application": "Give the primary message one focal point; balance mass, scale and empty space.",
+      "syntheticExample": "One product silhouette balances a short headline.",
+      "counterexample": "Five equally large elements compete; no primary takeaway.",
+      "limits": "UI guidance is a practice reference, not a universal advertising grid."
+    },
+    {
+      "id": "design-grouping",
+      "sourceIds": [
+        "gestalt"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "Proximity and similarity affect perceived grouping; factors can reinforce or compete.",
+      "application": "Group a qualifier with its claim; separate unrelated signals.",
+      "syntheticExample": "A capacity qualifier sits visibly beside the capacity line.",
+      "counterexample": "A qualifier appears under an unrelated lifestyle claim.",
+      "limits": "Original perception examples do not predict conversion or universal reading order."
+    },
+    {
+      "id": "design-legibility",
+      "sourceIds": [
+        "contrast",
+        "type"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "Text contrast, size and rendering affect accessibility; images of text are covered by the contrast guidance.",
+      "application": "Review full output at actual viewing size, including mandatory small print.",
+      "syntheticExample": "Short high-contrast headline with comfortably visible qualifier.",
+      "counterexample": "Tiny pale text looks acceptable only when zoomed in.",
+      "limits": "WCAG is a web accessibility reference, not publisher certification; fonts and contrast need rendered measurement."
+    },
+    {
+      "id": "design-typography",
+      "sourceIds": [
+        "type"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "Typography guidelines describe type scale, line height and language-specific needs.",
+      "application": "Specify hierarchy, alignment, font constraints and clear text zones without rewriting copy.",
+      "syntheticExample": "Brand font supports two clear line lengths.",
+      "counterexample": "External reference type replaces the supplied brand font.",
+      "limits": "Do not copy a UI type scale as a mandatory ad specification; actual font fidelity remains untested."
+    },
+    {
+      "id": "design-contextual-color",
+      "sourceIds": [
+        "color"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "The Material color system uses coordinated primary and accent roles and checks foreground/background accessibility.",
+      "application": "Assign palette roles consistent with supplied rules and scene contrast.",
+      "syntheticExample": "Brand accent marks the focal area; quiet background protects reading.",
+      "counterexample": "A mood board forces forbidden colors into the brand identity.",
+      "limits": "This does not establish universal emotional effects or a sales lift from any hue."
+    },
+    {
+      "id": "design-imagery",
+      "sourceIds": [
+        "imagery"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "Imagery guidance relates subject, focus and visual treatment to communication.",
+      "application": "Describe concrete scene, crop, light, camera angle and truthful product identity.",
+      "syntheticExample": "Ordinary departure setting supports the essentials concept.",
+      "counterexample": "Medical setting implies a benefit absent from product evidence.",
+      "limits": "Editorial application to ads is a hypothesis; identity and implied claims need semantic review."
+    },
+    {
+      "id": "design-brand-recognition",
+      "sourceIds": [
+        "imagery",
+        "type"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "Consistent visual treatment and typography support a coherent visual language.",
+      "application": "Lock supplied identity assets and execution rules across both routes.",
+      "syntheticExample": "Exploration changes setting while preserving the supplied product and logo.",
+      "counterexample": "External bottle appearance or logo leaks into the execution.",
+      "limits": "Consistency is a practice inference here; no measured distinctive-asset strength is known."
+    },
+    {
+      "id": "design-placement-adaptation",
+      "sourceIds": [
+        "layout",
+        "type"
+      ],
+      "evidenceType": "authored-production-heuristic-informed-by-primary-guidance",
+      "sourceSummary": "Layout and typography guidance require attention to the presentation context.",
+      "application": "Recompose focal point, reading flow and density for each pinned placement; retain source tiers and unknowns.",
+      "syntheticExample": "A compact placement receives a simpler scene with exact copy still legible.",
+      "counterexample": "A tall poster is naively shrunk into a tiny banner.",
+      "limits": "Publisher requirements come only from the separately versioned placement package; no universal safe margin is assumed."
+    },
+    {
+      "id": "priority-conflicts",
+      "sourceIds": [
+        "openai-prompting"
+      ],
+      "evidenceType": "authored-heuristic",
+      "sourceSummary": "Authored policy: resolve contradictory production instructions before execution.",
+      "application": "Prioritize product truth, locked copy, brand requirements and pinned mandatory rules before flexible details; route unresolved conflicts internally.",
+      "syntheticExample": "Copy density conflict returns a targeted internal revision request.",
+      "counterexample": "Silently remove small print or override brand colors.",
+      "limits": "Natural-language contradictions require semantic review; structural checks cover only declared conflicts."
+    }
+  ],
+  "evaluationPlan": {
+    "status": "pending",
+    "required": [
+      "Qualified design review of representative placements",
+      "Exact-text OCR plus visual verification",
+      "Product/logo fidelity and implicit-claim review",
+      "Reference-role adherence on both routes",
+      "Actual-size legibility and crop checks",
+      "Provider requested-model capability and access evaluation"
+    ],
+    "syntheticExamples": "Authored good/bad decisions, not historical campaigns or measured effectiveness."
+  }
+}

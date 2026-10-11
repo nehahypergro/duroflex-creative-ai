@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "verifiedAt": "2026-10-04",
+  "profileCount": 131,
+  "ruleCount": 186,
+  "sourceCount": 38,
+  "coverage": {
+    "included": 48,
+    "conditional": 68,
+    "unavailable": 15
+  },
+  "nodeTests": {
+    "command": "node --test tests/placement-knowledge/placement-knowledge.test.js",
+    "passed": 31,
+    "failed": 0
+  },
+  "schemaValidation": {
+    "validator": "jsonschema Draft202012Validator (temporary validation dependency; no project dependency added)",
+    "passed": [
+      "three schema definitions",
+      "catalog",
+      "archived snapshot",
+      "imported custom catalog",
+      "custom import example",
+      "pin example"
+    ]
+  },
+  "syntheticCases": 5,
+  "limits": [
+    "No live agent inference, real generated artwork evaluation or campaign performance evidence.",
+    "Schema and metadata checks do not establish readability, semantic truth or publisher acceptance."
+  ]
+}

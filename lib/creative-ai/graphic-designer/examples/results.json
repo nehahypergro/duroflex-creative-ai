@@ -1,0 +1,130 @@
+[
+  {
+    "assignmentId": "synthetic-bottle-assignment",
+    "conceptId": "concept-c355b7d5eaa141c0-continuity",
+    "placementId": "synthetic-small-square",
+    "packageHash": "3e6f1e1a1ff7cd87c1aea719ed390cd12855ca7b81e1ff668fc7e904f34d607f",
+    "status": "finished",
+    "artifact": {
+      "origin": "synthetic-placeholder",
+      "imageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAD8klEQVR4nO2UUQnAUACE1j/Zi+DPuqzEhuwQTHDKXdwnWoC3M7jatAX44FwKq7BOYRXB+cu/9li+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+g0kKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsMgDHHPh/buHjU8AAAAASUVORK5CYII="
+    },
+    "review": {
+      "status": "passed",
+      "evidenceStatus": "synthetic-simulation",
+      "artifactHash": "f0b9771f9529c5bfe3fc4b09c461b30c6fe62ba3ba98d1c277cb45122d00aab1",
+      "packageHash": "3e6f1e1a1ff7cd87c1aea719ed390cd12855ca7b81e1ff668fc7e904f34d607f",
+      "checks": [
+        {
+          "id": "exact-text",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "legibility",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "product-identity",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "logo-identity",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "truthful-claims",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "brand-rules",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "composition",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "safe-area-crop",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "dimensions-format",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        }
+      ]
+    }
+  },
+  {
+    "assignmentId": "synthetic-bottle-assignment",
+    "conceptId": "concept-c355b7d5eaa141c0-exploration",
+    "placementId": "synthetic-small-square",
+    "packageHash": "e617265c5008aeae1cf9f230c15da0a3f2394249cc07842824c901ce4d0c9b0e",
+    "status": "finished",
+    "artifact": {
+      "origin": "synthetic-placeholder",
+      "imageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAD8klEQVR4nO2UUQnAUACE1j/Zi+DPuqzEhuwQTHDKXdwnWoC3M7jatAX44FwKq7BOYRXB+cu/9li+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+g0kKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsMgDHHPh/buHjU8AAAAASUVORK5CYII="
+    },
+    "review": {
+      "status": "passed",
+      "evidenceStatus": "synthetic-simulation",
+      "artifactHash": "f0b9771f9529c5bfe3fc4b09c461b30c6fe62ba3ba98d1c277cb45122d00aab1",
+      "packageHash": "e617265c5008aeae1cf9f230c15da0a3f2394249cc07842824c901ce4d0c9b0e",
+      "checks": [
+        {
+          "id": "exact-text",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "legibility",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "product-identity",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "logo-identity",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "truthful-claims",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "brand-rules",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "composition",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "safe-area-crop",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        },
+        {
+          "id": "dimensions-format",
+          "status": "pass",
+          "note": "Synthetic simulation only; solid-color placeholder, no generated text, product or logo."
+        }
+      ]
+    }
+  }
+]

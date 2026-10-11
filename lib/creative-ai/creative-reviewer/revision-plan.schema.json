@@ -1,0 +1,146 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "number"
+    },
+    "unitKey": {
+      "type": "string"
+    },
+    "cycle": {
+      "const": 1
+    },
+    "maxCorrectionCycles": {
+      "const": 1
+    },
+    "authorizationId": {
+      "type": "string"
+    },
+    "automatic": {
+      "type": "boolean"
+    },
+    "humanApprovalRequired": {
+      "type": "boolean"
+    },
+    "packageHash": {
+      "type": "string"
+    },
+    "artifactHash": {
+      "type": "string"
+    },
+    "preserveVersions": {
+      "type": "object",
+      "properties": {
+        "conceptHash": {
+          "type": "string"
+        },
+        "copyHash": {
+          "type": "string"
+        },
+        "artHash": {
+          "type": "string"
+        },
+        "brandHash": {
+          "type": "string"
+        },
+        "placementHash": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "conceptHash",
+        "copyHash",
+        "artHash",
+        "brandHash",
+        "placementHash"
+      ],
+      "additionalProperties": false
+    },
+    "corrections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "findingId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "downstream": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "correction": {
+            "type": "string"
+          },
+          "preserve": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "findingId",
+          "status",
+          "owner",
+          "downstream",
+          "reason",
+          "correction",
+          "preserve"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {}
+    },
+    "verificationDependencies": {
+      "type": "array",
+      "items": {}
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preserveUnaffected": {
+      "type": "boolean"
+    },
+    "instruction": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "unitKey",
+    "cycle",
+    "maxCorrectionCycles",
+    "authorizationId",
+    "automatic",
+    "humanApprovalRequired",
+    "packageHash",
+    "artifactHash",
+    "preserveVersions",
+    "corrections",
+    "diagnostics",
+    "verificationDependencies",
+    "steps",
+    "preserveUnaffected",
+    "instruction"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://creative-ai.local/contracts/creative-reviewer/revision-plan/v1"
+}

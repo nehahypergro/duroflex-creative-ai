@@ -1,0 +1,36 @@
+[
+  {
+    "id": "synthetic-static-1",
+    "assignmentId": "synthetic-bottle-assignment",
+    "strategyHash": "10b211c27d1330f5cb78a5e1fdaccb76a3327f4eeddc80fe99bdcad9c0127e33",
+    "conceptId": "concept-c355b7d5eaa141c0-continuity",
+    "conceptHash": "57d9a0d0a3ee093bfba570fe70419ce9de4832e7e3f3f126815285e20391d64b",
+    "formatId": "social-static",
+    "status": "finished",
+    "review": {
+      "status": "passed",
+      "evidenceStatus": "synthetic-simulation"
+    },
+    "artifact": {
+      "kind": "static",
+      "origin": "synthetic-placeholder"
+    }
+  },
+  {
+    "id": "synthetic-static-2",
+    "assignmentId": "synthetic-bottle-assignment",
+    "strategyHash": "10b211c27d1330f5cb78a5e1fdaccb76a3327f4eeddc80fe99bdcad9c0127e33",
+    "conceptId": "concept-c355b7d5eaa141c0-exploration",
+    "conceptHash": "d2832e8407b8ef3611366ac7e40d47a0da24018a6eea89229b966f140e37e5fb",
+    "formatId": "social-static",
+    "status": "finished",
+    "review": {
+      "status": "passed",
+      "evidenceStatus": "synthetic-simulation"
+    },
+    "artifact": {
+      "kind": "static",
+      "origin": "synthetic-placeholder"
+    }
+  }
+]

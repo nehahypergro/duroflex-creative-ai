@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "id": "art-director",
+  "displayName": "Art director",
+  "aliases": [],
+  "predecessors": [
+    "creative-director",
+    "copywriter",
+    "brand-guardian",
+    "brand-researcher"
+  ],
+  "successors": [
+    "graphic-designer"
+  ],
+  "coordinator": "workflow-producer",
+  "inputSchema": "input.schema.json",
+  "outputSchema": "output.schema.json",
+  "knowledge": "knowledge/pack.json",
+  "instructions": "instructions.md",
+  "runtime": "context-and-handoff-only",
+  "humanApprovalRequired": false
+}

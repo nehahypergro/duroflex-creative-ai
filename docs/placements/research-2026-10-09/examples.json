@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Dunkin billboard",
+    "sourceId": "oaaa-examples",
+    "url": "https://oaaa.org/wp-content/uploads/2022/09/Dunkin-Donuts-Fries-Digital-Billboard.jpg",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Short question, large product pack and visible product branding; no body paragraph.",
+    "caution": "Copy the hierarchy principle, not its pink palette or flat campaign treatment. No evidence here of measured campaign uplift."
+  },
+  {
+    "title": "Chiquita billboard",
+    "sourceId": "oaaa-examples",
+    "url": "https://oaaa.org/wp-content/uploads/2022/09/Chiquita-Banana-Billboard.jpg",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Four-word message arranged around a dominant banana; brand cue separate.",
+    "caution": "A long feature list would compete with this simple silhouette. The seven-word benchmark is not a mandatory ceiling."
+  },
+  {
+    "title": "LinkedIn FixDex and Flexis guide examples",
+    "sourceId": "linkedin-image",
+    "url": "https://business.linkedin.com/advertise/ads/ads-guide/single-image-ads/_jcr_content/root/container/container/container/container_copy/container/image.coreimg.png/1779314109961/p02-01-dsk-e1-v1-3x-png-original.png",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Longer explanation and action are in native UI around an image.",
+    "caution": "The illustration contains an older event date; use it for native/image separation, not current interface geometry."
+  },
+  {
+    "title": "Mailchimp product crop example",
+    "sourceId": "mailchimp",
+    "url": "https://cdn-images.mailchimp.com/email-reference/design/images/image-focus.png",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Product details fill tightly cropped image blocks; names and prices occupy separate lines below.",
+    "caution": "Tiny screenshot prices are not evidence of accessible type. Keep the surrounding email text live and test the actual column width."
+  },
+  {
+    "title": "Vista event flyer by Rose",
+    "sourceId": "vista",
+    "url": "https://blogadmin.vpsvc.com/hub/wp-content/uploads/2026/03/well-structured-flyer-1024x1024.jpg",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Large opening headline, event identity, emphasized date and grouped venue/sponsors.",
+    "caution": "Small address and thin script are weaker at small display size. Strong hierarchy alone cannot prove A6 print readability."
+  },
+  {
+    "title": "Vista Panelfox handout",
+    "sourceId": "vista",
+    "url": "https://blogadmin.vpsvc.com/hub/wp-content/uploads/2026/03/scannable-flyer-design-1024x768.jpg",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Headline followed by separated short feature groups and contact area.",
+    "caution": "Perspective mockup conceals actual printed point size. Use grouping, then verify flat art at real dimensions."
+  },
+  {
+    "title": "Pinterest Balanced Table furniture example",
+    "sourceId": "pinterest",
+    "url": "https://images.ctfassets.net/h67z7i6sbjau/1r2HHaFhbAQd7WbHBlUefu/44da5d5a21f537291c0484c7d1a49aff/PIN_CBP_Hero_--Ticker_10_UK.png?fm=webp&q=85",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Furniture and decor are visually dominant; small brand cue in the image, headline in native text below.",
+    "caution": "Useful product-to-scene balance; its styling is not Duroflex or Sleepyhead brand guidance."
+  },
+  {
+    "title": "Google responsive image overlay examples",
+    "sourceId": "google-rda-design",
+    "url": "https://lh3.googleusercontent.com/vyMsqN6_FV87iipKtofrWVRFBZQm5lA_2KWkYNztiJL8aluaumJYmkltg2azaqfTQg%3Dw895",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Plain food image is contrasted with competing headline/menu overlays.",
+    "caution": "This is an explanatory diagram for responsive image assets, not a blanket text prohibition for uploaded ads."
+  },
+  {
+    "title": "Android big picture notification",
+    "sourceId": "android",
+    "url": "https://developer.android.com/static/images/design/ui/mobile/notifications-10-big-picture-template.png",
+    "inspection": "visually inspected in browser on 2026-10-09",
+    "observation": "Same photo is tiny when collapsed and large when expanded; native title carries the meaning.",
+    "caution": "A branded poster inserted into the attachment would become unreadable in the collapsed preview."
+  }
+]

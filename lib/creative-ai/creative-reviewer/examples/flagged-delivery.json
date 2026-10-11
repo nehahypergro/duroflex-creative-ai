@@ -1,0 +1,34 @@
+{
+  "status": "flagged-cap-reached",
+  "ready": false,
+  "synthetic": true,
+  "reviewEvidenceMode": "synthetic-simulation",
+  "imageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAD8klEQVR4nO2UUQnAUACE1j/Zi+DPuqzEhuwQTHDKXdwnWoC3M7jatAX44FwKq7BOYRXB+cu/9li+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+AxYpLN8BixSW74BFCst3wCKF5TtgkcLyHbBIYfkOWKSwfAcsUli+g0kKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsEhh+Q5YpLB8ByxSWL4DFiks3wGLFJbvgEUKy3fAIoXlO2CRwvIdsMgDHHPh/buHjU8AAAAASUVORK5CYII=",
+  "conceptId": "concept-c355b7d5eaa141c0-continuity",
+  "placementId": "synthetic-small-square",
+  "fallbackToEarlierArtifact": false,
+  "note": "One correction cycle is complete. This final available static is delivered with unresolved issues; it is not marked ready or approved.",
+  "conceptExplanation": {
+    "idea": "The bottle joins the everyday preparation ritual.",
+    "takeaway": "Consider its place among your outing essentials.",
+    "rationale": "A familiar situation expresses the same everyday-use proposition; audience relevance remains untested."
+  },
+  "compositionRationale": {
+    "status": "intended-choices",
+    "text": "The intended takeaway is The bottle can have a place among everyday outing essentials. The hierarchy starts with headline, supported by the proposed imagery: A calm departure preparation scene with everyday essentials. The execution retains the supplied brand rules. For 200×200, the proposed reading order and crop guidance aim to keep the message clear.",
+    "limits": "Intended composition choices; actual execution, interpretation and readability require artwork review."
+  },
+  "unresolved": [
+    {
+      "criterion": "exact-required-copy",
+      "status": "fail",
+      "note": "Authored synthetic review assertion only; solid-color placeholder does not demonstrate this criterion."
+    },
+    {
+      "criterion": "exact-required-copy",
+      "status": "critical",
+      "note": "Synthetic declared discrepancy; no actual defect detection occurred."
+    }
+  ],
+  "reviewDecision": "revise"
+}
