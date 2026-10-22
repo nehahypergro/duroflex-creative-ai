@@ -14,7 +14,9 @@
     "test:qa:sleepyhead-next-run": "node scripts/creative-ai/qa-sleepyhead-next-run.js",
     "test:qa:duroflex-next-run": "node scripts/creative-ai/qa-brand-next-run.js --brand=Duroflex --job=creative-8e57a041-f219-4be2-afce-15a7a97f4b3a",
     "test:qa:both-brands": "node scripts/creative-ai/qa-both-brands.js",
-    "test:qa:sku-matrix": "node scripts/creative-ai/qa-random-sku-matrix.js"
+    "test:qa:sku-matrix": "node scripts/creative-ai/qa-random-sku-matrix.js",
+    "media:manifest": "node scripts/creative-ai/cdn-portability.js export",
+    "media:restore": "node scripts/creative-ai/cdn-portability.js restore"
   },
   "engines": {
     "node": ">=20.9"

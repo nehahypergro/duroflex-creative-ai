@@ -38,3 +38,11 @@ test('Finished creative loads design details before project/progress resolves an
  const completed=await D.progress('a','a');assert.ok(completed.designDetails);assert.equal(reads,2);
  fail=true;const failed=await D.project('a','a',true);assert.equal(failed.designDetails,undefined);assert.match(failed.designDetailsError,/could not load/);assert.equal(failed.results[0].imageUrl,'/art.png');
 });
+
+test('Workspace snapshots survive reload, remain brand-scoped and revalidate',async()=>{
+ const f=fixture(),disk=new Map();f.context.sessionStorage={getItem:k=>disk.get(k)||null,setItem:(k,v)=>disk.set(k,v),removeItem:k=>disk.delete(k),key:i=>[...disk.keys()][i],get length(){return disk.size;}};
+ f.tick(100000);await f.D.workspace('a');assert.equal(disk.size,1);
+ vm.runInNewContext(fs.readFileSync(path.resolve(__dirname,'../../public/creative-ai/studio-data.js'),'utf8'),f.context);
+ const next=f.context.window.StudioData;assert.equal(next.peekWorkspace('a')[0].value.projects[0].brandId,'a');assert.equal(next.peekWorkspace('b'),undefined);
+ const count=f.calls.length;await next.workspace('a');assert.ok(f.calls.length>count);next.invalidateWorkspace('a');assert.equal(disk.size,0);
+});

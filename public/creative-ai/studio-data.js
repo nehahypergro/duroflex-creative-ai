@@ -28,18 +28,32 @@ window.StudioData = (() => {
   }
   const cache=new Map(),workspaces=new Map(),workspaceLoads=new Map();
   let version=0;
+  const diskPrefix='creative-ai-workspace-v1:';
+  function disk(action,key,value){return new Promise(resolve=>{try{const request=indexedDB.open('creative-ai-workspace-cache',1);request.onupgradeneeded=()=>request.result.createObjectStore('snapshots');request.onerror=()=>resolve(null);request.onsuccess=()=>{const db=request.result,tx=db.transaction('snapshots',action==='get'?'readonly':'readwrite'),store=tx.objectStore('snapshots'),r=action==='get'?store.get(key):action==='put'?store.put(value,key):action==='delete'?store.delete(key):store.clear();r.onsuccess=()=>resolve(r.result);r.onerror=()=>resolve(null);tx.oncomplete=()=>db.close();};}catch{resolve(null);}});}
+  function persist(brandId,snapshot){disk('put',brandId,{...snapshot,brandId});try{const text=JSON.stringify({...snapshot,brandId});if(text.length<3500000)sessionStorage.setItem(diskPrefix+brandId,text);}catch{/* Storage is optional; live loading remains available. */}}
+  function forget(brandId){disk('delete',brandId);try{sessionStorage.removeItem(diskPrefix+brandId);}catch{}}
+  function restore(brandId){
+    if(workspaces.has(brandId))return workspaces.get(brandId);
+    try{const saved=JSON.parse(sessionStorage.getItem(diskPrefix+brandId)||'null');
+      if(!saved)return;
+      if(saved?.brandId!==brandId||Date.now()-saved.at>1800000||!Array.isArray(saved.value)||saved.value.length!==3||!saved.value.every(r=>r.status==='fulfilled')||!saved.value[0].value.projects.every(p=>p.brandId===brandId)){forget(brandId);return;}
+      // Restored snapshots paint immediately but always refresh in the background.
+      saved.at=0;workspaces.set(brandId,saved);return saved;
+    }catch{return;}
+  }
   return {
     get version(){return version;},
-    peekWorkspace:brandId=>workspaces.get(brandId)?.value,
-    invalidateWorkspace(brandId){version++;workspaces.delete(brandId);workspaceLoads.delete(brandId);},
+    async restoreWorkspace(brandId){if(restore(brandId))return;const started=version,saved=await disk('get',brandId);if(started!==version)return;if(saved?.brandId===brandId&&Date.now()-saved.at<1800000&&saved.value?.length===3&&saved.value.every(r=>r.status==='fulfilled')&&saved.value[0].value.projects.every(p=>p.brandId===brandId)){saved.at=0;workspaces.set(brandId,saved);}},
+    peekWorkspace:brandId=>restore(brandId)?.value,
+    invalidateWorkspace(brandId){version++;forget(brandId);workspaces.delete(brandId);workspaceLoads.delete(brandId);},
     async workspace(brandId){
-      const saved=workspaces.get(brandId);
+      const saved=restore(brandId);
       if(saved&&Date.now()-saved.at<30000)return saved.value;
       if(workspaceLoads.has(brandId))return workspaceLoads.get(brandId);
       const started=version;
       const pending=Promise.allSettled([this.projects(brandId,!!saved),this.products(brandId),this.assets(brandId)]).then(value=>{
         // Cache complete snapshots only; failed reads must remain retryable.
-        if(started===version&&value.every(r=>r.status==='fulfilled')&&!value[0].value.errors.length)workspaces.set(brandId,{at:Date.now(),value});
+        if(started===version&&value.every(r=>r.status==='fulfilled')&&!value[0].value.errors.length){const snapshot={at:Date.now(),value};workspaces.set(brandId,snapshot);persist(brandId,snapshot);}
         return value;
       }).finally(()=>{if(workspaceLoads.get(brandId)===pending)workspaceLoads.delete(brandId);});
       workspaceLoads.set(brandId,pending);return pending;
@@ -83,6 +97,6 @@ window.StudioData = (() => {
     deliveryCandidates:id=>get('jobs/'+encodeURIComponent(id)+'/delivery-packages'),
     packageSet:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/delivery-packages',body),
     costs:()=>get('costs'),
-    clear(){version++;cache.clear();workspaces.clear();workspaceLoads.clear();}
+    clear(){version++;disk('clear');cache.clear();try{for(let i=sessionStorage.length-1;i>=0;i--){const k=sessionStorage.key(i);if(k?.startsWith(diskPrefix))sessionStorage.removeItem(k);}}catch{}workspaces.clear();workspaceLoads.clear();}
   };
 })();

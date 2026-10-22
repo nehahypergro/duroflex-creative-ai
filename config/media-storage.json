@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "enabled": true,
+  "uploadUrl": "https://media-upload-service-519223215267.asia-south1.run.app/internal/media-upload-service/v1/upload-file",
+  "deliveryHosts": ["cdn2.hypergro.ai", "cdn2.gro.care"],
+  "manifest": "config/cdn-media-manifest.json",
+  "imagePolicy": "cdn-delivery-with-local-working-copy",
+  "videoPolicy": "cdn-after-byte-verification"
+}

@@ -106,3 +106,9 @@ The existing creative review must inspect the entire creative, including duplica
 - Feedback and delivery packages resolve the selected version and exact hash. Reject stale source selections. A changed print face cannot reuse the original production proof, and an edited carousel slide cannot inherit the original sequence review.
 - Accompanying copy stays separate from artwork. Use only current same-brand guidance and exact-product facts. Team edits stay visibly unchecked; checked-only campaign packs exclude them. Model writing/review and image generation require explicit user workflow actions, and no paid generation is needed to test these interfaces.
 - Campaign packs freeze selected versions, actual artwork bytes, copy status and presentation content. Keep flags and absent copy explicit. Raster artwork export never establishes physical print acceptance. Include revision and accompanying-copy provider receipts in the existing deduplicated cost ledger.
+
+# CDN migration inventory
+
+- Keep the non-secret CDN defaults in `config/media-storage.json` and verified media link inventory in `config/cdn-media-manifest.json` under Git. Before a Git backup/migration checkpoint, run `npm run media:manifest` and include the updated inventory in the commit.
+- Export only verified media URLs, brand bindings, hashes, sizes and relative paths. Retain unuploaded sources explicitly as unavailable. Never invent successful uploads or add environment credentials, private briefs, provider responses, review records or cost histories to the tracked manifest.
+- `npm run media:restore -- --apply --destination <folder>` restores and verifies media content. Test representative assets in a separate destination when changing this workflow. A complete workspace migration still needs the separate private metadata/environment backup; CDN links are not an independent binary archive.

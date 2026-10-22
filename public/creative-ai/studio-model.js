@@ -379,7 +379,7 @@
   const navigation={
     parse(hash){const [path,query='']=String(hash||'home').replace(/^#/,'').split('?');return {path,view:path.split('/')[0],parts:path.split('/'),params:new URLSearchParams(query)};},
     projects(v={}){const q=new URLSearchParams();for(const [k,value,defaultValue] of [['status',v.filter,'all'],['sort',v.sort,'edited'],['format',v.formatFilter,'all'],['q',v.search,'']])if(value&&value!==defaultValue)q.set(k,value);return 'projects'+(q.size?'?'+q:'');},
-    brandRoute(hash){const r=this.parse(hash);if(r.view==='projects')return hash;if(['home','create','recipes','creatives','favourites','costs','settings','tools','search'].includes(r.view))return r.path;if(r.view==='library')return ['product','asset'].includes(r.parts[1])?'library/'+(r.parts[1]==='product'?'products':'inspiration'):r.path;return 'projects';}
+    brandRoute(hash){const r=this.parse(hash);if(r.view==='projects')return hash;if(['home','create','recipes','creatives','favourites','costs','settings','tools','search'].includes(r.view))return r.path;if(r.view==='library'&&r.parts[1]==='book')return 'library/brand';if(r.view==='library')return ['product','asset'].includes(r.parts[1])?'library/'+(r.parts[1]==='product'?'products':'inspiration'):r.path;return 'projects';}
   };
   return {jobProgress,createProgressPoller,navigation,composerStorage,activeWork,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,safeAsset,normalizeJob,storage};
 });
