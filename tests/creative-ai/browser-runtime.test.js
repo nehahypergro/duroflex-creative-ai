@@ -1,0 +1,5 @@
+'use strict';const test=require('node:test'),assert=require('node:assert/strict'),{resolveBrowser}=require('../../lib/creative-ai/runtime/browser');
+test('rendering finds installed testing Chromium when normal Chrome disappears',()=>{const cache='/test/Library/Caches/ms-playwright',exe=cache+'/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing';assert.equal(resolveBrowser({configured:null,home:'/test',exists:p=>[cache,exe].includes(p),readDir:()=>['chromium-1234','chromium-1248'],playwrightPath:'/missing-default'}),exe);});
+test('an invalid explicit browser path is reported rather than silently ignored',()=>assert.throws(()=>resolveBrowser({configured:'/missing-explicit',exists:()=>false}),/Configured rendering browser/));
+test('absence of any browser has actionable feedback and does not download software',()=>assert.throws(()=>resolveBrowser({configured:null,home:'/test',exists:()=>false,playwrightPath:'/missing'}),/No rendering browser/));
+test('valid explicit renderer remains authoritative',()=>assert.equal(resolveBrowser({configured:'/custom/chrome',exists:p=>p==='/custom/chrome'}),'/custom/chrome'));

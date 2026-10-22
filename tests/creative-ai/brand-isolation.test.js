@@ -68,3 +68,14 @@ test('carousel style anchors require this job’s reviewed opening slide and sam
 }));
 
 test('wire-only schema overrides preserve original review input, instructions and brand boundary',()=>fixture(async({brands,a,create,store})=>{const job=await create(a);let actual;const provider=new BrandScopedProvider({reason:async r=>{actual=r;return {}; }},brands),schema={type:'object',properties:{},required:[],additionalProperties:false};await provider.reason({instructions:'Inspect actual pixels and retain unknown evidence.',input:{record:{brandId:a.id},ocr:{status:'unavailable'}},wire:{kind:'complete-evidence',schema,decode:x=>x}},store.budget(job.id));assert.match(actual.wire.instructions,/Inspect actual pixels/);assert.doesNotMatch(actual.wire.instructions,/undefined/);assert.deepEqual(actual.wire.input.record,{brandId:a.id});assert.equal(actual.wire.input.ocr.status,'unavailable');assert.equal(actual.wire.input.brandKnowledge.brandId,a.id);}));
+
+test('pinned canvas font and logo assets are allowed only with same-brand hash-bound files',()=>fixture(async({brands,store,a,b,create})=>{
+ let calls=0;const provider=new BrandScopedProvider({reason:async()=>{calls++;return {}; }},brands);
+ for(const brand of [a,b]){
+ const job=await create(brand),bytes=Buffer.from('canvas-fixture-'+brand.id),sha256=require('crypto').createHash('sha256').update(bytes).digest('hex'),id='asset-'+sha256.slice(0,24),filename=id+'.woff2',dir=path.join(brands.dir(brand.id),'canvas-assets');await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,filename),bytes);
+ const asset={id,filename,sha256,brandId:brand.id,kind:'font',approved:true};await store.update(job.id,j=>{j.intake.canvasAssets={version:1,brandId:brand.id,fonts:[asset],logo:null};return j;});
+ await provider.reason({instructions:'Plan',input:{canvasAssets:{fonts:[asset]}}},store.budget(job.id));
+ await assert.rejects(()=>provider.reason({instructions:'Plan',input:{canvasAssets:{fonts:[{...asset,brandId:brand.id===a.id?b.id:a.id}]}}},store.budget(job.id)),/different brand/);
+ await fs.writeFile(path.join(dir,filename),'changed');await assert.rejects(()=>provider.reason({instructions:'Plan',input:{}},store.budget(job.id)),/canvas asset/);
+ }assert.equal(calls,2);
+}));

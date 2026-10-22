@@ -1,0 +1,17 @@
+{
+  "source": "https://hypergro.ai/",
+  "savedOn": "2026-10-21",
+  "usage": "Studio shell and browser favicon only; originals embedded as data URLs to avoid external requests.",
+  "assets": [
+    {
+      "file": "public/creative-ai/hypergro-logo.svg",
+      "url": "https://hypergro.ai/assets/hypergro-logo.svg",
+      "sha256": "a04b79051b3b6d68a99bfa024120cd625cae62252dfcda3ce99373020f96611e"
+    },
+    {
+      "file": "public/creative-ai/hypergro-icon.png",
+      "url": "https://hypergro.ai/logo.png",
+      "sha256": "7bfa55dee7368c70bc2e6b8fe59ffa4da6f1013e50b7d5652d42cdee3ae150b3"
+    }
+  ]
+}

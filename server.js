@@ -1,12 +1,13 @@
 'use strict';
 const http=require('http'),path=require('path');
 const ROOT=__dirname;
-async function readJsonBody(req,maxBytes){let bytes=0,parts=[];for await(const part of req){bytes+=part.length;if(bytes>maxBytes)throw Error('Request is too large.');parts.push(part);}return JSON.parse(Buffer.concat(parts).toString('utf8')||'{}');}
-function createServer(){
- const policy=require('./lib/group-workspace').groupPolicy(ROOT);
- const dossierStore=require('./lib/brand-dossier').createDossierStore(path.join(ROOT,'output/brand-dossiers'));
- const app=require('./lib/creative-ai/runtime/http').createHandler({root:ROOT,dossierStore});policy.mount(app.runtime);
- const costs=new (require('./lib/cost-tracker').CostTracker)(ROOT,policy.config);
+async function readJsonBody(req,maxBytes){let bytes=0,parts=[];for await(const part of req){bytes+=part.length;if(bytes>maxBytes)throw Error('Request is too large.');parts.push(part);}const text=new TextDecoder('utf-8',{fatal:true}).decode(Buffer.concat(parts)),body=require('./lib/creative-ai/runtime/strict-json').parse(text||'{}');if(!body||typeof body!=='object'||Array.isArray(body))throw Error('JSON request body must be an object.');return body;}
+function createServer({root=ROOT,resumeJobs=true,provider}={}){
+ if(process.env.NODE_TEST_CONTEXT&&path.resolve(root)===ROOT)throw Error('Tests must provide an isolated workspace root.');
+ const policy=require('./lib/group-workspace').groupPolicy(root);
+ const dossierStore=require('./lib/brand-dossier').createDossierStore(path.join(root,'output/brand-dossiers'));
+ const app=require('./lib/creative-ai/runtime/http').createHandler({root,dossierStore,provider,resumeJobs});policy.mount(app.runtime);
+ const costs=new (require('./lib/cost-tracker').CostTracker)(root,policy.config);
  const server=http.createServer(async(req,res)=>{
   try{
    const requestHost=req.headers.host||'',hostName=new URL('http://'+requestHost).hostname;if(!['127.0.0.1','localhost','[::1]'].includes(hostName))throw Error('This pilot accepts local connections only.');if(req.headers.origin&&new URL(req.headers.origin).host!==requestHost)throw Error('Cross-origin requests are not allowed.');const pathname=new URL(req.url,'http://localhost').pathname;
@@ -24,4 +25,4 @@ function createServer(){
  });return {server,runtime:app.runtime,policy};
 }
 if(require.main===module){const app=createServer(),host=process.env.HOST||'127.0.0.1',port=Number(process.env.PORT||app.policy.config.port);if(!['127.0.0.1','localhost','::1'].includes(host))throw Error('Team authentication and hosting must be configured before exposing this pilot.');app.server.listen(port,host,()=>console.log('Duroflex group studio listening on port '+port));}
-module.exports={createServer};
+module.exports={createServer,readJsonBody};

@@ -6,6 +6,11 @@ The implementation follows the existing CommonJS agent foundations. It owns only
 
 ## Read and inspect
 
+- [Studio placement logo rulebook](../../../docs/placements/logo-policy.md):
+  client-approved omission contexts and top-left/top-right-only added-logo
+  positioning, effective 15 October 2026. Its runtime integration status is
+  explicit; this document does not rewrite published catalog snapshots.
+
 - `knowledge/catalog.json`: profiles, tiered rules, source provenance and source conflicts.
 - `catalog.schema.json`: Draft 2020-12 machine-readable catalog shape.
 - `knowledge/sources.json` and `knowledge/source-inventory.md`: official sources, observation dates and access limitations.

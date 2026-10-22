@@ -90,7 +90,9 @@
                       "cta",
                       "disclaimer",
                       "brand",
-                      "other"
+                      "other",
+                      "product-name",
+                      "supporting-copy"
                     ]
                   },
                   "text": {
@@ -789,7 +791,9 @@
                   "cta",
                   "disclaimer",
                   "brand",
-                  "other"
+                  "other",
+                  "product-name",
+                  "supporting-copy"
                 ]
               },
               "text": {
@@ -1051,7 +1055,7 @@
                       "anyOf": [
                         {
                           "type": "number",
-                          "minimum": 0.000001,
+                          "minimum": 1e-06,
                           "maximum": 100000
                         },
                         {
@@ -1063,7 +1067,7 @@
                       "anyOf": [
                         {
                           "type": "number",
-                          "minimum": 0.000001,
+                          "minimum": 1e-06,
                           "maximum": 100000
                         },
                         {
@@ -1075,7 +1079,7 @@
                       "anyOf": [
                         {
                           "type": "number",
-                          "minimum": 0.000001,
+                          "minimum": 1e-06,
                           "maximum": 100000
                         },
                         {
@@ -1100,7 +1104,7 @@
                               "anyOf": [
                                 {
                                   "type": "number",
-                                  "minimum": 1e-7,
+                                  "minimum": 1e-07,
                                   "maximum": 254000
                                 },
                                 {
@@ -1112,7 +1116,7 @@
                               "anyOf": [
                                 {
                                   "type": "number",
-                                  "minimum": 1e-7,
+                                  "minimum": 1e-07,
                                   "maximum": 254000
                                 },
                                 {
@@ -1124,7 +1128,7 @@
                               "anyOf": [
                                 {
                                   "type": "number",
-                                  "minimum": 1e-7,
+                                  "minimum": 1e-07,
                                   "maximum": 254000
                                 },
                                 {
@@ -1867,6 +1871,52 @@
             "additionalProperties": false
           },
           "minItems": 0
+        },
+        "placementObservations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "ruleId",
+              "status",
+              "confidence",
+              "method",
+              "observation",
+              "location"
+            ],
+            "properties": {
+              "ruleId": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "pass",
+                  "fail",
+                  "unknown"
+                ]
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "method": {
+                "enum": [
+                  "vision-attestation",
+                  "unavailable"
+                ]
+              },
+              "observation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
         }
       },
       "required": [

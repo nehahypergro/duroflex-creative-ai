@@ -25,6 +25,14 @@ images produced directly in chat with an image tool.
 
 # Dedicated studio and named training
 
+## Shared engine fixes
+
+- Every newly observed engine failure needs a reproducible regression test before its fix is complete. Record the original symptom and a failing-before/passing-after check, then run relevant shared tests and saved-run checks for both Duroflex and Sleepyhead. Keep fixtures isolated, preserve historical evidence, and report any unavailable replay or legacy incompatibility explicitly. See `docs/creative-ai-regression-policy.md`.
+
+- Duroflex and Sleepyhead use the same base engine. Fix engine, orchestration, validation, encoding, handoff, caching, cost-accounting and export defects in the shared implementation so future runs of both brands receive the fix. Do not add brand-specific copies or exceptions to general engine logic merely because a defect was discovered in one brand's campaign.
+- Keep brand guidelines, assets, product evidence, research and preferences separately scoped. A shared engine fix does not authorize copying brand knowledge or creative direction between workspaces.
+- For shared changes affecting campaign flows, run the relevant shared regression tests and check applicable saved fixtures from both brands. Report historical contract incompatibilities separately; never rewrite old artifacts, verdicts or costs to make a replay pass. Brand-specific behavior must come from an explicit scoped requirement or configuration.
+
 - This product supports only Duroflex and Sleepyhead. The default workspace is Duroflex; the visible toggle switches brands. Do not change the generic product in `/Users/neha/Desktop/codex2`.
 - When the user asks to save training or tuning and explicitly names Duroflex or Sleepyhead, use that name as the destination, even if a different brand is currently on screen. For reusable creative preferences, POST `{brandName, preference}` to `/creative-ai/api/training` on the dedicated local server and verify the returned brand ID. Do not treat a request about building the training workflow as a preference to save.
 - Do not guess a destination for an ambiguous training request. Ask for the brand name if the conversation does not establish it. Never save a shared group identity or copy a preference into both brands implicitly.
@@ -35,6 +43,7 @@ images produced directly in chat with an image tool.
 
 # Cost ledger maintenance
 
+- Always report costs to this user in INR, including chat breakdowns and the studio display. Preserve original provider currency/usage and label INR conversions as estimates with a dated, sourced exchange rate. Never treat missing usage as zero cost.
 - The user authorized maintaining a Google Sheet of this system's costs and the studio cost subpage. Use `output/cost-tracking/sheet-sync.json` for the observed Sheet ID and managed tab IDs. Keep this data private under existing Drive permissions.
 - Use `scripts/costs/sheet-sync.js` to build an update from the dedicated studio. Read native metadata before applying the structured request. Update only the four managed snapshot tabs. Save the sync marker only after Google accepts the update and total/entry-count readback agrees with the local snapshot.
 - Keep billing unknown when usage or actual invoices are unavailable. Reservation allowances are not spend; inherited copied receipts must not be counted twice. Do not calculate Codex development compute from subscription usage percentages.
@@ -56,15 +65,19 @@ images produced directly in chat with an image tool.
 
 # Guideline reasoning
 
+- When preparing a new campaign brief, do not add a default ban/preference against people or prescribe warm daylight, neutral interiors, a fixed setting, or photographic treatment unless the user or a sourced mandatory rule specifies it. Let the Creative director choose human presence, setting, lighting and visual treatment to serve the brief; let the Art director refine execution. Historical test briefs remain unchanged as evidence, but their assistant-added stylistic defaults must not become new campaign requirements. For a new retry, remove those defaults when applying the user's revised creative freedom, while preserving explicit user constraints and SKU identity.
+- Develop continuity first and contrast exploration against it within the existing concept call. Exploration should change the storytelling premise and at least two meaningful visual dimensions while retaining brand/product truth. Keep image generation parallel unless the user explicitly chooses a sequential rendering experiment; merely discussing sequential rendering as a possible way to obtain variety does not change scheduling.
+
 - Record specific guideline-to-design explanations in the new generation's saved art specification. Bind each decision and reason to a locked rule supported by that assignment's own supplied guideline source.
 - Preserve draft/coverage limitations. Website patterns, campaign instructions and general design principles must not be presented as supplied brand guidelines.
 - Display intended guideline application separately from rendered artwork compliance. Do not invent new rationale for historical images or replace their saved packages/review flags.
 
 # Product library
 
+- The user explicitly confirmed that each brand's official website is the final approved source for its product images and information. Treat exact-SKU official website evidence, including saved snapshots and hash-bound media, as approved source material without asking for identity or source-approval confirmation again. Where draft documents conflict with official website product information or identity, use the official website. Preserve exact variant selection and source provenance; source approval does not approve newly generated artwork or justify invented or stronger claims. Reuse saved evidence under the policy below rather than requiring website-freshness confirmation.
 - New SKU URLs are archived only in their named brand's product library. Website breadcrumbs/product types define taxonomy; missing categories remain Uncategorized. Each product keeps its own profile, raw source snapshot, variants and media folders.
 - Keep product images, feature tiles, A+ content, video links/files and supporting content distinct. Exclude recommendation, complementary-product and script-template images. Asset roles inferred from page structure remain explicitly labeled.
-- Saved website descriptions are source material, not approved efficacy claims. Attach an identity/feature audit only to the exact matching product snapshot; fresh generation still audits the selected page. Never promote a stored file into a verified product hero without inspection.
+- Saved website descriptions are source material, not approved efficacy claims. Attach an identity/feature audit only to the exact matching product snapshot; fresh generation reuses a successful saved audit only when brand, selected variant, source and image hashes, audit contract and validator version match, and current validators pass. Otherwise audit the selected saved snapshot. A reused audit retains its original job/time provenance and must not copy provider spend into the new job. Reuse the exact saved page/variant and hash-checked images without revisiting the website. Use the product library's explicit Refresh action for updated website evidence. Never promote a stored file into a verified product hero without inspection.
 - Repeated URLs may reopen the saved profile. Refresh preserves earlier snapshots. Retain collection gaps, download errors and external video/stream links; never imply a video was downloaded or inspected if only its URL was stored.
 
 ## Reference-led SKU production

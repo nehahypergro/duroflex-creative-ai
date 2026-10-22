@@ -6,6 +6,12 @@ The [reading-context audit](readability-audit-2026-10-09.md) reviews all presets
 
 ## Rule authority
 
+The [Studio placement logo rulebook](logo-policy.md) records the client's
+15 October 2026 logo omissions and top-left/top-right-only positioning rule for
+both brands. It is client policy, not publisher specification. See its runtime
+adoption boundary: recording the rulebook does not yet remove the renderer's
+mandatory-logo assumption or establish automatic enforcement.
+
 Each new job pins its own catalogue. Its selected canvas, file cap and placement-specific layout instructions become job requirements for planning, generation and review. Existing jobs retain their original catalogues, packages and reviews. Brand rules remain separate and scoped to Duroflex or Sleepyhead.
 
 - Google’s fixed display canvas list and 150 KB limit were checked against [Google’s specifications](https://support.google.com/google-ads/answer/1722096?hl=en). Regional campaign eligibility and destination/publisher approval remain separate.

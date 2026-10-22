@@ -39,7 +39,7 @@ test('branding, technology, major SKU mismatches and duplicate scene products ov
 test('allowed scene/angle differences pass; missing and uncertain checks never pass; no depicted technology may be not applicable',()=>{
  const record={productReference:{sku:'SOFA-1'}},obs=['product-branding','product-technology','sku-recognisability','scene-integrity'].map(c=>observation(c));obs[1].status='not-applicable';const e=evidence();product.applyChecks(record,e,obs);assert.ok(e.critical.every(c=>c.status==='pass'));assert.equal(e.findings.length,0);
  assert.throws(()=>product.applyChecks(record,e,obs.slice(1)),/four SKU checks/);const uncertain=structuredClone(obs);uncertain[0].confidence=0.3;const u=evidence();product.applyChecks(record,u,uncertain);assert.equal(u.critical[0].status,'unknown');
- const bad=structuredClone(obs);bad[2].status='not-applicable';assert.throws(()=>product.applyChecks(record,evidence(),bad),/Only an undepicted technology/);
+ const bad=structuredClone(obs);bad[2].status='not-applicable';assert.throws(()=>product.applyChecks(record,evidence(),bad),/Only undepicted technology or absent physical branding/);
 });
 test('SKU facts in reference policy are bound to exact product evidence rather than unrelated research facts',()=>{
  const id={id:'i',brandId:'b',productId:'p',productName:'Exact',assetId:'source',reference:{rasterHash:'hash'},variant:{id:'v',sku:'SKU',dimensions:{status:'specified',length:152,width:77,height:80,unit:'cm',source:'official exact SKU'}}};const p=product.contract(id,{facts:[{id:'other-product',status:'supported'}],productBriefEvidence:{assetIds:['exact-photo'],evidence:[{factId:'exact-fact'}]}});assert.deepEqual(p.evidenceFactIds,['exact-fact']);assert.deepEqual(p.referenceAssetIds,['source','exact-photo']);assert.match(p.dimensionReference,/152/);
@@ -60,4 +60,11 @@ test('stubbed production review requests all SKU observations and a missed dupli
  const pixels=await sharp({create:{width:record.canvas.width,height:record.canvas.height,channels:3,background:'white'}}).png().toBuffer();
  const out=await require('../../lib/creative-ai/runtime/review').review(record,'data:image/png;base64,'+pixels.toString('base64'),{provider,budget:{},dir,attempt:'stub'});
  assert.equal(calls,1);assert.equal(out.productObservations.length,4);assert.equal(out.report.decision,'revise');assert.equal(out.report.criticalChecks.find(c=>c.criterion==='product-identity').status,'fail');assert.ok(out.report.routing.some(r=>r.owner==='graphic-designer'));
+});
+
+test('long product identity fits dossier display label without mutating the identity',()=>{
+ const identity={productName:'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey',variant:{name:'Queen / 78 X 60 (198 cm x 152 cm) / 6 (15.2cm)'},reference:{angle:'Website photograph as supplied; camera view not independently classified'}};
+ const before=structuredClone(identity),label=require('../../lib/creative-ai/runtime/reference-product').assetLabel(identity);
+ assert.ok(label.length<=180);assert.match(label,/Queen/);assert.deepEqual(identity,before);
+ identity.productName='Long title '.repeat(20);assert.equal(require('../../lib/creative-ai/runtime/reference-product').assetLabel(identity).length,180);
 });

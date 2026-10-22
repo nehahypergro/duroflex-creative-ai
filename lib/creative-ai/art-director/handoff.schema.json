@@ -74,7 +74,9 @@
                         "cta",
                         "disclaimer",
                         "brand",
-                        "other"
+                        "other",
+                        "product-name",
+                        "supporting-copy"
                       ]
                     },
                     "text": {

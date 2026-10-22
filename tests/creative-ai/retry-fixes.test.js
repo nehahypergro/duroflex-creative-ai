@@ -48,3 +48,13 @@ test('finding authority binds explicit findings to locked brand rules and techni
  assert.deepEqual(variants.find(v=>v.properties.authority.enum[0]==='inferred').properties.severity.enum,['advisory']);
  assert.ok(!reviewer.inputSchema.properties.evidence.properties.findings.items.anyOf);
 });
+
+test('strategy citation inventory closes over used facts without importing a large unused source registry',async()=>{
+ const fixture=require('../../lib/creative-ai/marketing-strategist/examples/synthetic'),input=await fixture.inputExample(),draft=fixture.outputExample({includeStrategyChecks:true});
+ for(let i=0;i<150;i++)input.research.sources.push({...input.additionalSources[0],id:'unused-'+i});
+ draft.sourceIds=[];
+ const result=await require('../../lib/creative-ai/runtime/agents').strategist(input,{reason:async request=>{await request.validate(draft);return draft;}},{});
+ assert.ok(result.sourceIds.includes('product-sheet'));assert.ok(result.sourceIds.includes('brief-source'));
+ assert.ok(result.sourceIds.every(id=>!id.startsWith('unused-')));
+ assert.equal(require('../../lib/creative-ai/marketing-strategist').validateOutput(result,input,{requireStrategyChecks:true}).ok,true);
+});

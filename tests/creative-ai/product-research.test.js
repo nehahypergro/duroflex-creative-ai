@@ -9,6 +9,13 @@ test('a benefit needs a real quoted passage, and clinical or numerical claims st
  const pages=passagesFor([{sourceId:'official',text:'The open structure allows continuous airflow through the mattress.'}]),fact={text:'Manufacturer-described airflow',status:'supported',sourceId:'official',passageId:pages[0].id};assert.equal(validateFacts({facts:[fact]},pages).facts.length,1);assert.throws(()=>validateFacts({facts:[{...fact,passageId:'invented-passage'}]},pages),/known passage ID/);assert.throws(()=>validateFacts({facts:[{...fact,sourceId:'fake'}]},pages),/known passage ID/);
  assert.equal(factStatus(fact),'supported');for(const text of ['30% more deep sleep','Certified to cure back pain','Doctor recommended support','3X more breathable'])assert.equal(factStatus({...fact,text}),'unverified');
 });
+test('unit-bearing dimensions do not become performance claims, while mixed claims stay unverified',()=>{
+ for(const text of ['Queen, 72 x 60 in (183 x 152 cm), 6 in high.','Dimensions 183 × 152 × 15.2 cm.']){
+  assert.equal(factStatus({text,status:'supported'}),'supported');
+  assert.equal(factStatus({text,status:'unverified'}),'unverified');
+ }
+ for(const text of ['72 x 60 in with 3X more support','183 × 152 cm and 30% better sleep','3× more breathable','3x support','72 x 60 in, medically proven'])assert.equal(factStatus({text,status:'supported'}),'unverified');
+});
 test('targeted collection adds auditable product and destination evidence without changing saved brand facts',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'product-research-'));
  try{await fs.writeFile(path.join(dir,'official-homepage.html'),'<a href="/collections/airboost">Shop Airboost</a>');const original={dossier:{version:1,event:'research.completed',researchId:'fixture',brandName:'Fixture',demo:true,completedAt:new Date().toISOString(),sources:[],assets:[],findings:[]},facts:[],pages:[]};const before=JSON.stringify(original);let calls=0;

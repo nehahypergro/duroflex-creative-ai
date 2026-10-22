@@ -1,0 +1,20 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');const M=require('../../public/creative-ai/studio-model');
+test('recorded stages map to simple progress without invented completion',()=>{
+ const stage=(status,activeStages=[],extra={})=>M.jobProgress({status,activeStages,...extra});
+ assert.equal(stage('queued').current,'preparing');
+ for(const kind of ['research','guardian','strategy','concepts','copy','art','reconciliation'])assert.equal(stage('running',[kind]).current,'preparing');
+ assert.equal(stage('running',['generation']).current,'creating');assert.equal(stage('running',['review']).current,'reviewing');
+ assert.equal(stage('running',['review','generation']).current,'creating');
+ assert.equal(stage('running',[],{stage:'unexpected-new-stage'}).current,null);
+ assert.equal(stage('finished',[],{results:[{imageUrl:'/creative-ai/api/jobs/job-a/files/static-a.png',ready:false}]}).label,'Ready');
+ for(const status of ['partial','failed','needs-input'])assert.notEqual(stage(status,[],{results:[{imageUrl:'/creative-ai/api/jobs/job-a/files/static-a.png'}]}).current,'ready');
+ assert.notEqual(stage('finished').current,'ready');
+ assert.equal(stage('running',['review']).steps[0].state,'pending','No historical completion inferred');
+ assert.equal(stage('running',['review'],{stages:[{id:'brand',status:'completed'},{id:'concepts',status:'completed'},{id:'statics',status:'completed'}]}).steps[0].state,'completed');
+});
+function setup(){let time=0,id=0,timers=new Map(),calls=[],applied=[],errors=[];const p=M.createProgressPoller({read:(t,signal)=>new Promise((resolve,reject)=>calls.push({t,signal,resolve,reject})),apply:(p,t)=>applied.push({p,t}),error:(e,t)=>errors.push({e,t}),setTimer:(fn,ms)=>{timers.set(++id,{fn,ms});return id;},clearTimer:id=>timers.delete(id)});return {p,calls,applied,errors,timers,fire(){const [id,t]=[...timers][0];timers.delete(id);time+=t.ms;t.fn();},flush:()=>new Promise(r=>setImmediate(r))};}
+test('polling deduplicates, backs off, ignores stale results and cancels on pause',async()=>{const f=setup(),a={key:'brand-a/job-a',id:'job-a',repeat:true},b={key:'brand-b/job-b',id:'job-b',repeat:true};f.p.watch(a);f.fire();assert.equal(f.calls.length,1);f.p.watch(a,{immediate:true});f.p.watch(a,{immediate:true});assert.equal(f.calls.length,1);f.calls[0].resolve({status:'running'});await f.flush();assert.equal([...f.timers.values()][0].ms,5000);f.fire();f.calls[1].reject(Error('offline'));await f.flush();assert.equal([...f.timers.values()][0].ms,10000);f.p.watch(b);assert.equal(f.timers.size,1);f.fire();f.p.watch(null);assert.equal(f.calls[2].signal.aborted,true);f.calls[2].resolve({status:'finished'});await f.flush();assert.equal(f.applied.length,1);assert.equal(f.timers.size,0);f.p.watch(b,{immediate:true});f.fire();f.calls[3].resolve({status:'running'});await f.flush();assert.equal(f.applied[1].t.id,'job-b');f.p.watch(null);});
+test('terminal state stops recurring reads but tab return can refresh immediately',async()=>{const f=setup(),t={key:'a',repeat:true};f.p.watch(t);f.fire();f.p.watch({...t,repeat:false});f.calls[0].resolve({status:'finished'});await f.flush();assert.equal(f.timers.size,0);f.p.watch({...t,repeat:false},{immediate:true});f.fire();assert.equal(f.calls.length,2);f.calls[1].resolve({status:'finished'});await f.flush();assert.equal(f.timers.size,0);});
+
+test('late result from another brand cannot apply; terminal read failures retry with bounded backoff',async()=>{const f=setup(),a={key:'brand-a/job-a',repeat:true},b={key:'brand-b/job-b',repeat:false};f.p.watch(a);f.fire();f.p.watch(b);assert.equal(f.calls[0].signal.aborted,true);f.calls[0].resolve({status:'finished'});await f.flush();assert.equal(f.applied.length,0);f.fire();for(let i=1;i<=5;i++){f.calls[i].reject(Error('connection lost'));await f.flush();assert.equal([...f.timers.values()][0].ms,Math.min(30000,5000*2**Math.min(i,3)));f.fire();}f.calls[6].resolve({status:'finished'});await f.flush();assert.equal(f.applied.length,1);assert.equal(f.applied[0].t.key,b.key);assert.equal(f.timers.size,0);});

@@ -176,6 +176,14 @@
                       "type": "string",
                       "minLength": 1,
                       "maxLength": 2048
+                    },
+                    "focusType": {
+                      "type": "string",
+                      "enum": [
+                        "brand",
+                        "product",
+                        "collection"
+                      ]
                     }
                   },
                   "required": [
@@ -512,7 +520,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -564,7 +573,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -617,7 +627,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -670,7 +681,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -736,7 +748,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -781,7 +794,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -826,7 +840,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -871,7 +886,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -916,7 +932,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -999,7 +1016,8 @@
                             "enum": [
                               "evidence",
                               "inference",
-                              "assumption"
+                              "assumption",
+                              "brief"
                             ]
                           },
                           "sourceIds": {
@@ -1047,7 +1065,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -1102,7 +1121,8 @@
                                 "enum": [
                                   "evidence",
                                   "inference",
-                                  "assumption"
+                                  "assumption",
+                                  "brief"
                                 ]
                               },
                               "sourceIds": {
@@ -1208,7 +1228,8 @@
                             "enum": [
                               "evidence",
                               "inference",
-                              "assumption"
+                              "assumption",
+                              "brief"
                             ]
                           },
                           "sourceIds": {
@@ -1632,7 +1653,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -1677,7 +1699,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -1722,7 +1745,8 @@
                           "enum": [
                             "evidence",
                             "inference",
-                            "assumption"
+                            "assumption",
+                            "brief"
                           ]
                         },
                         "sourceIds": {
@@ -1816,7 +1840,8 @@
                               "enum": [
                                 "evidence",
                                 "inference",
-                                "assumption"
+                                "assumption",
+                                "brief"
                               ]
                             },
                             "sourceIds": {
@@ -2104,7 +2129,8 @@
                             "enum": [
                               "evidence",
                               "inference",
-                              "assumption"
+                              "assumption",
+                              "brief"
                             ]
                           },
                           "sourceIds": {
@@ -2157,7 +2183,8 @@
                                 "enum": [
                                   "evidence",
                                   "inference",
-                                  "assumption"
+                                  "assumption",
+                                  "brief"
                                 ]
                               },
                               "sourceIds": {
@@ -2209,7 +2236,8 @@
                                 "enum": [
                                   "evidence",
                                   "inference",
-                                  "assumption"
+                                  "assumption",
+                                  "brief"
                                 ]
                               },
                               "sourceIds": {
@@ -2262,7 +2290,8 @@
                                 "enum": [
                                   "evidence",
                                   "inference",
-                                  "assumption"
+                                  "assumption",
+                                  "brief"
                                 ]
                               },
                               "sourceIds": {
@@ -2315,7 +2344,8 @@
                                 "enum": [
                                   "evidence",
                                   "inference",
-                                  "assumption"
+                                  "assumption",
+                                  "brief"
                                 ]
                               },
                               "sourceIds": {
@@ -2969,7 +2999,8 @@
                                           "enum": [
                                             "evidence",
                                             "inference",
-                                            "assumption"
+                                            "assumption",
+                                            "brief"
                                           ]
                                         },
                                         "sourceIds": {
@@ -3022,7 +3053,8 @@
                                               "enum": [
                                                 "evidence",
                                                 "inference",
-                                                "assumption"
+                                                "assumption",
+                                                "brief"
                                               ]
                                             },
                                             "sourceIds": {
@@ -3074,7 +3106,8 @@
                                               "enum": [
                                                 "evidence",
                                                 "inference",
-                                                "assumption"
+                                                "assumption",
+                                                "brief"
                                               ]
                                             },
                                             "sourceIds": {
@@ -3127,7 +3160,8 @@
                                               "enum": [
                                                 "evidence",
                                                 "inference",
-                                                "assumption"
+                                                "assumption",
+                                                "brief"
                                               ]
                                             },
                                             "sourceIds": {
@@ -3180,7 +3214,8 @@
                                               "enum": [
                                                 "evidence",
                                                 "inference",
-                                                "assumption"
+                                                "assumption",
+                                                "brief"
                                               ]
                                             },
                                             "sourceIds": {
@@ -3786,7 +3821,9 @@
                         "cta",
                         "disclaimer",
                         "brand",
-                        "other"
+                        "other",
+                        "product-name",
+                        "supporting-copy"
                       ]
                     },
                     "text": {
@@ -4600,7 +4637,9 @@
                                 "cta",
                                 "disclaimer",
                                 "brand",
-                                "other"
+                                "other",
+                                "product-name",
+                                "supporting-copy"
                               ]
                             },
                             "text": {
@@ -5515,7 +5554,7 @@
                         "anyOf": [
                           {
                             "type": "number",
-                            "minimum": 0.000001,
+                            "minimum": 1e-06,
                             "maximum": 100000
                           },
                           {
@@ -5527,7 +5566,7 @@
                         "anyOf": [
                           {
                             "type": "number",
-                            "minimum": 0.000001,
+                            "minimum": 1e-06,
                             "maximum": 100000
                           },
                           {
@@ -5539,7 +5578,7 @@
                         "anyOf": [
                           {
                             "type": "number",
-                            "minimum": 0.000001,
+                            "minimum": 1e-06,
                             "maximum": 100000
                           },
                           {
@@ -5564,7 +5603,7 @@
                                 "anyOf": [
                                   {
                                     "type": "number",
-                                    "minimum": 1e-7,
+                                    "minimum": 1e-07,
                                     "maximum": 254000
                                   },
                                   {
@@ -5576,7 +5615,7 @@
                                 "anyOf": [
                                   {
                                     "type": "number",
-                                    "minimum": 1e-7,
+                                    "minimum": 1e-07,
                                     "maximum": 254000
                                   },
                                   {
@@ -5588,7 +5627,7 @@
                                 "anyOf": [
                                   {
                                     "type": "number",
-                                    "minimum": 1e-7,
+                                    "minimum": 1e-07,
                                     "maximum": 254000
                                   },
                                   {

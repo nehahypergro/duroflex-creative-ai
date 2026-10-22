@@ -1,0 +1,3 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),completion=require('../../lib/creative-ai/runtime/output-completion');
+test('blocked saved outputs expose their actionable package dependency instead of a blank failure',()=>{const p=path.resolve(__dirname,'../../output/creative-ai/jobs/creative-6297d8d0-64a3-447b-9e9a-cd48ae1b9607/job.json'),bytes=fs.readFileSync(p),j=JSON.parse(bytes);assert.equal(j.error,null);assert.match(completion.problem(j.results),/canonical visual reference/);assert.equal(completion.problem([{imageUrl:'/existing.png'}]),null);assert.deepEqual(fs.readFileSync(p),bytes);});

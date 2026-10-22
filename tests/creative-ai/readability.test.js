@@ -42,3 +42,4 @@ test('thumbnail update and regional display guidance do not claim universal publ
  const p=formats.presets.find(p=>p.id==='custom:studio-youtube-thumbnail');assert.deepEqual([p.width,p.height],[3840,2160]);assert.ok(p.maxBytes<2000000);
  for(const name of ['triple-widescreen','netboard','top-banner','panorama'])assert.match(formats.presets.find(p=>p.id.includes(name)).guidelines,/Sweden|Norway|Denmark/);
 });
+test('Studio module profiles retain their known reading context instead of becoming unspecified',()=>{for(const id of ['custom:recipe-marketplace-module-01','custom:recipe-marketplace-module-02'])assert.equal(reader.classify({id,name:'Hero module',width:970,height:600}),'feature');assert.equal(reader.classify({id:'custom:recipe-product-image-01',name:'View',width:1600,height:1600}),'commerce-photo');assert.equal(reader.classify({id:'custom:unknown',name:'Custom item',width:970,height:600}),'unspecified');});

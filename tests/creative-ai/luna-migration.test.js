@@ -1,10 +1,10 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs/promises'),os=require('os'),path=require('path');
 const {loadConfig,publicConfig}=require('../../lib/creative-ai/runtime/config');
-const {OpenAIProvider}=require('../../lib/creative-ai/runtime/provider');
+const {OpenAIProvider}=require('./offline-provider.cjs');
 const {estimate}=require('../../lib/cost-tracker');
 test('wire schema types nested constants without mutating the saved semantic contract',()=>{
- const {typedWireSchema}=require('../../lib/creative-ai/runtime/provider'),source={type:'object',properties:{version:{const:1},target:{const:'copywriter'},flag:{enum:[true,false]},mixedNumber:{enum:[1,1.5]}}},wire=typedWireSchema(source);
+ const {typedWireSchema}=require('./offline-provider.cjs'),source={type:'object',properties:{version:{const:1},target:{const:'copywriter'},flag:{enum:[true,false]},mixedNumber:{enum:[1,1.5]}}},wire=typedWireSchema(source);
  assert.equal(wire.properties.version.type,'integer');assert.equal(wire.properties.target.type,'string');assert.equal(wire.properties.flag.type,'boolean');assert.equal(wire.properties.mixedNumber.type,'number');assert.equal(source.properties.target.type,undefined);assert.equal(wire.properties.target.const,'copywriter');
 });
 test('Luna defaults route both brands through Responses, preserve effort, schema and image model',async()=>{

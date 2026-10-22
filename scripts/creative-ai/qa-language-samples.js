@@ -1,0 +1,3 @@
+'use strict';
+// Synthetic language fixtures for transport QA, not approved campaign copy.
+module.exports={English:'Explore Original — ₹12,999 👩🏽‍💻',Hindi:'अपना कमरा सजाएँ — Sleepyhead Original',Hinglish:'Apne room ko do naya look ✨',Tamil:'உங்கள் அறைக்குப் புதிய தோற்றம்',Telugu:'మీ గదికి కొత్త రూపం',Kannada:'ನಿಮ್ಮ ಕೋಣೆಗೆ ಹೊಸ ರೂಪ',Malayalam:'നിങ്ങളുടെ മുറിക്ക് പുതിയ ഭാവം',Marathi:'तुमच्या खोलीला नवे रूप',Bengali:'আপনার ঘরে নতুন সাজ',Gujarati:'તમારા રૂમને નવો દેખાવ',Punjabi:'ਆਪਣੇ ਕਮਰੇ ਨੂੰ ਨਵੀਂ ਦਿੱਖ ਦਿਓ',Spanish:'Explora Original — habitación',French:'Découvrez Original — café / cafe\u0301',German:'Entdecke Original — Größe',Arabic:'اكتشف Original — غرفة جديدة',Portuguese:'Explore Original — renovação'};

@@ -1,5 +1,5 @@
 'use strict';
-const test=require('node:test'),assert=require('node:assert/strict'),{compact,prepare}=require('../../lib/creative-ai/runtime/image-prompt'),{OpenAIProvider}=require('../../lib/creative-ai/runtime/provider');
+const test=require('node:test'),assert=require('node:assert/strict'),{compact,prepare}=require('../../lib/creative-ai/runtime/image-prompt'),{OpenAIProvider}=require('./offline-provider.cjs');
 test('image prompt deduplication preserves every rule and exact copy, including nonduplicate values',()=>{
  const prompt='Rules: '+JSON.stringify([{id:'r',text:'Exact requirement.',value:'Exact requirement.',sourceIds:['source']},{text:'One',value:'Different'}])+'\nExact copy: "Explore Bubbles."\nUnparsed { prose';
  const out=compact(prompt),rules=JSON.parse(out.split('\n')[0].slice(7));assert.deepEqual(rules,[{id:'r',text:'Exact requirement.',sourceIds:['source']},{text:'One',value:'Different'}]);assert.match(out,/Exact copy: "Explore Bubbles\."/);assert.match(out,/Unparsed \{ prose/);

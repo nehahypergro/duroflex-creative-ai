@@ -1,0 +1,18 @@
+'use strict';
+const fs=require('fs'),path=require('path');
+const root=path.resolve(__dirname,'../..'),out=path.join(root,'work/cocoon-argon-mini-trial');
+async function main(){
+ if(!process.argv.includes('--live'))throw Error('Explicit paid trial resume required');
+ const prior=JSON.parse(fs.readFileSync(path.join(out,'argonmini-report.json')));
+ if(prior.status!=='failed'||!prior.error.includes('Mandatory check coverage mismatch'))throw Error('Resume limited to recorded missing-check failure');
+ if(fs.existsSync(path.join(out,'resume-start.json')))throw Error('Resume already started; inspect saved state before any further dispatch');
+ const {loadConfig}=require('../../lib/creative-ai/runtime/config'),{VertexPlanningProvider,settings}=require('../../lib/creative-ai/runtime/vertex-provider'),{CreativeRuntime}=require('../../lib/creative-ai/runtime/engine');
+ const config={...loadConfig(root),reasoningModel:'gpt-5.4-mini',roleModels:prior.models},provider=new VertexPlanningProvider(config,settings(root));
+ const access=await provider.checkAccess();if(!access.configured)throw Error('Model access unavailable');
+ const runtime=new CreativeRuntime({root,dossierStore:require('../../lib/brand-dossier').createDossierStore(path.join(root,'output/brand-dossiers')),provider});runtime.config=config;require('../../lib/group-workspace').groupPolicy(root).mount(runtime);
+ const id=prior.id,startedAt=new Date().toISOString();fs.writeFileSync(path.join(out,'initial-failure-report.json'),JSON.stringify(prior,null,2));fs.writeFileSync(path.join(out,'resume-start.json'),JSON.stringify({id,startedAt,reason:'Explicit required check count and IDs added; checkpoints and budgets retained; no manufactured check results.'},null,2));runtime.schedule(id);
+ let job;do{await new Promise(r=>setTimeout(r,10000));job=await runtime.store.read(id);console.log(JSON.stringify({id,status:job.status,stage:job.stage,receipts:job.budget.receipts.length,results:job.results.length}));}while(runtime.active.has(id)||runtime.pending.includes(id));
+ job=await runtime.store.read(id);const fx=JSON.parse(fs.readFileSync(path.join(root,'output/cost-tracking/currency.json'))),rows=job.budget.receipts.filter(r=>r.recordedAt>=job.createdAt).map(r=>({stage:r.optimisation?.stage||r.kind,model:r.model,seconds:r.handoff?.responseElapsedMs/1000||null,inputTokens:r.usage?.input_tokens,outputTokens:r.usage?.output_tokens,estimatedINR:require('../../lib/cost-tracker').estimate(r)==null?null:require('../../lib/cost-tracker').estimate(r)*fx.usdToInr,requestKey:r.requestKey,recordedAt:r.recordedAt,attempt:r.attempt})),events=(await runtime.activity.project(id)).events;
+ const elapsedSeconds=(Date.now()-Date.parse(startedAt))/1000,report={...prior,status:job.status,error:job.error,finishedAt:new Date().toISOString(),resumeStartedAt:startedAt,resumeElapsedSeconds:elapsedSeconds,initialFailureSeconds:prior.elapsedSeconds,elapsedSeconds:prior.elapsedSeconds+elapsedSeconds,rows,knownEstimatedINR:rows.reduce((s,r)=>s+(r.estimatedINR||0),0),unknownReceiptCosts:rows.filter(r=>r.estimatedINR==null).length,results:job.results,unitErrors:job.unitErrors,failedEvents:events.filter(e=>e.type==='task.failed'),notes:['Active time includes the failed first segment and resumed run; excludes offline repair time.','Initial failure and provider receipts preserved; strategy and brand evidence reused.','Mini ran the initial brand check as well as copy/review.']};fs.writeFileSync(path.join(out,'argonmini-report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({event:'finished',id,status:report.status,seconds:report.elapsedSeconds,costINR:report.knownEstimatedINR,error:report.error}));
+}
+main().catch(e=>{console.error(e.stack);process.exitCode=1;});

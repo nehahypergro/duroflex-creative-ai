@@ -37,7 +37,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -89,7 +90,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -142,7 +144,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -195,7 +198,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -261,7 +265,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -306,7 +311,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -351,7 +357,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -396,7 +403,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -441,7 +449,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -524,7 +533,8 @@
                 "enum": [
                   "evidence",
                   "inference",
-                  "assumption"
+                  "assumption",
+                  "brief"
                 ]
               },
               "sourceIds": {
@@ -572,7 +582,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -627,7 +638,8 @@
                     "enum": [
                       "evidence",
                       "inference",
-                      "assumption"
+                      "assumption",
+                      "brief"
                     ]
                   },
                   "sourceIds": {
@@ -733,7 +745,8 @@
                 "enum": [
                   "evidence",
                   "inference",
-                  "assumption"
+                  "assumption",
+                  "brief"
                 ]
               },
               "sourceIds": {
@@ -1157,7 +1170,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -1202,7 +1216,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -1247,7 +1262,8 @@
               "enum": [
                 "evidence",
                 "inference",
-                "assumption"
+                "assumption",
+                "brief"
               ]
             },
             "sourceIds": {
@@ -1341,7 +1357,8 @@
                   "enum": [
                     "evidence",
                     "inference",
-                    "assumption"
+                    "assumption",
+                    "brief"
                   ]
                 },
                 "sourceIds": {

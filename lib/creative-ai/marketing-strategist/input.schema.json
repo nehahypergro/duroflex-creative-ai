@@ -9,6 +9,10 @@
     "assignment": {
       "type": "object",
       "properties": {
+        "focusType": {
+          "type": "string",
+          "enum": ["brand", "product", "collection"]
+        },
         "goal": {
           "type": "string",
           "minLength": 1,

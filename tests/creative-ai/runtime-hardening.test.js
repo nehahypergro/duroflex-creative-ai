@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs/promises'),os=require('os'),path=require('path'),crypto=require('crypto');
-const logicalFs=require('../../lib/creative-ai/runtime/artifact-fs'),storage=require('../../lib/creative-ai/runtime/reference-storage'),{JobStore}=require('../../lib/creative-ai/runtime/store'),{OpenAIProvider,typedWireSchema}=require('../../lib/creative-ai/runtime/provider'),{CreativeRuntime}=require('../../lib/creative-ai/runtime/engine');
+const logicalFs=require('../../lib/creative-ai/runtime/artifact-fs'),storage=require('../../lib/creative-ai/runtime/reference-storage'),{JobStore}=require('../../lib/creative-ai/runtime/store'),{OpenAIProvider,typedWireSchema}=require('./offline-provider.cjs'),{CreativeRuntime}=require('../../lib/creative-ai/runtime/engine');
 const digest=b=>crypto.createHash('sha256').update(b).digest('hex'),image='data:image/png;base64,'+Buffer.from('synthetic raster fixture').toString('base64');
 const config={maxReasoningCalls:20,jobTimeoutMs:60000,reasoningModel:'fixture',imageModel:'fixture-image',reasoningTimeoutMs:1000,imageTimeoutMs:1000,maxOutputTokens:1000};
 async function fixture(t){const root=await fs.mkdtemp(path.join(os.tmpdir(),'studio-hardening-')),store=new JobStore(path.join(root,'jobs')),job=await store.create({brandId:'brand-fixture',brief:'Synthetic fixture'},config,[{id:'fixture'}]);t.after(()=>fs.rm(root,{recursive:true,force:true}));return {root,store,job,budget:store.budget(job.id)};}

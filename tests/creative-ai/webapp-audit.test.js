@@ -6,7 +6,7 @@ test('historical no-output detail keeps absent review evidence unavailable inste
  const handler=require('../../lib/creative-ai/runtime/http').createHandler({root});
  const server=http.createServer((req,res)=>handler.handle(req,res,new URL(req.url,'http://localhost').pathname,async()=>({})));
  try{
-  const job=await handler.runtime.store.create({brandId:'brand-audit',brandUrl:'https://www.duroflexworld.com/'},handler.runtime.config,[]);
+  const job=await handler.runtime.store.create({brandId:'brand-audit',brandUrl:'https://www.duroflexworld.com/'},{...handler.runtime.config,initialStatus:'failed'},[]);
   await handler.runtime.store.update(job.id,j=>{j.status='failed';j.results=[{route:'continuity',placementId:'story',imageUrl:null,reviewUrl:null,ready:false}];return j;});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const response=await fetch('http://127.0.0.1:'+server.address().port+'/creative-ai/api/jobs/'+job.id+'/details');

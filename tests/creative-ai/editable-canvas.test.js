@@ -1,0 +1,230 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs/promises'),path=require('path'),os=require('os'),sharp=require('sharp');
+const {CreativeRuntime}=require('../../lib/creative-ai/runtime/engine'),mod=require('../../lib/creative-ai/runtime/editable');
+const rootSource=path.resolve(__dirname,'../..');
+const config={maxReasoningCalls:10,jobTimeoutMs:60000};
+// The production editor keeps Layers under Position; reveal controls as a user does.
+async function editorClick(page,selector){await page.locator('[data-panel="position"]').click();await page.locator(selector).click();if(selector.startsWith('[data-layer=')){const id=selector.match(/="([^"]+)"/)[1];await page.locator('[data-panel="'+(id==='copy-2'?'elements':id.startsWith('copy-')?'design':'position')+'"]').click();}}
+
+test('product name remains a separate named layer when copy carries a generic role',()=>{
+ const assets={logo:{id:'logo'},fonts:[{id:'font',weight:400}]};
+ const record={canvas:{width:1080,height:1080},artDirection:{text:[]},exactCopy:{fields:[{id:'headline',role:'headline',text:'Pause',delivery:'embedded'},{id:'product-name',role:'other',text:'Avalon Elite',delivery:'embedded'}]}};
+ const doc=mod.layout(record,assets,'brand-fixture','/photo.png','Avalon Elite');
+ assert.equal(doc.objects.find(o=>o.fieldId==='product-name').role,'product-name');
+ assert.ok(!doc.objects.some(o=>o.role==='copy-panel'));
+ assert.equal(doc.objects.find(o=>o.role==='photograph').width,1080);
+ assert.equal(doc.objects.some(o=>o.role==='contrast-overlay'),false);
+ assert.match(mod.photoPrompt({...record,artDirection:{...record.artDirection,product:{}},lockedRules:[]},doc),/Fill the entire canvas edge to edge/);
+ assert.ok(doc.objects.filter(o=>o.type==='text').every(o=>o.fill==='#ffffff'));
+});
+async function fixture(){const root=await fs.mkdtemp(path.join(os.tmpdir(),'editable-canvas-'));await fs.symlink(path.join(rootSource,'public'),path.join(root,'public'));let calls=0;const photo=await sharp({create:{width:1080,height:1080,channels:3,background:'#b6c2b9'}}).png().toBuffer();const runtime=new CreativeRuntime({root,provider:{generate:async()=>{calls++;return {imageData:'data:image/png;base64,'+photo.toString('base64')};}}});runtime.provider={generate:async(req,budget)=>{calls++;assert.match(req.prompt,/NO promotional text/);assert.doesNotMatch(req.prompt,/Generate ONE COMPLETE/);await budget.reserve('image',req.requestKey);await budget.receipt({kind:'image',requestKey:req.requestKey,model:'fixture-image',usage:{images:1}});return {imageData:'data:image/png;base64,'+photo.toString('base64')};}};runtime.schedule=()=>{};
+ const logo=await sharp({create:{width:200,height:60,channels:4,background:'#123456'}}).png().toBuffer(),font=await fs.readFile('/System/Library/Fonts/Supplemental/Arial.ttf');
+ for(const id of ['brand-duroflex-fixture','brand-sleepyhead-fixture']){await runtime.brands.save(id,'brand.json',{id,name:id,brandUrl:'https://'+id+'.example',documents:[],researchIds:[]});await mod.uploadAsset(runtime,id,{kind:'font',name:'Synthetic QA font, not brand approved',sourceReference:'synthetic-test-fixture-only',approved:true,weight:400,style:'normal',data:'data:font/ttf;base64,'+font.toString('base64')});await mod.uploadAsset(runtime,id,{kind:'logo',name:'Synthetic logo, not official artwork',sourceReference:'synthetic-test-fixture-only',approved:true,data:'data:image/png;base64,'+logo.toString('base64')});}
+ const intake={brandId:'brand-duroflex-fixture',editableCanvas:true},a=await mod.prerequisites(runtime,intake);intake.canvasAssets=a;
+ const job=await runtime.store.create(intake,config,[{id:'square',description:{id:'square',name:'Square',dimensions:{width:1080,height:1080}}}]);
+ const record={conceptId:'fixture-concept',route:'continuity',placementId:'square',canvas:{width:1080,height:1080},exactCopy:{fields:[{id:'headline',text:'Rest easy',delivery:'embedded'},{id:'support',text:'A quiet place to pause.',delivery:'embedded'},{id:'cta',text:'Explore',delivery:'embedded'}]},artDirection:{scene:'Synthetic interior',composition:'Product on right',text:[],logo:{assetIds:[]},product:{assetIds:[]}},attachmentManifest:[],lockedRules:[]};
+ const log=runtime.log.bind(runtime);runtime.log=(id,type,key,options={})=>log(id,type,key,{...options,evidence:{mode:'synthetic-fixture',adapterId:'synthetic-editable-canvas-test',receiptId:key}});await runtime.log(job.id,'job.created','created',{details:{config:{jobId:job.id,assignmentId:job.id,mode:'demo',concepts:[{id:'fixture-concept',route:'continuity'},{id:'fixture-exploration',route:'exploration'}],placements:[{id:'square',label:'Synthetic square'}]}}});
+ return {root,runtime,job,record,calls:()=>calls,cleanup:()=>fs.rm(root,{recursive:true,force:true})};}
+test('editable generation, revisions, brand isolation, browser editing and pixel-identical export (mock provider)',{timeout:120000},async()=>{const f=await fixture();let browser,server;try{
+ const result=await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));assert.equal(result.editable,true);assert.equal(f.calls(),1);let state=await f.runtime.editable.read(f.job.id,'continuity','square');assert.equal(state.document.objects.filter(o=>o.type==='image').length,2);assert.ok(state.document.objects.some(o=>o.type==='cta'));assert.equal(state.original.fonts[0].brandId,'brand-duroflex-fixture');assert.equal(state.original.assets[1].brandId,'brand-duroflex-fixture');assert.equal(state.document.assets[0].kind,'photograph');
+ const other=await mod.assets(f.runtime,'brand-sleepyhead-fixture');const crossed=structuredClone(state.document);crossed.fonts=other.fonts;assert.throws(()=>mod.validateDocument(crossed,state.original),/immutable/);
+ const distorted=structuredClone(state.document);distorted.objects.find(o=>o.role==='logo').scaleX=2;assert.throws(()=>mod.validateDocument(distorted,state.original),/proportions/);
+ const edited=structuredClone(state.document);edited.objects.find(o=>o.type==='text').text='Client wording';state=await f.runtime.editable.save(f.job.id,{route:'continuity',placementId:'square',expectedRevision:0,document:edited});assert.equal(state.revision,1);assert.equal(state.original.objects.find(o=>o.type==='text').text,'Rest easy');await assert.rejects(()=>f.runtime.editable.save(f.job.id,{route:'continuity',placementId:'square',expectedRevision:0,document:edited}),/newer revision/);
+ const restoredRuntime=new CreativeRuntime({root:f.root,provider:{}});const reopened=await restoredRuntime.editable.read(f.job.id,'continuity','square');assert.deepEqual(reopened.document,edited);assert.equal(f.calls(),1);const beforeBudget=JSON.stringify((await f.runtime.store.read(f.job.id)).budget);
+ const export1=await mod.render(f.runtime,f.job.id,edited);const export2=await mod.render(f.runtime,f.job.id,reopened.document);assert.equal(export1.data,export2.data);const pixels=await sharp(Buffer.from(export1.data.split(',')[1],'base64')).raw().toBuffer({resolveWithObject:true});const pixel=(600*1080+1000)*pixels.info.channels;assert.deepEqual([...pixels.data.subarray(pixel,pixel+3)],[182,194,185]);assert.equal((await sharp(Buffer.from(export1.data.split(',')[1],'base64')).metadata()).width,1080);
+ await f.runtime.store.update(f.job.id,j=>{j.status='finished';return j;});const {createHandler}=require('../../lib/creative-ai/runtime/http');const handler=createHandler({root:f.root});const http=require('http');server=http.createServer(async(req,res)=>{const pathname=new URL(req.url,'http://localhost').pathname;await handler.handle(req,res,pathname,async(req)=>{let data='';for await(const part of req)data+=part;return JSON.parse(data);});});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const origin='http://127.0.0.1:'+server.address().port;
+ browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true});const page=await browser.newPage({viewport:{width:1440,height:1000}});const script=await fetch(origin+'/creative-ai/editable-canvas.js');assert.match(script.headers.get('content-type'),/charset=utf-8/);await page.goto(origin+'/creative-ai/canvas-model.js');await page.setContent('<meta charset="utf-8"><link rel="stylesheet" href="'+origin+'/creative-ai/editable-canvas.css">');await page.addScriptTag({url:origin+'/creative-ai/vendor/fabric.min.js'});await page.addScriptTag({url:origin+'/creative-ai/canvas-model.js'});await page.evaluate(result=>{window.currentJob={id:result.jobId,results:[result]};window.activeBrand=null;window.brandList=[];}, {...result,jobId:f.job.id});await page.evaluate(()=>{const Native=fabric.Canvas;fabric.Canvas=class extends Native {constructor(...args){super(...args);window.qaCanvas=this;}};});await page.addScriptTag({url:origin+'/creative-ai/editable-canvas.js'});await page.evaluate(async()=>{EditableCanvas.init();await EditableCanvas.open('continuity|square');});
+ await page.locator('[data-panel="versions"]').click();assert.equal(await page.locator('#ecRevision').isVisible(),true);assert.equal(await page.locator('#ecCopy').isVisible(),false);await page.locator('[data-panel="ai"]').click();assert.equal(await page.locator('#ecAIInstruction').isVisible(),true);await page.locator('[data-panel="design"]').click();
+ await editorClick(page,'[data-layer="copy-0"]');const originalLeft=await page.evaluate(()=>qaCanvas.getActiveObject().left);await page.keyboard.press('ArrowRight');assert.equal(await page.evaluate(()=>qaCanvas.getActiveObject().left),originalLeft+1);await page.locator('[data-ec="undo"]').click();await editorClick(page,'[data-layer="copy-0"]');assert.equal(await page.evaluate(()=>qaCanvas.getActiveObject().left),originalLeft);
+ await page.setViewportSize({width:390,height:844});await page.waitForTimeout(100);assert.ok(await page.evaluate(()=>document.querySelector('#editableDialog').scrollWidth<=390));await page.setViewportSize({width:1440,height:1000});await page.waitForTimeout(100);
+ await editorClick(page,'[data-layer="copy-0"]');await page.locator('#ecCopy').fill('Edited visually');await page.waitForTimeout(1500);await page.locator('[data-ec="save"]').click();await page.waitForFunction(()=>document.querySelector('#ecStatus').textContent==='All changes saved');
+ let saved=await handler.runtime.editable.read(f.job.id,'continuity','square');assert.equal(saved.document.objects.find(o=>o.id==='copy-0').text,'Edited visually');await page.locator('[data-ec="undo"]').click();await page.waitForTimeout(100);assert.equal(await page.locator('#ecCopy').inputValue(),'');await editorClick(page,'[data-layer="copy-0"]');assert.equal(await page.locator('#ecCopy').inputValue(),'Client wording');await page.locator('[data-ec="redo"]').click();await editorClick(page,'[data-layer="copy-0"]');assert.equal(await page.locator('#ecCopy').inputValue(),'Edited visually');
+ await page.locator('#ecCopy').fill('Very long text '.repeat(120));await page.waitForTimeout(100);assert.match(await page.locator('#ecWarnings').innerText(),/overflows|overlaps|safe margins/);await page.locator('[data-ec="undo"]').click();await page.waitForTimeout(1500);await page.locator('[data-ec="save"]').click();await page.waitForFunction(()=>document.querySelector('#ecStatus').textContent==='All changes saved');
+ saved=await handler.runtime.editable.read(f.job.id,'continuity','square');const uiRender=await page.evaluate(()=>{const c=window.qaCanvas,zoom=c.getZoom(),w=c.width,h=c.height;c.discardActiveObject();c.setZoom(1);c.setDimensions({width:1080,height:1080});const data=c.toDataURL({format:'png',multiplier:1});c.setZoom(zoom);c.setDimensions({width:w,height:h});return data;});const exportedSaved=await mod.render(handler.runtime,f.job.id,saved.document);assert.equal(uiRender,exportedSaved.data);
+ await page.screenshot({path:path.join(f.root,'editable-canvas-qa.png'),fullPage:true});
+
+ // Recover a failed autosave from the local draft after closing and reopening.
+ await page.route('**/editable/continuity/square',route=>route.request().method()==='POST'?route.abort():route.continue());
+ await editorClick(page,'[data-layer="copy-0"]');await page.locator('#ecCopy').fill('Recover this local draft');await page.waitForTimeout(1300);assert.match(await page.locator('#ecStatus').innerText(),/couldn’t save/);
+ await page.locator('[data-ec="close"]').click();await page.locator('[data-ec="inline-proceed"]').click();await page.waitForSelector('#editableDialog[open]',{state:'hidden'});await page.unroute('**/editable/continuity/square');await page.evaluate(()=>EditableCanvas.open('continuity|square'));assert.match(await page.locator('#ecStatus').innerText(),/Recovered unsaved changes/);await page.waitForTimeout(1300);await page.locator('[data-ec="save"]').click();await page.waitForFunction(()=>document.querySelector('#ecStatus').textContent==='All changes saved');const recovered=await handler.runtime.editable.read(f.job.id,'continuity','square');assert.equal(recovered.document.objects.find(o=>o.id==='copy-0').text,'Recover this local draft');
+ await editorClick(page,'[data-layer="copy-0"]');await page.locator('#ecSize').fill('44');await page.locator('#ecSize').dispatchEvent('change');await page.waitForTimeout(100);await editorClick(page,'[data-lock="copy-0"]');assert.equal(await page.locator('#ecSize').isDisabled(),true);await editorClick(page,'[data-lock="copy-0"]');await editorClick(page,'[data-visible="copy-0"]');await page.waitForTimeout(1300);const hidden=await handler.runtime.editable.read(f.job.id,'continuity','square');assert.equal(hidden.document.objects.find(o=>o.id==='copy-0').visible,false);assert.equal(hidden.document.objects.find(o=>o.id==='copy-0').fontSize,44);
+ const jpeg=await mod.render(handler.runtime,f.job.id,hidden.document,'jpeg');const jpgMeta=await sharp(Buffer.from(jpeg.data.split(',')[1],'base64')).metadata();assert.equal(jpgMeta.format,'jpeg');assert.equal(jpgMeta.height,1080);
+ // Missing font and image produce visible errors, without substituting an export.
+ await page.route('**/canvas-assets/*.ttf',route=>route.abort());await page.locator('[data-ec="close"]').click();await page.evaluate(()=>EditableCanvas.open('continuity|square'));assert.match(await page.locator('#ecWarnings').innerText(),/Missing approved font/);await page.unroute('**/canvas-assets/*.ttf');
+ const jobBudget=(await handler.runtime.store.read(f.job.id)).budget;assert.equal(JSON.stringify(jobBudget),beforeBudget);assert.equal(jobBudget.receipts.length,1);assert.equal(f.calls(),1);
+ const missing=structuredClone(edited);missing.fonts[0].filename='asset-'+'0'.repeat(24)+'.ttf';await assert.rejects(()=>mod.render(f.runtime,f.job.id,missing),/Unavailable/);
+ const photoName=path.join(f.runtime.store.dir(f.job.id),edited.assets[0].url.split('/').pop());await fs.rename(photoName,photoName+'.missing');await assert.rejects(()=>mod.render(f.runtime,f.job.id,edited),/Unavailable/);
+ }finally{if(browser)await browser.close();if(server)await new Promise(resolve=>server.close(resolve));await f.cleanup();}});
+
+
+test('explicit mocked AI revisions use bounded child budgets, INR receipts and preserve original/revision assets',{timeout:60000},async()=>{const f=await fixture();try{
+ await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));await f.runtime.store.update(f.job.id,j=>{j.status='finished';return j;});let reasoningCalls=0;
+ f.runtime.provider.reason=async(req,budget)=>{reasoningCalls++;await budget.reserve('reasoning');const out={fields:req.input.fields.map(f=>({...f,text:'Rewritten '+f.text}))};req.validate(out);await budget.receipt({kind:'reasoning',model:'fixture-reasoning',usage:{input_tokens:10,output_tokens:12}});return out;};
+ const wait=async id=>{for(let i=0;i<100;i++){const j=await f.runtime.canvasAI.store(f.job.id).read(id);if(['finished','failed'].includes(j.status))return j;await new Promise(resolve=>setTimeout(resolve,30));}throw Error('Timed out');};
+ const input={action:'rewrite-copy',route:'continuity',placementId:'square',expectedRevision:0,instruction:'Make the headline warmer',requestKey:'fixture-rewrite-request'};
+ const ai=await f.runtime.canvasAI.create(f.job.id,input),done=await wait(ai.id);assert.equal(done.status,'finished',done.error);assert.equal(done.canvasCosts.currency,'INR');assert.equal(done.canvasCosts.confirmedTotal,null);assert.equal(done.budget.imageCalls,0);assert.equal(reasoningCalls,1);const duplicate=await f.runtime.canvasAI.create(f.job.id,input);assert.equal(duplicate.id,ai.id);assert.equal(reasoningCalls,1);
+ let state=await f.runtime.editable.read(f.job.id,'continuity','square');assert.equal(state.revision,1);assert.equal(state.original.objects.find(o=>o.id==='copy-0').text,'Rest easy');
+ const regen=await f.runtime.canvasAI.create(f.job.id,{action:'regenerate-image',route:'continuity',placementId:'square',expectedRevision:1,instruction:'Use warmer light',requestKey:'fixture-regenerate-request'}),generated=await wait(regen.id);assert.equal(generated.status,'finished',generated.error);assert.equal(generated.budget.imageCalls,1);assert.equal(f.calls(),2);
+ state=await f.runtime.editable.read(f.job.id,'continuity','square');assert.notEqual(state.document.assets[0].url,state.original.assets[0].url);assert.equal(state.revision,2);const original=structuredClone(state.original);state=await f.runtime.editable.save(f.job.id,{route:'continuity',placementId:'square',expectedRevision:2,document:original});assert.equal(state.revision,3);assert.deepEqual(state.document,state.original);assert.equal(f.calls(),2);const job=await f.runtime.store.read(f.job.id);assert.equal(job.canvasAIUsage.jobs.length,2);assert.equal(job.canvasAIUsage.currency,'INR');
+ }finally{await f.cleanup();}});
+
+test('contextual tools preserve groups, effects, crop and preview through saving and export',{timeout:120000},async()=>{
+ const f=await fixture();let browser,server;
+ try{
+ const result=await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));await f.runtime.store.update(f.job.id,j=>{j.status='finished';return j;});
+ const {createHandler}=require('../../lib/creative-ai/runtime/http'),handler=createHandler({root:f.root});server=require('http').createServer(async(req,res)=>{await handler.handle(req,res,new URL(req.url,'http://localhost').pathname,async req=>{let data='';for await(const part of req)data+=part;return JSON.parse(data);});});await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port;
+ browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true});const page=await browser.newPage({viewport:{width:1400,height:1000}});
+ const script=await fetch(origin+'/creative-ai/editable-canvas.js');assert.match(script.headers.get('content-type'),/charset=utf-8/);await page.goto(origin+'/creative-ai/canvas-model.js');await page.setContent('<link rel="stylesheet" href="'+origin+'/creative-ai/editable-canvas.css">');await page.addScriptTag({url:origin+'/creative-ai/vendor/fabric.min.js'});await page.addScriptTag({url:origin+'/creative-ai/canvas-model.js'});await page.evaluate(result=>{window.currentJob={id:result.jobId,results:[result]};const Native=fabric.Canvas;fabric.Canvas=class extends Native{constructor(...args){super(...args);window.qaCanvas=this;}};},{...result,jobId:f.job.id});await page.addScriptTag({url:origin+'/creative-ai/editable-canvas.js'});await page.evaluate(async()=>{EditableCanvas.init();await EditableCanvas.open('continuity|square');});
+ const save=async()=>{await page.locator('[data-ec="save"]').click();await page.waitForFunction(()=>document.querySelector('#ecStatus').textContent==='All changes saved');return handler.runtime.editable.read(f.job.id,'continuity','square');};
+ await page.locator('#ecEffectControls summary').click();await page.locator('#ecEffect').selectOption('outline');await page.locator('#ecEffectColor').fill('#ff0000');await page.locator('#ecEffectColor').dispatchEvent('change');
+ await editorClick(page,'[data-layer="copy-2"]');assert.equal(await page.locator('#ecPhotoControls').isVisible(),false);await page.locator('#ecCTAControls details summary').click();await page.locator('#ecRadius').fill('0');await page.locator('#ecRadius').dispatchEvent('change');await page.locator('#ecBorderWidth').fill('3');await page.locator('#ecBorderWidth').dispatchEvent('change');await page.locator('#ecVertical').selectOption('middle');
+ let state=await save();assert.equal(state.document.objects.find(o=>o.id==='copy-0').effect,'outline');assert.equal(state.document.objects.find(o=>o.id==='copy-2').radius,0);assert.equal(state.document.objects.find(o=>o.id==='copy-2').borderWidth,3);
+ await editorClick(page,'[data-layer="official-logo"]');assert.equal(await page.locator('#ecTextControls').isVisible(),false);assert.equal(await page.locator('#ecPositionControls').isVisible(),true);await page.locator('[data-align="right"]').click();const logoRight=await page.evaluate(()=>{const b=qaCanvas.getActiveObject().getBoundingRect();return b.left+b.width;});assert.ok(Math.abs(logoRight-(1080-state.document.safeMargin))<.1);
+ await editorClick(page,'[data-layer="photograph"]');assert.equal(await page.locator('#ecPhotoControls').isVisible(),true);await page.locator('[data-ec="crop"]').click();await page.locator('#ecPhotoZoom').fill('160');await page.locator('#ecPhotoZoom').dispatchEvent('change');state=await save();const photo=state.document.objects.find(o=>o.id==='photograph');assert.equal(photo.scaleX,1.6);assert.equal(photo.scaleY,1.6);assert.ok(photo.left<0);
+ await editorClick(page,'[data-layer="copy-0"]');await editorClick(page,'[data-ec="multi"]');await editorClick(page,'[data-layer="copy-1"]');await editorClick(page,'[data-ec="group"]');await page.waitForFunction(()=>qaCanvas.getActiveObjects().length===2);assert.equal(await page.evaluate(()=>qaCanvas.getActiveObjects().length),2);
+ // Exercise a real ActiveSelection transform, then compare world geometry after reopen.
+ await page.evaluate(()=>{const g=qaCanvas.getActiveObject();g.set({left:g.left+37,top:g.top+21,scaleX:1.2,scaleY:1.2});g.setCoords();qaCanvas.fire('object:modified',{target:g});});state=await save();const grouped=state.document.objects.filter(o=>o.groupId);assert.equal(grouped.length,2);assert.equal(grouped[0].groupId,grouped[1].groupId);
+ const before=await page.evaluate(()=>qaCanvas.getObjects().filter(o=>['copy-0','copy-1'].includes(o.layerId)).map(o=>({id:o.layerId,matrix:o.calcTransformMatrix()})));
+ await page.locator('[data-ec="close"]').click();await page.evaluate(()=>EditableCanvas.open('continuity|square'));const after=await page.evaluate(()=>qaCanvas.getObjects().filter(o=>['copy-0','copy-1'].includes(o.layerId)).map(o=>({id:o.layerId,matrix:o.calcTransformMatrix()})));
+ for(let i=0;i<before.length;i++)before[i].matrix.forEach((v,j)=>assert.ok(Math.abs(v-after[i].matrix[j])<.01,JSON.stringify({before,after})));
+ await page.locator('[data-ec="preview"]').click();assert.equal(await page.locator('.ec-side').isVisible(),false);assert.equal(await page.evaluate(()=>qaCanvas.skipTargetFind),true);assert.equal(await page.evaluate(()=>qaCanvas.getActiveObjects().length),0);await page.locator('[data-ec="preview"]').click();assert.equal(await page.locator('.ec-side').isVisible(),true);
+ await editorClick(page,'[data-layer="copy-0"]');await editorClick(page,'[data-ec="ungroup"]');state=await save();assert.equal(state.document.objects.some(o=>o.groupId),false);
+ const snapped=await page.evaluate(()=>{const obj=qaCanvas.getActiveObject();obj.set({left:52,top:51});const lines=CreativeCanvasModel.snap(obj,[],{width:1080,height:1080},49,6);return {left:obj.left,top:obj.top,lines};});assert.ok(Math.abs(snapped.left-49)<.001);assert.ok(Math.abs(snapped.top-49)<.001);assert.equal(snapped.lines.length,2);
+ // Reload persisted state after the transient snap probe, compare exact editor/export pixels.
+ await page.locator('[data-ec="close"]').click();await page.evaluate(()=>EditableCanvas.open('continuity|square'));const ui=await page.evaluate(()=>{qaCanvas.discardActiveObject();qaCanvas.setZoom(1);qaCanvas.setDimensions({width:1080,height:1080});return qaCanvas.toDataURL({format:'png',multiplier:1});});const rendered=await mod.render(handler.runtime,f.job.id,state.document);assert.equal(ui,rendered.data);assert.equal(f.calls(),1);
+ }finally{if(browser)await browser.close();if(server)await new Promise(r=>server.close(r));await f.cleanup();}
+});
+
+test('translation uses only selected fields, keeps original layout, logs INR and flags missing glyphs',{timeout:60000},async()=>{
+ const f=await fixture();try{
+ await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));await f.runtime.store.update(f.job.id,j=>{j.status='finished';return j;});let calls=0;
+ f.runtime.provider.reason=async(req,budget)=>{calls++;assert.match(req.instructions,/Translate the supplied copy into Hindi/);assert.deepEqual(req.input.fields.map(o=>o.id),['copy-0']);await budget.reserve('reasoning');const out={fields:[{id:'copy-0',text:'आराम करें'}]};req.validate(out);await budget.receipt({kind:'reasoning',model:'fixture-translation',usage:{input_tokens:12,output_tokens:6}});return out;};
+ const input={action:'translate-copy',language:'Hindi',fieldIds:['copy-0'],instruction:'Translate headline',expectedRevision:0,route:'continuity',placementId:'square',requestKey:'fixture-translation-request'};
+ const ai=await f.runtime.canvasAI.create(f.job.id,input);let job;for(let i=0;i<100;i++){job=await f.runtime.canvasAI.store(f.job.id).read(ai.id);if(['finished','failed'].includes(job.status))break;await new Promise(r=>setTimeout(r,30));}assert.equal(job.status,'finished',job.error);
+ const state=await f.runtime.editable.read(f.job.id,'continuity','square');assert.equal(state.document.objects.find(o=>o.id==='copy-0').text,'आराम करें');assert.equal(state.original.objects.find(o=>o.id==='copy-0').text,'Rest easy');assert.deepEqual(state.document.objects.find(o=>o.id==='copy-1'),state.original.objects.find(o=>o.id==='copy-1'));assert.ok(state.fontWarnings.some(x=>/missing characters/.test(x)));await assert.rejects(()=>mod.render(f.runtime,f.job.id,state.document),/missing characters/);assert.equal(job.budget.imageCalls,0);assert.equal(job.canvasCosts.currency,'INR');assert.equal(calls,1);assert.equal((await f.runtime.canvasAI.create(f.job.id,input)).id,ai.id);assert.equal(calls,1);
+ }finally{await f.cleanup();}
+});
+
+test('editable art schema is opt-in; one existing call plans layout without changing flattened contracts',async()=>{
+ const calls=require('../../lib/creative-ai/runtime/agents'),input=await require('../../lib/creative-ai/graphic-designer/examples/synthetic').inputExample(),pk=require('../../lib/creative-ai/placement-knowledge');
+ assert.equal(calls.draftSchema.properties.drafts.items.properties.editableLayout,undefined);
+ const base={editableCanvas:true,canvasAssets:{fonts:[{id:'own-font'}]},concepts:input.artInput.directorOutput.concepts,placements:input.artInput.placements.map(p=>({...p,expanded:pk.resolvePin(p.pin)})),guardian:{requirements:[],visualRules:[]},brandResearch:{sources:[]},assets:[]};let count=0;
+ await calls.artDraft(base,{reason:async req=>{count++;assert.ok(req.schema.properties.drafts.items.required.includes('editableLayout'));assert.match(req.instructions,/Text sits OVER/);return {}; }},{});assert.equal(count,1);
+ const rules=require('../../lib/creative-ai/runtime/editable-layout'),box=role=>({role,x:.05,y:.05,width:.3,height:.1,fontSize:.04,fontId:'own-font',colour:'#123456',background:'#ffffff',align:'left',reason:'Quiet real wall'}),plan={safeMargin:.05,boxes:[box('headline'),box('logo')]};assert.equal(rules.validate(plan,base.canvasAssets.fonts),plan);assert.throws(()=>rules.validate(plan,[{id:'foreign-font'}]),/approved font/);
+ const record={canvas:{width:1200,height:628},editableLayout:plan,exactCopy:{fields:[{id:'headline',role:'headline',text:'Pause',delivery:'embedded'}]},artDirection:{text:[]}};
+ const doc=mod.layout(record,{fonts:[{id:'own-font',weight:400}],logo:{id:'own-logo'}},'brand','/photo.png');assert.equal(doc.objects.find(o=>o.role==='headline').left,60);assert.equal(doc.objects.find(o=>o.role==='headline').fontSize,48);
+ const bad=structuredClone(doc);bad.objects[0].unexpected='{"encoded":true}';assert.throws(()=>mod.validateDocument(bad,doc),/Unexpected layer field/);
+});
+
+test('both brands assemble and reopen six digital ratios with their own assets; manual export has no paid calls',{timeout:120000},async()=>{
+ const f=await fixture();try{for(const brandId of ['brand-duroflex-fixture','brand-sleepyhead-fixture'])for(const [width,height] of [[1080,1080],[1080,1350],[1080,1920],[1920,1080],[1800,600],[1000,1500]]){
+ const a=await mod.prerequisites(f.runtime,{brandId}),job=await f.runtime.store.create({brandId,editableCanvas:true,canvasAssets:a},config,[{id:'square',description:{id:'square',name:'Synthetic',dimensions:{width,height}}}]),record={...f.record,canvas:{width,height}};
+ await f.runtime.log(job.id,'job.created','created',{details:{config:{jobId:job.id,assignmentId:job.id,mode:'demo',concepts:[{id:record.conceptId,route:'continuity'},{id:'fixture-exploration',route:'exploration'}],placements:[{id:'square',label:'Synthetic'}]}}});await f.runtime.unit(job.id,record,f.runtime.store.budget(job.id));const state=await f.runtime.editable.read(job.id,'continuity','square');assert.equal(state.document.brandId,brandId);assert.ok(state.document.fonts.every(x=>x.brandId===brandId));assert.ok(state.document.assets.every(x=>x.brandId===brandId));const before=f.calls();
+ const out=await mod.render(f.runtime,job.id,state.document,'jpeg'),meta=await sharp(Buffer.from(out.data.split(',')[1],'base64')).metadata();assert.deepEqual([meta.width,meta.height],[width,height]);assert.equal(f.calls(),before);
+ }assert.equal(f.calls(),12);}finally{await f.cleanup();}
+});
+
+test('canvas cost summary never reports unknown usage as zero INR',async()=>{const root=await fs.mkdtemp(path.join(os.tmpdir(),'canvas-cost-test-'));try{await fs.mkdir(path.join(root,'output/cost-tracking'),{recursive:true});const source=JSON.parse(await fs.readFile(path.join(rootSource,'output/cost-tracking/currency.json'),'utf8'));await fs.writeFile(path.join(root,'output/cost-tracking/currency.json'),JSON.stringify(source));const costs=await require('../../lib/creative-ai/runtime/canvas-costs').summary({root},{budget:{receipts:[{kind:'image',model:'unknown',usage:{}}]}});assert.equal(costs.estimatedTotal,null);assert.equal(costs.confirmedTotal,null);assert.equal(costs.unknownReceipts,1);assert.equal(costs.currency,'INR');}finally{await fs.rm(root,{recursive:true,force:true});}});
+
+test('approved logo variants persist without replacing the default and select only a matching brand colour',async()=>{const f=await fixture();try{
+ const brandId='brand-duroflex-fixture',before=await mod.assets(f.runtime,brandId),other=await mod.assets(f.runtime,'brand-sleepyhead-fixture');
+ const data='data:image/svg+xml;base64,'+Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60"><path fill="#ffffff" d="M0 0h200v60H0z"/></svg>').toString('base64');
+ const input={kind:'logo',name:'White fixture',sourceReference:'User-approved fixture',approved:true,colour:'#ffffff',makeDefault:false,data};
+ const saved=await mod.uploadAsset(f.runtime,brandId,input);
+ assert.equal(saved.logo.id,before.logo.id,'adding a variant must not replace the default');
+ assert.equal(saved.logos.length,2);assert.equal((await mod.uploadAsset(f.runtime,brandId,input)).logos.length,2);
+ const box=role=>({role,x:.1,y:.1,width:.4,height:.1,fontSize:.04,fontId:before.fonts[0].id,colour:'#ffffff',background:'#000000',align:'left',reason:'Dark natural surface'});
+ const record={...f.record,editableLayout:{safeMargin:.05,boxes:[box('logo'),box('headline')]}};
+ const doc=mod.layout(record,saved,brandId,'/photo.png');assert.equal(doc.assets[1].colour,'#ffffff');
+ record.editableLayout.boxes[0].colour='#ff0000';assert.equal(mod.layout(record,saved,brandId,'/photo.png').assets[1].id,before.logo.id);
+ assert.deepEqual(await mod.assets(f.runtime,'brand-sleepyhead-fixture'),other);
+ await assert.rejects(()=>mod.uploadAsset(f.runtime,brandId,{...input,colour:'white'}),/colour/);
+ }finally{await f.cleanup();}});
+
+test('font preflight measures actual loaded fonts, repairs overflow and rejects impossible copy before image spend',{timeout:60000},async()=>{const f=await fixture();try{
+ const a=f.job.intake.canvasAssets,doc=mod.layout(f.record,a,f.job.intake.brandId,'/unused.png');
+ doc.safeMargin=1080*.13;doc.objects.find(o=>o.role==='headline').width=1080*.84;doc.objects.find(o=>o.role==='headline').left=1080*.07;
+ doc.objects.find(o=>o.role==='headline').height=2;doc.objects.find(o=>o.role==='headline').fontSize=8;
+ const checked=await require('../../lib/creative-ai/runtime/editable-quality').preflight(f.runtime,f.job.id,doc);
+ assert.deepEqual(checked.issues,[]);assert.ok(checked.document.objects.find(o=>o.role==='headline').fontSize>=1080*.048);assert.equal(f.calls(),0);
+ const huge=structuredClone(doc);huge.objects.find(o=>o.role==='headline').text='Mandatory long wording '.repeat(200);
+ await assert.rejects(()=>require('../../lib/creative-ai/runtime/editable-quality').preflight(f.runtime,f.job.id,huge),/preflight/);assert.equal(f.calls(),0);
+ }finally{await f.cleanup();}});
+
+test('assembled review runs once, keeps photo and exact copy, persists corrections and usage without image regeneration',{timeout:60000},async()=>{const f=await fixture();try{
+ let reviews=0;f.runtime.provider.reason=async(req,budget)=>{reviews++;assert.equal(req.contextKind,'canvas-layout-review');assert.equal(req.images[0].id,'assembled-creative');assert.ok(req.images[0].imageData.startsWith('data:image/png;base64,'));assert.ok(JSON.stringify(req.input).length<16000);await budget.reserve('reasoning','fixture-layout-review');await budget.receipt({kind:'reasoning',model:'fixture-review',requestId:'fixture-layout-review',usage:{input_tokens:20,output_tokens:20}});
+ const o=req.input.layers.find(o=>o.role==='headline'),out={observations:['readability','copy-fit','logo','subject-occlusion','photograph'].map(check=>({check,status:check==='readability'?'fail':'pass',evidence:check==='readability'?'White headline loses contrast against the pale scene.':'Inspected fixture pixels.'})),corrections:[{id:o.id,left:o.left,top:o.top,width:o.width,height:o.height,fontSize:o.fontSize,fill:'#171717',align:'left',reason:'Dark copy contrasts with pale wall'}]};req.validate(out);return out;};
+ await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));const state=await f.runtime.editable.read(f.job.id,'continuity','square');assert.equal(state.revision,1);assert.equal(state.review.correctionApplied,true);assert.equal(f.calls(),1);assert.equal(reviews,1);
+ assert.deepEqual(state.document.assets,state.original.assets);assert.deepEqual(state.document.objects.filter(o=>o.role==='photograph'),state.original.objects.filter(o=>o.role==='photograph'));assert.deepEqual(state.document.objects.filter(o=>o.text).map(o=>o.text),state.original.objects.filter(o=>o.text).map(o=>o.text));assert.ok(state.validation.some(x=>x.includes('Initial visual review')));
+ await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));assert.equal(reviews,1);assert.equal(f.calls(),1);const job=await f.runtime.store.read(f.job.id);assert.equal(job.budget.reasoningCalls,1);assert.equal(job.results[0].ready,false);assert.equal(job.budget.receipts.length,2);
+ // Resume the one-review checkpoint directly, with unchanged source bytes: no second call.
+ const initial=await mod.render(f.runtime,f.job.id,state.original);await require('../../lib/creative-ai/runtime/editable-quality').reviewOnce(f.runtime,f.job.id,'continuity-square',state.original,initial,f.record,f.runtime.store.budget(f.job.id));assert.equal(reviews,1);
+ }finally{await f.cleanup();}});
+
+test('review corrections reject photo/copy/asset changes, duplicate IDs, invalid geometry and partial coverage',()=>{
+ const q=require('../../lib/creative-ai/runtime/editable-quality'),assets={logo:{id:'logo'},fonts:[{id:'font',weight:400}]},record={canvas:{width:1080,height:1920},artDirection:{text:[]},exactCopy:{fields:[{id:'h',text:'Exact claim',delivery:'embedded'}]}},doc=mod.layout(record,assets,'brand-fixture','/photo.png');
+ const observations=['readability','copy-fit','logo','subject-occlusion','photograph'].map(check=>({check,status:'unknown',evidence:'Requires inspection'})),patch={id:'copy-0',left:100,top:300,width:800,height:100,fontSize:55,fill:'#ffffff',align:'left',reason:'Move away from face'};
+ assert.equal(q.apply(doc,{observations,corrections:[patch]}).objects.find(o=>o.id==='copy-0').text,'Exact claim');
+ for(const corrections of [[{...patch,id:'photograph'}],[{...patch,text:'Changed claim'}],[{...patch,assetId:'foreign'}],[patch,patch],[{...patch,width:-5}],[{...patch,visible:false}]])assert.throws(()=>q.apply(doc,{observations,corrections}));
+ assert.throws(()=>q.apply(doc,{observations:observations.slice(1),corrections:[]}));
+});
+
+test('unavailable assembled review is saved, retry reservation is blocked and resume makes no additional calls',{timeout:60000},async()=>{const f=await fixture();try{
+ let calls=0;f.runtime.provider.reason=async(req,budget)=>{calls++;await budget.reserve('reasoning','review-first');await assert.rejects(()=>budget.reserve('image','must-not-generate'),/One assembled/);await budget.reserve('reasoning','review-second');};
+ await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));const state=await f.runtime.editable.read(f.job.id,'continuity','square');assert.equal(state.review.status,'unavailable');assert.equal(f.calls(),1);assert.equal(calls,1);assert.equal((await f.runtime.store.read(f.job.id)).budget.reasoningCalls,1);
+ const rendered=await mod.render(f.runtime,f.job.id,state.original);await require('../../lib/creative-ai/runtime/editable-quality').reviewOnce(f.runtime,f.job.id,'continuity-square',state.original,rendered,f.record,f.runtime.store.budget(f.job.id));assert.equal(calls,1);assert.equal(state.revision,0);
+ }finally{await f.cleanup();}});
+
+test('protected composition preflight loads fonts for both brands and six digital ratios',{timeout:120000},async()=>{
+ const f=await fixture(),q=require('../../lib/creative-ai/runtime/editable-quality');try{for(const brandId of ['brand-duroflex-fixture','brand-sleepyhead-fixture'])for(const [w,h] of [[1080,1080],[1080,1350],[1080,1920],[1920,1080],[1200,400],[1000,1500]]){
+  const a=await mod.assets(f.runtime,brandId),short=Math.min(w,h),fontId=a.fonts[0].id;
+  const box=(role,x,y,width,height,size)=>({role,x,y,width,height,fontSize:size/w,fontId,colour:'#171717',background:'#ffffff',align:'left',reason:'Protected composition fixture'});
+  const record={...f.record,canvas:{width:w,height:h},editableLayout:{safeMargin:.04,protectedRegions:[{id:'product',kind:'product',x:.65,y:.2,width:.3,height:.7,reason:'Product stays right of copy'}],boxes:[box('logo',.04,.05,.25,.09,short*.04),box('headline',.04,.22,.55,.18,short*.065),box('supporting-copy',.04,.43,.55,.12,short*.055),box('cta',.04,.65,.5,.13,short*.05)]}};
+  const d=mod.layout(record,a,brandId,'/photo.png'),checked=await q.preflight(f.runtime,f.job.id,d);assert.equal(checked.status,'passed',brandId+' '+w+'x'+h);assert.deepEqual(q.geometry(checked.document,checked.measurements),[]);assert.equal(checked.document.layoutPolicyVersion,2);assert.equal(checked.document.protectedRegions.length,1);assert.match(mod.photoPrompt(record,checked.document),/protectedRegions/);
+  const bad=structuredClone(checked.document);bad.protectedRegions=[];assert.throws(()=>mod.validateDocument(bad,checked.document),/immutable/);
+ }assert.equal(f.calls(),0);}finally{await f.cleanup();}
+});
+
+test('v2 assembled review binds each overlap to geometry or an explicit unresolved finding',()=>{
+ const q=require('../../lib/creative-ai/runtime/editable-quality'),assets={logo:{id:'logo'},fonts:[{id:'font',weight:400}]},record={canvas:{width:1080,height:1920},artDirection:{text:[]},exactCopy:{fields:[{id:'h',text:'Exact claim',delivery:'embedded'}]}},doc=mod.layout(record,assets,'brand-fixture','/photo.png');doc.layoutPolicyVersion=2;doc.protectedRegions=[{id:'planned-product',kind:'product',left:600,top:900,width:350,height:700}];
+ const layer=doc.objects.find(o=>o.id==='copy-0');Object.assign(layer,{left:100,top:500,width:400,height:80,fontSize:55});const observations=['readability','copy-fit','logo','subject-occlusion','photograph'].map(check=>({check,status:check==='subject-occlusion'?'fail':'unknown',evidence:'Fixture inspection'}));
+ const r={observations,protectedRegions:[{id:'face',kind:'face',left:110,top:520,width:200,height:100,evidence:'Observed person face'}],overlaps:[{id:'overlap-1',layerId:'copy-0',regionId:'face',evidence:'Headline crosses face'}],unresolvedOverlapIds:[],corrections:[{id:'copy-0',left:100,top:500,width:400,height:80,fontSize:55,fill:'#ffffff',align:'left',reason:'Change contrast',resolves:['overlap-1']}]};
+ assert.throws(()=>q.apply(doc,r),/unresolved overlap/);r.corrections[0].top=350;r.corrections[0].reason='Move above face';const moved=q.apply(doc,r);assert.equal(moved.objects.find(o=>o.id==='copy-0').top,350);assert.equal(moved.objects.find(o=>o.id==='copy-0').text,'Exact claim');assert.deepEqual(moved.objects.find(o=>o.role==='photograph'),doc.objects.find(o=>o.role==='photograph'));
+ const partial=structuredClone(r);partial.corrections=[];assert.throws(()=>q.apply(doc,partial),/accounted/);partial.unresolvedOverlapIds=['overlap-1'];assert.doesNotThrow(()=>q.apply(doc,partial));
+ for(const mutate of [x=>x.overlaps.push({...x.overlaps[0]}),x=>x.corrections[0].resolves=['foreign'],x=>x.protectedRegions[0].left=1080,x=>x.overlaps=[],x=>x.observations.find(o=>o.check==='photograph').status='pass']){const bad=structuredClone(r);mutate(bad);assert.throws(()=>q.apply(doc,bad));}
+});
+
+test('preflight expands a wrapped CTA using unwrapped font width instead of repeatedly narrowing it',{timeout:60000},async()=>{
+ const f=await fixture();try{
+  const a=await mod.assets(f.runtime,'brand-duroflex-fixture'),doc=mod.layout({...f.record,canvas:{width:1080,height:1920}},a,'brand-duroflex-fixture','/photo.png');
+  doc.layoutPolicyVersion=2;doc.protectedRegions=[];
+  doc.objects.find(o=>o.role==='headline').fontSize=85;
+  const cta=doc.objects.find(o=>o.type==='cta');Object.assign(cta,{text:'Explore Cocoon',fontSize:49,width:180,height:85,top:1600});
+  const before=await mod.render(f.runtime,f.job.id,doc,'png',{preflight:true}),m=before.measurements.find(x=>x.id===cta.id);
+  assert.ok(m.naturalTextWidth>cta.width,'Natural width must measure the entire CTA, not its longest wrapped line');
+  const checked=await require('../../lib/creative-ai/runtime/editable-quality').preflight(f.runtime,f.job.id,doc);
+  assert.equal(checked.status,'passed');const final=checked.measurements.find(x=>x.id===cta.id);
+  assert.ok(final.height<1080*.11);assert.ok(checked.document.objects.find(x=>x.id===cta.id).width>180);
+  assert.equal(checked.document.objects.find(x=>x.id===cta.id).text,'Explore Cocoon');assert.equal(f.calls(),0);
+ }finally{await f.cleanup();}
+});
+
+test('new editable workflow generates photography before any canvas measurement for both brands',{timeout:60000},async()=>{
+ const quality=require('../../lib/creative-ai/runtime/editable-quality'),originalPreflight=quality.preflight;
+ quality.preflight=async()=>{throw Error('Removed pre-photo layout gate must not execute');};
+ try{for(const brandId of ['brand-duroflex-fixture','brand-sleepyhead-fixture']){
+  const f=await fixture();try{
+   const a=await mod.assets(f.runtime,brandId);await f.runtime.store.update(f.job.id,j=>{j.intake={...j.intake,brandId,canvasAssets:a,editableWorkflowVersion:2};return j;});
+   const generate=f.runtime.provider.generate;f.runtime.provider.generate=async(...args)=>{
+    assert.equal((await fs.readdir(f.runtime.store.dir(f.job.id))).some(x=>x.startsWith('editable-preflight-')),false);
+    return generate(...args);
+   };
+   const result=await f.runtime.unit(f.job.id,f.record,f.runtime.store.budget(f.job.id));assert.equal(result.editable,true);assert.equal(f.calls(),1);
+   const state=await f.runtime.editable.read(f.job.id,'continuity','square');assert.equal(state.preflight.status,'not-run');
+   const planned=mod.layout(f.record,a,brandId,'/creative-ai/api/jobs/'+f.job.id+'/files/photo-continuity-square.png');
+   assert.deepEqual(state.original.objects,JSON.parse(JSON.stringify(planned.objects)),'Art Director layout must not be fitted before photography');
+   assert.ok(state.validation.length,'Post-assembly warnings remain visible');assert.equal(state.review.requiresManualReview,true);
+   assert.equal(state.original.fonts[0].brandId,brandId);assert.equal(result.ready,false);
+  }finally{await f.cleanup();}
+ }}finally{quality.preflight=originalPreflight;}
+});
