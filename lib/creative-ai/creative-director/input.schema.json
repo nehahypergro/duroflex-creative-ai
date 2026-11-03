@@ -1899,6 +1899,35 @@
               "maxItems": 30
             }
           }
+        },
+        "unusedBrandFacts": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "object",
+            "properties": {
+              "factId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              },
+              "avoidance": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              }
+            },
+            "required": [
+              "factId",
+              "reason",
+              "avoidance"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -1940,6 +1969,19 @@
       },
       "minItems": 0,
       "maxItems": 100
+    },
+    "conceptRoutes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "continuity",
+          "exploration"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 2,
+      "uniqueItems": true
     }
   },
   "required": [

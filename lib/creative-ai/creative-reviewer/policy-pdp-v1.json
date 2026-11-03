@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "reviewProfile": { "id": "pdp", "version": 1 },
+  "threshold": 75,
+  "minimumEvidenceConfidence": 0.7,
+  "maxCorrectionCycles": 1,
+  "weights": {
+    "communication": 30,
+    "brandRecognition": 25,
+    "placementFit": 20,
+    "visualCraft": 15
+  },
+  "advisoryQualityCriteria": [],
+  "excludedQualityCriteria": ["emotionalAudienceFit"],
+  "criticalCriteria": [
+    "logo-identity", "product-identity", "supported-claims", "exact-required-copy",
+    "required-text-legibility", "mandatory-brand-rules", "verified-upload-constraints", "reference-boundary"
+  ],
+  "status": "initial-uncalibrated-policy",
+  "limits": [
+    "PDP excludes emotional audience appeal entirely, including advisory scoring and findings, by client direction.",
+    "The four remaining weights are normalised over 90. Scores and confidence are not measured conversion or human approval.",
+    "Apply only requirements relevant to this image and its assigned buyer question. Full-gallery checks are separate.",
+    "Exact SKU, claims, wording and applicable technical checks remain required; source approval does not approve rendered artwork."
+  ]
+}

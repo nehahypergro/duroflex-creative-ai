@@ -1,0 +1,23 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+test('both brands recover temporary image failures and keep decorative failures out of Home',{timeout:90000},async()=>{
+ const f=await require('./helpers/intake-preview.cjs').createPreview(),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),page=await browser.newPage(),errors=[];page.setDefaultTimeout(8000);page.on('pageerror',e=>errors.push(e.message));
+ let mode='transient',attempts=new Map();await page.route('**/products/**',async route=>{const key=route.request().url().split('?')[0];if(!key.endsWith('/preview'))return route.continue();const n=(attempts.get(key)||0)+1;attempts.set(key,n);if(mode==='permanent'||n===1)return route.abort();return route.continue();});
+ try{for(const b of f.brands){mode='transient';attempts=new Map();await page.goto(f.url+'?brand='+b.id);await page.locator('.hero-art').waitFor();await page.waitForFunction(()=>{const imgs=[...document.querySelectorAll('.hero-art img')];return imgs.length===3&&imgs.every(i=>i.complete&&i.naturalWidth>0&&!i.hidden);},{},{timeout:4000});assert.equal(await page.locator('.hero-art .asset-missing,.hero-art [data-interaction=retry-image]').count(),0);
+ // A missing decorative generated image uses this brand's saved product preview.
+ await page.evaluate(()=>{const img=document.querySelector('.hero-art img');img.src='/creative-ai/missing-hero-test.png';});await page.waitForFunction(()=>{const i=document.querySelector('.hero-art img');return i?.src.includes('/products/')&&i.complete&&i.naturalWidth>0;},{},{timeout:4000});
+ mode='permanent';await page.reload();await page.waitForFunction(()=>document.querySelector('.hero-art')&&!document.querySelector('.hero-art-card'),{},{timeout:4000});assert.equal(await page.locator('.hero-art .asset-missing,.hero-art button').count(),0);
+ // Real creative previews remain explicit failures; never replace artwork with product photos.
+ await page.evaluate(()=>{const wrap=document.createElement('div');wrap.className='art-frame';wrap.id='recovery-test-art';wrap.innerHTML='<img src="/creative-ai/missing-art-test.png">';document.querySelector('main').append(wrap);});await page.locator('#recovery-test-art [data-interaction=retry-image]').waitFor();assert.match(await page.locator('#recovery-test-art').innerText(),/Your work is safe/);
+ }assert.deepEqual(errors,[]);}finally{await browser.close();await new Promise(r=>f.server.close(r));}
+});
+
+test('signed-in Studio shows real account status instead of local preview',{timeout:30000},async()=>{
+ const f=await require('./helpers/intake-preview.cjs').createPreview(),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),page=await browser.newPage();
+ try{await page.addInitScript(()=>window.CreativeAccount={user:{id:'fixture-user',name:'Demo administrator',role:'admin'}});await page.goto(f.url+'?brand='+f.brands[0].id);await page.locator('.creation-hero').waitFor();assert.equal(await page.locator('#accountName').innerText(),'Demo administrator');assert.equal(await page.locator('.account-label small').innerText(),'Administrator');await page.locator('#accountTrigger').click();assert.match(await page.locator('#accountMenu').innerText(),/Demo administrator/);assert.doesNotMatch(await page.locator('#accountMenu').innerText(),/Login not connected|Local preview/);}finally{await browser.close();await new Promise(r=>f.server.close(r));}
+});
+test('slow project history does not block a new brief or replace typed work',{timeout:30000},async()=>{
+ const f=await require('./helpers/intake-preview.cjs').createPreview(),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),page=await browser.newPage();let release;const gate=new Promise(r=>release=r);
+ await page.route('**/creative-ai/api/jobs',async r=>{await gate;await r.fulfill({json:[]});});
+ try{await page.goto(f.url+'?brand='+f.brands[0].id);await page.locator('.home-create-actions').waitFor({timeout:4000});assert.match(await page.locator('.continue-panel').innerText(),/Loading saved projects/);await page.getByRole('button',{name:'Create design',exact:true}).click();await page.locator('#field-brief').fill('Preserve my work while history finishes');release();await page.waitForTimeout(500);assert.equal(await page.locator('#field-brief').inputValue(),'Preserve my work while history finishes');}finally{release();await browser.close();await new Promise(r=>f.server.close(r));}
+});

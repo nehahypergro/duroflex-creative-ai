@@ -1,0 +1,17 @@
+{
+ "CA-101":{"name":"Brief validation","message":"Some brief information needs correcting.","action":"Review the indicated input; do not invent missing facts."},
+ "CA-102":{"name":"Product identity","message":"We couldn’t match the selected product or variant.","action":"Verify the saved product and variant."},
+ "CA-201":{"name":"Service unavailable","message":"The service is temporarily unavailable.","action":"Retrieve an accepted request before any resubmission."},
+ "CA-202":{"name":"Request timeout","message":"The request did not finish in time.","action":"Inspect saved response IDs and checkpoints; timeout does not prove no charge."},
+ "CA-203":{"name":"Editable text preparation","message":"We couldn’t prepare the editable text.","action":"Inspect saved copy, region assignment and font metrics; preserve source artwork."},
+ "CA-204":{"name":"Output validation","message":"The output did not pass a required check.","action":"Inspect the affected criterion; never mark approved automatically."},
+ "CA-301":{"name":"Save failure","message":"We couldn’t save this change.","action":"Preserve browser draft; check disk and revision before retry."},
+ "CA-302":{"name":"Download preparation","message":"We couldn’t prepare this download.","action":"Check saved revision, export and artifact availability."},
+ "CA-401":{"name":"Sign-in required","message":"Please sign in again.","action":"Restore the existing session."},
+ "CA-403":{"name":"Access denied","message":"You don’t have access to this action.","action":"Check workspace access; do not bypass brand boundaries."},
+ "CA-404":{"name":"Not found","message":"This project or asset couldn’t be found.","action":"Check resource identity and brand; never expose another workspace."},
+ "CA-409":{"name":"Revision or request conflict","message":"This action conflicts with a saved change or request.","action":"Reload latest revision or inspect existing request; do not overwrite."},
+ "CA-429":{"name":"Rate limit","message":"The service is receiving too many requests.","action":"Respect Retry-After and existing bounded retry policy."},
+ "CA-507":{"name":"Storage full","message":"There is not enough storage to finish this action.","action":"Free space without deleting historical evidence."},
+ "CA-900":{"name":"Unexpected failure","message":"We couldn’t complete this action.","action":"Inspect incident record; classify only with evidence."}
+}

@@ -25,13 +25,13 @@ test('SKU audit reuses across briefs with original provenance and invalidates ch
 }));
 test('unclear or unrecognized SKU audit never becomes a reusable success',async()=>temporary(async dir=>{const args=auditCase(dir),cache=await audit.prepare(args);await cache.save({...analysis(),identityStatus:'unclear'},'job');assert.equal((await audit.prepare(args)).metadata.status,'miss');const low=analysis();low.images[0].confidence=.3;await cache.save(low,'job');assert.equal((await audit.prepare(args)).metadata.status,'miss');args.profile.brandId='other';await assert.rejects(()=>audit.prepare(args),/scope/);}));
 const agents=require('../../lib/creative-ai/runtime/agents'),director=require('../../lib/creative-ai/creative-director'),fixture=require('../../lib/creative-ai/creative-director/examples/synthetic');
-function shortConcepts(core){const out=structuredClone(core);out.concepts=Object.fromEntries(out.concepts.map((c,i)=>{delete c.strategyLinkage;delete c.brandLinkage.preservedRequirementIds;delete c.evidence.assumptionIds;delete c.conceptId;delete c.route;return ['unit'+i,c];}));return out;}
+function shortConcepts(core){const out=structuredClone(core);out.concepts=Object.fromEntries(out.concepts.map((c,i)=>{const route=c.route;delete c.strategyLinkage;delete c.brandLinkage.preservedRequirementIds;delete c.evidence.assumptionIds;delete c.conceptId;delete c.route;return [route,c];}));return out;}
 test('concept wire restores exact upstream bindings and preserves full validation without schema echo',async()=>{
  const input=fixture.inputExample(),full=fixture.coreExample(input),prior=structuredClone(input);
  const provider={reason:async req=>{assert.ok(!req.instructions.includes('MODEL CORE OUTPUT SCHEMA'));const out=req.wire.decode(shortConcepts(full));req.validate(out);return out;}};
  const out=await agents.concepts(input,provider,{});assert.equal(director.validateOutput(out,input).ok,true);assert.deepEqual(input,prior);
  for(const c of out.concepts){assert.deepEqual(c.strategyLinkage.primaryProposition,input.strategy.brief.primaryProposition);assert.deepEqual(c.evidence.assumptionIds,input.strategy.assumptions.map(a=>a.id));assert.deepEqual(c.brandLinkage.preservedRequirementIds,input.strategyInput.guardian.requirements.map(r=>r.id));}
- const bad={reason:async req=>{const compact=shortConcepts(full);compact.concepts.unit0.requiredProofFactIds=['unknown-proof'];return req.wire.decode(compact);}};
+ const bad={reason:async req=>{const compact=shortConcepts(full);compact.concepts.continuity.requiredProofFactIds=['unknown-proof'];return req.wire.decode(compact);}};
  await assert.rejects(()=>agents.concepts(input,bad,{}),/unsupported|proof|Unknown/);
- const missing={reason:async req=>{const compact=shortConcepts(full);delete compact.concepts.unit1;return req.wire.decode(compact);}};await assert.rejects(()=>agents.concepts(input,missing,{}));
+ const missing={reason:async req=>{const compact=shortConcepts(full);delete compact.concepts.exploration;return req.wire.decode(compact);}};await assert.rejects(()=>agents.concepts(input,missing,{}));
 });

@@ -79,3 +79,16 @@ test('pinned canvas font and logo assets are allowed only with same-brand hash-b
  await fs.writeFile(path.join(dir,filename),'changed');await assert.rejects(()=>provider.reason({instructions:'Plan',input:{}},store.budget(job.id)),/canvas asset/);
  }assert.equal(calls,2);
 }));
+test('derived product detail views require exact same-brand source bytes and reproducible pixels before dispatch',()=>fixture(async({brands,store,a,b,create})=>{
+ const sharp=require('sharp'),detail=require('../../lib/creative-ai/runtime/product-review-images');let calls=0;
+ const provider=new BrandScopedProvider({generate:async()=>{calls++;return {ok:true};}},brands),ja=await create(a),jb=await create(b);
+ const data=async color=>'data:image/png;base64,'+(await sharp({create:{width:30,height:30,channels:3,background:color}}).png().toBuffer()).toString('base64');
+ const aData=await data('red'),bData=await data('blue');
+ await store.save(ja.id,'research-sku.json',bindResearch(research(a,aData),ja.intake.brandKnowledge));await store.save(jb.id,'research-sku.json',bindResearch(research(b,bData),jb.intake.brandKnowledge));
+ const record={productReference:{sourceAssetId:'official-image-1',referenceAssetIds:['official-image-1']},attachmentManifest:[{assetId:'official-image-1',roles:['product'],imageData:aData}]};
+ const attachments=await detail.generationReferences(record);assert.ok(attachments[1].derivation);
+ await assert.rejects(()=>provider.generate({prompt:'Render',attachments},store.budget(jb.id)),/source|collected|detail/i);assert.equal(calls,0);
+ assert.equal((await provider.generate({prompt:'Render',attachments},store.budget(ja.id))).ok,true);assert.equal(calls,1);
+ const changed=structuredClone(attachments);changed[1].imageData=bData;
+ await assert.rejects(()=>provider.generate({prompt:'Render',attachments:changed},store.budget(ja.id)),/detail|derived/i);assert.equal(calls,1);
+}));

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clean image + editable text · Fabric proof</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f4f8;color:#242033;font:14px system-ui}header{padding:20px 28px;background:white;border-bottom:1px solid #e3e0e9}h1{font-size:22px;margin:0 0 8px}p{line-height:1.6;margin:8px 0;color:#605b6c}.layout{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:24px;max-width:1400px;margin:auto}aside{background:white;padding:22px;border-radius:16px;align-self:start}label{display:block;margin:15px 0 5px;font-weight:600}input,textarea,select,button{font:inherit;border:1px solid #d8d3e2;border-radius:8px;padding:9px;max-width:100%}textarea,input,select{width:100%}textarea{min-height:110px}button{cursor:pointer;background:white}button:disabled{opacity:.45;cursor:wait}.primary{background:#5335e8;color:white;border-color:#5335e8} .row{display:flex;gap:8px;margin:10px 0}.row>*{flex:1;min-width:0}#stage{overflow:auto;min-height:600px;display:flex;justify-content:center;align-items:flex-start}#frame{box-shadow:0 12px 40px #29203d24}#status,#checks{font-size:13px;white-space:pre-line} .note{font-size:12px}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #b8aaff}@media(max-width:760px){.layout{grid-template-columns:1fr}#stage{min-height:400px}}
+</style>
+<header><h1>Clean image. Truly separate text.</h1><p>Duroflex · Fabric experiment · Drag or rewrite the text, then hide it to inspect the untouched image.</p></header>
+<main class="layout"><aside>
+<label for="layer">Text layer</label><select id="layer"><option value="headline">Headline</option><option value="product">Product name</option></select>
+<label for="wording">Wording</label><textarea id="wording"></textarea>
+<div class="row"><div><label for="size">Font size</label><input id="size" type="number" min="12" max="150"></div><div><label for="width">Box width</label><input id="width" type="number" min="80" max="950"></div></div>
+<div class="row"><div><label for="x">Left</label><input id="x" type="number" min="0" max="1080"></div><div><label for="y">Top</label><input id="y" type="number" min="0" max="1920"></div></div>
+<label for="align">Alignment</label><select id="align"><option>left</option><option>center</option><option>right</option></select>
+<div class="row"><button id="hide">Show clean image</button><button id="reset">Reset proof</button></div>
+<label for="zoom">View scale</label><select id="zoom"><option value="fit">Fit</option><option value="0.5">50%</option><option value="1">100%</option></select>
+<div class="row"><button id="save">Save in this browser</button><button id="download" class="primary">Download PNG</button></div>
+<button id="verify">Check background & export</button>
+<p id="status" role="status">Loading image and brand fonts…</p><p id="checks" role="status"></p>
+<p class="note">Existing clean generated photograph; no OCR, erasing or new AI generation. This is an editing proof, not approved campaign artwork. Changes stay separate from Studio projects. Reset restores this proof only.</p>
+</aside><section id="stage" aria-label="Editable artwork"><div id="frame"><canvas id="art"></canvas></div></section></main>
+<figure id="exportPreview" hidden style="max-width:400px;margin:24px auto"><figcaption>Full-size export preview · 1080 × 1920</figcaption><img id="exportImage" alt="Full-size exported Fabric proof" style="width:100%;height:auto"></figure>
+<script src="/creative-ai/vendor/fabric.min.js"></script><script src="/creative-ai/canvas-model.js"></script><script src="/creative-ai/fabric-clean-proof.js"></script>
+</html>

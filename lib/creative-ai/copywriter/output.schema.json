@@ -82,7 +82,7 @@
               ],
               "additionalProperties": false
             },
-            "minItems": 1
+            "minItems": 0
           }
         },
         "required": [
@@ -92,7 +92,7 @@
         ],
         "additionalProperties": false
       },
-      "minItems": 2
+      "minItems": 1
     },
     "rationale": {
       "type": "string"

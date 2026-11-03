@@ -35,3 +35,233 @@
 #ecActionPanel p,#ecRecovery p{margin:5px 0 9px;max-width:1000px}#ecActionPanel button,#ecRecovery button{margin-right:8px}#ecActionPanel strong,#ecRecovery strong{display:block}
 #ecEffectControls>summary,#ecCTAControls details>summary{cursor:pointer;padding:10px 0;font-weight:600}#ecCTAControls details[open]{padding-bottom:12px}
 .ec-upload-queue{max-height:140px;overflow:auto;padding:6px 20px;background:#faf9ff;border-bottom:1px solid #e8e5ef}.ec-upload-row{display:flex;justify-content:space-between;gap:16px;padding:7px 0;font-size:12px}.ec-upload-row strong,.ec-upload-row small{display:block;overflow-wrap:anywhere}.ec-upload-row small{color:#666879;margin-top:3px}.ec-upload-row button{margin-left:6px}.ec-recovery ul{max-height:160px;overflow:auto;padding-left:20px}
+
+/* Keep oversized canvases reachable; scroll anchoring is handled by zoomAround. */
+.ec-stage{align-items:flex-start;justify-content:flex-start;overflow-anchor:none}
+.ec-stage .canvas-container{margin:auto}
+
+/* Immediate acknowledgement, then an overlay while fonts and layers mount. */
+#editableDialog .ec-opening{min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center;padding:48px;background:#faf9ff;border-radius:18px;color:#20213b}
+#editableDialog .ec-opening h2{font-size:22px;margin:16px 0 8px}#editableDialog .ec-opening p{color:#74758d;margin:0}
+#editableDialog .ec-stage{position:relative}
+#editableDialog .ec-loading{position:absolute;inset:0;z-index:15;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#f2f0fa;color:#514b6c;font-size:14px}
+#editableDialog .ec-loading[hidden]{display:none}
+#editableDialog .ec-stage[aria-busy="true"] .canvas-container{visibility:hidden}
+.ec-loading-spinner{display:inline-block;width:28px;height:28px;border:3px solid #e0d8f8;border-top-color:#6036ee;border-radius:50%;animation:ec-loading-turn .8s linear infinite}
+@keyframes ec-loading-turn{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.ec-loading-spinner{animation:none;border-top-color:#6036ee}}
+
+/* Studio editor: familiar tool rail, contextual controls and a focused canvas. */
+#editableDialog{--ec-ink:#211e39;--ec-muted:#77728b;--ec-line:#e9e6f1;--ec-soft:#f0eaff;--ec-ground:#efedf5;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ec-ink)}
+#editableDialog .ec-header{height:64px;min-height:64px;padding:10px 20px;gap:12px;border-bottom:1px solid var(--ec-line);background:linear-gradient(100deg,#faf8ff,#fff 65%);box-shadow:none}
+#editableDialog .ec-header h2{font-size:14px;font-weight:650;max-width:360px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0 0 3px}
+#editableDialog .ec-title{min-width:100px;flex:1}#editableDialog .ec-title span{font-size:11px;color:var(--ec-muted)}
+#editableDialog button{font-family:inherit;border-color:var(--ec-line);border-radius:8px;color:var(--ec-ink);transition:background .15s,border-color .15s}
+#editableDialog button:hover:not(:disabled){background:#f3effd;border-color:#d6c8fb}
+#editableDialog button:focus-visible,#editableDialog input:focus-visible,#editableDialog select:focus-visible,#editableDialog textarea:focus-visible{outline:2px solid #8053e3;outline-offset:2px}
+#editableDialog .ec-primary{background:#7140d9;border-color:#7140d9;color:white}#editableDialog .ec-primary:hover:not(:disabled){background:#6031c4;color:white;border-color:#6031c4}
+#editableDialog .ec-back{font-size:12px;color:#615a78;background:transparent;border:0;border-right:1px solid var(--ec-line);border-radius:0;padding-right:18px}
+#editableDialog .ec-icon-button{font-size:21px;width:34px;padding:0;border:0;background:transparent}
+#editableDialog .ec-status{font-size:11px;color:#547467;max-width:175px}#editableDialog .ec-export{gap:7px;border-left:1px solid var(--ec-line);padding-left:12px}
+#editableDialog .ec-main{grid-template-columns:76px 280px minmax(0,1fr);background:white}
+#editableDialog .ec-tabs{background:#fbfaff;padding:14px 8px;gap:6px;border-right:1px solid var(--ec-line)}
+#editableDialog .ec-tabs button{min-height:60px;gap:5px;border:0;padding:9px 2px;background:transparent;color:#766d89;position:relative}
+#editableDialog .ec-tabs button b{font-size:23px;font-weight:500;line-height:24px}#editableDialog .ec-tabs button span{font-size:10px;font-weight:550}
+#editableDialog .ec-tabs button[aria-pressed=true]{background:#eee6ff;color:#7139d7}
+#editableDialog .ec-side{background:#fff;border-right:1px solid var(--ec-line)}#editableDialog .ec-section{padding:20px 18px}
+#editableDialog .ec-section h3{font-size:16px;margin:0 0 17px;letter-spacing:-.3px}#editableDialog .ec-help{font-size:11px;line-height:1.6;color:var(--ec-muted);margin:12px 0}
+#editableDialog .ec-field{font-size:11px;font-weight:550;gap:7px;margin:16px 0}#editableDialog input,#editableDialog select,#editableDialog textarea{font-family:inherit;color:var(--ec-ink);border:1px solid #e2ddec;background:#fff;border-radius:8px;font-size:12px}
+#editableDialog textarea{line-height:1.5;padding:11px}#editableDialog #ecCopy{min-height:104px}
+#editableDialog .ec-presets{display:grid;gap:8px;margin:16px 0}#editableDialog .ec-presets button{padding:13px 10px;text-align:left;background:#faf9fd}
+#editableDialog [data-ec=add-heading]{font-size:21px;font-weight:700;letter-spacing:-.6px}#editableDialog [data-ec=add-body]{font-size:13px}
+#editableDialog .ec-spacing,#editableDialog #ecEffectControls{border-top:1px solid var(--ec-line);padding:16px 0;margin:0}#editableDialog summary{font-size:12px;font-weight:550;cursor:pointer}
+#editableDialog .ec-context{min-height:58px;padding:10px 20px;gap:8px;border-bottom:1px solid var(--ec-line);background:white}
+#editableDialog #ecTextControls{gap:7px}#editableDialog #ecTextControls select[hidden]{display:none}
+#editableDialog #ecFontPicker{width:175px;display:flex;justify-content:space-between;align-items:center;text-align:left;font-size:12px;background:white;padding:9px 12px}
+#editableDialog #ecFontLabel{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}#editableDialog #ecSize{width:62px}#editableDialog #ecAlign{width:82px}
+#editableDialog .ec-selection-summary{margin-left:auto;font-size:11px}#editableDialog .ec-tag{background:#eee7fc;color:#7346ba;border-radius:5px}
+#editableDialog .ec-context>button:not(#ecFontPicker){font-size:11px;padding:8px;border:0;background:transparent}#editableDialog .ec-context-hint{padding:7px 20px;background:#f9f8fc;color:#857d96;font-size:10px;margin:0}
+#editableDialog .ec-stage{background:#efedf5;background-image:radial-gradient(#d8d3e2 .6px,transparent .6px);background-size:16px 16px;padding:24px;min-height:0}
+#editableDialog .ec-stage .canvas-container{box-shadow:0 5px 24px #28203c20;margin:auto}
+#editableDialog .ec-canvas-footer{min-height:46px;background:#fff;padding:9px 20px;color:#777087;font-size:10px;border-top:1px solid var(--ec-line)}
+#editableDialog .ec-canvas-footer input{accent-color:#7949d9}#editableDialog .ec-zoom{gap:8px}#editableDialog .ec-zoom button{border:0;background:#f6f3fc;min-width:28px;height:28px}
+#editableDialog #ecFontSearch{width:100%;padding:11px 12px}#editableDialog #ecFontLibrary{display:grid;gap:7px;margin-bottom:16px}
+#editableDialog .ec-font-card{display:flex;flex-direction:column;gap:9px;width:100%;text-align:left;padding:12px;background:white;min-height:80px}
+#editableDialog .ec-font-card[aria-pressed=true]{border-color:#8b59e8;background:#f8f4ff;box-shadow:inset 3px 0 #8b59e8}
+#editableDialog .ec-font-meta{font-size:11px;font-weight:600;display:flex;justify-content:space-between;gap:6px;width:100%}#editableDialog .ec-font-meta small{font-size:9px;font-weight:400;color:var(--ec-muted)}
+#editableDialog .ec-font-specimen{font-size:18px;line-height:1.4;overflow-wrap:anywhere}
+#editableDialog .ec-layer[aria-pressed=true],#editableDialog .ec-layer.active{background:#f4edff;border-color:#d8c8f4}
+#editableDialog .ec-preview-button{font-size:12px}#editableDialog.ec-preview .ec-main{grid-template-columns:1fr}
+@media(min-width:800px) and (max-width:1200px){#editableDialog .ec-main{grid-template-columns:66px 240px minmax(0,1fr)}#editableDialog .ec-header{padding:10px 12px;gap:7px}#editableDialog .ec-status{max-width:120px}#editableDialog .ec-selection-summary{display:none}#editableDialog .ec-context{padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){#editableDialog button{transition:none}}
+html body #editableDialog,html body.studio-preview #editableDialog{width:100vw;height:100dvh;max-width:100vw;max-height:100dvh;margin:0;padding:0;inset:0;border:0;border-radius:0}
+#editableDialog .ec-context .editor-client-context{order:10;flex:0 0 auto;width:auto;margin:0 0 0 auto;padding:0;background:transparent;border:0;min-height:0}
+#editableDialog .editor-client-context>span{display:none}
+#editableDialog .editor-client-context button{font-size:10px;padding:6px;border:0;box-shadow:none;background:transparent}
+#editableDialog .ec-tabs svg{width:23px;height:23px;display:block}
+
+/* Compact contextual editor controls. */
+#editableDialog [hidden]{display:none!important}
+#editableDialog .ec-context{align-items:center;flex-wrap:wrap;padding:8px 14px;gap:6px;box-shadow:0 3px 12px #24213908;z-index:2}
+#editableDialog #ecTextControls{align-items:center;flex-wrap:wrap}
+#editableDialog .ec-context .ec-icon-button{font-size:23px;width:32px;height:34px;padding:0!important}
+#editableDialog #ecColourButton{width:34px;height:34px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:20px;font-weight:700;padding:2px;background:white;border:1px solid var(--ec-line)}
+#editableDialog #ecColourButton span{width:20px;height:4px;border-radius:2px;background:#242139}
+#editableDialog .ec-colour-grid{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0 24px}
+#editableDialog .ec-colour-grid button{width:32px;height:32px;border:1px solid #d9d7e1;border-radius:8px;padding:0}
+#editableDialog .ec-colour-grid button:hover{outline:2px solid #8a5ce0;outline-offset:2px}
+#editableDialog .ec-section h4{font-size:12px;margin:20px 0 8px}
+#editableDialog #ecCustomColour{width:100%;height:42px;padding:4px}
+#editableDialog .ec-export{position:relative}
+#editableDialog .ec-download-menu{position:absolute;right:0;top:calc(100% + 12px);width:240px;z-index:40;padding:18px;background:white;border:1px solid var(--ec-line);border-radius:12px;box-shadow:0 12px 36px #24213920;display:grid;gap:14px}
+#editableDialog .ec-download-menu h3{font-size:15px;margin:0}
+#editableDialog .ec-floating-tools{position:absolute;z-index:12;display:flex;gap:2px;padding:4px;background:white;border:1px solid var(--ec-line);border-radius:10px;box-shadow:0 4px 16px #24213920}
+#editableDialog .ec-floating-tools button{width:32px;height:30px;border:0;padding:6px;background:white;font-size:17px}
+#editableDialog .ec-floating-tools svg{width:18px;height:18px}
+#editableDialog .ec-version-list{display:grid;gap:6px;margin:16px 0}
+#editableDialog .ec-version-list button{position:relative;display:grid;gap:7px;text-align:left;padding:13px 12px 13px 26px;background:white;border:1px solid transparent;min-height:62px}
+#editableDialog .ec-version-list button:before{content:'';position:absolute;left:10px;top:18px;width:7px;height:7px;background:#bbb4ca;border-radius:50%}
+#editableDialog .ec-version-list button[aria-pressed=true]{background:#f6f2ff;border-color:#e2d6f9}
+#editableDialog .ec-version-list button[aria-pressed=true]:before{background:#7139d7}
+#editableDialog .ec-version-list strong{font-size:12px}#editableDialog .ec-version-list time{font-size:10px;color:#77728b}
+#editableDialog #ecVersionPreview{border:1px solid var(--ec-line);border-radius:10px;padding:8px;margin:12px 0;font-size:12px}
+#editableDialog #ecVersionPreview img{display:block;max-width:100%;max-height:220px;margin:auto;object-fit:contain}
+#editableDialog .ec-align-grid button{min-height:36px;background:white}
+#editableDialog .ec-order{gap:6px;margin:10px 0}#editableDialog .ec-order button{font-size:11px;background:white}
+#editableDialog .ec-layer{border-radius:10px;padding:9px;margin:5px 0;border:1px solid #e8e7ef}
+#editableDialog .ec-stage{background:#f4f3f7;background-image:none}
+
+/* Compact editing workspace and separate placement/layer tools. */
+#editableDialog .ec-context{margin:12px 16px 0;padding:6px 10px;min-height:48px;flex:0 0 auto;border:1px solid var(--ec-line);border-radius:12px;box-shadow:0 3px 10px #2421390c;flex-wrap:nowrap;overflow-x:auto}
+#editableDialog .ec-context>button,#editableDialog #ecTextControls>*{flex-shrink:0}
+#editableDialog .ec-selection-summary{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#editableDialog .ec-context .ec-position-button{margin-left:auto;border-left:1px solid var(--ec-line);border-radius:0;padding-left:14px}
+#editableDialog .ec-stage{padding:30px 24px 24px}
+#editableDialog .ec-download-menu{width:218px;max-width:calc(100vw - 24px);padding:12px;gap:8px;top:calc(100% + 8px);border-radius:10px}
+#editableDialog .ec-download-menu label{color:var(--ec-muted);font-size:11px}
+#editableDialog .ec-download-menu select{max-width:none;width:100%;padding:7px 10px}
+#editableDialog .ec-download-menu .ec-primary{padding:9px 12px}
+#editableDialog .ec-position-tabs{display:flex;border-bottom:1px solid var(--ec-line);gap:10px;margin:0 0 18px}
+#editableDialog .ec-position-tabs button{flex:1;border:0;border-bottom:2px solid transparent;border-radius:0;padding:10px 4px;background:transparent}
+#editableDialog .ec-position-tabs [aria-selected=true]{border-bottom-color:#7140d9;color:#7140d9;font-weight:600}
+#editableDialog #ecLayerList>.ec-section-heading{margin-top:0!important}
+#editableDialog .ec-floating-tools{border-radius:20px;padding:4px 8px}
+#editableDialog .ec-floating-tools button{border-radius:50%}
+#editableDialog .ec-layer-icon{overflow:hidden}
+#editableDialog .ec-layer-icon img{width:100%;height:100%;object-fit:contain}
+@media(max-width:700px){
+ #editableDialog .ec-header{height:auto;min-height:64px;flex-wrap:wrap;padding:8px;gap:6px}
+ #editableDialog .ec-header .ec-back{font-size:0!important;padding:8px;border:0}
+ #editableDialog .ec-header .ec-back:before{content:'←';font-size:18px}
+ #editableDialog .ec-title{min-width:70px}#editableDialog .ec-title h2{max-width:130px;font-size:12px!important}
+ #editableDialog .ec-status{order:6;width:100%;max-width:none}#editableDialog .ec-export{padding-left:6px}
+ #editableDialog .ec-main{grid-template-columns:54px minmax(0,1fr);grid-template-rows:minmax(310px,56%) minmax(0,1fr)}
+ #editableDialog .ec-tabs{grid-column:1;grid-row:1/3;padding:8px 3px;gap:3px}
+ #editableDialog .ec-tabs button{min-height:54px}#editableDialog .ec-tabs button span{font-size:9px}
+ #editableDialog .ec-workspace{grid-column:2;grid-row:1}#editableDialog .ec-side{grid-column:2;grid-row:2;overflow:auto}
+ #editableDialog .ec-context{margin:6px 6px 0;padding:5px;min-height:42px;gap:4px}
+ #editableDialog .ec-stage{padding:14px}#editableDialog #ecFontPicker{width:125px}
+ #editableDialog .ec-context .ec-selection-summary{display:none}#editableDialog .ec-canvas-footer{min-height:36px;padding:3px 8px}
+ #editableDialog .ec-section{padding:14px}#editableDialog .ec-header .ec-primary{padding:9px 10px}
+}
+
+#editableDialog #ecTextControls{flex-wrap:nowrap;flex-shrink:0}
+
+/* Compact text controls in the order of the supplied toolbar reference. */
+#editableDialog #ecTextControls{gap:4px}
+#editableDialog #ecFontPicker{height:32px;min-height:32px;width:160px;padding:5px 9px;border-radius:4px}
+#editableDialog .ec-size-stepper{display:flex;align-items:center;height:32px;border:1px solid var(--ec-line);border-radius:4px;overflow:hidden;background:#fff}
+#editableDialog .ec-size-stepper button{width:28px;min-width:28px;height:30px;min-height:30px;padding:0;border:0;border-radius:0;background:transparent;font-size:16px}
+#editableDialog .ec-size-stepper #ecSize{width:42px;height:30px;min-height:30px;padding:3px 0;border:0;border-left:1px solid var(--ec-line);border-right:1px solid var(--ec-line);border-radius:0;text-align:center;appearance:textfield}
+#editableDialog #ecSize::-webkit-inner-spin-button,#editableDialog #ecSize::-webkit-outer-spin-button{appearance:none;margin:0}
+#editableDialog #ecTextControls .ec-format-button,#editableDialog #ecColourButton{display:inline-flex;align-items:center;justify-content:center;position:relative;width:30px;height:32px;min-height:32px;padding:4px!important;border:0;border-radius:4px;background:transparent;color:var(--ec-ink);font-size:18px!important}
+#editableDialog #ecTextControls .ec-format-button:hover:not(:disabled),#editableDialog #ecColourButton:hover:not(:disabled){background:#f0eef5}
+#editableDialog #ecTextControls .ec-format-button[aria-pressed=true]{background:#e9e6ef}
+#editableDialog .ec-format-button svg{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#editableDialog #ecColourButton span{position:absolute;bottom:2px;left:6px;width:18px;height:3px;border-radius:1px}
+#editableDialog .ec-text-divider{height:20px;width:1px;background:var(--ec-line);margin:0 3px}
+
+/* Approved visual mockup: calm canvas, compact floating tools and page dock. */
+#editableDialog .ec-main{grid-template-columns:80px 280px minmax(0,1fr)}
+#editableDialog .ec-header{height:72px;min-height:72px;padding:12px 24px;gap:16px}
+#editableDialog .ec-header .ec-back{border:0;border-right:1px solid var(--ec-line);border-radius:0;background:transparent;padding:8px 20px 8px 0;font-size:13px}
+#editableDialog .ec-title{display:flex;align-items:center;gap:16px;flex:1;overflow:hidden}
+#editableDialog .ec-title h2{font-size:16px!important;line-height:1.4;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#editableDialog .ec-title>span{font-size:12px;color:var(--ec-muted);white-space:nowrap}
+#editableDialog .ec-header .ec-preview-button,#editableDialog .ec-export>button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:40px;border-radius:8px;font-size:13px}
+#editableDialog .ec-header .ec-preview-button{background:#f6f3fc}
+#editableDialog .ec-chrome-icon{width:19px;height:19px;flex-shrink:0}
+#editableDialog .ec-tabs{padding:16px 6px;gap:10px;border-right:1px solid var(--ec-line);background:#fff}
+#editableDialog .ec-tabs button{min-height:72px;padding:10px 4px!important;border-radius:10px;gap:7px}
+#editableDialog .ec-tabs button span{font-size:11px}
+#editableDialog .ec-tabs button b{display:flex;justify-content:center}
+#editableDialog .ec-side{border-left:0;border-right:1px solid var(--ec-line)}
+#editableDialog [data-pane=position]>.ec-section{padding:0 12px 18px}
+#editableDialog [data-pane=position]>.ec-section>h3{display:none}
+#editableDialog .ec-position-tabs{margin:0 -12px 10px;gap:0;height:58px}
+#editableDialog .ec-position-tabs button{font-size:13px;padding:16px 8px;border-bottom-width:3px}
+#editableDialog #ecLayerList>.ec-section-heading{justify-content:flex-end;margin:0 0 5px;min-height:26px}
+#editableDialog #ecLayerList>.ec-section-heading>h3{display:none}
+#editableDialog #ecLayerList>.ec-section-heading button{border:0;color:var(--ec-muted);background:transparent;padding:4px 6px!important}
+#editableDialog .ec-layer{min-height:72px;margin:5px 0;padding:8px;border-color:transparent;border-radius:10px;gap:3px}
+#editableDialog .ec-layer.active{border-color:transparent;background:#f1eaff}
+#editableDialog .ec-layer>button:first-child{gap:10px;padding:0!important}
+#editableDialog .ec-layer-icon{width:44px;height:48px;min-width:44px;border:1px solid var(--ec-line);border-radius:5px;background:#fff;color:var(--ec-ink);font-size:22px}
+#editableDialog .ec-layer-label{min-width:0;flex:1}
+#editableDialog .ec-layer-label strong{font-size:12px;font-weight:500}
+#editableDialog .ec-layer-label small{font-size:10px;max-width:105px}
+#editableDialog .ec-layer-action{width:26px;min-width:26px;height:30px;display:flex;align-items:center;justify-content:center;padding:3px!important;border:0;background:transparent}
+#editableDialog .ec-layer-action svg{width:17px;height:17px}
+#editableDialog .ec-workspace{background:var(--ec-ground);min-width:0}
+#editableDialog .ec-workspace>.ec-context{align-self:center;width:max-content;max-width:calc(100% - 40px);margin:16px 20px 0;padding:10px 12px;min-height:58px;gap:5px;border-radius:10px;box-shadow:0 5px 18px #24213908}
+#editableDialog .ec-context .ec-selection-summary{display:none}
+#editableDialog .ec-context .ec-icon-button{width:25px;height:32px;display:flex;align-items:center;justify-content:center}
+#editableDialog .ec-context .ec-position-button{display:flex;align-items:center;gap:8px;min-height:32px;padding:5px 9px 5px 14px;font-size:12px}
+#editableDialog .ec-position-button svg{width:20px;height:20px}
+#editableDialog .ec-stage{padding:32px 28px;background:var(--ec-ground);background-image:none}
+#editableDialog .ec-stage .canvas-container{box-shadow:0 2px 12px #2421390b}
+#editableDialog .ec-floating-tools{border-radius:8px;padding:4px;gap:2px;box-shadow:0 4px 14px #24213918}
+#editableDialog .ec-floating-tools button{border-radius:4px}
+#editableDialog .ec-canvas-footer{min-height:104px;align-items:center;justify-content:space-between;padding:12px 20px;gap:16px;background:#fff}
+#editableDialog .ec-original-note{display:none}
+#editableDialog .ec-page-dock{flex:1;min-width:0;overflow:hidden}
+#editableDialog .ec-single-page{display:flex;align-items:center;gap:20px;font-size:12px;color:var(--ec-ink)}
+#editableDialog .ec-single-page>span{white-space:nowrap}
+#editableDialog .ec-page-thumbnail{position:relative;display:grid;gap:3px;place-items:center;width:98px;min-width:98px;padding:4px;border:2px solid #9465f3;border-radius:7px;background:#fff}
+#editableDialog .ec-page-thumbnail canvas{display:block;width:86px;height:48px}
+#editableDialog .ec-page-thumbnail>span{font-size:10px;line-height:1.1}
+#editableDialog .ec-guide-controls{gap:8px;font-size:10px;color:var(--ec-muted)}
+#editableDialog .ec-zoom{gap:0;flex-shrink:0;border:1px solid var(--ec-line);border-radius:7px;overflow:hidden;height:38px}
+#editableDialog .ec-zoom button{min-width:34px;height:36px;border-radius:0;padding:6px 9px!important;font-size:16px}
+#editableDialog .ec-zoom output{min-width:48px;font-size:12px;border-left:1px solid var(--ec-line);border-right:1px solid var(--ec-line);line-height:36px}
+#editableDialog .ec-zoom .ec-fit-button{font-size:12px;border-right:1px solid var(--ec-line)!important;min-width:48px}
+#editableDialog .ec-page-dock .collection-pages{margin:0;padding:0;border:0;background:transparent;display:flex;align-items:center;gap:16px;min-width:0}
+#editableDialog .ec-page-dock .collection-heading{display:block;flex-shrink:0;margin:0;font-size:11px}
+#editableDialog .ec-page-dock .collection-heading strong{display:none}
+#editableDialog .ec-page-dock .collection-page-strip{display:flex;gap:8px;min-width:0;overflow-x:auto;padding:3px}
+#editableDialog .ec-page-dock .collection-page{width:90px;min-width:90px;border-radius:6px;padding:4px;gap:2px}
+#editableDialog .ec-page-dock .collection-page .project-thumb{height:44px;min-height:44px;margin:0}
+#editableDialog .ec-page-dock .collection-page small{display:none}
+#editableDialog .ec-page-dock .collection-page>span{font-size:10px}
+#editableDialog.ec-preview .ec-main{grid-template-columns:1fr}
+@media(max-width:1200px) and (min-width:701px){#editableDialog .ec-main{grid-template-columns:70px 240px minmax(0,1fr)}#editableDialog .ec-title{display:block}#editableDialog .ec-title>span{font-size:11px}#editableDialog .ec-guide-controls{display:none}#editableDialog .ec-workspace>.ec-context{max-width:calc(100% - 20px);margin:12px 10px 0;padding:8px}#editableDialog .ec-header{padding:10px 14px}}
+@media(max-width:700px){#editableDialog .ec-main{grid-template-columns:54px minmax(0,1fr);grid-template-rows:minmax(310px,58%) minmax(0,1fr)}#editableDialog .ec-header{height:auto;min-height:64px;padding:8px;gap:6px}#editableDialog .ec-title{display:block;flex:1}#editableDialog .ec-title>span{font-size:10px}#editableDialog .ec-title h2{font-size:12px!important}#editableDialog .ec-header .ec-back{padding:7px;border:0}#editableDialog .ec-header .ec-preview-button,#editableDialog .ec-export>button{font-size:11px;gap:5px;padding:7px;min-height:34px}#editableDialog .ec-header .ec-preview-button svg{display:none}#editableDialog .ec-tabs{padding:8px 3px;gap:4px}#editableDialog .ec-tabs button{min-height:54px;padding:7px 3px!important}#editableDialog .ec-tabs button span{font-size:9px}#editableDialog .ec-workspace>.ec-context{max-width:calc(100% - 12px);margin:6px 6px 0;padding:5px;min-height:42px}#editableDialog .ec-stage{padding:12px}#editableDialog .ec-canvas-footer{min-height:62px;padding:7px;gap:6px}#editableDialog .ec-single-page{gap:7px;font-size:10px}#editableDialog .ec-page-thumbnail{width:42px;min-width:42px;padding:2px}#editableDialog .ec-page-thumbnail canvas{width:34px;height:22px}#editableDialog .ec-page-thumbnail>span{display:none}#editableDialog .ec-zoom{height:30px}#editableDialog .ec-zoom button{min-width:25px;height:28px;padding:3px!important;font-size:13px}#editableDialog .ec-zoom output{min-width:36px;font-size:10px;line-height:28px}#editableDialog .ec-zoom .ec-fit-button{min-width:28px;font-size:10px}#editableDialog .ec-page-dock .collection-heading{display:none}#editableDialog .ec-page-dock .collection-page{width:46px;min-width:46px}#editableDialog .ec-page-dock .collection-page .project-thumb{height:28px;min-height:28px}}
+/* Campaign handoff, layer ordering and phone readability preview. */
+#editableDialog .ec-layer{position:relative;grid-template-columns:20px minmax(0,1fr) 26px 26px}
+#editableDialog .ec-layer .ec-layer-drag{width:20px;min-width:20px;padding:0!important;cursor:grab;color:#92879e;font-size:19px!important;background:transparent;border:0;touch-action:none}
+#editableDialog .ec-layer .ec-layer-drag:disabled{cursor:default;opacity:.25}
+#editableDialog .ec-layer.ec-drop-before{box-shadow:0 -3px #8756dc}
+#editableDialog .ec-layer.ec-drop-after{box-shadow:0 3px #8756dc}
+#editableDialog .ec-campaign{position:absolute;z-index:35;right:16px;top:76px;width:min(460px,calc(100% - 32px));max-height:calc(100% - 100px);overflow:auto;padding:22px;background:white;border:1px solid #e5dfed;border-radius:16px;box-shadow:0 16px 64px #33264b33}
+#editableDialog .ec-campaign header{display:flex;align-items:center;justify-content:space-between;gap:12px}#editableDialog .ec-campaign h3{margin:0;font-size:18px}#editableDialog .ec-campaign p{font-size:12px;line-height:1.5;color:#70667b}
+#editableDialog .ec-campaign-choice{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #eee9f3;font-size:12px}#editableDialog .ec-campaign-choice input{width:18px;height:18px;accent-color:#8756dc;flex-shrink:0}#editableDialog .ec-campaign-choice img{width:54px;height:54px;object-fit:contain;background:#f3f0f8}#editableDialog .ec-campaign-choice span{min-width:0;overflow-wrap:anywhere}#editableDialog .ec-campaign-choice small{display:block;margin-top:6px;color:#776c83}
+#editableDialog.ec-preview .ec-main{display:none}#editableDialog .ec-phone-preview{flex:1;min-height:0;overflow:auto;background:#f0edf5;padding:24px 12px;text-align:center}#editableDialog .ec-phone-controls{max-width:480px;margin:0 auto 20px}#editableDialog .ec-phone-controls h3{margin:0 0 12px;font-size:18px}#editableDialog .ec-phone-controls label{display:flex;align-items:center;justify-content:center;gap:12px;font-size:12px}#editableDialog .ec-phone-controls select{width:auto}#editableDialog .ec-phone-controls p,#editableDialog #ecPhoneScale{font-size:12px;line-height:1.5;color:#756b80}#editableDialog .ec-phone{--phone-width:390px;width:calc(var(--phone-width) + 16px);max-width:100%;box-sizing:border-box;margin:auto;padding:8px;background:#24212a;border-radius:34px;box-shadow:0 12px 40px #34254b26}#editableDialog .ec-phone-screen{border-radius:26px;background:white;overflow:hidden;text-align:left;max-height:760px;overflow-y:auto;scrollbar-width:none}#editableDialog .ec-phone-status{display:flex;justify-content:space-between;padding:17px 22px 12px;font-size:12px;font-weight:600}#editableDialog .ec-phone-brand{padding:14px 16px;border-top:1px solid #eee;font-size:14px;font-weight:600}#editableDialog #ecPhoneImage{display:block;width:100%;height:auto}#editableDialog .ec-phone-actions{padding:15px;font-size:23px}#editableDialog [hidden]{display:none!important}
+
+#editableDialog .ec-layer{display:grid}#editableDialog .ec-layer>button[data-layer]{display:flex;align-items:center;gap:9px;text-align:left;min-width:0;padding:4px!important;border:0!important;background:transparent!important}
+#editableDialog .ec-context-group{display:flex;gap:6px}#editableDialog .ec-context-group button{font-size:12px;padding:7px 10px;background:#eee5ff;color:#713bd0;border:1px solid #dac7f4;border-radius:7px;white-space:nowrap}#editableDialog .ec-shortcuts-button{font-size:11px;white-space:nowrap;padding:7px}#editableDialog .ec-shortcuts{position:absolute;z-index:60;right:18px;top:74px;width:min(410px,calc(100% - 36px));max-height:calc(100% - 95px);overflow:auto;border:1px solid #e2d6ed;border-radius:12px;padding:18px;background:white;box-shadow:0 12px 50px #32214726;font-size:12px}#editableDialog .ec-shortcuts>div{display:flex;justify-content:space-between;align-items:center}#editableDialog .ec-shortcuts p{font-size:11px;color:#7b6c88}#editableDialog .ec-shortcuts dl{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:10px;font-size:11px}#editableDialog .ec-shortcuts dt{font-weight:600}#editableDialog .ec-shortcuts dd{margin:0;color:#796b86}#editableDialog #ecAlignScope{font-size:11px;width:100%}#editableDialog [data-ec=tidy-up]{margin-top:12px;background:#f2ebff;color:#713bd0}@media(max-width:700px){#editableDialog .ec-shortcuts-button{font-size:10px;padding:5px}#editableDialog .ec-context-group button{font-size:10px;padding:5px}}
+#editableDialog .ec-element-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0 16px}#editableDialog .ec-element-grid button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;font-size:11px;padding:8px;border:1px solid #e1d8ec;border-radius:8px;background:white;text-transform:none}#editableDialog .ec-element-grid svg{width:24px;height:24px;flex:none}#editableDialog .ec-element-source{font-size:10px;color:#7b6c88;margin:8px 0 16px}#editableDialog .ec-element-style{margin:18px 0;padding:14px 0;border-top:1px solid #e8e0ef;font-size:12px}#editableDialog .ec-element-style>summary{font-weight:600;cursor:pointer}#editableDialog .ec-element-style .ec-field-row{grid-template-columns:1fr 1fr}#editableDialog .ec-element-style input[type=color]{width:100%;height:34px;padding:3px}
+#editableDialog #ecElementBadges button{flex-direction:column;min-height:78px}#editableDialog .ec-badge-preview{display:grid;place-items:center;min-width:65px;min-height:28px;padding:6px;border:1px solid;border-radius:6px;font-size:10px;line-height:1.2}#editableDialog .ec-badge-preview.circle{width:50px;min-width:50px;height:50px;border-radius:50%}#editableDialog .ec-badge-preview.pill{border-radius:40px}#editableDialog #ecElementBadges small{font-size:10px}
+#editableDialog .ec-opacity-button{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;font-size:11px;padding:7px 9px;border:1px solid #e3d9ee;border-radius:7px;background:white}#editableDialog .ec-opacity-panel{position:absolute;z-index:65;width:280px;max-width:calc(100% - 16px);padding:15px;border:1px solid #dfd3ec;border-radius:12px;background:white;box-shadow:0 12px 40px #30203c26}#editableDialog .ec-opacity-panel header{display:flex;align-items:center;justify-content:space-between;font-size:13px;margin-bottom:10px}#editableDialog .ec-opacity-panel label{display:grid;gap:8px;font-size:11px}#editableDialog .ec-opacity-panel label>div{display:flex;align-items:center;gap:12px}#editableDialog .ec-opacity-panel input[type=range]{flex:1;min-width:0;accent-color:#713bd0;padding:0}#editableDialog .ec-opacity-panel input[type=number]{width:68px;min-width:68px;padding:7px;font-size:12px}#editableDialog .ec-opacity-panel p,#editableDialog .ec-opacity-panel small{font-size:10px;line-height:1.5;color:#7c6d89}
+/* Extended workspace tools: rulers and guides live outside the artwork canvas. */
+.ec-layout-overlay{position:absolute;pointer-events:none;overflow:visible;z-index:3}.ec-layout-guide{stroke:#8551c8;stroke-width:2;pointer-events:stroke;cursor:move}.ec-layout-grid{stroke:#79719e;stroke-width:.6;stroke-dasharray:3 4;opacity:.45}.ec-rulers{position:absolute;pointer-events:none;z-index:4}.ec-ruler-x,.ec-ruler-y{position:absolute;background:#faf9fd;color:#686174;font:9px Inter,system-ui,Arial,sans-serif;pointer-events:auto;touch-action:none;user-select:none;overflow:hidden}.ec-ruler-x{top:-20px;left:0;height:20px;width:100%;cursor:col-resize}.ec-ruler-y{top:0;left:-22px;width:22px;height:100%;cursor:row-resize}.ec-ruler-x span{position:absolute;top:0;border-left:1px solid #bbb4c7;padding:2px}.ec-ruler-y span{position:absolute;left:0;border-top:1px solid #bbb4c7;writing-mode:vertical-rl;padding:2px}.ec-grid-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ec-workspace-settings label,.ec-workspace-settings details>div{margin-top:10px}.ec-workspace-settings input[type=number]{width:100%}.ec-guide-create{display:flex;align-items:center;gap:5px;margin:6px 0}.ec-guide-create input{width:75px!important;min-width:0}.ec-guide-create span{flex:1}.ec-search-icons button{min-width:0}.ec-search-icons span{overflow:hidden;text-overflow:ellipsis;max-width:90px;font-size:10px}.ec-search-icons svg{width:30px;height:30px}.ec-search-icons{max-height:360px;overflow:auto}[data-layout-proposals] figure{margin:12px 0;border:1px solid #e7e1ed;padding:8px;border-radius:8px}[data-layout-proposals] img{width:100%;max-height:220px;object-fit:contain}[data-share-result]{display:block;overflow-wrap:anywhere}[data-share-result] input{width:100%}.ec-preview .ec-rulers,.ec-preview .ec-layout-overlay{display:none}
+.ec-header-share{position:relative;flex:none}.ec-header-share>summary{list-style:none;cursor:pointer;border:1px solid #e2dced;border-radius:9px;padding:12px 18px;font-size:13px;font-weight:600}.ec-header-share>summary::-webkit-details-marker{display:none}.ec-header-share>.ec-section{position:absolute;top:calc(100% + 10px);right:0;width:min(340px,85vw);max-height:75vh;overflow:auto;background:white;border:1px solid #e4deec;border-radius:14px;padding:20px;box-shadow:0 12px 35px #24163824;z-index:100}.ec-header-share:not([open])>.ec-section{display:none}#ecDownloadMenu h3 .context-help{display:none!important}

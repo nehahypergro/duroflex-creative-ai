@@ -1,0 +1,178 @@
+/* Shared visual language. Synced to the existing served stylesheets by
+   scripts/sync-visual-theme.js; no application restart is required. */
+:root {
+  color-scheme: light;
+  --page: #FFFFFF;
+  --paper: #FFFFFF;
+  --ink: #242139;
+  --muted: #69657D;
+  --line: #E8E7EF;
+  --purple: #6938D3;
+  --purple-hover: #5526B8;
+  --focus: #8052DC;
+  --purple-soft: #F6F2FF;
+  --pink: #FFF2F7;
+  --tone-lavender: #F6F2FF;
+  --tone-blush: #FFF2F7;
+  --tone-blue: #F0F7FF;
+  --tone-mint: #EFF9F4;
+  --tone-peach: #FFF7ED;
+  --tone-neutral: #F7F6FA;
+  --text-lavender: #6944A7;
+  --text-blush: #934B73;
+  --text-blue: #426C9C;
+  --text-mint: #316C54;
+  --text-peach: #8A5B29;
+  --danger: #A4253C;
+  --radius: 12px;
+  --shadow: 0 12px 40px #2421390D;
+  --plot-lavender: #A48BD8;
+  --plot-blush: #DEA3C0;
+  --plot-blue: #96B7DF;
+  --plot-mint: #91C6AE;
+  --plot-peach: #DFB98D;
+  --plot-neutral: #B0AABF;
+  background: var(--page);
+  color: var(--ink);
+}
+body, body.studio-preview, .app-shell, .app-sidebar, .app-header,
+.task-panel, dialog, #assignmentDialog, #detail {
+  background: var(--paper);
+  color: var(--ink);
+}
+body { accent-color: var(--purple); }
+.app-header, .app-sidebar, .brand-switch, .sidebar-footer,
+.account-menu, .workspace-search { border-color: var(--line); }
+.workspace-search, .brand-switch { background: var(--tone-neutral); }
+.wordmark, .wordmark .nav-label { color: var(--ink); }
+.sidebar-link.active, .sidebar-link[aria-current=page],
+#tabs button[aria-current], .account-avatar {
+  background: var(--tone-lavender); color: var(--purple);
+}
+.icon { stroke-width: 1.8; }
+.button.primary, button.primary {
+  background: var(--purple); border-color: var(--purple); color: #FFFFFF;
+  border-radius: 8px; box-shadow: 0 2px 6px #6938D312;
+}
+.button.primary:hover:not(:disabled), button.primary:hover:not(:disabled) {
+  background: var(--purple-hover); border-color: var(--purple-hover); color: #FFFFFF;
+}
+.button.secondary, button.secondary {
+  background: #FFFFFF; border: 1px solid var(--line); color: var(--ink); border-radius: 8px;
+}
+.button.secondary:hover:not(:disabled) { background: var(--tone-neutral); border-color: #C5BCD7; }
+.text-button, .button.text-button, .intake-add { color: var(--purple); }
+.button.soft, .segmented button[aria-pressed=true] { background: var(--tone-lavender); color: var(--purple); }
+input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]),
+textarea, select, .studio-select-trigger { border-color: var(--line); border-radius: 8px; color: var(--ink); }
+.studio-select-menu, .account-menu, dialog { background: #FFFFFF; border-color: var(--line); border-radius: 12px; }
+.studio-select-option[aria-selected=true], .studio-choice-pill[aria-pressed=true],
+.audience-chip[aria-pressed=true] { background: var(--tone-lavender); color: var(--purple); }
+
+/* Shared shell and cards: colour describes meaning, not the whole page. */
+.creation-hero { background: linear-gradient(115deg, var(--tone-lavender), var(--tone-blue) 65%, var(--tone-blush)); }
+.studio-flow[data-flow-view=brief] > .flow-header { background: linear-gradient(110deg, #EEE4FF 0%, #FFF0F7 52%, #EAF5FF 100%); border-color: #E4D9F5; border-radius: 12px; }
+.studio-flow[data-flow-view=brief] .origin-default { display: none; }
+.audience-legend { display: inline-flex; align-items: center; gap: 9px; }
+.form-section, .brief-essentials, .brand-profile, .brand-guidance, .assignment-selector,
+.campaign-asset, .product-picker-card, .tool-card, .panel, .metric,
+.executive-grid .panel, .executive-metric, .peopleform, .library-manage-card {
+  background: #FFFFFF; border-color: var(--line); border-radius: 12px;
+}
+.brief-onepage .audience-choices, .brief-onepage .intake-rtbs,
+.brief-onepage .communication-goal, .brief-onepage .field {
+  background: #FFFFFF; border-color: var(--line);
+}
+.assignment-submit-bar, #assignmentStatus { background: var(--tone-lavender); border-color: var(--line); }
+.flow-step, .flow-steps > * { border-color: var(--line); }
+.flow-step.active { background: var(--tone-lavender); color: var(--purple); }
+.value-origin { background: var(--tone-neutral); color: var(--muted); }
+.origin-brief { background: var(--tone-blush); color: var(--text-blush); }
+.origin-library { background: var(--tone-blue); color: var(--text-blue); }
+.origin-suggested, .origin-manual { background: var(--tone-lavender); color: var(--text-lavender); }
+.origin-missing { background: var(--tone-peach); color: var(--text-peach); }
+.rtb-count { background: var(--tone-mint); color: var(--text-mint); }
+.rtb-count:empty { display: none; }
+.status.purple, .stage-draft { background: var(--tone-blush); color: var(--text-blush); }
+.status.blue, .stage-creating, .running, .preparing { background: var(--tone-lavender); color: var(--text-lavender); }
+.status.green, .stage-ready, .finished, .health-ok { background: var(--tone-mint); color: var(--text-mint); }
+.status.amber, .stage-attention, .partial, .needs-input, .health-attention { background: var(--tone-peach); color: var(--text-peach); }
+.health-unknown, .health-idle { background: var(--tone-neutral); color: var(--muted); }
+.health-observed { background: var(--tone-blue); color: var(--text-blue); }
+/* Validation remains red; an unspecified optional value is never an error. */
+.status.red, .failed, .notice.error, #notice.error { background: #FFF0F2; color: var(--danger); }
+
+/* Compact outlined section cues, with readable foregrounds on pale tiles. */
+.section-cue, .assignment-section-icon {
+  display: inline-flex; flex: 0 0 30px; width: 30px; height: 30px;
+  align-items: center; justify-content: center; border-radius: 9px;
+  background: var(--tone-lavender); color: var(--text-lavender);
+}
+.section-cue .icon, .assignment-section-icon .icon { width: 18px; height: 18px; }
+.cue-blush { background: var(--tone-blush); color: var(--text-blush); }
+.cue-blue { background: var(--tone-blue); color: var(--text-blue); }
+.cue-mint { background: var(--tone-mint); color: var(--text-mint); }
+.cue-peach { background: var(--tone-peach); color: var(--text-peach); }
+.rtb-heading h3, .communication-heading, .brief-review-section h3,
+.assignment-brief label.field > span:first-child {
+  display: flex; align-items: center; gap: 9px;
+}
+.communication-heading { margin-bottom: 10px; }
+.brief-onepage .assignment-section-heading .assignment-section-icon { display: inline-flex; background: var(--tone-blush); color: var(--text-blush); }
+.assignment-section-heading { gap: 9px; }
+.brand-guidance .guidance-icon { background: var(--tone-blue); color: var(--text-blue); border-radius: 9px; }
+.brand-guidance h4, .brand-guidance h3 { color: var(--ink); }
+
+/* Brief confirmation reads as a document, not another intake form. */
+.brief-review-section { border-color: var(--line); padding: 18px 0; }
+.brief-review-section h3 { color: var(--ink); gap: 10px; }
+.brief-review-section .text-button { display: inline-flex; align-items: center; gap: 5px; color: var(--purple); }
+.brief-review-section .text-button .icon { width: 14px; height: 14px; }
+.brief-review-facts .review-unspecified { background: var(--tone-peach); color: var(--text-peach); border-radius: 8px; padding: 5px 9px; }
+.brief-review-features { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+.brief-review-features li { background: var(--tone-lavender); color: var(--text-lavender); border-radius: 8px; padding: 6px 10px; font-size: 13px; }
+.brief-review-assets article { background: #FFFFFF; border-color: var(--line); border-radius: 12px; }
+.brief-review-dialog .review-total { background: var(--tone-blush); color: var(--text-blush); padding: 9px 12px; border-radius: 8px; }
+
+/* Admin uses the same surfaces and semantic status colours as Studio. */
+#tabs { background: #FFFFFF; border-color: var(--line); }
+#tabs button svg { stroke-width: 1.8; }
+.analytics-filters, .filter-area, pre, .journey-summary > div { background: var(--tone-neutral); border-color: var(--line); }
+.executive-action-grid article { background: #FFFFFF; border-color: var(--line); }
+.executive-metric.purple { color: var(--text-lavender); }
+.executive-metric.green { color: var(--text-mint); }
+.executive-metric.rose { color: var(--text-peach); }
+.executive-metric.blue { color: var(--text-blue); }
+.executive-metric > span, .executive-grid h2, #pageTitle { color: var(--ink); }
+.executive-metric small, .executive-grid .hint, .executive-basis { color: var(--muted); }
+.funnel-steps > button, .executive-request-list button { background: var(--tone-lavender); color: var(--ink); }
+.funnel-steps > button:hover { background: #EDE5FC; }
+.funnel-track { background: var(--tone-neutral); }
+.funnel-track i { background: var(--plot-lavender); }
+.funnel-track rect:first-child { fill: var(--tone-neutral); }
+.funnel-track rect:last-child { fill: var(--plot-lavender); }
+.analytics-chart { --chart-ink: var(--plot-lavender); --chart-secondary: var(--plot-blue); --chart-track: var(--tone-neutral); }
+.chart-primary { background: var(--plot-lavender); }
+.chart-secondary { background: var(--plot-blue); }
+.dot-ready { background: var(--plot-mint); }
+.dot-creating { background: var(--plot-lavender); }
+.dot-attention { background: var(--plot-peach); }
+.dot-draft { background: var(--plot-blush); }
+.analytics-warning { background: var(--tone-peach); color: var(--text-peach); border-color: #EDDBBF; }
+
+/* Editor chrome only: never recolour artwork, canvas objects or brand assets. */
+#editableDialog {
+  --ec-ink: #242139; --ec-muted: #69657D; --ec-line: #E8E7EF;
+  --ec-soft: #F6F2FF; --ec-ground: #F7F6FA;
+  background: #FFFFFF; color: var(--ec-ink);
+}
+#editableDialog .ec-header, #editableDialog .ec-side, #editableDialog .ec-tabs,
+#editableDialog .ec-toolbar, #editableDialog .ec-footer { background: #FFFFFF; border-color: var(--ec-line); }
+#editableDialog .ec-stage { background: var(--ec-ground); }
+#editableDialog .ec-primary { background: var(--purple); border-color: var(--purple); color: #FFFFFF; }
+#editableDialog .ec-primary:hover:not(:disabled) { background: var(--purple-hover); border-color: var(--purple-hover); color: #FFFFFF; }
+#editableDialog .ec-tabs button[aria-pressed=true] { background: var(--tone-lavender)!important; color: var(--purple)!important; }
+#editableDialog .ec-tabs svg { width: 20px; height: 20px; stroke-width: 1.8; }
+#editableDialog .ec-layer.active { background: var(--tone-lavender); border-color: #C1A9E9; }
+#editableDialog .ec-layer-icon { background: var(--tone-lavender); color: var(--text-lavender); }
+#editableDialog .ec-guide-controls input { accent-color: var(--purple)!important; }

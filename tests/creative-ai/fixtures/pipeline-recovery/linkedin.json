@@ -1,0 +1,158 @@
+{
+  "provenance": {
+    "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+    "jobId": "creative-bee0c4e7-d178-4d9d-84d5-d18ec9e00694",
+    "issue": "Body and product markings incorrectly assigned to campaign fields"
+  },
+  "fields": [
+    {
+      "text": "Two firmness options. One simple flip.",
+      "role": "headline",
+      "proofFactIds": [
+        "sku-fact-6",
+        "sku-fact-7"
+      ],
+      "requirement": "optional",
+      "id": "copy-1",
+      "delivery": "embedded",
+      "nativeFieldId": "none",
+      "locked": false
+    },
+    {
+      "text": "Reversible latex topper: firm on one side, medium firm on the other. Flip to switch.",
+      "role": "supporting-copy",
+      "proofFactIds": [
+        "sku-fact-6",
+        "sku-fact-7"
+      ],
+      "requirement": "optional",
+      "id": "copy-2",
+      "delivery": "embedded",
+      "nativeFieldId": "none",
+      "locked": false
+    }
+  ],
+  "doc": {
+    "canvas": {
+      "width": 1200,
+      "height": 1200,
+      "sourceStatus": "user-specified",
+      "ruleIds": [
+        "custom:studio-linkedin-square-canvas"
+      ]
+    },
+    "objects": [
+      {
+        "fieldId": "copy-1",
+        "left": 48,
+        "top": 72,
+        "width": 936,
+        "height": 444,
+        "fontSize": 117,
+        "role": "headline"
+      },
+      {
+        "fieldId": "copy-2",
+        "left": 48,
+        "top": 528,
+        "width": 1104,
+        "height": 396,
+        "fontSize": 78,
+        "role": "supporting-copy"
+      }
+    ],
+    "protectedRegions": [
+      {
+        "id": "product-mattress",
+        "kind": "product",
+        "left": 84.00000000000001,
+        "top": 948,
+        "width": 1080,
+        "height": 228,
+        "evidence": "Envelope for the complete visible mattress silhouette, including its edges and markings, framed across the lower band."
+      }
+    ]
+  },
+  "rows": [
+    {
+      "box": {
+        "height": 0.08333333333333337,
+        "width": 0.6666666666666667,
+        "x": 0.07166666842105267,
+        "y": 0.06833333328947366
+      },
+      "confidence": 1,
+      "text": "Two firmness"
+    },
+    {
+      "box": {
+        "height": 0.11848548889160149,
+        "width": 0.6309064229329427,
+        "x": 0.0728801204588899,
+        "y": 0.15909058927684627
+      },
+      "confidence": 1,
+      "text": "options. One"
+    },
+    {
+      "box": {
+        "height": 0.10499999999999998,
+        "width": 0.5549999999999999,
+        "x": 0.07166666851666667,
+        "y": 0.25833333334999997
+      },
+      "confidence": 1,
+      "text": "simple flip."
+    },
+    {
+      "box": {
+        "height": 0.05166666666666675,
+        "width": 0.7033333333333334,
+        "x": 0.07499999609259267,
+        "y": 0.38166666665740734
+      },
+      "confidence": 1,
+      "text": "Reversible latex topper: firm"
+    },
+    {
+      "box": {
+        "height": 0.05499999999999994,
+        "width": 0.6466666666666667,
+        "x": 0.07666666636111108,
+        "y": 0.44333333379166673
+      },
+      "confidence": 1,
+      "text": "on one side, medium firm"
+    },
+    {
+      "box": {
+        "height": 0.053333333333333344,
+        "width": 0.6816666666666666,
+        "x": 0.07499999690151521,
+        "y": 0.5033333334242425
+      },
+      "confidence": 1,
+      "text": "on the other. Flip to switch."
+    },
+    {
+      "box": {
+        "height": 0.015608965555826804,
+        "width": 0.06181195576985676,
+        "x": 0.5515940213432461,
+        "y": 0.6813621839852937
+      },
+      "confidence": 1,
+      "text": "airboost,"
+    },
+    {
+      "box": {
+        "height": 0.023736038208007848,
+        "width": 0.19100728352864582,
+        "x": 0.48120145444806817,
+        "y": 0.7100604573272423
+      },
+      "confidence": 1,
+      "text": "9 DUROFLEX DUROPEDIC"
+    }
+  ]
+}

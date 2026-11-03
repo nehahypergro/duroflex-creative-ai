@@ -1,0 +1,17 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),M=require('../../public/creative-ai/studio-model');
+const text=`Product: Test Mattress\nSKU: EXACT-SKU\nInstagram carousel: 6 cards, portrait 4:5, 1080 x 1350 px.\nInstagram story: 1 image, vertical 9:16, 1080 x 1920 px.\nEmail hero: 1 image, landscape 2:1, 1200 x 600 px. Use one shared image for desktop and mobile.\nOne set per asset.\nLanguage: Hindi\nAge: 30 to 45\nRTBs: Reversible comfort.\nMarkets: Mumbai, Pune\nObjective: Consideration`;
+for(const brandId of ['duroflex','sleepyhead'])test(brandId+' PDF campaign imports multiple scoped assets and exact SKU without replacing manual choices',()=>{
+ const products=[{id:'p',brandId,name:'Test Mattress',sku:'EXACT-SKU',variants:[{id:'v',sku:'EXACT-SKU'},{id:'v2',sku:'OTHER'}]}],d=M.startDraft(brandId,'campaign');d.intakeVersion=2;d.briefDocuments=[{id:'doc',text}];M.applyBriefAutofill(d,{products});
+ assert.deepEqual(d.outputs.map(o=>o.featureId),[9,8,14]);assert.equal(d.outputs[0].slides,6);assert.deepEqual(d.outputs.map(o=>[o.width,o.height]),[[1080,1350],[1080,1920],[1200,600]]);assert.equal(d.variant,'v');assert.equal(d.customerAge,'30–45');assert.equal(d.creativeCount,1);assert.ok(d.outputs.every(o=>o.language==='Hindi'));assert.equal(M.fieldProvenance(d,'outputs').label,'From document');
+ const ids=d.outputs.map(o=>o.id);M.applyBriefAutofill(d,{products});assert.deepEqual(d.outputs.map(o=>o.id),ids);d.outputs[0].slides=4;M.protectBriefField(d,'out:'+ids[0]+':slides');d.briefDocuments[0].text+='\nMessage: Extra';M.applyBriefAutofill(d,{products});assert.equal(d.outputs[0].slides,4);
+ const manual=M.startDraft(brandId,'campaign');manual.intakeVersion=2;manual.outputs=[M.output(1)];M.protectBriefField(manual,'assetType');manual.briefDocuments=[{id:'doc',text}];M.applyBriefAutofill(manual,{products});assert.deepEqual(manual.outputs.map(o=>o.featureId),[1]);
+ const undo=M.startDraft(brandId,'campaign');undo.intakeVersion=2;undo.briefDocuments=[{id:'doc',text}];M.applyBriefAutofill(undo,{products});M.undoBriefAutofill(undo,{products});assert.deepEqual(undo.outputs,[]);
+});
+test('document exclusions do not request QR, contact or promotional fields',()=>{const d={brief:'',briefDocuments:[{text:'Exclusions: Discounts, prices, QR codes and contact details.\nUse saved images.'}]};assert.equal(M.assetValues(M.output(9),d).contactMode,'None');assert.equal(M.assetValues(M.output(9),d).promotionMode,'No');});
+test('saving asset picker changes after document autofill keeps the chosen outputs',()=>{const d=M.startDraft('duroflex','campaign');d.intakeVersion=2;d.briefDocuments=[{id:'doc',text}];M.applyBriefAutofill(d);assert.equal(M.fieldProvenance(d,'out:'+d.outputs[0].id+':slides').label,'From document');d.outputs=[d.outputs[1],M.output(1)];M.protectBriefField(d,'assetType');M.applyBriefAutofill(d);assert.deepEqual(d.outputs.map(o=>o.featureId),[8,1]);});
+for(const brandId of ['duroflex','sleepyhead'])test(brandId+' recognises several campaign assets in one extracted sentence with separate sizes',()=>{
+ const d=M.startDraft(brandId,'campaign');d.intakeVersion=2;
+ d.briefDocuments=[{id:'doc',text:'Create a six-card Instagram carousel, 1080 x 1350 px, an Instagram Story, 1080 x 1920 px, and an email hero, 1200 x 600 px. Language: Hindi.'}];
+ M.applyBriefAutofill(d);assert.deepEqual(d.outputs.map(o=>o.featureId),[9,8,14]);assert.equal(d.outputs[0].slides,6);assert.deepEqual(d.outputs.map(o=>[o.width,o.height]),[[1080,1350],[1080,1920],[1200,600]]);
+});

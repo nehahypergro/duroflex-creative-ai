@@ -44,8 +44,8 @@ test('oversized output cannot be accepted then crash the saved-raster decoder af
  assert.throws(()=>p.generationSize(2001,100),/ratio/);assert.throws(()=>p.generationSize(100,2001),/ratio/);
 });
 test('custom format and multi-format errors reject deterministically before generation',()=>{
- const f=require('../../lib/creative-ai/runtime/output-formats'),base={placementIds:['custom:studio-social-story']};
- for(const value of [{placementIds:[...base.placementIds,...base.placementIds]},{placementIds:['custom:studio-carousel-square'],carouselSlideCount:7},{placementIds:['custom:studio-carousel-square','custom:studio-social-story'],carouselSlideCount:6},{...base,customProfiles:[{id:'custom:studio-social-story'}]},{...base,placementViewing:{foreign:{displayWidthCss:360}}}])assert.throws(()=>f.validate(value));
+ const f=require('../../lib/creative-ai/runtime/output-formats'),base={placementIds:['custom:studio-social-story']};assert.equal(f.validate({placementIds:['custom:studio-carousel-square','custom:studio-social-story'],carouselSlideCount:6}).units,7);
+ for(const value of [{placementIds:[...base.placementIds,...base.placementIds]},{placementIds:['custom:studio-carousel-square'],carouselSlideCount:7},{...base,customProfiles:[{id:'custom:studio-social-story'}]},{...base,placementViewing:{foreign:{displayWidthCss:360}}}])assert.throws(()=>f.validate(value));
 });
 module.exports={samples};
 test('market and other-objective details reach strategy unchanged instead of disappearing',()=>{

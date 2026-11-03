@@ -1911,6 +1911,35 @@
                       "maxItems": 30
                     }
                   }
+                },
+                "unusedBrandFacts": {
+                  "type": "array",
+                  "maxItems": 100,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "factId": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "reason": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1000
+                      },
+                      "avoidance": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 1000
+                      }
+                    },
+                    "required": [
+                      "factId",
+                      "reason",
+                      "avoidance"
+                    ],
+                    "additionalProperties": false
+                  }
                 }
               },
               "required": [
@@ -1952,6 +1981,19 @@
               },
               "minItems": 0,
               "maxItems": 100
+            },
+            "conceptRoutes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "continuity",
+                  "exploration"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 2,
+              "uniqueItems": true
             }
           },
           "required": [
@@ -2837,7 +2879,7 @@
                 ],
                 "additionalProperties": false
               },
-              "minItems": 2,
+              "minItems": 1,
               "maxItems": 2
             },
             "handoff": {
@@ -2898,7 +2940,7 @@
                           "minLength": 1,
                           "maxLength": 100
                         },
-                        "minItems": 2,
+                        "minItems": 1,
                         "maxItems": 2
                       },
                       "packets": {
@@ -3869,7 +3911,7 @@
                   ],
                   "additionalProperties": false
                 },
-                "minItems": 1
+                "minItems": 0
               }
             },
             "required": [
@@ -3879,7 +3921,7 @@
             ],
             "additionalProperties": false
           },
-          "minItems": 2
+          "minItems": 1
         },
         "referenceSources": {
           "type": "array",
@@ -3999,6 +4041,16 @@
             "additionalProperties": false
           },
           "minItems": 0
+        },
+        "activeConceptIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       },
       "required": [
@@ -4175,7 +4227,7 @@
                   ],
                   "additionalProperties": false
                 },
-                "minItems": 1
+                "minItems": 0
               },
               "references": {
                 "type": "array",
@@ -4559,7 +4611,7 @@
             ],
             "additionalProperties": false
           },
-          "minItems": 2
+          "minItems": 1
         },
         "handoff": {
           "type": "object",
@@ -4685,7 +4737,7 @@
                           ],
                           "additionalProperties": false
                         },
-                        "minItems": 1
+                        "minItems": 0
                       }
                     },
                     "required": [
@@ -4695,7 +4747,7 @@
                     ],
                     "additionalProperties": false
                   },
-                  "minItems": 2
+                  "minItems": 1
                 },
                 "lockedRules": {
                   "type": "array",
@@ -4841,7 +4893,7 @@
                           ],
                           "additionalProperties": false
                         },
-                        "minItems": 1
+                        "minItems": 0
                       },
                       "references": {
                         "type": "array",
@@ -5554,7 +5606,7 @@
                         "anyOf": [
                           {
                             "type": "number",
-                            "minimum": 1e-06,
+                            "minimum": 0.000001,
                             "maximum": 100000
                           },
                           {
@@ -5566,7 +5618,7 @@
                         "anyOf": [
                           {
                             "type": "number",
-                            "minimum": 1e-06,
+                            "minimum": 0.000001,
                             "maximum": 100000
                           },
                           {
@@ -5578,7 +5630,7 @@
                         "anyOf": [
                           {
                             "type": "number",
-                            "minimum": 1e-06,
+                            "minimum": 0.000001,
                             "maximum": 100000
                           },
                           {
@@ -5603,7 +5655,7 @@
                                 "anyOf": [
                                   {
                                     "type": "number",
-                                    "minimum": 1e-07,
+                                    "minimum": 1e-7,
                                     "maximum": 254000
                                   },
                                   {
@@ -5615,7 +5667,7 @@
                                 "anyOf": [
                                   {
                                     "type": "number",
-                                    "minimum": 1e-07,
+                                    "minimum": 1e-7,
                                     "maximum": 254000
                                   },
                                   {
@@ -5627,7 +5679,7 @@
                                 "anyOf": [
                                   {
                                     "type": "number",
-                                    "minimum": 1e-07,
+                                    "minimum": 1e-7,
                                     "maximum": 254000
                                   },
                                   {
@@ -5941,6 +5993,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "policyVersion": {
+                "type": "integer",
+                "enum": [
+                  2
+                ]
               }
             }
           }
@@ -5958,7 +6016,7 @@
         ],
         "additionalProperties": false
       },
-      "minItems": 2
+      "minItems": 1
     }
   },
   "required": [

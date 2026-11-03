@@ -189,7 +189,7 @@
                 ],
                 "additionalProperties": false
               },
-              "minItems": 2
+              "minItems": 1
             },
             "placements": {
               "type": "array",
@@ -212,6 +212,19 @@
                 "additionalProperties": false
               },
               "minItems": 1
+            },
+            "conceptRoutes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "continuity",
+                  "exploration"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 2,
+              "uniqueItems": true
             }
           },
           "required": [
@@ -240,7 +253,9 @@
             "art",
             "reconciliation",
             "generation",
-            "review"
+            "review",
+            "pdp-plan",
+            "collection-plan"
           ]
         },
         "handoffId": {
@@ -285,7 +300,8 @@
                 "image",
                 "review",
                 "delivery",
-                "source"
+                "source",
+                "pdp-plan"
               ]
             },
             "version": {

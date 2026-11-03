@@ -17,6 +17,7 @@ function replayEnvelope(saved,output){
 // discard an arbitrary field or change a decision to make the replay pass.
 function migrate(raw,stage,input,notes){
  let out=structuredClone(raw);
+ if(stage==='concepts'&&out.concepts?.unit0&&out.concepts?.unit1){assert.deepEqual(Object.keys(out.concepts).sort(),['unit0','unit1']);out.concepts={continuity:out.concepts.unit0,exploration:out.concepts.unit1};notes.push('Ordinal concept slots → named routes using the historical unit0=continuity, unit1=exploration binding; contents unchanged');}
  if(stage==='reconciliation'){if(out.adjustments.some(u=>u.changes.some(c=>'valueJson' in c)))notes.push('v1 valueJson → typed value');out=require('./replay-handoffs').legacyPatch(out);}
  if(stage==='strategy'){
   out=require('../../lib/creative-ai/runtime/strategy-choice').fromRecorded(out);notes.push('Move the recorded chosen candidate into explicit directionDecision; do not invent missing candidates');

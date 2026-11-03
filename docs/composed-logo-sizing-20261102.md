@@ -1,0 +1,15 @@
+# Approved logo sizing and first-image logo omission
+
+New editable jobs pin composedQualityVersion 7. Older jobs, generated sources, cached requests and frozen documents retain their original behavior.
+
+The failure was upstream geometry: a 240 x 21.945px box for Sleepyhead's 1191 x 219px approved logo rendered at only 119.345px wide because Fabric correctly uses uniform contain scaling. The source asset was correct and unchanged.
+
+The shared planner now receives hash-verified same-brand logo dimensions and alpha-visible bounds. It derives height from requested width and the true aspect ratio. At a pinned CSS viewing width, requested width is expanded as necessary to reach engineering floors of 64px visible width and 12px visible height, excluding transparent padding. These floors are not supplied brand guidelines and do not guarantee trademark readability. Stricter brand guidance and the final visual review remain authoritative. For placements without a pinned CSS width, only aspect-ratio sizing applies; physical print verification remains separate.
+
+Normalization happens before layout validation. Expanded boxes must still fit safe areas and clear copy, products and people; otherwise the existing planning repair/dependency path must recompose. No approved image bytes, colours or proportions change. Fabric's uniform scaling remains unchanged. A final pre-generation check saves hash-bound composed-logo-sizing evidence and rejects any mismatched or undersized box. Frozen documents are never resized to pass.
+
+The first generated image is requested to contain campaign wording but no campaign logo, wordmark, monogram, trademark or placeholder. Source-only art direction replaces the final logo placement treatment with an empty-real-surface instruction. Final logo-specific guideline applications are omitted from that source-only art block; other rules explicitly apply to the later overlay when they mention campaign logos. The original final art specification is preserved. Existing reference filtering excludes campaign logo assets from image attachments. Genuine physical product labels and branding remain protected. The approved campaign logo is added at final composition. Unexpected generated logos still use the existing bounded cleanup check; prompts cannot guarantee perfect model compliance.
+
+Verification: 36 focused tests, 14 real Chrome/OCR composition-flow tests (versions 5, 6, 7 for both brands), zero failed stages in saved Duroflex/Sleepyhead handoff replay. Real approved-asset Fabric replay changes Sleepyhead from 119.345px to 266.642px wide and Duroflex from 135.675px to 292.087px wide at the generic regression box, achieving the 12px visible-height floor at 320 CSS viewing width. Actual rendered and predicted dimensions agree. Scope/hash/padding, collision rejection, no-logo source prompts, frozen preservation and historical-version behavior are covered. No paid generation was performed.
+
+Evidence: work/logo-sizing-20261102/. Prior live outputs and verdicts were not modified.

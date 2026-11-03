@@ -1,0 +1,9 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const V=require('../../lib/creative-ai/runtime/client-visibility');
+const L=require('../../public/admin/labels');
+test('confirmed test markers stay out of client work for both brands',()=>{for(const brandId of ['duroflex','sleepyhead']){assert.equal(V.reason({intake:{brandId,requestKey:'static-option1-20261027-case'}}),'Internal batch test');assert.equal(V.reason({intake:{brandId,requestKey:'strategy-live-20261029-case'}}),'Internal batch test');assert.equal(V.reason({intake:{brandId,brief:'Test a mattress for everyday comfort'}}),null);assert.equal(V.reason({intake:{brandId,brief:'Create a testimonial card'}}),null);assert.equal(V.reason({intake:{brandId},clientVisibility:'internal'}),'Marked as internal work');}});
+test('editor audit marker is identified without changing artwork',()=>assert.equal(V.hasAuditMarker({objects:[{text:'UX audit tab A'}]}),true));
+test('admin labels humanize formats, options and metrics without exposing opaque IDs',()=>{assert.equal(L.option('continuity'),'Option 1');assert.equal(L.option('exploration'),'Option 2');assert.equal(L.text('ready-but-not-submitted'),'Ready, not submitted');assert.equal(L.text('no-improvement'),'No improvement recorded');assert.equal(L.text('custom_recipe-technology-visual-1080x1080'),'Technology visual · 1080 × 1080');assert.equal(L.text('creative-01234567-aaaa-bbbb-cccc-012345678901'),'Saved request');assert.equal(L.text('costPerHumanApproved'),'Cost per human-approved image');});
+
+test('channel and account labels retain readable names',()=>{assert.equal(L.text('linkedIn-image-square'),'LinkedIn image square');assert.equal(L.text('whatsApp-card'),'WhatsApp card');assert.equal(L.text('youTube-thumbnail'),'YouTube thumbnail');assert.equal(L.text('Legacy / system'),'Unassigned / system');});

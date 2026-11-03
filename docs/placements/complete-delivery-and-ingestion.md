@@ -70,3 +70,21 @@ All 348 regression tests passed (13 handoff tests). Verification uses synthetic 
 The live studio also built a new static package from both existing Meadow story outputs. They remain unchanged. See `work/complete-handoff-browser.png` and the saved project's Delivery & production panel.
 
 Publisher sources: [Google RDA](https://support.google.com/google-ads/answer/17090561), [Demand Gen](https://support.google.com/google-ads/answer/17091672), [Performance Max](https://support.google.com/google-ads/answer/17091269), [Mailchimp image guidance](https://templates.mailchimp.com/design/images/). Existing placement research and the static guidebook retain the broader source inventory.
+
+## Current print proofs and supplied template geometry — 24 October 2026
+
+In Studio's image download options, **Download current print proof** rebuilds the selected print option from current saved artwork, including selected refinement versions and matching manual canvas edits. The advanced Print & outdoor handoff also has **Build current proof**. Neither action calls a production model. New PDFs use immutable names; prior proofs remain in the job's proof history. Unchanged inputs reuse the current proof. A source change during rebuilding rejects only that rebuild, leaving other work and historical proofs intact.
+
+Every rebuilt face records its version/revision and image hash. Page order follows the saved print-set positions. The PDF includes pinned trim and bleed boxes, plus a separate calibrated actual-size sample/tile PDF and a file-check report. Saved edits do not inherit the original artwork approval. Unknown original pixel resolution remains unknown; no upsampling claim is made. A changed canvas shape must be corrected or its print brief updated rather than stretching the image silently. CMYK handoff resolves these same selected image bytes through the saved operator ICC.
+
+The printer requirements form now accepts optional structured geometry in millimetres, measured from the top-left of the finished flat face:
+
+- Fold positions such as `x:98; x:199`; `y` denotes horizontal folds.
+- Cutting outline: one `x,y` vertex per line, without repeating the first point. This supports straight segments, not automatically extracted PDF/SVG curves or certified cutting paths.
+- Mounting exclusions: one `label,x,y,width,height` rectangle per line.
+
+Geometry validation checks numeric bounds, repeated/crossing cutting points, fold positions, trim dimensions and mounting rectangles. Fold positions are compared with the pinned panel widths. For a shared template, the handoff includes `template-checks.json` and a separate inspection-only overlay PDF (magenta cutting outline, blue folds, orange exclusions). The overlay never replaces the production master. Its geometry is user-supplied; attaching a source drawing does not automatically extract or certify its geometry. Distinct face-specific or curved specialist dielines require a dedicated production layout.
+
+Synthetic content rectangles can test intersection handling before generation. Flattened artwork does not supply trustworthy logo/text bounds automatically, so actual artwork clearance remains pending visual inspection. Stock, installed readability, final colour, finishing and printer/RIP acceptance require real evidence. These pending delivery checks do not stop independent image generation.
+
+Verification: both-brand isolated fixtures, concurrent rebuild and edit-during-save cases, latest selected refinement sources, exact downloaded PDF hashes, structured printer form, RGB/CMYK conversion, page order/boxes and sample PDF rendering. Evidence is in `work/print-proof-flow-20261024/`. No live creative generation was used. Full catalogues and batch store/city/language production remain outside this pass.

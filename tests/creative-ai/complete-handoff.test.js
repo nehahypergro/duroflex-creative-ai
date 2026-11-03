@@ -59,3 +59,20 @@ test('native URL arrays reject unsafe schemes and publisher-weighted counts neve
  const accepted=await delivery.create(f.runtime,f.job.id,{brandName:f.a.name,kind:'native',profileId:'linkedin-carousel',assets:[],fields:{destinationUrls:['http://example.com/product']}});assert.equal(accepted.checks.find(c=>c.id==='linkedin-carousel-url').status,'pass');
  const c=delivery.contracts().find(c=>c.id==='x-standalone'),checks=delivery.nativeChecks(c,{post:'Short post'},[]);assert.equal(checks.find(c=>c.id==='x-post').status,'pending');
 }));
+for(const brandName of ['Duroflex','Sleepyhead'])test(brandName+': website package adds real responsive WebP files without changing originals or review flags',()=>fixture(async f=>{
+ if(brandName==='Sleepyhead'){await f.runtime.store.update(f.job.id,j=>{j.intake.brandId=f.b.id;j.intake.brandUrl=f.b.brandUrl;return j;});}
+ const choice=await image(f,1920,640);await f.runtime.store.update(f.job.id,j=>{j.results[0].ready=false;j.results[0].qualityVerified=false;return j;});
+ const before=await f.runtime.store.read(f.job.id),pack=await delivery.create(f.runtime,f.job.id,{brandName,kind:'static',webOptimized:true,assets:[choice]}),entries=unzip(await fs.readFile(path.join(f.runtime.store.dir(f.job.id),pack.downloadUrl.split('/').pop())));
+ assert.ok(entries.has('website-delivery.json'));const report=JSON.parse(entries.get('website-delivery.json'));assert.equal(report.integrationStatus,'not-verified');
+ assert.equal(delivery.digest(entries.get('assets/01-static-continuity-hero-0.png')),choice.artifactHash);
+ assert.ok(report.assets[0].variants.length>1);for(const v of report.assets[0].variants){const b=entries.get(v.file),m=await sharp(b).metadata();assert.equal(m.format,'webp');assert.equal(m.width,v.width);assert.equal(m.height,v.height);assert.equal(v.sourceHash,choice.artifactHash);assert.equal(v.sha256,delivery.digest(b));assert.equal(v.bytes,b.length);assert.ok(m.width<=1920);assert.ok(Math.abs(m.width/m.height-3)<.02);}
+ assert.equal(pack.status,'checks-pending');assert.deepEqual((await f.runtime.store.read(f.job.id)).results,before.results);assert.deepEqual((await f.runtime.store.read(f.job.id)).budget,before.budget);
+ await assert.rejects(()=>delivery.create(f.runtime,f.job.id,{brandName,kind:'email',webOptimized:true,assets:[choice],fields:email}),/website|static/i);
+}));
+test('a saved canvas edit prevents the old print proof being offered as the current manufacturing handoff',()=>fixture(async f=>{
+ const m=await printFixture(f),v=await production.saveVendor(f.runtime,f.a.id,{brandName:f.a.name,spec:vendor}),job=await f.runtime.store.read(f.job.id);
+ await f.runtime.store.save(f.job.id,'editable-continuity-print-page.json',{jobId:f.job.id,route:'continuity',placementId:'print-page',revision:1,document:{},original:{},ocr:{sourceImageUrl:job.results[0].imageUrl}});
+ await assert.rejects(()=>production.create(f.runtime,f.job.id,{brandName:f.a.name,route:m.route,formatId:m.formatId,masterPdfHash:m.pdfHash,vendorId:v.id}),/saved edits|rebuild/i);
+ assert.equal((await production.currentProofs(f.runtime,job))[0].complete,false);
+ assert.equal((await f.runtime.store.read(f.job.id)).printProofs[0].pdfHash,m.pdfHash);
+}));

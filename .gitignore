@@ -18,3 +18,7 @@ clone-verification.json
 *.pending
 __pycache__/
 *.pyc
+
+# Local QA captures and disposable browser/test workspaces.
+qa/
+tmp/

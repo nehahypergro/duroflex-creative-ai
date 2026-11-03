@@ -158,7 +158,7 @@
               ],
               "additionalProperties": false
             },
-            "minItems": 1
+            "minItems": 0
           },
           "references": {
             "type": "array",
@@ -542,7 +542,7 @@
         ],
         "additionalProperties": false
       },
-      "minItems": 2
+      "minItems": 1
     }
   },
   "required": [

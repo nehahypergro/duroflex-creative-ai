@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "approvals": [
+    {
+      "version": 1,
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "officialHost": "www.duroflexworld.com",
+      "status": "client-approved",
+      "scope": "explicit-product-certifications",
+      "approvedAt": "2026-10-24T12:47:06.923940+00:00",
+      "basis": "Explicit voice instruction, 24 October 2026: the selected official brand website is final source proof for exact-SKU technology, CGI, construction, layers/foam/springs, certifications, warranty and product claims across all formats. Do not require separate independent verification or source reapproval. Preserve actual wording, conditions and qualifiers; artwork checks remain separate.",
+      "independentVerification": false,
+      "previousApproval": {
+        "version": 1,
+        "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+        "officialHost": "www.duroflexworld.com",
+        "status": "client-approved",
+        "scope": "explicit-product-certifications",
+        "approvedAt": "2026-10-23T14:04:52.680349+00:00",
+        "basis": "User instruction, 23 October 2026: let the website be the truth of all certificates and verifications; assume approved and final. Applied to the current Duroflex assignment.",
+        "independentVerification": false
+      },
+      "productSourcePolicyVersion": 2,
+      "productSourceScope": "explicit-product-website-statements"
+    },
+    {
+      "version": 1,
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "officialHost": "mysleepyhead.com",
+      "status": "client-approved",
+      "scope": "explicit-product-certifications",
+      "approvedAt": "2026-10-24T12:47:06.924040+00:00",
+      "basis": "Explicit voice instruction, 24 October 2026: the selected official brand website is final source proof for exact-SKU technology, CGI, construction, layers/foam/springs, certifications, warranty and product claims across all formats. Do not require separate independent verification or source reapproval. Preserve actual wording, conditions and qualifiers; artwork checks remain separate.",
+      "independentVerification": false,
+      "previousApproval": {
+        "version": 1,
+        "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+        "officialHost": "mysleepyhead.com",
+        "status": "client-approved",
+        "scope": "explicit-product-certifications",
+        "approvedAt": "2026-10-23T16:50:04.362Z",
+        "basis": "User-reviewed fix plan, 23 October 2026, F67 and F28: website is final proof for dimensions, certifications and product information; both-brand scope. Applies only to exact-SKU Sleepyhead official source statements.",
+        "independentVerification": false
+      },
+      "productSourcePolicyVersion": 2,
+      "productSourceScope": "explicit-product-website-statements"
+    }
+  ]
+}

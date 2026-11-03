@@ -1,0 +1,79 @@
+CREATIVE AI — CLIENT ERROR CODE MANUAL
+Version 1 · 3 November 2026
+
+The code identifies the failure family. The CAI reference identifies one occurrence.
+HTTP status remains separate: a successful job-status GET can return 200 for a failed job.
+
+CA-101 — Brief validation
+Client message: Some brief information needs correcting.
+Support action: Review the indicated input; do not invent missing facts.
+
+CA-102 — Product identity
+Client message: We couldn’t match the selected product or variant.
+Support action: Verify the saved product and variant.
+
+CA-201 — Service unavailable
+Client message: The service is temporarily unavailable.
+Support action: Retrieve an accepted request before any resubmission.
+
+CA-202 — Request timeout
+Client message: The request did not finish in time.
+Support action: Inspect saved response IDs and checkpoints; timeout does not prove no charge.
+
+CA-203 — Editable text preparation
+Client message: We couldn’t prepare the editable text.
+Support action: Inspect saved copy, region assignment and font metrics; preserve source artwork.
+
+CA-204 — Output validation
+Client message: The output did not pass a required check.
+Support action: Inspect the affected criterion; never mark approved automatically.
+
+CA-301 — Save failure
+Client message: We couldn’t save this change.
+Support action: Preserve browser draft; check disk and revision before retry.
+
+CA-302 — Download preparation
+Client message: We couldn’t prepare this download.
+Support action: Check saved revision, export and artifact availability.
+
+CA-401 — Sign-in required
+Client message: Please sign in again.
+Support action: Restore the existing session.
+
+CA-403 — Access denied
+Client message: You don’t have access to this action.
+Support action: Check workspace access; do not bypass brand boundaries.
+
+CA-404 — Not found
+Client message: This project or asset couldn’t be found.
+Support action: Check resource identity and brand; never expose another workspace.
+
+CA-409 — Revision or request conflict
+Client message: This action conflicts with a saved change or request.
+Support action: Reload latest revision or inspect existing request; do not overwrite.
+
+CA-429 — Rate limit
+Client message: The service is receiving too many requests.
+Support action: Respect Retry-After and existing bounded retry policy.
+
+CA-507 — Storage full
+Client message: There is not enough storage to finish this action.
+Support action: Free space without deleting historical evidence.
+
+CA-900 — Unexpected failure
+Client message: We couldn’t complete this action.
+Support action: Inspect incident record; classify only with evidence.
+
+LOOKUP
+Find output/creative-ai/incidents/<CAI-reference>.json on the server.
+Records include HTTP status, internal code, route, method, timestamp and reason.
+Do not share internal incident files with clients without reviewing their contents.
+
+MAINTENANCE
+Canonical catalogue: config/client-error-codes.json. Never reuse or renumber a published code. Add new codes and update classifier tests. Do not classify technical failures by searching message words. Unknown failures use CA-900.
+
+CURRENT COVERAGE
+Creative AI HTTP error responses and propagated Studio/editor request failures. Editor errors include Copy details. Historical failed jobs are not rewritten. Pure browser exceptions, authentication middleware outside Creative AI, and historical asynchronous job failures are not yet fully instrumented. CA-203/204 describe reserved families; emit them only when a structured technical failure identifies them.
+
+ROLLOUT
+Backend requires safe server restart; no services restarted by this change. Incident write failure omits reference and sets diagnosticRecorded=false. Do not claim an incident was saved when storage failed. No retry policy or paid dispatch authorization is changed.

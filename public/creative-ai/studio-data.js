@@ -5,7 +5,7 @@ window.StudioData = (() => {
     if(signal?.aborted)abort();else signal?.addEventListener('abort',abort,{once:true});
     const timer=setTimeout(abort,20000);
     try{const response=await fetch('/creative-ai/api/'+path,{cache:'no-store',signal:controller.signal});
-      if(!response.ok)throw Error('Could not load saved work. Retry when the studio is available.');
+      if(!response.ok){const info=await response.json().catch(()=>({}));throw Object.assign(Error('Could not load saved work. Retry when the studio is available.'),{status:response.status,clientCode:info.clientCode,reference:info.reference});}
       return await response.json();
     }finally{clearTimeout(timer);signal?.removeEventListener('abort',abort);}
   }
@@ -20,7 +20,7 @@ window.StudioData = (() => {
     }));
     return result;
   }
-  async function post(path,body) {const response=await fetch('/creative-ai/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const value=await response.json();if(!response.ok)throw Error(value.error||'The request could not finish. Your saved brief is preserved.');return value;}
+  async function post(path,body) {const response=await fetch('/creative-ai/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const value=await response.json();if(!response.ok){const error=Error(value.error||'The request could not finish. Your saved brief is preserved.');error.status=response.status;error.clientCode=value.clientCode;error.reference=value.reference;throw error;}return value;}
   async function designDetails(job,id,signal){
     if(!job.results.some(r=>r.imageUrl))return;
     try{const data=await get('jobs/'+encodeURIComponent(id)+'/details',{signal});if(!Array.isArray(data.units))throw Error('Saved design details are unavailable.');job.designDetails=data;}
@@ -28,30 +28,32 @@ window.StudioData = (() => {
   }
   const cache=new Map(),workspaces=new Map(),workspaceLoads=new Map();
   let version=0;
-  const diskPrefix='creative-ai-workspace-v1:';
-  function disk(action,key,value){return new Promise(resolve=>{try{const request=indexedDB.open('creative-ai-workspace-cache',1);request.onupgradeneeded=()=>request.result.createObjectStore('snapshots');request.onerror=()=>resolve(null);request.onsuccess=()=>{const db=request.result,tx=db.transaction('snapshots',action==='get'?'readonly':'readwrite'),store=tx.objectStore('snapshots'),r=action==='get'?store.get(key):action==='put'?store.put(value,key):action==='delete'?store.delete(key):store.clear();r.onsuccess=()=>resolve(r.result);r.onerror=()=>resolve(null);tx.oncomplete=()=>db.close();};}catch{resolve(null);}});}
-  function persist(brandId,snapshot){disk('put',brandId,{...snapshot,brandId});try{const text=JSON.stringify({...snapshot,brandId});if(text.length<3500000)sessionStorage.setItem(diskPrefix+brandId,text);}catch{/* Storage is optional; live loading remains available. */}}
-  function forget(brandId){disk('delete',brandId);try{sessionStorage.removeItem(diskPrefix+brandId);}catch{}}
+  const diskPrefix='creative-ai-workspace-v2:';
+  function disk(action,key,value){return new Promise(done=>{let finished=false;const timer=setTimeout(()=>resolve(null),1500),resolve=value=>{if(finished)return;finished=true;clearTimeout(timer);done(value);};try{const request=indexedDB.open(window.CreativeAccount?.cacheName||'creative-ai-workspace-cache',1);request.onupgradeneeded=()=>request.result.createObjectStore('snapshots');request.onerror=()=>resolve(null);request.onblocked=()=>resolve(null);request.onsuccess=()=>{const db=request.result;if(finished){db.close();return;}const tx=db.transaction('snapshots',action==='get'?'readonly':'readwrite'),store=tx.objectStore('snapshots'),r=action==='get'?store.get(key):action==='put'?store.put(value,key):action==='delete'?store.delete(key):store.clear();r.onsuccess=()=>resolve(r.result);r.onerror=()=>resolve(null);tx.oncomplete=()=>db.close();};}catch{resolve(null);}});}
+  function persist(brandId,snapshot){disk('put',brandId,{...snapshot,brandId,visibilityVersion:1});try{const text=JSON.stringify({...snapshot,brandId,visibilityVersion:1});if(text.length<3500000)(window.CreativeAccount?.sessionStorage||window.sessionStorage).setItem(diskPrefix+brandId,text);}catch{/* Storage is optional; live loading remains available. */}}
+  function forget(brandId){disk('delete',brandId);try{(window.CreativeAccount?.sessionStorage||window.sessionStorage).removeItem(diskPrefix+brandId);}catch{}}
   function restore(brandId){
     if(workspaces.has(brandId))return workspaces.get(brandId);
-    try{const saved=JSON.parse(sessionStorage.getItem(diskPrefix+brandId)||'null');
+    try{const saved=JSON.parse((window.CreativeAccount?.sessionStorage||window.sessionStorage).getItem(diskPrefix+brandId)||'null');
       if(!saved)return;
-      if(saved?.brandId!==brandId||Date.now()-saved.at>1800000||!Array.isArray(saved.value)||saved.value.length!==3||!saved.value.every(r=>r.status==='fulfilled')||!saved.value[0].value.projects.every(p=>p.brandId===brandId)){forget(brandId);return;}
+      if(saved?.visibilityVersion!==1||saved?.brandId!==brandId||Date.now()-saved.at>1800000||!Array.isArray(saved.value)||saved.value.length!==3||!saved.value.every(r=>r.status==='fulfilled')||!saved.value[0].value.projects.every(p=>p.brandId===brandId)){forget(brandId);return;}
       // Restored snapshots paint immediately but always refresh in the background.
       saved.at=0;workspaces.set(brandId,saved);return saved;
     }catch{return;}
   }
   return {
     get version(){return version;},
-    async restoreWorkspace(brandId){if(restore(brandId))return;const started=version,saved=await disk('get',brandId);if(started!==version)return;if(saved?.brandId===brandId&&Date.now()-saved.at<1800000&&saved.value?.length===3&&saved.value.every(r=>r.status==='fulfilled')&&saved.value[0].value.projects.every(p=>p.brandId===brandId)){saved.at=0;workspaces.set(brandId,saved);}},
+    async restoreWorkspace(brandId){if(restore(brandId))return;const started=version,saved=await disk('get',brandId);if(started!==version)return;if(saved?.visibilityVersion===1&&saved?.brandId===brandId&&Date.now()-saved.at<1800000&&saved.value?.length===3&&saved.value.every(r=>r.status==='fulfilled')&&saved.value[0].value.projects.every(p=>p.brandId===brandId)){saved.at=0;workspaces.set(brandId,saved);}},
     peekWorkspace:brandId=>restore(brandId)?.value,
-    invalidateWorkspace(brandId){version++;forget(brandId);workspaces.delete(brandId);workspaceLoads.delete(brandId);},
-    async workspace(brandId){
+    invalidateWorkspace(brandId){version++;forget(brandId);workspaces.delete(brandId);workspaceLoads.delete(brandId);for(const key of cache.keys())if(key.startsWith(brandId+':'))cache.delete(key);},
+    async workspace(brandId,{onLibrary}={}){
       const saved=restore(brandId);
       if(saved&&Date.now()-saved.at<30000)return saved.value;
       if(workspaceLoads.has(brandId))return workspaceLoads.get(brandId);
       const started=version;
-      const pending=Promise.allSettled([this.projects(brandId,!!saved),this.products(brandId),this.assets(brandId)]).then(value=>{
+      const productLoad=this.products(brandId),assetLoad=this.assets(brandId);
+      if(onLibrary)Promise.allSettled([productLoad,assetLoad]).then(rows=>{if(started===version)onLibrary(rows);}).catch(()=>{});
+      const pending=Promise.allSettled([this.projects(brandId,!!saved),productLoad,assetLoad]).then(value=>{
         // Cache complete snapshots only; failed reads must remain retryable.
         if(started===version&&value.every(r=>r.status==='fulfilled')&&!value[0].value.errors.length){const snapshot={at:Date.now(),value};workspaces.set(brandId,snapshot);persist(brandId,snapshot);}
         return value;
@@ -59,10 +61,16 @@ window.StudioData = (() => {
       workspaceLoads.set(brandId,pending);return pending;
     },
     brands:()=>get('brands'),
+    resumePreview:id=>get('jobs/'+encodeURIComponent(id)+'/resume-work').catch(e=>{if(e.status===404)return null;throw e;}),
+    reconcileImages:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/reconcile-images',input),
+    resumeWork:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/resume-work',input),
     restartPreview:id=>get('jobs/'+encodeURIComponent(id)+'/restart'),
     restart:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/restart',input),
     preflight:draft=>post('studio/preflight',{draft}),
     generate:(draft,token)=>post('studio/generate',{draft,token}),
+    // Resolve only metadata already accessible through the authenticated jobs index.
+    // Never fetch an unlisted project's private detail to guess its owner or visibility.
+    async projectLocation(id){const jobs=await get('jobs');const row=jobs.find(j=>j.id===id);return row?{brandId:row.brandId||row.intake?.brandId}:null;},
     async projects(brandId,fresh=false){
       const started=version,all=await get('jobs'),jobs=all.filter(j=>j.brandId===brandId);
       const values=await mapLimit(jobs,j=>this.project(j.id,brandId,fresh));
@@ -90,13 +98,18 @@ window.StudioData = (() => {
       if(started===version&&!signal?.aborted){cache.set(brandId+':'+id,job);const saved=workspaces.get(brandId);if(saved)saved.value[0].value.projects=saved.value[0].value.projects.map(p=>p.id===id?job:p);}
       return job;
     },
+    resumePdp:id=>post('jobs/'+encodeURIComponent(id)+'/pdp/resume',{}),
+    componentRepairPlan:(id,scope)=>get('jobs/'+encodeURIComponent(id)+'/component-recovery?route='+encodeURIComponent(scope.route)+'&placementId='+encodeURIComponent(scope.placementId)),
+    componentRepair:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/component-recovery',input),
+    retryImageChecks:(id,scope)=>post('jobs/'+encodeURIComponent(id)+'/retry-checks',scope),
     products:brandId=>get('brands/'+encodeURIComponent(brandId)+'/products'),
     async saveProduct(brand,url,refresh=false){const result=await post('brands/'+encodeURIComponent(brand.id)+'/products',{brandName:brand.name,url,refresh});this.invalidateWorkspace(brand.id);return result;},
     assets:brandId=>get('brands/'+encodeURIComponent(brandId)+'/assets'),
     product:(brandId,id)=>get('brands/'+encodeURIComponent(brandId)+'/products/'+encodeURIComponent(id)),
+    rebuildPrint:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/print-proofs/rebuild',body),
     deliveryCandidates:id=>get('jobs/'+encodeURIComponent(id)+'/delivery-packages'),
     packageSet:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/delivery-packages',body),
     costs:()=>get('costs'),
-    clear(){version++;disk('clear');cache.clear();try{for(let i=sessionStorage.length-1;i>=0;i--){const k=sessionStorage.key(i);if(k?.startsWith(diskPrefix))sessionStorage.removeItem(k);}}catch{}workspaces.clear();workspaceLoads.clear();}
+    clear(){version++;disk('clear');cache.clear();try{for(let i=(window.CreativeAccount?.sessionStorage||window.sessionStorage).length-1;i>=0;i--){const k=(window.CreativeAccount?.sessionStorage||window.sessionStorage).key(i);if(k?.startsWith(diskPrefix))(window.CreativeAccount?.sessionStorage||window.sessionStorage).removeItem(k);}}catch{}workspaces.clear();workspaceLoads.clear();}
   };
 })();

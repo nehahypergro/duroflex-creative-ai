@@ -1,0 +1,9 @@
+**
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!lib
+!lib/**
+!scripts
+!scripts/ops
+!scripts/ops/execution-worker.cjs

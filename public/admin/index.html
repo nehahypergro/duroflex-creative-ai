@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creative AI · Operations</title>
+<link rel="stylesheet" href="/admin/style.css">
+<script src="/admin/labels.js" defer>
+</script>
+<script src="/admin/analytics.js" defer>
+</script>
+<script src="/admin/reviews.js" defer>
+</script>
+<script src="/admin/issues.js" defer>
+</script>
+<script src="/admin/operations.js" defer>
+</script>
+<script src="/admin/feedback.js" defer></script>
+<script src="/admin/app.js" defer>
+</script>
+<link rel="icon" type="image/svg+xml" href="/admin/creative-ai-icon-02b.svg">
+</head>
+<body>
+<a class="skip-admin" href="#workspace">Skip to dashboard</a>
+<header>
+<a href="/admin" class="wordmark" aria-label="Creative AI admin home"><img class="creative-ai-symbol" src="/admin/creative-ai-logo-02b.svg" alt="" width="32" height="32"><span>Creative AI</span></a>
+<div class="workspace-location"><span class="workspace-label">Admin</span><span id="headerSection">Overview</span></div>
+<div id="identity">
+</div>
+</header>
+<main>
+<div id="notice" role="status">
+</div>
+<section id="auth">
+</section>
+<section id="workspace" hidden>
+<div class="heading">
+<div>
+<p class="eyebrow">WORKSPACE ACTIVITY</p>
+<h1 id="pageTitle">Your workspace, at a glance.</h1>
+<p id="pageDescription">See what needs attention and take the next step.</p>
+<p id="freshness">
+</p>
+</div>
+<button id="refresh">Refresh</button>
+</div>
+<nav id="tabs" aria-label="Admin sections">
+<span class="nav-label">WORKSPACE</span>
+<button data-tab="overview" id="overviewTab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Overview</button>
+<button data-tab="requests" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Requests</button>
+<button data-tab="analytics" id="analyticsTab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h17M8 15l4-6 4 3 5-8"/></svg>Product analytics</button>
+<button data-tab="issues" id="issuesTab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15a2 2 0 0 1-2 2H9l-5 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zM12 7v4M12 14h.01"/></svg>Reported issues</button>
+<button data-tab="feedback" id="feedbackTab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15a2 2 0 0 1-2 2H9l-5 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zM12 7v4M12 14h.01"/></svg>Creative feedback</button>
+<span class="nav-label nav-management">MANAGE</span>
+<button data-tab="health" id="healthTab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h5l3-8 4 16 3-8h5"/></svg>System health</button>
+<button data-tab="usage"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 9h18M15 14h3"/></svg>Usage & cost</button>
+<button data-tab="people" id="peopleTab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 5a3 3 0 0 1 0 6M18 15a5 5 0 0 1 3 4v2"/></svg>People</button>
+<div class="nav-foot">
+<span class="private-dot">
+</span> Private workspace<small>Creative AI operations</small>
+</div>
+</nav>
+<section id="savedViews" class="saved-views" aria-label="Saved dashboard views">
+</section>
+<div id="filterArea" class="filter-area">
+<div class="filter-caption">
+<span>Filter your workspace</span>
+<span id="filterSummary">No additional filters</span>
+</div>
+<form id="filters" class="filters">
+<label>Brand<select name="brand">
+<option value="">Both brands</option>
+</select>
+</label>
+<label>Stage<select name="stage">
+<option value="">All stages</option>
+<option value="draft">Draft</option>
+<option value="creating">Creating</option>
+<option value="ready">Ready</option>
+<option value="attention">Needs attention</option>
+</select>
+</label>
+<label>Activity source<select name="origin">
+<option value="">All activity</option>
+<option value="team">Signed-in team</option>
+<option value="system">Unassigned / system</option>
+<option value="test">Internal test work</option>
+</select>
+</label>
+<label>User<select name="user">
+<option value="">All users</option>
+<option value="legacy">Unassigned / system</option>
+</select>
+</label>
+<label>Asset<select name="asset">
+<option value="">All assets</option>
+</select>
+</label>
+<label>From<input name="from" type="date">
+</label>
+<label>To<input name="to" type="date">
+</label>
+<button class="primary">Apply</button>
+<button type="button" id="clearFilters" title="Clear filters">Reset</button>
+</form>
+</div>
+<div id="metrics" class="metrics">
+</div>
+<section id="content" aria-label="Dashboard results">
+</section>
+</section>
+</main>
+<dialog id="detail">
+<button id="closeDetail" class="close">Close</button>
+<div id="detailBody">
+</div>
+</dialog>
+<footer>Creative AI · Private admin workspace · Times in IST</footer>
+</body>
+</html>

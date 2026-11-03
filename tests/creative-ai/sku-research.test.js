@@ -73,3 +73,31 @@ test('selected catalogue variant survives the full audit handoff even when HTML 
  const out=await collectSkuEvidence(research(),{brandId:'brand-one',brandUrl:'https://example.com/',productPageUrl:url,productVariantId:'variant-four',productName:'New mattress'},dir,{provider,budget:{},fetchPage,productLibrary});
  const fact=out.facts.find(f=>f.id==='sku-selected-variant');assert.equal(fact.status,'supported');assert.match(fact.text,/SINGLE-4/);assert.equal(out.productBriefEvidence.selectedVariantProvenance.snapshot,'saved-exact-variant');assert.ok(out.productBriefEvidence.evidence.some(e=>e.factId===fact.id&&e.quote===fact.text));assert.ok(out.dossier.sources.some(s=>fact.sourceIds.includes(s.id)));assert.ok(out.pages.some(p=>p.sourceId===fact.sourceIds[0]));
 }));
+test('full PDP audit retains ownership/care coverage beyond eight facts with real passage bindings',()=>fixture(async({dir,fetchPage,provider})=>{
+ const original=provider.reason;provider.reason=async request=>{
+  const out=await original(request);
+  out.facts=Array.from({length:12},(_,i)=>({...out.facts[0],text:'Synthetic independently cited specification '+i,status:i===11?'unverified':'supported'}));
+  request.validate(out);return out;
+ };
+ const out=await collectSkuEvidence(research(),{brandUrl:'https://example.com/',productPageUrl:url,placementIds:['custom:studio-pdp-pack']},dir,{provider,budget:{},fetchPage});
+ assert.equal(out.facts.filter(f=>f.id.startsWith('sku-fact-')).length,12);
+ assert.equal(out.facts.find(f=>f.id==='sku-fact-12').status,'unverified');
+ assert.equal(out.productBriefEvidence.evidence.length,12);
+}));
+test('client-approved website certification reaches planner evidence with original passage and explicit approval provenance',()=>fixture(async({dir,fetchPage})=>{
+ const statement='The selected mattress is certified by Example Institute for this product range.',approval={version:1,brandId:'brand-source-fixture',officialHost:'example.com',status:'client-approved',scope:'explicit-product-certifications',approvedAt:'2026-10-23T00:00:00Z',basis:'Synthetic user approval'},intake={brandId:approval.brandId,brandUrl:'https://example.com/',productPageUrl:url,productName:'New mattress',websiteCertificationApproval:approval};
+ const fetchApproved=async u=>{const got=await fetchPage(u);return u===url?{...got,bytes:Buffer.from(html.replace('</main>','<p>'+statement+'</p></main>'))}:got;};
+ const provider={reason:async opts=>{assert.match(opts.instructions,/CLIENT-APPROVED WEBSITE CERTIFICATIONS/);const passage=opts.input.passages.find(p=>p.text.includes(statement));const out={identityStatus:'matched',identityNote:'Synthetic exact model',facts:[{text:statement,status:'supported',sourceId:passage.sourceId,passageId:passage.id}],images:opts.images.map(a=>({assetId:a.id,kind:'product',label:'Synthetic reference',confidence:1}))};opts.validate(out);return out;}};
+ const out=await collectSkuEvidence(research(),intake,dir,{provider,budget:{},fetchPage:fetchApproved});assert.equal(out.facts.find(f=>f.id==='sku-fact-1').status,'supported');assert.ok(out.productBriefEvidence.evidence[0].quote.includes(statement));assert.deepEqual(out.productBriefEvidence.websiteCertificationApproval,approval);assert.match(out.dossier.sources.find(s=>s.id==='source-selected-product').note,/Client-approved.*not independent/);
+}));
+for(const brand of ['duroflex','sleepyhead'])test(brand+': exact catalogue record reaches identity audit before default-page comparison',()=>fixture(async({dir,fetchPage,provider})=>{
+ const brandId='brand-'+brand,profile={id:'selected-product',brandId,pageUrl:url,collectedAt:new Date().toISOString(),snapshot:'selected-snapshot',pageHash:'saved-page-hash',options:[{name:'Size',position:1},{name:'Height',position:2}],variants:[{id:'four',sku:'SKU-4',name:'Single / 4 (10.16cm)',options:['Single','4 (10.16cm)']}]};
+ const original=provider.reason;provider.reason=async request=>{
+  assert.equal(request.input.selectedVariantRecord.provenance.variantId,'four');
+  assert.match(request.input.selectedVariantRecord.fact.text,/Height: 4 \(10.16cm\)/);
+  assert.match(request.instructions,/default.*does not.*conflict/i);
+  assert.match(request.instructions,/same.*variant.*conflict/i);
+  return original(request);
+ };
+ await collectSkuEvidence(research(),{brandId,brandUrl:'https://example.com/',productPageUrl:url,productName:'New mattress',productVariantId:'four'},dir,{provider,budget:{},fetchPage,productLibrary:{capture:async()=>profile,attachAudit:async()=>{}}});
+}));

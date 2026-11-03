@@ -40,9 +40,19 @@ test('Finished creative loads design details before project/progress resolves an
 });
 
 test('Workspace snapshots survive reload, remain brand-scoped and revalidate',async()=>{
- const f=fixture(),disk=new Map();f.context.sessionStorage={getItem:k=>disk.get(k)||null,setItem:(k,v)=>disk.set(k,v),removeItem:k=>disk.delete(k),key:i=>[...disk.keys()][i],get length(){return disk.size;}};
+ const f=fixture(),disk=new Map();f.context.window.sessionStorage={getItem:k=>disk.get(k)||null,setItem:(k,v)=>disk.set(k,v),removeItem:k=>disk.delete(k),key:i=>[...disk.keys()][i],get length(){return disk.size;}};
  f.tick(100000);await f.D.workspace('a');assert.equal(disk.size,1);
  vm.runInNewContext(fs.readFileSync(path.resolve(__dirname,'../../public/creative-ai/studio-data.js'),'utf8'),f.context);
  const next=f.context.window.StudioData;assert.equal(next.peekWorkspace('a')[0].value.projects[0].brandId,'a');assert.equal(next.peekWorkspace('b'),undefined);
  const count=f.calls.length;await next.workspace('a');assert.ok(f.calls.length>count);next.invalidateWorkspace('a');assert.equal(disk.size,0);
+});
+
+test('Unavailable browser cache cannot hold the workspace loading screen indefinitely',async()=>{
+ const {D,context}=fixture();context.indexedDB={open:()=>({})};
+ const outcome=await Promise.race([D.restoreWorkspace('a').then(()=> 'restored-or-skipped'),new Promise(r=>setTimeout(()=>r('stalled'),2200))]);
+ assert.equal(outcome,'restored-or-skipped');assert.equal(D.peekWorkspace('a'),undefined);
+});
+
+test('pre-cleanup cached snapshots never repaint internal test work',async()=>{
+ const {D,context}=fixture();const old={brandId:'a',at:Date.now(),value:[{status:'fulfilled',value:{projects:[{id:'internal',brandId:'a'}],errors:[]}},{status:'fulfilled',value:[]},{status:'fulfilled',value:[]}]};context.window.sessionStorage={getItem:()=>JSON.stringify(old),removeItem:()=>{}};assert.equal(D.peekWorkspace('a'),undefined);
 });

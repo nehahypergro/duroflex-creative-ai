@@ -1,0 +1,20 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+test('sequential test admission preserves shared worker capacity and serializes each provider kind',async()=>{
+ const {configure}=require('../../scripts/creative-ai/sequential-test-runtime');
+ const active={reason:0,generate:0},peak={reason:0,generate:0},calls={reason:0,generate:0};
+ const runtime={config:{maxConcurrentJobs:2,maxConcurrentPlanning:2,maxConcurrentUnits:2,maxConcurrentReasoningCalls:4,maxConcurrentImageCalls:2},provider:{}};
+ for(const kind of Object.keys(active))runtime.provider[kind]=async value=>{calls[kind]++;active[kind]++;peak[kind]=Math.max(peak[kind],active[kind]);await new Promise(r=>setTimeout(r,5));active[kind]--;return value;};
+ configure(runtime);assert.equal(runtime.config.maxConcurrentJobs,1);assert.equal(runtime.config.maxConcurrentReasoningCalls,4);assert.equal(runtime.config.maxConcurrentImageCalls,2);
+ await Promise.all(Array.from({length:6},(_,i)=>Promise.all([runtime.provider.reason(i),runtime.provider.generate(i)])));
+ assert.deepEqual(peak,{reason:1,generate:1});assert.deepEqual(calls,{reason:6,generate:6});
+});
+test('a shared admission conflict stops a batch instead of failing every asset',()=>{
+ const {stopBatch}=require('../../scripts/creative-ai/sequential-test-runtime');
+ assert.equal(stopBatch('Shared capacity configuration differs between workers; drain and reconfigure the capacity directory before changing limits.'),true);
+ assert.equal(stopBatch('Planning response is still pending. Its saved response ID can be retrieved without another submission.'),true);
+ assert.equal(stopBatch('Headline needs less copy for this placement'),false);
+});
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': checkpoint resumes accepted work and skips completed work',()=>{const {resumeAction}=require('../../scripts/creative-ai/sequential-test-runtime');assert.equal(resumeAction({status:'running'}),'resume');assert.equal(resumeAction({status:'failed',error:'Planning response is still pending. Its saved response ID can be retrieved without another submission.'}),'resume');assert.equal(resumeAction({status:'finished'}),'skip');assert.equal(resumeAction({status:'partial',error:'Product label was distorted'}),'skip');assert.equal(resumeAction({status:'failed',error:'Runner stopped before provider dispatch'}),'resume');assert.equal(resumeAction({status:'failed',error:'Unknown socket outcome'}),'skip');});
+test('continuation preserves the original deadline and all spend limits, with an explicit record',async()=>{const {continueJob}=require('../../scripts/creative-ai/sequential-test-runtime');let job={id:'test',status:'failed',error:'Planning response is still pending',budget:{deadline:1,imageCalls:1,maxImageCalls:2,reasoningCalls:3,maxReasoningCalls:40,estimatedSpend:{maxUsd:100,reservedUsd:10}}};const original=structuredClone(job.budget),scheduled=[];const runtime={store:{read:async()=>structuredClone(job),update:async(id,fn)=>{job=fn(job);return job;}},schedule:id=>scheduled.push(id)};await assert.rejects(()=>continueJob(runtime,'test'),/processing window/i);await continueJob(runtime,'test',{durationMs:60000,reason:'User authorised recovery of saved work'});assert.deepEqual(job.budget,original);assert.ok(job.processingContinuations[0].deadline>Date.now());assert.equal(job.status,'queued');assert.deepEqual(scheduled,['test']);});
+test('batch restart keeps all Duroflex before Sleepyhead and never repeats finished projects',async()=>{const {pendingRows}=require('../../scripts/creative-ai/sequential-test-runtime');const rows=[{key:'s1',brand:'Sleepyhead',intakeFile:'s1',status:'waiting-provider'},{key:'d2',brand:'Duroflex',intakeFile:'d2',status:'prepared'},{key:'d1',brand:'Duroflex',id:'old',intakeFile:'d1',status:'running'},{key:'skip',intakeFile:'skip',status:'needs-input'}];const order=['d1','d2','s1','skip'].map((key,order)=>({key,order}));assert.deepEqual((await pendingRows(rows,order,async()=>({status:'finished'}))).map(r=>r.key),['d2','s1']);assert.deepEqual((await pendingRows(rows,order,async()=>({status:'running'}))).map(r=>r.key),['d1','d2','s1']);});

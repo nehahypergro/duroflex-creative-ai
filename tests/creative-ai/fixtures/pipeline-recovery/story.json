@@ -1,0 +1,189 @@
+{
+  "provenance": {
+    "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+    "jobId": "creative-3a354dff-10a9-4444-8fdc-44871a439ef0",
+    "issue": "Detected CTA not assigned to its saved field"
+  },
+  "fields": [
+    {
+      "text": "Two firmness options",
+      "role": "headline",
+      "proofFactIds": [
+        "sku-fact-6"
+      ],
+      "requirement": "optional",
+      "id": "copy-1",
+      "delivery": "embedded",
+      "nativeFieldId": "none",
+      "locked": false
+    },
+    {
+      "text": "Reversible latex topper: firm or medium firm. Flip to switch.",
+      "role": "body",
+      "proofFactIds": [
+        "sku-fact-6",
+        "sku-fact-7"
+      ],
+      "requirement": "optional",
+      "id": "copy-2",
+      "delivery": "embedded",
+      "nativeFieldId": "none",
+      "locked": false
+    },
+    {
+      "text": "Explore the mattress",
+      "role": "cta",
+      "proofFactIds": [
+        "sku-destination"
+      ],
+      "requirement": "optional",
+      "id": "copy-3",
+      "delivery": "embedded",
+      "nativeFieldId": "none",
+      "locked": false
+    }
+  ],
+  "doc": {
+    "canvas": {
+      "width": 1080,
+      "height": 1920,
+      "sourceStatus": "user-specified",
+      "ruleIds": [
+        "custom:studio-social-story-canvas"
+      ]
+    },
+    "objects": [
+      {
+        "fieldId": "copy-1",
+        "left": 108,
+        "top": 153.6,
+        "width": 864,
+        "height": 288,
+        "fontSize": 106,
+        "role": "headline"
+      },
+      {
+        "fieldId": "copy-2",
+        "left": 108,
+        "top": 480,
+        "width": 864,
+        "height": 393.59999999999997,
+        "fontSize": 71,
+        "role": "supporting-copy"
+      },
+      {
+        "fieldId": "copy-3",
+        "left": 108,
+        "top": 912,
+        "width": 864,
+        "height": 134.4,
+        "fontSize": 71,
+        "role": "cta"
+      }
+    ],
+    "protectedRegions": [
+      {
+        "id": "selected-airboost-mattress",
+        "kind": "product",
+        "left": 86.4,
+        "top": 1171.2,
+        "width": 907.1999999999999,
+        "height": 672,
+        "evidence": "Envelope for the full visible mattress, including its complete silhouette, cutaway detail and physical markings; keep clear of all copy."
+      }
+    ]
+  },
+  "rows": [
+    {
+      "box": {
+        "height": 0.054166666666666585,
+        "width": 0.7259259259259259,
+        "x": 0.08888889407407403,
+        "y": 0.09166666657738098
+      },
+      "confidence": 1,
+      "text": "Two firmness"
+    },
+    {
+      "box": {
+        "height": 0.07103223800659186,
+        "width": 0.40843717787000855,
+        "x": 0.09164704395339637,
+        "y": 0.16143155511531682
+      },
+      "confidence": 1,
+      "text": "options"
+    },
+    {
+      "box": {
+        "height": 0.04270196358362832,
+        "width": 0.679211030183015,
+        "x": 0.0919699795568085,
+        "y": 0.24572254930983006
+      },
+      "confidence": 1,
+      "text": "Reversible latex topper:"
+    },
+    {
+      "box": {
+        "height": 0.03649467031161002,
+        "width": 0.7080102991174768,
+        "x": 0.08785531113247613,
+        "y": 0.2921511630951814
+      },
+      "confidence": 1,
+      "text": "firm or medium firm. Flip"
+    },
+    {
+      "box": {
+        "height": 0.0347837368647258,
+        "width": 0.2851935775191695,
+        "x": 0.08737736967092255,
+        "y": 0.33580580596866705
+      },
+      "confidence": 1,
+      "text": "to switch."
+    },
+    {
+      "box": {
+        "height": 0.05114963849385579,
+        "width": 0.6538535789207176,
+        "x": 0.08776709014535845,
+        "y": 0.4163472105861944
+      },
+      "confidence": 1,
+      "sourceText": "Explore the mattress",
+      "text": "Explore the mattress"
+    },
+    {
+      "box": {
+        "height": 0.014534883697827738,
+        "width": 0.07235142036720565,
+        "x": 0.7493540057724695,
+        "y": 0.6758720929439641
+      },
+      "confidence": 1,
+      "text": "airboost"
+    },
+    {
+      "box": {
+        "height": 0.021457699934641528,
+        "width": 0.11335368686252167,
+        "x": 0.6800846499720893,
+        "y": 0.7008194770225021
+      },
+      "confidence": 1,
+      "text": "-DUROFLEX"
+    },
+    {
+      "box": {
+        "height": 0.01999999880790715,
+        "width": 0.09509043516936133,
+        "x": 0.7985529715175369,
+        "y": 0.6936046515697593
+      },
+      "confidence": 1,
+      "text": "DUROPEDIC"
+    }
+  ]
+}

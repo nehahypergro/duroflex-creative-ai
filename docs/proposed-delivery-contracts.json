@@ -1,0 +1,2539 @@
+{
+  "version": "0.1",
+  "date": "2026-10-23",
+  "status": "DRAFT FOR USER REVIEW — NOT IMPLEMENTED OR APPROVED",
+  "coverageBasis": "All 211 items in the repository’s 22 October 2026 client static/document scope snapshot. Coverage means mapped requirements, not tested or implemented outputs. Video/motion production is outside this review.",
+  "sources": [
+    {
+      "title": "Creative AI Scope with Remarks",
+      "url": "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721"
+    },
+    {
+      "title": "Campaign Creative Matrix",
+      "url": "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+    },
+    {
+      "title": "Client Format Specs",
+      "url": "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=571846820"
+    }
+  ],
+  "implementationEvidence": [
+    "docs/client-release-readiness.md",
+    "docs/placements/complete-delivery-and-ingestion.md",
+    "docs/client-static-document-scope.json"
+  ],
+  "platformReferences": [
+    {
+      "name": "Google PMax asset requirements",
+      "url": "https://developers.google.com/google-ads/api/performance-max/asset-requirements",
+      "note": "Official profile checked 23 October 2026: landscape 1200×628 and square 1200×1200 are recommended dimensions; portrait 960×1200 is optional to the platform but included in this client proposal. Text and brand requirements also apply. Freeze the version used by the route."
+    },
+    {
+      "name": "Google RCS rich cards",
+      "url": "https://developers.google.com/business-communications/rcs-business-messaging/guides/learn/rich-cards",
+      "note": "Rich cards combine media, native text and suggested actions. Device capabilities and screen size affect rendering; target-device previews are part of acceptance."
+    },
+    {
+      "name": "YouTube Community posts",
+      "url": "https://support.google.com/youtube/answer/7124474?co=GENIE.Platform%3DDesktop&hl=en",
+      "note": "YouTube recommends 1:1 for feed images; full images can be expanded. This proposal retains the client’s portrait request but requires a crop preview."
+    }
+  ],
+  "sharedContract": {
+    "definition": "A delivery contract states what the route accepts, how it adapts the creative treatment, exactly what it must deliver, and what evidence makes that delivery complete. It is a product specification, not a legal agreement.",
+    "defaults": [
+      "Single-image work: two independently checked creative options per selected format.",
+      "Multi-image sets: two complete options unless a contract explicitly proposes concept selection before production.",
+      "Long documents, full catalogues and production print: two outlines/concepts, then one selected complete production deliverable is proposed. CX policy documents use one factual version.",
+      "An option count, slot count, target profile or native file type cannot be changed silently to make a job appear complete."
+    ],
+    "requiredFields": [
+      "contractId + contractVersion + selected profile/version",
+      "brandId + source research revision + exact SKU/variant or explicit brand-only mode",
+      "source snapshot IDs and hashes; permitted claim/quote/price references",
+      "audience + objective + message + channel/publishing mode",
+      "option count + required slots + order/dependencies + requested languages/regions",
+      "canvas or physical size; reading context; native fields; output formats; file limits",
+      "locked copy/qualifiers; rights/approval requirements; external prerequisites",
+      "budget/reservation policy; idempotency key; parent/child IDs; selected output hashes"
+    ],
+    "handoff": [
+      "Strategist: records the audience task, channel context, supported promise, reason-to-believe and desired action.",
+      "Creative director: selects the storytelling premise and explains what changes for this placement; distinct concepts remain within the same factual brief.",
+      "Copywriter + art director: agree embedded versus native text, copy capacity, hierarchy, scene and safe space before rendering.",
+      "Production: builds every contracted image/native file; durable child records allow resuming missing work without discarding completed outputs.",
+      "Review: inspects actual rendered files at intended viewing size and reviews the whole set; records evidence, rationale and observed problems separately.",
+      "Delivery: freezes selected versions, native copy, sources, checks and exact file hashes in a manifest. External publishing/printing acceptance is recorded separately."
+    ],
+    "gates": [
+      "Input gate: missing mandatory sources/template/eligibility stops the relevant route with a specific reason before paid generation.",
+      "Plan gate: every required slot and native field has a purpose, source and copy/layout budget.",
+      "Artifact gate: two promised options means two passing options; every required child and native export must exist and pass applicable checks.",
+      "Set gate: order, continuity, claims, variants and dependencies checked across the entire option. A saved image or passing child cannot make an incomplete project Ready.",
+      "Handoff gate: filenames, actual dimensions/bytes/hashes, links, CDN verification and selected source versions agree; no stale review reused after edits.",
+      "External acceptance: only actual host/client/publisher/operator evidence can establish site, send, publishing or physical-production acceptance. Preview-only outputs remain labelled as such."
+    ],
+    "architecture": [
+      "One shared contract registry and renderer/export adapters for both brands; separately scoped brand and SKU evidence.",
+      "Validate the same pinned profile at catalogue, brief, dispatch, preview and export. Free-form labels must not create hidden size differences.",
+      "Persist parent/set and child states; bounded queue and provider concurrency, cancellation, restart recovery and per-child budgets. Do not make the entire pack one giant prompt/upload.",
+      "Known retryable failures follow bounded, recorded recovery. An ambiguous paid response is reconciled before a resend; charges remain unknown, not zero.",
+      "Immutable versions and independently reviewable child results; completed work is reused only when pinned inputs, source hashes and validators match.",
+      "Delivery adapters for raster, HTML/native payload, DOCX/PPTX/PDF and vendor output. A raster export cannot impersonate a missing native adapter.",
+      "Verified non-personal media links/hashes enter the Git CDN inventory; private briefs, responses, personal records and credentials do not. Separate private metadata backup remains necessary."
+    ],
+    "liveAcceptance": [
+      "At least ten varied new live generation scenarios for each affected route; subprofiles need explicit coverage, not ten copies of the same brief.",
+      "Balance Duroflex and Sleepyhead where the route is applicable, using each brand’s own saved products, sources and rules.",
+      "Vary SKU/variant, image source type, aspect ratio, language, copy length, entry point and multi-item count.",
+      "Exercise refresh/back/forward, brand switching, concurrent projects, cancellation, partial child failure, interrupted review, stale version selection and resume.",
+      "For source-dependent routes include valid evidence, missing mandatory evidence and conflicting/expired data; invalid cases must stop before a paid call.",
+      "Report live generation, preflight rejection, unit tests, saved replays, browser checks and external acceptance separately. Rejections and offline simulations cannot be counted as successful live generation scenarios.",
+      "Pass means complete required options/sets, native exports, visual checks, navigation and cost records. Retain every failure and retry in the denominator; no promise that external outages or generative errors can never recur."
+    ]
+  },
+  "pdpProposedSlots": [
+    {
+      "number": "01",
+      "title": "Product hero",
+      "purpose": "Exact selected variant, clear product identity.",
+      "evidence": "Exact-SKU photographs."
+    },
+    {
+      "number": "02",
+      "title": "Lifestyle / use context",
+      "purpose": "Show appropriate scale and believable use.",
+      "evidence": "Product identity and permitted use; scene remains a creative choice."
+    },
+    {
+      "number": "03",
+      "title": "Primary benefit",
+      "purpose": "Communicate the strongest supported reason to choose.",
+      "evidence": "Specific source-backed benefit and qualifiers."
+    },
+    {
+      "number": "04",
+      "title": "Second purchase reason",
+      "purpose": "A genuinely distinct supported feature/benefit.",
+      "evidence": "Separate factual support; no filler claim."
+    },
+    {
+      "number": "05",
+      "title": "Technology / construction",
+      "purpose": "Explain a verified mechanism or construction fact.",
+      "evidence": "Exact-SKU technology evidence; cutaway only if documented."
+    },
+    {
+      "number": "06",
+      "title": "Materials / finish",
+      "purpose": "Describe what the customer will receive.",
+      "evidence": "Verified material and finish facts."
+    },
+    {
+      "number": "07",
+      "title": "Surface / product detail",
+      "purpose": "Show a useful close-up without changing branding or texture.",
+      "evidence": "Source-backed visible detail; no invented microstructure."
+    },
+    {
+      "number": "08",
+      "title": "Dimensions",
+      "purpose": "Explain fit using accurate labels and units.",
+      "evidence": "Chosen variant dimensions; never inferred from pixels."
+    },
+    {
+      "number": "09",
+      "title": "Specification / variant guide",
+      "purpose": "Summarise relevant choices clearly.",
+      "evidence": "Authoritative specifications and available variants."
+    },
+    {
+      "number": "10",
+      "title": "Selection / comparison",
+      "purpose": "Help select the right variant or product.",
+      "evidence": "Approved like-for-like matrix; substitute only after scope review."
+    },
+    {
+      "number": "11",
+      "title": "Care / use",
+      "purpose": "Set correct ownership expectations.",
+      "evidence": "Actual care/use instructions."
+    },
+    {
+      "number": "12",
+      "title": "Warranty / service / final reassurance",
+      "purpose": "Resolve one verified ownership question.",
+      "evidence": "Approved applicable policy; no invented warranty or promise."
+    }
+  ],
+  "pdpSlotCaveat": "Proposed sequence for review, not the confirmed client template. A missing factual source blocks that slot or requires an explicitly approved replacement; do not invent a claim to reach twelve.",
+  "contracts": [
+    {
+      "id": "pdp-12",
+      "family": "PDP & product communication",
+      "title": "Full 12-image PDP pack",
+      "scopeIds": [
+        "scope-040",
+        "scope-041",
+        "scope-042",
+        "scope-043",
+        "scope-044",
+        "scope-045",
+        "scope-046",
+        "scope-047",
+        "scope-048",
+        "scope-049"
+      ],
+      "treatment": "Answer the purchase questions in a deliberate sequence: identity, benefit, evidence, fit and ownership. Give each frame one job. Use a consistent product and visual system across the set; dimension and specification cards need a different reading layout from lifestyle photography.",
+      "inputs": [
+        "Exact saved SKU and variant; source-backed features, dimensions, materials and usage facts.",
+        "Client’s 12-slot template, intended product-page component, display widths and image specifications.",
+        "Verified comparison, care and warranty information only for slots that require it."
+      ],
+      "outputs": [
+        "Two complete creative options: 12 ordered images each, 24 required images total. No partial set presented as a complete option.",
+        "Per-slot filenames, alt text, copy, purpose, source references and reading context; a contact sheet for each option.",
+        "JPG/PNG/WebP as the agreed host profile permits; exact canvas and compression pinned before rendering. ZIP plus set manifest and reviews."
+      ],
+      "acceptanceChecks": [
+        "All 12 distinct, required slots pass individually and as a set; ordering and product/variant consistency checked.",
+        "Measurement lines and labels match evidence; technology markings remain correct; small-preview copy and qualifiers are readable.",
+        "A failed slot holds its option incomplete; a failed option holds the requested pair incomplete."
+      ],
+      "implementationGap": "Existing image generation and review are building blocks. Durable 12-slot orchestration, resume and whole-pack acceptance remain to be completed; current small-batch caps must not simply be removed.",
+      "reviewDecision": "Review the proposed 12-slot sequence below. Confirm the client template and PDP viewing sizes before fixing the export profile.",
+      "scopeItems": [
+        {
+          "id": "scope-040",
+          "asset": "Complete 12-image standard PDP pack",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-041",
+          "asset": "Product hero / showcase",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-042",
+          "asset": "Feature tile",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-043",
+          "asset": "Dimension card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-044",
+          "asset": "Material card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-045",
+          "asset": "Benefit tile",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-046",
+          "asset": "Product specifications visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-047",
+          "asset": "Product comparison visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-048",
+          "asset": "Upload-ready image naming",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-049",
+          "asset": "Alt text for every product image",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "technology",
+      "family": "PDP & product communication",
+      "title": "Technology, layers & construction",
+      "scopeIds": [
+        "scope-061",
+        "scope-062",
+        "scope-063",
+        "scope-064"
+      ],
+      "treatment": "Explain one mechanism visually. Use a labelled technical illustration only when exact-SKU evidence supports the depicted construction; separate scientific explanation from a lifestyle benefit scene.",
+      "inputs": [
+        "Official exact-SKU layer/construction diagrams or supplied approved CGI.",
+        "Verified layer names, order, material descriptions and permissible benefits."
+      ],
+      "outputs": [
+        "Two treatments for each requested technical card, with a clean illustration and separate annotation data where the source allows.",
+        "Source-bound labels and accessible description; editable annotation layout proposed, not a claim of editable 3D geometry."
+      ],
+      "acceptanceChecks": [
+        "No invented layer counts, materials, internal structure or efficacy.",
+        "Labels point to the right part and remain readable at intended size."
+      ],
+      "implementationGap": "Raster generation is available; a source-bound technical illustration/annotation delivery route is not established as complete.",
+      "reviewDecision": "Choose annotated stills only, or require editable diagrams too. Missing internal evidence blocks cutaways rather than guessing.",
+      "scopeItems": [
+        {
+          "id": "scope-061",
+          "asset": "Construction / layer visual",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-062",
+          "asset": "Foam / spring technology layout",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-063",
+          "asset": "Cutaway layout from supplied CGI",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-064",
+          "asset": "Labelled technical callouts / annotations",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "proof",
+      "family": "PDP & product communication",
+      "title": "Proof, certifications & comparison cards",
+      "scopeIds": [
+        "scope-071",
+        "scope-072",
+        "scope-073",
+        "scope-074",
+        "scope-075",
+        "scope-076"
+      ],
+      "treatment": "Lead with the specific evidence, retain its limitations, and make a fair comparison on like-for-like attributes. Avoid decorative badges that imply nonexistent certification.",
+      "inputs": [
+        "Approved claims, certification files, expert permissions and qualifying text.",
+        "Dated comparison table with matched product variants and measurement units."
+      ],
+      "outputs": [
+        "Two treatments for each requested card plus a structured claim/evidence table.",
+        "Footnotes and sources remain attached to the image and accompanying copy; editable comparison table proposed."
+      ],
+      "acceptanceChecks": [
+        "Every claim, quote and comparison cell has a source; no stronger claim than the evidence.",
+        "Disclaimers and comparison headings readable; expiry and exclusions checked."
+      ],
+      "implementationGap": "General claim review exists; full comparison-table authoring, expiry checks and editable exports need dedicated contracts and implementation.",
+      "reviewDecision": "Confirm permitted comparison competitors and claim owner; do not use invented comparison data in a launch test.",
+      "scopeItems": [
+        {
+          "id": "scope-071",
+          "asset": "Comparison card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-072",
+          "asset": "Expert-proof card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-073",
+          "asset": "Certification card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-074",
+          "asset": "Demonstration card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-075",
+          "asset": "Claim-led card",
+          "recordedStatus": "Generated — checks unresolved"
+        },
+        {
+          "id": "scope-076",
+          "asset": "Claim footnotes / source references",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "listing",
+      "family": "Marketplace",
+      "title": "Marketplace & website listing sets",
+      "scopeIds": [
+        "scope-050",
+        "scope-051",
+        "scope-052",
+        "scope-053"
+      ],
+      "treatment": "The main image establishes the exact item being sold; secondary images answer purchase questions. Do not carry promotional typography or room props into a main-image slot that prohibits them.",
+      "inputs": [
+        "Marketplace, country, category, SKU/variant and selected listing template.",
+        "Required gallery count/order, main-image rules and source product photos."
+      ],
+      "outputs": [
+        "Two complete sets of N images; N is fixed by the selected listing contract, not assumed to be 12.",
+        "Main image, ordered secondary gallery, filenames, alt/metadata where supported, source and version manifest."
+      ],
+      "acceptanceChecks": [
+        "Per-slot background, framing, crop, file and resolution requirements checked against the selected marketplace profile.",
+        "No included-accessory ambiguity, watermark, unverified variant or misleading scale."
+      ],
+      "implementationGap": "Existing product-image generation does not establish a complete marketplace listing set or marketplace acceptance.",
+      "reviewDecision": "Choose the first marketplaces and categories; provide/export their current seller templates and gallery counts.",
+      "scopeItems": [
+        {
+          "id": "scope-050",
+          "asset": "Marketplace white-background main image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-051",
+          "asset": "Marketplace product gallery set",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-052",
+          "asset": "Website listing hero",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-053",
+          "asset": "Listing feature / benefit cards",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "standard-aplus",
+      "family": "Marketplace",
+      "title": "Standard A+ content",
+      "scopeIds": [
+        "scope-054",
+        "scope-055",
+        "scope-056",
+        "scope-058",
+        "scope-060"
+      ],
+      "treatment": "Build a persuasive product page from connected modules: context, benefit, proof and use. Put longer text in native module fields; give image panels concise messages and adequate reading space.",
+      "inputs": [
+        "Marketplace/account and standard A+ module template with IDs, dimensions and field limits.",
+        "Brand story and verified SKU features; selected module count/order and destination identifiers."
+      ],
+      "outputs": [
+        "Two complete module directions; each contains every selected image panel and native text field.",
+        "Module JSON/CSV, ordered preview, alt text and permitted metadata, with final asset URLs/hashes."
+      ],
+      "acceptanceChecks": [
+        "Every required module field and image exists; native text and embedded copy do not contradict each other.",
+        "Actual small-width module preview passes readability and product fidelity; all modules form one coherent option."
+      ],
+      "implementationGap": "Generic module rendering and copy-fit repair exist. Reliable passing small-preview artwork and complete template-bound packaging remain open.",
+      "reviewDecision": "Agree the first standard module set and whether both complete directions are needed, or two concepts then one full build.",
+      "scopeItems": [
+        {
+          "id": "scope-054",
+          "asset": "A+ hero / introduction module",
+          "recordedStatus": "Generated — checks unresolved"
+        },
+        {
+          "id": "scope-055",
+          "asset": "A+ brand story module",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-056",
+          "asset": "A+ feature module set",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-058",
+          "asset": "A+ lifestyle module",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-060",
+          "asset": "A+ alt text and search-keyword metadata",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "market-comparison",
+      "family": "Marketplace",
+      "title": "Marketplace comparison modules",
+      "scopeIds": [
+        "scope-057"
+      ],
+      "treatment": "Help shoppers select a suitable product using structured, sourced differences. Prefer native comparison fields when the selected template supports them.",
+      "inputs": [
+        "Eligible comparison module, permitted SKUs/ASINs and source-backed attribute matrix.",
+        "Approved row labels, units, variant definitions and destination links."
+      ],
+      "outputs": [
+        "One validated data matrix; two visual treatments if the template uses imagery.",
+        "Native module field package, referenced images and target-preview evidence."
+      ],
+      "acceptanceChecks": [
+        "Each cell resolves to the right SKU and current saved evidence; units and qualifiers consistent.",
+        "No fabricated ranking, prices, ratings or unsupported competitor inclusion."
+      ],
+      "implementationGap": "Comparison is listed in scope; native marketplace mapping and full table validation are not established.",
+      "reviewDecision": "Confirm within-brand range comparison versus competitive comparison and the permitted product count.",
+      "scopeItems": [
+        {
+          "id": "scope-057",
+          "asset": "A+ comparison chart",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "premium-aplus",
+      "family": "Marketplace",
+      "title": "Premium A+ static modules",
+      "scopeIds": [
+        "scope-059"
+      ],
+      "treatment": "Use the selected Premium template’s richer layout intentionally, with coordinated image panels, native copy and interactions. A larger standard A+ image does not satisfy this contract.",
+      "inputs": [
+        "Confirmed account eligibility and chosen Premium module definitions.",
+        "Required static panels, interaction fields, exact dimensions and approved copy; any video dependency declared separately."
+      ],
+      "outputs": [
+        "Two complete static directions for the agreed Premium module set, plus all native fields and preview mapping.",
+        "Manifest explicitly lists unsupported video/interactive dependencies; no substitution disguised as completion."
+      ],
+      "acceptanceChecks": [
+        "Eligibility and every selected module requirement recorded; responsive template previews checked.",
+        "Static coverage cannot be labelled a complete Premium page when the brief also requires unbuilt interactions or video."
+      ],
+      "implementationGap": "Premium-specific authoring, eligibility/profile mapping and delivery are missing; generic raster modules are insufficient.",
+      "reviewDecision": "Which Premium modules are in the first release? Review static-only scope and exact module count.",
+      "scopeItems": [
+        {
+          "id": "scope-059",
+          "asset": "Premium A+ layouts where eligible",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "campaign-master",
+      "family": "Social & paid",
+      "title": "Campaign master key visuals",
+      "scopeIds": [
+        "scope-001",
+        "scope-002",
+        "scope-003",
+        "scope-004"
+      ],
+      "treatment": "Strategist defines the audience problem, supported promise and action. Creative director proposes continuity and a contrasting storytelling idea; the master is a concept system, not a universal crop for all placements.",
+      "inputs": [
+        "Campaign objective, audience, key message, exact SKU or approved brand-only brief.",
+        "Same-brand sources and intended channel list."
+      ],
+      "outputs": [
+        "Two master concepts with message, copy hierarchy, scene/layout plan and rationale.",
+        "Two master images at the agreed primary placement plus adaptation instructions; other placements generated through their own contracts."
+      ],
+      "acceptanceChecks": [
+        "Different concepts retain the same factual promise; contrast changes the premise and meaningful visual choices.",
+        "Rationale distinguishes sourced brand rules from creative judgments."
+      ],
+      "implementationGap": "Shared creative planning exists; a reusable, versioned master-to-placement handoff requires explicit implementation and acceptance.",
+      "reviewDecision": "Approve two master concepts as the default starting point; placement versions remain additional deliverables.",
+      "scopeItems": [
+        {
+          "id": "scope-001",
+          "asset": "Story / brand master KV",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-002",
+          "asset": "Benefit-led RTB visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-003",
+          "asset": "Product introduction / launch visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-004",
+          "asset": "Concept variants for comparison",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "feed",
+      "family": "Social & paid",
+      "title": "Meta feed: square, portrait & landscape",
+      "scopeIds": [
+        "scope-005",
+        "scope-006",
+        "scope-007",
+        "scope-008"
+      ],
+      "treatment": "Deliver a complete idea during a feed scroll: immediate product/message hierarchy, restrained embedded text, supporting details in the caption. Recompose the scene and negative space for each ratio.",
+      "inputs": [
+        "Organic versus paid destination, chosen ratios, audience/action and native copy requirements.",
+        "Exact SKU and approved claims, terms and destination URL."
+      ],
+      "outputs": [
+        "Two options per selected ratio. Client-scope profiles: 1080×1080 square, 1080×1350 portrait and 1200×628 landscape.",
+        "Separate caption or paid primary text/headline/CTA fields, alt text and image package. These are requested profiles, not universal platform limits."
+      ],
+      "acceptanceChecks": [
+        "Catalogue, brief, rendered image, preview and export agree on dimensions.",
+        "Small feed preview readable; product, logo and required qualifiers survive real placement crops."
+      ],
+      "implementationGap": "Square route exists and portrait routing is connected; complete catalogue coverage and repeated rendered acceptance remain separate.",
+      "reviewDecision": "Confirm default square + portrait; make landscape an explicit selection rather than silently generating every ratio.",
+      "scopeItems": [
+        {
+          "id": "scope-005",
+          "asset": "Instagram / Facebook feed square · 1080 × 1080",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-006",
+          "asset": "Instagram / Facebook feed portrait · 1080 × 1350",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-007",
+          "asset": "Landscape campaign KV · 1200 × 628",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-008",
+          "asset": "Meta paid image + accompanying ad copy",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "story",
+      "family": "Social & paid",
+      "title": "Instagram Stories & static interaction frames",
+      "scopeIds": [
+        "scope-009",
+        "scope-010",
+        "scope-011",
+        "scope-012",
+        "scope-013"
+      ],
+      "treatment": "One fast message per full-screen vertical frame. Compose for vertical attention and real interface overlays. Put an intended sticker/action area in the layout; do not draw a fake working poll or countdown into artwork.",
+      "inputs": [
+        "Organic versus paid Story, 1080×1920 client profile and current placement safe areas.",
+        "Frame purpose: product, offer, employee share, poll or countdown; supplied link/date/options where relevant."
+      ],
+      "outputs": [
+        "Two 9:16 image options per requested frame plus caption/action and sticker-placement instructions.",
+        "Native poll choices, countdown timestamp/timezone or link fields as applicable, separate from the raster."
+      ],
+      "acceptanceChecks": [
+        "Headline, logo and product clear of interface/sticker areas in the target preview.",
+        "Offer expiry/timezone and interaction fields valid; no claim that exported image contains a functional sticker."
+      ],
+      "implementationGap": "Story image generation exists; interaction-aware contracts and placement-preview acceptance need explicit coverage.",
+      "reviewDecision": "Confirm whether interactive Story setup is an operator handoff or a later publishing integration.",
+      "scopeItems": [
+        {
+          "id": "scope-009",
+          "asset": "Product Story frame · 1080 × 1920",
+          "recordedStatus": "Partially passed — one saved example"
+        },
+        {
+          "id": "scope-010",
+          "asset": "Offer Story frame",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-011",
+          "asset": "Poll frame",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-012",
+          "asset": "Countdown frame",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-013",
+          "asset": "Employee Story / status frame",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "carousel",
+      "family": "Social & paid",
+      "title": "Meta & LinkedIn carousels",
+      "scopeIds": [
+        "scope-014",
+        "scope-015",
+        "scope-016",
+        "scope-017",
+        "scope-018",
+        "scope-019",
+        "scope-020"
+      ],
+      "treatment": "Plan a hook, purposeful progression and close. Each slide adds a new fact or narrative step; retain consistent design and SKU while varying composition to support the story.",
+      "inputs": [
+        "Channel, purpose, ordered messages, slide count and image/document publishing mode.",
+        "Evidence for feature/comparison claims, audience and action."
+      ],
+      "outputs": [
+        "Two complete ordered sequences of N slides. Proposed default N=5, configurable before generation.",
+        "Meta image sequence + caption; LinkedIn document-post PDF where chosen, with selectable text where authored natively, plus post copy."
+      ],
+      "acceptanceChecks": [
+        "Every slide and whole sequence pass; hook/close work and no repeated filler slides.",
+        "No mixing A/B slides without a new sequence check; LinkedIn PDF exports inspected page by page."
+      ],
+      "implementationGap": "Sequence planning exists. Complete-set gating and native LinkedIn document export require explicit end-to-end proof.",
+      "reviewDecision": "Approve five slides as a proposal; confirm LinkedIn document-post delivery versus paid carousel assets.",
+      "scopeItems": [
+        {
+          "id": "scope-014",
+          "asset": "Meta feature carousel",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-015",
+          "asset": "Meta comparison carousel",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-016",
+          "asset": "Meta story carousel",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-017",
+          "asset": "LinkedIn feature carousel",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-018",
+          "asset": "LinkedIn story carousel",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-019",
+          "asset": "LinkedIn comparison carousel",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-020",
+          "asset": "Carousel caption / accompanying ad copy",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "pmax",
+      "family": "Social & paid",
+      "title": "Performance Max static asset group",
+      "scopeIds": [
+        "scope-021",
+        "scope-022",
+        "scope-023"
+      ],
+      "treatment": "Provide clear modular imagery that works with separately supplied ad text. Avoid embedding every headline/CTA into an image intended to be combined dynamically.",
+      "inputs": [
+        "Campaign and asset-group context, final URLs, native text and brand asset requirements.",
+        "Merchant Center context and brand-guidelines setting; requested ratio coverage."
+      ],
+      "outputs": [
+        "Proposed: two options each at 1200×628 landscape, 1200×1200 square and 960×1200 portrait: six images total.",
+        "Native copy/brand fields and image mapping; complete static handoff, not a fully published or video-complete PMax campaign."
+      ],
+      "acceptanceChecks": [
+        "Pin current Google field counts/limits and image profile; portrait is client-required here even though optional in the cited platform contract.",
+        "Check all required text/brand slots and previews; no cropped identity or duplicated text."
+      ],
+      "implementationGap": "Native packaging primitives exist; creation/catalogue routes and full group acceptance remain incomplete.",
+      "reviewDecision": "Approve six-image default and decide who supplies final URLs, account settings and native ad copy.",
+      "scopeItems": [
+        {
+          "id": "scope-021",
+          "asset": "PMax landscape image · 1200 × 628",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-022",
+          "asset": "PMax square image · 1200 × 1200",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-023",
+          "asset": "PMax portrait image · 960 × 1200",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=571846820"
+      ]
+    },
+    {
+      "id": "creator",
+      "family": "Social & paid",
+      "title": "Creator, testimonial, meme & BTS stills",
+      "scopeIds": [
+        "scope-024",
+        "scope-025",
+        "scope-026",
+        "scope-027"
+      ],
+      "treatment": "Use a credible, placement-appropriate human voice and supplied authentic material. A synthetic lifestyle illustration must never masquerade as an actual customer endorsement or real event.",
+      "inputs": [
+        "Rights-cleared creator/BTS/customer material, permissions and exact approved testimony where used.",
+        "Trend reference, audience and brand boundaries; truthful source labels."
+      ],
+      "outputs": [
+        "Two static treatments per chosen use case; captions, attribution and source/permission references.",
+        "UGC-derived stills preserve authentic supplied evidence; conceptual illustrations labelled as such."
+      ],
+      "acceptanceChecks": [
+        "No invented testimonial, endorsement, identity or event presented as real.",
+        "Editing preserves meaning and relevant disclosures; privacy and permissions checked."
+      ],
+      "implementationGap": "General generation is available; authenticity/provenance workflow and dedicated creator routes remain to be specified and built.",
+      "reviewDecision": "Choose allowed source types; default to supplied authentic material for testimonials and demos.",
+      "scopeItems": [
+        {
+          "id": "scope-024",
+          "asset": "Creator-supplied BTS still",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-025",
+          "asset": "Creator-supplied testimonial / demo still",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-026",
+          "asset": "Meme / trend static",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-027",
+          "asset": "Authentic customer photo / UGC preparation",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "linkedin",
+      "family": "Social & paid",
+      "title": "LinkedIn single-image posts",
+      "scopeIds": [
+        "scope-099",
+        "scope-100",
+        "scope-101",
+        "scope-102",
+        "scope-103",
+        "scope-104",
+        "scope-105",
+        "scope-106",
+        "scope-107",
+        "scope-108"
+      ],
+      "treatment": "Give a professional audience a concrete insight, product fact or credible corporate message. Use post text for context; the image carries a concise idea with a readable headline and evidence-led visual.",
+      "inputs": [
+        "Organic or paid placement; square/portrait choice, audience and post objective.",
+        "Verified corporate/product/employer facts and image permissions."
+      ],
+      "outputs": [
+        "Two options per selected client profile: 1080×1080 square or 1080×1350 portrait; landscape remains a separately pinned existing profile.",
+        "Post copy or native ad fields, alt text, source links and image files."
+      ],
+      "acceptanceChecks": [
+        "Actual viewing-size readability including CTA and supporting copy; exact product branding and logo margins checked.",
+        "Copy-fit recovery cannot lengthen embedded copy; preserved qualifiers still fit."
+      ],
+      "implementationGap": "Square/portrait runtime routing and copy-fit guards exist. Passing fresh renders and complete options after the final guards are still required.",
+      "reviewDecision": "Approve default square + portrait and a concise on-image copy policy; distinguish organic posts from paid ads.",
+      "scopeItems": [
+        {
+          "id": "scope-099",
+          "asset": "LinkedIn square KV · 1080 × 1080",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-100",
+          "asset": "LinkedIn portrait KV · 1080 × 1350",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-101",
+          "asset": "Product announcement visual",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-102",
+          "asset": "Leadership story visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-103",
+          "asset": "Packaging / branding still",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-104",
+          "asset": "Employer-branding visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-105",
+          "asset": "Hiring visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-106",
+          "asset": "Award visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-107",
+          "asset": "Milestone visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-108",
+          "asset": "LinkedIn post copy",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "community",
+      "family": "Social & paid",
+      "title": "YouTube Community images & polls",
+      "scopeIds": [
+        "scope-115",
+        "scope-116",
+        "scope-117",
+        "scope-118"
+      ],
+      "treatment": "Invite a lightweight response from subscribers. Plan a feed-safe image and a conversational post; this is a Community post, not a video thumbnail.",
+      "inputs": [
+        "Image post versus poll, approved prompt/options and chosen square/portrait variants.",
+        "Source artwork and link to any real teaser content."
+      ],
+      "outputs": [
+        "Two image options per selected ratio plus post text; poll questions/options supplied separately.",
+        "Square is the proposed default. Portrait remains in client scope with explicit feed-crop preview."
+      ],
+      "acceptanceChecks": [
+        "YouTube recommends 1:1 for feed display; inspect portrait’s collapsed and expanded views.",
+        "Poll and image-post modes validated separately; no unavailable video implied by a teaser."
+      ],
+      "implementationGap": "Community-specific discovery, native fields and preview checks are not established as a completed route.",
+      "reviewDecision": "Approve square default; keep portrait optional and require a real Community preview.",
+      "scopeItems": [
+        {
+          "id": "scope-115",
+          "asset": "Community image post · square",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-116",
+          "asset": "Community image post · portrait",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-117",
+          "asset": "Community poll text/options",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-118",
+          "asset": "Community teaser still",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "website-components",
+      "family": "Website",
+      "title": "Heroes, banners, category tiles & collection cards",
+      "scopeIds": [
+        "scope-028",
+        "scope-029",
+        "scope-030",
+        "scope-031",
+        "scope-032",
+        "scope-033",
+        "scope-034"
+      ],
+      "treatment": "Fit the actual site component: preserve space for live headline/CTA, useful product scale and focal-point crops. Mobile gets a deliberate composition rather than a squeezed desktop banner.",
+      "inputs": [
+        "Host component/template, container widths, breakpoints, crop behavior and maximum bytes.",
+        "Which copy is live HTML versus embedded; linked SKU/category and destination."
+      ],
+      "outputs": [
+        "Two coordinated options across each selected desktop/mobile component.",
+        "Optimised images, source master, alt text, focal point, live copy/CTA fields and responsive preview plus component manifest.",
+        "Client-scope illustrative profiles include ~1920×700 desktop and ~1080×1350 mobile; actual host specifications override. Existing 1920×640 is a separate profile."
+      ],
+      "acceptanceChecks": [
+        "Exact host breakpoints and crops inspected; no logo/product/text clipped.",
+        "File bytes, dimensions, loading behavior and live text contrast checked in the real component; alt text not a keyword dump."
+      ],
+      "implementationGap": "Desktop/mobile runtime profiles exist; actual site component integration and responsive delivery acceptance remain open.",
+      "reviewDecision": "Supply the first real component specifications. Do not merge 1920×600, 1920×640 and ~1920×700 into one unnamed “banner”.",
+      "scopeItems": [
+        {
+          "id": "scope-028",
+          "asset": "Homepage desktop hero · approximately 1920 × 700",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-029",
+          "asset": "Homepage mobile hero · approximately 1080 × 1350",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-030",
+          "asset": "Website campaign banner",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-031",
+          "asset": "Category tile",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-032",
+          "asset": "Category / collection card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-033",
+          "asset": "Homepage multi-category campaign module",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-034",
+          "asset": "Headline / CTA variants",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "landing",
+      "family": "Website",
+      "title": "Landing-page modules & content",
+      "scopeIds": [
+        "scope-035",
+        "scope-036",
+        "scope-037",
+        "scope-038",
+        "scope-039"
+      ],
+      "treatment": "Build a connected argument from headline to benefit, proof, FAQ and action. Use semantic live text and modular imagery; avoid exporting the whole page as one large picture.",
+      "inputs": [
+        "Page goal, component library, content order, proof and FAQ sources, links and responsive breakpoints.",
+        "CMS field schema or agreed HTML handoff and accessibility requirements."
+      ],
+      "outputs": [
+        "Two page directions, then one selected complete responsive page/module package is the proposed default.",
+        "Hero/benefit/RTB images, native text/FAQ/CTA data, semantic HTML preview and CMS mapping."
+      ],
+      "acceptanceChecks": [
+        "All required modules, headings, links and FAQs present; responsive layout, keyboard access and image-off text checked.",
+        "No invented FAQ answers; HTML preview does not establish production CMS deployment."
+      ],
+      "implementationGap": "Module images alone exist as building blocks; page composition, semantic export and host integration are missing delivery work.",
+      "reviewDecision": "Choose HTML + structured CMS content as initial delivery, or name the CMS integration required for release.",
+      "scopeItems": [
+        {
+          "id": "scope-035",
+          "asset": "Landing-page hero",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-036",
+          "asset": "Benefit module",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-037",
+          "asset": "RTB / feature module",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-038",
+          "asset": "FAQ module content",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-039",
+          "asset": "CTA module",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "gbp",
+      "family": "Retail, local & partners",
+      "title": "Google Business Profile store posts",
+      "scopeIds": [
+        "scope-077",
+        "scope-078",
+        "scope-079",
+        "scope-080",
+        "scope-081",
+        "scope-082"
+      ],
+      "treatment": "Prioritise the local reason to act: store, event or offer. Keep the visual clear; address/date/action belong in native fields and must resolve to the correct outlet.",
+      "inputs": [
+        "Store identity/location, post type, valid offer/event dates, timezone and action URL.",
+        "Store data table for bulk variants and selected current GBP profile."
+      ],
+      "outputs": [
+        "Two image options per selected post; native post/event/offer/CTA fields and store mapping.",
+        "Bulk jobs return one explicit status per store; no publishing by default."
+      ],
+      "acceptanceChecks": [
+        "Store, address, dates and URLs match the same record; promotion terms retained.",
+        "Validate native required fields and target preview; failures cannot silently omit stores."
+      ],
+      "implementationGap": "Local image recipes exist; bulk store mappings, native profile validation and complete delivery need implementation.",
+      "reviewDecision": "Confirm update/event/offer modes and approved store data source; keep publishing out of initial handoff.",
+      "scopeItems": [
+        {
+          "id": "scope-077",
+          "asset": "Store / campaign banner",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-078",
+          "asset": "GBP update image + copy",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-079",
+          "asset": "GBP offer image + terms",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-080",
+          "asset": "GBP event image + details",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-081",
+          "asset": "CTA button-type choice",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-082",
+          "asset": "Bulk store versions",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "print",
+      "family": "Retail, local & partners",
+      "title": "Window, standee, wobbler, product card, wall & price artwork",
+      "scopeIds": [
+        "scope-083",
+        "scope-084",
+        "scope-085",
+        "scope-086",
+        "scope-087",
+        "scope-088",
+        "scope-089",
+        "scope-090"
+      ],
+      "treatment": "Choose hierarchy and image scale for installed viewing distance, physical fixture and substrate. Long-range signage needs fewer words; a handheld product card can carry more detail.",
+      "inputs": [
+        "Exact fixture/template, physical dimensions, safe zones, bleed/finishing and vendor requirements.",
+        "Vendor colour/output profile, actual reading distance, price/offer data, language and editable-source requirement."
+      ],
+      "outputs": [
+        "Two concepts per selected physical face, then production export of the selected concept is the proposed default.",
+        "PDF with correct physical boxes, RGB master and vendor-specific colour export where supported; calibrated proof tiles and preflight report.",
+        "Editable text/layout source if contracted; raster PDF is explicitly not a vector master or certified PDF/X."
+      ],
+      "acceptanceChecks": [
+        "Template clearances, dimensions, source PPI at final scale, small text and price terms checked.",
+        "Actual operator stock/colour/size proof bound to final file hash; no “press-approved” from digital preview alone."
+      ],
+      "implementationGap": "Vendor handoff and ICC raster conversion exist; editable production source, dielines/PDF-X where requested and actual physical acceptance remain gaps.",
+      "reviewDecision": "Confirm editable format and first vendor templates. No universal bleed, PPI or CMYK profile will be assumed.",
+      "scopeItems": [
+        {
+          "id": "scope-083",
+          "asset": "Window artwork",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-084",
+          "asset": "Roll-up standee",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-085",
+          "asset": "Wobbler",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-086",
+          "asset": "Product card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-087",
+          "asset": "Wall graphic",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-088",
+          "asset": "Price communication / price board",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-089",
+          "asset": "Regional-language print version",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-090",
+          "asset": "Dealer-customisable print version",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "retail-screen",
+      "family": "Retail, local & partners",
+      "title": "Retail screen stills",
+      "scopeIds": [
+        "scope-091",
+        "scope-092",
+        "scope-093"
+      ],
+      "treatment": "Communicate a product, offer or campaign at store viewing distance. Use sparse copy, large readable elements and screen-specific orientation; no print marks or tiny legal text.",
+      "inputs": [
+        "Screen resolution/orientation, screen-player format, viewing distance and dwell time.",
+        "Store/offer details and proof for any price or promotion."
+      ],
+      "outputs": [
+        "Two still options per selected screen profile, with filenames, schedule/expiry metadata and player handoff."
+      ],
+      "acceptanceChecks": [
+        "Check on the target display/player; offer terms readable at actual distance and no overscan clipping.",
+        "No motion/video deliverable implied by a still."
+      ],
+      "implementationGap": "Static generation exists; display/player profiles and installed viewing acceptance are not established.",
+      "reviewDecision": "Choose first landscape and portrait screen profiles and the store display owner for proof.",
+      "scopeItems": [
+        {
+          "id": "scope-091",
+          "asset": "Product information screen slide",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-092",
+          "asset": "Offer screen slide",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-093",
+          "asset": "Campaign still for retail screen",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "partners",
+      "family": "Retail, local & partners",
+      "title": "Partner announcements & co-branded toolkits",
+      "scopeIds": [
+        "scope-094",
+        "scope-095",
+        "scope-096",
+        "scope-097",
+        "scope-098"
+      ],
+      "treatment": "Balance both identities according to the supplied partnership rules while keeping a single message. Freeze lockup rules before expanding to the toolkit.",
+      "inputs": [
+        "Named primary brand, partner logo/guidelines and authorized partnership facts.",
+        "Approved lockup hierarchy, channel/size list and both approval owners."
+      ],
+      "outputs": [
+        "Two key-visual options; one selected toolkit adapted across the agreed formats with captions and editable copy.",
+        "Approval record references and exact logo/source versions included."
+      ],
+      "acceptanceChecks": [
+        "Partner relationship and claims true; lockup clearspace, colour and prominence follow supplied rules.",
+        "Cross-brand evidence is used only for this explicitly commissioned co-branding, never injected into the other workspace."
+      ],
+      "implementationGap": "Co-brand scope is listed; dedicated partner-source/approval contract and toolkit delivery need implementation.",
+      "reviewDecision": "Confirm partner approval flow and toolkit sizes; do not treat one internal brand approval as partner acceptance.",
+      "scopeItems": [
+        {
+          "id": "scope-094",
+          "asset": "Co-branded KV",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-095",
+          "asset": "Alliance announcement visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-096",
+          "asset": "Partner social post set",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-097",
+          "asset": "Partner toolkit package",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-098",
+          "asset": "Partner approval record",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "offers",
+      "family": "Retail, local & partners",
+      "title": "Offer, price, EMI & promotion communication",
+      "scopeIds": [
+        "scope-065",
+        "scope-066",
+        "scope-067",
+        "scope-068",
+        "scope-069",
+        "scope-070"
+      ],
+      "treatment": "Lead with an accurate commercial proposition and preserve readable conditions. Adapt hierarchy to channel and physical context rather than putting a price sticker on every artwork.",
+      "inputs": [
+        "Verified price/MRP/discount/EMI data, eligibility, validity, timezone and exclusions.",
+        "Partner lockup rules where applicable; selected target placement contracts."
+      ],
+      "outputs": [
+        "Two treatments per selected placement, plus structured offer/terms fields and expiry metadata.",
+        "Price changes produce new versions; affected adaptations listed explicitly."
+      ],
+      "acceptanceChecks": [
+        "Arithmetic, currency, dates, terms and source SKUs agree; no invented savings or financing claims.",
+        "All mandatory qualifiers remain readable at delivery size."
+      ],
+      "implementationGap": "Generic offer recipe exists; authoritative data validation, expiry handling and dependent-version propagation remain explicit work.",
+      "reviewDecision": "Choose authoritative price/offer owner and whether expired assets should be blocked from new export.",
+      "scopeItems": [
+        {
+          "id": "scope-065",
+          "asset": "Price card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-066",
+          "asset": "Promotion / festive-sale card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-067",
+          "asset": "EMI card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-068",
+          "asset": "Bank / EMI partner lockup",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-069",
+          "asset": "Validity and T&C variants",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-070",
+          "asset": "Catalogue-driven price update",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "email",
+      "family": "CRM & internal",
+      "title": "Responsive email & email images",
+      "scopeIds": [
+        "scope-119",
+        "scope-120",
+        "scope-131",
+        "scope-132",
+        "scope-133",
+        "scope-134",
+        "scope-135",
+        "scope-136",
+        "scope-137",
+        "scope-138",
+        "scope-139"
+      ],
+      "treatment": "Build a readable live-text message with an image that supports it. Subject/preheader/body/action form a coherent sequence; essential information survives images being blocked.",
+      "inputs": [
+        "ESP/template, audience/segment, subject objectives and verified product/offer facts.",
+        "Sender, footer, unsubscribe handling, links/tracking and token fallback schema; client test list."
+      ],
+      "outputs": [
+        "Two subject/preheader variants and two visual concepts; one selected complete email package per segment is proposed.",
+        "Responsive HTML, plain text, hero/module images, live copy, token map and link report.",
+        "Send-ready version uses verified HTTPS asset references under an agreed upload workflow; local preview is separate."
+      ],
+      "acceptanceChecks": [
+        "Render in agreed clients and mobile widths; image-off, dark mode, links, alt text and unsubscribe behavior checked.",
+        "No unresolved tokens; safe fallbacks and segment accuracy; copy/spam checks are advisory, not inbox-placement guarantees."
+      ],
+      "implementationGap": "HTML/plain-text packaging exists. Creation-route integration, verified hosted assets and target-client proof remain incomplete.",
+      "reviewDecision": "Confirm ESP, client test list and initial token set. Approve one final email after two concepts, not two fully built emails by default.",
+      "scopeItems": [
+        {
+          "id": "scope-119",
+          "asset": "Email header image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-120",
+          "asset": "Email product / content module image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-131",
+          "asset": "Subject line",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-132",
+          "asset": "A/B subject variants",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-133",
+          "asset": "Preheader",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-134",
+          "asset": "Email body modules",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-135",
+          "asset": "CTA copy",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-136",
+          "asset": "Daily / segment variants",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-137",
+          "asset": "Personalisation tokens and fallbacks",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-138",
+          "asset": "Spam-word check",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-139",
+          "asset": "Responsive HTML + plain-text email package",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "whatsapp",
+      "family": "CRM & internal",
+      "title": "WhatsApp card & Status",
+      "scopeIds": [
+        "scope-121",
+        "scope-122"
+      ],
+      "treatment": "Make a concise conversational visual and keep the action/longer detail in the native message. Status is vertical; a chat card uses its own selected image profile.",
+      "inputs": [
+        "Chat versus Status, organic share versus business-template send, provider profile.",
+        "Approved template/category if needed, message, links, tokens and exact source facts."
+      ],
+      "outputs": [
+        "Two complete image options per selected mode plus message/body/action fields and token mapping."
+      ],
+      "acceptanceChecks": [
+        "Both options pass; no missing second option hidden by a successful first.",
+        "Correct crop, readable CTA/terms and valid template fields; no send or template approval implied."
+      ],
+      "implementationGap": "Image route exists; a complete passing pair and native business-template delivery remain unproven as a full workflow.",
+      "reviewDecision": "Confirm chat card, Status, or both; identify the business-template provider if native send handoff is required.",
+      "scopeItems": [
+        {
+          "id": "scope-121",
+          "asset": "WhatsApp card",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-122",
+          "asset": "WhatsApp Status",
+          "recordedStatus": "Generated — checks unresolved"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "rcs",
+      "family": "CRM & internal",
+      "title": "RCS rich cards & carousels",
+      "scopeIds": [
+        "scope-123",
+        "scope-124"
+      ],
+      "treatment": "Compose image, native title/body and suggested action together. The media should not redundantly bake the full message into pixels. Carousel cards need distinct, connected content.",
+      "inputs": [
+        "RCS provider/agent, supported device capabilities, card orientation/media height and template.",
+        "Card count/order, title/body/actions, URLs and fallback message."
+      ],
+      "outputs": [
+        "Two visual directions; each selected direction delivers all N cards and a provider-mapped native payload.",
+        "Media files/URLs, text, suggested replies/actions and fallback content; preview per target device profile."
+      ],
+      "acceptanceChecks": [
+        "Required fields/limits and URL/media rules checked against the provider version; no orphaned action.",
+        "Actual device previews and capability fallback checked; an image gallery alone is not an RCS carousel."
+      ],
+      "implementationGap": "RCS authoring, payload mapping and device acceptance are missing delivery work.",
+      "reviewDecision": "Choose the RCS provider and first card template; confirm N before generating a carousel.",
+      "scopeItems": [
+        {
+          "id": "scope-123",
+          "asset": "RCS rich-card image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-124",
+          "asset": "RCS carousel image set",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "push",
+      "family": "CRM & internal",
+      "title": "Push notification image & icon",
+      "scopeIds": [
+        "scope-125",
+        "scope-126"
+      ],
+      "treatment": "The title/body must work without the optional image. Use one immediately recognisable subject and little or no embedded copy; app icon must remain authentic.",
+      "inputs": [
+        "Web/Android/iOS platform, notification service/SDK profile and target app icon.",
+        "Title/body, deep link, crop/size/byte limits and fallback behavior."
+      ],
+      "outputs": [
+        "Two image options for each chosen platform profile; approved icon derivative only where needed.",
+        "Native title/body/deep-link payload and image URL with delivery manifest."
+      ],
+      "acceptanceChecks": [
+        "Collapsed, expanded and image-unavailable states checked on target platforms.",
+        "Validate payload, deep links, byte limits and icon legibility; no generic cross-platform size assumed."
+      ],
+      "implementationGap": "Dedicated push profiles, native payload export and device previews are missing.",
+      "reviewDecision": "Name the notification provider and first supported platforms; choose image-free fallback text.",
+      "scopeItems": [
+        {
+          "id": "scope-125",
+          "asset": "Web-push image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-126",
+          "asset": "Web-push icon",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "retention",
+      "family": "CRM & internal",
+      "title": "Recommendation, bundle & retention content",
+      "scopeIds": [
+        "scope-127",
+        "scope-128",
+        "scope-129",
+        "scope-130"
+      ],
+      "treatment": "Use the approved segment or recommendation logic to select relevant products; then generate channel-appropriate education or offers. Creative generation must not invent eligibility or personal facts.",
+      "inputs": [
+        "Approved recommendation/bundle rules, eligible SKUs and segment definitions.",
+        "Source-backed bundle pricing, retention message and target channel contract."
+      ],
+      "outputs": [
+        "Two concept treatments per selected segment; channel-specific complete packages using email/WhatsApp/RCS/push contracts.",
+        "Product/segment/offer mapping and fallback for no eligible recommendation."
+      ],
+      "acceptanceChecks": [
+        "Correct products, compatibility and arithmetic; no fabricated personalised inference.",
+        "Each segment output passes its actual channel contract."
+      ],
+      "implementationGap": "No complete recommendation/retention journey is established; requires decision data and channel integration.",
+      "reviewDecision": "Confirm rule-based supplied segments for release; avoid claiming an implemented recommendation model.",
+      "scopeItems": [
+        {
+          "id": "scope-127",
+          "asset": "Product recommendation visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-128",
+          "asset": "Bundle visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-129",
+          "asset": "Educational retention visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-130",
+          "asset": "Retention offer visual",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "internal",
+      "family": "CRM & internal",
+      "title": "Employee communications & share kits",
+      "scopeIds": [
+        "scope-109",
+        "scope-110",
+        "scope-111",
+        "scope-112",
+        "scope-113",
+        "scope-114"
+      ],
+      "treatment": "Explain the event internally and make optional employee sharing easy. Separate internal facts from public share copy and keep sensitive material out of public derivatives.",
+      "inputs": [
+        "Approved launch/milestone facts, internal/public classification and employee audience.",
+        "Email/portal/share channel profiles, source images and allowed caption bank."
+      ],
+      "outputs": [
+        "One selected internal email/portal message plus two share-card options and caption bank as requested.",
+        "WhatsApp Status derivative and internal/public file separation; email follows the email contract."
+      ],
+      "acceptanceChecks": [
+        "No internal-only data in public cards or captions; dates, links and brand identity agree.",
+        "Actual native email/portal content delivered, not only a poster."
+      ],
+      "implementationGap": "Underlying image/email utilities exist; classification, kit assembly and channel routes remain missing.",
+      "reviewDecision": "Confirm who approves public employee-share copy and which internal destinations need native exports.",
+      "scopeItems": [
+        {
+          "id": "scope-109",
+          "asset": "Employee launch emailer",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-110",
+          "asset": "Employee milestone emailer",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-111",
+          "asset": "Internal app / portal alert",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-112",
+          "asset": "Employee WhatsApp status card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-113",
+          "asset": "Employee campaign share card",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-114",
+          "asset": "Employee caption bank",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "editorial",
+      "family": "PR & documents",
+      "title": "Articles, SEO/AEO content & editorial visuals",
+      "scopeIds": [
+        "scope-140",
+        "scope-141",
+        "scope-142",
+        "scope-143",
+        "scope-144",
+        "scope-145",
+        "scope-146",
+        "scope-147",
+        "scope-148",
+        "scope-149",
+        "scope-150",
+        "scope-151",
+        "scope-152",
+        "scope-153"
+      ],
+      "treatment": "Answer a real reader question with a sourced structure. Use explanatory imagery and diagrams where useful; the article is live/editable text, not a succession of generated text images.",
+      "inputs": [
+        "Topic, intent, audience, verified facts and permitted claims.",
+        "CMS schema, desired length, link destinations, keywords and illustration rights."
+      ],
+      "outputs": [
+        "Two outline/visual directions, then one complete selected article is proposed.",
+        "DOCX or structured CMS/HTML content; FAQs, links, metadata, schema inputs where justified; blog hero, OG 1200×630 client profile, infographic/illustration and alt text as selected."
+      ],
+      "acceptanceChecks": [
+        "Facts and references checked; no invented keyword volumes or promised rankings.",
+        "Visible FAQ matches structured data inputs; responsive text/links and illustration labels reviewed."
+      ],
+      "implementationGap": "Image primitives exist; sourced editorial authoring, structured CMS export and native document QA remain delivery gaps.",
+      "reviewDecision": "Confirm CMS format, target word range and which supporting visuals are mandatory per article.",
+      "scopeItems": [
+        {
+          "id": "scope-140",
+          "asset": "Article illustration",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-141",
+          "asset": "Blog hero image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-142",
+          "asset": "OG preview · 1200 × 630",
+          "recordedStatus": "Attempted — no image"
+        },
+        {
+          "id": "scope-143",
+          "asset": "Simple article infographic",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-144",
+          "asset": "Editorial image alt text",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-145",
+          "asset": "Long-form article",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-146",
+          "asset": "Article FAQ",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-147",
+          "asset": "Product links",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-148",
+          "asset": "SEO / AEO keywords",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-149",
+          "asset": "Meta title",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-150",
+          "asset": "Meta description",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-151",
+          "asset": "FAQ schema inputs",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-152",
+          "asset": "Internal-link plan",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-153",
+          "asset": "SEO landing-page / support copy",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "press-photos",
+      "family": "PR & documents",
+      "title": "High-resolution press & seeding imagery",
+      "scopeIds": [
+        "scope-154",
+        "scope-155",
+        "scope-156"
+      ],
+      "treatment": "Offer useful product and approved leadership photography with accurate caption/credit context. Preserve editorial usefulness rather than baking an advert headline into every press image.",
+      "inputs": [
+        "Exact product reference or approved genuine leadership photograph, permitted edits and rights.",
+        "Publisher’s pixel/print requirements, captions, credits, usage restrictions and kit list."
+      ],
+      "outputs": [
+        "Two product-image treatments if generation is requested; approved leadership assets remain authentic.",
+        "Full-resolution export, practical web preview, captions/credits and usage/source manifest."
+      ],
+      "acceptanceChecks": [
+        "Actual pixel dimensions and effective resolution measured; no fake detail from a larger export.",
+        "No synthetic portrait presented as an authentic executive photo; exact product identity preserved."
+      ],
+      "implementationGap": "Raster export exists; press-specific rights/caption packaging and publisher resolution acceptance need implementation.",
+      "reviewDecision": "Confirm minimum usable dimensions and authentic leadership sources; generated product scenes should remain identified in provenance.",
+      "scopeItems": [
+        {
+          "id": "scope-154",
+          "asset": "High-resolution product press image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-155",
+          "asset": "High-resolution leadership press image",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-156",
+          "asset": "Product seeding image pack",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=571846820"
+      ]
+    },
+    {
+      "id": "pr-docs",
+      "family": "PR & documents",
+      "title": "Fact sheet, release, demo guide & media Q&A",
+      "scopeIds": [
+        "scope-157",
+        "scope-158",
+        "scope-159",
+        "scope-160",
+        "scope-161",
+        "scope-162",
+        "scope-163",
+        "scope-164"
+      ],
+      "treatment": "Write for a journalist’s task: establish facts quickly, explain a reproducible demo and separate approved statements from proposed messaging. An unapproved quote stays visibly draft.",
+      "inputs": [
+        "Verified product/corporate facts, actual demo procedure and evidence.",
+        "Approved spokesperson quotations or explicit draft-quote assignment, contact details and reviewer kit requirements."
+      ],
+      "outputs": [
+        "One selected editable DOCX and accessible PDF per requested document; two outlines for long-form pieces proposed.",
+        "Fact sheet, demo guide, reviewer brief, press kit text, release and Q&A only as selected; review-acquisition process document, not fabricated reviews."
+      ],
+      "acceptanceChecks": [
+        "Numbers, dates and claims trace to sources; no quote approved by inference.",
+        "Page layout, text selection, links and captions checked; demo instructions usable and safe for the specified product."
+      ],
+      "implementationGap": "Native PR writing, approval-state handling and DOCX/PDF export QA remain missing delivery routes.",
+      "reviewDecision": "Confirm document lengths and quote approval owner; decide which pieces are mandatory in one launch press kit.",
+      "scopeItems": [
+        {
+          "id": "scope-157",
+          "asset": "Product fact sheet",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-158",
+          "asset": "Demo guide",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-159",
+          "asset": "Reviewer brief",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-160",
+          "asset": "Product kit text",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-161",
+          "asset": "Press release draft",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-162",
+          "asset": "Spokesperson quote draft / approved quote",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-163",
+          "asset": "Media Q&A",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-164",
+          "asset": "Review acquisition / verified-review workflow plan",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "training",
+      "family": "PR & documents",
+      "title": "Training decks, sales sheets, FAQs & scripts",
+      "scopeIds": [
+        "scope-165",
+        "scope-166",
+        "scope-167",
+        "scope-168",
+        "scope-169",
+        "scope-170",
+        "scope-171",
+        "scope-172",
+        "scope-173",
+        "scope-174",
+        "scope-175"
+      ],
+      "treatment": "Teach a salesperson what to notice, explain, demonstrate and answer. Structure learning and objections around evidence, with speaker notes and usable scripts rather than dense poster slides.",
+      "inputs": [
+        "Learning goals, audience, product/range sources and approved selling/service claims.",
+        "Sourced competitor data, objection list, call context, language and quiz objectives."
+      ],
+      "outputs": [
+        "Two outlines then one editable 16:9 PPTX + PDF for a selected deck; proposed starting length 12–16 slides, adjustable.",
+        "Native FAQ, mobile quick reference, battlecard, objection sheet, assisted-call/CRM scripts, one-pager and quiz/answer key in DOCX/PDF/structured text as selected."
+      ],
+      "acceptanceChecks": [
+        "Editable text/shapes, no image-only deck pretending to be native.",
+        "Notes, answers and claims consistent; page/slide overflow, reading size, links and language checked."
+      ],
+      "implementationGap": "Content source ingestion does not establish native authoring. Deck/document generation and render-and-review exports are still needed.",
+      "reviewDecision": "Approve default native formats and choose a first training outline. Confirm when competitor material may be used.",
+      "scopeItems": [
+        {
+          "id": "scope-165",
+          "asset": "Training deck · 16:9 PPT/PDF",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-166",
+          "asset": "Product story document",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-167",
+          "asset": "Product FAQs",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-168",
+          "asset": "Mobile reference sheet",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-169",
+          "asset": "Competitor battlecard",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-170",
+          "asset": "Objection-handling script",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-171",
+          "asset": "Assisted-sales / call script",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-172",
+          "asset": "Product cheat sheet / sales one-pager",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-173",
+          "asset": "CRM script",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-174",
+          "asset": "Training quiz / answer key",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-175",
+          "asset": "Regional-language training version",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "cx",
+      "family": "PR & documents",
+      "title": "CX SOPs, service FAQs & escalation scripts",
+      "scopeIds": [
+        "scope-176",
+        "scope-177",
+        "scope-178",
+        "scope-179",
+        "scope-180",
+        "scope-181"
+      ],
+      "treatment": "Help an operator perform the correct action under the actual policy. Use decision steps, exceptions and escalation ownership; do not let creative inference change a customer entitlement.",
+      "inputs": [
+        "Approved policy version, service/installation procedures, escalation contacts and authorised promises.",
+        "Audience, channels, languages, effective date and policy-change owner."
+      ],
+      "outputs": [
+        "One versioned editable SOP/FAQ/script set plus PDF, decision flow and structured response templates.",
+        "Policy change log, owner/effective date and links to source policy; no alternative invented policies as creative options."
+      ],
+      "acceptanceChecks": [
+        "Every branch has a valid action/owner; no unsupported refund, warranty, SLA or installation promise.",
+        "Scenario walkthroughs including exceptions; source and output policy versions agree."
+      ],
+      "implementationGap": "No complete policy-bound CX authoring/export workflow is established; requires authoritative source integration.",
+      "reviewDecision": "Confirm policy owner and first service scenarios. Mandatory owner sign-off remains distinct from AI review.",
+      "scopeItems": [
+        {
+          "id": "scope-176",
+          "asset": "CX SOP",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-177",
+          "asset": "Service / installation FAQ",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-178",
+          "asset": "Escalation guide",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-179",
+          "asset": "Policy update",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-180",
+          "asset": "Customer response templates",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-181",
+          "asset": "Local-language operational scripts",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "catalogues",
+      "family": "Catalogues",
+      "title": "Regional GT & full-range COCO catalogues",
+      "scopeIds": [
+        "scope-182",
+        "scope-183",
+        "scope-184",
+        "scope-185",
+        "scope-186",
+        "scope-187",
+        "scope-188",
+        "scope-189"
+      ],
+      "treatment": "Organise the actual sellable range for the audience and region. Use repeatable product layouts and accurate comparison/navigation; a catalogue is a structured publication, not a one-SKU launch multiplied.",
+      "inputs": [
+        "Frozen authorised SKU range: regional GT mattresses; COCO mattresses/furniture/accessories as selected.",
+        "Region/language, spec/price/availability snapshot and source images; digital/print templates and vendor profile."
+      ],
+      "outputs": [
+        "Two cover/spread directions then one selected complete catalogue per range/region/language is proposed.",
+        "Digital PDF with navigation, editable layout/source and content table; separate print edition under the print contract.",
+        "SKU index, page manifest, source/date references and controlled price/spec update report."
+      ],
+      "acceptanceChecks": [
+        "Every included SKU matches its row, image, variant, price and region; no missing or duplicate pages/products.",
+        "Contents/index/links, pagination, typography and language proof checked; print edition separately released."
+      ],
+      "implementationGap": "Full-range dataset assembly, pagination, native layout authoring and controlled update export remain missing.",
+      "reviewDecision": "Choose first GT region and COCO categories, authoritative range/price files and required editable layout format. One saved mattress cannot prove full-range delivery.",
+      "scopeItems": [
+        {
+          "id": "scope-182",
+          "asset": "GT region-wise mattress catalogue",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-183",
+          "asset": "COCO full-range mattress catalogue",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-184",
+          "asset": "COCO furniture catalogue",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-185",
+          "asset": "COCO accessories catalogue",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-186",
+          "asset": "Digital catalogue PDF",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-187",
+          "asset": "Print catalogue version",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-188",
+          "asset": "Regional-language catalogue edition",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-189",
+          "asset": "Catalogue-driven price / specification update",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "resize",
+      "family": "Versions & adaptations",
+      "title": "Resize, crop & reflow batches",
+      "scopeIds": [
+        "scope-190",
+        "scope-191",
+        "scope-192",
+        "scope-193",
+        "scope-194"
+      ],
+      "treatment": "Resolve each target composition independently while preserving the approved idea. Crop only where the product and message survive; reflow text or rebuild a layout when needed.",
+      "inputs": [
+        "Selected approved source version/hash and exact target profiles, copy locks and crop permissions."
+      ],
+      "outputs": [
+        "One derivative per target from the selected source; no automatic second concept.",
+        "Per-size preview, naming/export map and parent/child manifest."
+      ],
+      "acceptanceChecks": [
+        "Actual dimensions, readable copy, full required elements and SKU identity checked per target.",
+        "Parent approval is not inherited as proof for a changed crop or layout."
+      ],
+      "implementationGap": "Lower-level editing/versioning exists; complete batch UI and per-target acceptance need implementation.",
+      "reviewDecision": "Approve one derivative per target; specify which changes can be automatic versus require a new creative direction.",
+      "scopeItems": [
+        {
+          "id": "scope-190",
+          "asset": "Agreed-format batch resize",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-191",
+          "asset": "Smart crop per format",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-192",
+          "asset": "Text reflow per format",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-193",
+          "asset": "Per-size quality check",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-194",
+          "asset": "Batch export / naming",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "localisation",
+      "family": "Versions & adaptations",
+      "title": "Language & transcreation editions",
+      "scopeIds": [
+        "scope-195",
+        "scope-196",
+        "scope-197",
+        "scope-198",
+        "scope-199",
+        "scope-200"
+      ],
+      "treatment": "Preserve meaning, qualifiers and tone while adapting idiom and layout. Language changes can require new line breaks and spacing; translation is not a text-length swap.",
+      "inputs": [
+        "Selected source version, target languages/locales, terminology and locked product/legal names.",
+        "Licensed script-capable fonts and native reviewer availability."
+      ],
+      "outputs": [
+        "One complete edition per chosen language; source/translation alignment and font/export evidence.",
+        "English, Hindi, Hinglish, Kannada, Tamil, Telugu, Malayalam and Gujarati scope retained; Marathi/Bengali remain explicit review choices."
+      ],
+      "acceptanceChecks": [
+        "Native-language meaning check; Indic shaping, font embedding, clipping and factual qualifiers verified.",
+        "No replacement of missing glyphs or unjustified translation of trademarks; new artwork checked at intended size."
+      ],
+      "implementationGap": "Versioned copy/translation utilities exist; complete locale coverage, native review and delivery paths remain unproven.",
+      "reviewDecision": "Choose initial languages and reviewers; do not call unreviewed machine translation language-approved.",
+      "scopeItems": [
+        {
+          "id": "scope-195",
+          "asset": "English / Hindi / Hinglish",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-196",
+          "asset": "Kannada / Tamil / Telugu / Malayalam / Gujarati",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-197",
+          "asset": "Transcreation / cultural adaptation",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-198",
+          "asset": "Indic font rendering / export",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-199",
+          "asset": "Native-language reviewer QC",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-200",
+          "asset": "Marathi / Bengali consideration",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "store-versions",
+      "family": "Versions & adaptations",
+      "title": "Store, city & local-offer batches",
+      "scopeIds": [
+        "scope-201",
+        "scope-202",
+        "scope-203",
+        "scope-204",
+        "scope-205"
+      ],
+      "treatment": "Use structured local data to create the right address, offer and action for each location. Do not infer a store’s details from a similar name or another city.",
+      "inputs": [
+        "Versioned store CSV/schema with unique IDs, city/address, language, offer and valid destinations.",
+        "Selected source master, QR/map rules, expiry/timezone and approval owner."
+      ],
+      "outputs": [
+        "One complete derivative per valid requested store/profile/language combination; explicit rejected-row report.",
+        "QR/map destination manifest, row-to-file mapping and ZIP per batch."
+      ],
+      "acceptanceChecks": [
+        "Address, offer and language belong to the same row; QR codes scan and resolve to intended destinations.",
+        "No cross-store field leakage; all rows accounted for including missing/duplicate IDs."
+      ],
+      "implementationGap": "Batch row validation, QR checking and resumable adaptation delivery remain missing end-to-end work.",
+      "reviewDecision": "Approve strict row validation with clear failures; confirm whether any partial valid-row delivery is allowed.",
+      "scopeItems": [
+        {
+          "id": "scope-201",
+          "asset": "Store CSV batch",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-202",
+          "asset": "City / store name and address versions",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-203",
+          "asset": "Store-specific language / offer",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-204",
+          "asset": "QR / map destination",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-205",
+          "asset": "Per-store offer validation",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    },
+    {
+      "id": "personalisation",
+      "family": "Versions & adaptations",
+      "title": "Personalised & CRM-merged versions",
+      "scopeIds": [
+        "scope-206",
+        "scope-207",
+        "scope-208",
+        "scope-209",
+        "scope-210",
+        "scope-211"
+      ],
+      "treatment": "Personalise only the authorised fields. Keep messages understandable with safe defaults, and prevent one recipient’s data appearing in another recipient’s output.",
+      "inputs": [
+        "Approved data-handling/consent scope, customer/dealer token schema and safe fallbacks.",
+        "Selected master/channel profile and destination/access policy for personalised outputs."
+      ],
+      "outputs": [
+        "One output per authorised record or a provider-side merge template, according to the chosen channel.",
+        "Synthetic sample preview, token mapping, record reconciliation and restricted export manifest."
+      ],
+      "acceptanceChecks": [
+        "Missing, long, Unicode and unsafe input values tested; tokens escaped and no cross-record leakage.",
+        "No personal data in public CDN/Git manifests; access/retention policy checked before any real-data run."
+      ],
+      "implementationGap": "No complete privacy-aware personalisation journey is established; generic CDN defaults are insufficient for recipient-specific content.",
+      "reviewDecision": "Prefer provider-side text merging where possible. Confirm private storage/access and retention before using customer data.",
+      "scopeItems": [
+        {
+          "id": "scope-206",
+          "asset": "Customer-name version",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-207",
+          "asset": "Dealer-name version",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-208",
+          "asset": "CRM data merge",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-209",
+          "asset": "Missing-field fallback",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-210",
+          "asset": "Consent / privacy checks",
+          "recordedStatus": "Not tested in Airboost batch"
+        },
+        {
+          "id": "scope-211",
+          "asset": "QC sample preview before send",
+          "recordedStatus": "Not tested in Airboost batch"
+        }
+      ],
+      "status": "Proposed — not approved or a runtime configuration",
+      "sources": [
+        "https://docs.google.com/spreadsheets/d/1jLkA_CIPf62gXiRfdyRi0fbzF0D94rPosU8yKgLD_Wk/edit#gid=1818721721",
+        "https://docs.google.com/spreadsheets/d/1JABcdJo1HL-YJCUvInoU02vhjlrJ3WGuGbgqtCIkVN8/edit#gid=2077181170"
+      ]
+    }
+  ]
+}

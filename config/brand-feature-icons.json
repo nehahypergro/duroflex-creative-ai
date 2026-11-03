@@ -1,0 +1,43 @@
+{
+  "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de": [
+    {
+      "id": "asset-2881e890437e592243fd8213",
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "kind": "image",
+      "featureIcon": true,
+      "name": "100-night trial",
+      "filename": "asset-2881e890437e592243fd8213.svg",
+      "sha256": "2881e890437e592243fd8213d449552154430e7a3ff128f6332cc6e896963b91",
+      "url": "/creative-ai/api/brands/brand-3a5870df-d114-43eb-ba02-e5d8c3c729de/canvas-assets/asset-2881e890437e592243fd8213.svg",
+      "sourceReference": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_100_Nights_Free_Trail.svg?v=4993833255583898332",
+      "productSource": "https://mysleepyhead.com/products/original-3-layered-bodyiq-orthopedic-memory-foam-mattress",
+      "applicability": "Original mattress; verify selected SKU supports this feature before use"
+    },
+    {
+      "id": "asset-be9d8dd31e3f7e44accffe93",
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "kind": "image",
+      "featureIcon": true,
+      "name": "Pressure relief",
+      "filename": "asset-be9d8dd31e3f7e44accffe93.svg",
+      "sha256": "be9d8dd31e3f7e44accffe937e7fa048a089f9fa90d3dc3ab8120d2b01068d1f",
+      "url": "/creative-ai/api/brands/brand-3a5870df-d114-43eb-ba02-e5d8c3c729de/canvas-assets/asset-be9d8dd31e3f7e44accffe93.svg",
+      "sourceReference": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Preasure_Relief_Sleep.svg?v=14284801494349883673",
+      "productSource": "https://mysleepyhead.com/products/original-3-layered-bodyiq-orthopedic-memory-foam-mattress",
+      "applicability": "Original mattress; verify selected SKU supports this feature before use"
+    },
+    {
+      "id": "asset-8ac321fcbdc54dd866f3d9cf",
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "kind": "image",
+      "featureIcon": true,
+      "name": "Zero motion transfer",
+      "filename": "asset-8ac321fcbdc54dd866f3d9cf.svg",
+      "sha256": "8ac321fcbdc54dd866f3d9cffa2d3552b60687f334f08f0b97514f62e1edbf38",
+      "url": "/creative-ai/api/brands/brand-3a5870df-d114-43eb-ba02-e5d8c3c729de/canvas-assets/asset-8ac321fcbdc54dd866f3d9cf.svg",
+      "sourceReference": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Zero_Motion_Transfer.svg?v=18189233046525080115",
+      "productSource": "https://mysleepyhead.com/products/original-3-layered-bodyiq-orthopedic-memory-foam-mattress",
+      "applicability": "Original mattress; verify selected SKU supports this feature before use"
+    }
+  ]
+}

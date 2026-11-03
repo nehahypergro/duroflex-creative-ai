@@ -1,0 +1,10 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict'),{project,diagnose}=require('../../lib/creative-ai/runtime/component-recovery');
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': isolate failures and preserve ready siblings without mutation',()=>{const job={status:'partial',intake:{brandId:brand,conceptRoutes:['continuity']},selection:[{id:'a'},{id:'b'},{id:'c'}],results:[{route:'continuity',placementId:'a',imageUrl:'/a.png',ready:true},{route:'continuity',placementId:'b',imageUrl:'/b.png',ready:false,validation:['Unwanted embedded campaign text']}],unitErrors:[{route:'continuity',placementId:'c',error:'Generated headline is below the pinned viewing-size target'}]};const before=JSON.stringify(job),r=project(job);assert.equal(r.ready,1);assert.equal(r.needsAttention,2);assert.equal(r.units[2].issues[0].component,'typography');assert.equal(r.units[1].issues[0].component,'background');assert.equal(JSON.stringify(job),before);});
+test('invalid requests are diagnostic, never automatic retries',()=>{const d=diagnose('Reasoning provider request failed (400)');assert.equal(d.component,'request');assert.equal(d.automaticRepairAvailable,false);});
+test('missing results do not imply generation or review passed',()=>{const r=project({status:'failed',selection:[{id:'a'}]});assert.equal(r.ready,0);assert.equal(r.units[0].savedImage,false);assert.equal(r.units[0].status,'pending');});
+test('missing optional artifact directory does not hide saved job or provider-waiting status',async()=>{
+ const job={id:'missing-files',status:'running',intake:{conceptRoutes:['continuity']},selection:[{id:'a'}],results:[]};
+ const result=await require('../../lib/creative-ai/runtime/component-recovery').view({store:{dir:()=>'/nonexistent-component-fixture'}},job);
+ assert.equal(result.artifactInspectionUnavailable,true);assert.equal(result.units[0].components.copy,'unknown');assert.equal(result.units[0].components.scene,'unknown');assert.equal(result.ready,0);
+});

@@ -1,0 +1,91 @@
+CREATIVE AI IMAGE SCOPE — VOICE REVIEW
+Date: 24 October 2026
+Review ongoing. This file records user decisions and remaining work, not client approval of generated artwork.
+
+STATUS DEFINITIONS
+Built: connected implementation, with functional checks recorded.
+Partial: existing building blocks but a required workflow/delivery gap remains.
+Pending: no complete creation route yet.
+Source acceptance, implementation status and final artwork approval are separate.
+
+CONFIRMED SCOPE DECISIONS
+- Remove standalone campaign master key visual.
+- Remove Instagram poll-frame and countdown-frame deliverables: native interactions are added during publishing.
+- Exact-SKU official website is final client-approved source for technical/CGI imagery, construction, layers/foam/springs, certifications, warranty, guarantees and product statements. No extra independent proof or source reapproval. Preserve wording, qualifiers, issuer and variant scope. Source acceptance does not approve the generated output.
+- Current brief is authoritative for price, offer, festive-sale and EMI/bank terms and supplied verification/approval. Do not import website offers or infer missing values.
+- Accept attributed expert quotes/proof explicitly supplied in the current brief. Do not fabricate quotes or call client acceptance independent authentication.
+- Standalone comparison card stays Partial and ON HOLD.
+- Demonstration/proof visual stays Partial; actual supplied evidence and final client review remain necessary.
+- Meta feature/story/comparison carousel stays Partial. Comparison inputs do not block independent feature/story work.
+- Split LinkedIn feature, story and comparison carousels. Comparison stays on hold; user authorized completing dedicated LinkedIn feature/story routes and document handoff.
+- Track PMax as ONE image-set requirement with brief-selected landscape/square/portrait ratios. User authorized UI selection, ratio-specific treatment, grouped generation and complete image-set checks. Native headlines/logos remain separate from images. No campaign publishing is implied.
+- Meme/trend static stays Partial: requires separate intelligence/logic.
+- Creator/BTS/testimonial still adaptation stays Partial: requires separate adaptation logic and actual client source material.
+
+CLIENT INPUTS / DECISIONS STILL NEEDED
+1. Comparisons: exact products/subjects, attributes, comparison purpose and source data. Until supplied, comparison remains on hold.
+2. Demonstration/proof: actual demonstration/test evidence to depict and final client artwork review. Do not invent tests or results.
+3. Creator/BTS/testimonial adaptation: actual footage/stills and authentic speaker/quote/context supplied by client; identify the approved material and intended adaptation.
+4. Meme/trend work: selected trend/reference, intended audience/context and brand suitability direction; separate logic remains deferred.
+5. Website deployment: actual homepage component/container and responsive behaviour, if true site integration is requested. A brief-specified desktop hero may still be generated without these deployment details.
+6. Offer amounts, dates, eligibility and terms are inputs in each current brief, not a separate external verification request.
+Do not ask again for independent technical/certificate/warranty proof merely to reuse accepted official website statements or original images.
+
+SEPARATE LOGIC / WORKFLOWS
+- Meme/trend intelligence: context, relevance, reference handling and brand-fit treatment.
+- Creator/BTS/testimonial adaptation: source-led selection, framing, attribution and versioning; retain original meaning and evidence.
+- Comparison planning: only after client supplies comparison subjects/data.
+- Responsive website delivery: actual component crops, focal position, file variants and breakpoint checks.
+
+IMPLEMENTATION STATUS AT THIS CHECKPOINT
+- Website source policy: broader scoped implementation written; focused checks pass for both brands. Running Studio needs safe activation of new code.
+- Brief offer/expert source policy: source-bound current-brief facts and shared treatment instructions written; focused checks pass. Long or ambiguous text is not silently truncated or fabricated.
+- Social landscape: UI selector, exact backend route, reload/submission/download and export-dimension checks pass for both brands using mocked generation. Marked Built; live artwork quality is separate.
+- Offer Story: connected Story route and terms-preserving readiness/export checks pass for both brands offline. Marked Built; choose organic/paid context and inspect actual artwork safe areas/readability.
+- LinkedIn carousel: dedicated backend presets and treatment mapping added. Dedicated UI choices/document delivery are still in progress; not marked Built yet.
+- PMax: rules and packaging building blocks exist. UI, creation route and complete-set workflow are authorized and still in progress; not marked Built yet.
+- Desktop homepage hero: exact-size generation route exists. Actual website component/responsive delivery remain Partial; those checks must not become a source-verification blocker for image creation.
+
+TEST BOUNDARIES
+All checks described here are offline/mocked unless explicitly stated otherwise. They do not establish live artwork quality, publisher acceptance or client approval. No new paid generation or historical cost change is authorized by these scope edits.
+
+LATEST DECISION — DESKTOP HERO
+User approved marking desktop homepage hero image creation Built. The existing route creates the requested image. Checking the client website crop/display after upload is a separate deployment task, not a blocker for creation.
+
+LATEST DECISIONS — WEBSITE AND DEFERRED LOGIC
+- Mobile hero image creation: Built under the same definition as desktop; real-site cropping remains separate.
+- Website banner: correct Home/tools labels to match the connected 1920 x 640 export. Creation is connected; verification of UI labels/export in progress.
+- Homepage category tile: user authorized adding the selector and brief-to-backend connection for one representative saved product at chosen dimensions. Implementation and tests in progress.
+- Category/collection card: keep Partial and separate, deferred for client help. Need product membership, intended presentation and whether multiple products appear together; additional UI and composition logic remain. Do not fold this into the single-product category tile.
+- Meme/trend static and creator/BTS/testimonial adaptation remain separate Partial workflows.
+
+HOMEPAGE MULTI-CATEGORY CAMPAIGN MODULE — EXPLANATION
+Pending: it is a coordinated website section spanning several categories, products, destinations and images. Need client section layout/template, category priorities, category-to-product/link mapping and responsive arrangement. Individual image generation does not implement the grouped module workflow. No decision to build or defer this module has been made yet.
+
+LATEST DECISIONS — MULTI-CATEGORY AND LANDING HERO
+- Homepage multi-category module: Pending + client input. Client to supply section layout/template, category priorities and category-to-product/link mapping. User explicitly deferred implementation.
+- Landing-page hero image creation: Built, using the same existing website-image workflow. Actual page/component fit and publishing remain separate.
+- Website campaign banner creation: Built at its connected 1920 x 640 preset; Home/tools labels now agree with the exported size.
+
+LATEST DECISIONS — LANDING MODULES, WEB EXPORT AND AMAZON PRESETS
+- Landing-page benefit/RTB/feature imagery: Partial. Individual images exist; coordinated module-set brief, ordering and component-specific delivery remain separate. No client decision to build the coordinated set was made.
+- Web-optimised delivery: user authorized connecting WebP export. Added individual WebP conversion for original and latest edited artwork, retaining saved originals. Static set ZIP can include responsive aspect-preserving WebP derivatives using the shared PDP export step. Original bytes, source hashes and review flags stay intact. Website-specific byte ceilings, alt text, component/crop integration and compressed-artwork acceptance remain separate; no universal performance guarantee.
+- Amazon A+ feature: user approved a named preset for Standard Single Image Highlights (300 x 300 image slot). Native Amazon text fields and account publishing remain separate.
+- Amazon Brand Story: user approved named preset mapping. Starter has 1464 x 625 desktop background, 463 x 625 mobile background, and two 362 x 453 media cards in one existing A+ image collection. Two cards are a Studio starter choice, not an Amazon-required card count. Other Brand Story modules (ASIN/store, About/logo, Q&A) are not implemented by this starter.
+- Amazon A+ lifestyle: user approved a named preset tied to Standard Image Header with Text (970 x 600 image slot). Lifestyle is a treatment, not a universal Amazon size.
+- User explicitly deferred dedicated format strategy and artwork/readability work to a separate pass/main chat. This pass connects UI choices, module sizes, existing planning/generation and collection delivery; it does not approve artwork or change existing quality gates.
+- Presets use the existing exact-SKU product-focused Studio route for both brands. Brand-only generation without selecting a saved product remains outside this implementation.
+
+VERIFICATION — AMAZON / WEBP
+- Both-brand named presets: slot dimensions, source-bound saved-SKU readiness, reload, read-only slot dimensions and existing grouped route checked offline.
+- Browser paths cover generic recipes plus new PMax/LinkedIn/tile choices, with no paid generation. Recorded provider handoffs and full offline suite are being checked; final result is saved separately under work/format-treatment-20261024.
+- Technical sources: Amazon SP-API A+ Content Examples (current page inspected); Brand Story module dimensions from official indexed API excerpt. Publishing eligibility and store/account acceptance remain separate.
+- The live server was not restarted from this side chat. Public UI files are served fresh; cached backend modules may require the main thread's coordinated safe reload. No main-thread jobs, budgets or reviews were changed by this UI verification.
+
+FINAL VERIFICATION — CURRENT CHECKPOINT
+- 82/82 complete browser checks pass after the download completion-message correction, including the new presets, both brands, original/edited WebP, collections and navigation.
+- Shared offline suite completed 1,350 checks: 1,349 passed; the sole failure was the old expected completion message, corrected and covered by the subsequent complete 82-test browser rerun. Unaffected suite results remain preserved; no historical evidence was rewritten.
+- Both saved-brand handoff replay reports: zero failed stages and no new paid model calls.
+- New Amazon preset tests: 6 cases passed; saved-product readiness covers each preset in each brand. WebP ZIP derivative tests pass in both brands, preserving source hashes, originals and review flags.
+- Live server serves byte-identical current studio.js/studio-model.js. Non-mutating rejection probes confirm the running preset guard and WebP package guard are loaded. No restart was needed.
+- Scope panel marks the three Amazon IMAGE-CREATION preset capabilities Built; strategy, readable/approved artwork, native field packages and Amazon submission remain separate. Complete A+ page and platform-wide selection are not marked complete by these three starters.

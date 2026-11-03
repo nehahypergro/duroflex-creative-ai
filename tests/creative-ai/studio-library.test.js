@@ -21,3 +21,14 @@ test('Product list combines query/category/images filters and stable sorting wit
 });
 
 test('Uncategorized products remain filterable',()=>{assert.equal(L.products([{id:'u',name:'Unsorted'}],{category:'Uncategorized'}).length,1);});
+
+test('Product errors distinguish access, connection, timeout, service and display failures without leaking details',()=>{
+ assert.match(L.productError({status:401}),/session has expired/);
+ assert.match(L.productError({status:403}),/does not have access/);
+ assert.match(L.productError(Error('Failed to fetch')),/could not connect/);
+ assert.match(L.productError(Error('request timed out')),/too long/);
+ assert.match(L.productError({status:503}),/service encountered an error/);
+ assert.match(L.productError(TypeError('private /Users/name/profile.json'),'display'),/page error/);
+ assert.doesNotMatch(L.productError(Error('private /Users/name/profile.json')),/\/Users|profile.json/);
+ assert.match(L.productError(Error('unrecognised')),/did not provide a recognised reason/);
+});

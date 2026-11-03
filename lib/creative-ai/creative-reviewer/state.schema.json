@@ -22,7 +22,8 @@
         "initial-review",
         "correction-planned",
         "final-review",
-        "terminal"
+        "terminal",
+        "preflight-generation"
       ]
     },
     "correctionCycles": {
@@ -109,6 +110,33 @@
           "type": "string"
         },
         "reportHash": {
+          "type": "string"
+        }
+      }
+    },
+    "preflightRecovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "previousPackageHash",
+        "previousReportHash",
+        "packageHash"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "reserved",
+            "generated"
+          ]
+        },
+        "previousPackageHash": {
+          "type": "string"
+        },
+        "previousReportHash": {
+          "type": "string"
+        },
+        "packageHash": {
           "type": "string"
         }
       }

@@ -115,3 +115,11 @@ test('Rationale includes saved defects and verification gaps without inventing e
 test('Rationale groups repeated missing-review checks and keeps logo excerpts relevant',()=>{
  const checks=['logo-identity','product-identity','supported-claims'].map(criterion=>({criterion,status:'unknown',evidence:{method:'unavailable',observation:'No qualified evaluator evidence available.'}})),deps=checks.map(c=>({criterion:c.criterion,request:'Focused evidence verification for '+c.criterion}));const data=M.reviewSummary({plannedArt:{composition:'Keep the product central; place headline on the left; keep the logo in the top-right corner.'},review:{criticalChecks:checks,verificationDependencies:deps}},{unresolved:[...checks.map(c=>({criterion:c.criterion,status:'unknown',note:c.evidence.observation})),...deps]});assert.equal(data.concerns.length,1);assert.match(data.concerns[0].observation,/Logo.*Product accuracy.*Claims/);assert.match(data.decisions[2].text,/logo in the top-right/);assert.ok(!data.decisions[2].text.includes('product central'));
 });
+
+test('Rationale uses plain display copy while preserving the saved plan',()=>{
+ const original='The exact Cocoon sofa is the hero; the adults’ natural shared moment contextualizes the sourced extra-deep seating.';
+ const data=M.reviewSummary(null,{conceptExplanation:{takeaway:original}});
+ assert.equal(data.decisions[0].text,original);
+ assert.equal(data.decisions[0].displayText,'Cocoon sofa is the focus; a relaxed moment together shows the extra-deep seating.');
+ assert.equal(data.decisions[0].basis,'intent');assert.equal(data.reviewAvailable,false);
+});

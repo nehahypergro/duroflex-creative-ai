@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "threshold": 75,
+  "minimumEvidenceConfidence": 0.7,
+  "maxCorrectionCycles": 1,
+  "weights": {
+    "communication": 30,
+    "brandRecognition": 25,
+    "placementFit": 20,
+    "visualCraft": 15,
+    "emotionalAudienceFit": 10
+  },
+  "criticalCriteria": [
+    "logo-identity",
+    "product-identity",
+    "supported-claims",
+    "exact-required-copy",
+    "required-text-legibility",
+    "mandatory-brand-rules",
+    "verified-upload-constraints",
+    "reference-boundary"
+  ],
+  "status": "initial-uncalibrated-policy",
+  "limits": [
+    "Weights, threshold and confidence floor are starting policy, not empirical performance or human approval guarantees.",
+    "Inferred preferences are advisory; exploration is evaluated for its own concept intent.",
+    "Rendering tolerance is criterion-specific; exact wording remains exact, while identity is compared semantically rather than by pixel equality.",
+    "Emotional audience fit is an advisory creative judgment, excluded from the delivery score and confidence gate. Remaining weights are normalised."
+  ],
+  "advisoryQualityCriteria": [
+    "emotionalAudienceFit"
+  ]
+}

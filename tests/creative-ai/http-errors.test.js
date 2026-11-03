@@ -8,10 +8,11 @@ test('failed creative saves report disk exhaustion without leaking internal path
  const root=await fs.mkdtemp(path.join(os.tmpdir(),'creative-http-errors-'));
  t.after(()=>fs.rm(root,{recursive:true,force:true}));
  const app=createHandler({root,dossierStore:{}});
+ const job=await app.runtime.store.create({brandId:'brand-disk-fixture'},app.runtime.config,[]);
  app.runtime.refinements.create=async()=>{throw Object.assign(new Error("ENOSPC: open '/private/internal/job.json.pending'"),{code:'ENOSPC'});};
  let status,body;
  const res={writeHead(code){status=code;},end(value){body=JSON.parse(value);}};
- assert.equal(await app.handle({method:'POST'},res,'/creative-ai/api/jobs/creative-test/versions',async()=>({})),true);
+ assert.equal(await app.handle({method:'POST'},res,'/creative-ai/api/jobs/'+job.id+'/versions',async()=>({})),true);
  assert.equal(status,507);
  assert.match(body.error,/Free some space and try again/);
  assert.doesNotMatch(body.error,/private|pending|ENOSPC/);

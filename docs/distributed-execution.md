@@ -1,0 +1,26 @@
+# PostgreSQL and private object storage execution
+
+Status: implementation and isolated PostgreSQL tests; production deployment has not been performed. No database or bucket settings have been supplied. This implements workers on multiple machines with **one Studio controller**. It does not make multiple independent Studio servers safe: canonical briefs, brand libraries, reviews, the activity journal and the UI still use the controller's persistent workspace. Back up that private workspace separately. The CDN manifest is not a metadata backup.
+
+## What is shared
+
+PostgreSQL owns provider request identities, job/brand bindings, cumulative reservation allowances, the bounded queue, leases and dispatch/result states. Private S3-compatible storage holds hash-verified request and response bytes. Object transfers have a 60-second abort deadline; database connection and query deadlines are 10 and 30 seconds. Failed writes remain failures rather than being reported as saved. Worker machines need neither the Mac's files nor the public CDN to read these payloads. Existing approved public image-reference URLs remain input references; private briefs and provider responses must not be put in the public CDN.
+
+New jobs pin their execution backend. Historical local jobs cannot silently switch to remote execution. One request can be claimed by one current lease. A lease lost before dispatch can be reclaimed; a lease lost after dispatch becomes unknown, never automatically resent. A late response with the original lease can still be saved and recovered by the controller. An unknown dispatched request continues to occupy capacity until its saved deadline; the provider may still be working even after our connection fails. Unknown reservation allowances remain reserved; they are not recorded as zero charges. PostgreSQL and local reservation records are duplicate safety accounting for the same request, not additional provider charges.
+
+Transactions use one checked-out connection, row locks, and transaction-scoped advisory locks. See [node-postgres transactions](https://node-postgres.com/features/transactions) and [PostgreSQL locking](https://www.postgresql.org/docs/18/explicit-locking.html). These controls prevent our own duplicate dispatch; they cannot establish the billing outcome of a provider connection loss or guarantee provider exactly-once execution.
+
+## Deployment
+
+1. Provision a private PostgreSQL database and a private S3-compatible bucket. Enable database backups/PITR and bucket versioning, encryption and public-access blocking. Give controller/workers only the required database and object-prefix access; keep schema migration credentials separate where possible. Do not alter existing public CDN sharing.
+2. Populate the settings in `deploy/creative-worker/.env.example` through the deployment secret manager. Production connections require verified TLS. The local-test override is restricted to loopback and must not be used in deployment.
+3. Run `node scripts/ops/execution-worker.cjs --migrate` once with the deployment settings. This creates only `creative_execution_*` tables; existing job history is not rewritten. Default shared limits are two image requests, four reasoning requests and 64 queued requests per kind. All workers use the database policy; differing migration settings are rejected.
+4. Run `node scripts/ops/execution-worker.cjs --check-storage` to verify the configured bucket with a non-sensitive, hash-bound probe. This command does not call the production provider. It keeps the probe as an audit record.
+5. Build from repository root: `docker build -f deploy/creative-worker/Dockerfile -t creative-worker .`. Deploy at least two worker instances on separate hosts with the same database and private bucket. Container build and real cloud hosting still need deployment verification. Workers are non-root and expose no HTTP service. SIGTERM stops new claims and lets current bounded requests settle.
+6. Drain active local jobs, back up the controller workspace, then configure the single Studio controller with the same backend settings and restart it. Start one explicitly budgeted pilot; verify response recovery, exact brand, receipts and existing review gates before raising throughput. Do not change an in-flight job's backend.
+
+An unknown request needs provider reconciliation or an explicitly approved new request identity. Do not delete reservations or manually reset dispatched/unknown rows to queued. On rollback, drain workers and retain the database/bucket; finish their pinned jobs before switching new jobs back to local execution.
+
+## Verification boundaries
+
+Tests run a real temporary PostgreSQL cluster with ten competing clients for both brands. They verify duplicate enqueue, cumulative allowance, active capacity, lease loss before/after dispatch, stale-worker fencing, late responses and brand rejection. Private object operations and provider responses are simulated in wire tests. No test above proves the customer's real bucket permissions, cross-machine network behavior, invoice reconciliation or artwork quality. A deployed two-host smoke test and ten complete varied live scenarios per affected route remain release gates.

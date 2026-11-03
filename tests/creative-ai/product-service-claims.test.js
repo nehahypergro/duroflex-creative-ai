@@ -1,0 +1,8 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {validateFacts}=require('../../lib/creative-ai/runtime/product-research');
+const passages=[{id:'p',sourceId:'s',text:'Warranty covers manufacturing defects under normal use. Duration varies by variant.'}];
+const f=(text,status='unverified')=>({text,status,sourceId:'s',passageId:'p'});
+test('PDP audit rejects coverage bundled with uncertain duration instead of discarding usable coverage',()=>{assert.throws(()=>validateFacts({facts:[f('The manufacturer warranty covers manufacturing defects and material issues under normal use; duration varies from 7–10 years depending on variant.')]},passages,{maxFacts:20,separateServiceClaims:true}),/separate.*coverage/i);});
+test('separate qualified coverage and unverified duration retain their independent statuses',()=>{const result={facts:[f('Manufacturer warranty covers manufacturing defects under normal use.','supported'),f('Warranty duration is unverified for this selected variant.')]};validateFacts(result,passages,{maxFacts:20,separateServiceClaims:true});assert.equal(result.facts[0].status,'supported');assert.equal(result.facts[1].status,'unverified');});
+test('uncertain coverage stays uncertain; legacy combined facts are not rewritten',()=>{const result={facts:[f('Warranty coverage for manufacturing defects is not established for the selected product.')]};validateFacts(result,passages,{separateServiceClaims:true});assert.equal(result.facts[0].status,'unverified');assert.doesNotThrow(()=>validateFacts({facts:[f('Warranty covers manufacturing defects; duration is unverified.')]},passages));});

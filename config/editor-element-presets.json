@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "brands": {
+    "brand-1923d633-e03e-44cc-84b2-bbfb5c152710": {
+      "paletteBasis": "approved-logo",
+      "note": "Primary colour comes from this workspace's approved logo metadata. Badge layouts are proposed editor templates, not approved brandbook artwork. The visual-world guide remains draft.",
+      "badges": [{"id":"round-highlight","name":"Round highlight","shape":"circle","text":"Highlight"},{"id":"pill-explore","name":"Explore pill","shape":"pill","text":"Explore"},{"id":"outline-label","name":"Outline label","shape":"outline","text":"Your text"}]
+    },
+    "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de": {
+      "paletteBasis": "supplied-guideline",
+      "sourceDocumentId": "doc-7e4d8861-d4c9-4d88-adc4-618e5bde1b10",
+      "primary":"#F15A22", "ink":"#414042",
+      "note":"Orange and charcoal follow the supplied guideline reading. White is interpreted from supplied RGB because the printed hex conflicts. Badge layouts are proposed templates; lowercase labels follow the supplied typography direction.",
+      "badges": [{"id":"round-hello","name":"Round hello","shape":"circle","text":"hello"},{"id":"pill-explore","name":"Explore pill","shape":"pill","text":"explore"},{"id":"outline-label","name":"Outline label","shape":"outline","text":"your text"}]
+    }
+  }
+}

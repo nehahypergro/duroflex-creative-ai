@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "brands": [
+    {
+      "version": 1,
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "scope": "official-product-library",
+      "logoSha256": "6e5fd8bea6f5ca7cbda1c6f99c3ef81f2d2f6317c60c8307b2c5b02e1c9c98cb",
+      "authorization": {
+        "sourceJobId": "creative-c63617f2-3b49-4e71-963a-b914ad53afde",
+        "note": "Brand identity choice provenance: creative-c63617f2-3b49-4e71-963a-b914ad53afde. General product scope follows the client’s 24 October 2026 official-website source acceptance, recorded in AGENTS.md and config/website-certification-approvals.json. This reusable choice contains no prior campaign SKU or offer instructions."
+      },
+      "clarification": {
+        "version": 1,
+        "text": "Use Duroflex’s approved saved logo and current official website identity. Draft visual-world adoption remains advisory; use the current official identity where the draft proposes a conflicting identity. Preserve the exact selected library SKU, variant and saved official-source evidence; never substitute another product. Keep all supplied qualifications and conditions. Reuse archived exact-SKU evidence without repeated source approval or freshness confirmation. Alternative fonts are permitted by the user; editable text must use actual available font files with their provenance. Do not claim missing proprietary fonts are available or licensed. Missing facts and material product contradictions remain unresolved; source acceptance does not approve generated artwork.",
+        "createdAt": "2026-10-31T16:00:00Z",
+        "nonEssentialFactIds": [
+          "duroflex-portfolio-adoption",
+          "duroflex-identity-production-status"
+        ]
+      },
+      "factBindings": {
+        "duroflex-portfolio-adoption": "6d16fdb99e4ca55d71338ea6d87328b2c9122750d6cdc1677fbcab3a0c805fa9",
+        "duroflex-identity-production-status": "7d439dadb50bacf020dae062b632ed5c0c0c26edf5ae4df40fd601577ab19d5d"
+      }
+    },
+    {
+      "version": 1,
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "scope": "official-product-library",
+      "logoSha256": "bc73e039c13b91fe41fd295198200e7e73ac2728b0212b42f35767ed92e45278",
+      "authorization": {
+        "sourceJobId": "creative-95a4a2e5-fb36-4068-9dce-b64e13af46d4",
+        "note": "Brand identity choice provenance: creative-95a4a2e5-fb36-4068-9dce-b64e13af46d4. General product scope follows the client’s 24 October 2026 official-website source acceptance, recorded in AGENTS.md and config/website-certification-approvals.json. This reusable choice contains no prior campaign SKU or offer instructions."
+      },
+      "clarification": {
+        "version": 1,
+        "text": "Use Sleepyhead’s approved saved logo and its own current official website identity. Preserve the exact selected library SKU, variant and saved official-source evidence; never substitute another product. Keep all supplied qualifications and conditions. Reuse archived exact-SKU evidence without repeated source approval or freshness confirmation. Alternative fonts are permitted by the user; editable text must use actual available font files with their provenance. Do not claim missing proprietary fonts are available or licensed. Missing facts and material product contradictions remain unresolved; source acceptance does not approve generated artwork.",
+        "createdAt": "2026-10-31T16:00:00Z",
+        "nonEssentialFactIds": []
+      },
+      "factBindings": {}
+    }
+  ]
+}

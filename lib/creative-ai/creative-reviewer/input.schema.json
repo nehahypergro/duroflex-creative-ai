@@ -138,7 +138,7 @@
                 ],
                 "additionalProperties": false
               },
-              "minItems": 1
+              "minItems": 0
             }
           },
           "required": [
@@ -269,7 +269,7 @@
                 ],
                 "additionalProperties": false
               },
-              "minItems": 1
+              "minItems": 0
             },
             "references": {
               "type": "array",
@@ -1442,6 +1442,12 @@
               "items": {
                 "type": "string"
               }
+            },
+            "policyVersion": {
+              "type": "integer",
+              "enum": [
+                2
+              ]
             }
           }
         }

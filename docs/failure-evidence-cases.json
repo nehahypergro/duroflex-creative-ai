@@ -1,0 +1,1135 @@
+{
+  "version": 1,
+  "scope": "Both-brand failure and acceptance evidence. October 22\u201323 Duroflex all-asset/PDP runs plus all observed Sleepyhead historical runs from October 13\u201322. Cancellation, legacy evidence and current regression coverage remain distinct.",
+  "cases": [
+    {
+      "id": "F01",
+      "category": "transport",
+      "disposition": "mitigated",
+      "title": "Image upload disconnects before a response",
+      "causeOrLimitation": "Multipart reference transfer failed with socket loss; the network hop responsible was not established. CDN staging replaces bulk upload in paid requests.",
+      "closureEvidenceRequired": "Ten varied complete live scenarios per affected route, with recorded responses and unchanged source bytes.",
+      "regressionFiles": [
+        "tests/creative-ai/image-upload-reliability.test.js",
+        "tests/creative-ai/reference-transfer-sockets.test.js",
+        "tests/creative-ai/staged-image-inputs.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/upload-proof.json",
+        "work/upload-reliability-20261023/summary.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F02",
+      "category": "transport",
+      "disposition": "open",
+      "title": "Planning and review connections fail",
+      "causeOrLimitation": "Concepts, art, reconciliation and review also lost connections; replacing image uploads does not fix these stages.",
+      "closureEvidenceRequired": "Stage-specific interruption/restart proofs and complete reviewed outputs; do not resend ambiguous paid requests.",
+      "regressionFiles": [
+        "tests/creative-ai/review-recovery.test.js",
+        "tests/creative-ai/known-provider-error.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/summary.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F03",
+      "category": "provider-recovery",
+      "disposition": "guarded",
+      "title": "Explicit HTTP 500 and retryable provider errors",
+      "causeOrLimitation": "A recorded explicit service error permits one separately reserved recovery. External service errors remain possible.",
+      "closureEvidenceRequired": "Verify bounded recovery live; persistent errors must stop and preserve every attempt.",
+      "regressionFiles": [
+        "tests/creative-ai/known-provider-error.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/known-http-before.log",
+        "work/reliability-fix-20261022/known-http-after.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F04",
+      "category": "provider-recovery",
+      "disposition": "guarded",
+      "title": "Retry storms and queue exhaustion",
+      "causeOrLimitation": "Recovery previously lacked persisted Retry-After pacing; admission and cancellation now have bounded queues.",
+      "closureEvidenceRequired": "Distributed admission/fairness and live load evidence remain separate from process-local tests.",
+      "regressionFiles": [
+        "tests/creative-ai/retry-pacing.test.js",
+        "tests/creative-ai/image-admission.test.js"
+      ],
+      "historicalEvidence": [
+        "work/client-readiness-20261023/retry-pacing-before.log",
+        "work/client-readiness-20261023/admission-before.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F05",
+      "category": "accounting",
+      "disposition": "open",
+      "title": "Lost responses leave unknown charges",
+      "causeOrLimitation": "A reservation without a saved response is an ambiguous outcome, not a zero charge or confirmed provider failure.",
+      "closureEvidenceRequired": "Reconcile provider billing while preserving request identity, usage and historical reservations.",
+      "regressionFiles": [
+        "tests/creative-ai/known-provider-error.test.js",
+        "tests/creative-ai/review-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/cost-summary.json",
+        "work/pdp-airboost-atomic-retry-20261023/firmness-check-completion.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F06",
+      "category": "reading-policy",
+      "disposition": "guarded",
+      "title": "Policy-version mismatch disabled readability checks",
+      "causeOrLimitation": "Readers did not recognise a newer supported policy pin.",
+      "closureEvidenceRequired": "Maintain compatibility tests for every version; new artwork still needs actual viewing-size checks.",
+      "regressionFiles": [
+        "tests/creative-ai/recurring-run-failures.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/failing-before.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F07",
+      "category": "copy-contract",
+      "disposition": "guarded",
+      "title": "Supporting copy missing from capacity totals",
+      "causeOrLimitation": "Only body text was counted, allowing supporting copy to bypass capacity assessment.",
+      "closureEvidenceRequired": "Exercise all supported roles and languages; render readability remains distinct.",
+      "regressionFiles": [
+        "tests/creative-ai/recurring-run-failures.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/failing-before.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F08",
+      "category": "copy-contract",
+      "disposition": "mitigated",
+      "title": "Landscape capacity too generous",
+      "causeOrLimitation": "Capacity inherited tall-tile assumptions rather than actual displayed height.",
+      "closureEvidenceRequired": "Prove concise copy and sufficient text area in each landscape route.",
+      "regressionFiles": [
+        "tests/creative-ai/recurring-run-failures.test.js",
+        "tests/creative-ai/copy-fit-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/landscape-before.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F09",
+      "category": "copy-contract",
+      "disposition": "open",
+      "title": "A+ copy cannot fit proposed layout",
+      "causeOrLimitation": "Copy and layout negotiation can produce conflicting readability constraints.",
+      "closureEvidenceRequired": "A complete passing small-preview A+ result with required qualifiers retained.",
+      "regressionFiles": [
+        "tests/creative-ai/copy-fit-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/copy-recovery-before.log",
+        "work/reliability-fix-20261022/comparison.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F10",
+      "category": "copy-contract",
+      "disposition": "guarded",
+      "title": "LinkedIn fit revision lengthened copy",
+      "causeOrLimitation": "Upstream revision did not enforce non-increasing embedded word count.",
+      "closureEvidenceRequired": "Successful live recovery after this guard, not merely rejecting an overlong revision.",
+      "regressionFiles": [
+        "tests/creative-ai/copy-fit-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/copy-growth-before.log",
+        "work/reliability-fix-20261022/copy-growth-after.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F11",
+      "category": "artwork",
+      "disposition": "open",
+      "title": "LinkedIn landscape small supporting copy and CTA",
+      "causeOrLimitation": "Saved reviewers report insufficient viewing-size legibility; accurate transcription is insufficient.",
+      "closureEvidenceRequired": "Passing rendered landscape pair at intended viewing size, with human comparison.",
+      "regressionFiles": [
+        "tests/creative-ai/rendered-placement-review.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/saved-visual-regression.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F12",
+      "category": "artwork",
+      "disposition": "open",
+      "title": "Product markings, fabric and geometry drift",
+      "causeOrLimitation": "Generated product identity can differ from exact SKU references despite receiving valid source images.",
+      "closureEvidenceRequired": "Compare each final hash against the selected SKU; preserve defects and uncertain findings.",
+      "regressionFiles": [
+        "tests/creative-ai/reference-product.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json",
+        "work/pdp-fix-20261023/artwork-cases.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F13",
+      "category": "review-calibration",
+      "disposition": "unresolved-evidence",
+      "title": "Suspected logo-clipping false positive",
+      "causeOrLimitation": "Saved reviewer finding and manual spot check disagree; root cause is not adjudicated.",
+      "closureEvidenceRequired": "Human-labelled comparison of exact artwork and approved logo, measuring false positives and misses.",
+      "regressionFiles": [
+        "tests/creative-ai/reference-validation.test.js",
+        "tests/creative-ai/creative-reviewer.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/saved-visual-regression.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F14",
+      "category": "reading-policy",
+      "disposition": "guarded",
+      "title": "Desktop banner judged at phone width",
+      "causeOrLimitation": "Desktop and mobile preview context were conflated; separate assumptions now exist.",
+      "closureEvidenceRequired": "Actual host component dimensions, cropping and breakpoints must still be tested.",
+      "regressionFiles": [
+        "tests/creative-ai/recurring-run-failures.test.js",
+        "tests/creative-ai/rendered-placement-review.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/reading-final.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F15",
+      "category": "format-contract",
+      "disposition": "guarded",
+      "title": "Banner preview and generation dimensions disagree",
+      "causeOrLimitation": "Display label did not match the 1920 by 640 connected route.",
+      "closureEvidenceRequired": "Verify catalogue, brief, request, preview and downloaded bytes for all variants.",
+      "regressionFiles": [
+        "tests/creative-ai/studio-format-preview.test.js",
+        "tests/creative-ai/connected-format-variants.test.js"
+      ],
+      "historicalEvidence": [
+        "work/reliability-fix-20261022/preview-limits-before.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F16",
+      "category": "reading-policy",
+      "disposition": "guarded",
+      "title": "PDP feature and dimension cards classified as photography",
+      "causeOrLimitation": "Role classification omitted information-card reading treatment.",
+      "closureEvidenceRequired": "Full pack measurement labels must pass intended-size inspection.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-contract.test.js",
+        "tests/creative-ai/recurring-run-failures.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-fix-20261023/before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F17",
+      "category": "copy-contract",
+      "disposition": "guarded",
+      "title": "PDP planning fails on optional body copy",
+      "causeOrLimitation": "Generated optional body conflicts with a zero-body reading policy; required qualifiers cannot simply be dropped.",
+      "closureEvidenceRequired": "Exercise exact locked wording, empty photo decks and required qualifiers in live plans.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-contract.test.js",
+        "tests/creative-ai/copy-fit-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-fix-20261023/before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F18",
+      "category": "artwork",
+      "disposition": "open",
+      "title": "Feed square and portrait have no passing pair",
+      "causeOrLimitation": "Latest batch saved images but both formats had zero passing options for differing review reasons.",
+      "closureEvidenceRequired": "Complete each exact ratio with independently reviewed results; do not borrow another ratio's pass.",
+      "regressionFiles": [
+        "tests/creative-ai/rendered-placement-review.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/summary.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F19",
+      "category": "completeness",
+      "disposition": "open",
+      "title": "Story has only one saved option",
+      "causeOrLimitation": "One generation failed after the other option succeeded.",
+      "closureEvidenceRequired": "Two actual saved and reviewed options, preserving the failed attempt and unknown charge.",
+      "regressionFiles": [
+        "tests/creative-ai/review-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/summary.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F20",
+      "category": "completeness",
+      "disposition": "open",
+      "title": "WhatsApp, desktop hero and banner lack a passing pair",
+      "causeOrLimitation": "Two images are not two passes; latest batch has one passing option in these routes.",
+      "closureEvidenceRequired": "Pass both final hashes for each exact route; earlier banner success does not close later failure.",
+      "regressionFiles": [
+        "tests/creative-ai/creative-reviewer.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/summary.json",
+        "work/reliability-fix-20261022/comparison.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F21",
+      "category": "completeness",
+      "disposition": "open",
+      "title": "Saved images lack complete verification",
+      "causeOrLimitation": "Transport/schema uncertainty or missing evidence leaves some outputs unable to verify.",
+      "closureEvidenceRequired": "Complete hash-bound checks without converting unknown to pass or resetting correction limits.",
+      "regressionFiles": [
+        "tests/creative-ai/review-recovery.test.js",
+        "tests/creative-ai/pdp-review-capacity.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F22",
+      "category": "pdp-orchestration",
+      "disposition": "implemented-unproven",
+      "title": "Full twelve-image pack initially absent",
+      "causeOrLimitation": "Flat recipe/count caps lacked ordered parent-child planning and whole-set acceptance; the route is now implemented.",
+      "closureEvidenceRequired": "All 24 final images and both whole-set reviews must pass; current 24 saved images are not a passing pack.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-contract.test.js",
+        "tests/creative-ai/pdp-shopping.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-route-execution-20261022/findings.json",
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F23",
+      "category": "pdp-orchestration",
+      "disposition": "guarded",
+      "title": "Large planning handoff and resume boundaries",
+      "causeOrLimitation": "A single large planning response could not safely express and resume all placements.",
+      "closureEvidenceRequired": "Hash-bound batch reuse, complete merged validation and no duplicate paid dispatch.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-contract.test.js",
+        "tests/creative-ai/pdp-stage.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-fix-20261023/batches-before.txt",
+        "work/pdp-fix-20261023/batched-reconciliation-before.txt",
+        "work/pdp-fix-20261023/resume-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F24",
+      "category": "pdp-orchestration",
+      "disposition": "guarded",
+      "title": "Whole-gallery review exceeds attachment capacity",
+      "causeOrLimitation": "Twelve masters plus previews exceed one supported image batch.",
+      "closureEvidenceRequired": "Inspect every master/preview and preserve any fail or unknown through final overview.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-review-capacity.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/review-cap-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F25",
+      "category": "source-planning",
+      "disposition": "guarded",
+      "title": "Strategist blocked on unused optional brand facts",
+      "causeOrLimitation": "Dependency assessment included unrelated facts rather than claims used by the selected direction.",
+      "closureEvidenceRequired": "Selected unsupported claims still block; unrelated optional gaps must not stop valid work.",
+      "regressionFiles": [
+        "tests/creative-ai/strategy-dependencies.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/pdp-dependencies-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F26",
+      "category": "source-planning",
+      "disposition": "guarded",
+      "title": "PDP fact extraction and gallery coverage too narrow",
+      "causeOrLimitation": "The ordinary audit/gallery subset omitted evidence needed by the complete pack.",
+      "closureEvidenceRequired": "Include exact-SKU saved evidence within context limits; reject foreign product or brand references.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-reference-coverage.test.js",
+        "tests/creative-ai/pdp-shopping.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/pdp-audit-before.txt",
+        "work/pdp-source-scope-fix-20261023/gallery-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F27",
+      "category": "source-planning",
+      "disposition": "mitigated",
+      "title": "Atomic service claims conflate coverage and unknown duration",
+      "causeOrLimitation": "A supported warranty coverage statement was entangled with unsupported service duration.",
+      "closureEvidenceRequired": "Keep supported coverage distinct, preserve qualifiers and leave unknown duration unresolved.",
+      "regressionFiles": [
+        "tests/creative-ai/product-service-claims.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/service-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F28",
+      "category": "source-planning",
+      "disposition": "mitigated",
+      "title": "Planner confuses photo evidence with textual proof",
+      "causeOrLimitation": "A text-led warranty card was assessed as though its photograph must prove service terms or an excluded cutaway.",
+      "closureEvidenceRequired": "Validate actual proposed pixels separately from cited wording; live model judgment can still err.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-shopping.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/evidence-scope-before.txt",
+        "work/pdp-source-scope-fix-20261023/saved-failure-scope-replay.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F29",
+      "category": "lifecycle",
+      "disposition": "guarded",
+      "title": "Global PDP plan assigned the wrong task owner and scope",
+      "causeOrLimitation": "Global creative-director planning used a per-output art task kind; old handoff identities could conflict.",
+      "closureEvidenceRequired": "Dedicated task kind and versioned resumed handoff; saved plan reuse without duplicate dispatch.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-stage.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/stage-before.txt",
+        "work/pdp-source-scope-fix-20261023/stage-resume-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F30",
+      "category": "budget-time",
+      "disposition": "mitigated",
+      "title": "Full pack inherited ordinary 45-minute deadline",
+      "causeOrLimitation": "Twenty-four outputs plus review exceeded the ordinary allowance; a bounded 120-minute pack window was added.",
+      "closureEvidenceRequired": "Deadline extension is not a speed fix; retain financial limits and benchmark actual completion time.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-time-window.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/time-window-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F31",
+      "category": "reference-handoff",
+      "disposition": "guarded",
+      "title": "Gallery selection omitted mandatory identity anchor",
+      "causeOrLimitation": "Art chose valid gallery views but the compiler did not always attach the designated SKU identity source.",
+      "closureEvidenceRequired": "Compiler must attach hash-verified anchor; missing or changed bytes must block before paid dispatch.",
+      "regressionFiles": [
+        "tests/creative-ai/reference-product.test.js",
+        "tests/creative-ai/pdp-preflight-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/anchor-before.txt",
+        "work/pdp-source-scope-fix-20261023/anchor-after.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F32",
+      "category": "recovery",
+      "disposition": "guarded",
+      "title": "Undispatched reference-blocked outputs consumed workflow state",
+      "causeOrLimitation": "Placeholder failure records made a corrected mechanical preflight appear to require a new correction cycle.",
+      "closureEvidenceRequired": "Only exact zero-dispatch reference omissions qualify; preserve historical records and deny ambiguous or already-rendered units.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-preflight-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/preflight-recovery-before.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F33",
+      "category": "performance",
+      "disposition": "mitigated",
+      "title": "Every progress read revalidates growing journal",
+      "causeOrLimitation": "Full-prefix validation became expensive; matching validated prefixes are cached, but every read still reads history bytes and rebuilds progress.",
+      "closureEvidenceRequired": "Incremental snapshots and large-job benchmarks; validate corruption, cache eviction and concurrent changes.",
+      "regressionFiles": [
+        "tests/creative-ai/workflow-producer.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/journal-live-before.json",
+        "work/pdp-source-scope-fix-20261023/journal-live-after.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F34",
+      "category": "review-schema",
+      "disposition": "guarded",
+      "title": "Photo-only review emits empty expected wording",
+      "causeOrLimitation": "Not-applicable copy check produced an empty string rejected by its own evidence schema.",
+      "closureEvidenceRequired": "No-copy review must remain schema-valid while product markings are checked separately.",
+      "regressionFiles": [
+        "tests/creative-ai/review-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/no-copy-before.txt",
+        "work/pdp-source-scope-fix-20261023/no-copy-after.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F35",
+      "category": "lifecycle",
+      "disposition": "guarded",
+      "title": "Saved image cannot complete a previously timed-out generation task",
+      "causeOrLimitation": "Terminal task status prevented completion and subsequent review despite durable saved pixels.",
+      "closureEvidenceRequired": "Versioned task attempt, exact saved-byte reuse, no extra image call and idempotent subsequent resume.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-stage.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-source-scope-fix-20261023/image-task-before.txt",
+        "work/pdp-source-scope-fix-20261023/image-task-after.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F36",
+      "category": "performance",
+      "disposition": "guarded",
+      "title": "Pair batching leaves worker capacity idle",
+      "causeOrLimitation": "Next output batch waited for both peers rather than one free slot.",
+      "closureEvidenceRequired": "Work-conserving bounded scheduling with same-concept carousel anchor dependencies; clean live latency remains unmeasured.",
+      "regressionFiles": [
+        "tests/creative-ai/unit-scheduler.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-latency-20261023/before.txt",
+        "work/pdp-latency-20261023/after.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F37",
+      "category": "performance",
+      "disposition": "open",
+      "title": "All-slot planning delays first image",
+      "causeOrLimitation": "Full plan/copy/art/reconciliation barriers delay rendering; interrupted run took 36.9 minutes to first image.",
+      "closureEvidenceRequired": "Per-slot durable readiness and shared bounded planning queue, then clean live timing evidence.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-contract.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-latency-20261023/summary.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F38",
+      "category": "format-contract",
+      "disposition": "guarded",
+      "title": "Generic image and format ceilings block valid packs",
+      "causeOrLimitation": "Independent caps existed in creation, editor, readiness and preview; they were removed in favour of pack contracts.",
+      "closureEvidenceRequired": "Maintain output-count-derived budgets, exact contracts and resource limits; no unlimited dispatch.",
+      "regressionFiles": [
+        "tests/creative-ai/pack-size-admission.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pack-size-limits-20261023"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F39",
+      "category": "source-policy",
+      "disposition": "guarded",
+      "title": "Website certifications blocked despite client approval",
+      "causeOrLimitation": "New Duroflex jobs now pin explicit official-website certification approval; it is not independent verification.",
+      "closureEvidenceRequired": "Exact same-source quote and SKU qualifiers; no forged approval, medical-claim promotion or automatic Sleepyhead approval.",
+      "regressionFiles": [
+        "tests/creative-ai/website-certification-approval.test.js",
+        "tests/creative-ai/sku-research.test.js"
+      ],
+      "historicalEvidence": [
+        "work/website-certification-approval-20261023"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F40",
+      "category": "navigation",
+      "disposition": "guarded",
+      "title": "Previous brand remains clickable during switch",
+      "causeOrLimitation": "Old DOM survived asynchronous cache restoration.",
+      "closureEvidenceRequired": "Both directions with delayed cache reads and late-response guards; never carry brand content across scopes.",
+      "regressionFiles": [
+        "tests/creative-ai/studio-ui-browser.test.js"
+      ],
+      "historicalEvidence": [
+        "work/navigation-fix-20261023/before.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F41",
+      "category": "navigation",
+      "disposition": "guarded",
+      "title": "Reload or return loses scroll and filters",
+      "causeOrLimitation": "Background refresh saved temporary zero before pending scroll restoration.",
+      "closureEvidenceRequired": "Back, reload, breadcrumbs, exact card and scoped filters under delayed refresh.",
+      "regressionFiles": [
+        "tests/creative-ai/studio-ui-browser.test.js",
+        "tests/creative-ai/studio-navigation.test.js"
+      ],
+      "historicalEvidence": [
+        "work/navigation-fix-20261023/scroll-before.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F42",
+      "category": "navigation",
+      "disposition": "guarded",
+      "title": "Stale completed status redirects away from running or failed job",
+      "causeOrLimitation": "Cached completion was used before fresh status confirmation.",
+      "closureEvidenceRequired": "Fresh status per Progress visit, reconnect and same-document navigation for both brands.",
+      "regressionFiles": [
+        "tests/creative-ai/studio-ui-browser.test.js"
+      ],
+      "historicalEvidence": [
+        "work/navigation-fix-20261023/layout-and-progress.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F43",
+      "category": "navigation",
+      "disposition": "guarded",
+      "title": "Artwork disappears at narrow viewport",
+      "causeOrLimitation": "Review grid retained a minimum rationale width and squeezed image column.",
+      "closureEvidenceRequired": "Five viewport sizes, wrapping toolbar and no horizontal overflow.",
+      "regressionFiles": [
+        "tests/creative-ai/studio-ui-browser.test.js"
+      ],
+      "historicalEvidence": [
+        "work/navigation-fix-20261023/stress.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F44",
+      "category": "test-reliability",
+      "disposition": "unresolved-evidence",
+      "title": "Home laptop-fold test fails in broad run but passes alone",
+      "causeOrLimitation": "Observed inconsistent layout assertion; exact timing/layout cause is not established.",
+      "closureEvidenceRequired": "Repeated isolated and full-suite execution; retain failure rather than marking all tests green.",
+      "regressionFiles": [
+        "tests/creative-ai/studio-ui-browser.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-latency-20261023/full-suite-local.txt",
+        "work/pdp-latency-20261023/home-density-recheck.txt"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P2"
+    },
+    {
+      "id": "F45",
+      "category": "test-classification",
+      "disposition": "historical-evidence",
+      "title": "Older navigation assertions conflict with requested UI",
+      "causeOrLimitation": "Some old expectations referenced removed naming/help/summary controls; other failures were real races.",
+      "closureEvidenceRequired": "Classify each original assertion; updating an obsolete expectation must not erase a real defect.",
+      "regressionFiles": [
+        "tests/creative-ai/studio-ui-browser.test.js",
+        "tests/creative-ai/studio-home-state.test.js"
+      ],
+      "historicalEvidence": [
+        "work/client-readiness-20261023/baseline-failures.json",
+        "work/navigation-fix-20261023/full-suite.log"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P2"
+    },
+    {
+      "id": "F46",
+      "category": "delivery",
+      "disposition": "partial",
+      "title": "Feed portrait and LinkedIn ratio routes missing",
+      "causeOrLimitation": "Exact route mappings were later connected; catalogue discovery and rendered quality are separate.",
+      "closureEvidenceRequired": "Verify every requested ratio through selection, generation, review and downloaded bytes.",
+      "regressionFiles": [
+        "tests/creative-ai/connected-format-variants.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-route-execution-20261022/route-audit.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F47",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "PMax and YouTube Community delivery",
+      "causeOrLimitation": "Scope requires specific image sets and native fields; generic social images cannot establish complete delivery.",
+      "closureEvidenceRequired": "Freeze channel contract and prove all dimensions, fields and export paths.",
+      "regressionFiles": [
+        "tests/creative-ai/connected-format-variants.test.js"
+      ],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F48",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "Website responsive delivery and landing modules",
+      "causeOrLimitation": "Standalone banners do not prove actual desktop/mobile crop, container or complete handoff.",
+      "closureEvidenceRequired": "Real host component, breakpoint/crop checks, alt text and required modules.",
+      "regressionFiles": [
+        "tests/creative-ai/rendered-placement-review.test.js"
+      ],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-route-execution-20261022/execution.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F49",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "Listing sets, Premium A+ and comparison charts",
+      "causeOrLimitation": "Standard raster-module support does not prove full marketplace templates, eligibility or sourced comparisons.",
+      "closureEvidenceRequired": "Selected marketplace contract, full slot set and actual preview acceptance.",
+      "regressionFiles": [
+        "tests/creative-ai/pdp-shopping.test.js"
+      ],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F50",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "Print and retail production",
+      "causeOrLimitation": "Digital artwork or raster PDF cannot prove physical production readiness.",
+      "closureEvidenceRequired": "Vendor size/template, actual proof, colour/substrate and installed reading-distance acceptance.",
+      "regressionFiles": [],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-route-execution-20261022/execution.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F51",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "Email, RCS and push delivery",
+      "causeOrLimitation": "Channel field/HTML handoffs and client previews are distinct from a saved WhatsApp image.",
+      "closureEvidenceRequired": "Exercise each creation route, required native fields, links, image-off and actual client preview.",
+      "regressionFiles": [],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F52",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "PR and editable documents",
+      "causeOrLimitation": "Spec coverage and raster images do not establish source-reviewed native documents.",
+      "closureEvidenceRequired": "Fact sheets, Q&A, releases, demo/training/sales/CX outputs with pagination and editable export acceptance.",
+      "regressionFiles": [],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-route-execution-20261022/execution.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F53",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "Regional GT and COCO catalogues",
+      "causeOrLimitation": "Full range, regional selection and print/digital/language editions need their own contracts.",
+      "closureEvidenceRequired": "Product coverage, order, price/source consistency, language and actual document exports.",
+      "regressionFiles": [],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-route-execution-20261022/execution.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F54",
+      "category": "delivery",
+      "disposition": "acceptance-gap",
+      "title": "Resize, localisation and personalised versions",
+      "causeOrLimitation": "Changing pixels or language cannot inherit original approval or silently modify source truths.",
+      "closureEvidenceRequired": "Exact child versions, localised copy checks, layout and brand/SKU/store scope, exports.",
+      "regressionFiles": [],
+      "historicalEvidence": [
+        "docs/proposed-delivery-contracts.json",
+        "work/full-route-execution-20261022/execution.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F55",
+      "category": "validation",
+      "disposition": "open",
+      "title": "Ten complete live scenarios per affected route outstanding",
+      "causeOrLimitation": "Offline regressions, repeated transfers and recorded replays are different evidence classes.",
+      "closureEvidenceRequired": "A frozen varied live matrix with all failures in denominator; reviewed complete outputs per scenario.",
+      "regressionFiles": [],
+      "historicalEvidence": [
+        "docs/client-release-readiness.md",
+        "work/upload-reliability-20261023/summary.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F56",
+      "category": "review-calibration",
+      "disposition": "open",
+      "title": "Reviewer false flags and missed defects unmeasured",
+      "causeOrLimitation": "Model confidence and checks do not substitute for human adjudication of exact saved artwork.",
+      "closureEvidenceRequired": "Label fixed image/reference pairs; compute disagreement by criterion and retain uncertain cases.",
+      "regressionFiles": [
+        "tests/creative-ai/creative-reviewer.test.js",
+        "tests/creative-ai/reference-validation.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json",
+        "work/reliability-fix-20261022/saved-visual-regression.json"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F57",
+      "category": "deployment",
+      "disposition": "open",
+      "title": "Process-local queues and caches are not distributed coordination",
+      "causeOrLimitation": "Single-process admission does not provide cross-worker locks, durable shared queue fairness or global rate limits.",
+      "closureEvidenceRequired": "Multi-worker concurrency/crash tests and shared idempotency/admission coordination.",
+      "regressionFiles": [
+        "tests/creative-ai/image-admission.test.js",
+        "tests/creative-ai/concurrent-projects.test.js"
+      ],
+      "historicalEvidence": [
+        "docs/concurrent-projects.md",
+        "docs/creative-ai-reliability-fixes.md"
+      ],
+      "recurrenceStatement": "Regression coverage is not a guarantee of zero recurrence.",
+      "priority": "P1"
+    },
+    {
+      "id": "F58",
+      "category": "concurrency",
+      "disposition": "open",
+      "title": "Activity journal append reports busy",
+      "causeOrLimitation": "Saved job creative-3bb5d5b8-339f-41fc-b791-60bd157bfb9f stopped with an append-lock busy error. The conflicting writer and safe retry outcome are not yet established.",
+      "closureEvidenceRequired": "Reproduce concurrent writers against the exact job callback, verify durable idempotent retry and preserve lock ownership.",
+      "regressionFiles": [
+        "tests/creative-ai/workflow-producer.test.js",
+        "tests/creative-ai/concurrent-projects.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Protective stops must remain visible; their occurrence is not automatically a software defect.",
+      "priority": "P1"
+    },
+    {
+      "id": "F59",
+      "category": "dependency-availability",
+      "disposition": "guarded-stop",
+      "title": "Input-token counting unavailable before generation",
+      "causeOrLimitation": "Two saved attempts were blocked because context counting was unavailable. Blocking is intentional; availability and safe retry still need evidence.",
+      "closureEvidenceRequired": "Restore or bound counting-service recovery without skipping context checks; prove no generation dispatch or charge reservation on failed count.",
+      "regressionFiles": [
+        "tests/creative-ai/context-preflight.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Protective stops must remain visible; their occurrence is not automatically a software defect.",
+      "priority": "P1"
+    },
+    {
+      "id": "F60",
+      "category": "input-contract",
+      "disposition": "guarded-stop",
+      "title": "Brief and governing placement disagree",
+      "causeOrLimitation": "Saved request asks for a blog graphic while its governing placement is LinkedIn/Facebook landscape. The strategist requested clarification.",
+      "closureEvidenceRequired": "Trace the selected route into the brief, eliminate unintended mappings and preserve a clear conflict when user requirements disagree.",
+      "regressionFiles": [
+        "tests/creative-ai/connected-format-variants.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Protective stops must remain visible; their occurrence is not automatically a software defect.",
+      "priority": "P1"
+    },
+    {
+      "id": "F61",
+      "category": "copy-contract",
+      "disposition": "guarded-stop",
+      "title": "Required complete message conflicts with exact copy fields",
+      "causeOrLimitation": "Saved reconciliation found that the required message in text-1 conflicted with the supplied four-field copy set. Wording was not silently changed.",
+      "closureEvidenceRequired": "Freeze one source of exact required wording across brief, copy and art; identify whether the conflict originated in input or a generated handoff.",
+      "regressionFiles": [
+        "tests/creative-ai/copy-fit-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Protective stops must remain visible; their occurrence is not automatically a software defect.",
+      "priority": "P1"
+    },
+    {
+      "id": "F62",
+      "category": "artwork",
+      "disposition": "open",
+      "title": "Rendered exact wording differs from locked copy",
+      "causeOrLimitation": "Saved output observations include exact-required-copy failures or uncertainty. A valid copy contract does not guarantee correct rendered spelling, symbols or qualifiers.",
+      "closureEvidenceRequired": "Compare locked wording and final pixels field by field; preserve allowable comparison normalisation without rewriting observations.",
+      "regressionFiles": [
+        "tests/creative-ai/reference-validation.test.js",
+        "tests/creative-ai/review-recovery.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Recorded findings require adjudication; passing contract tests is not a new artwork pass.",
+      "priority": "P1"
+    },
+    {
+      "id": "F63",
+      "category": "artwork",
+      "disposition": "open",
+      "title": "Campaign logo identity fails or remains uncertain",
+      "causeOrLimitation": "Saved outputs include logo-identity findings beyond the singled-out clipping dispute. A mandatory reference does not prove accurate rendered logo geometry or wording.",
+      "closureEvidenceRequired": "Inspect approved logo and exact output hash; distinguish actual artwork defect from uncertain review.",
+      "regressionFiles": [
+        "tests/creative-ai/reference-validation.test.js",
+        "tests/creative-ai/creative-reviewer.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Recorded findings require adjudication; passing contract tests is not a new artwork pass.",
+      "priority": "P1"
+    },
+    {
+      "id": "F64",
+      "category": "review-evidence",
+      "disposition": "open",
+      "title": "Mandatory brand-rule compliance cannot be established",
+      "causeOrLimitation": "Several saved reviews report unknown mandatory-brand-rules, including absent explicit execution requirements or draft/coverage limitations. Unknown is not a visual failure or a pass.",
+      "closureEvidenceRequired": "Trace applicable supplied rules and authority into the review; distinguish true absence/not-applicability from missing evidence without inventing approval.",
+      "regressionFiles": [
+        "tests/creative-ai/creative-reviewer.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Recorded findings require adjudication; passing contract tests is not a new artwork pass.",
+      "priority": "P1"
+    },
+    {
+      "id": "F65",
+      "category": "review-evidence",
+      "disposition": "open",
+      "title": "Creative quality confidence insufficient after critical checks",
+      "causeOrLimitation": "Some outputs clear critical checks but remain unable to verify because quality assessment confidence is insufficient. This is separate from transport and copy-fit failure.",
+      "closureEvidenceRequired": "Human-calibrate quality criteria on fixed outputs; complete the required evidence without lowering thresholds just to close a run.",
+      "regressionFiles": [
+        "tests/creative-ai/creative-reviewer.test.js"
+      ],
+      "historicalEvidence": [
+        "work/pdp-airboost-atomic-retry-20261023/artwork-cases.json",
+        "work/full-rerun-20261023/evidence.json"
+      ],
+      "recurrenceStatement": "Recorded findings require adjudication; passing contract tests is not a new artwork pass.",
+      "priority": "P1"
+    },
+    {
+      "id": "F66",
+      "category": "source-planning",
+      "disposition": "unresolved-evidence",
+      "title": "Saved Sleepyhead strategy blocked on font availability/licensing",
+      "causeOrLimitation": "A Sleepyhead Bubbles run requested production font availability/licensing evidence before rendering. The saved stop is real; a current route-specific recovery has not been proven.",
+      "closureEvidenceRequired": "Determine whether the dependency is applicable to the selected execution, use only that brand\u2019s authorised font evidence, and prove a successful same-SKU handoff.",
+      "regressionFiles": [
+        "tests/creative-ai/strategy-dependencies.test.js"
+      ],
+      "historicalEvidence": [
+        "work/failure-evidence-20261023/brand-extension.json"
+      ],
+      "relatedJobIds": [
+        "creative-95a4a2e5-fb36-4068-9dce-b64e13af46d4"
+      ],
+      "recurrenceStatement": "Historical source/placement assumptions must be assessed under their original policy; no current success is inferred.",
+      "priority": "P1"
+    },
+    {
+      "id": "F67",
+      "category": "source-planning",
+      "disposition": "unresolved-evidence",
+      "title": "Saved Sleepyhead mattress variant dimensions could not be substantiated",
+      "causeOrLimitation": "Napster Mini and Sense Ortho attempts requested official exact-variant dimension evidence. Later retries remain distinct and do not erase these source-contract stops.",
+      "closureEvidenceRequired": "Bind each Sleepyhead variant to its own official saved specification and units; verify dimensions reach strategy/copy/review without borrowing Duroflex facts.",
+      "regressionFiles": [
+        "tests/creative-ai/strategy-dependencies.test.js"
+      ],
+      "historicalEvidence": [
+        "work/failure-evidence-20261023/brand-extension.json"
+      ],
+      "relatedJobIds": [
+        "creative-accd11ae-bd31-4e37-a76b-c487fa6b96a0",
+        "creative-3d5bac4c-7a9e-4159-9315-e7f840afb239"
+      ],
+      "recurrenceStatement": "Historical source/placement assumptions must be assessed under their original policy; no current success is inferred.",
+      "priority": "P1"
+    }
+  ]
+}

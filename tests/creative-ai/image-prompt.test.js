@@ -5,7 +5,7 @@ test('image prompt deduplication preserves every rule and exact copy, including 
  const out=compact(prompt),rules=JSON.parse(out.split('\n')[0].slice(7));assert.deepEqual(rules,[{id:'r',text:'Exact requirement.',sourceIds:['source']},{text:'One',value:'Different'}]);assert.match(out,/Exact copy: "Explore Bubbles\."/);assert.match(out,/Unparsed \{ prose/);
 });
 test('an oversized image prompt fails before budget reservation or paid dispatch',async()=>{
- let calls=0,reserved=0;const prior=global.fetch;global.fetch=async()=>{calls++;throw Error('No dispatch allowed');};try{await assert.rejects(()=>new OpenAIProvider({}).generate({prompt:'x'.repeat(32001),attachments:[],requestKey:'fixture'},{reserve:async()=>reserved++}),e=>e.code==='IMAGE_PROMPT_LIMIT');assert.equal(calls,0);assert.equal(reserved,0);assert.equal(prepare('x'.repeat(32000)).wireCharacters,32000);}finally{global.fetch=prior;}
+ let calls=0,reserved=0;const prior=global.fetch;global.fetch=async()=>{calls++;throw Error('No dispatch allowed');};try{await assert.rejects(()=>new OpenAIProvider({imageTimeoutMs:1000}).generate({prompt:'x'.repeat(32001),attachments:[],requestKey:'fixture'},{reserve:async()=>reserved++}),e=>e.code==='IMAGE_PROMPT_LIMIT');assert.equal(calls,0);assert.equal(reserved,0);assert.equal(prepare('x'.repeat(32000)).wireCharacters,32000);}finally{global.fetch=prior;}
 });
 test('render projection retains complete authoritative rules and exact copy while referencing repeated instructions',()=>{
  const rule='Keep all product colours, geometry and brand marks recognisable. Use coherent side-window light and physically supported anatomy. '.repeat(25);
