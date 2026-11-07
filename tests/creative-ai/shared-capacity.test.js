@@ -15,3 +15,7 @@ test('full queue and cancelled wait never invoke the provider, and released slot
  await assert.rejects(()=>run(root,'reasoning',1,()=>assert.fail('full queue dispatched'),{maxPending:1}),{code:'PROVIDER_QUEUE_FULL'});abort.abort();await assert.rejects(()=>queued,/abort/i);release();await owner;assert.equal(await run(root,'reasoning',1,()=>42,{maxPending:1}),42);
  }finally{release();await fs.rm(root,{recursive:true,force:true});}
 });
+test('an abandoned policy lock cannot block immutable capacity policy checks',async()=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'capacity-policy-')),run=require('../../lib/creative-ai/runtime/shared-capacity').run;
+ try{await fs.mkdir(path.join(root,'render','.policy.lock'),{recursive:true});await fs.writeFile(path.join(root,'render','policy.json'),JSON.stringify({limit:2,maxPending:64}));assert.equal(await run(root,'render',2,()=>42,{signal:AbortSignal.timeout(100)}),42);assert.deepEqual(await fs.readdir(path.join(root,'render','.policy.lock')),[]);}finally{await fs.rm(root,{recursive:true,force:true});}
+});

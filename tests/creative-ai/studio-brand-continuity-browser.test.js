@@ -33,7 +33,7 @@ test('Desktop brand switching keeps library and category context in both directi
     assert.equal(await page.getByRole('tab',{name:'Fonts',exact:true}).getAttribute('aria-selected'),'true');
     assert.equal(await page.locator('.library-brand-chip').textContent(),b.name);
    }
-   if(route.startsWith('tools/')){await page.getByRole('heading',{name:'Social & campaigns',exact:true}).waitFor();assert.equal(await page.locator('.tool-shelf').count(),1);}
+   if(route.startsWith('tools/')){await page.getByRole('heading',{name:'Social & ads',exact:true}).waitFor();assert.equal(await page.locator('.tool-shelf').count(),1);}
   }
  }
  assert.deepEqual(errors,[]);await page.close();

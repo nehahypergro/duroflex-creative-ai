@@ -5,6 +5,7 @@ const date=s=>s&&Number.isFinite(Date.parse(s))?new Date(s).toLocaleString('en-I
 const labels={finished:'Ready',running:'Creating',preparing:'Creating',queued:'Creating',partial:'Needs attention',failed:'Needs attention','needs-input':'Needs attention',draft:'Draft'};
 const badge=s=>window.AdminOperations.badge(typeof s==='object'?s:{status:s,images:s==='finished'?1:0});
 let user=null,tab='overview',page=0,generation=0,users=[],currentDetail=null,detailVersion=0,focusIssue='';
+if(new URLSearchParams(location.hash.slice(1)).get('tab')==='people')tab='people';
 let initialRequest=new URLSearchParams(location.hash.slice(1)).get('request');let setupToken=new URLSearchParams(location.hash.slice(1)).get('setup')||'';if(location.hash)history.replaceState(null,'',location.pathname);
 function notice(text,error=false){$('#notice').textContent=text;$('#notice').classList.toggle('error',error);}
 async function api(p,options={}){const r=await fetch('/admin/api/'+p,{credentials:'same-origin',...options,headers:{'Content-Type':'application/json',...options.headers}});const x=await r.json();if(!r.ok){if(r.status===401&&user){user=null;await session();}throw Error(x.error||'Request failed.');}return x;}

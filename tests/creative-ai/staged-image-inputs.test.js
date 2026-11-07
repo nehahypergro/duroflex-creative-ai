@@ -30,7 +30,7 @@ test('wrong CDN bytes stop before any image charge',async()=>{
  const f=await fixture(),original=global.fetch,m=mockTransport(f,{corrupt:true});global.fetch=m.fetch;let diagnostic;f.budget.referenceFailure=async(key,d)=>{diagnostic=d;};try{await assert.rejects(provider().generate(f.request,f.budget),{code:'IMAGE_REFERENCE_UPLOAD_FAILED'});assert.equal(m.generations,0);assert.equal(f.reserved,0);assert.equal(diagnostic.generationDispatched,false);assert.equal(diagnostic.imageReservationCreated,false);assert.equal(JSON.stringify(diagnostic).includes('fixture-secret'),false);}finally{global.fetch=original;await f.close();}
 });
 test('lost generation response is never automatically resent after successful staging',async()=>{
- const f=await fixture(),original=global.fetch,m=mockTransport(f,{disconnectGeneration:true});global.fetch=m.fetch;let diagnostic;f.budget.transportFailure=async(k,key,d)=>diagnostic=d;try{await assert.rejects(provider().generate(f.request,f.budget),/fetch failed/);assert.equal(m.posts,1);assert.equal(m.generations,1);assert.equal(f.reserved,1);assert.equal(diagnostic.chargeStatus,'unknown');assert.equal(diagnostic.automaticRetry,false);}finally{global.fetch=original;await f.close();}
+ const f=await fixture(),original=global.fetch,m=mockTransport(f,{disconnectGeneration:true});global.fetch=m.fetch;let diagnostic;f.budget.transportFailure=async(k,key,d)=>diagnostic=d;try{await assert.rejects(provider().generate(f.request,f.budget),{code:'IMAGE_OUTCOME_UNKNOWN'});assert.equal(m.posts,1);assert.equal(m.generations,1);assert.equal(f.reserved,1);assert.equal(diagnostic.chargeStatus,'unknown');assert.equal(diagnostic.automaticRetry,false);}finally{global.fetch=original;await f.close();}
 });
 
 test('cached reference objects are reused within a brand and reverified on each fresh dispatch',async()=>{
@@ -93,7 +93,7 @@ test('a cached URL whose content changed blocks a later paid dispatch',async()=>
 });
 test('resuming an ambiguous paid key remains blocked after staging',async()=>{
  const f=await fixture(),original=global.fetch,m=mockTransport(f,{disconnectGeneration:true});global.fetch=m.fetch;let reservations=0;f.budget.reserve=async()=>{if(reservations++)throw Object.assign(Error('Already reserved'),{code:'AMBIGUOUS_PROVIDER_REQUEST'});};
- try{await assert.rejects(provider().generate(f.request,f.budget),/fetch failed/);await assert.rejects(provider().generate(f.request,f.budget),{code:'AMBIGUOUS_PROVIDER_REQUEST'});assert.equal(m.generations,1);assert.equal(m.posts,1);}finally{global.fetch=original;await f.close();}
+ try{await assert.rejects(provider().generate(f.request,f.budget),{code:'IMAGE_OUTCOME_UNKNOWN'});await assert.rejects(provider().generate(f.request,f.budget),{code:'AMBIGUOUS_PROVIDER_REQUEST'});assert.equal(m.generations,1);assert.equal(m.posts,1);}finally{global.fetch=original;await f.close();}
 });
 for(const brand of ['brand-duroflex','brand-sleepyhead'])test(brand+': exhausted image credits stop the project without inventing usage receipts',async()=>{
  const f=await fixture(brand),original=global.fetch,m=mockTransport(f);let stop;

@@ -469,6 +469,51 @@
         "placementHash"
       ],
       "additionalProperties": false
+    },
+    "classifiedFindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "enum": [
+              "blocker",
+              "suggestion",
+              "verification"
+            ]
+          },
+          "requirement": {
+            "anyOf": [
+              { "type": "string" },
+              { "type": "null" }
+            ]
+          },
+          "evidence": {
+            "anyOf": [
+              { "type": "string" },
+              { "type": "null" }
+            ]
+          },
+          "criterion": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "object"
+          },
+          "nextAction": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "category",
+          "requirement",
+          "evidence",
+          "criterion",
+          "scope",
+          "nextAction"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

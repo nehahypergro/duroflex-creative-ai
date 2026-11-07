@@ -43,3 +43,9 @@ for(const [code,socket,safe] of cases)test('transport '+code+' '+JSON.stringify(
 test('persistent connection failure is bounded to two attempts',async()=>{
  let calls=0;await assert.rejects(retry(async()=>{calls++;throw Object.assign(Error('connect'),{code:'EAI_AGAIN'});},{sleep:async()=>{}}));assert.equal(calls,2);
 });
+for(const brand of ['duroflex','sleepyhead'])test(brand+': inline localization bypasses a rejected CDN URL without changing pixels',async t=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'reasoning-inline-')),store=new JobStore(path.join(root,'jobs')),config={reasoningModel:'fixture',reasoningTimeoutMs:3000,maxOutputTokens:1000,maxReasoningCalls:10,jobTimeoutMs:60000,reasoningInputTransport:'cdn-url'},job=await store.create({brandId:'brand-'+brand},config,[]),provider=new OpenAIProvider(config),original=staging.stage;
+ t.after(async()=>{staging.stage=original;await fs.rm(root,{recursive:true,force:true});});staging.stage=async()=>{throw Error('Inline path must not stage');};let calls=0;
+ provider.sendReasoning=async body=>{calls++;assert.equal(body.input.flatMap(m=>m.content).find(p=>p.type==='input_image').image_url,request.images[0].imageData);return {ok:true,json:async()=>({id:'inline-'+brand,status:'completed',output:[{content:[{type:'output_text',text:'{"ok":true}'}]}]})};};
+ assert.deepEqual(await provider.reason({...request,inlineImageInput:true},store.budget(job.id)),{ok:true});assert.deepEqual(await provider.reason({...request,inlineImageInput:true},store.budget(job.id)),{ok:true});assert.equal(calls,1);
+});

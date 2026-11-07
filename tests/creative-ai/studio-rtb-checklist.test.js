@@ -24,3 +24,13 @@ test('product briefs require an emphasised feature; brand-only and legacy drafts
  assert.doesNotMatch(M.intakeContext(custom,p),/Not selected/);
  }
 });
+test('selecting products loads saved RTBs and preserves same-product choices for both brands',()=>{
+ for(const brandId of ['Duroflex','Sleepyhead']){
+  const d={brandId,focus:'product'},p={brandId,id:'first',name:'Product',features:['Support','Warranty (terms apply)']};
+  M.selectBriefProduct(d,p,'v1');assert.deepEqual(M.selectedProductRtbs(d,p),p.features);
+  d.selectedRtbs=[];M.selectBriefProduct(d,p,'v2');assert.deepEqual(d.selectedRtbs,[]);
+  const next={...p,id:'next',features:['Washable cover at 30°C']};M.selectBriefProduct(d,next,'v3');assert.deepEqual(d.selectedRtbs,next.features);
+  assert.throws(()=>M.selectBriefProduct(d,{...p,brandId:'other'},'v1'),/another brand/);
+  M.selectBriefProduct(d,{...p,id:'empty',features:[]},'v1');assert.deepEqual(d.selectedRtbs,[]);
+ }
+});

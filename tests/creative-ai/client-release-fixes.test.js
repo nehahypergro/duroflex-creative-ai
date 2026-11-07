@@ -10,10 +10,10 @@ test('repair coordinator reflows before payment and matches source OCR using ori
  t.mock.method(require('../../lib/creative-ai/runtime/editable-composition'),'documentFor',()=>structuredClone(planned));
  t.mock.method(require('../../lib/creative-ai/runtime/editable'),'render',async(r,id,doc)=>({measurements:doc.objects.map(o=>({...o,textHeight:o.fontSize*1.2}))}));
  t.mock.method(require('../../lib/creative-ai/runtime/review'),'ocr',async()=>({status:'measured',rows:[]}));
- t.mock.method(require('../../lib/creative-ai/runtime/saved-copy-layout'),'select',(rows,fields,doc)=>{sourceLayout=doc;throw Error('Offline source-assignment boundary');});
- await fs.writeFile(path.join(dir,'composed-source-unit.png'),'fixture source');
+ t.mock.method(require('../../lib/creative-ai/runtime/saved-copy-layout'),'select',(rows,fields,doc)=>{sourceLayout=structuredClone(doc);return {issues:[],matches:[{fieldId:'b',text:'Exact wording',lines:[]}]};});
+ await require('sharp')({create:{width:1000,height:1000,channels:3,background:'#ffffff'}}).png().toFile(path.join(dir,'composed-source-unit.png'));t.mock.method(require('../../lib/creative-ai/runtime/masked-image'),'maskFromMatches',()=>{throw Error('Offline reflow boundary');});
  const runtime={store:{save:async(id,name,data)=>{saved[name]=data;}},provider:{generate:async()=>{paid++;}}};
- await assert.rejects(require('../../lib/creative-ai/runtime/component-repair-tools').build(runtime,'fixture',{k:'unit',record:{exactCopy:{fields:[{id:'b',delivery:'embedded',text:'Exact wording'}]}},planned,dir,job:{intake:{canvasAssets:{}}}},['typography'],'candidate',{}),/Offline source-assignment boundary/);
+ await assert.rejects(require('../../lib/creative-ai/runtime/component-repair-tools').build(runtime,'fixture',{k:'unit',record:{exactCopy:{fields:[{id:'b',delivery:'embedded',text:'Exact wording'}]}},planned,dir,job:{intake:{canvasAssets:{}}}},['typography'],'candidate',{}),/Offline reflow boundary/);
  assert.equal(sourceLayout.objects[0].fontSize,25);
  assert.equal(saved['typography-reflow.json'].changes[0].after.fontSize,50);
  assert.equal(planned.objects[0].fontSize,25);assert.equal(paid,0);
@@ -36,6 +36,12 @@ test('approved-overlay review sends no logo reference, contradictory instruction
  assert.match(request.instructions,/no logo observation/);
 });
 for(const brandId of ['Duroflex','Sleepyhead']){
+ test(brandId+': typography repair wraps beside the actual wider product instead of crossing its upholstery',async()=>{
+  const source={brandId,canvas:{width:1200,height:627},safeMargin:18,compositionPolicy:{reading:{width:320,headlineCssPx:24,bodyCssPx:16}},protectedRegions:[{left:475,top:256,width:690,height:282}],objects:[{id:'logo',role:'logo',type:'image',left:936,top:31,width:216,height:40},{id:'headline',fieldId:'h',role:'headline',type:'text',text:'Meet Sofa Kiki',fontId:'approved',fontSize:90,left:60,top:100,width:576,height:103},{id:'body',fieldId:'b',role:'supporting-copy',type:'text',text:'Sapling Green · 3-seater fabric sofa',fontId:'approved',fontSize:60,left:60,top:257,width:576,height:147},{id:'cta',fieldId:'c',role:'cta',type:'text',text:'Explore Kiki',fontId:'approved',fontSize:60,left:60,top:470,width:576,height:69}]};
+  const before=structuredClone(source),result=await require('../../lib/creative-ai/runtime/typography-repair').reflow(source,async d=>({measurements:d.objects.map(o=>({...o,textHeight:o.fieldId==='b'?(o.width<450?218:146):o.fieldId==='h'?102:o.height}))}));
+  assert.deepEqual(source,before);const body=result.document.objects.find(o=>o.fieldId==='b');assert.ok(body.width<450);assert.equal(body.fontSize,60);assert.equal(body.text,before.objects[2].text);
+  for(const o of result.document.objects.filter(o=>o.fieldId))assert(!source.protectedRegions.some(r=>require('../../lib/creative-ai/runtime/component-repair-tools').overlaps(r,o)));
+ });
  test(brandId+': directly overlaid logo has no model approval requirement; legacy reviews retain theirs',()=>{
   const document={brandId,objects:[{id:'photo',role:'photograph'},{id:'logo',role:'logo'}],compositionPolicy:{reviewChecksVersion:2,approvedLogoOverlayVersion:1}};
   const checks=Q.schema(document).properties.observations.items.properties.check.enum;

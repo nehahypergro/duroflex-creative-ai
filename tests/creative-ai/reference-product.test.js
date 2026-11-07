@@ -33,7 +33,7 @@ test('branding, technology, major SKU mismatches and duplicate scene products ov
  for(const failed of ['product-branding','product-technology','sku-recognisability','scene-integrity']){
   const e=evidence(),obs=['product-branding','product-technology','sku-recognisability','scene-integrity'].map(c=>observation(c,c===failed?'fail':'pass'));product.applyChecks(record,e,obs);
   assert.equal(e.critical.find(c=>c.criterion===(failed==='product-technology'?'supported-claims':'product-identity')).status,'fail');assert.equal(e.findings.length,1);
-  const routed=require('../../lib/creative-ai/creative-reviewer/routing').routeFinding(e.findings[0]);assert.equal(routed.status,'targeted-correction');assert.equal(routed.owner,'graphic-designer');assert.match(routed.correction,/observed defect/);
+  const routed=require('../../lib/creative-ai/creative-reviewer/routing').routeFinding(e.findings[0],require('../../lib/creative-ai/creative-reviewer/profiles').forRecord({}).policy);assert.equal(routed.status,'targeted-correction');assert.equal(routed.owner,'graphic-designer');assert.match(routed.correction,/observed defect/);
  }
 });
 test('allowed scene/angle differences pass; missing and uncertain checks never pass; no depicted technology may be not applicable',()=>{

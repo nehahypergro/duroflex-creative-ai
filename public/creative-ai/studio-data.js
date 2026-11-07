@@ -1,12 +1,16 @@
 'use strict';
 window.StudioData = (() => {
+  async function responseJson(response,{allowError=false}={}) {
+    let value;try{value=await response.json();}catch{throw Object.assign(Error(response.status===413?'This upload is too large. Choose a smaller file.':'The server returned an unreadable response. Your saved work is preserved; try again.'),{status:response.status});}
+    if(!response.ok&&!allowError)throw Object.assign(Error(value?.error||'The request could not finish. Your saved work is preserved.'),{status:response.status,code:value?.code,clientCode:value?.clientCode,reference:value?.reference});
+    return value;
+  }
   async function get(path,{signal}={}) {
     const controller=new AbortController(),abort=()=>controller.abort();
     if(signal?.aborted)abort();else signal?.addEventListener('abort',abort,{once:true});
     const timer=setTimeout(abort,20000);
     try{const response=await fetch('/creative-ai/api/'+path,{cache:'no-store',signal:controller.signal});
-      if(!response.ok){const info=await response.json().catch(()=>({}));throw Object.assign(Error('Could not load saved work. Retry when the studio is available.'),{status:response.status,clientCode:info.clientCode,reference:info.reference});}
-      return await response.json();
+      return await responseJson(response);
     }finally{clearTimeout(timer);signal?.removeEventListener('abort',abort);}
   }
   async function mapLimit(items,task,limit=4) {
@@ -20,13 +24,13 @@ window.StudioData = (() => {
     }));
     return result;
   }
-  async function post(path,body) {const response=await fetch('/creative-ai/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const value=await response.json();if(!response.ok){const error=Error(value.error||'The request could not finish. Your saved brief is preserved.');error.status=response.status;error.clientCode=value.clientCode;error.reference=value.reference;throw error;}return value;}
+  async function post(path,body) {const response=await fetch('/creative-ai/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});return responseJson(response);}
   async function designDetails(job,id,signal){
     if(!job.results.some(r=>r.imageUrl))return;
     try{const data=await get('jobs/'+encodeURIComponent(id)+'/details',{signal});if(!Array.isArray(data.units))throw Error('Saved design details are unavailable.');job.designDetails=data;}
     catch(e){if(signal?.aborted)return;job.designDetailsError='Saved design details could not load.';}
   }
-  const cache=new Map(),workspaces=new Map(),workspaceLoads=new Map();
+  const fingerprints=new Map(),cache=new Map(),workspaces=new Map(),workspaceLoads=new Map();
   let version=0;
   const diskPrefix='creative-ai-workspace-v2:';
   function disk(action,key,value){return new Promise(done=>{let finished=false;const timer=setTimeout(()=>resolve(null),1500),resolve=value=>{if(finished)return;finished=true;clearTimeout(timer);done(value);};try{const request=indexedDB.open(window.CreativeAccount?.cacheName||'creative-ai-workspace-cache',1);request.onupgradeneeded=()=>request.result.createObjectStore('snapshots');request.onerror=()=>resolve(null);request.onblocked=()=>resolve(null);request.onsuccess=()=>{const db=request.result;if(finished){db.close();return;}const tx=db.transaction('snapshots',action==='get'?'readonly':'readwrite'),store=tx.objectStore('snapshots'),r=action==='get'?store.get(key):action==='put'?store.put(value,key):action==='delete'?store.delete(key):store.clear();r.onsuccess=()=>resolve(r.result);r.onerror=()=>resolve(null);tx.oncomplete=()=>db.close();};}catch{resolve(null);}});}
@@ -42,6 +46,7 @@ window.StudioData = (() => {
     }catch{return;}
   }
   return {
+    responseJson,
     get version(){return version;},
     async restoreWorkspace(brandId){if(restore(brandId))return;const started=version,saved=await disk('get',brandId);if(started!==version)return;if(saved?.visibilityVersion===1&&saved?.brandId===brandId&&Date.now()-saved.at<1800000&&saved.value?.length===3&&saved.value.every(r=>r.status==='fulfilled')&&saved.value[0].value.projects.every(p=>p.brandId===brandId)){saved.at=0;workspaces.set(brandId,saved);}},
     peekWorkspace:brandId=>restore(brandId)?.value,
@@ -73,7 +78,7 @@ window.StudioData = (() => {
     async projectLocation(id){const jobs=await get('jobs');const row=jobs.find(j=>j.id===id);return row?{brandId:row.brandId||row.intake?.brandId}:null;},
     async projects(brandId,fresh=false){
       const started=version,all=await get('jobs'),jobs=all.filter(j=>j.brandId===brandId);
-      const values=await mapLimit(jobs,j=>this.project(j.id,brandId,fresh));
+      const values=await mapLimit(jobs,async j=>{const key=brandId+':'+j.id,previous=cache.get(key),unchanged=j.freshness&&fingerprints.get(key)===j.freshness&&previous&&!previous.editLookupFailed&&!previous.designDetailsError;const project=await this.project(j.id,brandId,(fresh||!!j.freshness)&&!unchanged);if(started===version&&j.freshness)fingerprints.set(key,j.freshness);return project;});
       const result={projects:values.map(v=>v.value||{
         ...v.item,brandId,local:false,name:'Project temporarily unavailable',
         updatedAt:v.item.createdAt,results:[],loadError:v.error,status:'unavailable'
@@ -110,6 +115,6 @@ window.StudioData = (() => {
     deliveryCandidates:id=>get('jobs/'+encodeURIComponent(id)+'/delivery-packages'),
     packageSet:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/delivery-packages',body),
     costs:()=>get('costs'),
-    clear(){version++;disk('clear');cache.clear();try{for(let i=(window.CreativeAccount?.sessionStorage||window.sessionStorage).length-1;i>=0;i--){const k=(window.CreativeAccount?.sessionStorage||window.sessionStorage).key(i);if(k?.startsWith(diskPrefix))(window.CreativeAccount?.sessionStorage||window.sessionStorage).removeItem(k);}}catch{}workspaces.clear();workspaceLoads.clear();}
+    clear(){version++;disk('clear');cache.clear();fingerprints.clear();try{for(let i=(window.CreativeAccount?.sessionStorage||window.sessionStorage).length-1;i>=0;i--){const k=(window.CreativeAccount?.sessionStorage||window.sessionStorage).key(i);if(k?.startsWith(diskPrefix))(window.CreativeAccount?.sessionStorage||window.sessionStorage).removeItem(k);}}catch{}workspaces.clear();workspaceLoads.clear();}
   };
 })();

@@ -6,7 +6,7 @@ for(const [language,brief]of Object.entries(samples))test('UTF-8 request and cam
  const input={brief:brief+'\n"Sleepyhead" \\ literal &amp; <tag>\t78 × 60',language,audience:'Young adults',market:'India'},bytes=Buffer.from(JSON.stringify(input));
  // Split inside every multibyte sequence as a streamed HTTP body can do.
  const parsed=await readJsonBody(Readable.from([...bytes].map(b=>Buffer.from([b]))),bytes.length);
- assert.deepEqual(parsed,input);assert.deepEqual(normalize(parsed),{...input,objective:'consideration'});
+ assert.deepEqual(parsed,input);assert.deepEqual(normalize(parsed),{...input,objective:'consideration',conceptRoutes:['continuity']});
 });
 test('request boundary rejects duplicate fields, nested escaped duplicates and double encoding',async()=>{
  for(const body of ['{"language":"Hindi","language":"English"}','{"nested":{"a":1,"\\u0061":2}}','"{\\"brief\\":\\"test\\"}"','[]','null'])await assert.rejects(()=>readJsonBody(Readable.from([Buffer.from(body)]),1000));
@@ -71,6 +71,6 @@ test('long briefs split into bounded campaign rules without losing Unicode, newl
 test('campaign objectives retain exact multilingual brief and user audience without importing defaults',()=>{
  for(const objective of ['awareness','consideration','action','retention','other']){
   const input={brief:'Sleepyhead: रात का कमरा; decide people and lighting from this brief.',objective,language:'Hinglish',audience:'People setting up their first home',market:'India',...(objective==='other'?{objectiveDetail:'Explore a campaign direction'}:{})};
-  assert.deepEqual(normalize(input),input);
+  assert.deepEqual(normalize(input),{...input,conceptRoutes:['continuity']});
  }
 });

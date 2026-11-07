@@ -7,7 +7,7 @@ test('Desktop cleanup: favourites filters, product controls and brief alignment 
  const page=await browser.newPage({viewport:{width:1384,height:807}}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  const image=await require('sharp')({create:{width:1080,height:1080,channels:3,background:'#b4c5d9'}}).png().toBuffer();
- const jobs=f.brands.flatMap((b,i)=>['finished','failed'].map((status,j)=>({id:`cleanup-${i}-${j}`,brandId:b.id,status,createdAt:`2026-10-${20+j}T08:00:00Z`,updatedAt:`2026-10-${20+j}T08:00:00Z`,intake:{brandId:b.id,campaignName:j?'Alpha':'Zulu',productName:j?'A product':'Z product',brief:'Supplied feature',conceptRoutes:['continuity']},placements:[{id:'square',name:j?'Story':'Social post',dimensions:{width:1080,height:1080}}],results:[{route:'continuity',placementId:'square',ready:true,imageUrl:`/creative-ai/api/jobs/cleanup-${i}-${j}/files/image.png`}]})));
+ const jobs=f.brands.flatMap((b,i)=>['finished','running'].map((status,j)=>({id:`cleanup-${i}-${j}`,brandId:b.id,status,createdAt:`2026-10-${20+j}T08:00:00Z`,updatedAt:`2026-10-${20+j}T08:00:00Z`,intake:{brandId:b.id,campaignName:j?'Alpha':'Zulu',productName:j?'A product':'Z product',brief:'Supplied feature',conceptRoutes:['continuity']},placements:[{id:'square',name:j?'Story':'Social post',dimensions:{width:1080,height:1080}}],results:[{route:'continuity',placementId:'square',ready:true,imageUrl:`/creative-ai/api/jobs/cleanup-${i}-${j}/files/image.png`}]})));
  await page.route('**/creative-ai/api/jobs**',async r=>{const p=new URL(r.request().url()).pathname;if(p.endsWith('.png'))return r.fulfill({contentType:'image/png',body:image});if(p.endsWith('/jobs'))return r.fulfill({json:jobs});if(p.endsWith('/edits'))return r.fulfill({json:[]});return r.fulfill({json:jobs.find(j=>p==='/creative-ai/api/jobs/'+j.id)||{units:[]}});});
  try{for(const [i,b]of f.brands.entries()){
   await page.goto(f.url+'?brand='+b.id);await page.locator('.creation-hero').waitFor();
@@ -22,7 +22,7 @@ test('Desktop cleanup: favourites filters, product controls and brief alignment 
   assert.equal(await page.locator('.saved-card').count(),2);
   await page.getByRole('tab',{name:'Ready',exact:true}).click();assert.equal(await page.locator('.saved-card').count(),1);
   assert.match(await page.locator('.saved-card').innerText(),/Zulu/);
-  await page.getByRole('tab',{name:'Needs attention',exact:true}).click();assert.match(await page.locator('.saved-card').innerText(),/Alpha/);
+  await page.getByRole('tab',{name:'Creating',exact:true}).click();assert.match(await page.locator('.saved-card').innerText(),/Alpha/);
   await page.getByRole('tab',{name:'All',exact:true}).click();await chooseSelect(page,page.locator('#favouriteFormat'),'Story');assert.equal(await page.locator('.saved-card').count(),1);
   await chooseSelect(page,page.locator('#favouriteFormat'),'all');await chooseSelect(page,page.locator('#favouriteSort'),'name');assert.match(await page.locator('.saved-card').first().innerText(),/Alpha/);
   await page.locator('#collectionSearch').fill('Zulu');await page.waitForFunction(()=>document.querySelectorAll('.saved-card').length===1);assert.match(await page.locator('.saved-card').innerText(),/Zulu/);
@@ -34,7 +34,7 @@ test('Desktop cleanup: favourites filters, product controls and brief alignment 
   await page.goto(f.url+'?brand='+b.id+'#review/cleanup-'+i+'-0/0/0');
   await page.locator('.focused-art img').waitFor();
   await page.waitForFunction(()=>{const img=document.querySelector('.focused-art img');return img?.complete&&img.naturalWidth===1080;});
-  await page.locator('.rationale-explanation').waitFor();
+  assert.equal(await page.locator('.rationale-explanation').count(),0);
   assert.equal(await page.locator('.intent-label,.compact-feedback').count(),0);
   const artwork=await page.locator('.focused-art img').boundingBox();assert.ok(artwork.height<=548);
   await page.screenshot({path:'/tmp/studio-review-cleanup-'+i+'.png'});

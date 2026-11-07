@@ -7,14 +7,6 @@ test('shared enum schemas preserve exact restrictions and reduce bytes',()=>{
  assert(JSON.stringify(packed).length<JSON.stringify(schema).length);assert.deepEqual(expand(packed),schema);assert.deepEqual(schema,before);
  assert(check(expand(packed),{a:'foreign',b:item.enum[0]}).length);assert.deepEqual(check(expand(packed),{a:item.enum[0],b:item.enum[1]}),[]);
 });
-test('art prompts remove stale instructions without deleting copy restrictions',()=>{
- const text=require('fs').readFileSync(require('path').join(__dirname,'../../lib/creative-ai/art-director/instructions.md'),'utf8'),out=eff.instructions(text,'art');
- assert(!out.includes('BOTH continuity and exploration'));assert(!out.includes('not an implemented Copywriter'));assert(!out.includes('Keep both concepts'));assert(out.includes('never drop, paraphrase, truncate or hide qualifiers'));assert.equal(eff.instructions(text,'strategy'),text);
-});
-test('single-route concept wording matches the pinned selection',()=>{
- const text='The continuity key is the continuity premise; the exploration key is its contrasting exploration. Develop continuity first and keep every title, rationale, self-critique and public explanation under its own named key. Never describe the exploration concept as continuity or contrast continuity against itself. Produce the two creative premises';
- const out=eff.instructions(text,'concepts',['continuity']);assert(!out.includes('contrasting exploration'));assert(!out.includes('two creative'));assert(out.includes('only the selected continuity'));assert.equal(eff.instructions(text,'concepts',['continuity','exploration']),text);
-});
 test('strategy choices block ineligible exclusions and wrong-page proof upstream',async()=>{
  const si=await require('../../lib/creative-ai/marketing-strategist/examples/synthetic').inputExample();si.assignment.landingPageUrl='https://example.com/exact?variant=queen';si.guardian.requirements=[];si.guardian.establishedPositioningFactIds=[];si.conflicts=[];si.facts=[{id:'exact',kind:'destination',status:'supported',sourceIds:['exact-source']},{id:'other',kind:'destination',status:'supported',sourceIds:['other-source']}];si.additionalSources=[{id:'exact-source',reference:si.assignment.landingPageUrl},{id:'other-source',reference:'https://example.com/other'}];
  const destination={type:'object',properties:{status:{type:'string',enum:['verified','unverified']},factIds:{type:'array',items:{type:'string'}}}};

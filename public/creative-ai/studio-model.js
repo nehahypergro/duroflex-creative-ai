@@ -216,7 +216,7 @@ default:return frame(14,9,36,38)} }
   }
   function newDraft(brandId,group='social') {
     const createdAt=new Date().toISOString();
-    return {schemaVersion:1,id:uid(),brandId,revision:0,createdAt,updatedAt:createdAt,name:'',brief:'',creativeCount:1,audience:'',message:'',objective:'Awareness',focus:'product',productId:'',productName:'',productUrl:'',variant:'',group,language:'English',people:'Decide from the brief',lighting:'Decide from the brief',setting:'Decide from the brief',details:{},outputs:[],references:[],status:'draft'};
+    return {schemaVersion:1,id:uid(),brandId,revision:0,createdAt,updatedAt:createdAt,name:'',brief:'',creativeCount:2,audience:'',message:'',objective:'Awareness',focus:'product',productId:'',productName:'',productUrl:'',variant:'',group,language:'English',people:'Decide from the brief',lighting:'Decide from the brief',setting:'Decide from the brief',details:{},outputs:[],references:[],status:'draft'};
   }
   // A project owns its brief and plan. Studio is a destination, never a new project.
   const workspaces=[{id:'static',name:'Static Studio',available:true},{id:'video',name:'Video Studio',available:false},{id:'copy',name:'Copy Studio',available:false},{id:'adaptation',name:'Adaptation Studio',available:false}];
@@ -500,7 +500,7 @@ default:return frame(14,9,36,38)} }
 
   // Adapted from Static Studio's field/progress patterns; all data stays in this Studio.
   const intakeOptions={themes:['Functional','Emotional','Tactical','Seasonal','Trends'],tonalities:['Direct','Celebratory','Sincere','Reminding','Regulatory']};
-  function creativeCount(d){return 1;}
+  function creativeCount(d){return 2;}
   function baseRequiredAssetFields(o){if(amazonImageTemplate(o)||retailEntry(o))return [];return ({2:['technology','source'],3:['offer','terms','offerStart','offerEnd','destination'],4:['claim','proof'],6:['marketplace','template','eligibility'],10:['storeName','address','destination'],12:['partner','partnerAsset','lockup','reviewer'],15:['articleTitle','facts']})[o.featureId]||[];}
   function productRtbSources(p){
     const facts=(Array.isArray(p?.features)?p.features:[]).map(v=>typeof v==='string'?v:v?.text||v?.description||'');
@@ -519,6 +519,13 @@ default:return frame(14,9,36,38)} }
     },[]);
   }
   function productRtbs(p){const structured=(Array.isArray(p?.features)?p.features:[]).map(v=>typeof v==='string'?v:v?.text||v?.description||'').filter(v=>v.trim());return [...new Set(structured.length?structured:productRtbSources(p).flatMap(featureItems))];}
+  function selectBriefProduct(d,p,variant){
+    if(!p||p.brandId!==d.brandId)throw Error('Product belongs to another brand.');
+    const preserve=d.focus==='product'&&d.productId===p.id&&d.rtbProductId===p.id;
+    Object.assign(d,{focus:'product',productId:p.id,productName:p.name,productUrl:p.pageUrl||'',variant,
+      selectedRtbs:preserve?selectedProductRtbs(d,p):productRtbs(p),rtbProductId:p.id});
+    protectBriefField(d,'productId');protectBriefField(d,'variant');
+  }
   function selectedProductRtbs(d,p){
     if(d.focus!=='product'||d.rtbProductId!==d.productId)return [];
     const sources=productRtbSources(p),facts=productRtbs(p);
@@ -691,7 +698,7 @@ default:return frame(14,9,36,38)} }
     for(const seg of segments){
       for(const language of languages){const escaped=language.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');if(new RegExp('(?:\\b(?:in|language)\\s*:?\\s*)'+escaped+'\\b|\\b'+escaped+'\\s+(?:(?:Instagram|Facebook|LinkedIn|WhatsApp|social|website|email)\\s+)?(?:posts?|carousels?|stories|story|creatives?|banners?|copy|ads?)\\b','i').test(seg))add('language',language,seg,'Language');}
       const range=seg.match(/\b(?:aged?|ages)\s*:?\s*(\d{1,2})\s*(?:[-–]|to)\s*(\d{1,2})\b/i);if(range&&+range[1]<=+range[2])add('customerAge',range[1]+'–'+range[2],seg,'Age');
-      const count=seg.match(/\b(one|two|1|2)\s+(?:creative\s+)?(?:options?|creatives?|concepts?|sets?)\b/i);if(count)add('creativeCount',1,seg,'One complete set');
+      const count=seg.match(/\b(one|two|1|2)\s+(?:creative\s+)?(?:options?|creatives?|concepts?|sets?)\b/i);if(count)add('creativeCount',2,seg,'Two complete options');
       for(const [stage,objective]of [['TOFU','Awareness'],['MOFU','Consideration'],['BOFU','Purchase']])if(new RegExp('\\b'+stage+'\\b','i').test(seg)){add('funnelStage',stage,seg,'Funnel stage');add('objective',objective,seg,'Objective');}
       const objective=seg.match(/\b(?:objective|goal)\s*:\s*(awareness|consideration|purchase|engagement|education)\b/i);if(objective)add('objective',objective[1][0].toUpperCase()+objective[1].slice(1).toLowerCase(),seg,'Objective');
     }
@@ -806,10 +813,17 @@ default:return frame(14,9,36,38)} }
   function requiredDetails(d) {return [...new Set((d.outputs||[]).flatMap(o=>features.find(f=>f.id===o.featureId)?.fields||[]))].filter(k=>fields[k]);}
   function units(d) {return (d.outputs||[]).reduce((n,o)=>n+(responsiveSlots(o).length?2:retailEntry(o)?(retailProfile(o)?.unitCount||1):rcsImage(o)?rcsCount(o):o.featureId===1&&o.staticValues?.platform==='PMax'?(generationProfile({focus:'product',outputs:[o]})?.unitCount||0):[5,6].includes(o.featureId)?staticParts(o).length:o.featureId===9?o.slides:1),0);}
   function creationSubstage(p){const stages=p.activeStages?.length?p.activeStages:[p.stage||p.progress?.stage||p.status];if(stages.some(s=>['generation','statics'].includes(s)))return 'Generating images';if(stages.some(s=>['review','quality'].includes(s)))return 'Checking images';if(stages.some(s=>['queued','preparing','brand','research','guardian','strategy','concepts','pdp-plan','collection-plan','copy','art','reconciliation'].includes(s)))return 'Planning';return '';}
+  function isCorrecting(project){
+    const units=project.componentRecovery?.units;
+    if(!units?.length)return project.componentRecovery?.repairing>0;
+    const placements=new Set((project.placements||[]).map(p=>p.id));
+    return units.some(u=>u.status==='repairing'&&(!placements.size||placements.has(u.placementId)));
+  }
   function status(project) {
     const attention=(detail,action='View details')=>({key:'attention',label:'Needs attention',tone:'amber',action,detail});
     if(project.loadError)return attention('We couldn’t load this project. Retry loading to see its saved work.','Retry loading');
     if(project.local||project.status==='draft')return {key:'draft',label:'Draft',tone:'purple',action:'Continue brief',detail:'Your brief is saved. Creation hasn’t started.'};
+    if(isCorrecting(project))return {key:'creating',label:'Correcting',tone:'blue',action:'View progress',substage:'Repairing saved artwork',detail:'Correcting your design. Completed work is saved; progress updates automatically.'};
     if(project.stage==='recovering'&&['running','queued','preparing'].includes(project.status))return {key:'creating',label:'Recovering',tone:'blue',action:'View progress',substage:'Checking saved progress',detail:'The worker restarted. Checking saved requests before continuing.'};
     if(['running','queued','preparing'].includes(project.status))return {key:'creating',label:'Creating',tone:'blue',action:'View progress',substage:creationSubstage(project),detail:project.status==='queued'?'Waiting to start. Your request is saved.':'Work is progressing.'};
     if(['failed','partial','needs-input','cancelled','canceled','stopped','interrupted','paused'].includes(project.status))return attention(project.status==='needs-input'?'A detail is needed before creation can continue. Open the project to complete it.':project.status==='partial'?'Some requested images could not be completed. Saved images remain available; review recovery options for the affected work.':['cancelled','canceled','stopped','paused'].includes(project.status)?'Creation was stopped. Your saved work remains available.':'Creation was interrupted. Open the project for the reason and recovery options.');
@@ -861,15 +875,15 @@ default:return frame(14,9,36,38)} }
   function jobProgress(p){
     const ids=['preparing','creating','reviewing','ready'];
     const mapping={queued:'preparing',preparing:'preparing',brand:'preparing',research:'preparing',guardian:'preparing',strategy:'preparing',concepts:'preparing','pdp-plan':'preparing','collection-plan':'preparing',copy:'preparing',art:'preparing',reconciliation:'preparing',generation:'creating',statics:'creating',review:'reviewing',quality:'reviewing'};
-    const running=['queued','preparing','running'].includes(p.status);
+    const correcting=isCorrecting(p),running=correcting||['queued','preparing','running'].includes(p.status);
     const active=(p.activeStages||[]).map(k=>mapping[k]).filter(Boolean);
     let current=active.length?ids.find(id=>active.includes(id)):mapping[p.stage]||mapping[p.progress?.stage]||mapping[p.status]||null;
-    const display=status(p);if(!running)current=display.key==='ready'?'ready':null;
+    const display=status(p);if(correcting)current='creating';else if(!running)current=display.key==='ready'?'ready':null;
     const waiting=running&&Object.values(p.providerWaits||{}).some(w=>w.status==='waiting');
-    const label=display.label,substage=running?creationSubstage(p):'';
+    const label=display.label,substage=correcting?'Repairing saved artwork':running?creationSubstage(p):'';
     const description=p.stage==='recovering'?'The worker restarted. Saved progress is being checked before continuing; unresolved paid requests will not be repeated.':waiting?'The creation service is taking longer. We are checking the same response automatically; no replacement is being submitted.':running?(p.status==='queued'?'Your request is waiting to start.':substage==='Planning'?'Preparing the brief, product references and design.':substage==='Generating images'?'Generating your images. Completed work is saved as it becomes available.':substage==='Checking images'?'Checking the generated images.':'Work is continuing. Waiting for the next recorded stage update.'):display.detail;
     const steps=[['draft','Draft'],['creating','Creating'],['ready','Ready']].map(([id,label])=>({id,label,state:id===display.key?'current':id==='draft'&&running?'completed':display.key==='ready'&&['draft','creating'].includes(id)?'completed':'pending'}));
-    return {current,label,substage,description,running,steps};
+    return {current,label,substage,description:correcting?display.detail:description,running,correcting,steps};
   }
   // One request at a time, bound to a visible job. Timers never start generation.
   function createProgressPoller({read,apply,error,setTimer=setTimeout,clearTimer=clearTimeout}){
@@ -1032,7 +1046,7 @@ default:return frame(14,9,36,38)} }
       'reference-boundary':['Reference use','Check the reference findings in the saved report.','report','View findings']
     };
     const concerns=[],seen=new Map();
-    for(const raw of [...issues,...(unit?.review?.findings||[]).filter(f=>f.severity!=='advisory'),...(unit?.review?.verificationDependencies||[]),...(Array.isArray(result.unresolved)?result.unresolved:[])]){const c=typeof raw==='string'?{note:raw}:raw;if(!c||['pass','not-applicable','resolved'].includes(c.status))continue;if(c.request&&c.criterion&&concerns.some(x=>x.criterion===c.criterion))continue;const criterion=c.criterion||'review-note',observation=text(c.defect)||text(c.evidence?.observation)||text(c.note)||text(c.request)||'This check is unresolved.',key=criterion+'|'+observation.trim().toLowerCase();if(seen.has(key))continue;seen.set(key,true);const [title,nextStep,action,label]=actions[criterion]||['Review concern','Check this item before sharing.','report','View finding'];const failed=['fail','critical','creative','major'].includes(c.status||c.severity);concerns.push({criterion,title,observation,status:failed?'fail':'unverified',nextStep:text(c.correction)||(!failed&&action==='edit'?'Check the wording, size and contrast against the brief before making changes.':nextStep),action,label:!failed&&action==='edit'?'Check in editor':label});}
+    for(const raw of [...(unit?.review?.classifiedFindings||[...issues,...(unit?.review?.findings||[]).filter(f=>f.severity!=='advisory'),...(unit?.review?.verificationDependencies||[])]),...(Array.isArray(result.unresolved)?result.unresolved:[])]){const c=typeof raw==='string'?{note:raw}:raw;if(!c||['pass','not-applicable','resolved'].includes(c.status))continue;if(c.request&&c.criterion&&concerns.some(x=>x.criterion===c.criterion))continue;const criterion=c.criterion||'review-note',observation=text(c.defect)||text(c.evidence?.observation)||text(typeof c.evidence==='string'?c.evidence:'')||text(c.note)||text(c.request)||'This check is unresolved.',key=criterion+'|'+observation.trim().toLowerCase();if(seen.has(key))continue;seen.set(key,true);const [title,nextStep,action,label]=actions[criterion]||['Review concern','Check this item before sharing.','report','View finding'];const category=c.category||(['fail','critical','creative','major'].includes(c.status||c.severity)?'blocker':'verification'),failed=category==='blocker';concerns.push({criterion,title,observation,category,requirement:c.requirement||c.evidence?.expected||null,scope:c.scope||{placementId:result.placementId},status:category==='suggestion'?'suggestion':failed?'fail':'unverified',nextStep:category==='suggestion'?'Optional improvement; this does not block delivery.':text(c.correction)||(!failed&&action==='edit'?'Check the wording, size and contrast against the brief before making changes.':nextStep),action,label:category==='suggestion'?'View suggestion':!failed&&action==='edit'?'Check in editor':label});}
     // A missing evaluator is one recovery task, not a separate invented defect for every check.
     const missing=concerns.filter(c=>c.status==='unverified'&&/^No qualified evaluator evidence available\.?$/i.test(c.observation.trim()));
     if(missing.length>1){const index=concerns.indexOf(missing[0]);for(const c of missing)concerns.splice(concerns.indexOf(c),1);concerns.splice(index,0,{criterion:'review-coverage',title:'Review incomplete',observation:'Not verified: '+missing.map(c=>c.title).join(', ')+'.',status:'unverified',nextStep:'Check the unverified items before sharing.',action:'report',label:'View missing checks'});}
@@ -1051,6 +1065,7 @@ default:return frame(14,9,36,38)} }
     return {read,save,update,updateMany,duplicate,key:brandId=>prefix+brandId};
   }
   const pdpSlots=["Product hero","Alternate product angle","Surface and edge detail","Dimensions and bed fit","Firmness and use","Main differentiator","Technology explanation","Materials and construction","Product in context","What is included","Care and setup","Ownership reassurance"];
+  function campaignGenerationSupported(d){return !!d?.outputs?.length && d.outputs.every(o=>!!generationProfile({...d,outputs:[o]}));}
   function generationProfile(d){
     if(d?.outputs?.length!==1)return null;
     const o=d.outputs[0];
@@ -1187,5 +1202,12 @@ default:return frame(14,9,36,38)} }
       return 'projects';
     }
   };
-  return {communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,safeAsset,normalizeJob,storage};
+  function toolFormats(group){const catalogue={
+    social:[[1,'Instagram Post','1080 × 1080 px'],[8,'Instagram Story','1080 × 1920 px'],[9,'Instagram Carousel','1080 × 1080 px · Slide set'],[1,'PMax Image Set','Multiple sizes · Image set',null,null,'PMax']],
+    website:[[7,'Website Banner','1920 × 640 px'],[5,'Product Images','1080 × 1080 px · Image set'],[6,'Marketplace A+ Images','Multiple sizes · Module set'],[6,'Amazon A+ Feature Module','300 × 300 px',null,null,null,null,'Amazon feature module'],[6,'Amazon A+ Lifestyle — Image Header','970 × 600 px',null,null,null,null,'Amazon lifestyle module'],[6,'Amazon Brand Story','Multiple sizes · Story set',null,null,null,null,'Amazon Brand Story'],[6,'Amazon Premium A+ Images','Multiple sizes · Module set',null,null,null,null,'Amazon Premium — Full-width image'],[7,'Homepage Category Tile','1080 × 1080 px · Adjustable',null,null,null,'Category tile']],
+    retail:retailEntries.map(e=>[e.featureId,e.name,e.planningOnly?'Planning brief':e.printId?'Physical size · Print':e.key==='screen'?'1920 × 1080 px · Adjustable':'1080 × 1080 px · Adjustable',null,null,'Retail:'+e.key]),
+    messaging:[[14,'WhatsApp Visual','1080 × 1080 px'],[14,'Email Header / Hero','1200 × 600 px',null,null,'Email'],[14,'RCS Card Images','1260 × 540 px · Adjustable',null,null,'RCS'],[14,'Push Notification Image','1024 × 512 px · Adjustable',null,null,'Push'],[14,'Push Notification Icons','Multiple sizes · Icon set',null,null,'Push icons']],
+    corporate:[[13,'LinkedIn Post','1200 × 627 px'],[9,'LinkedIn Feature Carousel','1080 × 1080 px · Page set','LinkedIn','Feature'],[9,'LinkedIn Story Carousel','1080 × 1080 px · Page set','LinkedIn','Story'],[15,'Blog / Link Preview','1080 × 1080 px · Adjustable']]
+  };return (catalogue[group]||[]).map(([id,name,ratio,carouselPlatform,narrativeType,imagePlatform,websiteType,amazonPreset])=>({id,name,ratio,carouselPlatform,narrativeType,imagePlatform,websiteType,amazonPreset}));}
+  return {campaignGenerationSupported,selectBriefProduct,toolFormats,communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,safeAsset,normalizeJob,storage};
 });

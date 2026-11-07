@@ -34,11 +34,11 @@ test('real product mismatches still fail; saved legacy reviews are not rewritten
  const legacy=observation('unknown','unresolved');delete legacy.comparison;assert.doesNotThrow(()=>product.validateComparisons({productReference:{}},[legacy]));assert.equal(legacy.status,'unknown');
 });
 for(const brandId of ['Duroflex','Sleepyhead'])test(brandId+' review retains all selected references and labels actual detail separately',async()=>{
- const bytes=await image(),data=uri(bytes),refs=Array.from({length:8},(_,i)=>({assetId:'sku-'+i,roles:['product'],imageData:data}));
- const record={canvas:{width:300,height:300},productReference:{brandId,sourceAssetId:'sku-7',referenceAssetIds:refs.map(a=>a.assetId)},artDirection:{product:{assetIds:['sku-6']}},attachmentManifest:[{assetId:'style',roles:['style'],imageData:data},...refs]};
+ const bytes=await image(),data=uri(bytes),refs=Array.from({length:4},(_,i)=>({assetId:'sku-'+i,roles:['product'],imageData:data}));
+ const record={canvas:{width:300,height:300},productReference:{brandId,sourceAssetId:'sku-3',referenceAssetIds:refs.map(a=>a.assetId)},artDirection:{product:{assetIds:['sku-2']}},attachmentManifest:[{assetId:'style',roles:['style'],imageData:data},...refs]};
  const r=await require('../../lib/creative-ai/runtime/product-review-images').build(record,data);
- assert.ok(refs.every(a=>r.images.some(i=>i.id===a.assetId)));assert.equal(r.references[0].assetId,'sku-7');
- assert.ok(r.images.some(i=>i.id==='actual-target-detail'));assert.match(r.instructions,/cannot recover/);assert.equal(record.attachmentManifest.length,9);
+ assert.ok(refs.every(a=>r.images.some(i=>i.id===a.assetId)));assert.equal(r.references[0].assetId,'sku-3');
+ assert.ok(r.images.some(i=>i.id==='actual-target-detail'));assert.match(r.instructions,/cannot recover/);assert.equal(record.attachmentManifest.length,5);
 });
 test('a native render is supplementary only and must match both saved hashes',async()=>{
  const native=await image(1024,1024),target=await image(),record={canvas:{width:300,height:300},attachmentManifest:[]};

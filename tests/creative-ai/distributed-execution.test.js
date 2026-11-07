@@ -24,6 +24,15 @@ test('PostgreSQL serializes ten clients, preserves budget and fences lost worker
   // Clear fixture pending states only, never reservations, before next brand.
   await pool.query("UPDATE creative_execution_requests SET state='cancelled' WHERE job_id=$1 AND state IN ('queued','leased')",[base.jobId]);
  }
+ // Release only requests proven never dispatched, once, retaining ambiguous spend.
+ const c=clients[0],jobId='creative-refunds',base={jobId,brandId:'brand-duroflex',kind:'reasoning',limitUsd:10,reservationUsd:2,inputHash:hash('refund-payload'),payload:{key:'fixture'},deadline:Date.now()+60000};
+ await c.enqueue({...base,requestKey:hash('expired')});await pool.query("UPDATE creative_execution_requests SET deadline=clock_timestamp()-interval '1 second' WHERE job_id=$1",[jobId]);await c.claim('reasoning','refund-worker');
+ const reserved=async()=>Number((await pool.query('SELECT reserved_usd FROM creative_execution_jobs WHERE id=$1',[jobId])).rows[0].reserved_usd);assert.equal(await reserved(),0);await c.claim('reasoning','refund-worker');assert.equal(await reserved(),0);
+ await c.enqueue({...base,requestKey:hash('invalid')});const invalid=await c.claim('reasoning','refund-worker');await c.cancel(invalid);await c.cancel(invalid);assert.equal(await reserved(),0);
+ await c.enqueue({...base,requestKey:hash('ambiguous')});const unknown=await c.claim('reasoning','refund-worker');await c.dispatch(unknown);await c.unknown(unknown);await c.cancel(unknown);assert.equal(await reserved(),2);assert.equal((await c.get(jobId,'reasoning',unknown.request_key)).state,'unknown');
+ await c.complete(unknown,{key:'usage-response'},0.05);assert.equal(await reserved(),0.05);await c.complete(unknown,{key:'usage-response'},0.05);assert.equal(await reserved(),0.05,'settlement must be idempotent after database reconnect');
+ await c.enqueue({...base,requestKey:hash('new-after-settlement')});assert.equal(await reserved(),2.05);
+
 });
 test('private object references are scoped and actual bytes are verified',async()=>{
  const {ObjectStore}=require('../../lib/creative-ai/distributed/object-store');const objects=new Map(),client={send:async command=>{const x=command.input;if(x.Body){objects.set(x.Key,Buffer.from(x.Body));return {};}return {Body:(async function*(){yield objects.get(x.Key);})()};}};

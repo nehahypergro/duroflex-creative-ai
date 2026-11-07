@@ -3,7 +3,7 @@ const test=require('node:test'),assert=require('node:assert/strict'),M=require('
 test('intake keeps optional audience choices optional and requires commercial facts only for relevant assets',()=>{
 const d=M.startDraft('brand','quick',1);Object.assign(d,{intakeVersion:1,name:'Launch',brief:'Show the product',focus:'brand',creativeCount:1});
 assert.equal(M.intakeProgress(d).percent,100);assert.equal(M.creativeCount({...d,creativeCount:undefined}),2);
-for(const n of [0,3,'NaN'])assert.ok(M.validateBrief({...d,creativeCount:n}).creativeCount);
+for(const n of [0,2,3,'NaN']){assert.equal(M.creativeCount({...d,creativeCount:n}),2);assert.equal(M.validateBrief({...d,creativeCount:n}).creativeCount,undefined);}
 d.outputs=[M.output(3)];const errors=M.validateBrief(d);for(const k of M.requiredAssetFields(d.outputs[0],d))assert.ok(errors['static-'+d.outputs[0].id+'-'+k]);
 const a=M.output(6);M.applyAmazonPreset(a,'Amazon Brand Story');d.outputs=[a];assert.equal(M.intakeProgress(d).percent,100);
 });

@@ -30,8 +30,9 @@ async function start({root = path.resolve(__dirname, '../..'), port = 1842,
     await fs.writeFile(tokenFile, setupToken, {mode: 0o600, flag: 'wx'});
   }
   let repl, client, app;
-  let closing;
+  let closing,stopMaintenance;
   const close = () => closing ||= (async () => {
+    stopMaintenance?.();
     if (app?.server.listening) await new Promise(resolve => app.server.close(resolve));
     if (client) await client.close();
     if (repl) await repl.stop({doCleanup: false, force: false});
@@ -46,6 +47,7 @@ async function start({root = path.resolve(__dirname, '../..'), port = 1842,
     client = await connect(repl.getUri());
     app = await createApp({client, db: client.db('creative_ai_admin_pilot'),
       sourceRoot: root, setupToken, studio: true, preview: false});
+    stopMaintenance=require('../../lib/creative-ai/runtime/background-maintenance').start(root,app.runtime?.provider?.provider);
     // createAdminServer explicitly sets resumeJobs:false; opening Studio cannot resume a batch.
     await new Promise((resolve, reject) => {
       app.server.once('error', reject);
@@ -54,6 +56,8 @@ async function start({root = path.resolve(__dirname, '../..'), port = 1842,
     await fs.writeFile(path.join(privateDir, 'deployment.json'), JSON.stringify({
       url: `http://127.0.0.1:${port}/admin`, sourceRoot: root,
       startedAt: new Date().toISOString(), pid: process.pid,
+      briefBuilderVersion: require('../../lib/creative-ai/experiments/planned-artwork').briefBuilderVersion,
+      artworkWorkflow: require('../../lib/creative-ai/runtime/original-delivery').prepare(root,{}).leanWorkflowVersion===1?'lean-v1':'existing',
       database: 'Persistent local MongoDB; Atlas deferred', automaticJobResumption: false, componentRecoveryVersion: 1, editorChatEnabled: app.runtime?.editorChatEnabled === true
     }, null, 2), {mode: 0o600});
     return {app, close};

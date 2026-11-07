@@ -140,6 +140,9 @@
           "type": "string"
         }
       }
+    },
+    "blockingPolicyVersion": {
+      "const": 1
     }
   },
   "required": [

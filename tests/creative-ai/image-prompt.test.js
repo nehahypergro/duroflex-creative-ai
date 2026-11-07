@@ -15,3 +15,14 @@ test('render projection retains complete authoritative rules and exact copy whil
  const out=prepare(prompt);assert.ok(out.wireCharacters<=32000);assert.equal(JSON.parse(out.text.split('\n')[0].slice('Locked brand execution rules: '.length))[0].text,rule);
  assert.equal(out.text.split('\n')[1],'Exact embedded text: '+JSON.stringify([{text:rule}]));assert.match(out.text,/Apply locked rule r1 above\./);assert.match(out.text,/"brandId":"brand-a"/);assert.match(out.text,/No invented copy\./);assert.doesNotMatch(out.text,/audit-only/);
 });
+test('composed-artwork Brand locked rules share repeated checks without touching exact typography',()=>{
+ const {renderProjection}=require('../../lib/creative-ai/runtime/image-prompt');const rule='Preserve the exact product silhouette, correct colour variant, genuine markings and required claim qualifiers.';
+ const exact='Exact campaign wording and typography: '+JSON.stringify([{text:rule,font:'Approved'}]);const source='Brand locked rules: '+JSON.stringify([{id:'sku-rule',text:rule}])+'\n'+exact+'\nFinal art direction: '+JSON.stringify({checkCriteria:['Required product check: '+rule],scene:'Simple room'});
+ const out=renderProjection(source);assert.equal(out.split('\n')[1],exact);assert.match(out.split('\n')[0],/Preserve the exact product/);assert.match(out.split('\n')[2],/Apply locked rule sku-rule above/);assert.equal(JSON.parse(out.split('\n')[2].slice('Final art direction: '.length)).scene,'Simple room');
+});
+
+test('render fact projection preserves wording, qualifiers and uncertain evidence status',()=>{
+ const {renderProjection}=require('../../lib/creative-ai/runtime/image-prompt');
+ const out=renderProjection('Source-backed product facts: '+JSON.stringify([{id:'campaign-production-assets',text:'registry audit'},{id:'product',text:'Three years conditional warranty.',status:'supported',sourceIds:['audit']},{id:'uncertain',text:'Unverified claim',status:'unknown'}]));
+ assert.deepEqual(JSON.parse(out.slice('Source-backed product facts: '.length)),[{text:'Three years conditional warranty.'},{text:'Unverified claim',status:'unknown'}]);
+});

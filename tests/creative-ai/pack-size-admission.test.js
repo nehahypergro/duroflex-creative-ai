@@ -21,7 +21,7 @@ test('runtime creation saves all selected formats and their scaled budget before
  const root=await fs.mkdtemp(path.join(os.tmpdir(),'pack-create-'));try{
  const {CreativeRuntime}=require('../../lib/creative-ai/runtime/engine'),runtime=new CreativeRuntime({root,provider:{reason(){assert.fail('No paid calls');},generate(){assert.fail('No paid calls');}}});runtime.schedule=()=>{};
  const ids=formats.presets.filter(p=>p.kind==='static').slice(0,12).map(p=>p.id),id=await runtime.create({brandUrl:'https://example.com',brief:'Offline full selection',placementIds:ids,placementPublishing:{'custom:studio-social-story':{publishing:'organic'},'custom:studio-web-hero':{brandedHost:true}}}),job=await runtime.store.read(id);
- assert.equal(job.selection.length,12);assert.equal(job.budget.maxImageCalls,48);assert.equal(job.budget.maxReasoningCalls,160);assert.equal(job.budget.imageCalls,0);assert.equal(job.budget.reasoningCalls,0);assert.equal(job.budget.estimatedSpend.maxUsd,runtime.config.estimatedSpend.maxUsd);
+ assert.equal(job.selection.length,12);assert.equal(job.budget.maxImageCalls,24);assert.equal(job.budget.maxReasoningCalls,160);assert.equal(job.budget.imageCalls,0);assert.equal(job.budget.reasoningCalls,0);assert.equal(job.budget.estimatedSpend.maxUsd,runtime.config.estimatedSpend.maxUsd);
  }finally{await fs.rm(root,{recursive:true,force:true});}
 });
 test('placement preview includes every selected format above three and still rejects an empty selection',()=>{

@@ -45,7 +45,7 @@ test('provider never accepts double-encoded objects or duplicate keys as a valid
  });
 });
 test('excess reference images fail before reservation instead of being silently dropped',()=>providerCase([],async(provider,budget,state)=>{
- await assert.rejects(()=>provider.reason({instructions:'Fixture',input:{},schema:{type:'object'},images:Array.from({length:9},(_,i)=>({id:'ref-'+i,imageData:'fixture'}))},budget),/8 selected images/);
+ await assert.rejects(()=>provider.reason({instructions:'Fixture',input:{},schema:{type:'object'},images:Array.from({length:9},(_,i)=>({id:'ref-'+i,imageData:'fixture'}))},budget),{code:'REFERENCE_CAPACITY'});
  assert.equal(state.requests.length,0);assert.equal(state.reservations(),0);
 }));
 test('digital inventory expands into distinct units with valid raster dimensions',()=>{

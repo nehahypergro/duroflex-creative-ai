@@ -25,35 +25,33 @@ async function fixture(options={}){
  }catch(e){res.writeHead(500);res.end(JSON.stringify({error:e.message}));}});
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
  const browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true});
- const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
- return {page,context,browser,requests,errors,brands:fixtureBrands,url:'http://127.0.0.1:'+server.address().port+'/creative-ai/studio.html',close:async()=>{await browser.close();await new Promise(r=>server.close(r));}};
+ const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage(),errors=[];page.setDefaultTimeout(7000);page.on('pageerror',e=>errors.push(e.message));
+ return {page,context,browser,requests,errors,brands:fixtureBrands,url:'http://127.0.0.1:'+server.address().port+'/creative-ai/studio.html',close:async()=>{await browser.close();server.closeAllConnections();await new Promise(r=>server.close(r));}};
 }
 // Legacy drafts are seeded as saved fixtures; new projects now use the two-path chooser.
 async function openLegacyDraft(p){await p.evaluate(()=>{const d=StudioModel.newDraft(window.activeBrand.id);StudioModel.storage(localStorage).save(d);location.hash='brief/'+d.id;});await p.waitForSelector('#field-brief');}
-test('Interaction pass: selected download, counts, artwork and categories work for both brands',{timeout:60000},async()=>{
+test('Interaction pass: gallery thumbnails, exact artwork download and categories work for both brands',{timeout:60000},async()=>{
  const f=await fixture();try{for(let i=0;i<brands.length;i++){
-  await f.page.goto(f.url+'?brand='+brands[i].id+'#project/job-'+i);await f.page.waitForSelector('.set-completion');assert.match(await f.page.locator('.set-completion').innerText(),/1 of 1/);
-  await f.page.locator('.image-selection summary').click();await f.page.locator('[data-image-pick]').first().check();assert.equal(await f.page.locator('.selection-count').innerText(),'1 selected');
-  const event=f.page.waitForEvent('download');await f.page.locator('[data-interaction=download-picked]').click();const download=await event;const filename='/private/tmp/creative-ui-interactions/selected-'+i+'.zip';await download.saveAs(filename);
-  const report=JSON.parse(require('child_process').execFileSync('python3',['-c','import zipfile,json,sys; z=zipfile.ZipFile(sys.argv[1]); assert z.testzip() is None; print(json.dumps(json.loads(z.read("manifest.json"))))',filename],{encoding:'utf8'}));assert.equal(report.images.length,1);assert.equal(report.images[0].brandId,brands[i].id);assert.equal(report.images[0].revision,null);assert.match(report.images[0].sha256,/^[a-f0-9]{64}$/);await f.page.screenshot({path:'work/studio-ui-regression/screens/selection-'+i+'.png'});
-  await f.page.goto(f.url+'?brand='+brands[i].id+'#review/job-'+i+'/0/0');await f.page.locator('.focused-art img').waitFor();assert.equal(await f.page.locator('[data-interaction=placement]').count(),0);assert.ok(await f.page.locator('.focused-art').isVisible());
-  await f.page.goto(f.url+'?brand='+brands[i].id+'#tools');await f.page.waitForSelector('.category-expander');const b=f.page.locator('.category-expander').first();await b.click();assert.equal(await b.getAttribute('aria-expanded'),'false');await b.click();assert.equal(await b.getAttribute('aria-expanded'),'true');
+  const p=f.page;await p.goto(f.url+'?brand='+brands[i].id+'#project/job-'+i);await p.locator('.deliverable-card').waitFor();assert.equal(await p.locator('.deliverable-card').count(),1);assert.equal(await p.locator('.image-selection').count(),0);
+  await p.locator('.deliverable-card [data-action=open-output]').first().click();await p.locator('.focused-art img').waitFor();const image=await p.locator('.focused-art img').getAttribute('src');assert.match(image,/static-continuity/);
+  const expected=Buffer.from(await (await p.request.get(new URL(image,f.url).href)).body());const event=p.waitForEvent('download');await p.locator('[data-action=download]').click();const download=await event;const downloaded=await fs.readFile(await download.path()),sharp=require('sharp'),digest=async bytes=>require('crypto').createHash('sha256').update(await sharp(bytes).removeAlpha().raw().toBuffer()).digest('hex');assert.equal(await digest(downloaded),await digest(expected),'PNG export preserves the selected artwork pixels');assert.equal((await sharp(downloaded).metadata()).width,1080);
+  assert.equal(await p.locator('[data-interaction=placement]').count(),0);assert.ok(await p.locator('.focused-art').isVisible());
+  await p.goto(f.url+'?brand='+brands[i].id+'#tools');await p.waitForSelector('.category-expander');const b=p.locator('.category-expander').first();await b.click();assert.equal(await b.getAttribute('aria-expanded'),'false');await b.click();assert.equal(await b.getAttribute('aria-expanded'),'true');
  }
  assert.deepEqual(f.errors,[]);assert.equal(f.requests.filter(r=>r.method!=='GET').length,0);
  }finally{await f.close();}
 });
-test('Interaction pass: failed preview retries only its image; partial ZIP leaves failures selected',{timeout:60000},async()=>{
+test('Interaction pass: failed preview retries only its image and preserves option selection',{timeout:60000},async()=>{
  const f=await fixture();try{let fail=true;await f.page.route('**/files/static-exploration.png*',route=>fail?route.fulfill({status:503,body:'Unavailable'}):route.continue());
  await f.page.goto(f.url+'?brand='+brands[0].id+'#review/job-0/0/1');await f.page.waitForSelector('.focused-art [data-interaction=retry-image]');fail=false;await f.page.locator('.focused-art [data-interaction=retry-image]').click();await f.page.waitForFunction(()=>document.querySelector('.focused-art img')?.naturalWidth>0&&!document.querySelector('.focused-art img').hidden);
- await f.page.goto(f.url+'#project/job-0');await f.page.locator('.image-selection summary').click();await f.page.locator('[data-interaction=pick-all]').click();fail=true;const event=f.page.waitForEvent('download');await f.page.locator('[data-interaction=download-picked]').click();await event;await f.page.waitForFunction(()=>document.querySelector('.selection-status')?.textContent.includes('1 of 2'));
- assert.equal(await f.page.locator('[data-image-pick]:checked').count(),1);assert.match(await f.page.locator('.image-pick-status').last().innerText(),/Could not load/);assert.deepEqual(f.errors,[]);assert.equal(f.requests.filter(r=>r.method!=='GET').length,0);
+ assert.match(f.page.url(),/\/0\/1$/);assert.match(await f.page.locator('.focused-art img').getAttribute('src'),/static-exploration/);assert.deepEqual(f.errors,[]);assert.equal(f.requests.filter(r=>r.method!=='GET').length,0);
  }finally{await f.close();}
 });
-test('Interaction pass: selected edited downloads refuse stale revisions and keep warning failures local',{timeout:60000},async()=>{
- const f=await fixture();try{let revision=1;await f.page.route('**/jobs/job-0/edits',route=>route.fulfill({json:[{route:'continuity',placementId:'square',revision,previewUrl:'/creative-ai/api/jobs/job-0/files/edited.png'}]}));let exports=0;
- await f.page.route('**/editable/continuity/square/export',route=>{exports++;assert.equal(route.request().postDataJSON().acknowledgeWarnings,false);return route.fulfill({status:422,json:{issues:['Needs review']}});});
- await f.page.goto(f.url+'#project/job-0');await f.page.locator('.image-selection summary').click();await f.page.locator('[data-image-pick]').first().check();revision=2;await f.page.locator('[data-interaction=download-picked]').click();await f.page.waitForFunction(()=>document.querySelector('.image-pick-status')?.textContent.includes('version changed'));assert.equal(exports,0);assert.equal(await f.page.locator('[data-image-pick]:checked').count(),1);
- await f.page.reload();await f.page.locator('.image-selection summary').click();await f.page.locator('[data-image-pick]').first().check();await f.page.locator('[data-interaction=download-picked]').click();await f.page.waitForFunction(()=>document.querySelector('.image-pick-status')?.textContent.includes('warnings'));assert.equal(exports,1);assert.equal(await f.page.locator('[data-image-pick]:checked').count(),1);assert.deepEqual(f.errors,[]);
+test('Interaction pass: edited downloads refuse stale revisions and keep warning failures local',{timeout:60000},async()=>{
+ const f=await fixture();try{let revision=1;await f.page.route('**/jobs/job-0/edits',route=>route.fulfill({json:[{route:'continuity',placementId:'square',revision,previewUrl:'/creative-ai/api/jobs/job-0/editable/continuity/square/preview?revision='+revision}]}));let exports=0;
+ await f.page.route('**/editable/continuity/square/export',route=>{exports++;assert.equal(route.request().postDataJSON().acknowledgeWarnings,false);return route.fulfill({status:422,json:{issues:['Text near edge']}});});
+ await f.page.goto(f.url+'#review/job-0/0/0');await f.page.locator('.focused-art img[src*="revision=1"]').waitFor();revision=2;await f.page.locator('[data-action=download]').click();await f.page.locator('#downloadStatus').filter({hasText:'changed since your preview'}).waitFor();assert.equal(exports,0);
+ await f.page.locator('[data-action=refresh-preview]').click();await f.page.locator('.focused-art img[src*="revision=2"]').waitFor();await f.page.locator('[data-action=download]').click();await f.page.locator('[data-action=download-anyway]').waitFor();assert.equal(exports,1);assert.match(f.page.url(),/#review/);assert.deepEqual(f.errors,[]);
  }finally{await f.close();}
 });
 
@@ -68,9 +66,10 @@ test('Polish: rename, keyboard browsing and category motion preserve work for bo
  }finally{await f.close();}
 });
 
-test('Polish: retry checks is explicit, scoped to one image and protected from duplicate clicks',{timeout:60000},async()=>{
- const f=await fixture();try{await f.page.route('**/api/jobs/job-*',async route=>{const response=await route.fetch(),job=await response.json();job.results[0].verificationRetryAvailable=true;return route.fulfill({json:job});});let calls=[];await f.page.route('**/retry-checks',async route=>{calls.push(route.request().postDataJSON());await new Promise(r=>setTimeout(r,300));return route.fulfill({json:{ok:true}});});
- for(let i=0;i<brands.length;i++){await f.page.goto(f.url+'?brand='+brands[i].id+'#review/job-'+i+'/0/0');await f.page.getByRole('button',{name:'Retry checks for image 1',exact:true}).click();assert.equal(calls.length,i);await f.page.locator('[data-retry-confirm]').evaluate(b=>{b.click();b.click();});await f.page.waitForFunction(()=>!document.querySelector('#assignmentDialog'));assert.equal(calls.length,i+1);assert.deepEqual(calls[i],{route:'continuity',placementId:'square'});}
+test('Polish: resume checks is scoped to one image and protected from duplicate clicks',{timeout:60000},async()=>{
+ const f=await fixture();try{await f.page.route('**/api/jobs/job-*',async route=>{const response=await route.fetch(),job=await response.json();job.results[0].verificationRetryAvailable=true;return route.fulfill({json:job});});let calls=[],exhausted=false;await f.page.route('**/retry-checks',async route=>{calls.push(route.request().postDataJSON());await new Promise(r=>setTimeout(r,300));return exhausted?route.fulfill({status:400,json:{error:'Verification recovery is exhausted or needs request reconciliation. Saved work is preserved.'}}):route.fulfill({json:{ok:true}});});
+ for(let i=0;i<brands.length;i++){await f.page.goto(f.url+'?brand='+brands[i].id+'#review/job-'+i+'/0/0');await f.page.getByRole('button',{name:'Resume checks for image 1',exact:true}).click();assert.equal(calls.length,i);await f.page.locator('[data-retry-confirm]').evaluate(b=>{b.click();b.click();});await f.page.waitForFunction(()=>!document.querySelector('#assignmentDialog'));assert.equal(calls.length,i+1);assert.deepEqual(calls[i],{route:'continuity',placementId:'square'});}
+ exhausted=true;await f.page.getByRole('button',{name:'Resume checks for image 1',exact:true}).click();await f.page.locator('[data-retry-confirm]').click();await f.page.getByRole('button',{name:'Verification stopped',exact:true}).waitFor();assert.equal(await f.page.locator('[data-retry-confirm]').isDisabled(),true);assert.equal(calls.length,brands.length+1);
  assert.deepEqual(f.errors,[]);
  }finally{await f.close();}
 });

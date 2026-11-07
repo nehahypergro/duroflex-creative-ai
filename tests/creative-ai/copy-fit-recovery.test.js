@@ -19,3 +19,6 @@ test('a fit revision cannot silently increase generated embedded copy',()=>{
  const after=structuredClone(before);after.decks[0].fields[0].text='Introducing our exciting new mattress launch';
  assert.throws(()=>require('../../lib/creative-ai/runtime/copy-fit-recovery').protect(before,after),/longer/);
 });
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': an expanding fit revision retains the validated original instead of killing the placement',()=>{
+ const R=require('../../lib/creative-ai/runtime/copy-fit-recovery'),before=structuredClone(original);before.decks[0].fields[1].delivery='embedded';const next=structuredClone(before);next.decks[0].fields[1].text='An unnecessarily much longer proposed headline with several additional words';const result=R.selectRevision(before,next);assert.deepEqual(result.output,before);assert.equal(result.decisions[0].reason,'expanding-revision-retained-original');assert.notDeepEqual(next,before);
+});

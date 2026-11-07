@@ -1,4 +1,5 @@
 'use strict';
+const {confirmProduct}=require('./helpers/ui-controls.cjs');
 const {settleAutosave}=require('./helpers/ui-controls.cjs');
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs/promises');
 test('essential RTB checklist is visible, selectable, persisted and scoped for both saved brands',{timeout:120000},async()=>{
@@ -18,7 +19,7 @@ test('essential RTB checklist is visible, selectable, persisted and scoped for b
  for(const width of [1024,390]){await page.setViewportSize({width,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'no horizontal overflow at '+width);}
  await page.screenshot({path:'work/rtb-checklist-20261029/'+b.name.toLowerCase()+'-mobile.png',fullPage:true});await page.setViewportSize({width:1366,height:950});
  // A product change must not carry the library feature selection into another SKU.
- const other=f.products[b.id].find(x=>x.id!==p.id);await page.locator('[data-action=assignment-product]').click();await page.locator('[data-assignment-product="'+other.id+'"]').click();assert.equal(await page.locator('[data-intake-chip=selectedRtbs]:checked').count(),0);
+ const other=f.products[b.id].find(x=>x.id!==p.id);await page.locator('[data-action=assignment-product]').click();await page.locator('[data-assignment-product="'+other.id+'"]').click();await confirmProduct(page);assert.equal(await page.locator('[data-intake-chip=selectedRtbs]:checked').count(),0);
  }assert.deepEqual(errors,[]);
- }finally{await browser.close();await new Promise(r=>f.server.close(r));}
+ }finally{await browser.close();f.server.closeAllConnections();await new Promise(r=>f.server.close(r));}
 });

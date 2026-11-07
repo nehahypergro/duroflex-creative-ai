@@ -17,5 +17,7 @@
   "port": 1842,
   "productProtectionRequired": true,
   "trustWebsiteProductImages": true,
-  "productHandlingMode": "reference-led"
+  "productHandlingMode": "reference-led",
+  "artworkDelivery": "original",
+  "artworkWorkflow": "lean-v1"
 }

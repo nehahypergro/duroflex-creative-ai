@@ -33,3 +33,14 @@ test('v2 provider sends scoped input and preserves validator authority',async()=
  const content=bodies[0].input.flatMap(x=>x.content),wire=JSON.parse(content[0].text.replace('Return JSON matching this contract. ',''));assert.equal(wire.input.existingDecks.length,1);assert.equal(content.filter(c=>c.type==='input_image').length,1);assert.equal(receipts[0].optimisation.stageContext.selection.version,2);
  }finally{global.fetch=old;}
 });
+
+test('provider selects applicable references before enforcing the attachment cap',async()=>{
+ const {OpenAIProvider}=require('../../lib/creative-ai/runtime/provider');let sent=0;
+ const p=new OpenAIProvider({reasoningModel:'fixture',reasoningTimeoutMs:1000,maxOutputTokens:100,maxRecoveryOutputTokens:100,inputContextPreflight:false});
+ p.sendReasoning=async body=>{sent++;assert.equal(body.input.flatMap(m=>m.content).filter(c=>c.type==='input_image').length,1);return {ok:true,json:async()=>({id:'resp_scoped_fixture',status:'completed',output:[{content:[{type:'output_text',text:'{"ok":true}'}]}]})};};
+ const assets=[{id:'sku',kind:'product'},...Array.from({length:9},(_,i)=>({id:'optional-'+i,optional:true,applicability:{stages:['strategy']}}))];
+ const input={requiredSkuAssetIds:['sku'],assets},request={contextKind:'art',input,instructions:'Fixture',images:assets.map(a=>({id:a.id,imageData:'data:image/png;base64,YQ=='})),schema:{type:'object',properties:{ok:{type:'boolean'}},required:['ok'],additionalProperties:false}};
+ const budget={stageContext:async()=>({version:3,brandId:'fixture'}),reserve:async()=>{},receipt:async()=>{}};
+ assert.deepEqual(await p.reason(request,budget),{ok:true});assert.equal(sent,1);
+ await assert.rejects(p.reason({...request,images:[...request.images,{id:'optional-0',imageData:'conflicting'}]},budget),{code:'REFERENCE_ID_CONFLICT'});assert.equal(sent,1);
+});

@@ -11,7 +11,7 @@ test('finding comparisons reject criterion names and package paths as evidence r
  for(const referenceId of ['reference-boundary','exactCopy','other-brand-photo'])assert.ok(check(comparison,{stage:'copy',observation:'Observed words',referenceId}).length);
  assert.equal(reviewer.inputSchema.properties.evidence.properties.findings.items.properties.comparison.items.properties.referenceId.enum,undefined);
 });
-test('additional independent OCR can confirm full wording but cannot override visual uncertainty or a changed glyph',()=>{
+test('visual copy checks are independent of OCR and preserve uncertainty or a changed glyph',()=>{
  const record={exactCopy:{fields:[{id:'cta',text:'Explore Meadow',delivery:'embedded',locked:true}]}};
  const evidence=()=>({critical:[{criterion:'exact-required-copy',status:'pass',confidence:1,evidence:{observation:'Actual pixels'}}],findings:[]});
  const observation=(text,confidence=1)=>[{fieldId:'cta',observedText:text,decoration:'none',confidence,observation:'Glyphs inspected'}];
@@ -19,7 +19,7 @@ test('additional independent OCR can confirm full wording but cannot override vi
  let e=evidence();copy.applyCopyChecks(record,e,observation('Explore Meadow'),ocr);assert.equal(e.critical[0].status,'pass');
  e=evidence();copy.applyCopyChecks(record,e,observation('Explore Meadow',0.5),ocr);assert.equal(e.critical[0].status,'unknown');
  e=evidence();copy.applyCopyChecks(record,e,observation('Explore Meadows'),ocr);assert.equal(e.critical[0].status,'fail');
- e=evidence();copy.applyCopyChecks(record,e,observation('Explore Meadow'),{...ocr,passes:[{status:'measured',rows:[{text:'Explore Meadowbrook'}]}]});assert.equal(e.critical[0].status,'unknown');
+ e=evidence();copy.applyCopyChecks(record,e,observation('Explore Meadow'),{...ocr,passes:[{status:'measured',rows:[{text:'Explore Meadowbrook'}]}]});assert.equal(e.critical[0].status,'pass');
 });
 test('runtime strategy binds the supplied action and includes all selected proof while still rejecting unknown proof',async()=>{
  const {inputExample,outputExample}=require('../../lib/creative-ai/marketing-strategist/examples/synthetic');

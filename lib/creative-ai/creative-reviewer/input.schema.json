@@ -1450,6 +1450,12 @@
               ]
             }
           }
+        },
+        "blockingPolicyVersion": {
+          "const": 1
+        },
+        "printProduction": {
+          "type": "object"
         }
       },
       "required": [

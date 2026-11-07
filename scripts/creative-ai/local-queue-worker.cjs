@@ -45,7 +45,7 @@ async function main(){
   if(deadline<=Date.now()){j.processingContinuations??=[];j.processingContinuations.push({recordedAt:new Date().toISOString(),previousDeadline:deadline,deadline:Date.now()+45*60*1000,reason:'User authorised local isolated-worker recovery and testing on 3 November 2026.',previousStatus:j.status,previousError:j.error});}
   j.localExecution={queueDir:dir,key,pid:process.pid,status:'running',startedAt:new Date().toISOString()};j.status='queued';return j;
  });
- try{await runtime.execute(jobId);}catch(e){await runtime.store.update(jobId,j=>{j.status='failed';j.error=e.message.slice(0,4000);return j;});}
+ try{await runtime.execute(jobId);}catch(e){await runtime.store.update(jobId,j=>{if(e.planningPolicy)return require('../../lib/creative-ai/runtime/planning-blocking-policy').applyFailure(j,e);j.status='failed';j.error=e.message.slice(0,4000);return j;});}
  job=await runtime.store.read(jobId,{hydrate:false});
  if(['running','queued','preparing'].includes(job.status))throw Error('Runtime returned without a terminal checkpoint (possible competing owner).');
  const result=summary(job);result.generatedImages=(await fs.readdir(runtime.store.dir(jobId))).filter(n=>/^composed-source-.*\.png$/.test(n));

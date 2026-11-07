@@ -2,13 +2,14 @@
 'use strict';
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.CreativeCanvasModel=factory();})(typeof window==='object'?window:null,() => {
  const family = f => 'approved-' + f.brandId + '-' + f.id;
+ const fontLoads=new Map();
  async function loadFonts(doc) {
   const issues=[];
   for (const f of doc.fonts) {
-   try {const face=new FontFace(family(f),`url("${f.url}")`,{weight:String(f.weight),style:f.style||'normal'}); await face.load(); document.fonts.add(face);}
+   try {const key=JSON.stringify([family(f),f.url,String(f.weight),f.style||'normal',f.sha256||null]);let pending=fontLoads.get(key);if(!pending){pending=(async()=>{const face=new FontFace(family(f),`url("${f.url}")`,{weight:String(f.weight),style:f.style||'normal'});await face.load();document.fonts.add(face);return face;})();fontLoads.set(key,pending);pending.catch(()=>{if(fontLoads.get(key)===pending)fontLoads.delete(key);});}await pending;}
    catch {issues.push('Missing approved font: '+f.name+' ('+f.weight+'). Upload the original font file.');}
   }
-  await document.fonts.ready; return issues;
+  return issues;
  }
  const elementIcons={delivery:'M10 30H60V75H10ZM60 45H78L92 60V75H60ZM22 75A10 10 0 1 0 42 75A10 10 0 1 0 22 75M66 75A10 10 0 1 0 86 75A10 10 0 1 0 66 75',location:'M50 90C35 70 20 55 20 38A30 30 0 0 1 80 38C80 55 65 70 50 90ZM40 38A10 10 0 1 0 60 38A10 10 0 1 0 40 38',phone:'M25 12L40 30L30 42C38 58 43 63 58 70L70 60L88 75C80 95 65 92 45 80C22 65 10 40 13 25Z',sun:'M30 50A20 20 0 1 0 70 50A20 20 0 1 0 30 50M50 5V18M50 82V95M5 50H18M82 50H95M18 18L28 28M72 72L82 82M18 82L28 72M72 28L82 18',leaf:'M15 85C5 40 35 15 90 10C90 65 65 95 20 80M15 85L70 30',care:'M50 88L15 53C-8 20 30 3 50 28C70 3 108 20 85 53Z'};
  function elementPaint(o,fallback){if(!o.gradient)return fallback;const g=o.gradient,w=o.width,h=o.height,rad=g.angle*Math.PI/180;return new fabric.Gradient({type:g.type,gradientUnits:'pixels',coords:g.type==='radial'?{x1:w/2,y1:h/2,r1:0,x2:w/2,y2:h/2,r2:Math.max(w,h)/2}:{x1:w/2-Math.cos(rad)*w/2,y1:h/2-Math.sin(rad)*h/2,x2:w/2+Math.cos(rad)*w/2,y2:h/2+Math.sin(rad)*h/2},colorStops:[{offset:0,color:g.from},{offset:1,color:g.to}]});}
@@ -115,6 +116,12 @@
  }
  // Presentation only: never alter stored errors, contracts, artwork text or billing evidence.
  function optionLabel(route){return route==='continuity'?'Alternative set 1':route==='exploration'?'Alternative set 2':/^(?:Option|Alternative set) \d+$/.test(route||'')?route.replace(/^Option /,'Alternative set '):'Alternative set';}
+ function reviewNotes(state,doc){
+  const review=state.review;if(!review)return [];
+  const verified=Number.isInteger(state.verifiedRevision)&&state.verifiedRevision===state.revision&&JSON.stringify(doc)===JSON.stringify(state.document);
+  if(verified)return [];
+  return [review.error?'Visual review unavailable: '+review.error:null,review.correctionError?'Layer correction rejected: '+review.correctionError:null,...(review.unresolvedOverlapIds||[]).map(id=>'Unresolved overlap: '+id),...(review.observations||[]).filter(o=>o.status!=='pass').map(o=>'Initial visual review · '+o.check+': '+o.evidence),'Manual edits and proposed corrections need final visual approval.'].filter(Boolean);
+ }
  function clientText(value){const text=String(value??'');
   if(/^(Saved · revision|AI revision saved separately · revision)/i.test(text))return 'All changes saved';
   if(/^Exported · revision/i.test(text))return 'Download ready';
@@ -181,5 +188,5 @@
  }
  return {layout,units,union};
  })();
- return {heuristicIssues,marginIssue,mount,capture,validate,measure,family,snap,align,downloadName,optionLabel,clientText,clientError,arrange,elementIcons};
+ return {heuristicIssues,marginIssue,mount,capture,validate,measure,family,snap,align,downloadName,optionLabel,reviewNotes,clientText,clientError,arrange,elementIcons};
 });

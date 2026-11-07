@@ -1,4 +1,5 @@
 'use strict';
+const {confirmProduct}=require('./helpers/ui-controls.cjs');
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs/promises');
 test('Features require a saved product and brief labels stay compact for both brands',{timeout:120000},async()=>{
  const f=await require('./helpers/intake-preview.cjs').createPreview(),M=require('../../public/creative-ai/studio-model'),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),page=await browser.newPage({viewport:{width:1384,height:807}}),errors=[];
@@ -20,7 +21,7 @@ test('Features require a saved product and brief labels stay compact for both br
   await page.evaluate(()=>{const input=document.querySelector('#newRtb'),add=document.querySelector('[data-action=rtb-add]');input.disabled=false;input.value='Unassigned fact';add.disabled=false;add.click();});
   assert.equal(await page.locator('[data-intake-chip=suppliedRtbs]').count(),0);
   const p=f.products[b.id].find(p=>M.productRtbs(p).length>1);assert.ok(p);
-  await page.locator('[data-action=assignment-product]').click();await page.locator('[data-assignment-product="'+p.id+'"]').click();
+  await page.locator('[data-action=assignment-product]').click();await page.locator('[data-assignment-product="'+p.id+'"]').click();await confirmProduct(page);
   assert.equal(await page.locator('#newRtb').isDisabled(),false);
   await page.locator('[data-intake-chip=selectedRtbs]').first().check();
   assert.equal(await page.locator('.rtb-count').innerText(),'1 selected');
@@ -34,5 +35,5 @@ test('Features require a saved product and brief labels stay compact for both br
   await fs.mkdir('work/feature-product-gate-20261031',{recursive:true});
   await page.screenshot({path:'work/feature-product-gate-20261031/'+b.name+'.png'});
  }assert.deepEqual(errors,[]);
- }finally{await browser.close();await new Promise(r=>f.server.close(r));}
+ }finally{await browser.close();f.server.closeAllConnections();await new Promise(r=>f.server.close(r));}
 });

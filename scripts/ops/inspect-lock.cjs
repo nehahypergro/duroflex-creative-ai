@@ -1,0 +1,3 @@
+'use strict';
+// Offline maintenance only. Quarantining a lock does not authorize replaying a paid call.
+(async()=>{const path=require('node:path'),tool=require('../../lib/creative-ai/runtime/lock-maintenance'),args=process.argv.slice(2),file=args[0];if(!file)throw Error('Usage: node scripts/ops/inspect-lock.cjs /absolute/path/to/lock [--quarantine --writers-stopped --fingerprint=HASH]');if(!path.isAbsolute(file))throw Error('Use an absolute lock path');const fingerprint=args.find(x=>x.startsWith('--fingerprint='))?.slice(14);console.log(JSON.stringify(args.includes('--quarantine')?await tool.quarantine(file,{fingerprint,writersStopped:args.includes('--writers-stopped')}):await tool.inspect(file),null,2));})().catch(e=>{console.error(e.message);process.exitCode=1;});

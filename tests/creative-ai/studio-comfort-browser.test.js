@@ -46,13 +46,11 @@ test('Comfort polish: both brands have context, image navigation, honest compari
  assert.deepEqual(f.errors,[]);assert.equal(f.requests.filter(r=>r.method!=='GET').length,0);
  }finally{await f.close();}
 });
-test('Comfort comparison uses actual saved versions without changing delivery and fits mobile',{timeout:60000},async()=>{
+test('Review shows the saved edit without comparison controls and fits mobile',{timeout:60000},async()=>{
  const f=await fixture();try{await f.page.route('**/api/jobs/*/edits',async route=>{const id=new URL(route.request().url()).pathname.split('/')[4];await route.fulfill({json:[{route:'continuity',placementId:'square',previewUrl:'/creative-ai/api/jobs/'+id+'/files/edited.png',revision:2}]});});
  for(let i=0;i<brands.length;i++){
-  await f.page.goto(f.url+'?brand='+brands[i].id+'#review/job-'+i+'/0/0');await f.page.waitForSelector('[data-comfort-version=before]');
+  await f.page.goto(f.url+'?brand='+brands[i].id+'#review/job-'+i+'/0/0');await f.page.waitForSelector('.focused-art img');assert.equal(await f.page.locator('[data-comfort-version]').count(),0);
   assert.match(await f.page.locator('.focused-art img').getAttribute('src'),/edited/);
-  await f.page.locator('[data-comfort-version=before]').click();assert.match(await f.page.locator('.focused-art img').getAttribute('src'),/static-continuity/);
-  await f.page.locator('[data-comfort-version=after]').click();assert.match(await f.page.locator('.focused-art img').getAttribute('src'),/edited/);
   await f.page.setViewportSize({width:390,height:844});assert.ok(await f.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await f.page.setViewportSize({width:1440,height:1000});
  }
