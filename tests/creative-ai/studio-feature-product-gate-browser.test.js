@@ -23,6 +23,8 @@ test('Features require a saved product and brief labels stay compact for both br
   const p=f.products[b.id].find(p=>M.productRtbs(p).length>1);assert.ok(p);
   await page.locator('[data-action=assignment-product]').click();await page.locator('[data-assignment-product="'+p.id+'"]').click();await confirmProduct(page);
   assert.equal(await page.locator('#newRtb').isDisabled(),false);
+  assert.equal(await page.locator('[data-intake-chip=selectedRtbs]:checked').count(),M.productRtbs(p).length,'new product features load automatically');
+  for(const box of await page.locator('[data-intake-chip=selectedRtbs]').all())await box.uncheck();
   await page.locator('[data-intake-chip=selectedRtbs]').first().check();
   assert.equal(await page.locator('.rtb-count').innerText(),'1 selected');
   await page.locator('[data-action=assignment-review]').click();

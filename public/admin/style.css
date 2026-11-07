@@ -4,6 +4,8 @@
 .two > *, .insights > *, .gallery > * {min-width:0}
 .gallery form {display:grid;gap:10px;margin:14px 0}
 .gallery small,.gallery p {overflow-wrap:anywhere}
+.issue-list > *, .issue-update > * {min-width:0}
+.issue-update textarea {width:100%;min-width:0}
 .gallery textarea {font:inherit;max-width:100%;width:100%;border:1px solid var(--line);border-radius:8px;padding:9px}
 .gallery form .row {display:flex;flex-direction:row;align-items:flex-start}
 .gallery form .row input {flex:none}
@@ -352,3 +354,21 @@ textarea, select, .studio-select-trigger { border-color: var(--line); border-rad
 @media(max-width:800px){body[data-admin-view=feedback]{--sidebar:0px}.admin-feedback{padding:16px}.feedback-filters label{min-width:min(120px,100%)}.feedback-pagination{flex-wrap:wrap}}
 /* Approved Creative AI identity: folded ribbon 02B. */
 body>header>.wordmark{gap:9px;font-size:20px;letter-spacing:-.65px}.creative-ai-symbol{display:block;object-fit:contain;flex:none;width:32px;height:32px}@media(min-width:801px) and (max-width:1200px){body>header>.wordmark{font-size:18px;gap:7px}}@media(max-width:800px){body>header>.wordmark{gap:8px;font-size:17px}body>header>.wordmark>span{display:inline}.creative-ai-symbol{width:28px;height:28px}}
+
+/* Keep analytics summaries usable on narrow screens. */
+@media(max-width:580px){
+  body[data-admin-view="analytics"] .heading{flex-wrap:wrap;gap:12px}
+  body[data-admin-view="analytics"] #metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .executive-metric>span{max-width:100%;overflow-wrap:anywhere}
+  .executive-grid{grid-template-columns:minmax(0,1fr)}
+  .executive-funnel,.executive-quality{grid-column:auto}
+  .executive-grid .panel-head{flex-wrap:wrap}
+  .executive-kicker{white-space:normal}
+  .funnel-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .value-pair{flex-wrap:wrap}
+  .value-pair>div{min-width:0;overflow-wrap:anywhere}
+}
+
+@media(max-width:580px){.analytics-primary-controls label{min-width:0;max-width:100%;flex:1 1 165px}.analytics-primary-controls select{max-width:100%}}
+
+@media(max-width:580px){.chart-legend-list li{flex-wrap:wrap;gap:6px}.chart-legend-list li>span{min-width:0;overflow-wrap:anywhere}}

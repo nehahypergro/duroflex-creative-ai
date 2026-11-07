@@ -1,0 +1,60 @@
+Project review — 7 November 2026
+
+Scope and safety
+Reviewed the four requested compatibility defects first, then the major runtime, UI and operational boundaries. Existing work and historical artifacts were preserved. No production database changes, large deletion, paid generation, live backend restart, commit or push was performed. Changes are local; activation remains separate.
+This is a broad source and test review, not a claim that every line in the repository has been exhaustively proved correct. Legacy modules and historical fixtures remain a material verification gap.
+
+Inventory and review coverage
+1. Entry points: server.js, admin-server.js — request parsing, error boundaries, authentication, file delivery. Read code and exercised local fixture servers.
+2. Studio pages: public/creative-ai — home/projects, brief, product/features, confirmation, campaign results, review, editor and chat. Read intake/submission/model/data and editor-related paths; existing app navigation checked in Codex browser. Both-brand brief/RTB browser regressions passed. Full editor behavior remains incompletely verified.
+3. New generation runtime: runtime/lean-workflow, lean-policy, lean-context, lean-planner, provider-config — planning, immutable handoffs, two options, visual review and correction. Read active paths; focused mocked tests passed. No live paid provider validation.
+4. Legacy generation and reviewer code: engine routing, provider/reasoning transport, resume/recovery, legacy composition/review boundaries. Checked lean routing isolation and tested broad suite. Historical compatibility not fully green; no wholesale deletion.
+5. Brand/product/reference libraries: brands, brand-assets, product-library, image upload and network paths. Reviewed source authority, file handling and scoped references. Existing library conflicts are not automatically rewritten.
+6. Placement and asset configuration: placements/config, Studio generation profiles/model, guide inputs and output formats. Reviewed campaign admission and selected objective; did not change dimension/provider behavior.
+7. Delivery: campaigns, campaign-pack, lean-export — readiness, carousel compatibility, selected pixels/copy, caption packaging and integrity checks. Focused tests passed.
+8. Queues/operations: stage handoffs, resume-work, local supervisor/cost-preflight, distributed execution/worker/coordinator. Reviewed recovery/admission/accounting paths. Did not interrupt running work or load-test live queues.
+9. Persistence: store, artifact filesystem, file locks, strict JSON and error boundaries. Reviewed job/file failure boundaries; no migration or cleanup.
+10. Admin/access: accounts, Studio access, admin HTTP, issues, analytics, costs; editor sharing. Read relevant handlers and ran admin suite. Mobile layout fixes tested; some other admin flows remain unresolved.
+11. Cost/network/security boundaries: cost tracker, provider transport, reference fetches, role scoping and share endpoints. Reviewed critical paths, not an independent penetration test.
+12. Tests/scripts/docs: main and admin suites, syntax validation, replay/ops entry points and project instructions. Missing historical data and obsolete expectations are recorded rather than removed.
+
+Fixed
+A. Captions/export: lean exports resolve exact copy from the same immutable image-queue handoff as the selected original/candidate image. All copy roles are included. Job, brand, placement, package hash and actual selected image hash are checked; stale/tampered exports are rejected.
+B. Resume: new jobs snapshot image options. Saved validated handoffs no longer pass through today's planner validator or prompt serializer. Complete independent page-option families are reused. New records also save review contract, instructions and schema. Tests exercise both brands and changed current planner/review definitions.
+   Limits: older records without snapshots use compatibility fallbacks. Partially planned work without a complete handoff still uses current planning/context code. Review result validation still uses the current validation implementation.
+C. Objectives: explicit selected objective takes precedence over funnel. Engagement/Education retain their meaning in planner instructions, using backend objective 'other' rather than silently Consideration. Existing awareness/action mappings remain supported.
+D. Mixed campaigns: readiness collects named blocked members and allows valid members to proceed. All-blocked campaigns remain blocked. Cost/count totals use admitted members; token binds blocked and valid members. Confirmation and deterministic child identities remain enforced, and submission failures are isolated.
+E. Campaign delivery: totals honor saved concept routes; lean carousel readiness uses current per-image conformance instead of obsolete whole-set review.
+F. Brief UI: Edit settings opens the target details element itself, so the relevant settings are accessible.
+G. Admin mobile layout: issue editor min-width/textarea overflow and narrow analytics grids, filters and legends corrected.
+H. Tests: frontend VM now supplies AbortController; product-feature tests respect intentional automatic RTB selection and explicitly exercise user changes. Browser assertions wait for loaded sections.
+
+Verification
+Initial full main suite: 2,528 tests; 2,460 passed, 63 failed, 2 cancelled, 3 skipped. These are the initial broad-run counts, not a final green-suite claim.
+Initial full admin suite: 86 tests; 79 passed, 6 failed, 1 cancelled.
+Later focused runs: 33/33 requested fix/regression checks; 60/60 frontend harness/export checks; 3/3 mixed campaign checks; both-brand brief-edit browser check passed; both RTB browser checks passed. These suites overlap and should not be added as a unique test count.
+Admin mobile final rerun: 3/3 passed, including fixture creation, both-brand issue evidence and responsive issues/analytics. An earlier filtered run omitted the issue-seeding test and therefore failed; the complete dependent selection passes.
+Large campaign: 30-asset readiness passed for both brands in isolation, but took about 179 seconds. It hit the timeout under full-suite contention.
+Syntax: 412 first-party JavaScript files checked; browser ESM files checked as modules. No syntax errors after using the correct module mode. git diff --check passed.
+Build: package.json has no build script. This is Node plus static browser assets; syntax checks and local server/browser tests were used instead. No build success is claimed.
+Detailed logs are saved in work/project-review-20261107/.
+
+Remaining issues and uncertainties
+High priority: readiness for large campaigns is too slow (~3 minutes in the isolated 30-asset test). Serial repeated preparation/library reads are candidates for profiling and request-scoped reuse; broad concurrency changes were not made without isolating bottlenecks and invalidation rules.
+Release verification remains incomplete: admin brief upload/autofill, progress/operations and some editor/browser tests time out or fail. Some assertions reference removed controls; others require reproduction before changing product behavior. Full suites have not been rerun green after the targeted fixes.
+Historical replay fixtures are missing (ENOENT) for several legacy tests. User-authorized historical cleanup may explain their absence; no fixtures were fabricated and no saved work was deleted.
+Legacy tests still expect one option, older model defaults, or older readiness labels. Some mocks lack current store interfaces. Those failures are not evidence that the new two-option workflow should be reverted.
+Art provenance and legacy editable composition checks still have mismatches needing targeted investigation. Do not loosen correctness checks just to pass old tests.
+Resume snapshots cover completed handoffs, not arbitrary future code compatibility. Old records and incomplete plans require compatibility fallbacks; future schema changes should retain versioned validation/migrations.
+Potential risk, not demonstrated bug: DNS validation and fetch resolution are separate; investigate rebinding exposure before claiming the network boundary is fully hardened.
+Potential risk, not demonstrated bug: malformed editor-share records could interrupt share listing; needs a focused fixture before changing behavior.
+Potential risk: large archive/product snapshots and retention can consume significant resources. No concurrent-upload stress test or destructive pruning was performed.
+Current aggregate campaign-budget accounting still depends on existing operator/preflight controls; this review does not certify a new global budget enforcement service.
+Requested output dimensions/provider constraints remain a separate known issue and were not changed in this patch.
+
+Next recommended order
+1. Activate reviewed changes through a controlled restart, respecting active paid requests.
+2. Resolve the outstanding core browser/editor failures with current fixtures and selectors.
+3. Profile large-campaign readiness; reuse immutable preparation within one request where safe.
+4. Reconcile obsolete/missing legacy tests, then obtain a clean broad suite.
+5. Perform one authorized controlled live generation/export check before claiming release readiness.

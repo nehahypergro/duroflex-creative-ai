@@ -15,7 +15,7 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': new planner contract 
  context.job.runtimeConfig.leanPlanningContractVersion=0;const old=ctx.packet(context,context.job.selection).input;
  assert.equal(old.planningContractVersion,undefined);assert.deepEqual(old.assignment.conceptRoutes,['continuity','exploration']);assert(old.format.guidance.advice.some(r=>r.id==='editable-text-design-handoff'));assert.equal(planning.schemaFor(old).properties.pages.minItems,undefined);
 });
-async function fixture(t,{brand='Duroflex',pages=1,mismatch=false,uncertain=false,failModel=null}={}){
+async function fixture(t,{brand='Duroflex',pages=1,mismatch=false,uncertain=false,failModel=null,extraCopy=[]}={}){
  const root=await fs.mkdtemp(path.join(os.tmpdir(),'lean-main-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
  const store=new JobStore(path.join(root,'output/creative-ai/jobs')),brandId='brand-'+brand.toLowerCase();
  const bytes=await sharp({create:{width:1024,height:1024,channels:3,background:'#345678'}}).png().toBuffer(),data='data:image/png;base64,'+bytes.toString('base64');
@@ -24,7 +24,7 @@ async function fixture(t,{brand='Duroflex',pages=1,mismatch=false,uncertain=fals
  const config=policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake),job=await store.create(intake,config,selection);
  const context={job,intake,brand:{id:brandId,name:brand,canvasAssets:{fonts:[{approved:true,brandId,family:brand==='Duroflex'?'Poppins':'Source Sans Pro',weight:700,style:'normal'}]}},research:{brandKnowledge:{brandId},dossier:{sources:[],assets:[{id:'sku-photo',imageData:data},{id:'approved-logo',imageData:data}]},productBriefEvidence:{productProfileId:'product-exact',assetIds:['sku-photo'],evidence:[{factId:'fact-1'}]},facts:[{id:'fact-1',status:'supported',text:'Supported feature',sourceIds:[]},{id:'foreign-fact',status:'supported',text:'Other SKU',sourceIds:[]}]},guardian:{requirements:[{id:'identity',text:'Preserve exact product identity'}],preferences:[],visualRules:[]}};
  const calls=[];
- const runtime={store,config,readCarouselPlan:async()=>null,beginTask:async()=>{},finishTask:async()=>{},artifact:async(id,name,kind,body)=>store.save(id,name,body),stage:async(id,kind,agent,file,fn)=>{try{return JSON.parse(await fs.readFile(path.join(store.dir(id),file)));}catch(e){if(e.code!=='ENOENT')throw e;}const out=await fn();await store.save(id,file,out);return out;},provider:{reason:async request=>{calls.push({kind:request.contextKind,input:request.input});let out;if(request.contextKind==='lean-planning')out=planFor(request.input);else if(request.contextKind==='lean-correction')out={action:'local_edit',requirementIds:['copy-0'],reason:'Visible wrong headline',instruction:'Correct headline only',regions:[{label:'Headline',x:50,y:50,width:100,height:100}],protectedRegions:[{label:'Visible product',x:400,y:400,width:500,height:500}]};else out={checks:request.input.requirements.map(r=>({id:r.id,result:r.id==='copy-0'&&!request.input.correction&&mismatch?'clear_mismatch':request.input.correction&&uncertain?'unable_to_verify':'no_mismatch',evidence:'Observed '+r.name,location:'Top left'}))};if(request.validate)request.validate(out);return out;},generate:async request=>{calls.push({kind:'image',...request});if(request.model===failModel)throw Error('Simulated model unavailable');return {imageData:data};}}};
+ const runtime={store,config,readCarouselPlan:async()=>null,beginTask:async()=>{},finishTask:async()=>{},artifact:async(id,name,kind,body)=>store.save(id,name,body),stage:async(id,kind,agent,file,fn)=>{try{return JSON.parse(await fs.readFile(path.join(store.dir(id),file)));}catch(e){if(e.code!=='ENOENT')throw e;}const out=await fn();await store.save(id,file,out);return out;},provider:{reason:async request=>{calls.push({kind:request.contextKind,input:request.input});let out;if(request.contextKind==='lean-planning'){out=planFor(request.input);for(const p of out.pages)p.copy.push(...extraCopy);}else if(request.contextKind==='lean-correction')out={action:'local_edit',requirementIds:['copy-0'],reason:'Visible wrong headline',instruction:'Correct headline only',regions:[{label:'Headline',x:50,y:50,width:100,height:100}],protectedRegions:[{label:'Visible product',x:400,y:400,width:500,height:500}]};else out={checks:request.input.requirements.map(r=>({id:r.id,result:r.id==='copy-0'&&!request.input.correction&&mismatch?'clear_mismatch':request.input.correction&&uncertain?'unable_to_verify':'no_mismatch',evidence:'Observed '+r.name,location:'Top left'}))};if(request.validate)request.validate(out);return out;},generate:async request=>{calls.push({kind:'image',...request});if(request.model===failModel)throw Error('Simulated model unavailable');return {imageData:data};}}};
  // Exercise the real activity ledger and stage cache, not a simulated lifecycle.
  runtime.activity=new (require('../../lib/creative-ai/workflow-producer').ActivityLedger)(path.join(root,'output/creative-ai/activity'));runtime.eventQueues=new Map();
  const proto=require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype;
@@ -121,4 +121,28 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': main engine preparati
  runtime.unit=()=>assert.fail('Legacy generation');runtime.readCarouselPlan=()=>assert.fail('Legacy carousel planning');runtime.finishCarousels=()=>assert.fail('Legacy set review');runtime.finishPdp=()=>assert.fail('Legacy PDP review');
  await f.store.save(f.job.id,'placement-catalog.json',{});await require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype.run.call(runtime,f.job.id,{phase:'planning'});await handoff.generate(runtime,f.job.id);
  assert(prep.includes('guardian-scoped.json'));assert.equal((await f.store.read(f.job.id)).status,'finished');assert.deepEqual(new Set(f.calls.map(c=>c.kind)),new Set(['lean-planning','image','lean-review']));assert.equal(f.calls.filter(c=>c.kind==='lean-planning').length,1);
+});
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': saved handoff resumes independently of current prompt builder and defaults',async t=>{
+ const f=await fixture(t,{brand});const manifest=await require('../../lib/creative-ai/runtime/artifact-fs').readJson(path.join(f.store.dir(f.job.id),'image-queue.json'));const record=await require('../../lib/creative-ai/runtime/artifact-fs').readJson(path.join(f.store.dir(f.job.id),manifest.units[0].file));const old=planning.imagePrompt,options=structuredClone(policy.options);
+ try{planning.imagePrompt=()=>{throw Error('New prompt implementation must not reinterpret saved work');};policy.options[0].model='future-default';assert.doesNotThrow(()=>flow.validateRecord(f.job,record));}
+ finally{planning.imagePrompt=old;policy.options.splice(0,policy.options.length,...options);}
+});
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': campaign captions use saved lean page copy and verify selected pixels',async t=>{
+ const f=await fixture(t,{brand,extraCopy:[{role:'feature-heading',text:'Find your comfort',factIds:[]}]});await handoff.generate(f.runtime,f.job.id);f.runtime.refinements={effective:async j=>j,source:async()=>{throw Error('This older creative has no saved copy');}};
+ const pack=await require('../../lib/creative-ai/runtime/campaign-pack').collect(f.runtime,f.job.id,{presentation:'none'});
+ assert.equal(pack.rows.length,2);assert(pack.rows.every(r=>r.caption==='Comfort at home\n\nFind your comfort'));
+ const job=await f.store.read(f.job.id),file=path.join(f.store.dir(f.job.id),job.results[0].imageUrl.split('/').pop());await fs.writeFile(file,Buffer.from('changed pixels'));await assert.rejects(()=>require('../../lib/creative-ai/runtime/campaign-pack').collect(f.runtime,f.job.id,{presentation:'none'}),/Saved artwork changed/);
+});
+
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': replanning a partial campaign preserves validated handoffs despite prompt changes',async t=>{
+ const f=await fixture(t,{brand});await handoff.generate(f.runtime,f.job.id);
+ const before=await fs.readFile(path.join(f.store.dir(f.job.id),'image-queue.json'),'utf8');
+ const old=planning.imagePrompt;try{planning.imagePrompt=()=>{throw Error('New serializer');};await flow.plan(f.runtime,f.job.id,{...f.context,budget:f.store.budget(f.job.id),phase:'planning'});}finally{planning.imagePrompt=old;}
+ assert.equal(await fs.readFile(path.join(f.store.dir(f.job.id),'image-queue.json'),'utf8'),before);
+ await handoff.generate(f.runtime,f.job.id);assert.equal(f.calls.filter(c=>c.kind==='image').length,2);
+});
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': queued artwork inspection retains its saved requirements after reviewer changes',async t=>{
+ const f=await fixture(t,{brand}),visual=require('../../lib/creative-ai/experiments/lean-planner/visual-review'),old=visual.contract;
+ try{visual.contract=()=>{throw Error('Future requirements must not replace saved requirements');};await handoff.generate(f.runtime,f.job.id);assert.equal((await f.store.read(f.job.id)).status,'finished');}
+ finally{visual.contract=old;}
 });

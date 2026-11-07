@@ -155,10 +155,12 @@ test('campaign readiness retains all selected asset jobs for both brands with st
 });
 test('campaign readiness names invalid assets instead of silently dropping them',async()=>{
  const {runtime,d}=await fixture(cases[0]);d.outputs.push({...M.clone(d.outputs[0]),id:'invalid',name:'Invalid dimensions',width:13});
- await assert.rejects(()=>require('../../lib/creative-ai/runtime/studio-generation').prepare(runtime,d),/Invalid dimensions/);
+ const result=await require('../../lib/creative-ai/runtime/studio-generation').prepare(runtime,d);
+ assert.equal(result.request.campaignChildren.length,1);assert.equal(result.blocked[0].name,'Invalid dimensions');assert.equal(result.summary.blockedAssets,1);
 });
 test('campaign submission isolates admission failures and retries stable child request keys',async()=>{
  const g=require('../../lib/creative-ai/runtime/studio-generation'),{runtime,d}=await fixture(cases[0]);
+ runtime.store.root=policyRoot;
  d.outputs=[{...M.clone(d.outputs[0]),id:'first'},{...M.clone(d.outputs[0]),id:'second'}];
  const prepared=await g.prepare(runtime,d),created=new Map();let fail=true;
  runtime.create=async request=>{if(fail&&request.sourceStudioDraftId.endsWith('-second'))throw Error('Temporary admission failure');if(!created.has(request.requestKey))created.set(request.requestKey,'creative-test-'+created.size);return created.get(request.requestKey);};
@@ -166,4 +168,15 @@ test('campaign submission isolates admission failures and retries stable child r
  fail=false;const retry=await g.submit(runtime,{draft:d,token:prepared.token});assert.equal(retry.ids.length,2);assert.equal(retry.ids[0],first.ids[0]);assert.equal(created.size,2);
 });
 
-test('Purchase and BOFU readiness map to the backend action objective for both brands',async()=>{for(const c of cases){const {runtime,d}=await fixture(c);for(const settings of [{objective:'Purchase',funnelStage:''},{objective:'Awareness',funnelStage:'BOFU'}]){const result=await require('../../lib/creative-ai/runtime/studio-generation').prepare(runtime,{...d,...settings});assert.equal(result.request.objective,'action');}}});
+test('Explicit objectives take precedence over funnel shorthand for both brands',async()=>{for(const c of cases){const {runtime,d}=await fixture(c);for(const settings of [{objective:'Purchase',funnelStage:''},{objective:'Awareness',funnelStage:'BOFU'}]){const result=await require('../../lib/creative-ai/runtime/studio-generation').prepare(runtime,{...d,...settings});assert.equal(result.request.objective,settings.objective==='Awareness'?'awareness':'action');}}});
+
+test('confirmed campaigns preserve confirmation and isolate unavailable members for both brands',async()=>{
+ const g=require('../../lib/creative-ai/runtime/studio-generation');
+ for(const c of cases){const {runtime,d}=await fixture(c);runtime.store.root=policyRoot;Object.assign(d,{creationMode:'campaign',intakeVersion:2,rtbs:'Supplied product feature.'});d.outputs.push({...M.clone(d.outputs[0]),id:'unavailable',featureId:999,name:'Unavailable asset'});
+ await assert.rejects(()=>g.prepare(runtime,d),/confirm/);M.confirmRequirements(d);
+ assert.deepEqual(M.campaignValidation(d,{products:[await runtime.brands.products.read(...c)]}),{});
+ const prepared=await g.prepare(runtime,d);assert.equal(prepared.request.campaignChildren.length,1);assert.equal(prepared.blocked.length,1);
+ let calls=0;runtime.create=async()=>{calls++;return 'creative-test';};const result=await g.submit(runtime,{draft:d,token:prepared.token});assert.equal(calls,1);assert.equal(result.errors[0].outputId,'unavailable');
+ d.brief+=' Changed';await assert.rejects(()=>g.prepare(runtime,d),/confirm/);
+ }
+});
