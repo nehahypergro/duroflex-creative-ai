@@ -27,7 +27,7 @@ const server=http.createServer(async(req,res)=>{const u=new URL(req.url,'http://
  if(u.pathname==='/creative-ai/api/brands')return json(brands);
  if(u.pathname==='/creative-ai/api/jobs')return json([]);
  const match=u.pathname.match(/^\/creative-ai\/api\/brands\/([^/]+)\/(products|assets)$/);if(match&&ids.includes(match[1]))return json(match[2]==='products'?products[match[1]]:{assets:[]});
- const file=u.pathname.replace(/^\/creative-ai\//,'');if(!/^(studio(-[a-z]+)?\.(js|css)|studio\.html|canvas-model\.js|editable-canvas\.(js|css)|vendor\/(fabric|lottie)\.min\.js)$/.test(file))return json({},404);
+ const file=u.pathname.replace(/^\/creative-ai\//,'');if(!/^(studio(-[a-z]+)*\.(js|css)|asset-icons\.js|studio\.html|canvas-model\.js|editable-canvas\.(js|css)|vendor\/(fabric|lottie)\.min\.js)$/.test(file))return json({},404);
  let bytes=await fs.readFile(path.join(root,'public/creative-ai',file));if(file==='studio.html')bytes=Buffer.from(bytes.toString().replace(/<script[^>]*src="[^"]*session\.js[^\"]*"[^>]*><\/script>/g,'').replace('</body>','<div style="position:fixed;bottom:0;left:0;right:0;background:#281d40;color:white;padding:8px;text-align:center;z-index:10000;font:12px sans-serif">INTAKE PREVIEW · saved product data · device-only drafts · generation unavailable</div></body>'));
  res.writeHead(200,{'Content-Type':file.endsWith('.js')?'text/javascript':file.endsWith('.css')?'text/css':'text/html'});res.end(bytes);
  }catch(e){json({error:e.message},500);}});

@@ -2441,6 +2441,39 @@
       "authority": "Studio image-treatment recommendations informed by official Amazon module schemas. Exact selected placement contracts and client requirements take precedence."
     },
     {
+      "id": "amazon-image-aplus-page",
+      "version": 1,
+      "title": "Amazon A+ page (one story, every size)",
+      "group": "Commerce",
+      "sourceIds": [
+        "studio-editorial",
+        "client-scope",
+        "amazon-image-slots",
+        "amazon-premium-slots",
+        "amazon-design",
+        "amazon-policy"
+      ],
+      "selectors": {
+        "profileIds": [],
+        "formatIds": [],
+        "profilePatterns": [
+          "^custom:recipe-marketplace-module-amazon-aplus-(premium|basic|brand-story)-[0-9]{2}$"
+        ]
+      },
+      "treatment": {
+        "copy": "A+ page v1 (user decision, 9 Nov 2026): wide panels carry short, large on-image text (product name, one short headline, up to three feature chips); mobile versions reuse the same words in larger type; small images carry no text or a one-to-three-word label. Amazon headline/body fields and alt text are written separately into the copy deck.",
+        "action": "No CTA button, URL, QR code, contact details or simulated interaction. The brand logo appears once, on the hero only.",
+        "inputs": "Use the current brief, the selected brand's own saved guidance and the exact saved SKU and variant. Technology wording comes word for word from the SKU's supported facts; the SKU's official technology picture is the only technology visual evidence.",
+        "checks": "Check each page's exact canvas, readable large text at phone size, the planned words only, one logo on the hero, product identity and that the technology panel shows only official evidence. Image checks are not Amazon acceptance.",
+        "avoid": "Do not invent layers, cutaways, claims, prices, offers, ratings, reviews, best-seller wording, competitor names or brand history. No squashed desktop panel as a mobile image.",
+        "purpose": "Tell one product story across the A+ page, each module with its own job: hero, technology, benefits, lifestyle and detail (or the Basic and Brand Story equivalents).",
+        "visual": "One visual system across all modules; recompose every size for its own canvas, with natural backgrounds that keep text contrast without painted boxes, haze or fades.",
+        "sequence": "Preserve the module order and every desktop/mobile pair; the FAQ is text only."
+      },
+      "variants": {},
+      "authority": "Studio image-treatment recommendations for the user-approved A+ page workflow, informed by official Amazon module schemas. Exact selected placement contracts and client requirements take precedence."
+    },
+    {
       "id": "technology-visual",
       "version": 1,
       "title": "Technology explanation / original technical artwork",

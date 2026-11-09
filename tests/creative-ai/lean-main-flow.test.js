@@ -15,14 +15,17 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': new planner contract 
  context.job.runtimeConfig.leanPlanningContractVersion=0;const old=ctx.packet(context,context.job.selection).input;
  assert.equal(old.planningContractVersion,undefined);assert.deepEqual(old.assignment.conceptRoutes,['continuity','exploration']);assert(old.format.guidance.advice.some(r=>r.id==='editable-text-design-handoff'));assert.equal(planning.schemaFor(old).properties.pages.minItems,undefined);
 });
-async function fixture(t,{brand='Duroflex',pages=1,mismatch=false,uncertain=false,failModel=null,extraCopy=[]}={}){
+// Most tests here cover jobs admitted with the two-option contract (gpt-image-2 + the retired
+// gpt-image-2.6-sunburst), which older projects keep. New jobs make one gpt-image-2 design per
+// format (user decision, 8 Nov 2026); pass legacyTwoOptions:false for that contract.
+async function fixture(t,{brand='Duroflex',pages=1,mismatch=false,uncertain=false,failModel=null,extraCopy=[],legacyTwoOptions=true}={}){
  const root=await fs.mkdtemp(path.join(os.tmpdir(),'lean-main-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
  const store=new JobStore(path.join(root,'output/creative-ai/jobs')),brandId='brand-'+brand.toLowerCase();
  const bytes=await sharp({create:{width:1024,height:1024,channels:3,background:'#345678'}}).png().toBuffer(),data='data:image/png;base64,'+bytes.toString('base64');
  const intake={brandId,brandUrl:'https://'+brand.toLowerCase()+'.test/',brief:'Introduce this exact SKU.',productName:brand+' Product',productPageUrl:'https://'+brand.toLowerCase()+'.test/products/exact',productVariantId:'queen',originalArtworkVersion:1,leanWorkflowVersion:1,conceptRoutes:['continuity','exploration'],approvedLogoReference:{assetId:'approved-logo'},productReferencePolicy:{sourceAssetId:'sku-photo',referenceAssetIds:['sku-photo'],variant:{id:'queen',sku:'EXACT-Q',name:'Queen'}}};
  const selection=Array.from({length:pages},(_,i)=>({id:'page-'+(i+1),description:{name:'Flyer face '+(i+1),formatId:'flyer',dimensions:{width:1024,height:1024},...(pages>1?{assetSet:{id:'flyer-set',index:i+1,count:pages}}:{})},jobInputs:{logoPolicy:{treatment:'include',reason:'Official logo required'}}}));
- const config=policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake),job=await store.create(intake,config,selection);
- const context={job,intake,brand:{id:brandId,name:brand,canvasAssets:{fonts:[{approved:true,brandId,family:brand==='Duroflex'?'Poppins':'Source Sans Pro',weight:700,style:'normal'}]}},research:{brandKnowledge:{brandId},dossier:{sources:[],assets:[{id:'sku-photo',imageData:data},{id:'approved-logo',imageData:data}]},productBriefEvidence:{productProfileId:'product-exact',assetIds:['sku-photo'],evidence:[{factId:'fact-1'}]},facts:[{id:'fact-1',status:'supported',text:'Supported feature',sourceIds:[]},{id:'foreign-fact',status:'supported',text:'Other SKU',sourceIds:[]}]},guardian:{requirements:[{id:'identity',text:'Preserve exact product identity'}],preferences:[],visualRules:[]}};
+ const config={...policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake),...(legacyTwoOptions?{leanImageOptions:policy.jobOptions({runtimeConfig:{}}),imageOptionModels:['gpt-image-2','gpt-image-2.6-sunburst']}:{})},job=await store.create(intake,config,selection);
+ const context={job,intake,brand:{id:brandId,name:brand,canvasAssets:{fonts:[{approved:true,brandId,family:brand==='Duroflex'?'Poppins':'Source Sans Pro',weight:700,style:'normal'}]}},research:{brandKnowledge:{brandId},dossier:{version:1,event:'research.completed',researchId:'live-test-'+brand.toLowerCase(),brandName:brand,demo:false,completedAt:'2026-11-08T00:00:00.000Z',sources:[{id:'source-product-page',kind:'product',label:'Official product page',reference:intake.productPageUrl,collectedAt:'2026-11-08T00:00:00.000Z',status:'available'}],assets:[{id:'sku-photo',kind:'product',label:'Exact SKU photo',sourceIds:['source-product-page'],imageData:data},{id:'approved-logo',kind:'logo',label:'Approved logo',sourceIds:['source-product-page'],imageData:data}],findings:[]},productBriefEvidence:{productProfileId:'product-exact',assetIds:['sku-photo'],evidence:[{factId:'fact-1'}]},facts:[{id:'fact-1',status:'supported',text:'Supported feature',sourceIds:[]},{id:'foreign-fact',status:'supported',text:'Other SKU',sourceIds:[]}]},guardian:{requirements:[{id:'identity',text:'Preserve exact product identity'}],preferences:[],visualRules:[]}};
  const calls=[];
  const runtime={store,config,readCarouselPlan:async()=>null,beginTask:async()=>{},finishTask:async()=>{},artifact:async(id,name,kind,body)=>store.save(id,name,body),stage:async(id,kind,agent,file,fn)=>{try{return JSON.parse(await fs.readFile(path.join(store.dir(id),file)));}catch(e){if(e.code!=='ENOENT')throw e;}const out=await fn();await store.save(id,file,out);return out;},provider:{reason:async request=>{calls.push({kind:request.contextKind,input:request.input});let out;if(request.contextKind==='lean-planning'){out=planFor(request.input);for(const p of out.pages)p.copy.push(...extraCopy);}else if(request.contextKind==='lean-correction')out={action:'local_edit',requirementIds:['copy-0'],reason:'Visible wrong headline',instruction:'Correct headline only',regions:[{label:'Headline',x:50,y:50,width:100,height:100}],protectedRegions:[{label:'Visible product',x:400,y:400,width:500,height:500}]};else out={checks:request.input.requirements.map(r=>({id:r.id,result:r.id==='copy-0'&&!request.input.correction&&mismatch?'clear_mismatch':request.input.correction&&uncertain?'unable_to_verify':'no_mismatch',evidence:'Observed '+r.name,location:'Top left'}))};if(request.validate)request.validate(out);return out;},generate:async request=>{calls.push({kind:'image',...request});if(request.model===failModel)throw Error('Simulated model unavailable');return {imageData:data};}}};
  // Exercise the real activity ledger and stage cache, not a simulated lifecycle.
@@ -38,13 +41,26 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': one plan retains ever
  const f=await fixture(t,{brand,pages:2});assert.equal(f.records.length,4);assert.equal(f.calls.filter(c=>c.kind==='lean-planning').length,1);assert(f.records.every(r=>r.option.quality==='high'));assert.equal(f.records[0].prompt,f.records[1].prompt);assert(!JSON.stringify(f.records[0].input).includes('base64'));assert(!JSON.stringify(f.records[0].input).includes('foreign-fact'));assert(f.records[0].prompt.includes(brand==='Duroflex'?'Poppins':'Source Sans Pro'));
  await handoff.generate(f.runtime,f.job.id);let j=await f.store.read(f.job.id);assert.equal(j.status,'finished');assert.equal(j.results.length,4);assert(j.results.every(r=>r.ready&&r.originalArtwork&&!r.editable),JSON.stringify(j.unitErrors));assert.equal(f.calls.filter(c=>c.kind==='image').length,4);
  await handoff.generate(f.runtime,f.job.id);assert.equal(f.calls.filter(c=>c.kind==='image').length,4,'completed checkpoints must not dispatch again');
- assert.deepEqual(new Set(j.results.map(r=>r.imageModel)),new Set(policy.options.map(o=>o.model)));assert.equal(j.runtimeConfig.roleModels['lean-planning'].model,'gpt-6.1-sol');assert.equal(j.runtimeConfig.roleModels['lean-planning'].reasoningEffort,'high');
+ assert.deepEqual(new Set(j.results.map(r=>r.imageModel)),new Set(policy.jobOptions(j).map(o=>o.model)));assert.equal(j.runtimeConfig.roleModels['lean-planning'].model,'gpt-6.1-sol');assert.equal(j.runtimeConfig.roleModels['lean-planning'].reasoningEffort,'high');
 });
+// User decision, 8 Nov 2026: the second image model is retired; new jobs make one gpt-image-2 design per format.
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': new jobs render one gpt-image-2 design per page and never call the retired model',async t=>{
+ const f=await fixture(t,{brand,pages:2,legacyTwoOptions:false});await handoff.generate(f.runtime,f.job.id);const j=await f.store.read(f.job.id);
+ assert.deepEqual(j.runtimeConfig.leanImageOptions,[{route:'continuity',model:'gpt-image-2',quality:'high'}]);
+ assert.equal(j.status,'finished',JSON.stringify(j.unitErrors));assert.equal(j.results.length,2,'one design per page');assert.ok(j.results.every(r=>r.route==='continuity'&&r.imageModel==='gpt-image-2'));
+ const images=f.calls.filter(c=>c.kind==='image');assert.equal(images.length,2);assert.ok(images.every(c=>c.model==='gpt-image-2'),'no gpt-image-2.6-sunburst request');
+ assert.equal(f.calls.filter(c=>c.kind==='lean-planning').length,1);
+});
+// Design page (8 Nov 2026): the job view carries a short brief summary so input sits next to output.
+test('the job view includes the brief summary for the design page',async t=>{const f=await fixture(t,{legacyTwoOptions:false});const {CreativeRuntime}=require('../../lib/creative-ai/runtime/engine'),rt=new CreativeRuntime({root:path.dirname(path.dirname(path.dirname(f.store.root))),provider:{}});const v=await rt.view(f.job.id);assert.equal(v.briefSummary.brief,'Introduce this exact SKU.');assert.equal(v.briefSummary.productName,'Duroflex Product');assert.ok(!('submittedBrief' in v),'the full submitted brief is not sent');});
 test('a model failure preserves the other option and original plan',async t=>{const f=await fixture(t,{failModel:'gpt-image-2.6-sunburst'});await handoff.generate(f.runtime,f.job.id);const j=await f.store.read(f.job.id);assert.equal(j.status,'partial');assert.equal(j.results.length,1);assert.equal(j.results[0].route,'continuity');assert.equal(j.unitErrors.length,1,JSON.stringify(j.unitErrors));});
 test('bounded local correction uses verified masks and preserves original checkpoints',async t=>{
  const f=await fixture(t,{mismatch:true});await handoff.generate(f.runtime,f.job.id);const j=await f.store.read(f.job.id);assert(j.results.every(r=>r.correction?.selected),JSON.stringify(j.unitErrors));assert.equal(f.calls.filter(c=>c.kind==='image').length,4);
  const edit=f.calls.find(c=>c.kind==='image'&&c.mask);assert(Buffer.isBuffer(edit.mask));assert.match(edit.prompt,/reference image 2/);assert.match(edit.prompt,/reference image\(s\) 2–2/);assert.match(edit.prompt,/Image 3 is the approved/);
- for(const file of await fs.readdir(f.store.dir(f.job.id)))if(file.startsWith('lean-state-')){const state=JSON.parse(await fs.readFile(path.join(f.store.dir(f.job.id),file)));assert.equal(state.maskProof.outsideMaskChangedPixels,0);assert.notEqual(state.original.filename,state.candidate.filename);}
+ for(const file of await fs.readdir(f.store.dir(f.job.id)))if(file.startsWith('lean-state-')){const state=JSON.parse(await fs.readFile(path.join(f.store.dir(f.job.id),file)));assert.equal(state.maskProof.outsideMaskChangedPixels,0);assert.notEqual(state.original.filename,state.candidate.filename);
+  // exactCanvasVersion 1 (8 Nov 2026): the original is fitted to the exact canvas and the corrected image keeps that same pixel grid.
+  assert.ok(state.originalFit,'new jobs record how the original was fitted');assert.deepEqual([state.candidate.width,state.candidate.height],[state.original.width,state.original.height]);}
+ assert.ok(f.calls.filter(c=>c.kind==='image').every(c=>c.size&&c.size!=='auto'),'both models are asked for an exact-shape size');
  const {BrandScopedProvider}=require('../../lib/creative-ai/runtime/brand-isolation');let dispatched=0;const scoped=new BrandScopedProvider({generate:async()=>dispatched++},{});scoped.context=async()=>({scope:{brandId:f.context.intake.brandId,brandName:'Duroflex',brandUrl:f.context.intake.brandUrl,documentIds:[]},dir:f.store.dir(f.job.id),leanWorkflowVersion:1});await f.store.save(f.job.id,'research.json',f.context.research);
  await scoped.generate(edit,{});assert.equal(dispatched,1);await assert.rejects(()=>scoped.generate({...edit,mask:Buffer.from('wrong')},{}),/mask changed/);assert.equal(dispatched,1);
  await handoff.generate(f.runtime,f.job.id);assert.equal(f.calls.filter(c=>c.kind==='image').length,4);
@@ -121,6 +137,56 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': main engine preparati
  runtime.unit=()=>assert.fail('Legacy generation');runtime.readCarouselPlan=()=>assert.fail('Legacy carousel planning');runtime.finishCarousels=()=>assert.fail('Legacy set review');runtime.finishPdp=()=>assert.fail('Legacy PDP review');
  await f.store.save(f.job.id,'placement-catalog.json',{});await require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype.run.call(runtime,f.job.id,{phase:'planning'});await handoff.generate(runtime,f.job.id);
  assert(prep.includes('guardian-scoped.json'));assert.equal((await f.store.read(f.job.id)).status,'finished');assert.deepEqual(new Set(f.calls.map(c=>c.kind)),new Set(['lean-planning','image','lean-review']));assert.equal(f.calls.filter(c=>c.kind==='lean-planning').length,1);
+});
+// Regression (8 Nov 2026 test jobs creative-d2a69df5, -e30c5b06, -89b2bfae): the protected
+// exact-SKU reference is a resized copy of the first website photo
+// (".../1_abc_600x600.jpg" vs ".../1_abc.jpg"), so both image models received it twice.
+function withWebsiteTwin(context){
+ const data=context.research.dossier.assets[0].imageData,at='2026-11-08T00:00:00.000Z',src=(id,reference)=>({id,kind:'asset',label:id,reference,collectedAt:at,status:'available'});
+ context.research.dossier.sources.push(src('src-protected','https://www.brand.test/cdn/shop/files/1_abc_600x600.jpg?v=1'),src('src-img-1','https://cdn.shopify.com/s/files/1/0/files/1_abc.jpg?v=1'),src('src-img-2','https://cdn.shopify.com/s/files/1/0/files/2_def.jpg?v=1'),src('src-img-3','https://cdn.shopify.com/s/files/1/0/files/3_ghi.jpg?v=1'));
+ const asset=(id,sourceIds)=>({id,kind:'product',label:id,sourceIds,imageData:data});
+ context.research.dossier.assets.push(asset('sku-protected-x',['src-protected']),asset('sku-product-image-1',['source-product-page','src-img-1']),asset('sku-product-image-2',['source-product-page','src-img-2']),asset('sku-product-image-3',['source-product-page','src-img-3']));
+ context.intake.productReferencePolicy={...context.intake.productReferencePolicy,sourceAssetId:'sku-protected-x',referenceAssetIds:['sku-product-image-1','sku-product-image-2','sku-product-image-3']};
+ return context;
+}
+test('new jobs do not send the protected SKU reference together with its website twin',async t=>{
+ const f=await fixture(t),context=withWebsiteTwin(structuredClone(f.context));context.job.runtimeConfig.leanReferenceVersion=1;
+ assert.deepEqual(ctx.packet(context,context.job.selection).productRefs.map(r=>r.assetId),['sku-protected-x','sku-product-image-2','sku-product-image-3']);
+});
+test('jobs without the reference pin keep their saved reference selection',async t=>{
+ const f=await fixture(t),context=withWebsiteTwin(structuredClone(f.context));delete context.job.runtimeConfig.leanReferenceVersion; // a job admitted before 8 Nov 2026
+ assert.deepEqual(ctx.packet(context,context.job.selection).productRefs.map(r=>r.assetId),['sku-protected-x','sku-product-image-1','sku-product-image-2']);
+});
+test('website photo keys ignore resized copies but keep different photos apart',()=>{
+ const key=ctx.referencePhotoKey;
+ assert.equal(key('https://www.brand.test/cdn/shop/files/1_abc_600x600.jpg?v=1'),key('https://cdn.shopify.com/s/files/1/0/files/1_abc.jpg?v=2'));
+ assert.equal(key('https://mysleepyhead.com/cdn/shop/files/NapsterMini_1.jpg?v=1'),key('https://mysleepyhead.com/cdn/shop/files/NapsterMini_1.jpg?v=1'));
+ assert.equal(key('https://x.test/files/2_def_1024x.webp'),key('https://x.test/files/2_def.webp'));
+ assert.notEqual(key('https://x.test/files/NapsterMini_1.jpg'),key('https://x.test/files/NapsterMini_6.jpg'));
+ assert.equal(key('https://x.test/products/sofa'),null,'non-image links are never treated as photos');
+});
+// Regression (8 Nov 2026): every job saved a full brand dossier report that nothing
+// in generation reads (see docs/dossier-storage-20261108.md). Jobs now only check
+// the research; the brand-level research refresh keeps its saved report.
+function preparedRun(f){
+ const runtime=f.runtime,originalStage=runtime.stage;
+ runtime.provider.checkAccess=async()=>({configured:true});runtime.dossierStore={researchCompleted:async()=>assert.fail('A job must not save a dossier report')};runtime.brands={read:async()=>f.context.brand,revision:()=>undefined};
+ runtime.stage=async(id,kind,agent,name,fn,options)=>{if(['research','guardian'].includes(kind))return structuredClone(kind==='research'?{...f.context.research,pages:[]}:f.context.guardian);return originalStage(id,kind,agent,name,fn,options);};
+ return runtime;
+}
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': a job checks its research without saving a dossier report',async t=>{
+ const f=await fixture(t,{brand}),runtime=preparedRun(f);
+ await f.store.save(f.job.id,'placement-catalog.json',{});await require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype.run.call(runtime,f.job.id,{phase:'planning'});await handoff.generate(runtime,f.job.id);
+ const job=await f.store.read(f.job.id);assert.equal(job.status,'finished');assert.equal(job.artifacts?.dossier,undefined);
+});
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': research that fails the dossier check stops the job before paid planning',async t=>{
+ const f=await fixture(t,{brand});f.context.research=structuredClone(f.context.research);
+ f.context.research.dossier.findings.push({section:'overview',basis:'evidence',title:'Orphan citation',text:'Cites a source that does not exist.',sourceIds:['source-that-does-not-exist']});
+ const runtime=preparedRun(f);await f.store.save(f.job.id,'placement-catalog.json',{});
+ f.calls.length=0; // the fixture plans once during setup; count only calls made by this run
+ let error=null;try{await require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype.run.call(runtime,f.job.id,{phase:'planning'});}catch(e){error=e;}
+ const job=await f.store.read(f.job.id);
+ assert.match(String(error?.message||job.error?.message||job.error||''),/sourceIds/);assert.notEqual(job.status,'finished');assert.equal(f.calls.filter(c=>c.kind==='lean-planning').length,0);
 });
 for(const brand of ['Duroflex','Sleepyhead'])test(brand+': saved handoff resumes independently of current prompt builder and defaults',async t=>{
  const f=await fixture(t,{brand});const manifest=await require('../../lib/creative-ai/runtime/artifact-fs').readJson(path.join(f.store.dir(f.job.id),'image-queue.json'));const record=await require('../../lib/creative-ai/runtime/artifact-fs').readJson(path.join(f.store.dir(f.job.id),manifest.units[0].file));const old=planning.imagePrompt,options=structuredClone(policy.options);

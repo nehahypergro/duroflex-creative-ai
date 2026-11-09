@@ -108,6 +108,8 @@ window.StudioData = (() => {
     componentRepair:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/component-recovery',input),
     retryImageChecks:(id,scope)=>post('jobs/'+encodeURIComponent(id)+'/retry-checks',scope),
     products:brandId=>get('brands/'+encodeURIComponent(brandId)+'/products'),
+    // One small paid reasoning call; the result only fills the appreciation page for confirmation.
+    readBrief:(brand,body)=>post('brands/'+encodeURIComponent(brand.id)+'/brief-read',{...body,brandName:brand.name}),
     async saveProduct(brand,url,refresh=false){const result=await post('brands/'+encodeURIComponent(brand.id)+'/products',{brandName:brand.name,url,refresh});this.invalidateWorkspace(brand.id);return result;},
     assets:brandId=>get('brands/'+encodeURIComponent(brandId)+'/assets'),
     product:(brandId,id)=>get('brands/'+encodeURIComponent(brandId)+'/products/'+encodeURIComponent(id)),

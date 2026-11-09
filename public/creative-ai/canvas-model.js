@@ -115,7 +115,7 @@
   return heuristicIssues(doc,[...new Set(issues)]);
  }
  // Presentation only: never alter stored errors, contracts, artwork text or billing evidence.
- function optionLabel(route){return route==='continuity'?'Alternative set 1':route==='exploration'?'Alternative set 2':/^(?:Option|Alternative set) \d+$/.test(route||'')?route.replace(/^Option /,'Alternative set '):'Alternative set';}
+ function optionLabel(route){return route==='continuity'?'Option A':route==='exploration'?'Option B':/^(?:Option|Alternative set) \d+$/.test(route||'')?'Option '+(String.fromCharCode(64+Number(route.match(/\d+$/)[0]))||route):'Option';}
  function reviewNotes(state,doc){
   const review=state.review;if(!review)return [];
   const verified=Number.isInteger(state.verifiedRevision)&&state.verifiedRevision===state.revision&&JSON.stringify(doc)===JSON.stringify(state.document);

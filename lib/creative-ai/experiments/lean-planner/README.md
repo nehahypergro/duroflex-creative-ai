@@ -1,5 +1,7 @@
 # Lean planner comparison experiment
 
+> **8 Nov 2026:** the main Studio now uses `planning.js`, `visual-review.js`, `correction.js` and `requirements.js` from `lib/creative-ai/lean/`. The files of the same name here are pointers to them. The rest of this folder is the original opt-in experiment.
+
 Opt-in experiment for the Duroflex Airboost 6.8 Arctic Ice Queen 78 × 60 × 8 inch mattress. The production engine does not import this module.
 
 ## Current flow (v2)

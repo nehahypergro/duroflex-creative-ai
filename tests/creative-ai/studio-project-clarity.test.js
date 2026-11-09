@@ -11,7 +11,7 @@ test('Tab title keeps project, screen and brand without internal IDs',()=>{
  assert.equal(M.browserTitle('Duroflex','project','Airboost · Diwali'),'Airboost · Diwali — Duroflex · Creative AI');
  assert.equal(M.browserTitle('Sleepyhead','review','Napster launch'),'Napster launch · Design — Sleepyhead · Creative AI');
  assert.equal(M.browserTitle('Duroflex','home'),'Home — Duroflex · Creative AI');
- assert.equal(C.optionLabel('continuity'),'Alternative set 1');assert.equal(C.optionLabel('exploration'),'Alternative set 2');
+ assert.equal(C.optionLabel('continuity'),'Option A');assert.equal(C.optionLabel('exploration'),'Option B');
 });
 test('Project recovery and search are clear in both brands without submitting work',{timeout:60000},async()=>{
  const f=await require('./helpers/intake-preview.cjs').createPreview(),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),page=await browser.newPage({viewport:{width:1366,height:900}}),writes=[],errors=[];

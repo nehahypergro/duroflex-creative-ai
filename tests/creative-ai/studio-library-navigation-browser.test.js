@@ -27,8 +27,8 @@ test('Both brand libraries render products, compact logo actions and scoped cate
   assert.equal(await page.locator('#toolCatalogueSearch').count(),0);
   assert.equal(await page.locator('#taskPanel > [data-action=close-task]').count(),0);
   for(const group of ['website','retail','messaging','corporate','social']){
-   await page.locator('#sidebarNavigation [data-action=home-group][data-group='+group+']').click();
-   await page.locator('#tool-rail-'+group).waitFor();
+   await page.locator('#sidebarNavigation [data-group=social]').click();await page.locator('#taskPanel [data-action=picker-tab][data-division='+group+']').click();
+   await page.locator('#taskPanel [data-action=picker-tab][data-division='+group+'][aria-selected=true]').waitFor();
    const route=await page.evaluate(()=>location.hash.slice(1));
    assert.equal(new URLSearchParams(route.split('?')[1]).get('from'),'library');
    assert.ok(route.length<100,'Category navigation must not nest previous routes');

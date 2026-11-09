@@ -1,0 +1,67 @@
+/* Image-only mode of the editor for simplified designs (8 Nov 2026). Reuses the editor shell and
+   the earlier "Edit with AI" chat panel styles; only the two-column layout and image frame are new. */
+#editableDialog.ec-image-only .ec-main{display:grid;grid-template-columns:minmax(0,1fr) 370px;grid-template-rows:minmax(0,1fr);flex:1;min-height:0}
+#editableDialog.ec-image-only .ec-workspace{grid-column:1;grid-row:1;display:flex;flex-direction:column;min-height:0;min-width:0;position:relative}
+#editableDialog.ec-image-only .ec-chat{grid-column:2;grid-row:1}
+#editableDialog.ec-image-only .ec-io-context{visibility:visible;justify-content:space-between;min-height:48px;padding:8px 16px}
+#editableDialog.ec-image-only .ec-io-viewing{font-size:12px;color:var(--ec-muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#editableDialog.ec-image-only .ec-io-context button{font-size:11px;padding:6px 10px}
+#editableDialog.ec-image-only .ec-io-stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0}
+#editableDialog .ec-io-frame{position:relative;flex:none;box-shadow:0 10px 40px #21132e24;background:#fff}
+#editableDialog .ec-io-frame img{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+#editableDialog .ec-io-frame .ec-io-overlay{left:0;top:0;width:100%;height:100%}
+#editableDialog .ec-io-banner{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;border-top:1px solid var(--ec-line);background:#faf7ff;font-size:12px}
+#editableDialog .ec-io-banner span{margin-right:auto}
+#editableDialog .ec-io-banner button{font-size:11px;padding:6px 10px}
+#editableDialog .ec-io-versions{padding:10px 12px;border-bottom:1px solid #eee8f4;flex:none}
+#editableDialog .ec-io-versions h4{font-size:11px;font-weight:600;color:#82728e;margin:0 0 6px;letter-spacing:.2px}
+#editableDialog .ec-io-strip{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+#editableDialog .ec-chat .ec-io-version{flex:none;width:76px;display:flex;flex-direction:column;align-items:stretch;gap:2px;padding:4px;text-align:left;border-radius:8px;font-size:10px}
+#editableDialog .ec-chat .ec-io-version img,#editableDialog .ec-io-thumb-empty{display:flex;align-items:center;justify-content:center;width:100%;height:56px;object-fit:contain;background:#f6f2fa;border-radius:5px;color:#82758e;font-size:9px}
+#editableDialog .ec-chat .ec-io-version strong{font-size:10px;font-weight:600}
+#editableDialog .ec-chat .ec-io-version small{font-size:9px;color:#82758e}
+#editableDialog .ec-chat .ec-io-version.in-use{border-color:#8c41e2;box-shadow:0 0 0 1px #8c41e2}
+#editableDialog .ec-chat .ec-io-version.viewing{background:#f3edff}
+#editableDialog .ec-io-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:6px 0}
+#editableDialog .ec-chat .ec-io-actions .ec-primary{padding:7px 10px}
+#editableDialog .ec-chat-result .error{color:#a33535}
+#editableDialog.ec-image-only .ec-chat-help{display:block}
+#editableDialog .ec-io-spinner{display:inline-block;width:11px;height:11px;margin-right:6px;border:2px solid #e2d6ef;border-top-color:#713bd0;border-radius:50%;vertical-align:-1px;animation:ec-io-spin .9s linear infinite}
+@keyframes ec-io-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#editableDialog .ec-io-spinner{animation:none}}
+@media(max-width:900px){#editableDialog.ec-image-only .ec-main{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(220px,46%) minmax(0,1fr)}#editableDialog.ec-image-only .ec-workspace{grid-column:1;grid-row:1}#editableDialog.ec-image-only .ec-chat{grid-column:1;grid-row:2;border-left:0;border-top:1px solid #e7dfef}#editableDialog.ec-image-only .ec-chat>header{padding:8px 12px}#editableDialog.ec-image-only .ec-io-versions{padding:6px 12px}#editableDialog.ec-image-only .ec-chat{overflow-y:auto}#editableDialog.ec-image-only .ec-chat-history{min-height:48px}}
+@media(max-width:700px){#editableDialog.ec-image-only .ec-header{gap:8px;padding:10px 12px;flex-wrap:wrap}#editableDialog.ec-image-only .ec-header .ec-status{display:none}#editableDialog.ec-image-only .ec-title h2{font-size:16px}#editableDialog.ec-image-only .ec-io-context{min-height:38px;padding:4px 10px}#editableDialog.ec-image-only .ec-chat-help:not([data-io-cost]){display:none}#editableDialog .ec-chat .ec-io-version{width:58px;padding:3px}#editableDialog .ec-chat .ec-io-version img,#editableDialog .ec-io-thumb-empty{height:38px}#editableDialog.ec-image-only .ec-io-versions h4{display:none}#editableDialog.ec-image-only .ec-chat textarea{min-height:46px}#editableDialog.ec-image-only .ec-chat-composer{padding:8px 12px}#editableDialog.ec-image-only .ec-chat-input-label{gap:3px}}
+/* Pins with comments (9 Nov 2026): no Box tool; a click drops a numbered pin with a comment box. */
+#editableDialog.ec-image-only .ec-io-overlay.drawing{cursor:copy}
+#editableDialog.ec-image-only .ec-io-overlay .ec-io-pin{cursor:pointer}
+#editableDialog.ec-image-only .ec-io-overlay circle{fill:#e0115f;stroke:#fff;stroke-width:2.5}
+#editableDialog.ec-image-only .ec-io-overlay .ec-io-pin.active circle{fill:#713bd0;stroke-width:3.5}
+#editableDialog .ec-io-pop{position:absolute;z-index:9;box-sizing:border-box;background:#fff;border:1px solid #e3d9ef;border-radius:10px;box-shadow:0 10px 30px #21132e33;padding:10px;font-size:12px;color:var(--ec-ink)}
+#editableDialog .ec-io-pop label{display:flex;flex-direction:column;gap:6px;font-weight:600}
+#editableDialog .ec-io-pop-head{display:block;font-weight:600}
+#editableDialog .ec-io-pop-head b{color:#e0115f}
+#editableDialog .ec-io-pop textarea{width:100%;box-sizing:border-box;min-height:58px;resize:vertical;font:inherit;font-weight:400;font-size:13px;padding:7px 8px;border:1px solid #d9cfe6;border-radius:7px}
+#editableDialog .ec-io-pop-actions{display:flex;align-items:center;gap:6px;margin-top:8px}
+#editableDialog .ec-io-pop-actions small{margin-right:auto;color:var(--ec-muted);font-size:10px}
+#editableDialog .ec-io-pop-actions button{font-size:11px;padding:6px 10px}
+#editableDialog .ec-io-pins{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-direction:column;gap:5px;max-height:150px;overflow-y:auto}
+#editableDialog .ec-io-pins[hidden]{display:none}
+#editableDialog .ec-io-pins li{display:flex;align-items:stretch;gap:4px;border:1px solid #ece4f5;border-radius:8px;background:#fbf9fe}
+#editableDialog .ec-io-pins li.active{border-color:#8c41e2;background:#f5efff}
+#editableDialog .ec-io-pins .ec-io-pin-edit{flex:1;min-width:0;display:flex;align-items:center;gap:8px;border:0;background:none;padding:6px 8px;text-align:left;font-size:12px;box-shadow:none}
+#editableDialog .ec-io-pins .ec-io-pin-edit b{flex:none;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#e0115f;color:#fff;font-size:11px}
+#editableDialog .ec-io-pins .ec-io-pin-edit span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#editableDialog .ec-io-pins em{color:var(--ec-muted)}
+#editableDialog .ec-io-pins .ec-io-pin-remove{flex:none;border:0;background:none;box-shadow:none;padding:0 10px;font-size:15px;color:#82758e}
+#editableDialog .ec-io-hint{margin-right:auto;font-size:11px;color:var(--ec-muted)}
+#editableDialog .ec-io-turn-pins{list-style:none;margin:0 0 4px;padding:6px 10px;display:flex;flex-direction:column;gap:3px}
+#editableDialog .ec-io-turn-pins b{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-right:4px;border-radius:50%;background:#e0115f;color:#fff;font-size:9px}
+@media(max-width:700px){#editableDialog .ec-io-pins{max-height:96px}#editableDialog .ec-io-pop{padding:8px}#editableDialog .ec-io-pop textarea{min-height:44px}}
+/* Pin areas (9 Nov 2026): the dashed square is the only part of the design that can change. */
+#editableDialog.ec-image-only .ec-io-overlay .ec-io-area-box{fill:#e0115f12;stroke:#e0115f;stroke-width:1.5;stroke-dasharray:6 4;vector-effect:non-scaling-stroke;pointer-events:none}
+#editableDialog.ec-image-only .ec-io-overlay .ec-io-area-box.active{fill:#713bd014;stroke:#713bd0;stroke-width:2}
+#editableDialog .ec-io-area{display:flex;align-items:center;gap:4px;margin-top:8px;flex-wrap:wrap}
+#editableDialog .ec-io-area span{flex:1 0 100%;font-size:11px;color:var(--ec-muted)}
+#editableDialog .ec-io-area button{font-size:11px;padding:4px 8px;border-radius:6px}
+#editableDialog .ec-io-area button[aria-pressed=true]{background:#eadcff;color:#713bd0;border-color:#8c41e2}
+#editableDialog .ec-io-pins .ec-io-pin-edit small{flex:none;margin-left:auto;font-size:10px;color:var(--ec-muted)}

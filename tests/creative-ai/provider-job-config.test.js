@@ -29,7 +29,9 @@ test('image dispatch and saved-image recovery use the pinned model after deploym
  const first=await p.generate(args,store.budget(job.id));assert.equal(first.model,'image-old');assert.equal(bodies[0].get('model'),'image-old');p.config.imageModel='third-image';const second=await p.generate(args,store.budget(job.id));assert.equal(second.imageData,first.imageData);assert.equal(bodies.length,1);assert.equal((await store.read(job.id)).budget.imageCalls,1);
 });
 test('two approved image options stay pinned at high quality and resume separately',async t=>{
- const store=await setup(t),config=require('../../lib/creative-ai/runtime/lean-policy').configure(base(),{leanWorkflowVersion:1}),job=await store.create({},config,[{id:'square'}]),p=new OpenAIProvider({...base(),imageModel:'changed-live'}),bytes=await require('sharp')({create:{width:8,height:8,channels:3,background:'#ffffff'}}).png().toBuffer(),bodies=[],original=global.fetch;
+ // Jobs admitted before 8 Nov 2026 keep two pinned options; new jobs pin only gpt-image-2 (sunburst retired).
+ const lp=require('../../lib/creative-ai/runtime/lean-policy');assert.deepEqual(lp.configure(base(),{leanWorkflowVersion:1}).imageOptionModels,['gpt-image-2']);
+ const store=await setup(t),config={...lp.configure(base(),{leanWorkflowVersion:1}),leanImageOptions:lp.jobOptions({runtimeConfig:{}}),imageOptionModels:['gpt-image-2','gpt-image-2.6-sunburst']},job=await store.create({},config,[{id:'square'}]),p=new OpenAIProvider({...base(),imageModel:'changed-live'}),bytes=await require('sharp')({create:{width:8,height:8,channels:3,background:'#ffffff'}}).png().toBuffer(),bodies=[],original=global.fetch;
  global.fetch=async(url,options)=>{bodies.push(options.body);return {ok:true,headers:new Headers(),json:async()=>({data:[{b64_json:bytes.toString('base64')}],usage:{}})};};t.after(()=>global.fetch=original);
  for(const [i,model] of config.imageOptionModels.entries()){
   const args={prompt:'A selected product photograph.',attachments:[{assetId:'product',imageData:'data:image/png;base64,'+bytes.toString('base64')}],size:model==='gpt-image-2'?'1024x1024':'auto',model,quality:'high',requestKey:String(i+1).repeat(64)};

@@ -33,6 +33,7 @@ async function start({root = path.resolve(__dirname, '../..'), port = 1842,
   let closing,stopMaintenance;
   const close = () => closing ||= (async () => {
     stopMaintenance?.();
+    app?.runtime?.stopStartupReconciliation?.();
     if (app?.server.listening) await new Promise(resolve => app.server.close(resolve));
     if (client) await client.close();
     if (repl) await repl.stop({doCleanup: false, force: false});

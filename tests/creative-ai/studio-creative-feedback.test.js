@@ -29,5 +29,5 @@ test('both brands: feedback is durable, snapshot-bound, retry-safe and isolated 
  }finally{await browser?.close();server?.closeAllConnections();if(server)await new Promise(r=>server.close(r));await f.cleanup();}
 });
 test('Studio retains primary artwork feedback without duplicate alternative feedback',async()=>{
- const source=await fs.readFile(path.join(__dirname,'../../public/creative-ai/studio.js'),'utf8');assert.match(source,/\$\{creativeFeedback\(p,r\)\}<p id="downloadStatus"/);assert.doesNotMatch(source,/\$\{creativeFeedback\(p,r\)\}<\/article>/);assert.doesNotMatch(source,/\$\{creativeFeedback\(p,o\)\}<\/article>/);const html=await fs.readFile(path.join(__dirname,'../../public/creative-ai/studio.html'),'utf8');assert.ok(html.includes('/creative-ai/studio-creative-feedback.js'));
+ const source=await fs.readFile(path.join(__dirname,'../../public/creative-ai/studio.js'),'utf8');assert.match(source,/\$\{creativeFeedback\(p,r\)\}(\$\{reviewBriefSummary\(p,item\)\})?<p id="downloadStatus"/);/* the brief summary may sit between them (8 Nov 2026) */assert.doesNotMatch(source,/\$\{creativeFeedback\(p,r\)\}<\/article>/);assert.doesNotMatch(source,/\$\{creativeFeedback\(p,o\)\}<\/article>/);const html=await fs.readFile(path.join(__dirname,'../../public/creative-ai/studio.html'),'utf8');assert.ok(html.includes('/creative-ai/studio-creative-feedback.js'));
 });

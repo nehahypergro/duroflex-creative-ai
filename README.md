@@ -1,12 +1,26 @@
 # Duroflex Group Creative AI
 
-An independent local studio for Duroflex and Sleepyhead, in `/Users/neha/Desktop/Duroflex-Creative-AI`. The generic product is separate. Workspaces keep their own documents, research, products, assets, prompts and preference memory.
+A local studio that makes marketing artwork for Duroflex and Sleepyhead with OpenAI models. Each brand has its own documents, research, products, assets and preference memory. The generic product is separate. Project rules for coding agents are in `AGENTS.md`; dated change notes are in `docs/`.
 
 ## Run locally
 
-Use Node 20.9 or newer. Run `npm install`, copy `.env.example` to `.env`, supply a server-side provider key, and run `npm start`. Open `http://127.0.0.1:1842/creative-ai`. Run `npm test` for runtime, isolation, feedback and memory evaluations. Never put the provider key in browser code. The current development process inherited provider access in memory; a fresh standalone launch needs its own configured secret. Credentials were not copied into this clone.
+1. **Requirements:** macOS, Node 20.9 or newer (runs on Node 24), npm. Document import also uses `python3` and `pdftoppm`; page capture uses Chrome.
+2. **Install:** `npm install`.
+3. **Settings:** copy `.env.example` to `.env` and add `OPENAI_API_KEY`. Keep the key on the server only. Optional settings are listed in `.env.example`.
+4. **Data:** `output/` (brand libraries, products, jobs, research) and `work/` (local database, logs, credentials) are not in Git. A fresh clone has no brand data; copy these folders from the existing machine.
+5. **Start:** `npm start`. This starts a private local MongoDB (port 28571, data in `work/admin-private/database`) for logins, then the Studio on `http://127.0.0.1:1842`.
+6. **Sign in:** open `http://127.0.0.1:1842/admin`. On a brand-new database, create the first administrator at `http://127.0.0.1:1842/admin#setup=<token>`, using the token in `work/admin-private/setup-token`.
+7. **Studio:** `http://127.0.0.1:1842/creative-ai/studio`. The older technical workspace is still at `/creative-ai`.
 
-The pilot accepts loopback hosts and same-origin requests. Do not expose it through a tunnel or reverse proxy: it has no team authentication. Its scope is complete static images and carousels, with two automatic concepts, a 75% creative-quality threshold, separate critical checks, and at most one correction cycle per output.
+On the main Mac the Studio runs as the launchd service `com.neha.creative-ai.server`. If it stops it restarts by itself, and it never resumes paid work automatically. To restart it after a code change, stop the running `server.js` process and the service starts it again. Logs are in `work/studio-availability-20261020/logs/`. Starting `npm start` by hand while the service is running fails because port 1842 is taken.
+
+The Studio accepts only local connections from this machine. Do not expose it through a tunnel or reverse proxy (see **Before external client use**).
+
+**How a job works:** brief → free readiness check and cost estimate → generate (paid). The saved brand and product research feeds one plan (`gpt-6.1-sol`). Two image models draw that plan as a model comparison (`gpt-image-2` and `gpt-image-2.6-sunburst`). A visual review (`gpt-6-luna`) follows, with at most one automatic correction. Main code: `lib/creative-ai/runtime/` (engine, workflow, storage), `lib/creative-ai/lean/` (planner, reviewer, corrector), `lib/admin/` (sign-in and admin console), `public/` (browser UI).
+
+**Tests:** `npm test` runs the offline suite in about 10 minutes. It blocks network calls and writes to `output/`. Some older tests still fail because they read deleted saved jobs or expect the earlier one-option flow; see `docs/engine-fixes-20261108.md`.
+
+**Code style:** many files are written as very long single lines. Don't reformat files you aren't changing, because it buries real changes in the history. Write new and changed code in normal multi-line style.
 
 ## Brand toggle and named training
 
@@ -42,11 +56,11 @@ This is a working local pilot. A hosted team release still requires authenticate
 
 ## Cost tracking
 
-Open `/creative-ai/costs` or **Cost tracker** in the studio sidebar. The page reads durable provider receipts every five seconds while open. Amounts are USD estimates using the documented rate card checked on 2026-10-07; they are not vendor invoices. Copied research receipts are deduplicated by provider response ID / image idempotency key. Inherited history is kept separate from work after the dedicated clone was created. Older session dates are proxies where a receipt has no timestamp.
+Open `/creative-ai/costs` or **Cost tracker** in the studio sidebar. The page reads durable provider receipts every five seconds while open. Amounts are shown in INR, converted from USD list prices (rate card checked 2026-10-07) at a dated RBI reference rate; they are estimates, not vendor invoices. Copied research receipts are deduplicated by provider response ID / image idempotency key. Inherited history is kept separate from work after the dedicated clone was created. Older session dates are proxies where a receipt has no timestamp.
 
 The form adds unique-reference billing, development, test, training, configuration, infrastructure and other costs to `output/cost-tracking/manual.json`. Those entries are additional expenses; API invoice reconciliation is not automated, so do not add an invoice that duplicates the recorded API estimates. Development/Codex subscription billing and external video/audio are not metered automatically. Unknown amounts remain unknown.
 
-The native Google Sheet has managed Summary, Ledger, Rates and Coverage tabs. A Codex heartbeat refreshes it hourly while the app and Drive connector are available; the dashboard shows the last successful Sheet sync. Add costs through the app rather than editing these managed tabs. `scripts/costs/sheet-sync.js` creates the structured connector request; after a successful Google update and total readback, invoke it with `mark` to save the sync timestamp. It stores no Google credentials. The dashboard continues reading local usage if Sheet sync is unavailable.
+The native Google Sheet has managed Summary, Ledger, Rates and Coverage tabs. It used to be refreshed hourly by a Codex heartbeat; that stopped after 2 Nov 2026, so syncing is now a manual step until a new schedule is set up. The dashboard shows the last successful Sheet sync. Add costs through the app rather than editing these managed tabs. `scripts/costs/sheet-sync.js` creates the structured connector request; after a successful Google update and total readback, invoke it with `mark` to save the sync timestamp. It stores no Google credentials. The dashboard continues reading local usage if Sheet sync is unavailable.
 
 ## Brand asset library
 

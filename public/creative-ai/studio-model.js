@@ -27,7 +27,7 @@ function channelBadge(type){
 }
 const catalogueGroups=[
 {id:'social',name:'Social & campaigns',colour:'#c580b1',tint:'#fff0f8',items:[['Instagram post','1080 × 1080','post'],['Instagram Story','1080 × 1920','story'],['Instagram carousel','Multiple slides','carousel'],['PMax image set','Landscape, square & portrait','pmax']]},
-{id:'web',name:'Website & marketplaces',colour:'#82a8dc',tint:'#eaf3ff',items:[['Website banner','1920 × 640','banner'],['Product image gallery','PDP · individual images or set','gallery'],['Marketplace A+','Choose your modules','aplus'],['A+ feature image','300 × 300','feature'],['A+ lifestyle header','970 × 600','lifestyle'],['Amazon Brand Story','Backgrounds & story cards','brandstory'],['Premium A+ images','Large modules & carousels','premium'],['Homepage category tile','Choose dimensions','tile']]},
+{id:'web',name:'Website & marketplaces',colour:'#82a8dc',tint:'#eaf3ff',items:[['Website banner','1920 × 640','banner'],['Product image gallery','PDP · individual images or set','gallery'],['Marketplace A+','Premium page · one story','aplus'],['A+ feature image','300 × 300','feature'],['A+ lifestyle header','970 × 600','lifestyle'],['Amazon Brand Story','Background & story cards','brandstory'],['Basic A+ page','Header, overlay & images','premium'],['Homepage category tile','Choose dimensions','tile']]},
 {id:'retail',name:'Retail & local',colour:'#9694d9',tint:'#eeedff',items:[['Google Business post','Update, offer or event','local'],['Store / campaign banner','Choose size & orientation','storebanner'],['Retail screen','Landscape or portrait','screen'],['Window artwork','Glass panels & safe areas','window'],['Standee','Physical size & base clearance','standee'],['Wobbler / shelf / dangler','Choose a placement','wobbler'],['Product / counter card','Physical size & orientation','counter'],['Wall graphic','Seams & obstructions','wall'],['Price / offer board','Prices, terms & expiry','price'],['Poster / flyer','Physical size & orientation','poster'],['Brochure / leaflet','Panels & folds','brochure'],['Dealer / partner toolkit','Planning brief','kit'],['Store / city / language versions','Planning brief','variants'],['GT / COCO catalogue','Planning brief','catalogue']]},
 {id:'messaging',name:'Customer messaging',colour:'#7cbaad',tint:'#e6fbf5',items:[['WhatsApp visual','Share card or Status','whatsapp'],['Email header / hero','Image only','email'],['RCS card images','Single card or carousel','rcs'],['Push notification image','Android, iPhone or web','push'],['Push notification icons','Use saved brand artwork','icon']]},
 {id:'corporate',name:'Corporate & PR',colour:'#ae91d5',tint:'#f3eaff',items:[['LinkedIn post','Square, portrait or landscape','linkedin'],['LinkedIn feature carousel','PDF + images','document'],['LinkedIn story carousel','PDF + images','storypages'],['Blog / link preview','Choose dimensions','blog']]}
@@ -200,7 +200,7 @@ default:return frame(14,9,36,38)} }
   const formats = [
     {id:'square',name:'Square post',w:1080,h:1080}, {id:'portrait',name:'Portrait post',w:1080,h:1350},
     {id:'feed-landscape',name:'Landscape feed post',w:1200,h:628},
-    {id:'story',name:'Story / vertical video',w:1080,h:1920}, {id:'linkedin',name:'LinkedIn landscape',w:1200,h:627},
+    {id:'story',name:'Story',w:1080,h:1920}, {id:'linkedin',name:'LinkedIn landscape',w:1200,h:627},
     {id:'landscape',name:'Landscape / video',w:1920,h:1080}, {id:'banner',name:'Website banner',w:1920,h:640},
     {id:'custom',name:'Custom size',w:1080,h:1080}
   ];
@@ -246,15 +246,15 @@ default:return frame(14,9,36,38)} }
   }
   // Recipe-specific planning UI. These inputs do not establish source approval.
   const staticRecipes={
-    1:{story:'Create a feed visual or a PMax image set from one brief.',fields:[['platform','Image destination','select',['Instagram / Facebook','PMax']],['imageRatios','PMax image ratios','select',['Landscape + square + portrait','Landscape + square','Landscape + portrait','Square + portrait','Landscape','Square','Portrait']],['benefit','Main benefit'],['proof','Supporting source','textarea'],['qualifier','Qualification or disclaimer']],checks:['Benefit matches the exact product','Headline and supporting proof agree'],handoff:'Review the image and its saved checks, edit if needed, then download PNG or JPEG.'},
+    1:{story:'Create a feed visual or a PMax image set from one brief.',fields:[['platform','Image destination','select',['Instagram / Facebook','Instagram','Facebook','PMax']],['imageRatios','PMax image ratios','select',['Landscape + square + portrait','Landscape + square','Landscape + portrait','Square + portrait','Landscape','Square','Portrait']],['benefit','Main benefit'],['proof','Supporting source','textarea'],['qualifier','Qualification or disclaimer']],checks:['Benefit matches the exact product','Headline and supporting proof agree'],handoff:'Review the image and its saved checks, edit if needed, then download PNG or JPEG.'},
     2:{story:'Reuse the exact product’s official website technology image. Do not redraw or reconstruct it.',fields:[['technology','Technology name'],['mechanism','What to explain','textarea'],['source','Official website technology image / saved asset','textarea']],checks:['Technology wording is exact','Original website technology image is preserved without reconstruction'],handoff:'Review technology labels and product construction before editing or downloading.'},
     3:{story:'Use the offer supplied in this brief, including festive sales, with its exact terms and dates.',fields:[['offer','Offer and price wording','textarea'],['terms','Terms and qualifications','textarea'],['offerStart','Offer starts','date'],['offerEnd','Offer ends','date'],['destination','CTA destination','url']],checks:['Price and terms are supplied','Offer dates are in the correct order'],handoff:'Check the complete offer and expiry date before downloading. Publishing is separate.'},
     4:{story:'Communicate a supported claim without losing its qualification.',fields:[['claim','Exact claim','textarea'],['proof','Claim source','textarea'],['qualifier','Required qualification','textarea']],checks:['Claim has an exact source','Qualifications remain readable'],handoff:'Review the claim and qualification together, then edit or download the image.'},
     5:{story:'Plan a coherent, ordered set of product-page images.',part:'Image',parts:['Product hero','Benefit detail','Material / technology'],fields:[['source','Product-page requirements','textarea'],['filename','Filename prefix'],['alt','Shared image description','textarea']],checks:['Every image has a distinct job','Image descriptions match the product'],handoff:'Review each generated image separately. A complete image set requires all planned items.'},
     6:{story:'Plan marketplace modules against the selected marketplace’s template.',part:'Module',parts:['Hero module','Benefit module','Product detail'],fields:[['amazonPreset','Image preset','select',['Custom modules','Amazon feature module','Amazon lifestyle module','Amazon Brand Story']],['marketplace','Marketplace / account'],['template','Module template reference'],['eligibility','Eligibility and module constraints','textarea'],['proof','Comparison / claim source','textarea']],checks:['Module slots match supplied templates','Eligibility and claims are confirmed externally'],handoff:'Download reviewed module images. Marketplace upload and acceptance happen separately.'},
     7:{story:'Create a website banner or category tile at brief-selected dimensions.',fields:[['websiteType','Website asset','select',['Banner','Category tile']],['categoryName','Category name'],['labelTreatment','Category label','select',['Live website text','Include in image']],['brandedHost','Visible branded header','select',['Yes','No']],['placement','Page and placement'],['destination','CTA destination','url'],['fileLimit','Required file limit'],['alt','Accessible image description','textarea']],checks:['Dimensions match the placement','CTA and destination agree'],handoff:'Download the required image format. Website publishing is not performed here.'},
-    8:{story:'Create a story with space for platform interface elements.',fields:[['publishing','Publishing context','select',['Organic','Paid']],['platform','Story platform'],['safeArea','Safe-area / platform template notes','textarea'],['interaction','Link sticker or interaction notes','textarea']],checks:['Copy and logo avoid the specified interface area','Text remains readable at viewing size'],handoff:'Review the final story and add platform stickers separately before sharing.'},
-    9:{story:'Build a feature sequence or story across ordered slides. LinkedIn includes a document handoff.',part:'Slide',parts:[],fields:[['platform','Carousel platform','select',['Instagram / Facebook','LinkedIn']],['narrativeType','Carousel treatment','select',['Feature','Story']],['narrative','Narrative / progression','textarea'],['caption','Accompanying caption','textarea'],['destination','CTA destination','url']],checks:['Slide order makes sense','Claims and product identity stay consistent across slides'],handoff:'Review every slide in order. LinkedIn delivers a same-size-page raster PDF and original slides; publishing checks remain separate.'},
+    8:{story:'Create a story with space for platform interface elements.',fields:[['publishing','Post or ad?','select',['Organic','Paid']],['platform','Story platform'],['safeArea','Safe-area / platform template notes','textarea'],['interaction','Link sticker or interaction notes','textarea']],checks:['Copy and logo avoid the specified interface area','Text remains readable at viewing size'],handoff:'Review the final story and add platform stickers separately before sharing.'},
+    9:{story:'Build a feature sequence or story across ordered slides. LinkedIn includes a document handoff.',part:'Slide',parts:[],fields:[['platform','Carousel platform','select',['Instagram / Facebook','Instagram','Facebook','LinkedIn']],['narrativeType','Carousel treatment','select',['Feature','Story']],['narrative','Narrative / progression','textarea'],['caption','Accompanying caption','textarea'],['destination','CTA destination','url']],checks:['Slide order makes sense','Claims and product identity stay consistent across slides'],handoff:'Review every slide in order. LinkedIn delivers a same-size-page raster PDF and original slides; publishing checks remain separate.'},
     10:{story:'Create a local store or Google Business Profile post.',fields:[['storeName','Store name'],['address','Address / location','textarea'],['destination','Map or landing-page URL','url'],['localCTA','Local call to action']],checks:['Store address and destination are correct','Offer wording includes applicable terms'],handoff:'Download the reviewed visual; post it to the selected store account separately.'},
     11:{story:'Prepare an in-store print design for a named vendor specification.',fields:[['vendor','Printer / vendor'],['template','Vendor template reference'],['physicalWidth','Finished width','number'],['physicalHeight','Finished height','number'],['unit','Physical units','select',['mm','cm','in']],['bleed','Vendor-specified bleed'],['stock','Stock and finish'],['print','Proof and handoff requirements','textarea']],checks:['Vendor supplies dimensions, bleed and colour requirements','Physical proof is reviewed before production'],handoff:'PNG/JPEG is a screen preview. Use the current studio’s print handoff for proofs and vendor files; it is not certified print-ready.'},
     12:{story:'Create a co-branded asset with explicit partner requirements.',fields:[['partner','Partner name'],['partnerAsset','Partner asset / reference'],['lockup','Logo lockup and placement instructions','textarea'],['reviewer','Required approver']],checks:['Correct partner assets are attached','Partner review requirements are recorded'],handoff:'Review the co-branding and seek partner approval separately. Downloads do not send approval requests.'},
@@ -344,7 +344,7 @@ default:return frame(14,9,36,38)} }
     if(e.key==='partner')fields=[['toolkitType','Deliverable','select',['Single partner visual','Announcement','Partner social set','Toolkit']],...sizes,['partner','Partner name'],['partnerAsset','Saved partner artwork / reference'],['lockup','Supplied co-brand layout instructions','textarea'],['reviewer','Partner reviewer (optional)'],['deliverables','Requested images and sizes','textarea']];
     if(e.key==='store-versions')fields=[['versionType','Version type','select',['Store / city','Regional language','Store-specific offer']],['sourceMaster','Saved master creative reference'],['storeData','Store data source / row mapping','textarea'],['targetLanguages','Languages'],['destinations','QR / map destinations by store','textarea'],['fallback','Missing-data handling notes','textarea'],...sizes];
     if(e.key==='catalogue')fields=[['catalogueType','Catalogue type','select',['Regional GT mattresses','COCO mattresses','COCO furniture','COCO accessories','COCO full range']],['edition','Edition','select',['Digital','Print','Digital + print']],['region','Region'],['targetLanguages','Languages'],['rangeSource','Product range / SKU source','textarea'],['priceSource','Price / specification source (optional)','textarea'],['pageSize','Page size / orientation'],['template','Existing layout reference (optional)'],['deliverables','Cover / product imagery requirements','textarea']];
-    return {story:e.planningOnly?'Save the inputs for this workflow. '+(e.key==='partner'?'Attached partner artwork and toolkit assembly':'Batch processing and publication assembly')+' still need the next implementation pass.':'Choose the format and describe the image. Supplied wording is optional; copywriting is a separate phase.'+(e.printId?' Physical sizes and margins are editable starting assumptions, not printer-approved specifications.':''),fields:[['retailPreset','Asset type','select',retailEntries.map(e=>e.key)],...fields,...common],checks:['Use this brand’s saved sources','Keep supplied wording and product identity accurate'],handoff:e.planningOnly?'Planning brief only; saving does not generate a batch, toolkit or complete catalogue.':e.printId?'Generate raster artwork and existing print proofs. Vendor templates and physical acceptance remain separate.':'Review and download the selected image. Publishing and device/display acceptance remain separate.'};
+    return {story:e.planningOnly?'Save the inputs for this workflow. '+(e.key==='partner'?'Attached partner artwork and toolkit assembly':'Batch processing and publication assembly')+' still need the next implementation pass.':'Choose the format and describe the image. Supplied wording is optional; copywriting is a separate phase.'+(e.printId?' Physical sizes and margins are editable starting assumptions, not printer-approved specifications.':''),fields:[['retailPreset','Format','select',retailEntries.map(e=>e.key)],...fields,...common],checks:['Use this brand’s saved sources','Keep supplied wording and product identity accurate'],handoff:e.planningOnly?'Planning brief only; saving does not generate a batch, toolkit or complete catalogue.':e.printId?'Generate raster artwork and existing print proofs. Vendor templates and physical acceptance remain separate.':'Review and download the selected image. Publishing and device/display acceptance remain separate.'};
   }
   function retailProfile(o){const e=retailEntry(o),v=o.staticValues;if(!e||e.planningOnly)return null;
     if(e.printId){const p=retailPrintPresets.find(p=>p.id===v.printPreset),scale={mm:1,cm:10,in:25.4}[v.unit];if(!p||!scale)return null;
@@ -390,7 +390,58 @@ default:return frame(14,9,36,38)} }
     if(repeat)t.parts=amazonImageSlots(t,{});
     amazonTemplates['Amazon Premium — '+name]=t;
   }
-  staticRecipes[6].fields[0][3]=['Custom modules',...Object.keys(amazonTemplates)];
+  // Amazon A+ pages (user decisions, 9 Nov 2026; docs/aplus-20261109.md). Choosing a page type
+  // makes every module in every required size in ONE job, planned as one story. Wide panels
+  // (970 px or wider) carry short on-image text; mobile versions re-lay out the same words; small
+  // images stay light (no text or a 1-3 word label); one logo on the hero only. Native text limits
+  // are Amazon's documented limits where verified (Standard header headline 150 and overlay 70/300,
+  // alt text 100); every other cap is a conservative Studio cap, shorter than Amazon may allow.
+  const aplusPair=(id,label,w,h)=>({id,slots:[[label+' · desktop',w,h,'desktop'],[label+' · mobile',600,450,'mobile']]});
+  const aplusPageTypes={
+    premium:{id:'premium',name:'Premium A+ page',label:'Premium (recommended)',tier:'Premium',moduleLimit:7,source:premiumSource,modules:[
+      {id:'hero',name:'Hero banner',role:'hero',moduleType:'PREMIUM_FULL_BACKGROUND_TEXT',job:'Introduce the exact product and the one idea of the page.',limits:{headline:70,body:300},units:[aplusPair('hero','Hero',1464,600)]},
+      {id:'technology',name:'Technology panel',role:'technology',moduleType:'PREMIUM_FULL_BACKGROUND_TEXT',job:'Show the exact product technology, named word for word from the official product page.',limits:{headline:70,body:300},units:[aplusPair('technology','Technology',1464,600)]},
+      {id:'benefits',name:'Benefits carousel',role:'benefits',moduleType:'PREMIUM_NAVIGATION_CAROUSEL',job:'One supported benefit per panel, three panels.',limits:{headline:70,body:300},units:[1,2,3].map(n=>aplusPair('benefit-'+n,'Benefit '+n,1464,600))},
+      {id:'lifestyle',name:'Lifestyle banner',role:'lifestyle',moduleType:'PREMIUM_FULL_BACKGROUND_TEXT',job:'Show the product in believable real use with a short closing message.',limits:{headline:70,body:300},units:[aplusPair('lifestyle','Lifestyle',1464,600)]},
+      {id:'detail',name:'Two detail images',role:'detail',moduleType:'PREMIUM_DUAL_IMAGE_TEXT',job:'Two close details or views that answer buying questions.',limits:{headline:70,body:300},units:[1,2].map(n=>({id:'detail-'+n,slots:[['Detail '+n,650,350,'shared']]}))},
+      {id:'faq',name:'FAQ',role:'faq',moduleType:null,job:'Three to five short questions and answers from the official product facts. Text only, no image.',limits:{question:120,answer:300},units:[],textOnly:true}
+    ],later:['Own-brand comparison chart: it needs other products from the same brand, so it is left out for now (a later option).']},
+    basic:{id:'basic',name:'Basic A+ page',label:'Basic',tier:'Basic',moduleLimit:5,source:aplusSourceUrl(),noMobile:true,modules:[
+      {id:'header',name:'Header image with text',role:'hero',moduleType:'STANDARD_HEADER_IMAGE_TEXT',job:'Introduce the exact product and the one idea of the page.',limits:{headline:150,body:600},units:[{id:'header',slots:[['Header image',970,600,'shared']]}]},
+      {id:'overlay',name:'Image with text overlay',role:'technology',moduleType:'STANDARD_IMAGE_TEXT_OVERLAY',job:'Show the exact product technology, named word for word from the official product page. Amazon draws its own text box over part of this image.',limits:{headline:70,body:300},units:[{id:'overlay',slots:[['Overlay image',970,300,'shared']]}]},
+      {id:'three',name:'Three images',role:'benefits',moduleType:'STANDARD_THREE_IMAGE_TEXT',job:'Three supported benefits, one per image.',limits:{headline:70,body:300},units:[1,2,3].map(n=>({id:'image-'+n,slots:[['Three images · '+n,300,300,'shared']]}))},
+      {id:'highlights',name:'Highlights image',role:'detail',moduleType:'STANDARD_SINGLE_IMAGE_HIGHLIGHTS',job:'One close detail beside Amazon\'s highlights text.',limits:{headline:70,body:300},units:[{id:'highlights',slots:[['Highlights image',300,300,'shared']]}]}
+    ],later:['Comparison chart: it needs other products from the same brand, so it is left out for now (a later option).']},
+    'brand-story':{id:'brand-story',name:'Brand Story',label:'Brand Story',tier:'Brand Story',moduleLimit:5,source:'https://developer-docs.amazon/sp-api/docs/a-plus-brand-story-modules.md',modules:[
+      {id:'background',name:'Brand Story background',role:'brand',moduleType:null,job:'A calm brand backdrop. Amazon places the brand logo, headline and cards on top, so it carries no words.',limits:{headline:0,body:0},units:[{id:'background',slots:[['Background · desktop',1464,625,'desktop'],['Background · mobile',463,625,'mobile']]}]},
+      {id:'cards',name:'Story cards',role:'story',moduleType:null,job:'Three distinct, source-backed brand ideas in one visual system.',limits:{headline:50,body:150},units:[1,2,3].map(n=>({id:'card-'+n,slots:[['Story card '+n,362,453,'shared']]}))}
+    ],later:['About-the-brand card with the logo, and the four-product card: they need the saved logo upload and other products, so they are left out for now (a later option).']}
+  };
+  function aplusSourceUrl(){return 'https://developer-docs.amazon/sp-api/docs/a-plus-content-examples';}
+  // Every image of a page type in order, with its module, device, text rule and logo choice.
+  function aplusSlots(typeId){
+    const type=aplusPageTypes[typeId];if(!type)return [];const out=[];
+    for(const m of type.modules)for(const u of m.units){const first=out.length;for(const [name,width,height,device] of u.slots){
+      const textRule=type.id==='brand-story'&&m.id==='background'?'none':device==='mobile'?'mobile':width>=970?'panel':'label';
+      out.push({index:out.length+1,name,width,height,device,module:m.id,moduleName:m.name,role:m.role,moduleType:m.moduleType,unit:u.id,textRule,logo:m.role==='hero',pairIndex:device==='mobile'?first+1:null});}}
+    return out;
+  }
+  function aplusSummary(typeId){
+    const type=aplusPageTypes[typeId];if(!type)return null;const slots=aplusSlots(typeId);
+    return {version:1,type:type.id,name:type.name,tier:type.tier,imageCount:slots.length,moduleCount:type.modules.length,later:type.later.slice(),
+      modules:type.modules.map(m=>({id:m.id,name:m.name,role:m.role,moduleType:m.moduleType,job:m.job,limits:{...m.limits},textOnly:!!m.textOnly,units:m.units.map(u=>u.id),images:slots.filter(s=>s.module===m.id).map(s=>({index:s.index,name:s.name,width:s.width,height:s.height,device:s.device}))}))};
+  }
+  for(const type of Object.values(aplusPageTypes)){
+    const slots=aplusSlots(type.id);
+    amazonTemplates['Amazon A+ page — '+type.label]={id:'aplus-'+type.id,page:type.id,tier:type.tier,source:type.source,parts:slots.map(s=>[s.name,s.width,s.height]),
+      instruction:type.name+': one coordinated A+ page planned as one story ('+type.modules.map(m=>m.name).join(' → ')+'). Every image is made at its own required size'+(type.noMobile?'':', with separately composed mobile versions')+'. Amazon text fields, alt text'+(type.id==='premium'?' and the FAQ':'')+' are written into a copy deck delivered with the images.'};
+  }
+  const aplusPresetNames=Object.keys(amazonTemplates).filter(k=>amazonTemplates[k].page);
+  function aplusPage(o){const t=amazonImageTemplate(o);return t?.page?aplusPageTypes[t.page]:null;}
+  function aplusPresetName(typeId){return aplusPresetNames.find(k=>amazonTemplates[k].page===typeId)||null;}
+  // Project notes shown with the result (offer warning, technology fallback, left-out modules).
+  function aplusNotes(job){return Array.isArray(job?.aplus?.notes)?job.aplus.notes.filter(n=>typeof n==='string'&&n.trim()):[];}
+  staticRecipes[6].fields[0][3]=[...aplusPresetNames,'Custom modules',...Object.keys(amazonTemplates).filter(k=>!amazonTemplates[k].page)];
   function amazonImageSlots(t,values={}){
     if(!t.repeat)return t.parts;
     const count=Number(values.imageCount||t.defaultCount);if(!Number.isInteger(count)||count<t.range[0]||count>t.range[1])return [];
@@ -446,6 +497,7 @@ default:return frame(14,9,36,38)} }
   function amazonImageTemplate(o){return o?.featureId===6?amazonTemplates[o.staticValues?.amazonPreset]||null:null;}
   function baseStaticRecipeForOutput(o){
     const base=staticRecipe(o.featureId),t=amazonImageTemplate(o);if(retailEntry(o))return retailRecipe(o);if(pushImage(o))return {story:'Create the picture attached to a push notification. Choose the destination and an image template. Presets are starting canvases, not universal operating-system requirements. Notification text, app icons and sending stay separate.',fields:[['pushDestination','Where will it appear?','select',Object.keys(pushDestinations)],['pushPreset','Image template','select',Object.keys(pushPresets)],['visualFocus','What should the image show?','textarea'],['templateContext','Notification service or template notes (optional)','textarea'],['fileLimitKb','Template file limit in KB (optional)'],['visualReferences','Visual direction or reference notes (optional)','textarea']],checks:['One recognisable subject even at small size','Important product details survive the chosen crop','No fake buttons or required message hidden inside the image'],handoff:'Download the image for your notification service. Preview crops are illustrative; device support, message text and sending are separate. An empty file limit means no provider limit has been supplied.'};if(rcsImage(o))return {part:'Card',story:'Create the image area of an RCS card. Choose a single card or ordered carousel. Titles, descriptions, buttons and sending stay separate. Canvas pixels are Studio presets; the destination card may centre-crop the image.',fields:[['rcsPreset','Card layout','select',Object.keys(rcsPresets)],...(rcsPresets[o.staticValues?.rcsPreset]?.carousel?[['cardCount','Number of cards','select',Array.from({length:9},(_,i)=>String(i+2))]]:[]),['visualFocus','What should the image or set show?','textarea'],['templateContext','Provider or template notes (optional)','textarea'],['visualReferences','Visual direction or reference notes (optional)','textarea']],checks:['Exact selected product is recognisable in each crop','Each card has a distinct purpose and the set stays consistent','Native buttons and message text are separate'],handoff:'Download each image or the complete ordered set. The preview illustrates centre cropping; it is not a sent or device-verified RCS message.'};if(emailImage(o))return {story:'Create an image for your email. Preset sizes are starting points; use Custom email image for an existing template. Email headings, buttons and body text stay separate.',fields:[['emailPreset','Image size','select',Object.keys(emailPresets)],['visualFocus','What should the image show?','textarea'],['templateContext','Where will it sit in the email? (optional)','textarea'],['visualReferences','Visual direction or reference notes (optional)','textarea']],checks:['Product details remain accurate','Subject is clear in the email column and on mobile','Crop fits the actual email template'],handoff:'Download the image for your email template. Writing and sending the email are separate.'};if(!t)return base;
+    if(t.page)return {...base,part:'Image',story:t.instruction+(t.page==='brand-story'?' Choose Brand only when no specific product is needed.':' Use the selected saved product and exact variant.'),fields:[base.fields[0],['storyFocus','What should this A+ page help shoppers understand? (optional)','textarea'],['visualReferences','Visual direction or reference notes (optional)','textarea']],checks:['One story across every module','Short, large on-image text that reads on a phone','Exact product technology from the official product page','Every image at its own required size'],handoff:'Download every image at its Amazon size (PNG, or JPEG when a PNG is over 2 MB) with a copy deck of Amazon text fields and alt text. Uploading and Amazon approval happen separately.'};
     const question={feature:['featureFocus','Which feature should the image reveal?'],lifestyle:['useContext','What use or situation should the scene show?'],'brand-story':['brandIdea','What brand idea should these images communicate?']}[t.id]||['visualFocus','What should this module help shoppers see?'];
     return {...base,part:'Image',story:t.instruction+(t.id==='brand-story'?' Choose Brand only when no specific product is needed.':' Use the selected saved product and exact variant.'),fields:[base.fields[0],...(t.repeat?[['imageCount',t.repeat==='panels'?'Number of panels':t.repeat==='hotspots'?'Number of hotspots':'Number of columns','select',Array.from({length:t.range[1]-t.range[0]+1},(_,i)=>String(i+t.range[0]))]]:[]),...(t.id==='premium-background-text'?[['overlaySide','Side reserved for Amazon text','select',['Left','Right']]]:[]),[...question,'textarea'],['visualReferences','Visual direction or reference notes','textarea']],checks:['Image answers its intended visual purpose','Product details and brand references remain accurate','Every selected image slot is present at its own dimensions'],handoff:'Download the selected images as a set. Native Amazon text fields, interactive settings and publishing are separate.'};
   }
@@ -453,7 +505,7 @@ default:return frame(14,9,36,38)} }
   function assetValues(o,d={}){
     const v=o.staticValues||{},typed=String(d.brief||''),text=[typed,...(d.briefDocuments||[]).map(doc=>doc.text||'')].join('\n').replace(/(?:^|\n)\s*(?:exclusions?|avoid|do not include)\s*:[^\n]*/gi,'').replace(/\b(?:no|without)\s+(?:added\s+)?(?:prices?|offers?|promotions?|promotional(?:\s+copy)?|discounts?|qr(?:\s+codes?)?|contact(?:\s+details?)?)(?:\s+(?:or|and)\s+(?:prices?|offers?|discounts?))*\b/gi,'');
     const promotion=o.featureId===3||retailEntry(o)?.key==='price'||v.postType==='Offer'||v.screenType==='Offer'||(!/\b(?:no|without)\s+(?:price\s+or\s+)?(?:offers?|promotions?|discounts?)\b/i.test(typed)&&/\b(offer|discount|sale|promotion|promotional)\b|\d\s*%\s*off/i.test(text))||!!v.offer;
-    const qr=!/\b(?:no|without)\s+qr\b/i.test(typed)&&/\bqr(?:\s+code)?\b/i.test(text),contact=/\b(?:phone|telephone|contact details|contact information|address)\b/i.test(text);
+    const qr=!/\b(?:no|without)\s+qr\b/i.test(typed)&&/\bqr(?:\s+code)?\b/i.test(text),contact=/\b(?:phone\s*(?:number|no\.?)|telephone|mobile\s+number|call\s+us|helpline|toll[- ]free|customer\s+care\s+(?:number|no\.?|line)|contact\s+(?:details|information|number)|whatsapp\s+(?:us|number)|(?:store|shop|showroom|our|full|postal)\s+address|address\s*:)/i.test(text); // a phone *screen* is not a request for a phone number (8 Nov 2026)
     return {templateMode:'No template supplied',responsiveMode:'Current image only',specBasis:'Suggested preset',promotionMode:promotion?'Yes':'No',offerValidity:'Date range',contactMode:qr&&contact?'QR + contact':qr?'QR code':contact?'Contact details':'None',contactType:'Phone',...v};
   }
   function responsiveImage(o){return o?.featureId===7||emailImage(o);}
@@ -464,13 +516,15 @@ default:return frame(14,9,36,38)} }
     if(o.featureId===5){add(['pdpDestination','Where will this PDP set appear?','select',['Own website','Amazon','Other marketplace']]);if(v.pdpDestination==='Other marketplace')add(['marketplaceName','Which marketplace?']);add(['templateMode','Layout template / reference','select',['No template supplied','Attached reference','Template URL']]);if(v.templateMode==='Attached reference')add(['templateReferenceId','Choose an attached template','select',(d.references||[]).map(r=>r.id)]);if(v.templateMode==='Template URL')add(['templateUrl','Template / reference URL','url']);}
     if(responsiveImage(o)){add(['responsiveMode','Images to deliver','select',['Current image only','Desktop + mobile']]);if(v.responsiveMode==='Desktop + mobile')add(['mobileWidth','Mobile image width (px)','number'],['mobileHeight','Mobile image height (px)','number']);add(['specBasis','Dimensions are from','select',['Suggested preset','Supplied specification']]);if(v.specBasis==='Supplied specification')add(['specReference','Website / email template specification']);}
     if(o.featureId===11||e?.key==='screen'){add(['specBasis',e?.key==='screen'?'Canvas and player settings are from':'Print settings are from','select',['Suggested preset','Supplied specification']]);if(v.specBasis==='Supplied specification')add(['specReference',e?.key==='screen'?'Screen / player specification reference':'Printer specification / template reference']);}
-    add(['promotionMode','Does this include an offer or price promotion?','select',['No','Yes']]);
+    const aplus=aplusPage(o);
+    add(['promotionMode',aplus?'Does this include an offer or price? (Amazon may reject prices or offers in A+ content)':'Does this include an offer or price promotion?','select',['No','Yes']]);
     if(v.promotionMode==='Yes'){add(['offer','Exact offer / price wording','textarea'],['offerSku','Applicable SKU / variants'],['offerValidity','Offer validity','select',['Date range','Ongoing — no end date']],['offerStart','Offer starts','date'],['terms','Conditions and exclusions (write “None” if none)','textarea']);if(v.offerValidity!=='Ongoing — no end date')add(['offerEnd','Offer ends','date']);}
     else for(const key of ['offer','offerSku','offerValidity','offerStart','offerEnd','terms']){const i=fields.findIndex(f=>f[0]===key);if(i>=0)fields.splice(i,1);}
     if(v.promotionMode==='Yes'&&v.offerValidity==='Ongoing — no end date'){const i=fields.findIndex(f=>f[0]==='offerEnd');if(i>=0)fields.splice(i,1);}
-    add(['contactMode','Include QR / contact information?','select',['None','QR code','Contact details','QR + contact']]);
-    if(String(v.contactMode||'').includes('QR'))add(['qrDestination','Exact QR destination URL','url']);
-    if(['Contact details','QR + contact'].includes(v.contactMode)){add(['contactType','Contact information','select',['Phone','Address','Phone + address']]);if(String(v.contactType||'').includes('Phone'))add(['contactPhone','Exact phone number']);if(String(v.contactType||'').toLowerCase().includes('address'))add(['contactAddress','Exact address','textarea']);}
+    // Amazon A+ never carries QR codes, links or contact details (9 Nov 2026): do not ask.
+    if(!aplus)add(['contactMode','Include QR / contact information?','select',['None','QR code','Contact details','QR + contact']]);
+    if(!aplus&&String(v.contactMode||'').includes('QR'))add(['qrDestination','Exact QR destination URL','url']);
+    if(!aplus&&['Contact details','QR + contact'].includes(v.contactMode)){add(['contactType','Contact information','select',['Phone','Address','Phone + address']]);if(String(v.contactType||'').includes('Phone'))add(['contactPhone','Exact phone number']);if(String(v.contactType||'').toLowerCase().includes('address'))add(['contactAddress','Exact address','textarea']);}
     return {...base,fields};
   }
   function requiredAssetFields(o,d={}){
@@ -480,18 +534,25 @@ default:return frame(14,9,36,38)} }
     if(responsiveSlots(o).length)keys.push('mobileWidth','mobileHeight');
     if(v.specBasis==='Supplied specification')keys.push('specReference');
     if(v.promotionMode==='Yes'){keys.push('offer','offerSku','offerStart','terms');if(v.offerValidity!=='Ongoing — no end date')keys.push('offerEnd');}
-    if(String(v.contactMode||'').includes('QR'))keys.push('qrDestination');
-    if(['Contact details','QR + contact'].includes(v.contactMode)){if(String(v.contactType||'').includes('Phone'))keys.push('contactPhone');if(String(v.contactType||'').toLowerCase().includes('address'))keys.push('contactAddress');}
+    if(!aplusPage(o)&&String(v.contactMode||'').includes('QR'))keys.push('qrDestination');
+    if(!aplusPage(o)&&['Contact details','QR + contact'].includes(v.contactMode)){if(String(v.contactType||'').includes('Phone'))keys.push('contactPhone');if(String(v.contactType||'').toLowerCase().includes('address'))keys.push('contactAddress');}
     return [...new Set(keys)];
+  }
+  // The module list a marketer confirms before submit: each module, its exact sizes and the image count.
+  function aplusModuleRows(typeId){
+    const s=aplusSummary(typeId);if(!s)return [];
+    const size=i=>i.width+' × '+i.height+(i.device==='mobile'?' mobile':i.device==='desktop'?' desktop':'');
+    return [s.name+' · '+s.moduleCount+' modules · '+s.imageCount+' images in one job',...s.modules.map(m=>m.textOnly?m.name+' · text only (no image)':m.name+' · '+(m.units.length>1?m.units.length+' × ':'')+[...new Set(m.images.map(size))].join(' + ')+(m.units.length>1?' each':'')),'Also delivered: Amazon text fields (headline and body per module) and alt text (100 characters or fewer) for every image','Files: PNG, or JPEG when a PNG is over 2 MB',...s.later.map(x=>'Left out for now · '+x)];
   }
   function assetRequirementSummary(o,d={}){
     const v=assetValues(o,d),a=amazonImageTemplate(o),e=retailEntry(o),p=e?.printId&&retailPrintPresets.find(p=>p.id===v.printPreset),rows=[];
-    if(a){rows.push(...amazonImageSlots(a,v).map(([name,w,h])=>name+' · '+w+' × '+h+' px'));if(!amazonImageSlots(a,v).some(([n])=>/mobile/i.test(n)))rows.push('Shared image slots for desktop and mobile; this module has no separate mobile image upload.');}
+    if(a?.page)rows.push(...aplusModuleRows(a.page));
+    else if(a){rows.push(...amazonImageSlots(a,v).map(([name,w,h])=>name+' · '+w+' × '+h+' px'));if(!amazonImageSlots(a,v).some(([n])=>/mobile/i.test(n)))rows.push('Shared image slots for desktop and mobile; this module has no separate mobile image upload.');}
     if(responsiveImage(o)){rows.push(...(responsiveSlots(o).length?responsiveSlots(o).map(([name,w,h])=>name+' · '+(w&&h?w+' × '+h+' px':'size needed')):['1 image · '+o.width+' × '+o.height+' px']));}
     if(p)rows.push(p.pages+' flat faces / pages'+(p.print.fold!=='none'?' · '+p.print.fold+' fold; panels sit within these faces':''));
     if(p||e?.key==='screen'||responsiveImage(o))rows.push(v.specBasis==='Supplied specification'?'Supplied specification · '+(v.specReference||'add the specification reference'):'Suggested preset · editable assumptions, not supplier-approved specifications');
     if(o.featureId===5)rows.push('PDP destination · '+(v.pdpDestination||'Choose the destination'),v.templateMode==='No template supplied'?'No supplied template · strategy will propose the layout':'Template · '+(v.templateMode==='Attached reference'?(d.references||[]).find(r=>r.id===v.templateReferenceId)?.name||'Choose an attached reference':v.templateUrl||'Add the template URL'));
-    if(String(v.contactMode||'').includes('QR'))rows.push('QR destination is captured here. The final QR must be generated and scan-tested before delivery.');
+    if(!a?.page&&String(v.contactMode||'').includes('QR'))rows.push('QR destination is captured here. The final QR must be generated and scan-tested before delivery.');
     return rows;
   }
 
@@ -757,7 +818,7 @@ default:return frame(14,9,36,38)} }
   function fieldProvenance(d,key){const a=d.briefAutofill||{};if(key==='message'&&!a.owned?.message&&!a.manual?.message){const parts=['get','to','by'].map(p=>'message:'+p),records=parts.map(p=>a.owned?.[p]).filter(Boolean);if(parts.some(p=>a.manual?.[p]))return {label:'Your choice',kind:'manual'};if(records.length){const sources=new Set(records.map(r=>r.source||'brief'));return {label:sources.has('mixed')||(sources.has('document')&&sources.has('brief'))?'From brief & document':sources.size===1&&sources.has('document')?'From document':sources.size===1&&sources.has('selection')?'From your choices':'From your brief',kind:'brief'};}}if(a.owned?.[key]?.source==='selection')return {label:'From your choices',kind:'brief'};if(a.manual?.[key])return {label:'Your choice',kind:'manual'};if(a.owned?.[key]?.source==='mixed')return {label:'From brief & document',kind:'brief'};if(a.owned?.[key]||(key.startsWith('out:')&&key.endsWith(':language')&&a.owned?.language&&autofillValue(d,key)===d.language))return {label:(a.owned?.[key]?.source||(key.startsWith('out:')&&key.endsWith(':language')?a.owned?.language?.source:undefined))==='document'?'From document':'From your brief',kind:'brief'};const part=key.split(':'),imported=a.owned?.outputs?.value?.find(o=>o.id===part[1]),explicitKey=part[0]==='static'?'static:'+part[2]:part[2];if(imported?.intakeExplicitFields?.includes(explicitKey)&&JSON.stringify(autofillValue(d,key))===JSON.stringify(part[0]==='static'?imported.staticValues?.[part[2]]:imported[part[2]]))return {label:a.owned.outputs.source==='document'?'From document':'From your brief',kind:'brief'};if(d.intakeSuggestions?.[key]!==undefined&&JSON.stringify(d.intakeSuggestions[key])===JSON.stringify(autofillValue(d,key)))return {label:'Suggested',kind:'suggested'};if(['productId','variant','selectedRtbs'].includes(key)&&d.productId)return {label:'From library',kind:'library'};const bits=key.split(':');if(bits[0]==='static'&&['specBasis','responsiveMode','promotionMode','contactMode','templateMode','contactType','offerValidity'].includes(bits[2])){const o=d.outputs?.find(o=>o.id===bits[1]);if(o&&!o.staticValues?.[bits[2]]){const value=assetValues(o,d)[bits[2]],inferred=['promotionMode','contactMode'].includes(bits[2])&&value!=='No'&&value!=='None';const pattern=bits[2]==='promotionMode'?/\b(offer|discount|sale|promotion|promotional)\b|\d\s*%\s*off/i:/\b(qr|phone|address|contact)\b/i,typed=inferred&&pattern.test(d.brief||''),document=inferred&&!typed&&(d.briefDocuments||[]).some(doc=>pattern.test(doc.text||''));return {label:typed?'From your brief':document?'From document':'Default',kind:typed||document?'brief':'default'};}}const v=autofillValue(d,key);return v!=null&&v!==''?{label:'Default',kind:'default'}:{label:'Not specified',kind:'missing'};}
   function intakeContext(d,product){
     const selected=selectedProductRtbs(d,product);
-    return [['Imported brief documents (source material; typed brief and manual choices take priority)',(d.briefDocuments||[]).filter(x=>x.text).map(x=>x.name+' ['+x.status+']').join('; ')],['Wording on images',d.wordingMode==='none'?'No added wording. Preserve genuine product markings; do not create overlay text.':d.wordingMode==='supplied'?'Use only the supplied wording below, retaining all qualifiers.':d.wordingMode==='write'?'Develop wording during strategy and copy stages from the confirmed requirements.':'Follow the brief and selected format. Strategy and copy decide whether wording is needed; do not add text to an image-only format.'],['Supplied literal wording',d.wordingMode==='supplied'?d.suppliedWording:''],['Mandatory information',d.mandatoryInfo],['Occasion',d.occasion],['Exclusions',d.exclusions],['Funnel stage',d.funnelStage],['Customer age',d.customerAge],['Markets',d.markets],['Themes',(d.themes||[]).join(', ')],['Tonality',(d.tonalities||[]).join(', ')],['Background / customer insight',d.backgroundBrief],['Additional requirements',d.additionalDetails],['Selected saved product facts',selected.join('; ')],['User-supplied reasons to believe (retain qualifiers)',d.rtbs]].filter(([,v])=>typeof v==='string'&&v.trim()).map(([k,v])=>k+': '+v).join('\n');
+    return [['Imported brief documents (source material; typed brief and manual choices take priority)',(d.briefDocuments||[]).filter(x=>x.text).map(x=>x.name+' ['+x.status+']').join('; ')],['Message type',messageTypes.includes(d.messageType)?d.messageType:''],['Wording on images',d.wordingMode==='none'?'No added wording. Preserve genuine product markings; do not create overlay text.':d.wordingMode==='supplied'?'Use only the supplied wording below, retaining all qualifiers.':d.wordingMode==='write'?'Develop wording during strategy and copy stages from the confirmed requirements.':'Follow the brief and selected format. Strategy and copy decide whether wording is needed; do not add text to an image-only format.'],['Supplied literal wording',d.wordingMode==='supplied'?d.suppliedWording:''],['Mandatory information',d.mandatoryInfo],['Occasion',d.occasion],['Exclusions',d.exclusions],['Funnel stage',d.funnelStage],['Customer age',d.customerAge],['Markets',d.markets],['Themes',(d.themes||[]).join(', ')],['Tonality',(d.tonalities||[]).join(', ')],['Background / customer insight',d.backgroundBrief],['Additional requirements',d.additionalDetails],['Selected saved product facts',selected.join('; ')],['User-supplied reasons to believe (retain qualifiers)',d.rtbs]].filter(([,v])=>typeof v==='string'&&v.trim()).map(([k,v])=>k+': '+v).join('\n');
   }
   function intakeProgress(d,context={}){
     const errors=validateBrief({...d,name:d.name||'New project'},{...context,purpose:'review'}),checks=[['brief',!!d.brief?.trim()],['outputs',!!d.outputs?.length&&!errors.outputs],['creativeCount',!errors.creativeCount]];
@@ -780,7 +841,8 @@ default:return frame(14,9,36,38)} }
     if(d.intakeVersion>=2&&d.focus==='product'&&context.purpose!=='preview'&&!selectedProductRtbs(d,products.find(p=>p.id===d.productId)).length&&!rtbItems(d.rtbs).length)errors.selectedRtbs='Select at least one feature or add a reason to believe for this product.';
     if(d.intakeVersion>=2&&context.purpose!=='preview'&&!['Awareness','Consideration','Purchase','Engagement','Education'].includes(d.objective))errors.objective='Choose an objective for this brief.';
     if(d.funnelStage&&!['TOFU','MOFU','BOFU'].includes(d.funnelStage))errors.funnelStage='Choose a supported funnel stage.';
-    if(![1,2].includes(creativeCount(d)))errors.creativeCount="Choose one or two alternative sets. Each contains all requested designs.";
+    if(d.messageType!=null&&!messageTypes.includes(d.messageType))errors.messageType='Choose a supported message type.';
+    if(![1,2].includes(creativeCount(d)))errors.creativeCount="Choose one or two design options. Each contains all requested designs.";
     if(d.intakeVersion>=1&&context.purpose!=='preview')for(const o of d.outputs||[])for(const k of requiredAssetFields(o,d))if(!String(assetValues(o,d)[k]||'').trim())errors['static-'+o.id+'-'+k]='Complete '+(staticRecipeForOutput(o,d)?.fields.find(f=>f[0]===k)?.[1]||k)+' for '+(o.name||features.find(f=>f.id===o.featureId)?.name||'this asset')+'.';
     if(d.intakeVersion>=2){if(d.wordingMode==='supplied'&&!d.suppliedWording?.trim())errors.suppliedWording='Add the exact wording you want to use.';if(!['preview','review'].includes(context.purpose)&&!confirmationCurrent(d))errors.confirmedBrief='Review and confirm the latest brief before continuing.';}
     if(d.focus==='product'&&d.productId){const p=products.find(p=>p.id===d.productId);if(!p)errors.productId='This saved product is unavailable. Choose a current product or add its name.';else if(p.variants?.length&&(!d.variant||!p.variants.some(v=>String(v.id)===String(d.variant))))errors.variant='Choose an exact product variant.';}
@@ -836,6 +898,15 @@ default:return frame(14,9,36,38)} }
     const slots=(project.placements||[]).filter(s=>s.id),routes=project.intake?.conceptRoutes||[...new Set(project.results.map(r=>r.route))];
     if(slots.some(s=>routes.some(route=>!project.results.some(r=>r.route===route&&r.placementId===s.id&&safeAsset(r.imageUrl)))))return attention('Some requested images are missing. Open the saved work and review recovery options.','View saved images');
     return {key:'ready',label:'Ready',tone:'green',action:'Open images',detail:'Images are available to inspect, edit and download. Review findings stay beside each image.'};
+  }
+  // One design's badge (review page). The project stage "Ready" above only means images are
+  // available. A design is "Ready" only when its saved checks passed (ready===true, which for
+  // lean conformance v1 means no remaining concrete mismatch) and it has not been edited since.
+  // A clear mismatch or an unverified blocking item shows "Check before using". Display only.
+  function designCheck(r){
+    if(!r||!safeAsset(r.imageUrl))return null;
+    if(r.ready===true&&!r.latestEdit)return {key:'ready',label:'Ready',tone:'green',detail:r.qualityVerified===false?'No blocking issue found. Items that could not be confirmed from the image stay listed with its review.':'Saved checks passed for this design.'};
+    return {key:'check',label:'Check before using',tone:'amber',detail:r.latestEdit?'This design was edited after its saved check. Check it before using it.':r.visualReview?.conclusion==='clear_mismatch'?'The saved check found a clear mismatch in this design. Check it before using it.':'Saved checks did not confirm every required item. Check this design before using it.'};
   }
   function safeAsset(url) {return typeof url==='string'&&(/^\/creative-ai\/api\/(jobs|brands)\/[a-zA-Z0-9_./%|-]+$/.test(url)||/^\/creative-ai\/api\/jobs\/[a-zA-Z0-9_-]+\/editable\/(continuity|exploration)\/[a-zA-Z0-9_-]+\/preview\?revision=\d+$/.test(url))&&!url.includes('..')?url:'';}
   // Collections are a presentation of the saved placement contract. Never infer a
@@ -1074,7 +1145,9 @@ default:return frame(14,9,36,38)} }
   function generationProfile(d){
     if(d?.outputs?.length!==1)return null;
     const o=d.outputs[0];
-    if(d.focus!=='product'&&!(d.focus==='brand'&&(amazonImageTemplate(o)?.id==='brand-story'||emailImage(o)||rcsImage(o)||pushImage(o)||retailEntry(o))))return null;
+    // Planning briefs (asset picker 'soon'/'plan' cards) are never routed to generation.
+    if(o?.planningOnly===true)return null;
+    if(d.focus!=='product'&&!(d.focus==='brand'&&(amazonImageTemplate(o)?.id==='brand-story'||amazonImageTemplate(o)?.page==='brand-story'||emailImage(o)||rcsImage(o)||pushImage(o)||retailEntry(o))))return null;
     if(responsiveSlots(o).length){
       const slots=responsiveSlots(o);if(o.slides!==1||slots.some(([,w,h])=>![w,h].every(n=>Number.isInteger(n)&&n>=64&&n<=8192)||w*h>40000000||Math.max(w/h,h/w)>20))return null;
       const platform=emailImage(o)?'Email':'Website',customProfiles=slots.map(([name,w,h],i)=>({id:'custom:client-'+platform.toLowerCase()+'-'+(i?'mobile':'desktop')+'-'+w+'x'+h,name:platform+' '+name,platform,publisher:'client',placement:i?'mobile-image':'desktop-image',assetType:'static',canvas:{width:w,height:h,unit:'px'},exportContract:{formats:['png']},displayContext:'Separately compose '+name+' for the same assignment. Preserve exact product identity and a coherent visual system; do not stretch or blindly crop the other variant. '+(emailImage(o)?'Native email headings, body, links and buttons remain outside the image. ':'')+assetRequirementSummary(o,d).join('; ')}));
@@ -1118,6 +1191,15 @@ default:return frame(14,9,36,38)} }
     }
     if([5,6].includes(o.featureId)){
       const parts=staticParts(o),amazon=o.featureId===6&&amazonTemplates[o.staticValues?.amazonPreset];
+      if(amazon?.page){
+        // One A+ page = one coordinated set: a shared familyId gives ONE plan for every module and size.
+        const slots=aplusSlots(amazon.page),type=aplusPageTypes[amazon.page];if(parts.length!==slots.length||parts.some((p,i)=>p.width!==slots[i].width||p.height!==slots[i].height))return null;
+        const ids=slots.map((s,i)=>'custom:recipe-marketplace-module-amazon-'+amazon.id+'-'+String(i+1).padStart(2,'0'));
+        const rule={panel:'Wide panel: short, large on-image text (product name, a short headline, up to three feature chips) readable on a phone.',mobile:'Mobile version of the same module: re-lay out the same words with larger type; never a squashed desktop panel.',label:'Small image: no text, or a label of one to three words.',none:'No on-image words: Amazon places its own logo, headline and cards here.'};
+        const customProfiles=slots.map((s,i)=>({id:ids[i],name:type.name+' · '+s.name,platform:'Amazon A+',publisher:'studio',placement:'image-module',assetType:'static',canvas:{width:s.width,height:s.height,unit:'px'},exportContract:{formats:['png','jpeg']},displayContext:type.name+' · '+s.moduleName+' ('+s.name+', image '+(i+1)+' of '+slots.length+'). '+type.modules.find(m=>m.id===s.module).job+' '+rule[s.textRule]+(s.logo?' The brand logo appears once on the hero.':' No brand logo.')+' Visual direction (not literal artwork wording): '+(parts[i].visualIntent||o.staticValues?.storyFocus||'Use the shared page story')+'. No CTA button, link, QR code or contact details. Reference: '+type.source+' Image-slot preset, not publisher acceptance.'}));
+        const jobInputs=Object.fromEntries(slots.map((s,i)=>[ids[i],{formatIntent:{familyId:'amazon-'+amazon.id,relationship:'coordinated-set',page:i+1,pages:slots.length,textPolicy:s.textRule==='none'?'none':'aplus-'+s.textRule,...(parts[i].visualIntent?{direction:parts[i].visualIntent}:{})},aplus:{version:1,type:type.id,module:s.module,moduleName:s.moduleName,role:s.role,moduleType:s.moduleType,unit:s.unit,device:s.device,textRule:s.textRule,logo:s.logo,slotName:s.name,pairPage:s.pairIndex}}]));
+        return {placementId:ids[0],placementIds:ids,customProfiles,jobInputs,logoTreatment:Object.fromEntries(slots.map((s,i)=>[ids[i],s.logo?'include':'omit'])),aplus:aplusSummary(type.id),label:type.name,width:o.width,height:o.height,unitCount:slots.length};
+      }
       if(amazon){const slots=amazonImageSlots(amazon,o.staticValues);if(!slots.length||parts.length!==slots.length||parts.some((p,i)=>p.width!==slots[i][1]||p.height!==slots[i][2]))return null;const customProfiles=parts.map((p,i)=>({id:'custom:recipe-marketplace-module-amazon-'+amazon.id+'-'+String(i+1).padStart(2,'0'),name:slots[i][0],platform:'Amazon A+',publisher:'studio',placement:'image-module',assetType:'static',canvas:{width:p.width,height:p.height,unit:'px'},exportContract:{formats:['png']},displayContext:amazon.instruction+' Slot: '+slots[i][0]+'. Visual direction (not literal artwork wording): '+(p.visualIntent||'Use the shared image brief')+'. No added CTA or promotional copy is required. Reference: '+amazon.source+' Image-slot preset, not publisher acceptance.'}));return {placementId:customProfiles[0].id,placementIds:customProfiles.map(p=>p.id),customProfiles,label:o.staticValues.amazonPreset,width:o.width,height:o.height,unitCount:parts.length,omitLogo:true};}
       if(o.featureId===5&&o.pdpPack===true){if(parts.length!==12||o.width!==1600||o.height!==1600||parts.some((p,i)=>p.name!==pdpSlots[i]))return null;return profile('pdp-pack','full PDP pack',{unitCount:12,omitLogo:true});}if(!parts.length||parts.some(p=>!Number.isInteger(p.width)||!Number.isInteger(p.height)||p.width<64||p.height<64||p.width>8192||p.height>8192))return null;
       if(o.featureId===5&&parts.length===1&&o.width===1600&&o.height===1600&&o.formatId==='custom')return profile('commerce-gallery','product-page image');
@@ -1157,6 +1239,239 @@ default:return frame(14,9,36,38)} }
     if(o.featureId===8&&o.height===1920&&o.formatId==='story')return {placementId:'custom:studio-social-story',label:'Instagram Story',width:1080,height:1920};
     return null;
   }
+  // Asset picker catalogue (docs/asset-picker-spec-20261108.json, approved 8 Nov 2026).
+  // Names, divisions, size labels and order follow the spec exactly. Presets only start
+  // drafts through existing recipes: a card is 'ready' solely when its preset reaches an
+  // existing generation profile. 'soon' and 'plan' cards save planning briefs and their
+  // outputs carry planningOnly, which generationProfile never routes to generation.
+  const messageTypes=['Benefit','Product launch','Offer / price / EMI','Proof / claim','Technology','Comparison','Store news'];
+  const assetDivisions=[['social','Social'],['ads','Ads'],['website','Website'],['marketplace','Marketplace'],['messaging','Messaging'],['retail','Retail & print'],['corporate','Corporate & employee'],['partners','Partners & PR'],['sales','Sales & training']].map(([id,name])=>({id,name}));
+  const assetCatalogue=(function(){
+    const fmt=(featureId,formatId,width,height,staticValues,extra={})=>({featureId,formatId,width,height,...(staticValues?{staticValues}:{}),...extra});
+    const social=(platform,publishing)=>({...(platform?{platform}:{}),publishing});
+    // Planning-only starting canvas. formatId 'custom' keeps even older engines from matching a profile.
+    const plan=(featureId,width,height,extra={})=>({featureId,formatId:'custom',width,height,planningOnly:true,...extra});
+    const A4=[1240,1754];
+    const rows={
+      social:[
+        ['instagram-post','Instagram Post','1080 × 1080','Instagram','Organic','ready','instagram',fmt(1,'square',1080,1080,social('Instagram','Organic'))],
+        ['instagram-portrait-post','Instagram Portrait Post','1080 × 1350','Instagram','Organic','ready','instagram',fmt(1,'portrait',1080,1350,social('Instagram','Organic'))],
+        ['instagram-story','Instagram Story','1080 × 1920','Instagram','Organic','ready','instagram',fmt(8,'story',1080,1920,social('Instagram','Organic'))],
+        ['instagram-carousel','Instagram Carousel','Slides · 1080 × 1350','Instagram','Organic','ready','instagram',fmt(9,'portrait',1080,1350,social('Instagram','Organic'),{slides:5})],
+        ['facebook-post','Facebook Post','1080 × 1080','Facebook','Organic','ready','facebook',fmt(1,'square',1080,1080,social('Facebook','Organic'))],
+        ['facebook-story','Facebook Story','1080 × 1920','Facebook','Organic','ready','facebook',fmt(8,'story',1080,1920,social('Facebook','Organic'))],
+        ['facebook-carousel','Facebook Carousel','Slides · 1080 × 1080','Facebook','Organic','ready','facebook',fmt(9,'square',1080,1080,social('Facebook','Organic'),{slides:5})],
+        ['landscape-post','Landscape Post','1200 × 628','Facebook / LinkedIn','Organic','ready','landscape',fmt(1,'feed-landscape',1200,628,social('','Organic'))],
+        ['linkedin-post','LinkedIn Post','1200 × 627','LinkedIn','Organic','ready','linkedin',fmt(13,'linkedin',1200,627,social('','Organic'))],
+        ['linkedin-carousel','LinkedIn Carousel','PDF slides','LinkedIn','Organic','ready','linkedin',fmt(9,'square',1080,1080,{platform:'LinkedIn',narrativeType:'Feature',publishing:'Organic'},{slides:5})],
+        ['youtube-community-post','YouTube Community Post','Square or portrait','YouTube Community','','soon','youtube',plan(1,1080,1080)],
+        ['meme-trend-post','Meme / Trend Post','1080 × 1350','Instagram / Facebook','','soon','spark',plan(1,1080,1350)],
+        ['creator-ugc-post','Creator / UGC Post','1080 × 1350','Instagram / Facebook','','soon','camera',plan(1,1080,1350)]
+      ],
+      ads:[
+        ['instagram-feed-ad','Instagram Feed Ad','1080 × 1350','Instagram','Paid','ready','instagram',fmt(1,'portrait',1080,1350,social('Instagram','Paid'))],
+        ['instagram-story-ad','Instagram Story Ad','1080 × 1920','Instagram','Paid','ready','instagram',fmt(8,'story',1080,1920,social('Instagram','Paid'))],
+        ['facebook-feed-ad','Facebook Feed Ad','1080 × 1080','Facebook','Paid','ready','facebook',fmt(1,'square',1080,1080,social('Facebook','Paid'))],
+        ['facebook-story-ad','Facebook Story Ad','1080 × 1920','Facebook','Paid','ready','facebook',fmt(8,'story',1080,1920,social('Facebook','Paid'))],
+        ['google-pmax-set','Google PMax Set','Landscape, square, portrait','Google Performance Max','Paid','ready','google',fmt(1,'square',1080,1080,{platform:'PMax',imageRatios:'Landscape + square + portrait',publishing:'Paid'})],
+        ['google-display-banners','Google Display Banners','Standard sizes','Google Display','Paid','soon','google',plan(1,1200,628,{staticValues:{publishing:'Paid'}})]
+      ],
+      website:[
+        ['website-banner','Website Banner','1920 × 640','Own website','','ready','web',fmt(7,'banner',1920,640,{websiteType:'Banner',brandedHost:'Yes'})],
+        ['homepage-hero','Homepage Hero','≈ 1920 × 700','Own website','','ready','web',fmt(7,'custom',1920,700,{websiteType:'Banner'})],
+        ['mobile-banner','Mobile Banner','1080 × 1350','Own website (mobile)','','ready','mobile',fmt(7,'portrait',1080,1350,{websiteType:'Banner',brandedHost:'Yes'})],
+        ['category-tile','Category Tile','Choose size','Own website','','ready','tile',fmt(7,'custom',1080,1080,{websiteType:'Category tile'})],
+        ['collection-card','Collection Card','Choose size','Own website','','soon','tile',plan(7,1080,1080)],
+        ['multi-category-module','Multi-category Module','Homepage module','Own website','','soon','grid',plan(7,1920,1080)],
+        ['landing-page-hero','Landing Page Hero','Desktop + mobile','Own website','','ready','web',fmt(7,'banner',1920,640,{websiteType:'Banner',responsiveMode:'Desktop + mobile',mobileWidth:'1080',mobileHeight:'1350'})],
+        ['landing-page-modules','Landing Page Modules','Benefit · feature · CTA','Own website','','soon','grid',plan(7,1440,900)]
+      ],
+      marketplace:[
+        ['product-page-images','Product Page Images','12-image PDP pack','Own website / marketplace','','ready','bag',fmt(5,'custom',1600,1600,null,{pdpPack:true})],
+        ['marketplace-product-images','Marketplace Product Images','White background + gallery','Marketplace','','soon','bag',plan(1,1600,1600)],
+        ['listing-feature-cards','Listing Feature Cards','Benefit & feature cards','Own website / marketplace','','soon','cards',plan(1,1080,1080)],
+        ['amazon-aplus','Amazon A+ Content','Premium page (recommended) · Basic · Brand Story','Amazon','','ready','amazon',{featureId:6,aplusPage:'premium'}]
+      ],
+      messaging:[
+        ['whatsapp-image','WhatsApp Image','1080 × 1080','WhatsApp','','ready','whatsapp',fmt(14,'square',1080,1080,{channel:'WhatsApp'})],
+        ['whatsapp-status','WhatsApp Status','1080 × 1920','WhatsApp','','ready','whatsapp',fmt(14,'story',1080,1920,{channel:'WhatsApp'})],
+        ['email-banner','Email Banner','Header / hero','Email','','ready','email',{featureId:14,emailPreset:'Email hero'}],
+        ['email-product-block','Email Product Block','Product module image','Email','','soon','email',plan(14,600,400)],
+        ['rcs-card','RCS Card','Rich card image','RCS','','ready','rcs',{featureId:14,rcsPreset:'Single card · medium image'}],
+        ['rcs-carousel','RCS Carousel','Card set','RCS','','ready','rcs',{featureId:14,rcsPreset:'Carousel medium · medium image'}],
+        ['web-push','Web Push','Push image','Web push','','ready','bell',{featureId:14,push:['Web','Landscape image · 2:1']}],
+        ['web-push-icon','Web Push Icon','Icon from brand artwork','Web push','','soon','bell',plan(14,512,512,{tool:'push-icons'})]
+      ],
+      retail:[
+        ['google-business-post','Google Business Post','Update · offer · event','Google Business Profile','','ready','pin',{featureId:10,retailPreset:'store'}],
+        ['in-store-screen','In-store Screen','Product · offer · campaign slide','Retail screen','','ready','screen',{featureId:10,retailPreset:'screen'}],
+        ['store-banner','Store Banner','Choose size','Store','','ready','store',{featureId:10,retailPreset:'store-banner'}],
+        ['window-artwork','Window Artwork','Glass panels','Store','','ready','window',{featureId:11,retailPreset:'window'}],
+        ['standee','Standee','Roll-up','Store','','ready','standee',{featureId:11,retailPreset:'standee'}],
+        ['shelf-wobbler','Shelf Wobbler','Shelf · dangler','Store','','ready','tag',{featureId:11,retailPreset:'wobbler'}],
+        ['counter-product-card','Counter / Product Card','Physical size','Store','','ready','cards',{featureId:11,retailPreset:'product-card'}],
+        ['wall-graphic','Wall Graphic','Seams & obstructions','Store','','ready','wall',{featureId:11,retailPreset:'wall'}],
+        ['price-offer-board','Price / Offer Board','Prices, terms, expiry','Store','','ready','price',{featureId:11,retailPreset:'price'}],
+        ['poster-flyer','Poster / Flyer','A4 · A3','Store','','ready','print',{featureId:11,retailPreset:'poster'}],
+        ['brochure','Brochure','Panels & folds','Store','','ready','book',{featureId:11,retailPreset:'brochure'}]
+      ],
+      corporate:[
+        ['linkedin-square-post','LinkedIn Square Post','1080 × 1080','LinkedIn','','ready','linkedin',fmt(13,'square',1080,1080)],
+        ['linkedin-portrait-post','LinkedIn Portrait Post','1080 × 1350','LinkedIn','','ready','linkedin',fmt(13,'portrait',1080,1350)],
+        ['product-announcement','Product Announcement','LinkedIn / social','LinkedIn','','ready','megaphone',fmt(13,'linkedin',1200,627,{occasion:'Product announcement'})],
+        ['leadership-post','Leadership Post','Portrait, name & title','LinkedIn','','soon','person',plan(13,1080,1350)],
+        ['hiring-post','Hiring Post','Role announcement','LinkedIn','','soon','briefcase',plan(13,1200,627)],
+        ['employer-branding-post','Employer Branding Post','People & culture','LinkedIn','','soon','people',plan(13,1080,1080)],
+        ['award-milestone-post','Award / Milestone Post','Recognition','LinkedIn','','soon','award',plan(13,1080,1080)],
+        ['packaging-still','Packaging Still','Packaging details','LinkedIn / social','','soon','box',plan(13,1080,1080)],
+        ['employee-share-card','Employee Share Card','For sharing','WhatsApp / LinkedIn','','soon','share',plan(14,1080,1080)],
+        ['employee-status','Employee Status','Vertical','WhatsApp Status','','soon','mobile',plan(14,1080,1920)],
+        ['internal-portal-banner','Internal Portal Banner','Employee news','Internal portal','','soon','web',plan(7,1600,400)]
+      ],
+      partners:[
+        ['co-branded-post','Co-branded Post','Two brands','Social','','soon','handshake',plan(12,1080,1080)],
+        ['partner-announcement','Partner Announcement','Alliance launch','Social','','soon','handshake',plan(12,1080,1080)],
+        ['partner-social-set','Partner Social Set','Coordinated series','Social','','soon','cards',plan(12,1080,1350)],
+        ['product-press-image','Product Press Image','High resolution','Media','','soon','camera',plan(1,2400,1600)],
+        ['leadership-press-image','Leadership Press Image','High resolution','Media','','soon','person',plan(13,1600,2000)],
+        ['product-seeding-pack','Product Seeding Pack','Ordered image set','Media','','soon','box',plan(1,1080,1350)],
+        ['blog-hero','Blog Hero','Lead image','Blog','','ready','news',fmt(15,'custom',1200,628)],
+        ['article-illustration','Article Illustration','Visual story','Blog','','soon','news',plan(15,1600,900)],
+        ['infographic','Infographic','Facts or steps','Blog / social','','soon','chart',plan(15,1080,1350)],
+        ['blog-link-preview','Blog / Link Preview','1200 × 630','Website / blog','','soon','link',plan(15,1200,630)]
+      ],
+      sales:[
+        ['sales-one-pager','Sales One-pager','A4','Internal / dealer','','soon','file',plan(11,...A4)],
+        ['product-cheat-sheet','Product Cheat Sheet','A4','Internal / dealer','','soon','checklist',plan(11,...A4)],
+        ['mobile-reference-card','Mobile Reference Card','Phone screen','Internal / dealer','','soon','mobile',plan(1,1080,1920)],
+        ['battlecard','Battlecard','Comparison facts','Internal / dealer','','soon','compare',plan(11,1754,1240)],
+        ['training-deck','Training Deck','16 : 9 slides','Internal / dealer','','soon','slides',plan(1,1920,1080)],
+        ['catalogue','Catalogue','GT / COCO · planning','Internal / dealer','','plan','book',{featureId:11,retailPreset:'catalogue',planningOnly:true}]
+      ]
+    };
+    // Search-only synonyms; names and labels stay exactly as approved.
+    const keywords=(sizeLabel,publishing,status,preset)=>[/1080 × 1920|Vertical|Phone screen/.test(sizeLabel)?'story vertical status':'',/Slides|slides|Card set/.test(sizeLabel)||preset.slides?'carousel slides':'',publishing==='Paid'?'ad advert paid':'',status==='soon'?'coming soon':status==='plan'?'plan planning':'',preset.retailPreset&&preset.featureId===11?'print':''].filter(Boolean).join(' ');
+    return assetDivisions.flatMap(division=>rows[division.id].map(([id,name,sizeLabel,channel,publishing,status,glyph,preset])=>Object.freeze({id,name,division:division.name,divisionId:division.id,sizeLabel,channel,...(publishing?{publishing}:{}),status,glyph,keywords:keywords(sizeLabel,publishing,status,preset),preset:Object.freeze(preset)})));
+  })();
+  function assetCard(id){return assetCatalogue.find(c=>c.id===id)||null;}
+  // Builds one draft output through the existing preset helpers; never a new profile.
+  function assetCardOutput(cardOrId,language='English'){
+    const card=typeof cardOrId==='string'?assetCard(cardOrId):cardOrId;if(!card)throw Error('Choose an available asset.');
+    const p=card.preset,o=output(p.featureId);
+    if(p.retailPreset)applyRetailPreset(o,p.retailPreset);
+    else if(p.emailPreset)applyEmailPreset(o,p.emailPreset);
+    else if(p.rcsPreset)applyRcsPreset(o,p.rcsPreset);
+    else if(p.push)applyPushPreset(o,p.push[0],p.push[1]);
+    // A+ card (9 Nov 2026): the whole Premium page by default; Basic and Brand Story stay one select away.
+    else if(p.aplusPage)applyAmazonPreset(o,aplusPresetName(p.aplusPage));
+    else{
+      Object.assign(o,{formatId:p.formatId,width:p.width,height:p.height});if(p.slides)o.slides=p.slides;
+      if(p.staticValues)o.staticValues=clone(p.staticValues);
+      if(p.pdpPack){o.pdpPack=true;o.staticParts=pdpSlots.map(name=>({id:uid(),name,copy:'',alt:'',width:1600,height:1600}));}
+    }
+    o.name=card.name;o.assetCardId=card.id;o.assetChannel=card.channel;o.language=language||'English';
+    if(card.status!=='ready'||p.planningOnly)o.planningOnly=true;
+    return o;
+  }
+  // One card starts a quick design; several start one campaign with one output per card.
+  function startAssetDraft(brandId,ids){
+    const cards=[...new Set(ids||[])].map(assetCard);if(!cards.length||cards.some(c=>!c))throw Error('Choose at least one available asset.');
+    const d=startDraft(brandId,cards.length>1?'campaign':'quick',cards[0].preset.featureId);
+    d.outputs=cards.map(c=>assetCardOutput(c,d.language));if(cards.length===1)d.name=cards[0].name;
+    return d;
+  }
+  // Fallbacks (8 Nov 2026): when a slow main model was replaced by the job's pinned backup model,
+  // say so plainly on the project. A direct re-send to the same model is not worth a label.
+  function backupModelNote(job){
+    const used=(job?.budget?.receipts||[]).filter(r=>r?.fallback&&r.fallback.model&&r.fallback.model!==r.fallback.primaryModel);
+    if(!used.length)return '';
+    const models=[...new Set(used.map(r=>r.fallback.model))].join(', ');
+    return 'Backup model used: part of this project was planned with '+models+' because the main AI model was slow. The same brand and product checks were applied.';
+  }
+  // User decision, 8 Nov 2026: a product with one variant uses it; a mattress (website category
+  // Mattress/Mattresses) defaults to the standard Queen 72 x 60, else its first Queen size. The
+  // default is shown as a suggestion and stays changeable. Anything else still asks.
+  function defaultVariant(p){
+    const v=p?.variants||[];if(v.length===1)return String(v[0].id);
+    if(!/mattress/i.test(String(p?.category||'')+' '+JSON.stringify(p?.taxonomy||'')))return '';
+    const queen=v.filter(x=>/^\s*queen\b/i.test(x.name||''));
+    const pick=queen.find(x=>/\b72\s*x\s*60\b/i.test(x.name||''))||queen[0];
+    return pick?String(pick.id):'';
+  }
+  // The artwork uses the official product name (the planner's citation check enforces it).
+  // Compare the words the brief used for the product with the official name, variants, SKU and
+  // brand name, so the appreciation page can flag e.g. "Arctic Ice Pro" before anything is paid for.
+  function productNameCheck(product,evidence,brandName=''){
+    const shortName=String(product?.name||'').split('|')[0].trim(),words=x=>String(x||'').normalize('NFKC').toLowerCase().match(/[\p{L}\p{N}][\p{L}\p{N}.+-]*/gu)||[];
+    const known=new Set([product?.name,product?.sku,brandName,...(product?.variants||[]).flatMap(v=>[v.name,v.sku]),...(product?.variants||[]).flatMap(v=>v.options||[])].flatMap(words));
+    const ignore=new Set(['the','a','an','and','or','for','of','in','on','with','our','new','sofa','mattress','bed','pillow','seater','size','sizes']);
+    const extra=[...new Set(words(evidence).filter(w=>!known.has(w)&&!ignore.has(w)&&!/^\d+([.,]\d+)?$/.test(w)))];
+    // Show the brief's own spelling ("Pro", not "pro") for display.
+    const original=String(evidence||'').normalize('NFKC').match(/[\p{L}\p{N}][\p{L}\p{N}.+-]*/gu)||[],shown=extra.map(w=>original.find(o=>o.toLowerCase()===w)||w);
+    return {shortName,extra,shown};
+  }
+  // The product name exactly as the brief wrote it. Older readings only had a free-text
+  // evidence note: use a quoted part of it, and only when the brief contains it word for word.
+  function readingBriefName(result,brief=''){
+    const p=result?.product||{},text=String(brief||'');if(typeof p.briefName==='string')return text.includes(p.briefName)?p.briefName:'';
+    for(const m of String(p.evidence||'').matchAll(/[“"']([^”"']{3,160})[”"']/g))if(text.includes(m[1]))return m[1];
+    return '';
+  }
+  // Home-page brief box (8 Nov 2026): turn the server's brief reading into an ordinary
+  // draft. Every value stays editable on the appreciation page and is confirmed there;
+  // nothing here is generation authority. Unclear product/variant and offer gaps stay
+  // empty so validation keeps asking. See docs/brief-reader-20261108.md.
+  function draftFromReading(brandId,reading,{brief='',products=[],today=new Date().toISOString().slice(0,10),id=null,briefDocuments=null}={}){
+    const r=reading?.result;if(!r||!Array.isArray(r.assets))throw Error('The brief has not been read yet.');
+    const ids=[...new Set(r.assets.map(a=>a.cardId))].filter(id=>assetCard(id)?.status==='ready');
+    const d=startAssetDraft(brandId,ids);d.intakeVersion=2;d.brief=String(brief||'');
+    // Documents attached on Home were saved under this reserved id; keep both so preflight can verify them.
+    if(typeof id==='string'&&/^draft-[a-z0-9-]+$/.test(id))d.id=id;if(Array.isArray(briefDocuments)&&briefDocuments.length)d.briefDocuments=clone(briefDocuments);
+    d.briefAutofill={version:1,enabled:false,owned:{},manual:{}}; // the reading replaces local pattern autofill
+    const p=products.find(x=>x.id===r.product?.productId&&x.brandId===brandId);let variantName='';
+    let variantDefaulted=false;if(p){const v=(p.variants||[]).find(v=>String(v.id)===String(r.product.variantId))||(()=>{const id=defaultVariant(p);variantDefaulted=!!id&&(p.variants||[]).length>1;return (p.variants||[]).find(x=>String(x.id)===id)||null;})();variantName=v&&v.name!=='Default Title'?v.name:'';selectBriefProduct(d,p,v?String(v.id):'');
+      const loose=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),wanted=(r.features||[]).map(loose).filter(Boolean),facts=productRtbs(p);
+      const matched=facts.filter(f=>wanted.some(w=>loose(f).includes(w)||w.includes(loose(f))));if(matched.length)d.selectedRtbs=matched;else if(!facts.length&&(r.features||[]).length)d.rtbs=r.features.join('\n');}
+    if(languages.includes(r.language?.value)){d.language=r.language.value;for(const o of d.outputs)o.language=d.language;}
+    if(['Awareness','Consideration','Purchase','Engagement','Education'].includes(r.objective?.value))d.objective=r.objective.value;
+    if(r.audience?.value)d.audience=r.audience.value;
+    if(r.occasion?.value)d.occasion=r.occasion.value;
+    if(r.messageType?.source!=='none'&&messageTypes.includes(r.messageType?.value))applyMessageType(d,r.messageType.value);
+    const offer=r.offer||{};
+    for(const o of d.outputs){const v=o.staticValues??={};
+      if(v.promotionMode==='Yes')Object.assign(v,{offer:offer.wording||'',offerSku:p?p.name+(variantName?' · '+variantName:''):'',offerValidity:'Date range',offerStart:offer.startDate||today,offerEnd:offer.endDate||'',terms:offer.terms||''});
+      if(!r.contactDetails&&!v.contactMode)v.contactMode='None';}
+    const mandatory=(r.exactWording||[]).filter(w=>!['offer','terms','validity'].includes(w.kind)).map(w=>w.text);if(mandatory.length)d.mandatoryInfo=mandatory.join('\n');
+    d.name=projectTitle(d,{automatic:true,productName:p?.name});
+    d.briefReading={version:1,id:reading.id,readAt:reading.updatedAt||null,decision:ids.length>1?'campaign':'design',result:clone(r),offerStartAssumed:!!(d.messageType==='Offer / price / EMI'&&!offer.startDate),variantDefaulted};
+    return d;
+  }
+  // Existing placement rules, surfaced before generation. Reads profiles; changes no policy.
+  function assetPlatformNote(o){
+    if(!o||o.planningOnly)return '';const v=o.staticValues||{},p=generationProfile({focus:'product',outputs:[o]});if(!p)return '';
+    if(o.featureId===8)return v.publishing==='Organic'?'Organic stories leave out the added corner logo — the account already shows the brand.':v.publishing==='Paid'?'Story ads keep the approved logo in a top corner.':'Stories: choose Organic or Paid. Organic stories leave out the added corner logo.';
+    if(['custom:studio-web-banner','custom:studio-web-mobile-hero'].includes(p.placementId))return v.brandedHost==='Yes'?'Own-website banners leave out the added corner logo — the site header already shows the brand.':v.brandedHost==='No'?'This banner keeps the logo because its page has no branded header.':'Website banners: confirm whether the page header shows the brand. If it does, the added logo is left out.';
+    if(p.carouselSlideCount)return 'Carousels show the logo on the first and last slides only.';
+    if(p.omitLogo)return (o.name||'This format')+' leaves out the added corner logo.';
+    return '';
+  }
+  function assetPlatformNotes(outputs){return [...new Set((outputs||[]).map(assetPlatformNote).filter(Boolean))];}
+  // Single-select message type. Offer turns on the existing promotion fields and
+  // records which outputs it changed, so choosing another type restores them.
+  function syncMessageTypeOffer(d){
+    const offer=d.messageType==='Offer / price / EMI',owned=new Set(d.messageTypePromotion||[]);
+    for(const o of d.outputs||[]){
+      if(offer){if(o.staticValues?.promotionMode!=='Yes'){(o.staticValues??={}).promotionMode='Yes';owned.add(o.id);}}
+      else if(owned.has(o.id)){if(o.staticValues?.promotionMode==='Yes'){delete o.staticValues.promotionMode;if(!Object.keys(o.staticValues).length)delete o.staticValues;}owned.delete(o.id);}
+    }
+    const ids=new Set((d.outputs||[]).map(o=>o.id)),list=[...owned].filter(id=>ids.has(id));
+    if(list.length)d.messageTypePromotion=list;else delete d.messageTypePromotion;return d;
+  }
+  function applyMessageType(d,type){
+    if(type&&!messageTypes.includes(type))throw Error('Choose a supported message type.');
+    if(type&&d.messageType!==type)d.messageType=type;else delete d.messageType;
+    return syncMessageTypeOffer(d);
+  }
   function creativeKey(p,r){return 'creative:'+JSON.stringify([p.id,r.placementId,r.route,r.versionId||'original',r.imageHash||r.imageUrl||'unavailable']);}
   // Labels only: callers escape display text and retain original records unchanged.
   function searchExplanation(query,fields){
@@ -1166,7 +1481,7 @@ default:return frame(14,9,36,38)} }
     return labels.length?'Matches '+labels.slice(0,3).join(' and '):'';
   }
   function browserTitle(brand,view,project){
-    const labels={home:'Home',projects:'Projects',brief:'Brief',review:'Design',editor:'Editor',progress:'Progress',download:'Download',versions:'Versions',campaign:'Project',library:'Brand library',favourites:'Favourites',settings:'Settings',costs:'Usage & costs',deliverables:'Asset types',trash:'Trash'};
+    const labels={home:'Home',projects:'Projects',brief:'Brief',understood:'Your brief',review:'Design',editor:'Editor',progress:'Progress',download:'Download',versions:'Versions',campaign:'Project',library:'Brand library',favourites:'Favourites',settings:'Settings',costs:'Spend (₹)',deliverables:'Formats',trash:'Trash'};
     const screen=labels[view]||'Studio';
     return (project?project+(view==='project'?'':' · '+screen):screen)+(brand?' — '+brand:'')+' · Creative AI';
   }
@@ -1178,11 +1493,11 @@ default:return frame(14,9,36,38)} }
     function save(id,value){const current=read(id);if(current.revision!==value.revision)throw Error('Home was changed in another tab. Your text is still here; copy it before reloading the saved version.');const data={...defaults(),...value.data};for(const field of ['prompt','productId','audience','style'])if(typeof data[field]!=='string'||data[field].length>50000)throw Error('Home inputs must be text under 50,000 characters.');data.featureId=Number(data.featureId);if(!features.some(f=>f.kind==='image'&&f.id===data.featureId))throw Error('Choose an available image format.');const next={version:1,brandId:id,revision:current.revision+1,data,updatedAt:new Date().toISOString()};store.setItem(key(id),JSON.stringify(next));return next;}
     return {read,save};
   }
+  // "Continue working" (user request, 8 Nov 2026): like Canva's recent designs, show every project
+  // (drafts with a product, in progress, ready and needing attention) by most recent edit, the same
+  // order as the Projects page; ready work is no longer hidden.
   function activeWork(projects){
-    const rank=p=>p.loadError||['failed','needs-input','partial'].includes(p.status)?0:p.local?1:['running','queued','preparing'].includes(p.status)?2:3;
-    const rows=projects.filter(p=>(!p.local||!!p.productId)&& (p.local||p.loadError||['failed','needs-input','partial','running','queued','preparing'].includes(p.status)||p.results?.some(r=>safeAsset(r.imageUrl)&&(r.ready!==true||r.latestEdit)))).slice().sort((a,b)=>rank(a)-rank(b)||String(b.updatedAt||'').localeCompare(String(a.updatedAt||'')));
-    // Keep one issue visible without burying drafts and artwork behind historical failures.
-    let issueShown=false;return rows.filter(p=>{if(rank(p)!==0)return true;if(issueShown)return false;issueShown=true;return true;});
+    return projects.filter(p=>!p.local||!!p.productId).slice().sort((a,b)=>String(b.updatedAt||b.createdAt||'').localeCompare(String(a.updatedAt||a.createdAt||'')));
   }
 
   const navigation={
@@ -1199,7 +1514,7 @@ default:return frame(14,9,36,38)} }
         return r.path+(q.size?'?'+q:'');
       }
       if(r.view==='tools'){
-        if(r.path==='tools/category'&&/^[a-z-]+$/.test(r.params.get('group')||''))q.set('group',r.params.get('group'));
+        if(['tools/category','tools/assets'].includes(r.path)&&/^[a-z-]+$/.test(r.params.get('group')||''))q.set('group',r.params.get('group'));if(r.path==='tools/assets'&&['quick','campaign'].includes(r.params.get('mode')))q.set('mode',r.params.get('mode'));
         if(['home','library','library/brand','library/products','projects','create'].includes(r.params.get('from')))q.set('from',r.params.get('from'));
         return r.path+(q.size?'?'+q:'');
       }
@@ -1209,10 +1524,10 @@ default:return frame(14,9,36,38)} }
   };
   function toolFormats(group){const catalogue={
     social:[[1,'Instagram Post','1080 × 1080 px'],[8,'Instagram Story','1080 × 1920 px'],[9,'Instagram Carousel','1080 × 1080 px · Slide set'],[1,'PMax Image Set','Multiple sizes · Image set',null,null,'PMax']],
-    website:[[7,'Website Banner','1920 × 640 px'],[5,'Product Images','1080 × 1080 px · Image set'],[6,'Marketplace A+ Images','Multiple sizes · Module set'],[6,'Amazon A+ Feature Module','300 × 300 px',null,null,null,null,'Amazon feature module'],[6,'Amazon A+ Lifestyle — Image Header','970 × 600 px',null,null,null,null,'Amazon lifestyle module'],[6,'Amazon Brand Story','Multiple sizes · Story set',null,null,null,null,'Amazon Brand Story'],[6,'Amazon Premium A+ Images','Multiple sizes · Module set',null,null,null,null,'Amazon Premium — Full-width image'],[7,'Homepage Category Tile','1080 × 1080 px · Adjustable',null,null,null,'Category tile']],
+    website:[[7,'Website Banner','1920 × 640 px'],[5,'Product Images','1080 × 1080 px · Image set'],[6,'Marketplace A+ Images','Premium page · 14 images · one story',null,null,null,null,aplusPresetName('premium')],[6,'Amazon A+ Feature Module','300 × 300 px · single module',null,null,null,null,'Amazon feature module'],[6,'Amazon A+ Lifestyle — Image Header','970 × 600 px · single module',null,null,null,null,'Amazon lifestyle module'],[6,'Amazon Brand Story','5 images · background + 3 cards',null,null,null,null,aplusPresetName('brand-story')],[6,'Amazon Basic A+ Page','6 images · 4 modules',null,null,null,null,aplusPresetName('basic')],[7,'Homepage Category Tile','1080 × 1080 px · Adjustable',null,null,null,'Category tile']],
     retail:retailEntries.map(e=>[e.featureId,e.name,e.planningOnly?'Planning brief':e.printId?'Physical size · Print':e.key==='screen'?'1920 × 1080 px · Adjustable':'1080 × 1080 px · Adjustable',null,null,'Retail:'+e.key]),
     messaging:[[14,'WhatsApp Visual','1080 × 1080 px'],[14,'Email Header / Hero','1200 × 600 px',null,null,'Email'],[14,'RCS Card Images','1260 × 540 px · Adjustable',null,null,'RCS'],[14,'Push Notification Image','1024 × 512 px · Adjustable',null,null,'Push'],[14,'Push Notification Icons','Multiple sizes · Icon set',null,null,'Push icons']],
     corporate:[[13,'LinkedIn Post','1200 × 627 px'],[9,'LinkedIn Feature Carousel','1080 × 1080 px · Page set','LinkedIn','Feature'],[9,'LinkedIn Story Carousel','1080 × 1080 px · Page set','LinkedIn','Story'],[15,'Blog / Link Preview','1080 × 1080 px · Adjustable']]
   };return (catalogue[group]||[]).map(([id,name,ratio,carouselPlatform,narrativeType,imagePlatform,websiteType,amazonPreset])=>({id,name,ratio,carouselPlatform,narrativeType,imagePlatform,websiteType,amazonPreset}));}
-  return {campaignValidation,campaignGenerationSupported,selectBriefProduct,toolFormats,communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,safeAsset,normalizeJob,storage};
+  return {aplusPageTypes,aplusSlots,aplusSummary,aplusPage,aplusPresetName,aplusNotes,aplusModuleRows,messageTypes,assetDivisions,assetCatalogue,assetCard,assetCardOutput,startAssetDraft,draftFromReading,productNameCheck,readingBriefName,defaultVariant,backupModelNote,assetPlatformNote,assetPlatformNotes,applyMessageType,syncMessageTypeOffer,campaignValidation,campaignGenerationSupported,selectBriefProduct,toolFormats,communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,designCheck,safeAsset,normalizeJob,storage};
 });

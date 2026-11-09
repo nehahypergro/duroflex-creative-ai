@@ -13,7 +13,7 @@ test('both brands: goal parts follow selections, retain manual edits and blanks,
    const facts=M.productRtbs(product);
    await page.goto(f.url+'?brand='+b.id);await page.locator('.creation-hero').waitFor();
    await page.evaluate(({brand,product})=>{const d=StudioModel.startDraft(brand,'quick',1);Object.assign(d,{intakeVersion:2,productId:product.id,productName:product.name,rtbProductId:product.id,variant:String(product.variants?.[0]?.id||'')});StudioModel.storage(localStorage).save(d);location.hash='brief/'+d.id;},{brand:b.id,product});
-   await page.locator('#field-brief').fill('Create a square post.');
+   await page.locator('#field-brief').fill('Create a square post.');await require('./helpers/ui-controls.cjs').openTargeting(page); // 8 Nov 2026: goal and audience are in Sharpen targeting (optional)
    await page.locator('[data-audience-choice=audience][data-value=Families]').click();
    await page.getByRole('radio',{name:'Consideration',exact:true}).click();
    await page.locator('[data-intake-chip=selectedRtbs]').first().check();
@@ -30,7 +30,7 @@ test('both brands: goal parts follow selections, retain manual edits and blanks,
    await page.locator('[data-action=assignment-review]').click();assert.match(await page.locator('.communication-goal-review').innerText(),/GET — My audience\s+TO — consider the product/);await page.locator('[data-assignment-back]').click();
    for(const width of [1384,390]){await page.setViewportSize({width,height:950});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.locator('.communication-goal').screenshot({path:'work/communication-goal-resume-20261101/'+b.name.toLowerCase()+'-'+width+'.png'});}await page.setViewportSize({width:1384,height:950});
    await page.evaluate(brand=>{const d=StudioModel.startDraft(brand,'quick',1);d.focus='brand';StudioModel.storage(localStorage).save(d);location.hash='brief/'+d.id;},b.id);
-   await page.locator('#field-brief').fill('Get families to feel excited about Diwali by highlighting the festive collection.');await page.waitForFunction(()=>document.querySelector('#goal-to')?.value==='feel excited about Diwali');
+   await page.locator('#field-brief').fill('Get families to feel excited about Diwali by highlighting the festive collection.');await page.waitForFunction(()=>document.querySelector('#goal-to')?.value==='feel excited about Diwali');await require('./helpers/ui-controls.cjs').openTargeting(page);
    await page.locator('#goal-get').fill('Approved audience');await page.locator('#field-brief').fill('Get students to explore the collection by highlighting choice.');await page.waitForFunction(()=>document.querySelector('#goal-by')?.value==='highlighting choice');assert.equal(await page.locator('#goal-get').inputValue(),'Approved audience');assert.equal(await page.locator('#goal-to').inputValue(),'explore the collection');
   }
   assert.deepEqual(errors,[]);assert.deepEqual(paid,[]);

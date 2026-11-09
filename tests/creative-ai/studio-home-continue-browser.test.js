@@ -6,7 +6,8 @@ test('Home continues directly to complete design and campaign briefs for both br
  try{await fs.mkdir('work/home-continue-20261029',{recursive:true});for(const b of f.brands){for(const mode of ['design','campaign']){
  await page.goto(f.url+'?brand='+b.id);await page.locator('.home-create-actions').waitFor();
  assert.equal(await page.locator('#homePrompt,.composer-chips').count(),0);
- await page.getByRole('button',{name:mode==='design'?'Create design':'Create a campaign',exact:true}).click();await page.locator('#field-brief').waitFor();
+ assert.equal(await page.locator('#homeBrief').count(),1);if(mode==='design')await page.locator('.format-more').click();else await page.getByRole('button',{name:'Choose formats yourself',exact:true}).click(); // 8 Nov 2026: brief box replaced the two buttons
+ await require('./helpers/ui-controls.cjs').pickFormats(page,mode==='design'?['instagram-post']:['instagram-post','facebook-post']);await page.locator('#field-brief').waitFor();
  await page.locator('#field-brief').fill('A festive Instagram story in Hindi');await page.locator('#field-brief').blur();await page.waitForTimeout(850);
  assert.equal(await page.locator('.assignment-requirements').count(),1);assert.match(page.url(),/#brief\//);
  const d=await page.evaluate(()=>StudioModel.storage(localStorage).read(new URLSearchParams(location.search).get('brand'),location.hash.split('/')[1]));

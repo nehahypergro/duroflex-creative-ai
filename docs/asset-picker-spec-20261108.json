@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "approvedBy": "User (Neha), 8 Nov 2026, after reviewing the clickable mockup in the Claude Code session",
+  "purpose": "Canva-style asset picker: one named card per asset (channel, shape and paid/organic already decided), division tabs, search, single card = design, several cards = campaign. Message type is asked in the brief ('What should it say?').",
+  "messageTypes": ["Benefit", "Product launch", "Offer / price / EMI", "Proof / claim", "Technology", "Comparison", "Store news"],
+  "divisions": [
+    {"name": "Social", "cards": [
+      {"name": "Instagram Post", "size": "1080 × 1080", "channel": "Instagram", "publishing": "Organic"},
+      {"name": "Instagram Portrait Post", "size": "1080 × 1350", "channel": "Instagram", "publishing": "Organic"},
+      {"name": "Instagram Story", "size": "1080 × 1920", "channel": "Instagram", "publishing": "Organic"},
+      {"name": "Instagram Carousel", "size": "Slides · 1080 × 1350", "channel": "Instagram", "publishing": "Organic"},
+      {"name": "Facebook Post", "size": "1080 × 1080", "channel": "Facebook", "publishing": "Organic"},
+      {"name": "Facebook Story", "size": "1080 × 1920", "channel": "Facebook", "publishing": "Organic"},
+      {"name": "Facebook Carousel", "size": "Slides · 1080 × 1080", "channel": "Facebook", "publishing": "Organic"},
+      {"name": "Landscape Post", "size": "1200 × 628", "channel": "Facebook / LinkedIn", "publishing": "Organic"},
+      {"name": "LinkedIn Post", "size": "1200 × 627", "channel": "LinkedIn", "publishing": "Organic"},
+      {"name": "LinkedIn Carousel", "size": "PDF slides", "channel": "LinkedIn", "publishing": "Organic"},
+      {"name": "YouTube Community Post", "size": "Square or portrait", "channel": "YouTube Community"},
+      {"name": "Meme / Trend Post", "size": "1080 × 1350", "channel": "Instagram / Facebook"},
+      {"name": "Creator / UGC Post", "size": "1080 × 1350", "channel": "Instagram / Facebook"}
+    ]},
+    {"name": "Ads", "cards": [
+      {"name": "Instagram Feed Ad", "size": "1080 × 1350", "channel": "Instagram", "publishing": "Paid"},
+      {"name": "Instagram Story Ad", "size": "1080 × 1920", "channel": "Instagram", "publishing": "Paid"},
+      {"name": "Facebook Feed Ad", "size": "1080 × 1080", "channel": "Facebook", "publishing": "Paid"},
+      {"name": "Facebook Story Ad", "size": "1080 × 1920", "channel": "Facebook", "publishing": "Paid"},
+      {"name": "Google PMax Set", "size": "Landscape, square, portrait", "channel": "Google Performance Max", "publishing": "Paid"},
+      {"name": "Google Display Banners", "size": "Standard sizes", "channel": "Google Display", "publishing": "Paid"}
+    ]},
+    {"name": "Website", "cards": [
+      {"name": "Website Banner", "size": "1920 × 640", "channel": "Own website"},
+      {"name": "Homepage Hero", "size": "≈ 1920 × 700", "channel": "Own website"},
+      {"name": "Mobile Banner", "size": "1080 × 1350", "channel": "Own website (mobile)"},
+      {"name": "Category Tile", "size": "Choose size", "channel": "Own website"},
+      {"name": "Collection Card", "size": "Choose size", "channel": "Own website"},
+      {"name": "Multi-category Module", "size": "Homepage module", "channel": "Own website"},
+      {"name": "Landing Page Hero", "size": "Desktop + mobile", "channel": "Own website"},
+      {"name": "Landing Page Modules", "size": "Benefit · feature · CTA", "channel": "Own website"}
+    ]},
+    {"name": "Marketplace", "cards": [
+      {"name": "Product Page Images", "size": "12-image PDP pack", "channel": "Own website / marketplace"},
+      {"name": "Marketplace Product Images", "size": "White background + gallery", "channel": "Marketplace"},
+      {"name": "Listing Feature Cards", "size": "Benefit & feature cards", "channel": "Own website / marketplace"},
+      {"name": "Amazon A+ Content", "size": "Standard & Premium modules", "channel": "Amazon"}
+    ]},
+    {"name": "Messaging", "cards": [
+      {"name": "WhatsApp Image", "size": "1080 × 1080", "channel": "WhatsApp"},
+      {"name": "WhatsApp Status", "size": "1080 × 1920", "channel": "WhatsApp"},
+      {"name": "Email Banner", "size": "Header / hero", "channel": "Email"},
+      {"name": "Email Product Block", "size": "Product module image", "channel": "Email"},
+      {"name": "RCS Card", "size": "Rich card image", "channel": "RCS"},
+      {"name": "RCS Carousel", "size": "Card set", "channel": "RCS"},
+      {"name": "Web Push", "size": "Push image", "channel": "Web push"},
+      {"name": "Web Push Icon", "size": "Icon from brand artwork", "channel": "Web push"}
+    ]},
+    {"name": "Retail & print", "cards": [
+      {"name": "Google Business Post", "size": "Update · offer · event", "channel": "Google Business Profile"},
+      {"name": "In-store Screen", "size": "Product · offer · campaign slide", "channel": "Retail screen"},
+      {"name": "Store Banner", "size": "Choose size", "channel": "Store"},
+      {"name": "Window Artwork", "size": "Glass panels", "channel": "Store"},
+      {"name": "Standee", "size": "Roll-up", "channel": "Store"},
+      {"name": "Shelf Wobbler", "size": "Shelf · dangler", "channel": "Store"},
+      {"name": "Counter / Product Card", "size": "Physical size", "channel": "Store"},
+      {"name": "Wall Graphic", "size": "Seams & obstructions", "channel": "Store"},
+      {"name": "Price / Offer Board", "size": "Prices, terms, expiry", "channel": "Store"},
+      {"name": "Poster / Flyer", "size": "A4 · A3", "channel": "Store"},
+      {"name": "Brochure", "size": "Panels & folds", "channel": "Store"}
+    ]},
+    {"name": "Corporate & employee", "cards": [
+      {"name": "LinkedIn Square Post", "size": "1080 × 1080", "channel": "LinkedIn"},
+      {"name": "LinkedIn Portrait Post", "size": "1080 × 1350", "channel": "LinkedIn"},
+      {"name": "Product Announcement", "size": "LinkedIn / social", "channel": "LinkedIn"},
+      {"name": "Leadership Post", "size": "Portrait, name & title", "channel": "LinkedIn"},
+      {"name": "Hiring Post", "size": "Role announcement", "channel": "LinkedIn"},
+      {"name": "Employer Branding Post", "size": "People & culture", "channel": "LinkedIn"},
+      {"name": "Award / Milestone Post", "size": "Recognition", "channel": "LinkedIn"},
+      {"name": "Packaging Still", "size": "Packaging details", "channel": "LinkedIn / social"},
+      {"name": "Employee Share Card", "size": "For sharing", "channel": "WhatsApp / LinkedIn"},
+      {"name": "Employee Status", "size": "Vertical", "channel": "WhatsApp Status"},
+      {"name": "Internal Portal Banner", "size": "Employee news", "channel": "Internal portal"}
+    ]},
+    {"name": "Partners & PR", "cards": [
+      {"name": "Co-branded Post", "size": "Two brands", "channel": "Social"},
+      {"name": "Partner Announcement", "size": "Alliance launch", "channel": "Social"},
+      {"name": "Partner Social Set", "size": "Coordinated series", "channel": "Social"},
+      {"name": "Product Press Image", "size": "High resolution", "channel": "Media"},
+      {"name": "Leadership Press Image", "size": "High resolution", "channel": "Media"},
+      {"name": "Product Seeding Pack", "size": "Ordered image set", "channel": "Media"},
+      {"name": "Blog Hero", "size": "Lead image", "channel": "Blog"},
+      {"name": "Article Illustration", "size": "Visual story", "channel": "Blog"},
+      {"name": "Infographic", "size": "Facts or steps", "channel": "Blog / social"},
+      {"name": "Blog / Link Preview", "size": "1200 × 630", "channel": "Website / blog"}
+    ]},
+    {"name": "Sales & training", "cards": [
+      {"name": "Sales One-pager", "size": "A4", "channel": "Internal / dealer"},
+      {"name": "Product Cheat Sheet", "size": "A4", "channel": "Internal / dealer"},
+      {"name": "Mobile Reference Card", "size": "Phone screen", "channel": "Internal / dealer"},
+      {"name": "Battlecard", "size": "Comparison facts", "channel": "Internal / dealer"},
+      {"name": "Training Deck", "size": "16 : 9 slides", "channel": "Internal / dealer"},
+      {"name": "Catalogue", "size": "GT / COCO · planning", "channel": "Internal / dealer", "planningOnly": true}
+    ]}
+  ],
+  "removedOnRequest": ["YouTube Thumbnail", "Instagram Reel Cover", "Push Notification (replaced by Web Push)"]
+}

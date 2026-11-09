@@ -1,8 +1,51 @@
 # Creative AI brand isolation
 
+## Engine fixes and code layout (8 November 2026)
+
+- The main Studio planner, reviewer and corrector live in `lib/creative-ai/lean/`. The old `experiments/lean-planner/` paths are one-line pointers kept for experiment scripts and tests. Do not move main-flow code back into `experiments/`.
+- New lean records pin conformance v1. Non-pixel requirements stay out of the visual review; a correction is promoted when it fixes its mismatches without new ones; results with no concrete mismatch are deliverable but not `qualityVerified`. New jobs pin `leanReferenceVersion: 1` (no duplicate product photo).
+- Each reasoning call has a per-call limit with one confirmed-cancel re-send. An explicit operator resume may start one fresh request pair only after every earlier pair ended in confirmed call-limit cancellations (8 Nov 2026); ambiguous requests are reconciled, never duplicated. Queue time doesn't count against new jobs' 45-minute window. Image HTTP failures are saved and retried once when retryable. Startup reconciliation releases provably stale locks and marks dead-process work interrupted without dispatching anything.
+- Hot paths must not expand saved picture references (use `artifact-fs.readJsonRaw` and `reference-storage` helpers). See `docs/engine-fixes-20261108.md`.
+
+## Home brief box and brief appreciation (8 November 2026)
+
+- The user replaced the home page's "Create design / Create a campaign" buttons with one brief box. A small paid reasoning call (`lib/creative-ai/runtime/brief-reader.js`, `POST /creative-ai/api/brands/:id/brief-read`, stored in `output/creative-ai/brief-reads` and counted by the cost ledger) suggests the product, assets (design if one, campaign if several; a sensible set when none is named), message type, language and exact offer wording.
+- The `#understood/<draftId>` appreciation page must show every value for confirmation, with the asset picker and product picker available, before the existing preflight/estimate/submit path runs. Never auto-confirm or auto-generate from a reading. Unclear product/variant and missing offer wording/dates/terms stay empty so validation asks; exact wording must be in the brief word for word. See `docs/brief-reader-20261108.md`.
+
+## Provider fallbacks (8 November 2026)
+
+- The user approved fallbacks instead of long waits: a background request still `queued` after ~90 s is cancelled (confirmed) and re-sent directly to the same model; lean planning not finished after ~4 min is cancelled (confirmed) and re-sent once to the backup model `gpt-6-luna` (high effort), which bends the pinned-model rule for that one call only. If the backup is also slow, stop with a clear "AI service is slow" message. Brief reads retry directly once, then fall back to the free local pattern autofill (labelled for checking). Fallback use is recorded on the job/receipts and shown as "Backup model used"; all checks still apply; never re-send before a confirmed cancellation.
+
+## Objective playbook (8 November 2026)
+
+- New lean jobs pin `objectivePlaybookVersion: 1`. `lib/creative-ai/lean/objective-playbook.js` gives one short rule per brief objective (Awareness, Consideration, Purchase, Engagement, Education; TOFU/MOFU/BOFU map to the first three), adapted to the format's viewing context (story, feed, carousel, banner, messaging, notification, marketplace, at-shelf, distance, close-read).
+- It enters planning as the mandatory, planning-only rule `objective-playbook`. It stays out of the image prompt and the visual review, which check the resulting plan.
+- It never licenses invented offers, prices, urgency or claims: offers come only from the brief, and urgency needs a real end date. Unrecognised objectives add no rule. Historical packets are unchanged. See `docs/objective-playbook-20261108.md`.
+
+## Edit with AI (8 November 2026)
+
+- Lean design pages have an "Edit with AI" chat: one paid gpt-image-2 edit per explicit Send, saved as an immutable child version in `refinements` (original untouched), selectable/restorable with exact-hash selection. Edited versions are "Not checked yet" and never "Ready". Request keys dedupe sends; costs go to the shared ledger. See `docs/ai-edit-20261108.md`.
+- Pins with comments (user, 9 Nov 2026: "i dont want box. just pins/comments that act as edits"): the image editor has no Box tool. Clicking drops a numbered pin with its own comment (≤300 characters), and there is an optional general note. The server also sends a deterministic pins image (`edit-pins.js`, bound by hash, re-verified in `brand-isolation.js`). After the user chose "Yes, protect it", each new pin has a Small/Medium/Large area (`edit-pins.AREAS`, default Medium). The areas become the edit mask, and every pixel outside them is restored exactly. The areas together may cover at most about a third of the design. A note with no pins changes the whole picture. Older pins without an area stay unmasked. Before restoring, every masked edit is lined up with its anchor by `edit-align.js` (even zoom and shift only, applied only on a clear improvement, recorded as `aiEdit.alignment`), because gpt-image-2 can return the scene zoomed, which otherwise leaves visible seams. Old box annotations stay readable and accepted.
+
+## One image model (8 November 2026)
+
+- The user retired `gpt-image-2.6-sunburst` after the side-by-side test: new lean jobs make one `gpt-image-2` design per format (`lean-policy.js` options; this supersedes the "two options: gpt-image-2 and sunburst" contract above for new jobs only). Jobs admitted earlier keep their pinned two-option snapshot through `jobOptions`. The picker's "Skip — describe it instead" and intro line were removed (a brief always starts from chosen formats or the home brief box). Estimates scale earlier two-option runs to one design and accept each job's pinned reasoning models.
+
+## Exact output size (8 November 2026)
+
+- New lean jobs pin `exactCanvasVersion: 1`: both image models get the exact-shape size, and `exact-canvas.js` fits each output to the format's exact pixels with even scaling only. Shape off by 1% or less is a small trim on both edges; anything more extends the edges, so logo and copy margins survive. The raw output is kept beside the fitted file, and corrections are fitted to the same grid before restore. This is the user's "cheaper" choice: no larger generation size.
+
+## Default mattress size (8 November 2026)
+
+- The user decided that mattresses (website category Mattress/Mattresses) default to the standard Queen 72 x 60 (else the first Queen size) instead of asking; single-variant products use their only variant. `M.defaultVariant(product)` is the one rule, used by the brief reader, the appreciation page and the brief form. The default is shown as a suggestion and stays changeable. This supersedes "ambiguous variants require selection" for mattresses only; other multi-variant products (and mattresses without a Queen size, toppers, protectors) still ask.
+
+## Brand dossier storage (8 November 2026)
+
+- Dossiers use storage version 2: one compact `research.json` per version, with each picture saved once under `output/brand-dossiers/images/<sha256>` and shared. Build the view, PDF and JSON inventory on request. Do not re-embed base64 pictures or save per-job HTML/PDF copies. Keep version-1 folders readable and unchanged; deleting them needs explicit user approval. Research payload fields must not carry per-job read times. Jobs validate their research but do not save a dossier report; only brand research refreshes save one. See `docs/dossier-storage-20261108.md`.
+
 ## Main Studio lean artwork workflow (6 November 2026)
 
-- The user promoted the lean planner comparison into new main Studio jobs, retaining two options: `gpt-image-2` high and `gpt-image-2.6-sunburst` high. `workspace.json` selects `artworkWorkflow: lean-v1`; intake and provider settings are pinned per new job. This supersedes one-option and editable-reconstruction defaults for these jobs only. Existing jobs, experiments, images, reviews, edits and budgets retain their own contracts.
+- The user promoted the lean planner comparison into new main Studio jobs, retaining two options: `gpt-image-2` high and `gpt-image-2.6-sunburst` high. `workspace.json` selects `artworkWorkflow: lean-v1`; intake and provider settings are pinned per new job. This supersedes one-option and editable-reconstruction defaults for these jobs only. The two options are a model comparison drawn from one shared plan; similar compositions are expected, and separate creative directions are not wanted (user confirmed 8 Nov 2026). Existing jobs, experiments, images, reviews, edits and budgets retain their own contracts.
 - Use one compact GPT 6.1 Sol high communication/copy/spatial plan per independent asset or coordinated set, named approved fonts, exact scoped SKU references and applicable brand/placement requirements. Preserve every set page in both options. Use verbal inspiration, not repeated mood-image attachments. Separate native media copy from raster copy where the selected template requires it.
 - Generate complete raster artwork, run Luna medium conformance inspection and allow one evidence-directed correction candidate per option/page. Preserve the original, validate masks and protected regions, and recheck before promoting a candidate. Uncertainty is not a defect; failed verification must not silently certify artwork. The user-facing main flow displays the selected saved artwork without Fabric reconstruction or internal model/review labels.
 - Keep independent main planning/image queues, durable provider recovery, pinned models, brand boundaries and existing cost accounting. Do not reactivate stopped experiment batches as part of deployment. See `docs/lean-main-flow-20261106.md`.

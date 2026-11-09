@@ -13,7 +13,7 @@ test('both brands: recover an existing image response before continuing the same
   });
   for(const [i,b]of f.brands.entries()){
    await page.goto(f.url+'?brand='+b.id+'#project/'+jobs[i].id);await page.locator('[data-action=restart-project]').first().click();
-   await page.getByRole('button',{name:'Check existing image response',exact:true}).click();await page.getByRole('button',{name:'Continue saved work',exact:true}).click();await page.waitForFunction(()=>!document.querySelector('[data-action=resume-work]'));
+   await page.getByRole('button',{name:'Check for finished images',exact:true}).click();await page.getByRole('button',{name:'Continue saved work',exact:true}).click();await page.waitForFunction(()=>!document.querySelector('[data-action=resume-work]'));
    assert(page.url().includes(jobs[i].id));
   }
   assert.equal(posts.length,4);assert(posts.every(p=>p.endsWith('/reconcile-images')||p.endsWith('/resume-work')));assert.deepEqual(errors,[]);

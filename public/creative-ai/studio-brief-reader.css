@@ -1,0 +1,141 @@
+/* Home brief box and brief appreciation page (8 Nov 2026). docs/brief-reader-20261108.md */
+.home-brief{display:grid;gap:10px;width:100%;max-width:760px;margin:0}
+.home-brief-label{font-weight:700;font-size:15px;color:var(--ink)}
+.home-brief textarea{width:100%;box-sizing:border-box;min-height:104px;resize:vertical;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper,#fff);color:var(--ink);font:inherit;font-size:15px;line-height:1.5;box-shadow:0 2px 10px #29246810}
+.home-brief textarea:focus{outline:2px solid var(--focus);outline-offset:1px;border-color:transparent}
+.home-brief.reading textarea{opacity:.7}
+.home-brief-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.home-brief-actions .hint{margin:0;max-width:440px}
+.home-brief-actions .button[aria-busy=true]{cursor:progress}
+.home-brief-status{margin:0;min-height:1.2em;font-size:14px;color:var(--muted)}
+.home-brief-status.field-error{color:var(--danger)}
+.home-brief-alt{margin:0;font-size:14px;color:var(--muted)}
+.home-brief-alt .text-button{font-size:14px}
+
+.understood-page{max-width:1040px;display:grid;gap:16px}
+.understood-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.understood-head h1{margin:0 0 4px}
+.understood-head p{margin:0;color:var(--muted)}
+.understood-legend{display:flex;gap:14px;list-style:none;margin:0;padding:0;font-size:13px;color:var(--muted)}
+.understood-legend li{display:inline-flex;align-items:center;gap:6px}
+.understood-dot{display:inline-flex;align-items:center;margin-left:auto}
+.understood-dot i{width:9px;height:9px;border-radius:50%;display:inline-block;background:#9aa0b4}
+.understood-dot.yours i{background:var(--success)}
+.understood-dot.ours i{background:var(--warn)}
+.understood-dot.need i{background:var(--danger);box-shadow:0 0 0 3px var(--danger-soft)}
+.understood-legend .understood-dot{margin:0}
+.understood-quote{margin:0;padding:4px 0 4px 14px;border-left:3px solid var(--line);color:var(--muted);font-size:14px;line-height:1.55;white-space:pre-wrap;max-height:9.5em;overflow:auto}
+.understood-ask{background:var(--purple-soft);border-radius:var(--radius);padding:16px 18px}
+.understood-ask h2{margin:0 0 6px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--purple)}
+.understood-ask p{margin:0;font-size:17px;line-height:1.5;color:var(--ink)}
+.understood-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.understood-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper,#fff);padding:14px 16px;display:grid;gap:8px;align-content:start;min-width:0}
+.understood-card h2{margin:0;font-size:13px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:8px}
+.understood-card h2 svg{width:16px;height:16px;flex:none}
+.understood-value{margin:0;font-size:16px;font-weight:700;color:var(--ink)}
+.understood-sub{margin:0;font-size:13.5px;color:var(--muted);line-height:1.45}
+.understood-badge{margin-left:auto;font-size:12px;font-weight:600;color:var(--purple);background:var(--purple-soft);padding:2px 9px;border-radius:999px}
+.understood-field{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.understood-field input,.understood-field select,.understood-field textarea{width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper,#fff);color:var(--ink);font:inherit;font-size:14px}
+.understood-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.understood-chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.understood-chips li{font-size:13px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--page)}
+.understood-chips li.suggested{border-style:dashed;border-color:var(--warn)}
+.understood-chips small{color:var(--warn);font-size:12px}
+.understood-card .text-button{justify-self:start;display:inline-flex;align-items:center;gap:6px}
+.understood-card .asset-platform-notes{margin:0}
+.understood-features summary{cursor:pointer;font-size:13.5px;color:var(--ink)}
+.understood-features summary span{color:var(--muted)}
+.understood-features label{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;margin:6px 0;color:var(--ink)}
+.understood-exact input[data-understood="offer-wording"]{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.understood-assume{grid-column:1/-1;background:var(--warn-soft);border-color:var(--warn-line)}
+.understood-assume h2{color:var(--warn-ink)}
+.understood-assume .understood-field{max-width:320px}
+.understood-assume ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6;color:var(--warn-ink)}
+.understood-needs{grid-column:1/-1;background:var(--danger-soft);border-color:var(--danger-line)}
+.understood-needs h2{color:var(--danger-ink)}
+.understood-needs ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6;color:var(--danger-ink)}
+.understood-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:14px}
+.understood-estimate{font-size:14px;color:var(--muted);max-width:560px}
+.understood-estimate p{margin:0 0 2px}
+.understood-foot .actions{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:640px){.understood-legend{display:none}.understood-foot .actions{width:100%}.understood-foot .actions>*{flex:1;justify-content:center}.understood-pair{grid-template-columns:1fr}}
+.understood-warn{border:1px solid var(--warn-line);background:var(--warn-soft);border-radius:8px;padding:8px 10px;display:grid;gap:4px}
+.understood-warn p{margin:0;font-size:13.5px;line-height:1.45;color:var(--warn-ink)}
+.understood-warn .text-button{font-size:13.5px}
+/* Read-back page: point straight at what's missing (8 Nov 2026, UX review row 8) */
+.understood-card-missing{border-color:#e7a091;box-shadow:0 0 0 3px #d0342c14}
+.understood-missing,.understood-field .understood-missing{border-color:#d0342c!important;box-shadow:0 0 0 3px #d0342c1f}
+.understood-features.understood-missing{border:1px solid #d0342c;border-radius:8px;padding:6px 8px}
+.understood-jump{all:unset;cursor:pointer;color:#7a2d14;text-decoration:underline;text-underline-offset:2px}
+.understood-jump:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+@media (max-width:640px){.understood-foot{position:sticky;bottom:0;z-index:5;background:var(--paper,#fff);margin:0 -16px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-shadow:0 -6px 18px #1a1d3514}}
+
+/* Full brief form, shorter and quicker (8 Nov 2026, brief-form helper): provenance dots,
+   suggested size, size chips, optional targeting section and the inline estimate + create button. */
+.value-origin.origin-dot{background:none!important;padding:0 2px!important;border:0;display:inline-flex;align-items:center;vertical-align:middle;width:auto;min-width:9px;margin-left:6px}
+.value-origin.origin-dot .understood-dot{margin:0}
+.understood-dot.none i{background:#c8cbd8}
+.brief-origin-legend{margin-right:12px}
+.variant-suggestion{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;margin:8px 0 12px;font-size:13px;line-height:1.45;color:#4a2f08;background:#fdf6ea;border:1px solid #efcf95;border-radius:8px;padding:6px 10px}
+.variant-suggestion .understood-dot{margin:0}
+.variant-suggestion .text-button{font-size:13px;margin-left:auto}
+.variant-size-chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+.variant-size-chips .audience-chip[aria-pressed=true]{border-color:var(--purple);background:var(--purple-soft);color:var(--ink)}
+.brief-onepage [data-intake-section=additional]>summary span{font-weight:650}
+.brief-onepage [data-intake-section=additional] .intake-disclosure-body>.audience-presets,.brief-onepage [data-intake-section=additional] .intake-disclosure-body>.communication-goal{margin-bottom:16px}
+.brief-inline-estimate{font-size:12px;line-height:1.4;color:var(--muted)}
+.brief-inline-estimate .generation-estimate{color:var(--ink);font-weight:600}
+.brief-inline-estimate ul{margin:2px 0 0;padding-left:16px}
+#assignmentStatus>div:last-child:has([data-action=brief-create]){display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:780px){.assignment-intake #assignmentStatus:has([data-action=brief-create]){grid-template-columns:minmax(0,1fr)}.assignment-intake #assignmentStatus>div:last-child:has([data-action=brief-create]){grid-column:1;grid-row:2;width:100%;justify-content:space-between}}
+@media (max-width:640px){.brief-origin-legend{display:none}}
+/* Home hero, simplified (8 Nov 2026): one heading, one box, one row of actions; no duplicate text. */
+.creation-hero .hero-copy h1{margin-bottom:0}
+.home-create-actions{width:100%}
+.home-brief{max-width:820px;gap:12px}
+.home-brief textarea{display:block;min-height:96px;white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:hidden}
+.home-brief textarea::placeholder{white-space:pre-wrap}
+.home-brief-actions{justify-content:flex-end;gap:16px}
+.home-brief-actions .text-button{font-size:14.5px}
+.home-brief-status:empty{display:none}
+.home-brief-label,.home-brief-alt{display:none}
+/* Home hero, compact and centred (8 Nov 2026): heading, one composer box with its actions inside, "Try" chips. */
+.home-page .creation-hero{padding:26px 28px 22px}
+.home-page .creation-hero .hero-heading{min-height:0;padding:0 0 14px;justify-content:center;text-align:center}
+.home-page .creation-hero .hero-copy{width:100%;pointer-events:auto}
+.home-page .creation-hero .hero-copy h1{margin:0 auto;max-width:none;font-size:clamp(26px,2.4vw,36px)}
+.home-page .home-create-actions{display:block;width:100%}
+.home-page .home-brief{max-width:780px;margin:0 auto;gap:10px}
+.home-brief-box{background:var(--paper,#fff);border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 24px #29246814;padding:6px 8px 8px;transition:box-shadow .15s,border-color .15s}
+.home-brief-box:focus-within{border-color:var(--purple);box-shadow:0 0 0 3px var(--purple-soft),0 6px 24px #29246814}
+.home-page .home-brief textarea{border:0;box-shadow:none;background:transparent;min-height:64px;padding:10px 10px 4px;font-size:15px;resize:none}
+.home-page .home-brief textarea:focus{outline:none}
+.home-page .home-brief-actions{justify-content:space-between;align-items:center;gap:12px;padding:0 2px}
+.home-page .home-brief-actions .text-button{display:inline-flex;align-items:center;gap:6px;font-size:14px}
+.home-page .home-brief-actions .text-button .icon{width:16px;height:16px}
+.home-page .home-brief-actions .button.primary{min-height:40px;padding:8px 18px}
+.home-brief-examples{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.home-brief-examples>span{font-weight:600}
+.home-brief-chip{border:1px solid var(--line);background:var(--paper,#fff);color:var(--ink);border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.home-brief-chip:hover{border-color:var(--purple);color:var(--purple)}
+@media (max-width:640px){.home-page .creation-hero{padding:18px 14px}.home-page .home-brief-actions{flex-wrap:wrap}.home-page .home-brief-actions .button.primary{flex:1;justify-content:center}}
+/* Design page (8 Nov 2026): Like/Dislike centred under the image; the brief summary shows input next to output. */
+.artwork-only .creative-feedback-heading{justify-content:center}
+.review-brief-summary{max-width:760px;margin:14px auto 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--page,#f9f8fc)}
+.review-brief-summary h2{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;font-weight:700;color:var(--ink)}
+.review-brief-summary h2 .icon{width:16px;height:16px;color:var(--purple)}
+.review-brief-text{margin:0 0 10px;font-size:14px;line-height:1.55;color:var(--ink);white-space:pre-wrap;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.review-brief-text:hover{-webkit-line-clamp:unset}
+.review-brief-summary dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px 16px;margin:0}
+.review-brief-summary dl div{min-width:0}
+.review-brief-summary dt{font-size:12px;color:var(--muted)}
+.review-brief-summary dd{margin:0;font-size:13.5px;color:var(--ink);overflow-wrap:anywhere}
+/* Home attach button and attached-file chips (8 Nov 2026). */
+.home-brief-tools{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.home-brief-attach{display:inline-flex;align-items:center;gap:6px}
+.home-brief-files{display:flex;flex-wrap:wrap;gap:6px;padding:4px 8px 8px}
+.home-brief-file{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:4px 6px 4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--purple-soft);font-size:13px;color:var(--ink)}
+.home-brief-file span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:260px}
+.home-brief-file .icon{width:14px;height:14px;color:var(--purple)}
+.home-brief-file button{border:0;background:transparent;cursor:pointer;font-size:16px;line-height:1;color:var(--muted);padding:0 4px}

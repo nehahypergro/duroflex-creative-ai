@@ -5,7 +5,7 @@
 #editableDialog button,#editableDialog input,#editableDialog select,#editableDialog textarea{font:inherit;color:inherit;min-width:0}
 #editableDialog button{border:1px solid var(--ec-line);border-radius:9px;background:var(--ec-paper);padding:8px 12px;cursor:pointer;line-height:1.4;transition:background .15s,border-color .15s}
 #editableDialog button:hover:not(:disabled){background:var(--ec-soft);border-color:#bda3d8}
-#editableDialog button:disabled{opacity:.4;cursor:default}#editableDialog :focus-visible{outline:2px solid #9c72c8;outline-offset:3px}
+#editableDialog button:disabled{opacity:1;color:var(--disabled-ink,#555168);background-color:var(--disabled-bg,#ebeaf0);cursor:not-allowed}#editableDialog .ec-primary:disabled,#editableDialog .ec-primary:disabled:hover{background:var(--disabled-bg,#ebeaf0);border-color:var(--disabled-line,#d6d4df);color:var(--disabled-ink,#555168);box-shadow:none;filter:none}#editableDialog :focus-visible{outline:2px solid #9c72c8;outline-offset:3px}
 #editableDialog input,#editableDialog select,#editableDialog textarea{width:100%;border:1px solid var(--ec-line);border-radius:9px;padding:9px 10px;background:var(--ec-paper);outline-offset:2px}
 #editableDialog textarea{resize:vertical;min-height:90px;line-height:1.5}#editableDialog input[type=color]{height:38px;padding:5px;cursor:pointer}
 #editableDialog h2,#editableDialog h3,#editableDialog p{margin:0}#editableDialog h2{font-size:22px;font-weight:600;letter-spacing:-.6px;line-height:1.2}#editableDialog h3{font-size:15px;font-weight:600;line-height:1.4;letter-spacing:-.2px}

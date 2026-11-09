@@ -5,7 +5,7 @@ test('both brands: brief autofill, manual goal protection and aligned desktop pr
  page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/\/api\/studio\/generate/.test(r.url()))paid.push(r.url())});page.setDefaultTimeout(8000);
  await fs.mkdir('work/readiness-fix-20261031',{recursive:true});
  try{for(const b of f.brands){
-  await page.goto(f.url+'?brand='+b.id);await page.locator('[data-action=home-continue-campaign]').click();await page.locator('#goal-get').waitFor();
+  await page.goto(f.url+'?brand='+b.id);await page.locator('[data-action=asset-picker][data-mode=campaign]').click();await require('./helpers/ui-controls.cjs').pickFormats(page,['instagram-post','facebook-post']);await page.locator('#goal-get').waitFor({state:'attached'});await require('./helpers/ui-controls.cjs').openTargeting(page);
   await page.locator('#field-brief').fill('Get homeowners to consider a sofa by showing comfort');await page.waitForFunction(()=>document.querySelector('#goal-get')?.value==='homeowners');
   assert.equal(await page.locator('#goal-to').inputValue(),'consider a sofa');assert.equal(await page.locator('#goal-by').inputValue(),'showing comfort');
   await page.locator('#field-brief').fill('Get families to explore the collection by showing everyday comfort');await page.waitForFunction(()=>document.querySelector('#goal-get')?.value==='families');
