@@ -212,3 +212,32 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': queued artwork inspec
  try{visual.contract=()=>{throw Error('Future requirements must not replace saved requirements');};await handoff.generate(f.runtime,f.job.id);assert.equal((await f.store.read(f.job.id)).status,'finished');}
  finally{visual.contract=old;}
 });
+
+/* Correction line-up (9 Nov 2026). The design-page edit showed that gpt-image-2 can return a masked
+   edit with the whole scene zoomed and shifted; restoring the protected pixels then leaves visible
+   seams at the region edge. The automatic correction restores pixels the same way, so new jobs
+   (correctionAlignVersion 1) line the corrected image up with the original first. Fake provider
+   only: the correction comes back zoomed 4% and moved, with a change inside the corrected region. */
+async function detailedScene(w,h){const shapes=[];let seed=11;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+ for(let i=0;i<1400;i++)shapes.push('<rect x="'+Math.round(r()*w)+'" y="'+Math.round(r()*h)+'" width="'+Math.round(6+r()*40)+'" height="'+Math.round(6+r()*40)+'" fill="rgb('+[0,0,0].map(()=>Math.round(r()*255)).join(',')+')" opacity="0.8"/>');
+ return sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'"><rect width="100%" height="100%" fill="#d8e4ef"/>'+shapes.join('')+'</svg>')).png().toBuffer();}
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': a zoomed correction is lined up with the original before protected pixels are restored',async t=>{
+ const f=await fixture(t,{brand,mismatch:true,legacyTwoOptions:false}),W=1024,H=1024,scene=await detailedScene(W,H);
+ assert.equal(f.job.runtimeConfig.correctionAlignVersion,1,'new jobs pin the correction line-up');
+ const z=Math.round(W*1.04),big=await sharp(scene).resize(z,z).png().toBuffer(),moved=await sharp(big).extract({left:Math.round((z-W)/2)+9,top:Math.round((z-H)/2)+6,width:W,height:H}).png().toBuffer();
+ const fixed=await sharp(moved).composite([{input:await sharp({create:{width:60,height:60,channels:3,background:'#c0102a'}}).png().toBuffer(),left:72,top:72}]).png().toBuffer();
+ f.runtime.provider.generate=async request=>{f.calls.push({kind:'image',...request});return {imageData:'data:image/png;base64,'+(request.mask?fixed:scene).toString('base64')};};
+ await handoff.generate(f.runtime,f.job.id);const j=await f.store.read(f.job.id);assert(j.results.every(r=>r.correction?.selected),JSON.stringify(j.unitErrors||j.results));
+ const dir=f.store.dir(f.job.id),names=await fs.readdir(dir),candidate=await fs.readFile(path.join(dir,names.find(n=>/^static-lean-candidate-[a-f0-9]+\.png$/.test(n))));
+ /* The corrected region from the fake decision: 0–1000 units {x:50,y:50,width:100,height:100}. */
+ const region=require('../../lib/creative-ai/lean/correction').regionsMask({regions:[{x:50,y:50,width:100,height:100}]},W,H);
+ const [a,b]=await Promise.all([sharp(scene).removeAlpha().raw().toBuffer(),sharp(candidate).removeAlpha().raw().toBuffer()]);let sum=0,n=0;
+ for(let y=1;y<H-1;y++)for(let x=1;x<W-1;x++){const i=y*W+x;if(!region[i]||region[i-1]&&region[i+1]&&region[i-W]&&region[i+W])continue;for(const [ox,oy] of [[3,0],[0,3],[6,0],[0,6]]){const k=(y+oy)*W+x+ox;if(region[k]){sum+=Math.abs(a[k*3]-b[k*3])+Math.abs(a[k*3+1]-b[k*3+1])+Math.abs(a[k*3+2]-b[k*3+2]);n++;}}}
+ assert.ok(sum/n<25,'no visible seam just inside the corrected region (mean colour difference '+(sum/n).toFixed(1)+')');
+ const state=JSON.parse(await fs.readFile(path.join(dir,names.find(n=>/^lean-state-/.test(n)||/^lean-unit-/.test(n))),'utf8'));
+ assert.equal(state.candidateAlignment?.applied,true,JSON.stringify(state.candidateAlignment));assert.equal(state.maskProof.outsideMaskChangedPixels,0);
+});
+test('jobs pinned before the correction line-up keep their saved restore contract',()=>{
+ assert.equal(policy.configure({},{leanWorkflowVersion:1}).correctionAlignVersion,1);
+ assert.equal(require('../../lib/creative-ai/runtime/provider-config').snapshot({...policy.configure({},{leanWorkflowVersion:1})}).correctionAlignVersion,1,'the pin survives the provider snapshot');
+});

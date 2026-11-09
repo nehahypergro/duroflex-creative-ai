@@ -28,7 +28,7 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': pin comments alone ma
  assert.equal(binding.pinsName,'ai-edit-pins.png');assert.equal(binding.pinsSha256,sha(file));assert.equal(sha(rebuilt),sha(file),'deterministic');assert.equal(call.attachments[1].sha256,binding.pinsSha256);
  const meta=await sharp(file).metadata();assert.deepEqual([meta.width,meta.height],[1080,1350]);
  assert.notEqual(sha(file),sha(f.original),'markers are drawn');
- const child=await store.read(saved.id);assert.deepEqual(child.results[0].aiEdit.annotations.map(a=>a.comment),['Make this vase white','Remove this lamp']);assert.equal(saved.result.check,'not-checked');
+ const child=await store.read(saved.id);assert.deepEqual(child.results[0].aiEdit.annotations.map(a=>a.comment),['Make this vase white','Remove this lamp']);assert.equal(saved.result.check,'passed');
  assert.deepEqual(await fs.readFile(path.join(f.runtime.store.dir(f.job.id),f.name)),f.original,'original artwork untouched');
  // A general note can go with the pins.
  const both=await f.api(base,{...f.unit,instruction:'Make the light warmer overall',annotations:two.slice(0,1),requestKey:'pins-request-0002'});assert.equal(both.status,202,JSON.stringify(both.body));

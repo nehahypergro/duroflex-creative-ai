@@ -19,10 +19,10 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': one Send makes one pa
  assert.ok(!call.prompt.includes(f.other.b.name+' ('),'no other brand in the prompt');
  // Exact canvas: the 1024×1280 provider image is fitted to 1080×1350 without stretching.
  const versionFile=path.join(f.runtime.refinements.store(f.job.id).dir(saved.id),saved.result.imageUrl.split('/').pop()),meta=await sharp(versionFile).metadata();
- assert.deepEqual([meta.width,meta.height],[1080,1350]);assert.equal(saved.result.check,'not-checked');assert.equal(saved.result.ready,false,'an edited version never inherits Ready');
+ assert.deepEqual([meta.width,meta.height],[1080,1350]);assert.equal(saved.result.check,'passed','new edits get one product check (9 Nov 2026)');assert.equal(f.checks.length,1);assert.equal(saved.result.ready,false,'an edited version never inherits Ready, even when its check passed');assert.equal(saved.result.qualityVerified,false);
  // Receipts are on the child job inside refinements/, which the cost ledger scans.
  assert.ok(saved.costs.estimatedTotal>0&&saved.costs.currency==='INR','real INR cost estimate after the edit');assert.match(saved.costs.basis,/estimate/);assert.ok(list.body.estimate.perEdit>0,'cost estimate shown before Send');
- const child=await f.runtime.refinements.store(f.job.id).read(saved.id);assert.equal(child.budget.receipts.length,1);assert.equal(child.intake.brandId,f.own.b.id);
+ const child=await f.runtime.refinements.store(f.job.id).read(saved.id);assert.equal(child.budget.receipts.length,2,'one image receipt and one product-check receipt');assert.equal(child.intake.brandId,f.own.b.id);
  const ledger=await new (require('../../lib/cost-tracker').CostTracker)(f.root,{brands:[{id:f.own.b.id,name:brand}]}).snapshot(),row=JSON.stringify(ledger);assert.ok(row.includes(child.budget.receipts[0].requestKey)||row.includes(saved.id),'the edit receipt is in the cost ledger');
  // The same Send again (retry/double click) returns the same version and buys nothing.
  const again=await f.api('/creative-ai/api/jobs/'+f.job.id+'/ai-edits',send);assert.equal(again.body.id,saved.id);assert.equal(f.calls.length,1);

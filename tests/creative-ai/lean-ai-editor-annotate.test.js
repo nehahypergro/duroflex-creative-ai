@@ -31,9 +31,9 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': annotated Send makes 
  const [a,b]=await Promise.all([rgb(f.original),rgb(await fs.readFile(file))]);assert.deepEqual([b.info.width,b.info.height],[1080,1350]);
  let outsideDiff=0,insideChanged=0;for(let i=0;i<region.length;i++){const same=a.data[i*3]===b.data[i*3]&&a.data[i*3+1]===b.data[i*3+1]&&a.data[i*3+2]===b.data[i*3+2];if(region[i]){if(!same)insideChanged++;}else if(!same)outsideDiff++;}
  assert.equal(outsideDiff,0,'every pixel outside the boxes is unchanged');assert.ok(insideChanged>transparent*.8,'the boxed areas were edited');
- const child=await store.read(saved.id);assert.equal(child.results[0].aiEdit.mask.outsideMaskChangedPixels,0);assert.equal(child.results[0].aiEdit.annotations.length,3);assert.equal(child.budget.receipts.length,1);
+ const child=await store.read(saved.id);assert.equal(child.results[0].aiEdit.mask.outsideMaskChangedPixels,0);assert.equal(child.results[0].aiEdit.annotations.length,3);assert.equal(child.budget.receipts.length,2,'image + product check');
  const binding=JSON.parse(await fs.readFile(path.join(dir,'creative-edit-anchor.json'),'utf8'));assert.equal(binding.maskSha256,sha(call.mask));assert.equal(sha(await fs.readFile(path.join(dir,'ai-edit-mask.png'))),binding.maskSha256);
- assert.equal(saved.result.check,'not-checked');assert.equal(saved.result.ready,false);
+ assert.equal(saved.result.check,'passed');assert.equal(saved.result.ready,false);
  // Dedupe: the same Send buys nothing; the same request ID with other marks is a different edit.
  assert.equal((await f.api(base,send)).body.id,saved.id);assert.equal(f.calls.length,1);
  assert.match((await f.api(base,{...send,annotations:marks.slice(0,1)})).body.error,/different edit/);

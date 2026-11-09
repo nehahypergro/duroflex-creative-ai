@@ -40,7 +40,7 @@ for(const brand of brands)test(brand+': an A+ page is one coordinated set: one p
  assert.deepEqual(resolved.selections.map(s=>ctx.textPolicy(s)),['aplus-panel','aplus-mobile','aplus-panel','aplus-mobile','aplus-panel','aplus-mobile','aplus-panel','aplus-mobile','aplus-panel','aplus-mobile','aplus-panel','aplus-mobile','aplus-label','aplus-label']);
  assert.deepEqual(resolved.selections.map(s=>s.jobInputs.logoPolicy.treatment),['include','include',...Array(12).fill('omit')]);
  assert.deepEqual(resolved.selections.map(s=>[s.description.dimensions.width,s.description.dimensions.height]),M.aplusSlots('premium').map(s=>[s.width,s.height]));
- const t=treatments.capture(resolved.selections);assert.ok(t.placements.every(x=>x.treatmentIds.includes('amazon-image-aplus-page')));
+ const t=treatments.capture(resolved);assert.ok(t.placements.every(x=>x.treatmentIds.includes('amazon-image-aplus-page')));
  assert.equal(readability.policyFor({id:p.placementIds[0],width:1464,height:600}).classId,'aplus-panel');assert.equal(readability.policyFor({id:p.placementIds[1],width:600,height:450}).classId,'aplus-mobile');assert.equal(readability.policyFor({id:p.placementIds[12],width:650,height:350}).classId,'aplus-image');
  const story=pageProfile(brand,'brand-story','brand');assert.ok(story.p,'Brand Story works without a product');assert.deepEqual(story.resolved.selections.map(s=>ctx.textPolicy(s)),['none','none','aplus-label','aplus-label','aplus-label']);assert.ok(story.resolved.selections.every(s=>s.jobInputs.logoPolicy.treatment==='omit'));
 });
@@ -57,7 +57,8 @@ test('the Studio request pins the A+ contract, supplied wording and the same SKU
  const r=require('../../lib/creative-ai/runtime/studio-generation').aplusRequest(p,{promotionMode:'No',offer:'Hidden'},d,product);
  assert.equal(r.aplusVersion,1);assert.deepEqual(Object.keys(r.jobInputs),p.placementIds);assert.equal(Object.values(r.logoTreatmentByPlacement).filter(v=>v==='include').length,2);
  assert.deepEqual(r.aplusSuppliedText,[d.brief],'offer fields are used only when the user says the asset has an offer');
- assert.equal(r.aplusTechnology.productId,'product-abc');assert.equal(r.aplusTechnology.group,'a-plus-content');
+ const tech=require('../../lib/creative-ai/runtime/studio-generation').technologyRequest({...d,brandId:'brand-duroflex',messageType:'Technology'},product);assert.equal(tech.messageType,'Technology');assert.equal(tech.technologyImage.productId,'product-abc');assert.equal(tech.technologyImage.group,'a-plus-content','the official A+ picture, never an icon');
+ assert.equal(require('../../lib/creative-ai/runtime/studio-generation').technologyRequest({...d,brandId:'brand-sleepyhead'},product).technologyImage,undefined,'another brand\'s product picture is never pinned');
  assert.deepEqual(require('../../lib/creative-ai/runtime/studio-generation').aplusRequest(p,{promotionMode:'Yes',offer:'Flat 30% off',terms:'On selected sizes'},d,product).aplusSuppliedText,[d.brief,'Flat 30% off','On selected sizes']);
 });
 
@@ -71,7 +72,7 @@ test('technology picture comes from the selected brand\'s own saved product page
  }
  assert.ok(Object.keys(found).length>=1,'saved product library available for at least one brand');
  const products={read:async()=>({id:'product-x',brandId:'brand-other',pageUrl:'https://other.test/p'}),savedImage:async()=>({bytes:Buffer.from('x')})};
- await assert.rejects(aplus.loadTechnologyImage({brands:{products}},{brandId:'brand-duroflex',productPageUrl:'https://other.test/p',aplusTechnology:{productId:'product-x',url:'https://other.test/a.jpg',sha256:'0'.repeat(64)}}),/another product or brand/);
+ await assert.rejects(aplus.loadTechnologyImage({brands:{products}},{brandId:'brand-duroflex',productPageUrl:'https://other.test/p',technologyImage:{productId:'product-x',url:'https://other.test/a.jpg',sha256:'0'.repeat(64)}}),/another product or brand/);
 });
 
 // ---- Lean planning with a fake provider ------------------------------------------------------------
@@ -94,7 +95,7 @@ async function fixture(t,{brand='Duroflex',type='premium',techFacts=true,techIma
  const techBytes=await sharp({create:{width:1200,height:400,channels:3,background:'#aa3322'}}).jpeg().toBuffer(),techHash=require('crypto').createHash('sha256').update(techBytes).digest('hex');
  const {p,resolved}=pageProfile(brand,type);
  const intake={brandId,brandUrl:'https://'+brand.toLowerCase()+'.test/',brief,productName:brand+' Ortho Mattress',productPageUrl:'https://'+brand.toLowerCase()+'.test/products/exact',productVariantId:'queen',originalArtworkVersion:1,leanWorkflowVersion:1,...(pinned?{aplusVersion:1}:{}),conceptRoutes:['continuity','exploration'],approvedLogoReference:{assetId:'approved-logo'},productReferencePolicy:{sourceAssetId:'sku-photo',referenceAssetIds:['sku-photo'],variant:{id:'queen',sku:'EXACT-Q',name:'Queen'}},
-  placementIds:p.placementIds,customProfiles:p.customProfiles,jobInputs:p.jobInputs,logoTreatmentByPlacement:p.logoTreatment,aplusSuppliedText:[brief],...(techImage?{aplusTechnology:{productId:'product-exact',url:'https://'+brand.toLowerCase()+'.test/a.jpg',sha256:techHash,label:'Product Detail Experience',group:'a-plus-content'}}:{})};
+  placementIds:p.placementIds,customProfiles:p.customProfiles,jobInputs:p.jobInputs,logoTreatmentByPlacement:p.logoTreatment,aplusSuppliedText:[brief],...(techImage?{technologyImage:{productId:'product-exact',brandId,url:'https://'+brand.toLowerCase()+'.test/a.jpg',sha256:techHash,label:'Product Detail Experience',group:'a-plus-content'}}:{})};
  const selection=resolved.selections.map(s=>({id:s.id,description:s.description,jobInputs:s.jobInputs}));
  const config=policy.configure({maxConcurrentUnits:3,maxReasoningCalls:200,jobTimeoutMs:3600000},intake),job=await store.create(intake,config,selection);
  const facts=techFacts?[{id:'fact-tech',status:'supported',text:'5 Zone Orthopedic Support: targeted support layers',sourceIds:[]},{id:'fact-cover',status:'supported',text:'Washable cover',sourceIds:[]}]:[{id:'fact-cover',status:'supported',text:'Washable cover that is easy to clean',sourceIds:[]}];
@@ -132,7 +133,7 @@ for(const brand of brands)test(brand+': the technology panel cites the SKU techn
  const desktop=tech.find(r=>r.canvas.width===1464);assert.ok(desktop.plan.pages.find(p=>p.id===desktop.placementId).copy.some(c=>c.factIds.includes('fact-tech')&&c.text==='5 Zone Orthopedic Support'));
  for(const r of tech){assert.ok(r.attachments.some(a=>a.roles.includes('technology')),'technology picture attached');assert.match(r.prompt,/official technology picture/);}
  assert.ok(f.records.filter(r=>!tech.includes(r)).every(r=>!r.attachments.some(a=>a.roles.includes('technology'))),'only the technology panel gets it');
- assert.ok(f.calls.find(c=>c.kind==='lean-planning').images.some(i=>i.id==='aplus-technology-image'),'the planner sees the official picture');
+ assert.ok(f.calls.find(c=>c.kind==='lean-planning').images.some(i=>i.id==='technology-image'),'the planner sees the official picture');
  const bad=structuredClone(planFor(f.records[0].input));bad.pages.find(p=>p.id===desktop.placementId).copy=bad.pages.find(p=>p.id===desktop.placementId).copy.slice(0,2);
  assert.throws(()=>planning.validatePlan(bad,f.records[0].input),/technology panel must name the SKU technology/);
  const none=await fixture(t,{brand,techFacts:false});const a=none.records[0].input.aplus;

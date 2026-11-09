@@ -901,7 +901,7 @@ test('Downloads survive a same-page refresh but cancel on navigation or brand sw
 test('Amazon named image presets and real WebP downloads retain exact canvases for both brands',{timeout:90000},async()=>{
  const f=await fixture();try{const p=f.page,sharp=require('sharp');
  for(const [index,brand]of brands.entries()){
-  for(const [name,preset,dimensions]of [['Amazon A+ Feature Module','Amazon feature module',[[300,300]]],['Amazon A+ Lifestyle — Image Header','Amazon lifestyle module',[[970,600]]],['Amazon Brand Story','Amazon Brand Story',[[1464,625],[463,625],[362,453],[362,453]]]]){
+  for(const [name,preset,dimensions]of [['Amazon A+ Feature Module','Amazon feature module',[[300,300]]],['Amazon A+ Lifestyle — Image Header','Amazon lifestyle module',[[970,600]]],['Amazon Brand Story','Amazon A+ page — Brand Story',[[1464,625],[463,625],[362,453],[362,453],[362,453]]]]){
    await p.goto(f.url+'?brand='+brand.id+'#recipes');const entry=p.locator('[data-action=quick-recipe][data-amazon-preset="'+preset+'"]');assert.ok((await entry.innerText()).includes(name));await entry.click();await p.waitForSelector('#field-brief');
    assert.equal(await p.locator('[data-static-key=amazonPreset]').inputValue(),preset);assert.equal(await p.locator('[data-prop=formatId]').count(),0);assert.equal(await p.locator('.static-part').count(),0);assert.match(await p.locator('.asset-requirements-overview').innerText(),new RegExp(dimensions.length+' image'));
    assert.equal(await p.locator('[data-static-part][data-static-key=width]').count(),0);
@@ -925,10 +925,11 @@ test('Amazon named image presets and real WebP downloads retain exact canvases f
 test('A+ image brief and Premium slot choices persist without copy fields for both brands',{timeout:90000},async()=>{
  const f=await fixture();try{const p=f.page;
  for(const brand of brands){
-  await p.goto(f.url+'?brand='+brand.id+'#recipes');await p.locator('[data-action=quick-recipe][data-amazon-preset="Amazon Brand Story"]').click();await p.waitForSelector('#field-brief');
+  // 9 Nov 2026: the Brand Story entry now starts the whole Brand Story page (story focus replaces brandIdea).
+  await p.goto(f.url+'?brand='+brand.id+'#recipes');await p.locator('[data-action=quick-recipe][data-amazon-preset="Amazon A+ page — Brand Story"]').click();await p.waitForSelector('#field-brief');
   assert.equal(await p.locator('[data-static-key=copy]').count(),0);assert.equal(await p.locator('[data-static-key=eligibility]').count(),0);
-  await fillControl(p,p.locator('[data-static-key=brandIdea]'),'Rest through spaces and materials');await p.locator('#field-brief').fill('An architectural frame');await brandOnly(p);await settleAutosave(p);await p.reload();await p.waitForSelector('#field-brief');
-  assert.equal(await p.locator('[data-field=productId]').count(),0);const saved=await p.evaluate(()=>StudioModel.storage(localStorage).read(window.activeBrand.id,location.hash.split('/')[1]));assert.equal(saved.focus,'brand');assert.equal(saved.brief,'An architectural frame');assert.equal(saved.outputs[0].staticValues.brandIdea,'Rest through spaces and materials');
+  await fillControl(p,p.locator('[data-static-key=storyFocus]'),'Rest through spaces and materials');await p.locator('#field-brief').fill('An architectural frame');await brandOnly(p);await settleAutosave(p);await p.reload();await p.waitForSelector('#field-brief');
+  assert.equal(await p.locator('[data-field=productId]').count(),0);const saved=await p.evaluate(()=>StudioModel.storage(localStorage).read(window.activeBrand.id,location.hash.split('/')[1]));assert.equal(saved.focus,'brand');assert.equal(saved.brief,'An architectural frame');assert.equal(saved.outputs[0].staticValues.storyFocus,'Rest through spaces and materials');
   await p.goto(f.url+'?brand='+brand.id+'#recipes');await p.locator('[data-action=quick-recipe][data-amazon-preset="Amazon Premium — Full-width image"]').click();await p.waitForSelector('#field-brief');
   await chooseSelect(p,p.locator('[data-static-key=amazonPreset]'),'Amazon Premium — Image carousel');await chooseSelect(p,p.locator('[data-static-key=imageCount]'),'6');assert.match(await p.locator('.asset-requirements-overview').innerText(),/12 images/);await p.reload();await p.waitForSelector('#field-brief');assert.match(await p.locator('.asset-requirements-overview').innerText(),/12 images/);
   await chooseSelect(p,p.locator('[data-static-key=amazonPreset]'),'Amazon Premium — Four-column images');assert.match(await p.locator('.asset-requirements-overview').innerText(),/4 images/);await chooseSelect(p,p.locator('[data-static-key=imageCount]'),'3');assert.match(await p.locator('.asset-requirements-overview').innerText(),/3 images/);

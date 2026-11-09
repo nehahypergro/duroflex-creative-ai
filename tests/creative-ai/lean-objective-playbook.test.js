@@ -35,9 +35,9 @@ test('rules differ by objective and by format, and never license invented offers
 });
 
 test('new lean jobs pin the playbook and the pin survives the provider snapshot',()=>{
- const config=policy.configure({},{leanWorkflowVersion:1});assert.equal(config.objectivePlaybookVersion,1);
+ const config=policy.configure({},{leanWorkflowVersion:1});assert.equal(config.objectivePlaybookVersion,2,'new jobs pin playbook v2 (9 Nov 2026)');
  assert.equal(policy.configure({},{}).objectivePlaybookVersion,undefined);
- const snap=providerConfig.snapshot?providerConfig.snapshot(config):null;if(snap)assert.equal(snap.objectivePlaybookVersion,1);
+ const snap=providerConfig.snapshot?providerConfig.snapshot(config):null;if(snap)assert.equal(snap.objectivePlaybookVersion,2);
 });
 
 for(const brand of ['Duroflex','Sleepyhead'])test(brand+': pinned planning packet carries the objective x format rule as a planning-only decision',()=>{
@@ -63,4 +63,29 @@ test('historical jobs without the pin keep their packet unchanged',()=>{
 
 test('a pinned job that still renders two options says so',()=>{
  const c=context('Duroflex',{options:policy.jobOptions({runtimeConfig:{}})}),input=ctx.packet(c,c.job.selection).input;assert.match(input.renderingContract,/two image models/);
+});
+
+// Live run 9 Nov 2026 (Posture Perfect, Purchase): the Studio stores the chosen objective in
+// intake.objective as its internal value ('action'), with the label on job.submittedBrief, so the
+// playbook was silently skipped. The label wins; internal values map back; 'other' stays unknown.
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': the playbook reads the Studio objective as it is actually saved',()=>{
+ assert.equal(P.objective('action'),'Purchase');assert.equal(P.objective('awareness'),'Awareness');assert.equal(P.objective('consideration'),'Consideration');assert.equal(P.objective('other'),null);
+ const c=context(brand);c.intake.objective='action';c.job.submittedBrief={objective:'Purchase'};
+ let r=ctx.packet(c,c.job.selection).input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');assert(r,'playbook applies to a saved Studio job');assert.match(r.text,/PURCHASE/);
+ c.intake.objective='other';c.job.submittedBrief={objective:'Education'};
+ r=ctx.packet(c,c.job.selection).input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');assert.match(r.text,/EDUCATION/,'the submitted label tells Education apart from Engagement');
+ delete c.job.submittedBrief;c.intake.objective='action';
+ r=ctx.packet(c,c.job.selection).input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');assert.match(r.text,/PURCHASE/,'internal value alone still maps');
+});
+
+// Live run 9 Nov 2026: Purchase ads came back with feature-label headlines ("Pocket springs +
+// memory foam.", "3-zoned pocket spring layer") and only a "Shop now" button. Playbook v2 (new
+// jobs) asks for a direct, buyer-focused headline; v1 jobs keep their saved wording.
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': Purchase playbook v2 asks for persuasive, buyer-focused copy for new jobs only',()=>{
+ assert.equal(policy.configure({},{leanWorkflowVersion:1}).objectivePlaybookVersion,2);
+ const c=context(brand),input=ctx.packet(c,c.job.selection).input,r=input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');
+ assert.match(r.text,/OBJECTIVE PLAYBOOK v2/);assert.match(r.text,/not a feature label/i);assert.match(r.text,/second person|you\b/i);assert.match(r.text,/trial|warranty|delivery/i);assert.match(r.text,/never invent offers, prices, deadlines or claims/);
+ const old=context(brand);old.job.runtimeConfig.objectivePlaybookVersion=1;const v1=ctx.packet(old,old.job.selection).input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');
+ assert.match(v1.text,/OBJECTIVE PLAYBOOK v1/);assert.doesNotMatch(v1.text,/not a feature label/i);
+ const aware=context(brand,{objective:'Awareness'}),a=ctx.packet(aware,aware.job.selection).input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');assert.match(a.text,/AWARENESS/);
 });

@@ -20,7 +20,7 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   const id='aiedit-'+b.id.slice(-6),sha='a'.repeat(64),editSha='b'.repeat(64),newSha='c'.repeat(64),fileUrl='/creative-ai/api/jobs/'+id+'/files/static-lean-x.png',v1='creative-11111111-1111-1111-1111-111111111111',v2='creative-22222222-2222-2222-2222-222222222222';
   const editUrl=v=>'/creative-ai/api/jobs/'+id+'/versions/'+v+'/files/static-ai-edit-'+v.slice(9,17)+'.png';
   const job={id,name:'Pillow launch',brandId:b.id,status:'finished',createdAt:'2026-11-08T10:00:00Z',updatedAt:'2026-11-08T10:05:00Z',activeStages:[],intake:{brandId:b.id,campaignName:'Pillow launch',conceptRoutes:['continuity'],leanWorkflowVersion:1},placements:[{id:'portrait',name:'Instagram portrait',dimensions:{width:1080,height:1350}}],results:[{route:'continuity',placementId:'portrait',imageUrl:fileUrl,width:1080,height:1350,sha256:sha,originalArtwork:true,editable:false,ready:true,qualityVerified:true,leanWorkflowVersion:1,leanConformanceVersion:1,visualReview:{status:'completed',conclusion:'no_mismatch'}}]};
-  jobs.push(job);state[id]={active:'original',versions:[{id:'original',label:'Original',status:'finished',result:{imageUrl:fileUrl,sha256:sha,ready:true,check:'checked'}},{id:v1,status:'finished',instruction:'Make the background light blue',annotations:[],masked:false,sourceVersionId:'original',result:{imageUrl:editUrl(v1),sha256:editSha,ready:false,check:'not-checked'},costs:{currency:'INR',estimatedTotal:9.4,rateDate:'2026-10-09'}}]};
+  jobs.push(job);state[id]={active:'original',versions:[{id:'original',label:'Original',status:'finished',result:{imageUrl:fileUrl,sha256:sha,ready:true,check:'checked'}},{id:v1,status:'finished',instruction:'Make the background light blue',annotations:[],masked:false,sourceVersionId:'original',result:{imageUrl:editUrl(v1),sha256:editSha,ready:false,check:'flagged',productCheck:{status:'flagged',problems:[{name:'Product identity',evidence:'The quilting pattern differs from the reference angles.',location:'Mattress top'}],unverified:[],productAngles:3}},costs:{currency:'INR',estimatedTotal:9.4,rateDate:'2026-10-09'}}]};
   // A fresh browser context per brand: saved workspace snapshots from the stubbed other-brand prefetch must not leak.
   const page=await browser.newPage({viewport:{width:1366,height:900}});page.on('pageerror',e=>errors.push(e.message));
   // The preview helper serves studio files only; the editor modules come straight from public/.
@@ -31,8 +31,10 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
    if(req.method()!=='GET')return route.fulfill({status:501,json:{error:'Read-only test.'}});
    if(p.endsWith('/ai-edits')){assert.equal(u.searchParams.get('brandId'),b.id,'the editor asks for its own brand');
     // The stubbed edit finishes as soon as the editor checks again.
-    for(const v of s.versions)if(v.status==='running')Object.assign(v,{status:'finished',result:{imageUrl:editUrl(v.id),sha256:newSha,ready:false,check:'not-checked'},costs:{currency:'INR',estimatedTotal:12.31,rateDate:'2026-10-09'}});
-    return route.fulfill({json:{jobId:id,brandId:b.id,route:'continuity',placementId:'portrait',activeVersionId:s.active,estimate:{currency:'INR',perEdit:13,basis:'Estimate from this project’s earlier gpt-image-2 images at list prices. Not a bill.'},versions:s.versions}});}
+    // 9 Nov 2026: the saved version is product-checked next; the editor keeps polling until the check settles.
+    for(const v of s.versions)if(v.result?.check==='checking')Object.assign(v.result,{check:'passed',productCheck:{status:'passed',problems:[],unverified:[],productAngles:3}});
+    for(const v of s.versions)if(v.status==='running')Object.assign(v,{status:'finished',result:{imageUrl:editUrl(v.id),sha256:newSha,ready:false,check:'checking'},costs:{currency:'INR',estimatedTotal:12.31,rateDate:'2026-10-09'}});
+    return route.fulfill({json:{jobId:id,brandId:b.id,route:'continuity',placementId:'portrait',activeVersionId:s.active,estimate:{currency:'INR',perEdit:13,perCheck:2,basis:'Estimate from this project’s earlier gpt-image-2 images at list prices. Not a bill.'},versions:s.versions}});}
    if(p.endsWith('/jobs'))return route.fulfill({json:jobs});if(p.endsWith('/edits'))return route.fulfill({json:[]});if(p.endsWith('/details'))return route.fulfill({json:{units:[]}});
    if(p.endsWith('.png'))return route.fulfill({body:p.includes('ai-edit')?edited:png,contentType:'image/png'});
    return route.fulfill(p==='/creative-ai/api/jobs/'+id?{json:job}:{json:{}});});
@@ -44,7 +46,8 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   const dialog=page.locator('#editableDialog[open]');await dialog.locator('.ec-io .ec-io-version').nth(1).waitFor();
   assert.equal(await dialog.locator('.ec-chat h3').innerText(),'Edit with AI');assert.match(await dialog.locator('.ec-title span').innerText(),/1080 × 1350 px · Image editor/);
   const send=dialog.locator('[data-chat-send]');assert.equal(await send.isDisabled(),true,'Send is disabled until text is typed');
-  assert.match(await dialog.locator('[data-io-cost]').innerText(),/about ₹13 \(estimate\)/);
+  assert.match(await dialog.locator('[data-io-cost]').innerText(),/about ₹13, plus one product check, about ₹2 \(estimates\)/);
+  assert.match(await dialog.locator('.ec-chat-history').innerText(),/Check found a problem: The quilting pattern differs from the reference angles\. \(Mattress top\)/,'a flagged check is shown in plain words');assert.match(await dialog.locator('.ec-io-version').nth(1).innerText(),/Check found a problem/);
   assert.equal(await dialog.locator('.ec-io-version').count(),2);assert.match(await dialog.locator('.ec-chat-history').innerText(),/Make the background light blue/);
   /* 9 Nov 2026 ("i dont want box. just pins/comments that act as edits"): no Box or Pin tool buttons; clicking the design drops a pin with its own comment box. */
   assert.equal(await dialog.locator('[data-chat-box]').count(),0,'no Box tool');assert.equal(await dialog.locator('[data-chat-pin]').count(),0,'no separate Pin tool to switch on');
@@ -79,6 +82,8 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),0,'pins clear after sending');
   // The new version is shown on the canvas (not selected) with a "Use this version" choice.
   await page.waitForFunction(()=>/Version 2 is ready/.test(document.querySelector('#editableDialog .ec-chat-history')?.textContent||''));
+  await page.waitForFunction(()=>/Checked — product looks right \(compared with 3 product photos\)/.test(document.querySelector('#editableDialog .ec-chat-history')?.textContent||''),null,{timeout:20000});
+  assert.doesNotMatch(await dialog.locator('.ec-io-version').nth(2).innerText(),/Ready|Checks passed/,'a checked edit is never shown as Ready');
   assert.match(await dialog.locator('[data-io-image]').getAttribute('src'),/static-ai-edit-22222222/);assert.match(await dialog.locator('[data-io-banner]').innerText(),/Viewing Version 2/);
   assert.match(await dialog.locator('.ec-chat-history').innerText(),/Make this vase white[\s\S]*Remove this lamp/);assert.match(await dialog.locator('.ec-chat-history').innerText(),/2 pins/);assert.match(await dialog.locator('.ec-chat-history').innerText(),/₹12\.31 \(estimate/);
   assert.equal(await send.isDisabled(),true,'edits start from the version in use, not the one being viewed');
