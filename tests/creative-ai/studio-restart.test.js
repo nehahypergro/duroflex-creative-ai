@@ -5,3 +5,21 @@ test('Restart uses exact saved inputs for both brands, preserves history and ded
  for(const brand of ['Duroflex','Sleepyhead']){const f=fixture(brand),p=await prepare(f.runtime,f.original.id,brand);assert.equal(p.cost.currency,'INR');assert.equal(f.calls,0);const input={brandId:brand,token:p.token,confirmPaid:true};const results=await Promise.all([submit(f.runtime,f.original.id,input),submit(f.runtime,f.original.id,input)]);assert.equal(f.calls,1);assert.equal(results[0].id,results[1].id);assert.equal(results[1].reused,true);const child=await f.runtime.store.read(results[0].id);for(const k of ['brief','productVariantId','productAssetId','selectedReferenceIds','placementIds'])assert.deepEqual(child.intake[k],f.original.intake[k]);assert.equal(JSON.stringify(f.original),f.before);assert.equal((await prepare(f.runtime,f.original.id,brand)).existingId,child.id);}
 });
 test('Restart refuses wrong brands, active jobs, missing paid consent and stale tokens',async()=>{const f=fixture('Duroflex'),p=await prepare(f.runtime,f.original.id);await assert.rejects(submit(f.runtime,f.original.id,{brandId:'Sleepyhead',token:p.token,confirmPaid:true}),/another brand/);await assert.rejects(submit(f.runtime,f.original.id,{brandId:'Duroflex',token:p.token}),/paid attempt/);await assert.rejects(submit(f.runtime,f.original.id,{brandId:'Duroflex',token:'old',confirmPaid:true}),/paid attempt/);f.original.status='running';await assert.rejects(prepare(f.runtime,f.original.id),/Only/);assert.equal(f.calls,0);});
+// Regression (9 Nov 2026 live run, item 9): the recovery screen said "Estimated ₹46–₹47 for 2 options"
+// for a job that makes one design per format. A new attempt is admitted under the current lean policy
+// (one option), so the estimate uses that option count and the job's pages x options.
+test('Restart estimate uses the attempt\'s option count and pages, not a fixed two options (both brands)',async()=>{
+ const fs=require('fs/promises'),os=require('os'),path=require('path'),root=await fs.mkdtemp(path.join(os.tmpdir(),'studio-restart-estimate-'));
+ try{await fs.mkdir(path.join(root,'output/cost-tracking'),{recursive:true});await fs.writeFile(path.join(root,'output/cost-tracking/currency.json'),JSON.stringify({displayCurrency:'INR',usdToInr:100,rateDate:'2026-11-01',source:'https://example.test/fx'}));await fs.writeFile(path.join(root,'workspace.json'),JSON.stringify({artworkDelivery:'original',artworkWorkflow:'lean-v1'}));
+  const at='2026-11-08T00:01:00Z',r=(kind,model,key,out)=>({kind,model,recordedAt:at,requestKey:key,usage:kind==='image'?{input_tokens:0,output_tokens:out,input_tokens_details:{text_tokens:0,image_tokens:0}}:{input_tokens:0,output_tokens:out}});
+  for(const brandId of ['Duroflex','Sleepyhead']){
+   const dims={width:1080,height:1350},sel=n=>Array.from({length:n},(_,i)=>({description:{id:'p'+i,dimensions:dims}}));
+   const done={id:'done',status:'finished',createdAt:'2026-11-08T00:00:00Z',intake:{brandId,leanWorkflowVersion:1},runtimeConfig:{roleModels:{'lean-planning':{model:'gpt-6.1-sol'}},leanImageOptions:[{route:'continuity',model:'gpt-image-2'}]},selection:sel(1),results:[{imageUrl:'a'}],budget:{receipts:[r('reasoning','gpt-6.1-sol','plan',20000),r('image','gpt-image-2','i1',5000)],requestStates:{}}};
+   const failed={id:'creative-failed',status:'failed',intake:{brandId,leanWorkflowVersion:1,conceptRoutes:['continuity','exploration']},runtimeConfig:{leanImageOptions:[{route:'continuity',model:'gpt-image-2'}]},selection:sel(1),results:[],budget:{receipts:[]}};
+   const runtime={root,config:{},store:{read:async id=>[done,failed].find(j=>j.id===id),list:async()=>[done,failed]}};
+   const p=await prepare(runtime,'creative-failed',brandId);
+   assert.equal(p.cost.status,'historical-estimate');assert.doesNotMatch(p.cost.message,/2 options/);assert.match(p.cost.message,/one design per format/);
+   failed.selection=sel(3);const set=await prepare(runtime,'creative-failed',brandId);assert.equal(set.cost.status,'scaled-estimate');assert.match(set.cost.message,/3 images/,'a three-page set is three images x one option');
+  }
+ }finally{await fs.rm(root,{recursive:true,force:true});}
+});

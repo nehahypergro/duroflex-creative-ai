@@ -58,3 +58,13 @@ test('local-language lines that also cite their facts, and messages sent beside 
  assert.doesNotThrow(()=>validateCitations([{text:'Cove Brushed Nickel Grey Leatherette + Pumice Stone Grey Fabric 3 Seater Sofa + Lounger देखें: https://www.duroflexworld.com/',factIds:['product-cove'],role:'CTA — accompanying WhatsApp message only, not embedded'}],cove));
  assert.throws(()=>validateCitations([{text:'Cove सोफ़ा जो आपकी कमर दर्द को हमेशा के लिए ठीक करे',factIds:['product-cove'],role:'body'}],cove),/separate copy block/,'a long local claim citing only the name stays blocked');
 });
+
+// Live run 9 Nov 2026 (A+ Premium, Posture Perfect): "Queen variant" citing the variant ID failed the
+// whole plan because "variant" is not in the official name. Plain label words beside the official
+// size name are allowed; claims still need fact citations and unknown words still fail.
+const planning920=require('../../lib/creative-ai/lean/planning');
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': plain size/variant label words may sit beside the official variant name',()=>{
+ const product={id:'p1',name:brand+' Posture Perfect Mattress',variant:{id:'v1',name:'Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)',options:[]},facts:[]};
+ for(const text of ['Queen variant','Queen size','Size: Queen','Queen 72 x 60 size'])assert.doesNotThrow(()=>planning920.validateCitations([{role:'variant label',text,factIds:['v1']}],product),text);
+ assert.throws(()=>planning920.validateCitations([{role:'variant label',text:'Queen bestseller',factIds:['v1']}],product),/does not support copy/);
+});

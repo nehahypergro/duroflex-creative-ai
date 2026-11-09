@@ -31,3 +31,28 @@ test('lean estimates use runs planned by the pinned planner and scale two-option
  assert.ok(one.samples[0].inr<two.samples[0].inr,'one design costs less than two options');assert.equal(one.samples[0].adjustedFromOptions,2);assert.match(one.message,/one design per format/);assert.match(one.message,/scaled to one option/);
  }finally{await fs.rm(root,{recursive:true,force:true});}
 });
+
+// Regression (9 Nov 2026 live run, item 17): a read-back for Facebook Story/Feed, PMax and A+ said
+// "Full campaign estimate unavailable: some assets have no comparable completed runs". A format with no
+// completed run of the same size now falls back to this brand's per-image and per-plan costs from its
+// other completed lean runs (same pinned models), clearly labelled. "Unavailable" only when the brand
+// has no completed run at all. The campaign total accepts these scaled estimates.
+test('a format with no comparable runs is estimated from this brand\'s other formats (both brands)',async()=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'studio-estimate-fallback-'));try{await fs.mkdir(path.join(root,'output/cost-tracking'),{recursive:true});await fs.writeFile(path.join(root,'output/cost-tracking/currency.json'),JSON.stringify({displayCurrency:'INR',usdToInr:100,rateDate:'2026-11-01',source:'https://example.test/fx'}));await fs.writeFile(path.join(root,'workspace.json'),JSON.stringify({artworkDelivery:'original',artworkWorkflow:'lean-v1'}));
+  const at='2026-11-08T00:01:00Z',r=(kind,model,key,out)=>({kind,model,recordedAt:at,requestKey:key,usage:kind==='image'?{input_tokens:0,output_tokens:out,input_tokens_details:{text_tokens:0,image_tokens:0}}:{input_tokens:0,output_tokens:out}});
+  const job=(brandId,id,{planner='gpt-6.1-sol',image='gpt-image-2'}={})=>({id,status:'finished',createdAt:'2026-11-08T00:00:00Z',intake:{brandId,leanWorkflowVersion:1},runtimeConfig:{roleModels:{'lean-planning':{model:planner}},leanImageOptions:[{route:'continuity',model:image}]},selection:[{description:{dimensions:{width:1080,height:1080}}}],results:[{imageUrl:'a'}],budget:{receipts:[r('reasoning',planner,'plan',20000),r('image',image,'i1',5000),r('reasoning','gpt-6-luna','v1',10000)],requestStates:{}}});
+  const {estimateBrief}=require('../../lib/creative-ai/runtime/studio-estimate');
+  for(const [brandId,other] of [['brand-duroflex','brand-sleepyhead'],['brand-sleepyhead','brand-duroflex']]){
+   const runtime={root,config:{},store:{list:async()=>[job(other,'other-brand'),job(brandId,'old-models',{image:'gpt-image-2.6-sunburst'}),job(brandId,'same-brand')]}};
+   const story=await estimateBrief(runtime,brandId,{width:1080,height:1920,unitCount:1},1);
+   assert.equal(story.status,'scaled-estimate');assert.deepEqual(story.samples.map(s=>s.jobId),['same-brand'],'same brand and same pinned models only');
+   assert.match(story.message,/estimated from this brand’s other formats/);assert.match(story.message,/₹\d+–₹\d+/);assert.ok(story.low>=1&&story.high>=story.low,'a range, never ₹0');
+   const pmax=await estimateBrief(runtime,brandId,{width:1200,height:628,unitCount:4},1);assert.equal(pmax.status,'scaled-estimate');assert.ok(pmax.high>story.high,'four images cost more than one');assert.match(pmax.message,/4 images/);
+   runtime.store.list=async()=>[job(other,'other-brand')];const none=await estimateBrief(runtime,brandId,{width:1080,height:1920,unitCount:1},1);assert.equal(none.status,'unavailable');assert.match(none.message,/no completed run/);
+  }
+  const {campaignCost}=require('../../lib/creative-ai/runtime/studio-generation');
+  const mixed=campaignCost([{prepared:{cost:{status:'historical-estimate',low:10,high:12}}},{prepared:{cost:{status:'scaled-estimate',low:40,high:60}}}]);
+  assert.equal(mixed.status,'scaled-estimate');assert.equal(mixed.low,50);assert.equal(mixed.high,72);assert.match(mixed.message,/₹50–₹72 across 2 asset jobs/);assert.match(mixed.message,/this brand’s other formats/);
+  assert.equal(campaignCost([{prepared:{cost:{status:'historical-estimate',low:10,high:12}}},{prepared:{cost:{status:'unavailable'}}}]).status,'unavailable');
+ }finally{await fs.rm(root,{recursive:true,force:true});}
+});

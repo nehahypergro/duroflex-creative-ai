@@ -106,7 +106,7 @@ window.StudioData = (() => {
     resumePdp:id=>post('jobs/'+encodeURIComponent(id)+'/pdp/resume',{}),
     componentRepairPlan:(id,scope)=>get('jobs/'+encodeURIComponent(id)+'/component-recovery?route='+encodeURIComponent(scope.route)+'&placementId='+encodeURIComponent(scope.placementId)),
     componentRepair:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/component-recovery',input),
-    retryImageChecks:(id,scope)=>post('jobs/'+encodeURIComponent(id)+'/retry-checks',scope),
+    retryImageChecks:(id,scope)=>post('jobs/'+encodeURIComponent(id)+'/retry-checks',scope),leanRecheck:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/lean-recheck',body),
     products:brandId=>get('brands/'+encodeURIComponent(brandId)+'/products'),
     // One small paid reasoning call; the result only fills the appreciation page for confirmation.
     readBrief:(brand,body)=>post('brands/'+encodeURIComponent(brand.id)+'/brief-read',{...body,brandName:brand.name}),

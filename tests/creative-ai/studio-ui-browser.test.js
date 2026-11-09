@@ -384,9 +384,10 @@ test('Brief autosaves each brand, carries selected format and opens exact saved 
 
 test('Navigation continuity: section switching, filter links, reloadable screens and editor origin',{timeout:90000},async()=>{
  const f=await fixture();try{const p=f.page;
- await p.goto(f.url+'?brand='+brands[0].id+'#projects?status=review&sort=name&q=Duroflex');await p.waitForSelector('.project-row');assert.equal(await p.locator('#projectSearch').inputValue(),'Duroflex');assert.equal(await p.locator('#projectSort').inputValue(),'name');
+ await p.goto(f.url+'?brand='+brands[0].id+'#projects?status=check&sort=name&q=Duroflex'); // 9 Nov 2026: unchecked fixture designs read "Check before using", not Ready
+ await p.waitForSelector('.project-row');assert.equal(await p.locator('#projectSearch').inputValue(),'Duroflex');assert.equal(await p.locator('#projectSort').inputValue(),'name');
  assert.deepEqual(await p.locator('#sidebarNavigation a[data-nav]').evaluateAll(els=>els.map(e=>e.textContent.trim())),['Home','Projects','Favourites','Brand Library']);assert.equal(await p.locator('#sidebarNavigation .usage-link').count(),0);await p.locator('#accountTrigger').click();assert.ok(await p.locator('#accountMenu a[href="#settings/trash"]').isVisible());await p.keyboard.press('Escape');
- await p.locator('#projectSearch').fill('');await p.locator('[data-brand="'+brands[1].id+'"]').click();await p.waitForSelector('.project-row');assert.match(p.url(),/#projects\?status=ready&sort=name$/);assert.match(await p.locator('.project-row').innerText(),/Sleepyhead/);
+ await p.locator('#projectSearch').fill('');await p.locator('[data-brand="'+brands[1].id+'"]').click();await p.waitForSelector('.project-row');assert.match(p.url(),/#projects\?status=check&sort=name$/);assert.match(await p.locator('.project-row').innerText(),/Sleepyhead/);
  await p.locator('.project-name').click();await p.waitForSelector('.deliverable-row');await p.locator('[data-brand="'+brands[0].id+'"]').click();await p.waitForSelector('.project-row');assert.match(p.url(),/#projects$/);assert.match(await p.locator('.project-row').innerText(),/Duroflex/);
  await p.locator('[data-nav=library]').click();await p.locator('[data-library-tab=products]').click();await p.locator('#productLibrarySearch').fill('saved');await p.waitForURL(/#library\/products\?q=saved$/);assert.deepEqual(f.errors,[]);assert.match(p.url(),/#library\/products\?q=saved$/);await p.reload();await p.waitForSelector('#productLibrarySearch');assert.equal(await p.locator('#productLibrarySearch').inputValue(),'saved');await p.locator('[data-brand="'+brands[1].id+'"]').click();await p.waitForSelector('#productLibrarySearch');assert.match(p.url(),/#library\/products$/);assert.equal(await p.locator('#productLibrarySearch').inputValue(),'');
  for(const route of ['create','creatives','tools','search']){await p.goto(f.url+'?brand='+brands[1].id+'#'+route);await p.waitForSelector('#taskPanel:not([hidden])');assert.ok(await p.locator('#taskTitle').innerText());await p.reload();await p.waitForSelector('#taskPanel:not([hidden])');assert.match(p.url(),new RegExp('#'+route));await p.locator('[data-action=close-task]').click();await p.waitForSelector('.creation-hero');}
@@ -397,7 +398,7 @@ test('Navigation continuity: section switching, filter links, reloadable screens
 test('Returning from a project restores brand-scoped filters, scroll and the opened card',{timeout:60000},async()=>{
  const f=await fixture();try{const p=f.page;await p.setViewportSize({width:900,height:500});
  for(const [index,brand] of brands.entries()){
-  await p.goto(f.url+'?brand='+brand.id+'#projects?status=review');await p.waitForSelector('.project-row');
+  await p.goto(f.url+'?brand='+brand.id+'#projects?status=check');await p.waitForSelector('.project-row'); // 9 Nov 2026: unchecked fixture designs are not Ready
   await p.evaluate(()=>{const st=StudioModel.storage(localStorage);for(let i=0;i<10;i++){const d=StudioModel.startDraft(activeBrand.id,'quick',1);Object.assign(d,{name:'A draft '+i,manualName:true,focus:'brand',brief:'Saved scroll fixture',rtbs:'Supplied feature'});st.save(d);}});
   await p.locator('[data-filter=all]').click();await chooseSelect(p,p.locator('#projectSort'),'name');
   const card=p.locator('.project-row').filter({hasText:brand.name+' campaign'});await card.scrollIntoViewIfNeeded();

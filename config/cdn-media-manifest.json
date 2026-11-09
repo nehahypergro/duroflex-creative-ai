@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-09T11:59:57.592Z",
+  "generatedAt": "2026-11-09T14:42:19.297Z",
   "purpose": "Portable media pointers only. Private workspace metadata is a separate backup.",
   "objects": [
     {
@@ -66,6 +66,18 @@
       "verifiedAt": "2026-10-22T10:07:39.799Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-f2c4124dd29d40850137/identity-profiles/identity-eb2a2a4f-ecec-4f1e-8109-78f0436d865c/reference.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "0090e64838f01f72e7fc4bf4ab76ac270fae6d011d773ee6a41a6b932c4e6529",
+      "bytes": 278210,
+      "mime": "image/webp",
+      "url": "https://cdn2.hypergro.ai/177723889ac4_1794229423730.webp",
+      "storageKeyName": "177723889ac4_1794229423730.webp",
+      "verifiedAt": "2026-11-09T13:03:44.112Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/0090e64838f01f72e7fc4bf4ab76ac270fae6d011d773ee6a41a6b932c4e6529.webp"
       ]
     },
     {
@@ -157,6 +169,19 @@
       "verifiedAt": "2026-10-22T10:08:06.317Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-slide-136.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "01884ec57ac4aa6d52320288f3dcf9141841e853047d44e2dd2bfdbc9f5f5d41",
+      "bytes": 519241,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/1550987b307b_1794230054493.png",
+      "storageKeyName": "1550987b307b_1794230054493.png",
+      "verifiedAt": "2026-11-09T13:14:15.050Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/lean-anchor-e283dd9f23dc0488dc81d029.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-e283dd9f23dc0488dc81d029.png"
       ]
     },
     {
@@ -301,6 +326,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "02b6735bae0f3cfdb9d4047a910feb6d8e19a83caecc7eedfbe7521486deeb25",
+      "bytes": 1587633,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/bcb679d8d25f_1794228866822.png",
+      "storageKeyName": "bcb679d8d25f_1794228866822.png",
+      "verifiedAt": "2026-11-09T12:54:27.777Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-4cd725ddc142d3f8542fd13c.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "03484f22f94af7f10e54b6a2f3021c35c729fc4375273bd8f8a98991125f799a",
       "bytes": 1731043,
       "mime": "image/png",
@@ -360,6 +397,18 @@
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791807048194-b50679/supporting-content/media-34de6893ed48a32b-preview.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791807067969-b92cc3/supporting-content/media-34de6893ed48a32b-preview.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791812770246-62c87b/supporting-content/media-34de6893ed48a32b-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "04785ded49b6b880ffac7b51041bb67e4bde5fc4ce549c02046017a4a2d89f99",
+      "bytes": 1553024,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/b701926947ee_1794228793872.png",
+      "storageKeyName": "b701926947ee_1794228793872.png",
+      "verifiedAt": "2026-11-09T12:53:14.539Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-90e4eead35c7823fb4d8379a.png"
       ]
     },
     {
@@ -690,6 +739,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "0776771390128b030be277a31edda9cbddd0a1052549274bd703a14d28b8c1ad",
+      "bytes": 272675,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/8a547f21ad01_1794225914445.jpeg",
+      "storageKeyName": "8a547f21ad01_1794225914445.jpeg",
+      "verifiedAt": "2026-11-09T12:05:14.777Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/0776771390128b030be277a31edda9cbddd0a1052549274bd703a14d28b8c1ad.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "07972819ae778baa7b92753fc8ba97dce6e337294eaa72475d5f3c49c7d15322",
       "bytes": 412667,
       "mime": "image/png",
@@ -811,6 +872,18 @@
       "verifiedAt": "2026-10-22T10:03:25.902Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-dfb69ef80bb5fad29770/snapshot-1792609721322-766fee/videos/media-696b8ee498b799c9.mp4"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "08939a67e322c122de9d4babf74ce76cee8ad7a0c63d8a355ac636121d72cded",
+      "bytes": 1732691,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/741034ba0f28_1794226041317.png",
+      "storageKeyName": "741034ba0f28_1794226041317.png",
+      "verifiedAt": "2026-11-09T12:07:21.697Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-raw-f2e31be87214f03fb119a7f6.png"
       ]
     },
     {
@@ -2036,6 +2109,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "1538aee39d27bd09c37653f095d8b7b6d0227be1c5ebb4bffd24ea35dd04036a",
+      "bytes": 86820,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/e6344b79a574_1794228731949.jpeg",
+      "storageKeyName": "e6344b79a574_1794228731949.jpeg",
+      "verifiedAt": "2026-11-09T12:52:12.561Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/1538aee39d27bd09c37653f095d8b7b6d0227be1c5ebb4bffd24ea35dd04036a.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "1557fa1ab3e0d0b079a656cedfb8a67cec8551adc669b1194a2eb5bc49061b88",
       "bytes": 186989,
       "mime": "image/jpeg",
@@ -2214,6 +2299,18 @@
       "verifiedAt": "2026-10-22T10:06:35.054Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-3566a343eb36f945fd10/snapshot-1792056680392-bbf483/a-plus-content/media-f31174c07742be9a-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "17364edafc63ae3a59ed6c31866550d8338c2e168b2e51838af1507c0188ad46",
+      "bytes": 1718646,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/839754825309_1794225931963.png",
+      "storageKeyName": "839754825309_1794225931963.png",
+      "verifiedAt": "2026-11-09T12:05:32.590Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-raw-61cf9cb5b6642678ea014718.png"
       ]
     },
     {
@@ -2422,6 +2519,18 @@
       "verifiedAt": "2026-10-22T10:08:19.888Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-slide-97.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "193ba05442811e35bb86ec91665f871e86e475265441f2157d03cd21ad4e92ab",
+      "bytes": 1853581,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/bc4d74f85830_1794229913847.png",
+      "storageKeyName": "bc4d74f85830_1794229913847.png",
+      "verifiedAt": "2026-11-09T13:11:54.273Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-b43c648adbb01b8f41be9167.png"
       ]
     },
     {
@@ -2653,6 +2762,21 @@
       "verifiedAt": "2026-10-22T10:07:16.115Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-b2e17fcf89b99769068e/snapshot-1791916662329-aa43db/a-plus-content/media-b04f1c4df03f2925.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "1b47b3003b4dbc9e704b56e97c2629e22f98a9d027d0a774c50e2be66590ee97",
+      "bytes": 141319,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/d768e50b5e44_1794225915518.jpeg",
+      "storageKeyName": "d768e50b5e44_1794225915518.jpeg",
+      "verifiedAt": "2026-11-09T12:05:15.674Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/1b47b3003b4dbc9e704b56e97c2629e22f98a9d027d0a774c50e2be66590ee97.jpeg",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/1b47b3003b4dbc9e704b56e97c2629e22f98a9d027d0a774c50e2be66590ee97.jpeg",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/1b47b3003b4dbc9e704b56e97c2629e22f98a9d027d0a774c50e2be66590ee97.jpeg",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/1b47b3003b4dbc9e704b56e97c2629e22f98a9d027d0a774c50e2be66590ee97.jpeg"
       ]
     },
     {
@@ -3268,6 +3392,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "20fd71accf7da95b48d601271cd1369139bf58bc98128b664a81fcb4382c0154",
+      "bytes": 530335,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/fef990edf38e_1794228833974.png",
+      "storageKeyName": "fef990edf38e_1794228833974.png",
+      "verifiedAt": "2026-11-09T12:53:54.208Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-bdb831dadaddf95ce447b0d2.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "2101ceba40a330aaa7040780a645926aa899043fd44957162774cb642c25f2cb",
       "bytes": 215930,
       "mime": "image/webp",
@@ -3432,6 +3568,7 @@
         "output/creative-ai/jobs/creative-31219435-60fa-4005-a675-2617a89305e8/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-3155114b-aad9-4b40-b839-6dcc13ab1e67/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-31579094-068d-42b2-9e6b-b427b8ee096c/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-33234892-de4a-4038-bd1f-5289408580c4/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-3966b8fb-b858-4e50-a8fc-8d63c11906d7/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-3c76d923-b793-413e-80e8-23bb406a7adc/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
@@ -3470,6 +3607,8 @@
         "output/creative-ai/jobs/creative-a18acace-c806-44c1-8e1b-ae5b2e29c3b7/refinements/creative-935088e2-9aee-47d8-8454-c8f2eb31cfb8/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-a18acace-c806-44c1-8e1b-ae5b2e29c3b7/refinements/creative-df46d7a8-d580-48f7-aca2-5346ee571ed9/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-a2dab383-8c39-4b87-abe0-058aeef99042/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-ad3f1459-e14e-4b78-a416-b610ecee5162/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-adad7b86-3ee8-4d76-8e61-4ca5a4d5424f/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
         "output/creative-ai/jobs/creative-b3b12294-36e7-4789-b496-9c16222dfc4d/generation-references/216401f4f63521a3979b7dc0596457bbb319eb8bbba574ad0d07703a8e97d097.webp",
@@ -3708,6 +3847,21 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "23e689793984962c5612235607786328d59e80876972c7b591e03dfa9f555f11",
+      "bytes": 114410,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/4bc04976ef1a_1794225915076.jpeg",
+      "storageKeyName": "4bc04976ef1a_1794225915076.jpeg",
+      "verifiedAt": "2026-11-09T12:05:15.240Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/23e689793984962c5612235607786328d59e80876972c7b591e03dfa9f555f11.jpeg",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/23e689793984962c5612235607786328d59e80876972c7b591e03dfa9f555f11.jpeg",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/23e689793984962c5612235607786328d59e80876972c7b591e03dfa9f555f11.jpeg",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/23e689793984962c5612235607786328d59e80876972c7b591e03dfa9f555f11.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "23f9439969a7575cb0b7afdb8336bba8aa2e65da82aa8cc0198f2f7eb488d33b",
       "bytes": 579316,
       "mime": "image/jpeg",
@@ -3767,6 +3921,18 @@
         "output/creative-ai/jobs/creative-e5b7bb9f-c863-4f07-a91d-b5f68db9ef85/generation-references/2467c8760137f6edefd1d07c7d6dfb4090021315226c6830a3cccc45a97e758f.png",
         "output/creative-ai/jobs/creative-e5b7bb9f-c863-4f07-a91d-b5f68db9ef85/static-lean-candidate-8385ef80af304c25d115bb8c.png",
         "output/creative-ai/jobs/creative-e5b7bb9f-c863-4f07-a91d-b5f68db9ef85/static-lean-candidate-raw-8385ef80af304c25d115bb8c.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "24c4a953231e58193fbb6826a580094296f88f2437db8baff10fdf43a8085a1f",
+      "bytes": 1550337,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/97282c1709d1_1794228832848.png",
+      "storageKeyName": "97282c1709d1_1794228832848.png",
+      "verifiedAt": "2026-11-09T12:53:53.746Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-bdb831dadaddf95ce447b0d2.png"
       ]
     },
     {
@@ -3862,6 +4028,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "2593c31a3b7271f3e6943eedabf1af8f883131fef76161e23dd3c961890c8104",
+      "bytes": 1748415,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/b10f676aa565_1794230166796.png",
+      "storageKeyName": "b10f676aa565_1794230166796.png",
+      "verifiedAt": "2026-11-09T13:16:07.457Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-b1cbfc2c1a221e8e80b0039c.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "25a94aa96b09d6dddbc5df9607efc9d6e2b49a2fa89f2886a1ba49d71be08677",
       "bytes": 137274,
       "mime": "image/jpeg",
@@ -3896,6 +4074,18 @@
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791807048194-b50679/a-plus-content/media-5bfa17b898e18fcb.jpg",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791807067969-b92cc3/a-plus-content/media-5bfa17b898e18fcb.jpg",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791812770246-62c87b/a-plus-content/media-5bfa17b898e18fcb.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "25f4180c4c804ac6700b302afd80492ef0c5887a83eeb9c746794a61f740f16b",
+      "bytes": 1789544,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/9a410bb43d0e_1794228794016.png",
+      "storageKeyName": "9a410bb43d0e_1794228794016.png",
+      "verifiedAt": "2026-11-09T12:53:14.914Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-90e4eead35c7823fb4d8379a.png"
       ]
     },
     {
@@ -4158,6 +4348,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "2999325e7d59a1e8cc76ef44ead332c280fa35b44a2b85fe19a0c8cade79712b",
+      "bytes": 513014,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/6a3f609a3fca_1794228732896.png",
+      "storageKeyName": "6a3f609a3fca_1794228732896.png",
+      "verifiedAt": "2026-11-09T12:52:13.478Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-1be2033dde7f032d0b51254f.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "29b9f3f6cdcdfe9f46af524f520e3afb0300406b2f223cd5b2a619b6e43fafb7",
       "bytes": 564635,
       "mime": "image/png",
@@ -4262,6 +4464,18 @@
       "verifiedAt": "2026-11-04T19:50:50.680Z",
       "paths": [
         "output/creative-ai/jobs/creative-2226dc94-6495-443d-af30-1c5aab1a1ad6/raw-artwork.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "2ada7c7aaaeebe9f121cbbd4806a9d79fbb89319042046416e055a7d39d29cd3",
+      "bytes": 3582222,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/8c48c9cc0b6d_1794226044564.png",
+      "storageKeyName": "8c48c9cc0b6d_1794226044564.png",
+      "verifiedAt": "2026-11-09T12:07:24.998Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/static-lean-candidate-eafc33306fdd2ad4161cd6d2.png"
       ]
     },
     {
@@ -4736,6 +4950,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "2fc81fc0d7927839f5d218b3433a12a0eae7185a2fef2a233274011219db9bda",
+      "bytes": 253947,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/dcfcf52b84c5_1794228709081.jpeg",
+      "storageKeyName": "dcfcf52b84c5_1794228709081.jpeg",
+      "verifiedAt": "2026-11-09T12:51:49.775Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/2fc81fc0d7927839f5d218b3433a12a0eae7185a2fef2a233274011219db9bda.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "2ff6d61412cd2b9589e9867c30aa6b863fa1dce1eec6ee2b64ee80d2f736c345",
       "bytes": 965601,
       "mime": "image/png",
@@ -4808,6 +5034,18 @@
       "verifiedAt": "2026-10-22T10:08:02.744Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-slide-11.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "30ed89ef1f08f91e687e8ba852c03331a95f8f58b7b004f769af102dd63064df",
+      "bytes": 1513826,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/91eb707049d8_1794225914147.png",
+      "storageKeyName": "91eb707049d8_1794225914147.png",
+      "verifiedAt": "2026-11-09T12:05:14.772Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/static-lean-raw-eafc33306fdd2ad4161cd6d2.png"
       ]
     },
     {
@@ -5443,6 +5681,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "38d08265036af80c6d201c842c15a8cd57797456ab3dd26802b03aebc89c152c",
+      "bytes": 1466680,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/19dbaa16f71b_1794225941143.png",
+      "storageKeyName": "19dbaa16f71b_1794225941143.png",
+      "verifiedAt": "2026-11-09T12:05:41.741Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/static-lean-raw-035c77f46b19233fcd8be9f1.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "392efa5be45f395c67eea54840499a934b61ef7fa5e9a913213649e4e272a209",
       "bytes": 202747,
       "mime": "image/jpeg",
@@ -5499,6 +5749,18 @@
       "verifiedAt": "2026-10-22T10:08:14.995Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-slide-53.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "399dc706dd1e0942167bb3405aa5000130ebc2b534d63ee5df1d507d024949d9",
+      "bytes": 1200552,
+      "mime": "image/webp",
+      "url": "https://cdn2.hypergro.ai/6b699920cddc_1794226082949.webp",
+      "storageKeyName": "6b699920cddc_1794226082949.webp",
+      "verifiedAt": "2026-11-09T12:08:03.666Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/399dc706dd1e0942167bb3405aa5000130ebc2b534d63ee5df1d507d024949d9.webp"
       ]
     },
     {
@@ -5638,6 +5900,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "3b1fbf2b5a2819b025f156e2821a0c914a6116ad7adb86eddd6a50cc0f362d2d",
+      "bytes": 289533,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/1a8d39c4859e_1794226039769.jpeg",
+      "storageKeyName": "1a8d39c4859e_1794226039769.jpeg",
+      "verifiedAt": "2026-11-09T12:07:20.295Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/3b1fbf2b5a2819b025f156e2821a0c914a6116ad7adb86eddd6a50cc0f362d2d.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "3b22c26567605b34a466520c89feada68f843cfa31aace1df40172b4a81e318d",
       "bytes": 237351,
       "mime": "image/jpeg",
@@ -5754,6 +6028,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "3c3db1817ebdab5a268d55b9315fb4b25e31d9c848da3edecf72adee80ec3bc4",
+      "bytes": 1426929,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/46e663bac744_1794226096346.png",
+      "storageKeyName": "46e663bac744_1794226096346.png",
+      "verifiedAt": "2026-11-09T12:08:17.241Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/static-lean-candidate-raw-035c77f46b19233fcd8be9f1.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "3c495ba72046880537c5dde31d4e3c261d886803a6d7b87724edbcd88c8ce81c",
       "bytes": 2561,
       "mime": "image/png",
@@ -5838,11 +6124,15 @@
       "verifiedAt": "2026-11-09T10:55:14.844Z",
       "paths": [
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
-        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp"
+        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/3d24899b0001b005d407dcd485d52cf6867d07f2a4d19c0c7b3085726806ba6a.webp"
       ]
     },
     {
@@ -6119,6 +6409,18 @@
       "verifiedAt": "2026-10-22T10:07:54.023Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-3d51ae63-ac10-47e4-8deb-da27fd857244-slide-60.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "3f97a3da5da98211f1c7de08c21140be07965175e56abb3201e0bbf34ad7def3",
+      "bytes": 229568,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/50781697b3df_1794228867089.jpeg",
+      "storageKeyName": "50781697b3df_1794228867089.jpeg",
+      "verifiedAt": "2026-11-09T12:54:27.717Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/3f97a3da5da98211f1c7de08c21140be07965175e56abb3201e0bbf34ad7def3.jpeg"
       ]
     },
     {
@@ -6524,6 +6826,20 @@
       "verifiedAt": "2026-11-03T20:11:40.140Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-f7d516fc817c611217c6/snapshot-1793736662051-cd0edd/a-plus-content/media-3cf770b13ee90902-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "42b19f95717601d5ea5c1f51e6abf818889b2afbafd4562cbcb9831c280a9b55",
+      "bytes": 29958,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/482f9b86fbbf_1794225916371.png",
+      "storageKeyName": "482f9b86fbbf_1794225916371.png",
+      "verifiedAt": "2026-11-09T12:05:16.485Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/42b19f95717601d5ea5c1f51e6abf818889b2afbafd4562cbcb9831c280a9b55.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/42b19f95717601d5ea5c1f51e6abf818889b2afbafd4562cbcb9831c280a9b55.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/42b19f95717601d5ea5c1f51e6abf818889b2afbafd4562cbcb9831c280a9b55.png"
       ]
     },
     {
@@ -7030,6 +7346,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "4854e05aad3681ad29088a3b91dcf77195c05073aec0bd965156444b441ba4d3",
+      "bytes": 86082,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/c3ec66ff2db4_1794229498674.jpeg",
+      "storageKeyName": "c3ec66ff2db4_1794229498674.jpeg",
+      "verifiedAt": "2026-11-09T13:04:59.188Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/4854e05aad3681ad29088a3b91dcf77195c05073aec0bd965156444b441ba4d3.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "4868326675adcad6df25f6170753098f71388b4de05298451d5eddfd397a0f92",
       "bytes": 1683777,
       "mime": "image/png",
@@ -7151,6 +7479,18 @@
       "verifiedAt": "2026-10-22T10:07:06.720Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-68147125abc89e2cad92/snapshot-1791916699833-ed1427/product-images/media-e5f446bc14717525-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "49f09fd56881f8bb92b68109a2da173312d4895ce585bed6e1f9c8c8bcaa3639",
+      "bytes": 2052886,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/9dade8cc13be_1794230054587.png",
+      "storageKeyName": "9dade8cc13be_1794230054587.png",
+      "verifiedAt": "2026-11-09T13:14:15.211Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-e283dd9f23dc0488dc81d029.png"
       ]
     },
     {
@@ -7413,6 +7753,22 @@
       "verifiedAt": "2026-10-22T10:08:20.220Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-slide-99.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "4c75a8b57f6e581e9b4892faef31daf963aee3cb846a5a78543499121415a70d",
+      "bytes": 660699,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/ef85f30ab0b4_1794225854511.png",
+      "storageKeyName": "ef85f30ab0b4_1794225854511.png",
+      "verifiedAt": "2026-11-09T12:04:14.685Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-0fc03687-3611-4d23-8952-d94d9b0a7159/generation-references/4c75a8b57f6e581e9b4892faef31daf963aee3cb846a5a78543499121415a70d.png",
+        "output/creative-ai/jobs/creative-170294c5-7995-4daf-afdc-0790a1db69ad/generation-references/4c75a8b57f6e581e9b4892faef31daf963aee3cb846a5a78543499121415a70d.png",
+        "output/creative-ai/jobs/creative-7cb53a56-c0b8-4820-bfef-e06ab36168d1/generation-references/4c75a8b57f6e581e9b4892faef31daf963aee3cb846a5a78543499121415a70d.png",
+        "output/creative-ai/jobs/creative-a8cdf305-573a-4e89-8f67-3a8ca944970c/generation-references/4c75a8b57f6e581e9b4892faef31daf963aee3cb846a5a78543499121415a70d.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/4c75a8b57f6e581e9b4892faef31daf963aee3cb846a5a78543499121415a70d.png"
       ]
     },
     {
@@ -7689,11 +8045,16 @@
       "verifiedAt": "2026-10-22T10:07:36.213Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-dfb69ef80bb5fad29770/snapshot-1792609721322-766fee/product-images/media-88f7073b6dd66375-preview.png",
+        "output/creative-ai/jobs/creative-0fc03687-3611-4d23-8952-d94d9b0a7159/research/sku-026171cf2aa5-1794225849559/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/research/sku-026171cf2aa5-1794222797932/sku-product-image-1.png",
+        "output/creative-ai/jobs/creative-170294c5-7995-4daf-afdc-0790a1db69ad/research/sku-026171cf2aa5-1794227340571/sku-product-image-1.png",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/research/sku-026171cf2aa5-1794225717529/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/research/sku-026171cf2aa5-1794222819921/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-61d195be-3169-4c5d-b9c0-4d556bf6c8a8/generation-references/4f75cc1c96121b8ad31861fcd14da4c35292d55373d1798e6c4b3528bade599b.png",
         "output/creative-ai/jobs/creative-61d195be-3169-4c5d-b9c0-4d556bf6c8a8/research/sku-026171cf2aa5-1794221352469/sku-product-image-1.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/research/sku-026171cf2aa5-1794225728392/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/research/sku-026171cf2aa5-1794222768337/sku-product-image-1.png",
+        "output/creative-ai/jobs/creative-7cb53a56-c0b8-4820-bfef-e06ab36168d1/research/sku-026171cf2aa5-1794231069942/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/research/sku-026171cf2aa5-1794223104376/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/generation-references/4f75cc1c96121b8ad31861fcd14da4c35292d55373d1798e6c4b3528bade599b.png",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/research/sku-026171cf2aa5-1794221345378/sku-product-image-1.png",
@@ -7701,6 +8062,9 @@
         "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/research/sku-026171cf2aa5-1794221357453/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-a04301ba-6ccd-4be0-ae31-2ce448e824f8/generation-references/4f75cc1c96121b8ad31861fcd14da4c35292d55373d1798e6c4b3528bade599b.png",
         "output/creative-ai/jobs/creative-a04301ba-6ccd-4be0-ae31-2ce448e824f8/research/sku-026171cf2aa5-1794221337824/sku-product-image-1.png",
+        "output/creative-ai/jobs/creative-a8cdf305-573a-4e89-8f67-3a8ca944970c/research/sku-026171cf2aa5-1794226564765/sku-product-image-1.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/research/sku-026171cf2aa5-1794225722084/sku-product-image-1.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/research/sku-026171cf2aa5-1794228083356/sku-product-image-1.png",
         "output/creative-ai/jobs/creative-bd991c1d-c863-4712-a80d-29ca0fe1d396/generation-references/4f75cc1c96121b8ad31861fcd14da4c35292d55373d1798e6c4b3528bade599b.png",
         "output/creative-ai/jobs/creative-bd991c1d-c863-4712-a80d-29ca0fe1d396/research/sku-026171cf2aa5-1794221340978/sku-product-image-1.png"
       ]
@@ -7860,14 +8224,24 @@
       "verifiedAt": "2026-10-22T10:07:33.598Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-dfb69ef80bb5fad29770/snapshot-1792609721322-766fee/product-images/media-06ac6e026cb0c550-preview.png",
+        "output/creative-ai/jobs/creative-0fc03687-3611-4d23-8952-d94d9b0a7159/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-0fc03687-3611-4d23-8952-d94d9b0a7159/research/sku-026171cf2aa5-1794225849559/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/research/sku-026171cf2aa5-1794222797932/sku-product-image-2.png",
+        "output/creative-ai/jobs/creative-170294c5-7995-4daf-afdc-0790a1db69ad/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-170294c5-7995-4daf-afdc-0790a1db69ad/research/sku-026171cf2aa5-1794227340571/sku-product-image-2.png",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/research/sku-026171cf2aa5-1794225717529/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/research/sku-026171cf2aa5-1794222819921/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-61d195be-3169-4c5d-b9c0-4d556bf6c8a8/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
         "output/creative-ai/jobs/creative-61d195be-3169-4c5d-b9c0-4d556bf6c8a8/research/sku-026171cf2aa5-1794221352469/sku-product-image-2.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/research/sku-026171cf2aa5-1794225728392/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/research/sku-026171cf2aa5-1794222768337/sku-product-image-2.png",
+        "output/creative-ai/jobs/creative-7cb53a56-c0b8-4820-bfef-e06ab36168d1/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-7cb53a56-c0b8-4820-bfef-e06ab36168d1/research/sku-026171cf2aa5-1794231069942/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/research/sku-026171cf2aa5-1794223104376/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
@@ -7876,6 +8250,12 @@
         "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/research/sku-026171cf2aa5-1794221357453/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-a04301ba-6ccd-4be0-ae31-2ce448e824f8/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
         "output/creative-ai/jobs/creative-a04301ba-6ccd-4be0-ae31-2ce448e824f8/research/sku-026171cf2aa5-1794221337824/sku-product-image-2.png",
+        "output/creative-ai/jobs/creative-a8cdf305-573a-4e89-8f67-3a8ca944970c/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-a8cdf305-573a-4e89-8f67-3a8ca944970c/research/sku-026171cf2aa5-1794226564765/sku-product-image-2.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/research/sku-026171cf2aa5-1794225722084/sku-product-image-2.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/research/sku-026171cf2aa5-1794228083356/sku-product-image-2.png",
         "output/creative-ai/jobs/creative-bd991c1d-c863-4712-a80d-29ca0fe1d396/generation-references/513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd.png",
         "output/creative-ai/jobs/creative-bd991c1d-c863-4712-a80d-29ca0fe1d396/research/sku-026171cf2aa5-1794221340978/sku-product-image-2.png"
       ]
@@ -8021,6 +8401,19 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "528605e3df2c256fd7e6ff6e3a5ffe79b858fa9fd693ca1d6ecf6232e9689944",
+      "bytes": 7917,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/17905f045fc6_1794225998198.png",
+      "storageKeyName": "17905f045fc6_1794225998198.png",
+      "verifiedAt": "2026-11-09T12:06:38.336Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/528605e3df2c256fd7e6ff6e3a5ffe79b858fa9fd693ca1d6ecf6232e9689944.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/lean-mask-035c77f46b19233fcd8be9f1.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "52cca699422fbe5fcef0e8b827f375fa076b7df5954388706b11471a85ad73ea",
       "bytes": 72630,
       "mime": "image/jpeg",
@@ -8126,6 +8519,18 @@
       "verifiedAt": "2026-10-22T10:08:14.271Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-slide-48.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "5444faf2a51c52da1ab0d282a4ead8865031db69d1399756e819e5f3f079b8d1",
+      "bytes": 1595030,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/9bc90c47c5af_1794228709539.png",
+      "storageKeyName": "9bc90c47c5af_1794228709539.png",
+      "verifiedAt": "2026-11-09T12:51:51.409Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-9efaf756014d5662ed6c688b.png"
       ]
     },
     {
@@ -8246,6 +8651,18 @@
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-1006b74ff4eff30053bf/snapshot-1792324856007-983225/a-plus-content/media-8fdc00b2f214bc02.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-f2c4124dd29d40850137/snapshot-1791893373480-42fee3/a-plus-content/media-8fdc00b2f214bc02.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "556163b69a9daed28bad4e2b09639dbbe39e6e18d72d91524d8731ab39e73f89",
+      "bytes": 1775529,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/2350037c9e4c_1794225933048.png",
+      "storageKeyName": "2350037c9e4c_1794225933048.png",
+      "verifiedAt": "2026-11-09T12:05:33.296Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-61cf9cb5b6642678ea014718.png"
       ]
     },
     {
@@ -8446,6 +8863,19 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "569812d19297aff13be1f02db1f4e1550600b45db853c9e15e2d438d56bb3dde",
+      "bytes": 2465971,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/e4f95717cdf9_1794226042881.png",
+      "storageKeyName": "e4f95717cdf9_1794226042881.png",
+      "verifiedAt": "2026-11-09T12:07:23.338Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/lean-anchor-f2e31be87214f03fb119a7f6.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-f2e31be87214f03fb119a7f6.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "56efb2c5d423dda16bde0c8b031b122bcba0f60535ef152fce137fe40c4a409c",
       "bytes": 166925,
       "mime": "image/jpeg",
@@ -8598,6 +9028,18 @@
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/assets/sample-creatives/asset-cd16fae9-cd13-44ed-95c7-74f01e177d93.jpg",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_05_48.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "5858637bbd231f9c9448a9c8214abf6793511ce72863584876cff5c53d2557f4",
+      "bytes": 450012,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/1106ccf69ddc_1794230166880.png",
+      "storageKeyName": "1106ccf69ddc_1794230166880.png",
+      "verifiedAt": "2026-11-09T13:16:07.374Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-b1cbfc2c1a221e8e80b0039c.png"
       ]
     },
     {
@@ -8992,6 +9434,19 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "5b4b8d90f752b593dbc5e5d543427f5dce18c488716ff4d20252fba1d9d37f38",
+      "bytes": 3323,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/da03d8045fbb_1794229423219.png",
+      "storageKeyName": "da03d8045fbb_1794229423219.png",
+      "verifiedAt": "2026-11-09T13:03:43.540Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/5b4b8d90f752b593dbc5e5d543427f5dce18c488716ff4d20252fba1d9d37f38.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/lean-mask-ccb55d6a8988caa534f2d21f.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "5b63c662bedf38fe74150660f1bdabc269ca97af2548fcb51783cc31cbb1c508",
       "bytes": 126501,
       "mime": "image/jpeg",
@@ -9131,6 +9586,18 @@
       "verifiedAt": "2026-10-22T10:06:37.636Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-3566a343eb36f945fd10/snapshot-1792056680392-bbf483/product-images/media-e4389f523199bf55.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "5d5d846d2b2fedf2c44322885fb6735f989e0afc45c7bd2f4b6098ea22913d48",
+      "bytes": 74064,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/8bcc6d9ac889_1794229749551.jpeg",
+      "storageKeyName": "8bcc6d9ac889_1794229749551.jpeg",
+      "verifiedAt": "2026-11-09T13:09:09.968Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/5d5d846d2b2fedf2c44322885fb6735f989e0afc45c7bd2f4b6098ea22913d48.jpeg"
       ]
     },
     {
@@ -9317,6 +9784,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "5ef49caa686474eeab920735eb7d6c9d752acf236ab7c5a1fe53f67188232b0c",
+      "bytes": 92849,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/95a3c24dff63_1794230054685.jpeg",
+      "storageKeyName": "95a3c24dff63_1794230054685.jpeg",
+      "verifiedAt": "2026-11-09T13:14:15.133Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/5ef49caa686474eeab920735eb7d6c9d752acf236ab7c5a1fe53f67188232b0c.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "5ef645d9867ef48552d6504a7ba68f6a735679e710080afac21f193723681baf",
       "bytes": 3201,
       "mime": "image/png",
@@ -9409,6 +9888,18 @@
       "verifiedAt": "2026-10-22T10:07:50.667Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-3d51ae63-ac10-47e4-8deb-da27fd857244-slide-22.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "605f145d3c70f299c471eb1a0afc4f4e5587c6ffe5e2967da57949afe16843a8",
+      "bytes": 79629,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/d3e09024f7bc_1794228832824.jpeg",
+      "storageKeyName": "d3e09024f7bc_1794228832824.jpeg",
+      "verifiedAt": "2026-11-09T12:53:53.172Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/605f145d3c70f299c471eb1a0afc4f4e5587c6ffe5e2967da57949afe16843a8.jpeg"
       ]
     },
     {
@@ -9572,6 +10063,18 @@
       "verifiedAt": "2026-11-04T21:03:40.733Z",
       "paths": [
         "output/creative-ai/jobs/creative-f155e1b8-e3b3-4721-bf9a-940047fda3d1/raw-artwork.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "61d4ba28248b06b78c1ff9a42863771b4e42abe6298e6238070a1646629e9f54",
+      "bytes": 1643425,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/13daf62a3f2d_1794229749424.png",
+      "storageKeyName": "13daf62a3f2d_1794229749424.png",
+      "verifiedAt": "2026-11-09T13:09:10.107Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-40fbf899873ddad577eee41c.png"
       ]
     },
     {
@@ -10042,6 +10545,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "6709935018855192a92a51b11656e80ff6912ddee90f8f43e8f84e1cbcfab965",
+      "bytes": 88351,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/d6f51567e510_1794229059879.jpeg",
+      "storageKeyName": "d6f51567e510_1794229059879.jpeg",
+      "verifiedAt": "2026-11-09T12:57:40.313Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/6709935018855192a92a51b11656e80ff6912ddee90f8f43e8f84e1cbcfab965.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "670bc26778120db038428c95d691078c41404767f2a0a2d354e727865261ffe4",
       "bytes": 613988,
       "mime": "image/webp",
@@ -10393,6 +10908,18 @@
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-fe35630407a1672b0b0b/snapshot-1791846386312-d1a9f7/supporting-content/media-8bf4b822d391429a.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-fe35630407a1672b0b0b/snapshot-1791848730417-2cdbda/supporting-content/media-8bf4b822d391429a.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-fe35630407a1672b0b0b/snapshot-1791849133715-a14ebc/supporting-content/media-8bf4b822d391429a.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "68da75ad9719f6a269eb51575a5773ecbf711887a94e5554371008bc4957b272",
+      "bytes": 568733,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/ca316ade9828_1794229499726.png",
+      "storageKeyName": "ca316ade9828_1794229499726.png",
+      "verifiedAt": "2026-11-09T13:04:59.940Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-candidate-ccb55d6a8988caa534f2d21f.png"
       ]
     },
     {
@@ -11307,6 +11834,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "70a7278edc8c84ee1bb75fbfcb2eb043e142f3b41a4e71d31a8ab8e31ea17153",
+      "bytes": 226411,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/6e6445b40e8e_1794226097176.jpeg",
+      "storageKeyName": "6e6445b40e8e_1794226097176.jpeg",
+      "verifiedAt": "2026-11-09T12:08:19.389Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/70a7278edc8c84ee1bb75fbfcb2eb043e142f3b41a4e71d31a8ab8e31ea17153.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "70cb78ab837c61ce6b122a650201cf2d52518b1322d4811e4535581bbbc7984c",
       "bytes": 180682,
       "mime": "image/jpeg",
@@ -11650,6 +12189,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "73a0315a08436581325ae8d1b873eeee86d237d8160c2a87646d63f12cdc486e",
+      "bytes": 1527352,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/5abbae66432c_1794229498566.png",
+      "storageKeyName": "5abbae66432c_1794229498566.png",
+      "verifiedAt": "2026-11-09T13:04:59.502Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-candidate-raw-ccb55d6a8988caa534f2d21f.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "73b803a462e71f6b6c306c2e17ebc5778eb03de66a90c55a26fa33ad3e36abb5",
       "bytes": 2565,
       "mime": "image/png",
@@ -11789,6 +12340,19 @@
       "verifiedAt": "2026-11-02T13:44:33.880Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-de0717c1ce2b674f49fc/snapshot-1793627062127-e9a68d/product-images/media-370d2c4f46741ebb.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "74b72d26482117a72b2bfa589896a2cb09f76c3aba88b7ed6381ed7e0d30bacf",
+      "bytes": 570918,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/0d4cbc73818c_1794229060931.png",
+      "storageKeyName": "0d4cbc73818c_1794229060931.png",
+      "verifiedAt": "2026-11-09T12:57:41.208Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/lean-anchor-ccb55d6a8988caa534f2d21f.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-ccb55d6a8988caa534f2d21f.png"
       ]
     },
     {
@@ -11974,6 +12538,18 @@
       "verifiedAt": "2026-10-22T10:05:02.899Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/assets/sample-creatives/asset-bc3cc985-996c-4f7a-8574-588f59383b7b-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "767bba6bf86044b1610a292f58576e172b0ff304cc6bad39cd2b59e45975029b",
+      "bytes": 230578,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/8bb5b3cdc250_1794225941219.jpeg",
+      "storageKeyName": "8bb5b3cdc250_1794225941219.jpeg",
+      "verifiedAt": "2026-11-09T12:05:41.636Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/767bba6bf86044b1610a292f58576e172b0ff304cc6bad39cd2b59e45975029b.jpeg"
       ]
     },
     {
@@ -12931,6 +13507,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "7febed378ffd014aaa45b9b86f1d4f3b2603eee33ac1dd3d5da45c58754dddee",
+      "bytes": 500860,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/8c8b0cc60e40_1794230236932.png",
+      "storageKeyName": "8c8b0cc60e40_1794230236932.png",
+      "verifiedAt": "2026-11-09T13:17:17.327Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-candidate-e283dd9f23dc0488dc81d029.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "7ff7418b81da7e100f7cb8f58eef19f5189d4dd3489f95cc660abca550a21e36",
       "bytes": 19279,
       "mime": "image/png",
@@ -13238,6 +13826,18 @@
       "verifiedAt": "2026-11-04T22:51:07.968Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-1866c9dd503945191711/snapshot-1793832655231-91b9d5/a-plus-content/media-aeaac2b7fcc06ed4.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "826097f13683b006de51061246689145b48355eb7c8e4ca954b21e14ee545a51",
+      "bytes": 597775,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/d6e185769813_1794229965530.png",
+      "storageKeyName": "d6e185769813_1794229965530.png",
+      "verifiedAt": "2026-11-09T13:12:45.770Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-a76bc5f5bdf876e047a53be3.png"
       ]
     },
     {
@@ -13675,6 +14275,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "85ec572b9242472c7c3f51efd9b61d4f79b4800a6d9afd929180ea39f72e6a76",
+      "bytes": 1302850,
+      "mime": "image/webp",
+      "url": "https://cdn2.hypergro.ai/615753959591_1794226011840.webp",
+      "storageKeyName": "615753959591_1794226011840.webp",
+      "verifiedAt": "2026-11-09T12:06:52.967Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/85ec572b9242472c7c3f51efd9b61d4f79b4800a6d9afd929180ea39f72e6a76.webp"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "86100da325b114e468f466f3b33b4116ad6dd842140c32c2cfb3726139cdef0a",
       "bytes": 805593,
       "mime": "image/png",
@@ -14039,6 +14651,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "88b96e34fe493386acb3888b526812c2a330d65d3d9061e7e9078d0b4327e8af",
+      "bytes": 2776489,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/449af46901a2_1794226106850.png",
+      "storageKeyName": "449af46901a2_1794226106850.png",
+      "verifiedAt": "2026-11-09T12:08:27.248Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-candidate-c01fab44c2f87cd076f3edca.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "88c3617b2b860363177b2e35c681a1bc44036d20fb5fe26123a049eb1304de7b",
       "bytes": 744039,
       "mime": "image/jpeg",
@@ -14083,6 +14707,30 @@
       "verifiedAt": "2026-11-05T00:04:00.978Z",
       "paths": [
         "output/creative-ai/jobs/creative-1a942a9f-8529-475c-b997-e004ad46515e/static-raw-artwork-continuity-custom_raw-planned-website-marketplace-a-images-2.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "891426d7daf62dcdf7d274b67c853d40a35531d075badd396da05432964ec85a",
+      "bytes": 1511721,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/add3d7c90652_1794229059828.png",
+      "storageKeyName": "add3d7c90652_1794229059828.png",
+      "verifiedAt": "2026-11-09T12:57:40.674Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-ccb55d6a8988caa534f2d21f.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "892c278b441e2f192462d0806876bbaedd2f3a9a01487ffe409cc4ffb265ab84",
+      "bytes": 262050,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/7c9bbcb42ebb_1794226165854.jpeg",
+      "storageKeyName": "7c9bbcb42ebb_1794226165854.jpeg",
+      "verifiedAt": "2026-11-09T12:09:26.185Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/892c278b441e2f192462d0806876bbaedd2f3a9a01487ffe409cc4ffb265ab84.jpeg"
       ]
     },
     {
@@ -14404,6 +15052,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "8c1b45054558b364203a8e0ae3cf08a08520f1c2744746b8b0e100b64b0a1ce5",
+      "bytes": 499528,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/80d7dcc8cd56_1794229749668.png",
+      "storageKeyName": "80d7dcc8cd56_1794229749668.png",
+      "verifiedAt": "2026-11-09T13:09:10.209Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-40fbf899873ddad577eee41c.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "8c28de03ce80fca1e6276b246cd54b9bb8fdb9e7a7e6f201830f04e72d31294f",
       "bytes": 51471,
       "mime": "image/jpeg",
@@ -14477,11 +15137,15 @@
       "verifiedAt": "2026-11-09T10:55:16.296Z",
       "paths": [
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
-        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp"
+        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/8c93d040b33f5364e1a792fa1a3c5752a831fcf51bee0d7cff1ee7b71b51b1fd.webp"
       ]
     },
     {
@@ -14494,6 +15158,18 @@
       "verifiedAt": "2026-11-02T13:44:08.776Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-59a882cc8517284db651/snapshot-1793627016415-9a0de8/videos/media-4afcbf7198ea41ed.mp4"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "8cc46da792bd240bceabd278f258b74a240d21cc5adcabf8628a43ddefda7771",
+      "bytes": 1549698,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/5392f7d4f45b_1794225969162.png",
+      "storageKeyName": "5392f7d4f45b_1794225969162.png",
+      "verifiedAt": "2026-11-09T12:06:09.846Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-raw-c01fab44c2f87cd076f3edca.png"
       ]
     },
     {
@@ -14725,6 +15401,18 @@
       "verifiedAt": "2026-11-04T19:49:53.708Z",
       "paths": [
         "output/creative-ai/jobs/creative-24f112ce-7368-4ada-be8e-ce1bf7a896f5/raw-artwork.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "8f82ab491f0aa69d6bce471fcecf19fcf1cbb1058257f0bd0983f259fb741191",
+      "bytes": 1871317,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/de08e0fb1814_1794229766423.png",
+      "storageKeyName": "de08e0fb1814_1794229766423.png",
+      "verifiedAt": "2026-11-09T13:09:26.880Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-candidate-3bf6144f90dc83d198630fca.png"
       ]
     },
     {
@@ -14993,6 +15681,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "91d68ae65ec5ad95928f2546b2d698fda40966e72bb05c7919c810bb98e51e9d",
+      "bytes": 1528810,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/7572b439a277_1794226039660.png",
+      "storageKeyName": "7572b439a277_1794226039660.png",
+      "verifiedAt": "2026-11-09T12:07:20.303Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/static-lean-candidate-raw-eafc33306fdd2ad4161cd6d2.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "91f82e4e83da7952b48a2914fa17b30328b80bbad315d13edfbb3a39babab793",
       "bytes": 255720,
       "mime": "image/jpeg",
@@ -15194,6 +15894,18 @@
       "verifiedAt": "2026-11-02T13:45:03.357Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-de0717c1ce2b674f49fc/snapshot-1793627062127-e9a68d/supporting-content/media-ae093a165418d32a-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "93d6584cab0908cfe9edc6a9ea512c15948b0864fa2b8d5d5391d9c0cd943fcf",
+      "bytes": 1706978,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/286fefc3e96c_1794229569234.png",
+      "storageKeyName": "286fefc3e96c_1794229569234.png",
+      "verifiedAt": "2026-11-09T13:06:10.214Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-3bf6144f90dc83d198630fca.png"
       ]
     },
     {
@@ -15664,6 +16376,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "97bb58c29e0c751e4f301dbda357bfa493f9788d12f9a1c3ec3be165b415c0ab",
+      "bytes": 1745956,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/077a9a9ea0d2_1794229765039.png",
+      "storageKeyName": "077a9a9ea0d2_1794229765039.png",
+      "verifiedAt": "2026-11-09T13:09:25.918Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-candidate-raw-3bf6144f90dc83d198630fca.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "97c1a29c2c8d0691a1e489b4fab28c0e663395acfaf439d04f63e5b877b8c301",
       "bytes": 331599,
       "mime": "image/jpeg",
@@ -15938,6 +16662,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "9ba6a064af125aa1bf321e146008b2be0886fa6201729eb7a40fc6ad7b8992d4",
+      "bytes": 1635711,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/57643ce525c9_1794229912623.png",
+      "storageKeyName": "57643ce525c9_1794229912623.png",
+      "verifiedAt": "2026-11-09T13:11:53.507Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-b43c648adbb01b8f41be9167.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "9bd90d3ab49b5ca82da738d5a96bc842693721ecfbc87e452cd5efdd1cd8119a",
       "bytes": 18987,
       "mime": "image/png",
@@ -16092,6 +16828,19 @@
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791807048194-b50679/a-plus-content/media-f33527e99c365738-preview.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791807067969-b92cc3/a-plus-content/media-f33527e99c365738-preview.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0c4782a0d37b3e0ad5d9/snapshot-1791812770246-62c87b/a-plus-content/media-f33527e99c365738-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "9d39162d3346a2d55855ace38d195ed2d8374ea47a1f0210202d88c478d7f2b4",
+      "bytes": 3477760,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/3bcdc6758e35_1794225914469.png",
+      "storageKeyName": "3bcdc6758e35_1794225914469.png",
+      "verifiedAt": "2026-11-09T12:05:15.166Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/lean-anchor-eafc33306fdd2ad4161cd6d2.png",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/static-lean-eafc33306fdd2ad4161cd6d2.png"
       ]
     },
     {
@@ -16720,6 +17469,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "a337de9875f50a923f7b9f06a2ecb5312a9997588aad268337c7b80c5f77193b",
+      "bytes": 65714,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/41d5749aabd5_1794230166944.jpeg",
+      "storageKeyName": "41d5749aabd5_1794230166944.jpeg",
+      "verifiedAt": "2026-11-09T13:16:07.389Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/a337de9875f50a923f7b9f06a2ecb5312a9997588aad268337c7b80c5f77193b.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "a3543764af2ea0f864360ea8d33fa49a39835562411ae2435f4f81338b754958",
       "bytes": 6305,
       "mime": "image/png",
@@ -16741,6 +17502,18 @@
       "verifiedAt": "2026-10-22T10:06:54.396Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-63cfb9d009461f5b00eb/snapshot-1792609793966-742ecf/a-plus-content/media-d1a24c45e753d74d.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "a36591318232d938aa31d01d730f612257e55ff033034119a738cd524e367302",
+      "bytes": 1933546,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/8da31ecde26f_1794228868251.png",
+      "storageKeyName": "8da31ecde26f_1794228868251.png",
+      "verifiedAt": "2026-11-09T12:54:28.689Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-4cd725ddc142d3f8542fd13c.png"
       ]
     },
     {
@@ -17354,6 +18127,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "a8ff24df92f556f1c58ff22b83e76d79a6e4bc4840cd4affd0263e2bf9afef7c",
+      "bytes": 210970,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/e6cfc3b86eb2_1794228794058.jpeg",
+      "storageKeyName": "e6cfc3b86eb2_1794228794058.jpeg",
+      "verifiedAt": "2026-11-09T12:53:14.473Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/a8ff24df92f556f1c58ff22b83e76d79a6e4bc4840cd4affd0263e2bf9afef7c.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "a936eb2cb18c8150d344705739c0caaeb70e767146b80a3201b7be605c49fd04",
       "bytes": 89103,
       "mime": "image/jpeg",
@@ -17386,6 +18171,18 @@
       "verifiedAt": "2026-10-22T10:06:56.781Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-63cfb9d009461f5b00eb/snapshot-1792609793966-742ecf/product-images/media-8e75336aa8eb659b.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "a963ae6909b315a651f5b5ce05474369877d2e083a592e68c4096f1a9f5663e8",
+      "bytes": 207599,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/0d1ce6bcf264_1794225931971.jpeg",
+      "storageKeyName": "0d1ce6bcf264_1794225931971.jpeg",
+      "verifiedAt": "2026-11-09T12:05:32.357Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/a963ae6909b315a651f5b5ce05474369877d2e083a592e68c4096f1a9f5663e8.jpeg"
       ]
     },
     {
@@ -17788,6 +18585,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "ae9300c9d40466ffcebc722e76323f046b7cc3834f306ac66d93161bb168456a",
+      "bytes": 1626931,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/9e86c1a4f2aa_1794229964476.png",
+      "storageKeyName": "9e86c1a4f2aa_1794229964476.png",
+      "verifiedAt": "2026-11-09T13:12:45.225Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-a76bc5f5bdf876e047a53be3.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "ae9557e92a76a80c8644e635c1aaf940e6261805af01b727032b9979dfa8a51d",
       "bytes": 65584,
       "mime": "image/jpeg",
@@ -18061,6 +18870,18 @@
       "verifiedAt": "2026-10-22T10:07:03.320Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-68147125abc89e2cad92/snapshot-1791916699833-ed1427/product-images/media-852af72fbe54afe3.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "b17f29a79bc9e0bbbb0d4b679c8eae10397f28d61ed051fa16fb10b06b9728e8",
+      "bytes": 92760,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/144cfe6c46c5_1794229964559.jpeg",
+      "storageKeyName": "144cfe6c46c5_1794229964559.jpeg",
+      "verifiedAt": "2026-11-09T13:12:44.983Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/b17f29a79bc9e0bbbb0d4b679c8eae10397f28d61ed051fa16fb10b06b9728e8.jpeg"
       ]
     },
     {
@@ -18614,6 +19435,19 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "b866fb142e7fe40d3afe1409fc1b8778348ebf11536cca88250a4545d6c8d742",
+      "bytes": 1998657,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/03693609421f_1794225942234.png",
+      "storageKeyName": "03693609421f_1794225942234.png",
+      "verifiedAt": "2026-11-09T12:05:43.266Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/lean-anchor-035c77f46b19233fcd8be9f1.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/static-lean-035c77f46b19233fcd8be9f1.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "b8a3949f2868ef8b33f56646f9759d6e1f8d6a05601a59f5dd1a4c8a1422fe69",
       "bytes": 32185,
       "mime": "image/png",
@@ -18788,6 +19622,18 @@
       "verifiedAt": "2026-11-02T13:46:22.138Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-c50d1614592ab87f4bb9/snapshot-1793627113608-7c2407/a-plus-content/media-27f74946b7c97bf4-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "b992b6ddc975413b8ca0fe66e6a20634110e2287fdedba93eb6b06a14c5a0af9",
+      "bytes": 1693028,
+      "mime": "image/webp",
+      "url": "https://cdn2.hypergro.ai/a7175aca97cb_1794225974123.webp",
+      "storageKeyName": "a7175aca97cb_1794225974123.webp",
+      "verifiedAt": "2026-11-09T12:06:15.559Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/b992b6ddc975413b8ca0fe66e6a20634110e2287fdedba93eb6b06a14c5a0af9.webp"
       ]
     },
     {
@@ -19353,6 +20199,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "bd8a7018b9cde9d20ef02b1838c6bd822b30ede3ff84afa9e5f9d1612441f637",
+      "bytes": 303538,
+      "mime": "image/webp",
+      "url": "https://cdn2.hypergro.ai/fc995e0ae34e_1794230175684.webp",
+      "storageKeyName": "fc995e0ae34e_1794230175684.webp",
+      "verifiedAt": "2026-11-09T13:16:16.172Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/bd8a7018b9cde9d20ef02b1838c6bd822b30ede3ff84afa9e5f9d1612441f637.webp"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "bd9b5c5dbcd73d79a6e5602744fa5d525b95636acd3b75f4599e573e95a7f844",
       "bytes": 179489,
       "mime": "image/jpeg",
@@ -19592,6 +20450,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "bfa70e01e2c59fbe1721db1fbeb2b21005031901604919e3ad44e679442ab1ba",
+      "bytes": 1987886,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/7010da8c19a7_1794226098384.png",
+      "storageKeyName": "7010da8c19a7_1794226098384.png",
+      "verifiedAt": "2026-11-09T12:08:20.948Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/static-lean-candidate-035c77f46b19233fcd8be9f1.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "bfbb184860f16ccf0fe24568a05372a957bcbb8d6dd00a7d298c43606fc9e027",
       "bytes": 678955,
       "mime": "image/png",
@@ -19641,6 +20511,18 @@
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-a9146a2170e0006efa92/snapshot-1791916685763-59f25d/supporting-content/media-9d297c7855c3ecea.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-b2e17fcf89b99769068e/snapshot-1791916662329-aa43db/supporting-content/media-3848086ec784969c.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-d6f4fc4c3c9fe8b7db1e/snapshot-1791887601691-743f47/supporting-content/media-3848086ec784969c.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "c02f370084c0cea1080be0d9156d714a58599429cde761bb99ed8e4c148d53eb",
+      "bytes": 1624973,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/19de79c2e17d_1794226165637.png",
+      "storageKeyName": "19de79c2e17d_1794226165637.png",
+      "verifiedAt": "2026-11-09T12:09:26.381Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-candidate-raw-f2e31be87214f03fb119a7f6.png"
       ]
     },
     {
@@ -19797,6 +20679,21 @@
       "verifiedAt": "2026-10-22T10:06:02.792Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-0ed5b7a4608078195585/snapshot-1791916695354-20d399/supporting-content/media-1b4b811856bc6d54.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "c340f3b7fb1594ef0cc56a7cc84aca5d5f1ee05ae74510bc377f9571382b0268",
+      "bytes": 190788,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/0ee5e123bf30_1794225915970.jpeg",
+      "storageKeyName": "0ee5e123bf30_1794225915970.jpeg",
+      "verifiedAt": "2026-11-09T12:05:16.057Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/c340f3b7fb1594ef0cc56a7cc84aca5d5f1ee05ae74510bc377f9571382b0268.jpeg",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/c340f3b7fb1594ef0cc56a7cc84aca5d5f1ee05ae74510bc377f9571382b0268.jpeg",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/c340f3b7fb1594ef0cc56a7cc84aca5d5f1ee05ae74510bc377f9571382b0268.jpeg",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/c340f3b7fb1594ef0cc56a7cc84aca5d5f1ee05ae74510bc377f9571382b0268.jpeg"
       ]
     },
     {
@@ -20732,6 +21629,19 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "ce522dc2cb2fb38d942ba97cf3fc00fe15736b336ebdcf8b3409180da4847215",
+      "bytes": 2833981,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/7ce934381094_1794225970379.png",
+      "storageKeyName": "7ce934381094_1794225970379.png",
+      "verifiedAt": "2026-11-09T12:06:10.923Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/lean-anchor-c01fab44c2f87cd076f3edca.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-c01fab44c2f87cd076f3edca.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "ce791a45ec76da8791245902acbd9928f95f333b9c6a27790a2a3dedae0d5607",
       "bytes": 70648,
       "mime": "image/jpeg",
@@ -21323,6 +22233,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "d593ee7a41a173ebaf5b167032f45da9237de16fee71769dadc1bf044312441e",
+      "bytes": 90348,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/f57ee5ff0ef7_1794230237184.jpeg",
+      "storageKeyName": "f57ee5ff0ef7_1794230237184.jpeg",
+      "verifiedAt": "2026-11-09T13:17:17.557Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/d593ee7a41a173ebaf5b167032f45da9237de16fee71769dadc1bf044312441e.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "d5caa0b5bfff2bb760837424745fa3820e57a2ab136dc25056f8cb218f828e54",
       "bytes": 48524,
       "mime": "image/png",
@@ -21490,6 +22412,18 @@
       "verifiedAt": "2026-10-22T10:05:28.079Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/duroflex-astra-visual-research-2026-10-12/online/W10-I002.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "d7b1ceb4967d30a6ea41b15ff13d3fef5a9674579bb9450ec1ab2e2275951fa8",
+      "bytes": 227552,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/cd7c2994be5a_1794229912736.jpeg",
+      "storageKeyName": "cd7c2994be5a_1794229912736.jpeg",
+      "verifiedAt": "2026-11-09T13:11:53.280Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/d7b1ceb4967d30a6ea41b15ff13d3fef5a9674579bb9450ec1ab2e2275951fa8.jpeg"
       ]
     },
     {
@@ -21902,6 +22836,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "dbde5b06df36c1130a0d6d1667dfe3cddd2d3a4329412086d4b142610bdff82c",
+      "bytes": 1499436,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/ebebea0a73cd_1794226103806.png",
+      "storageKeyName": "ebebea0a73cd_1794226103806.png",
+      "verifiedAt": "2026-11-09T12:08:26.022Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-candidate-raw-c01fab44c2f87cd076f3edca.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "dbf978e32dfe2c91cb23a22e90da0938205fc840b8a9384e6b4b2e5384fa5188",
       "bytes": 53182,
       "mime": "image/png",
@@ -21922,11 +22868,15 @@
       "verifiedAt": "2026-11-09T10:55:15.518Z",
       "paths": [
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
-        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp"
+        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/dc138e9886876f1d09ccafc9a4ce1b8cbd895e37f822721ad179464aecd98495.webp"
       ]
     },
     {
@@ -22476,6 +23426,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "e21a794d038c71d62d1a58534f9282a42c6231d5503b37f174177febbbcec6d4",
+      "bytes": 298297,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/4aa605a675a0_1794226103285.jpeg",
+      "storageKeyName": "4aa605a675a0_1794226103285.jpeg",
+      "verifiedAt": "2026-11-09T12:08:23.567Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/e21a794d038c71d62d1a58534f9282a42c6231d5503b37f174177febbbcec6d4.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "e22a8b00866dc0279ea94bca1c9add0f72bc81350e4eca90223f4a4992b4c27b",
       "bytes": 1485283,
       "mime": "image/png",
@@ -22484,6 +23446,19 @@
       "verifiedAt": "2026-11-04T20:50:02.959Z",
       "paths": [
         "output/creative-ai/jobs/creative-5cd2f6b7-c34d-413d-8bb2-9f5a7b40b2e5/raw-artwork.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "e258e3a2f23826550428b98b765b0ae7b6adaf94d2615eec05a63981dace5b0a",
+      "bytes": 1859998,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/bca441e20d78_1794229570785.png",
+      "storageKeyName": "bca441e20d78_1794229570785.png",
+      "verifiedAt": "2026-11-09T13:06:11.258Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/lean-anchor-3bf6144f90dc83d198630fca.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-3bf6144f90dc83d198630fca.png"
       ]
     },
     {
@@ -22775,6 +23750,30 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "e5a510f87b0f05f8729d17356e342732d7f44505832e12b5e1d53296645072be",
+      "bytes": 1983944,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/43c6da17f7c1_1794230237092.png",
+      "storageKeyName": "43c6da17f7c1_1794230237092.png",
+      "verifiedAt": "2026-11-09T13:17:17.757Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-candidate-raw-e283dd9f23dc0488dc81d029.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "e5b4405b2a670bc55a69fad595548b99e631ec4764d97fc12223da7cda936da9",
+      "bytes": 1895593,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/fff4318537a4_1794228712157.png",
+      "storageKeyName": "fff4318537a4_1794228712157.png",
+      "verifiedAt": "2026-11-09T12:51:53.980Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-9efaf756014d5662ed6c688b.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "e5dbc1dd54bc79bde53ea7da30b026ba69ce62976628d534bff9673c4485de0f",
       "bytes": 1681677,
       "mime": "image/png",
@@ -22934,14 +23933,24 @@
       "verifiedAt": "2026-10-22T10:07:37.111Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-dfb69ef80bb5fad29770/snapshot-1792609721322-766fee/product-images/media-d8a1bab1931f9c9a-preview.png",
+        "output/creative-ai/jobs/creative-0fc03687-3611-4d23-8952-d94d9b0a7159/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-0fc03687-3611-4d23-8952-d94d9b0a7159/research/sku-026171cf2aa5-1794225849559/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/research/sku-026171cf2aa5-1794222797932/sku-product-image-3.png",
+        "output/creative-ai/jobs/creative-170294c5-7995-4daf-afdc-0790a1db69ad/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-170294c5-7995-4daf-afdc-0790a1db69ad/research/sku-026171cf2aa5-1794227340571/sku-product-image-3.png",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/research/sku-026171cf2aa5-1794225717529/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/research/sku-026171cf2aa5-1794222819921/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-61d195be-3169-4c5d-b9c0-4d556bf6c8a8/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
         "output/creative-ai/jobs/creative-61d195be-3169-4c5d-b9c0-4d556bf6c8a8/research/sku-026171cf2aa5-1794221352469/sku-product-image-3.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/research/sku-026171cf2aa5-1794225728392/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/research/sku-026171cf2aa5-1794222768337/sku-product-image-3.png",
+        "output/creative-ai/jobs/creative-7cb53a56-c0b8-4820-bfef-e06ab36168d1/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-7cb53a56-c0b8-4820-bfef-e06ab36168d1/research/sku-026171cf2aa5-1794231069942/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/research/sku-026171cf2aa5-1794223104376/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
@@ -22950,6 +23959,12 @@
         "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/research/sku-026171cf2aa5-1794221357453/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-a04301ba-6ccd-4be0-ae31-2ce448e824f8/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
         "output/creative-ai/jobs/creative-a04301ba-6ccd-4be0-ae31-2ce448e824f8/research/sku-026171cf2aa5-1794221337824/sku-product-image-3.png",
+        "output/creative-ai/jobs/creative-a8cdf305-573a-4e89-8f67-3a8ca944970c/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-a8cdf305-573a-4e89-8f67-3a8ca944970c/research/sku-026171cf2aa5-1794226564765/sku-product-image-3.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/research/sku-026171cf2aa5-1794225722084/sku-product-image-3.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/research/sku-026171cf2aa5-1794228083356/sku-product-image-3.png",
         "output/creative-ai/jobs/creative-bd991c1d-c863-4712-a80d-29ca0fe1d396/generation-references/e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304.png",
         "output/creative-ai/jobs/creative-bd991c1d-c863-4712-a80d-29ca0fe1d396/research/sku-026171cf2aa5-1794221340978/sku-product-image-3.png"
       ]
@@ -23984,6 +24999,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "f16b297ada7f56c5b0f242429ef0551c2be595d5f9853751b81b75a776c9c07e",
+      "bytes": 1042110,
+      "mime": "image/webp",
+      "url": "https://cdn2.hypergro.ai/62b4d03f16e0_1794225998881.webp",
+      "storageKeyName": "62b4d03f16e0_1794225998881.webp",
+      "verifiedAt": "2026-11-09T12:06:39.256Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/f16b297ada7f56c5b0f242429ef0551c2be595d5f9853751b81b75a776c9c07e.webp"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "f1a8b5bb45b6b4d96e5e7bc6f945b8ab3893bddf10bcaa722ae398d372b25e36",
       "bytes": 201700,
       "mime": "image/jpeg",
@@ -24004,6 +25031,18 @@
       "verifiedAt": "2026-10-22T10:05:23.819Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/duroflex-astra-visual-research-2026-10-12/online/W01-I002.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "f1eeeea52c8a11f8d72ad6c2ce5226e7a2a343dc4a90f1695b963af78af9d180",
+      "bytes": 957672,
+      "mime": "image/webp",
+      "url": "https://cdn2.hypergro.ai/0a7cb06fbccf_1794229712623.webp",
+      "storageKeyName": "0a7cb06fbccf_1794229712623.webp",
+      "verifiedAt": "2026-11-09T13:08:33.381Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/f1eeeea52c8a11f8d72ad6c2ce5226e7a2a343dc4a90f1695b963af78af9d180.webp"
       ]
     },
     {
@@ -24088,6 +25127,18 @@
       "verifiedAt": "2026-11-04T22:49:07.069Z",
       "paths": [
         "output/creative-ai/jobs/creative-715f5dd4-d00d-4050-a76b-27b1d9566541/static-raw-artwork-continuity-custom_raw-planned-retail-product-counter-card-1.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "f2f05736f864a498c8c3d7a2b0f16a042b5a6d2fd94ef1e24ae237b9b5872065",
+      "bytes": 2296419,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/c55b85edd326_1794226165804.png",
+      "storageKeyName": "c55b85edd326_1794226165804.png",
+      "verifiedAt": "2026-11-09T12:09:26.533Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/static-lean-candidate-f2e31be87214f03fb119a7f6.png"
       ]
     },
     {
@@ -24663,12 +25714,20 @@
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-dfb69ef80bb5fad29770/identity-profiles/identity-1da520c7-01d8-4f4f-a41e-624111308304/reference.png",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-dfb69ef80bb5fad29770/identity-profiles/identity-71b9de5a-f031-427d-94ae-503e3423fd38/reference.png",
+        "output/creative-ai/jobs/creative-0fc03687-3611-4d23-8952-d94d9b0a7159/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
         "output/creative-ai/jobs/creative-16f74fa3-4e46-48d2-8eb1-ae03667ad12b/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
+        "output/creative-ai/jobs/creative-170294c5-7995-4daf-afdc-0790a1db69ad/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
         "output/creative-ai/jobs/creative-4edd4f2f-9b8f-4b27-a34f-47a4fec21a30/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
         "output/creative-ai/jobs/creative-6b00a7f3-10e8-473f-8559-279d212618d8/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
+        "output/creative-ai/jobs/creative-7cb53a56-c0b8-4820-bfef-e06ab36168d1/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
         "output/creative-ai/jobs/creative-88958c11-3820-4d40-9268-d4f29b6536bd/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
         "output/creative-ai/jobs/creative-97805f02-bff0-4521-888b-3b468e259696/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
-        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png"
+        "output/creative-ai/jobs/creative-9a98148d-0e47-41f6-8533-ae9038b7d0bc/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
+        "output/creative-ai/jobs/creative-a8cdf305-573a-4e89-8f67-3a8ca944970c/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
+        "output/creative-ai/jobs/creative-a97696b5-b34b-455f-a960-d0ac8091c777/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png",
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2.png"
       ]
     },
     {
@@ -24693,6 +25752,18 @@
       "verifiedAt": "2026-11-04T19:58:40.158Z",
       "paths": [
         "output/creative-ai/jobs/creative-a22dae1b-9b3c-4ebb-8781-233e201596a6/raw-artwork.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "f719214e992b15508c57ba3ce66401a80c45b00cd9f2d4f47765b139773750b9",
+      "bytes": 232622,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/969e1b9eafb2_1794229569170.jpeg",
+      "storageKeyName": "969e1b9eafb2_1794229569170.jpeg",
+      "verifiedAt": "2026-11-09T13:06:09.707Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/f719214e992b15508c57ba3ce66401a80c45b00cd9f2d4f47765b139773750b9.jpeg"
       ]
     },
     {
@@ -24956,6 +26027,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "f985b63de69c3c43fd9a556d53a404f5b8e7b8a1c0ea78b0d3fbb584edd51628",
+      "bytes": 309942,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/7556d74fbdbb_1794225969078.jpeg",
+      "storageKeyName": "7556d74fbdbb_1794225969078.jpeg",
+      "verifiedAt": "2026-11-09T12:06:09.487Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-683d6ee0-73e5-4ca8-90f1-48e1cfe8bceb/generation-references/f985b63de69c3c43fd9a556d53a404f5b8e7b8a1c0ea78b0d3fbb584edd51628.jpeg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "f9ad203bebea7e11632fe0b6d2b5281a3082b834386955bfff7e4f8f33e15110",
       "bytes": 2165,
       "mime": "image/png",
@@ -25169,6 +26252,18 @@
       "verifiedAt": "2026-10-22T10:06:37.941Z",
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/product-3566a343eb36f945fd10/snapshot-1792056680392-bbf483/supporting-content/media-05b750ee0ec80069-preview.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "fb7a6225dce226704aa951c79104c9ddc2aec958e3bee504368616b2fbc4b4bd",
+      "bytes": 236765,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/07703fa72a8a_1794229765231.jpeg",
+      "storageKeyName": "07703fa72a8a_1794229765231.jpeg",
+      "verifiedAt": "2026-11-09T13:09:25.870Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/generation-references/fb7a6225dce226704aa951c79104c9ddc2aec958e3bee504368616b2fbc4b4bd.jpeg"
       ]
     },
     {
@@ -25540,6 +26635,18 @@
     },
     {
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "fe519fdd0d78664417702d797176d88320786ff3de8e504ed7a0ddd1b31a4d59",
+      "bytes": 1408355,
+      "mime": "image/png",
+      "url": "https://cdn2.hypergro.ai/c88bbeab4f6b_1794228732485.png",
+      "storageKeyName": "c88bbeab4f6b_1794228732485.png",
+      "verifiedAt": "2026-11-09T12:52:13.141Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-aa4adc3f-ceae-458a-a34b-e38cee3fa1f6/static-lean-raw-1be2033dde7f032d0b51254f.png"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
       "sha256": "fe891bf527c5167271ac28083a8a8eb3dfafe5bf27b05cfce8c604f1d6d71e1c",
       "bytes": 2492881,
       "mime": "image/png",
@@ -25671,6 +26778,18 @@
       "paths": [
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/assets/sample-creatives/asset-c67be532-341f-4b62-a0fa-4d59c4e36480.jpg",
         "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_18_24.jpg"
+      ]
+    },
+    {
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "sha256": "ffa28a81d4e47b8b7c98ea3eb74d028afb5b2ded467d3bb53a59972d49204f4b",
+      "bytes": 276241,
+      "mime": "image/jpeg",
+      "url": "https://cdn2.hypergro.ai/e804e39d032d_1794226039824.jpeg",
+      "storageKeyName": "e804e39d032d_1794226039824.jpeg",
+      "verifiedAt": "2026-11-09T12:07:20.307Z",
+      "paths": [
+        "output/creative-ai/jobs/creative-3264a1de-56ca-4528-8389-8a9d59eebf93/generation-references/ffa28a81d4e47b8b7c98ea3eb74d028afb5b2ded467d3bb53a59972d49204f4b.jpeg"
       ]
     },
     {

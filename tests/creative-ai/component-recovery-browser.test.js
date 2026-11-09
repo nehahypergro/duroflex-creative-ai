@@ -4,7 +4,7 @@ test('active component correction takes priority over the saved parent failure a
  const M=require('../../public/creative-ai/studio-model'),unit={route:'continuity',placementId:'story',status:'repairing'};
  const job={status:'failed',stage:'failed',placements:[{id:'story'}],results:[],componentRecovery:{repairing:1,units:[unit]}};
  assert.equal(M.status(job).label,'Correcting');assert.equal(M.jobProgress(job).running,true);
- const other={...job,placements:[{id:'post'}],results:[{placementId:'post',route:'continuity',imageUrl:'/creative-ai/api/jobs/test/files/post.png'}],status:'finished'};
+ const other={...job,placements:[{id:'post'}],results:[{placementId:'post',route:'continuity',imageUrl:'/creative-ai/api/jobs/test/files/post.png',ready:true}],status:'finished'}; // ready:true since 9 Nov 2026: Ready needs every design ready
  assert.equal(M.status(other).label,'Ready');
  unit.status='needs-attention';job.componentRecovery.repairing=0;
  assert.equal(M.status(job).label,'Needs attention');assert.equal(M.jobProgress(job).running,false);

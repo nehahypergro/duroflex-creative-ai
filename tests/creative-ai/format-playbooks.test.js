@@ -8,7 +8,7 @@ const fixture=require('../../lib/creative-ai/marketing-strategist/examples/input
 const captured=id=>{const resolved=resolve({placementIds:[id]});return {...resolved,snapshot:knowledge.capture(resolved)};};
 test('authored library preserves evidence limitations and validates every route reference',()=>{
  const data=library.load(),catalog=require('../../lib/creative-ai/placement-knowledge').loadCatalog(),presets=require('../../lib/creative-ai/runtime/output-formats').presets;
- assert.equal(data.packs.length,73);assert.equal(data.packs.filter(p=>p.id.startsWith('amazon-image-')).length,14);
+ /* 9 Nov 2026: A+ pages added the whole-page pack amazon-image-aplus-page (docs/aplus-20261109.md). */assert.equal(data.packs.length,74);assert.equal(data.packs.filter(p=>p.id.startsWith('amazon-image-')).length,15);assert.ok(data.packs.some(p=>p.id==='amazon-image-aplus-page'));
  for(const p of data.packs){for(const id of p.selectors.profileIds)assert.ok(catalog.profiles.some(p=>p.id===id),id);for(const id of p.selectors.formatIds)assert.ok(presets.some(p=>p.id===id),id);}
  const story=library.select(data,{pin:{profileId:'custom:studio-social-story'},description:{}})[0];
  assert.ok(story.rules.every(r=>r.tier==='recommendation'));

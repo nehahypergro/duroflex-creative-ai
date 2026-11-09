@@ -26,6 +26,7 @@ test('a design with a clear mismatch or unverified blocking item reads "Check be
  assert.match(M.designCheck({...clean,latestEdit:{revision:2}}).detail,/edited after/);
  assert.equal(M.designCheck({...clean,imageUrl:'https://elsewhere.example/a.png'}),null);
  assert.equal(M.designCheck(null),null);
- // The project stage is unchanged: "Ready" still means every requested image is available.
- assert.equal(M.status({status:'finished',results:[flagged]}).label,'Ready');
+ // Superseded 9 Nov 2026 (live run, item 4): the project reads Ready only when every design is ready.
+ assert.equal(M.status({status:'finished',results:[flagged]}).label,'Check before using · 1 of 1 flagged');
+ assert.equal(M.status({status:'finished',results:[clean]}).label,'Ready');
 });

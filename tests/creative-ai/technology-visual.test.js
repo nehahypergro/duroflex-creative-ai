@@ -44,6 +44,8 @@ for(const brand of brands)test(brand+': an Instagram post with message type Tech
  assert.ok(r.attachments.some(a=>a.roles.includes('technology')),'official technology picture attached');assert.match(r.prompt,/official technology picture/);
  assert.ok(f.calls.find(c=>c.kind==='lean-planning').images.some(i=>i.id==='technology-image'),'the planner sees it too');
  assert.ok(!r.prompt.includes('TECHNOLOGY VISUAL v1'),'planning rule stays out of the image prompt');
+ // reviewCheckVersion 1 (9 Nov 2026): new records pin a reply schema listing the exact requirement IDs.
+ assert.equal(r.reviewCheckVersion,1);assert.deepEqual(r.reviewSchema.properties.checks.items.properties.id.enum,r.reviewContract.requirements.map(x=>x.id));assert.equal(r.reviewSchema.properties.checks.minItems,r.reviewContract.requirements.length);
  assert.throws(()=>planning.validatePlan(planFor(r.input,{generic:true}),r.input),/not a generic benefit/);
  const j=await f.store.read(f.job.id);assert.equal(j.technologyVisual.status,'available');assert.deepEqual(j.technologyVisual.pages,['instagram-post']);
 });

@@ -89,3 +89,17 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': Purchase playbook v2 
  assert.match(v1.text,/OBJECTIVE PLAYBOOK v1/);assert.doesNotMatch(v1.text,/not a feature label/i);
  const aware=context(brand,{objective:'Awareness'}),a=ctx.packet(aware,aware.job.selection).input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');assert.match(a.text,/AWARENESS/);
 });
+
+// Live run 9 Nov 2026 (A+ Premium, Purchase): the planner marked objective-playbook "adapt"
+// because Amazon A+ forbids on-image CTAs; validation required "apply" and planning failed twice.
+// The playbook may be adapted with a reason (never skipped), and says where buttons don't belong.
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': the objective playbook can be adapted with a reason, never skipped',()=>{
+ const c=context(brand),input=ctx.packet(c,c.job.selection).input,r=input.format.guidance.mandatory.find(x=>x.id==='objective-playbook');
+ assert.match(r.text,/Amazon A\+|no on-image (button|call to action)/i);
+ const plan={message:'m',audience:'a',objective:'Purchase',insight:{text:'i',basis:'hypothesis'},desiredAction:'Buy',concept:'c',guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].map(x=>({id:x.id,decision:'apply',reason:'Applies'})),pages:[{id:'page-1',purpose:'Sell',copy:[{role:'headline',text:brand+' Product',factIds:['product-exact']}],artDirection:'Product hero',hierarchy:'Product then CTA',palette:'Brand',typography:input.brand.fonts[0].family+' Bold 700',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,'Clear region'])),formatConstraints:['Safe area']}],omitted:[]};
+ const d=plan.guidanceDecisions.find(x=>x.id==='objective-playbook');
+ d.decision='adapt';d.reason='A+ forbids on-image CTAs; purchase intent shapes product prominence instead.';assert.doesNotThrow(()=>planning.validatePlan(plan,input));
+ d.decision='not-applicable';assert.throws(()=>planning.validatePlan(plan,input),/objective-playbook/);
+ d.decision='adapt';d.reason=' ';assert.throws(()=>planning.validatePlan(plan,input),/objective-playbook|reason/,'an adaptation needs a real reason');
+ const other=plan.guidanceDecisions.find(x=>x.id!=='objective-playbook'&&input.format.guidance.mandatory.some(m=>m.id===x.id));if(other){d.decision='apply';d.reason='ok';other.decision='adapt';assert.throws(()=>planning.validatePlan(plan,input),/Mandatory rule cannot be omitted/);}
+});

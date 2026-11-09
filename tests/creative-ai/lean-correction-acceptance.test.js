@@ -14,14 +14,16 @@ function planFor(input,spatial){return {message:'Comfort at home',audience:'Shop
 // Job-defined custom placement rules exactly as the placement catalog emits them.
 const customRules=[{id:'custom:studio-web-banner-canvas',tier:'mandatory',statement:'Job-specified canvas; no publisher certification.',sourceIds:['user:custom'],check:{method:'dimensions',slot:'artwork',exact:[1920,640]}},{id:'custom:studio-web-banner-file',tier:'mandatory',statement:'Job-defined export constraint.',sourceIds:['user:custom'],check:{method:'file',slot:'artwork',formats:['png']}},{id:'custom:studio-web-banner-layout',tier:'mandatory',statement:'1920×640px Website banner; one clear message and readable type.',sourceIds:['user:custom'],check:{method:'rendered-review'}}];
 const passing=()=>'no_mismatch';
-async function fixture(t,{brand='Duroflex',width=1024,height=1024,review=passing,evidence=r=>'Observed '+r.name,diagnose,generate,spatial,treatment=false,identity='Preserve exact product identity'}={}){
+async function fixture(t,{brand='Duroflex',width=1024,height=1024,review=passing,evidence=r=>'Observed '+r.name,diagnose,generate,spatial,treatment=false,identity='Preserve exact product identity',scopePin=true}={}){
  const root=await fs.mkdtemp(path.join(os.tmpdir(),'lean-accept-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
  const store=new JobStore(path.join(root,'output/creative-ai/jobs')),brandId='brand-'+brand.toLowerCase();
  const bytes=await sharp({create:{width,height,channels:3,background:'#345678'}}).png().toBuffer(),data='data:image/png;base64,'+bytes.toString('base64');
  const intake={brandId,brandUrl:'https://'+brand.toLowerCase()+'.test/',brief:'Introduce this exact SKU.',productName:brand+' Product',productPageUrl:'https://'+brand.toLowerCase()+'.test/products/exact',productVariantId:'queen',originalArtworkVersion:1,leanWorkflowVersion:1,conceptRoutes:['continuity','exploration'],approvedLogoReference:{assetId:'approved-logo'},productReferencePolicy:{sourceAssetId:'sku-photo',referenceAssetIds:['sku-photo'],variant:{id:'queen',sku:'EXACT-Q',name:'Queen'}}};
  const selection=[{id:'page-1',description:{name:'Website banner',formatId:'custom:studio-web-banner',dimensions:{width:1920,height:640}},jobInputs:{logoPolicy:{treatment:'include',reason:'Official logo required'}}}];
  // Saved two-option contract (the second model was retired for new jobs on 8 Nov 2026).
- const legacyTwoOptions=true,config={...policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake),...(legacyTwoOptions?{leanImageOptions:policy.jobOptions({runtimeConfig:{}}),imageOptionModels:['gpt-image-2','gpt-image-2.6-sunburst']}:{})},job=await store.create(intake,config,selection);
+ const legacyTwoOptions=true,config={...policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake),...(legacyTwoOptions?{leanImageOptions:policy.jobOptions({runtimeConfig:{}}),imageOptionModels:['gpt-image-2','gpt-image-2.6-sunburst']}:{})};
+ // correctionScopeVersion 1 (9 Nov 2026) leaves layout-only findings uncorrected; tests of jobs saved before it drop the pin.
+ if(!scopePin)delete config.correctionScopeVersion;const job=await store.create(intake,config,selection);
  const context={job,intake,brand:{id:brandId,name:brand,canvasAssets:{fonts:[{approved:true,brandId,family:brand==='Duroflex'?'Poppins':'Source Sans Pro',weight:700,style:'normal'}]}},research:{brandKnowledge:{brandId},dossier:{version:1,event:'research.completed',researchId:'accept-'+brand.toLowerCase(),brandName:brand,demo:false,completedAt:'2026-11-08T00:00:00.000Z',sources:[{id:'source-product-page',kind:'product',label:'Official product page',reference:intake.productPageUrl,collectedAt:'2026-11-08T00:00:00.000Z',status:'available'}],assets:[{id:'sku-photo',kind:'product',label:'Exact SKU photo',sourceIds:['source-product-page'],imageData:data},{id:'approved-logo',kind:'logo',label:'Approved logo',sourceIds:['source-product-page'],imageData:data}],findings:[]},productBriefEvidence:{productProfileId:'product-exact',assetIds:['sku-photo'],evidence:[{factId:'fact-1'}]},facts:[{id:'fact-1',status:'supported',text:'Supported feature',sourceIds:[]}]},guardian:{requirements:[{id:'identity',text:identity}],preferences:[],visualRules:[]},...(treatment?{treatmentKnowledge:{placements:[{placementId:'page-1',rules:customRules,treatmentIds:[]}],packs:[]}}:{})};
  const calls=[];let attempts=0;
  const reason=async request=>{
@@ -113,7 +115,7 @@ test('historical lean records keep their strict review contract, readiness and p
 
 // ---- Defect #3: correction-stage failures are isolated ----
 for(const brand of ['Duroflex','Sleepyhead'])test(brand+': findings no longer repeat the spatial plan, so a live-sized correction prompt dispatches',async t=>{
- const f=await fixture(t,{brand,spatial:longSpatial(800),review:(r,{correction})=>!correction&&['spatial-layout','logo','placement-placement-logo-page-1'].includes(r.id)?'clear_mismatch':'no_mismatch'});
+ const f=await fixture(t,{brand,scopePin:false,spatial:longSpatial(800),review:(r,{correction})=>!correction&&['spatial-layout','logo','placement-placement-logo-page-1'].includes(r.id)?'clear_mismatch':'no_mismatch'});
  const brief=f.records[0].prompt,spatialJson=JSON.stringify(f.records[0].plan.pages[0].spatial);assert(brief.length>8500&&brief.length<12000,'live-sized brief '+brief.length);
  await f.run();const j=await f.read();assert.equal(j.status,'finished',JSON.stringify(j.unitErrors));
  const edits=images(f).filter(c=>c.attachments[0].assetId==='lean-artwork-anchor');assert.equal(edits.length,2);
@@ -121,7 +123,7 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': findings no longer re
  assert(j.results.every(r=>r.correction.selected));
 });
 test('a saved pre-fix unit whose correction prompt cannot fit finishes with its original before any paid diagnosis',async t=>{
- const f=await fixture(t,{spatial:longSpatial(800),review:r=>['spatial-layout','logo','placement-placement-logo-page-1'].includes(r.id)?'clear_mismatch':'no_mismatch'});await asHistorical(f);
+ const f=await fixture(t,{scopePin:false,spatial:longSpatial(800),review:r=>['spatial-layout','logo','placement-placement-logo-page-1'].includes(r.id)?'clear_mismatch':'no_mismatch'});await asHistorical(f);
  await f.run();const j=await f.read();
  assert.equal(j.status,'finished',JSON.stringify(j.unitErrors));assert.equal(correctionCalls(f),0,'no paid diagnosis for an undispatchable correction');assert.equal(images(f).length,2);
  for(const s of await f.states()){assert.equal(s.status,'completed');assert.equal(s.selected,'original');assert.equal(s.correctionFailure.stage,'preflight');assert.match(s.correctionFailure.message,/exceeds/);}

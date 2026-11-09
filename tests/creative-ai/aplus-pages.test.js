@@ -167,6 +167,10 @@ for(const brand of brands)test(brand+': Amazon text fields, alt text and on-imag
  const long=planFor(input);long.aplus.native[0].headline='x'.repeat(71);assert.throws(()=>planning.validatePlan(long,input),/Amazon text for hero/);
  const crowded=planFor(input);crowded.pages[0].copy.push(...[1,2,3,4].map(n=>({role:'chip',text:'Chip '+n,factIds:[]})));assert.throws(()=>planning.validatePlan(crowded,input),/wide panel needs 1-5/);
  const squashed=planFor(input);squashed.pages[1].copy=[{role:'headline',text:'A different message',factIds:[]}];assert.throws(()=>planning.validatePlan(squashed,input),/mobile version must reuse/);
+ /* Live run 9 Nov 2026: the planner copied all four desktop blocks (product name, headline, two chips) to mobile and the
+    1-3 block limit failed the whole A+ page twice. Any exact copy of the desktop wording is valid; more blocks than desktop are not. */
+ const full=planFor(input);full.pages[0].copy=[full.pages[0].copy[0],{role:'headline',text:'Choose zoned support for your sleep',factIds:[]},{role:'chip',text:'Pocket springs',factIds:[]},{role:'chip',text:'Memory foam',factIds:[]}];full.pages[1].copy=structuredClone(full.pages[0].copy);assert.doesNotThrow(()=>planning.validatePlan(full,input),'mobile may reuse every desktop block');
+ const extra=structuredClone(full);extra.pages[1].copy.push({role:'chip',text:'Memory foam',factIds:[]});assert.throws(()=>planning.validatePlan(extra,input),/mobile version must reuse/,'never more blocks than its desktop page');
  const wordy=planFor(input);wordy.pages[12].copy=[{role:'label',text:'Four words on label',factIds:[]}];assert.throws(()=>planning.validatePlan(wordy,input),/small image/);
  const noName=planFor(input);noName.pages[0].copy=noName.pages[0].copy.slice(1);assert.throws(()=>planning.validatePlan(noName,input),/hero must name the product/);
  const schema=planning.schemaFor(input);assert.equal(schema.properties.aplus.properties.native.minItems,input.aplus.units.length);assert.ok(schema.properties.pages.items.required.includes('altText'));

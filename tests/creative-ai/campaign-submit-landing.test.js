@@ -8,5 +8,5 @@ test('several queued jobs open Projects on the Creating filter',()=>{
  const i=s.indexOf("asset jobs queued'"),branch=s.slice(i,i+400);
  assert.ok(i>0,'multi-job submit branch exists');
  assert.match(branch,/go\('projects\?status=creating'\)/);
- assert.match(s,/\['all','draft','ready','attention','creating'\]\.includes\(r\.params\.get\('status'\)\)/,'Creating is a valid Projects filter');
+ const filters=s.match(/\[([^\]]*)\]\.includes\(r\.params\.get\('status'\)\)/g)||[];assert.ok(filters.some(f=>f.includes("'creating'")),'Creating is a valid Projects filter');
 });

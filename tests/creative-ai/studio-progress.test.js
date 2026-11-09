@@ -7,7 +7,8 @@ test('recorded stages map to simple progress without invented completion',()=>{
  assert.equal(stage('running',['generation']).current,'creating');assert.equal(stage('running',['review']).current,'reviewing');
  assert.equal(stage('running',['review','generation']).current,'creating');
  assert.equal(stage('running',[],{stage:'unexpected-new-stage'}).current,null);
- assert.equal(stage('finished',[],{results:[{imageUrl:'/creative-ai/api/jobs/job-a/files/static-a.png',ready:false}]}).label,'Ready');
+ assert.equal(stage('finished',[],{results:[{imageUrl:'/creative-ai/api/jobs/job-a/files/static-a.png',ready:false}]}).label,'Check before using · 1 of 1 flagged'); // 9 Nov 2026: Ready needs every design ready
+ assert.equal(stage('finished',[],{results:[{imageUrl:'/creative-ai/api/jobs/job-a/files/static-a.png',ready:false}]}).current,'ready');assert.equal(stage('finished',[],{results:[{imageUrl:'/creative-ai/api/jobs/job-a/files/static-a.png',ready:true}]}).label,'Ready');
  for(const status of ['partial','failed','needs-input'])assert.notEqual(stage(status,[],{results:[{imageUrl:'/creative-ai/api/jobs/job-a/files/static-a.png'}]}).current,'ready');
  assert.notEqual(stage('finished').current,'ready');
  assert.equal(stage('running',['review']).steps[1].state,'current','Checking stays within Creating');
