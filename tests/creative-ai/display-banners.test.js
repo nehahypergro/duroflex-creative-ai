@@ -90,7 +90,7 @@ async function bandImage(size,width,height){
  const band=await sharp({create:{width:Math.round(c.width),height:Math.round(c.height),channels:3,background:'#e01010'}}).png().toBuffer();
  return sharp({create:{width:w,height:h,channels:3,background:'#1040e0'}}).composite([{input:band,left:Math.round(c.x),top:Math.round(c.y)}]).png().toBuffer();
 }
-async function fixture(t,{brand='Duroflex',set,brief='Google display ads for this exact mattress.',plan={},pinned=true,cta=''}={}){
+async function fixture(t,{brand='Duroflex',set,brief='Google display ads for this exact mattress.',plan={},pinned=true,cta='',bandFit}={}){
  const root=await fs.mkdtemp(path.join(os.tmpdir(),'banners-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
  const store=new JobStore(path.join(root,'output/creative-ai/jobs')),brandId='brand-'+brand.toLowerCase();
  const bytes=await sharp({create:{width:1024,height:1024,channels:3,background:'#345678'}}).png().toBuffer(),data='data:image/png;base64,'+bytes.toString('base64');
@@ -98,7 +98,7 @@ async function fixture(t,{brand='Duroflex',set,brief='Google display ads for thi
  const intake={brandId,brandUrl:'https://'+brand.toLowerCase()+'.test/',brief,productName:brand+' Ortho Mattress',productPageUrl:'https://'+brand.toLowerCase()+'.test/products/exact',productVariantId:'queen',originalArtworkVersion:1,leanWorkflowVersion:1,...(pinned?{displayBannersVersion:1}:{}),conceptRoutes:['continuity'],approvedLogoReference:{assetId:'approved-logo'},productReferencePolicy:{sourceAssetId:'sku-photo',referenceAssetIds:['sku-photo'],variant:{id:'queen',sku:'EXACT-Q',name:'Queen'}},
   placementIds:p.placementIds,jobInputs:p.jobInputs,logoTreatmentByPlacement:p.logoTreatment,displayBannersSuppliedText:[brief],...(cta?{displayBannersCta:cta}:{})};
  const selection=resolved.selections.map(s=>({id:s.id,description:s.description,jobInputs:s.jobInputs}));
- const config=policy.configure({maxConcurrentUnits:3,maxReasoningCalls:200,jobTimeoutMs:3600000},intake),job=await store.create(intake,config,selection);
+ const config=policy.configure({maxConcurrentUnits:3,maxReasoningCalls:200,jobTimeoutMs:3600000},intake);if(bandFit===false)delete config.displayBannerFitVersion;const job=await store.create(intake,config,selection);
  const facts=[{id:'fact-cover',status:'supported',text:'Washable cover that is easy to clean',sourceIds:[]}];
  const context={job,intake,brand:{id:brandId,name:brand,canvasAssets:{fonts:[{approved:true,brandId,family:brand==='Duroflex'?'Poppins':'Source Sans Pro',weight:700,style:'normal'}]}},research:{brandKnowledge:{brandId},dossier:{version:1,sources:[{id:'source-product-page',kind:'product',label:'Official product page',reference:intake.productPageUrl,status:'available'}],assets:[{id:'sku-photo',kind:'product',label:'Exact SKU photo',sourceIds:['source-product-page'],imageData:data},{id:'approved-logo',kind:'logo',label:'Approved logo',sourceIds:['source-product-page'],imageData:data}],findings:[]},productBriefEvidence:{productProfileId:'product-exact',assetIds:['sku-photo'],evidence:facts.map(f=>({factId:f.id}))},facts},guardian:{requirements:[{id:'identity',text:'Preserve exact product identity'}],preferences:[],visualRules:[]}};
  const calls=[];
@@ -113,8 +113,8 @@ async function fixture(t,{brand='Duroflex',set,brief='Google display ads for thi
  return {store,job,context,runtime,records,calls};
 }
 
-for(const brand of brands)test(brand+': one plan covers every banner size; strip and band sizes are the kept band of a supported shape, never mirrored or squashed',async t=>{
- const f=await fixture(t,{brand,set:M.displayBannerSetNames[1]});
+for(const brand of brands)test(brand+': banner jobs saved before the fit pin: strip and band sizes are the kept band of a supported shape, never mirrored or squashed',async t=>{
+ const f=await fixture(t,{brand,set:M.displayBannerSetNames[1],bandFit:false});
  assert.equal(f.calls.filter(c=>c.kind==='lean-planning').length,1,'ONE planning call for the whole set');assert.equal(f.records.length,8);
  assert.equal(new Set(f.records.map(r=>JSON.stringify(r.plan))).size,1,'every size shares the same plan');
  const input=f.records[0].input;assert.equal(input.displayBanners.version,1);assert.equal(input.displayBanners.pages.length,8);
@@ -134,7 +134,7 @@ for(const brand of brands)test(brand+': one plan covers every banner size; strip
   assert.deepEqual(state.originalFit.added,{x:0,y:0},s.id+': no edge extension');}
  assert.equal(j.displayBanners.imageCount,8);assert.ok(j.displayBanners.notes.some(n=>/strip layout/.test(n)&&/not been checked in a paid run/.test(n)));
  assert.ok(M.resultNotes(j).some(n=>/strip layout/.test(n)),'the notes reach the result view');
- const std=await fixture(t,{brand});assert.equal(std.records.length,6);assert.ok((await std.store.read(std.job.id)).displayBanners.notes.some(n=>/Left out of the standard set/.test(n)),'the default set says which strip sizes it leaves out');
+ const std=await fixture(t,{brand,bandFit:false});assert.equal(std.records.length,6);assert.ok((await std.store.read(std.job.id)).displayBanners.notes.some(n=>/Left out of the standard set/.test(n)),'the default set says which strip sizes it leaves out');
 });
 
 for(const brand of brands)test(brand+': the same headline and CTA on every size; one truthful CTA; text budgets per size; offers only from the brief',async t=>{
@@ -203,4 +203,39 @@ test('both brands: the real readiness path prepares a pinned banner request from
   const sel=placements.resolve(r).selections;assert.equal(ctx.groups(sel).length,1);assert.ok(sel.every(s=>s.jobInputs.logoPolicy.treatment==='include'&&s.jobInputs.displayBanner.version===1));
   assert.equal(policy.configure({},r).displayBannersVersion,1,'the new job pins the banner contract');
  }
+});
+
+// Redo run, 9 Nov 2026 (Posture Perfect, banners e396b7c7): 5 of 6 sizes were flagged. On 160 x 600 and
+// 970 x 250 the image model ignored the "keep inside the band" contract, so cutting the band chopped the
+// logo and the mattress; on 336 x 280 and 300 x 600 the model itself ran the mattress off the edge.
+// New banner jobs (displayBannerFitVersion 1): every size gets an explicit safe-margin line; band sizes
+// keep the WHOLE drawing (even scaling) and fill the two ends with the drawing's own plain edge colour;
+// the model is told to keep those ends plain. Strip sizes (opt-in, untested) keep the band crop.
+for(const brand of brands)test(brand+': band sizes keep the whole drawing and fill the ends with its plain edge colour; every size keeps a safe margin',async t=>{
+ const f=await fixture(t,{brand,set:M.displayBannerSetNames[1]});
+ assert.equal(f.job.runtimeConfig.displayBannerFitVersion,1,'new banner jobs pin the fit');
+ const input=f.records[0].input;
+ for(const r of f.records){const page=input.displayBanners.pages.find(p=>p.id===r.placementId);
+  assert.match(r.prompt,/clear margin from every edge/,page.width+'x'+page.height+': safe margin');
+  if(page.mode==='band'){assert.equal(page.fit,'extend');assert.doesNotMatch(r.prompt,/CROP CONTRACT/);assert.match(r.prompt,/plain, flat background/);assert.deepEqual(banners.fitOptions(r),{extendFlat:true});}
+  else if(page.mode==='strip'){assert.notEqual(page.fit,'extend');assert.match(r.prompt,/FINAL EXPORT CROP CONTRACT/);}}
+ assert.ok(input.displayBanners.pages.some(p=>p.fit==='extend'),'the set has band sizes');
+ await handoff.generate(f.runtime,f.job.id);const j=await f.store.read(f.job.id);assert.equal(j.status,'finished',JSON.stringify(j.unitErrors));
+ for(const s of j.selection){const page=input.displayBanners.pages.find(p=>p.id===s.id);if(page.fit!=='extend')continue;const d=s.description.dimensions;
+  const r=j.results.find(r=>r.placementId===s.id),file=path.join(f.store.dir(f.job.id),r.imageUrl.split('/').pop()),m=await sharp(file).metadata();assert.deepEqual([m.width,m.height],[d.width,d.height]);
+  const key=require('../../lib/creative-ai/art-director').fingerprint([r.route,s.id]).slice(0,24),state=JSON.parse(await fs.readFile(path.join(f.store.dir(f.job.id),'lean-state-'+key+'.json')));
+  assert.equal(state.originalFit.method,'extend-flat');assert.deepEqual(state.originalFit.trimmed,{x:0,y:0},'nothing is cut off');
+  // The drawn picture (red middle, blue outer parts) is kept whole: blue survives at the drawn edges and the fill matches it.
+  const {data,info}=await sharp(file).raw().toBuffer({resolveWithObject:true}),px=(x,y)=>{const i=(y*d.width+x)*info.channels;return [data[i],data[i+1],data[i+2]];};
+  const wide=d.width/d.height>1,ends=wide?[px(0,d.height>>1),px(d.width-1,d.height>>1)]:[px(d.width>>1,0),px(d.width>>1,d.height-1)];
+  ends.forEach((c,i)=>{const e=state.originalFit.edge.colours[i];assert.ok(Math.abs(c[0]-e.r)<=2&&Math.abs(c[1]-e.g)<=2&&Math.abs(c[2]-e.b)<=2,s.id+': end '+i+' is filled with the drawing\'s own edge colour '+c+' vs '+JSON.stringify(e));});
+  let blue=0;for(let i=0;i<data.length;i+=info.channels)if(data[i+2]>200&&data[i]<40)blue++;assert.ok(blue>0,s.id+': the parts outside the old band are kept, not cut');
+  assert.equal(typeof state.originalFit.edge.flat,'boolean','how plain the edge was is recorded');}
+});
+test('the plain-edge fit evens out scale, never stretches, and records an uneven edge honestly',async()=>{
+ const fit=require('../../lib/creative-ai/runtime/exact-canvas').fit;
+ const flat=await sharp({create:{width:300,height:100,channels:3,background:'#336699'}}).png().toBuffer();
+ const a=await fit(flat,400,100,{extendFlat:true});assert.equal(a.method,'extend-flat');assert.equal(a.scale,1);assert.deepEqual(a.added,{x:100,y:0});assert.deepEqual((await sharp(a.bytes).metadata()).width,400);assert.equal(a.edge.flat,true);
+ const noisy=await sharp({create:{width:300,height:100,channels:3,noise:{type:'gaussian',mean:128,sigma:60}}}).png().toBuffer();
+ const b=await fit(noisy,400,100,{extendFlat:true});assert.equal(b.edge.flat,false,'a busy edge is recorded, not hidden');
 });

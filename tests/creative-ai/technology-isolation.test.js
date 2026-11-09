@@ -34,7 +34,7 @@ async function fixture(t,name){
  // Exactly what lean-workflow attaches: loadImage at planning, then {assetId, roles, imageData}.
  const loaded=await tv.loadImage({brands},job.intake),attachment={assetId:loaded.assetId,roles:['technology'],imageData:loaded.imageData};
  const request=(attachments=[attachment])=>({prompt:'Technology panel',attachments,scope:{conceptId:'c',route:'continuity',placementId:'aplus-03'},resolvedLeanBrief:true,size:'1536x1024'});
- return {brands,store,own,other,product,sibling,foreign,create,provider,job,attachment,request,calls:()=>calls};
+ return {root,brands,store,own,other,product,sibling,foreign,create,provider,job,attachment,request,calls:()=>calls};
 }
 // Rejected by the technology-picture check itself, not by the generic "not collected" fallback.
 const isolation=e=>e.code==='BRAND_ISOLATION'&&/technology picture/.test(e.message);
@@ -74,3 +74,32 @@ for(const name of ['Duroflex','Sleepyhead']){
   assert.equal(f.calls(),0,'no image request was sent');
  });
 }
+
+// Regression (redo run, 9 Nov 2026, job creative-4e94f6f9…): the A+ technology panel still failed with
+// "Brand isolation: the technology picture bytes changed" although the re-made picture was identical.
+// The live engine hands BrandScopedProvider a cut-down brand object (read/revision/dir) with no
+// product library, so the check could not re-make the picture. The tests above passed a full
+// BrandStore and missed it; this one drives the engine's OWN provider.
+for(const name of ['Duroflex','Sleepyhead'])test(name+': the engine\'s own brand-scoped provider can check the technology picture',async t=>{
+ const f=await fixture(t,name);let calls=0;
+ const {CreativeRuntime}=require('../../lib/creative-ai/runtime/engine');
+ const runtime=new CreativeRuntime({root:f.root,provider:{generate:async()=>{calls++;return {ok:true};},checkAccess:()=>true}});
+ assert.deepEqual(await runtime.provider.generate(f.request(),f.store.budget(f.job.id)),{ok:true});assert.equal(calls,1);
+});
+// labelGenerationVersion 1 (9 Nov 2026): the label close-up must be the exact deterministic crop of an
+// exact product photo in the same request; anything else is refused before any image request.
+for(const name of ['Duroflex','Sleepyhead'])test(name+': a forged or altered label close-up is refused at image generation',async t=>{
+ const f=await fixture(t,name),sku=require('../../lib/creative-ai/lean/sku-check');
+ const photo=await sharp({create:{width:800,height:600,channels:3,background:'#d8dde6'}}).composite([{input:await sharp({create:{width:120,height:60,channels:3,background:'#13306b'}}).png().toBuffer(),left:400,top:400}]).png().toBuffer();
+ const product={assetId:'sku-1',roles:['product'],imageData:'data:image/png;base64,'+photo.toString('base64')},box={left:340,top:360,width:240,height:140};
+ const good='data:image/png;base64,'+(await sku.cropLabel(photo,box)).toString('base64'),labelSource={sourceAssetId:'sku-1',sourceSha256:sha(photo),box};
+ const label=(patch={})=>({assetId:'label-close-up',roles:['label'],labelSource,imageData:good,...patch});
+ const labelError=e=>e.code==='BRAND_ISOLATION'&&/label close-up/.test(e.message);
+ await assert.rejects(()=>f.provider.generate(f.request([label()]),f.store.budget(f.job.id)),labelError,'no source photo in the request');
+ await assert.rejects(()=>f.provider.generate(f.request([product,label({labelSource:{...labelSource,box:{...box,left:100}}})]),f.store.budget(f.job.id)),labelError,'another box');
+ await assert.rejects(()=>f.provider.generate(f.request([product,label({imageData:f.attachment.imageData})]),f.store.budget(f.job.id)),labelError,'other bytes');
+ await assert.rejects(()=>f.provider.generate(f.request([product,label({roles:['product']})]),f.store.budget(f.job.id)),labelError,'wrong role');
+ // The genuine crop passes the label check (the uncollected test photo is then refused by the general check).
+ await assert.rejects(()=>f.provider.generate(f.request([product,label()]),f.store.budget(f.job.id)),e=>e.code==='BRAND_ISOLATION'&&!/label close-up/.test(e.message));
+ assert.equal(f.calls(),0);
+});

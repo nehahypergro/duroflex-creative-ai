@@ -64,3 +64,18 @@ is unchanged; it serves saved experiment runs, not the Studio.
   about 6.5 KB in the live job, so the inline base64 size problem did not apply to them.
 
 Tests: `tests/creative-ai/sku-check.test.js` (both brands) plus updated AI edit tests and browser test.
+
+## Label close-up in generation (redo run, 9 Nov 2026)
+
+The checker flagged the Posture Perfect label on every image. The real label is a larger angled navy badge; gpt-image-2 kept drawing a small rectangular tag because it only saw whole-product photos.
+
+New lean jobs pin `labelGenerationVersion: 1`:
+- When planning found the label, the same deterministic close-up the reviewer gets is sent as the last image of the generation request.
+- The prompt names it ("enlarged close-up of the genuine product label…") and asks for the same shape, angle, proportion, colours, position and wording.
+- Brand isolation re-crops it from the exact product photo in the same request and accepts only identical bytes.
+- No label found, or an older job: nothing changes.
+- Tests: `lean-label-layout-checks.test.js`, `technology-isolation.test.js`.
+
+## Technology picture "bytes changed" (same run)
+
+The A+ technology panel was refused as "the technology picture bytes changed", although the re-made picture was byte-identical. The engine gave the brand-scoped provider a cut-down brand object without the product library, so the check could not re-make the picture at all. The provider now reaches `brands.products`, and a missing library is reported as "cannot be checked". The regression test drives the engine's own provider for both brands.

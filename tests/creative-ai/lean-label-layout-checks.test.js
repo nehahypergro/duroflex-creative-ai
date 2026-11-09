@@ -26,7 +26,7 @@ async function fixture(t,{brand='Duroflex',pinned=true,rows=labelRows,reply=null
  const shots=[await labelled(),await solid(1600,1200,'#1f5a7a')],ids=['sku-1','sku-2'];
  const intake={brandId,brandUrl:site,brief:'Introduce this exact SKU.',productName:brand+' Product',productPageUrl:site+'products/exact',productVariantId:'queen',originalArtworkVersion:1,leanWorkflowVersion:1,conceptRoutes:['continuity'],approvedLogoReference:{assetId:'approved-logo'},productReferencePolicy:{sourceAssetId:ids[0],referenceAssetIds:ids,variant:{id:'queen',sku:'EXACT-Q',name:'Queen'}}};
  const selection=[{id:'page-1',description:{name:'Flyer',formatId:'flyer',dimensions:{width:2048,height:2048}},jobInputs:{logoPolicy:{treatment:'omit',reason:'No logo on this page'}}}];
- const config=policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake);if(!pinned){delete config.labelCheckVersion;delete config.layoutCheckVersion;}
+ const config=policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake);if(!pinned){delete config.labelCheckVersion;delete config.layoutCheckVersion;delete config.labelGenerationVersion;}if(pinned==='no-label-generation')delete config.labelGenerationVersion;
  const job=await store.create(intake,config,selection);
  const sources=shots.map((_,i)=>({id:'src-'+(i+1),kind:'product',label:'Product photo',reference:site+'cdn/photo-'+(i+1)+'.jpg',collectedAt:'2026-11-09T00:00:00.000Z',status:'available'}));
  const assets=shots.map((b,i)=>({id:ids[i],kind:'product',label:'Exact SKU photo '+(i+1),sourceIds:['src-'+(i+1)],imageData:uri(b)}));
@@ -89,5 +89,31 @@ for(const brand of ['Duroflex','Sleepyhead']){
   // Older records keep their wording and treat the reviewer's result as before.
   const old=await fixture(t,{brand,pinned:false});
   assert.doesNotMatch(old.record.reviewContract.requirements.find(r=>r.id==='spatial-layout').expected,/advisory/i);assert.equal(old.record.layoutCheckVersion,undefined);
+ });
+}
+
+// Redo run, 9 Nov 2026 (Posture Perfect): the checker flagged the label on every image. The real
+// label is a larger angled badge; gpt-image-2 kept drawing a small rectangular tag because it only
+// saw whole-product photos. New jobs (labelGenerationVersion 1) also send the SAME deterministic
+// label close-up to the image request, as the last image, with a prompt line naming it.
+for(const brand of ['Duroflex','Sleepyhead']){
+ test(brand+': the image request carries the official label close-up and says what it is',async t=>{
+  const f=await fixture(t,{brand});
+  assert.equal(f.record.labelGenerationVersion,1);
+  await flow.generate(f.runtime,f.job.id,f.record,f.store.budget(f.job.id));
+  const req=f.calls.find(c=>c.kind==='image').request,atts=req.attachments,last=atts[atts.length-1];
+  assert.equal(last.assetId,'label-close-up');assert.deepEqual(last.roles,['label']);
+  assert.equal(last.imageData,uri((await sku.labelCrop(f.record)).bytes),'exactly the reviewer\'s close-up bytes');
+  assert.deepEqual(last.labelSource,{sourceAssetId:f.record.skuCheck.label.sourceAssetId,sourceSha256:f.record.skuCheck.label.sourceSha256,box:f.record.skuCheck.label.box});
+  assert.match(req.prompt,new RegExp('Image '+atts.length+' is an enlarged close-up of the genuine product label'));
+  assert.ok(!f.record.attachments.some(a=>a.assetId==='label-close-up'),'review references are unchanged');
+ });
+ test(brand+': no label found, or a job without the pin, sends no label close-up',async t=>{
+  for(const opts of [{brand,rows:[]},{brand,pinned:'no-label-generation'}]){
+   const f=await fixture(t,opts);
+   await flow.generate(f.runtime,f.job.id,f.record,f.store.budget(f.job.id));
+   const req=f.calls.find(c=>c.kind==='image').request;
+   assert.ok(!req.attachments.some(a=>a.assetId==='label-close-up'));assert.doesNotMatch(req.prompt,/close-up of the genuine product label/);
+  }
  });
 }

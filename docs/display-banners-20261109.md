@@ -115,3 +115,18 @@ history, brief reader) and `tests/creative-ai/display-banners-picker-browser.tes
 - The reviewer checks the final banner, so a cut-off logo or CTA is reported; the single correction cannot
   recover content that was drawn outside the band.
 - Google acceptance, upload and campaign setup are not checked. Animated GIF and HTML5 ads are not made.
+
+## Banner fit v1 (redo run, 9 Nov 2026)
+
+The paid redo (job `creative-e396b7c7…`) flagged 5 of 6 sizes:
+
+| Size | Cause |
+|---|---|
+| 160×600, 970×250 | The image model ignored the "keep inside the band" contract, so cutting the band chopped the logo and mattress |
+| 336×280, 300×600 | The model itself ran the mattress off the edge (our trim was 2–3 px) |
+
+New banner jobs pin `displayBannerFitVersion: 1`:
+- Every size's prompt asks for the whole product, logo, words and button inside the banner with a clear margin.
+- Band sizes keep the whole drawing (even scaling) and fill the two ends with the drawing's own edge colour (`exact-canvas.fit(..., {extendFlat:true})`, method `extend-flat`). The prompt tells the model to keep those ends plain. How even the edge strip was is recorded (`originalFit.edge.flat`), never hidden; the visual review still judges any visible seam.
+- Strip sizes (728×90, 320×50; opt-in, untested) keep the band crop.
+- Earlier banner jobs keep the band crop. Tests: `tests/creative-ai/display-banners.test.js`.
