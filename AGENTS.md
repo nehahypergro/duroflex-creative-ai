@@ -1,5 +1,52 @@
 # Creative AI brand isolation
 
+## Review checklist, edge fit and size from the brief (10 Nov 2026, after the asset evaluation)
+
+- New lean jobs pin `reviewChecklistVersion: 1` and `edgeFitVersion: 1` (`lean/checklist.js`, `lean/edge-extend.js`). Earlier jobs keep their contracts.
+- **Product fingerprint:** one `lean-fingerprint` luna-medium reading of the exact SKU photos (features and label words). It is saved once per brand + product + photo hashes in `brands/<brandId>/product-fingerprints/` and reused with provenance. It never crosses brands, never states dimensions and never blocks a plan. Each feature is a `product-feature-N` check and a "PRODUCT MUST-HAVES" brief line.
+- **New checks:**
+  - `pointers`, `slot-purpose`, `reference-backdrop`, `label-wording`.
+  - `set-rules`: multi-page plans write 2–6 `setRules`, which go into every brief.
+  - `text-size`: deterministic, using the local text reader on planned lines and the viewing-size minimum. The minimum is also given to the planner and the image brief.
+  - Slot purpose, room, set rules and text size are layout: they are not auto-corrected.
+- **Label wording:** the checker also gets an enlarged close-up of the artwork's label area (local text reader, planned words ignored). A wrong label goes to the single correction, together with the official label close-up.
+- **Edge fit:** when only layout findings remain and one says content is cut off by the edge, the single correction scales the artwork to 86%, draws the new border with one masked edit and restores every scaled pixel. Brand isolation re-derives the anchor and mask from the saved original (`verifyEdgeAnchor`). The candidate is used only when the crop is gone and nothing new is wrong.
+- **Size from the brief:** a paper size in the brief ("A4 poster") chooses the matching print preset on the read-back page. A different later choice is reported, not overridden.
+- **Checker trial:** `scripts/creative-ai/trial-checker-models-20261110.js` (paid, `--live`) compares checker settings on saved images and changes no job. See `docs/review-checklist-20261110.md`.
+- **Image checker is gpt-6.1-sol medium** (user decision after the trial, 10 Nov 2026): it caught 7 of 8 failing images, against 2 of 8 for gpt-6-luna medium, at about ₹4.33 against ₹0.25 per check. `lean-review` covers the main check, the correction re-check, the AI-edit product check and Re-run check. Role models are pinned at admission, so earlier jobs keep gpt-6-luna; correction diagnosis stays gpt-6-luna. Estimates scaled from luna-checked runs add the measured difference (`studio-estimate.js` `checkerUplift`), and a sol run's direct checks count per image, not as planning. This supersedes "ONE luna (medium) product check" for AI edits on new jobs.
+
+## Error fixes, new cards, references and names (10 Nov 2026)
+
+- **Coming soon cards made usable** (user request): Collection Card, Landing Page Modules (3-image set), Marketplace Product Images (6-image set, main image pure white with no words), Listing Feature Cards (3), Email Product Block, Blog / Link Preview, Infographic, Sales One-pager and Web Push Icon (opens the icon tool). Multi-category Module and Catalogue stay unavailable until several products per design are supported; Co-branded Post stays unavailable until a partner logo can be attached (the server requires a verified partner asset).
+- **New lean jobs also pin:**
+  - `realismCheckVersion: 1`: the `physical-realism` check in the existing review. The AI-edit check v2 also asks `request-done` and `edit-damage`.
+  - `planRulesVersion: 1` (`lean/plan-rules.js`): the `composition-layout` rule (margins, no added counters, carousel centred square, visible construction) and no repeated headlines within a set. It also turns on the A+ technology-label rule (at most three large labels; layer names go in the Amazon text) and states where the label sits.
+  - `creativeReferenceVersion: 1` when a reference is attached.
+- **Repairs follow the backup model** (user decision): once the pinned backup model has written a response, its repair goes to the same backup. Recorded as `repair-follows-backup`.
+- **Planning checks:**
+  - Picture IDs cited as facts are dropped (`droppedCitations`), not fatal.
+  - PDP photo slots need no words.
+  - Print image briefs may reach 16,000 characters.
+- **Label finder:** ignores number-only text and refuses boxes over half the photo.
+- **Editor:** pin areas adapt at Send and are saved (`areaBox`, `areaBasis`, `areaVersion: 1`). Wording covers the whole text block (local text reader); add, replace and remove use at least Large. `/ai-edits/areas` is a free preview. Product changes need confirmation (`PRODUCT_CHANGE_CONFIRM`, then "Send anyway").
+- **Creative reference v1** (`runtime/creative-reference.js`):
+  - The picture stays on the device until readiness. It is stored once per brand by hash.
+  - One `lean-reference` luna call describes layout, look and idea in words and lists "avoid" items. The picture is sent inline and never reaches the image model.
+  - Brand isolation binds it to the job and to that step only.
+- **Names and brief panel:** automatic names are Product · Format · Goal · date, and repeats read "· try 2". The brief panel shows the ask, tags, "This image" and "Did it deliver?" from `visualReview.checks`.
+- **Restart:** shutdown closes keep-alive connections, so a restart no longer hangs while a tab is open.
+- **Live-test fixes:**
+  - Coordinated sets send their per-image inputs (one plan).
+  - A skipped process or format rule decision is filled as "Applied automatically…" (schema fields only); brand rules, preferences and the objective playbook still need the planner.
+  - Image-brief ceilings: 14,000 for single formats; 16,000 for print, close-reading and sets. Review checklist: 30,000.
+  - On no-logo pages, brand logo rules judge only a logo that appears.
+  - Label size is judged against the shown part of the product.
+  - Reference "avoid" lists never include the brand's own name.
+- **Longer planning for bigger jobs** (user request, 10 Nov 2026): new lean jobs pin `planningCallScaleVersion: 1`. Lean planning gets 4 minutes plus 20 s per extra image, at most 8 minutes; the backup model gets the same limit. Reviews keep their per-image limit; earlier jobs keep the fixed limit.
+- **Direct image checks** (user decision, 10 Nov 2026): new lean jobs pin `directCheckVersion: 1`. Image checks (`lean-review`: main check, AI-edit product check, Re-run check) are sent directly, not through OpenAI's background queue, with the review call limit as timeout; a timed-out direct check is never re-sent automatically (Re-run check stays available). Planning keeps the queue. Earlier jobs keep their mode, except Re-run check, which is a new user-clicked request and is always sent directly (user decision, 10 Nov 2026).
+- **A+ hero name check:** the exact product name shown on the hero counts as naming the product, whichever fact it cites.
+- See `docs/error-fixes-20261110.md`.
+
 ## Engine fixes and code layout (8 November 2026)
 
 - The main Studio planner, reviewer and corrector live in `lib/creative-ai/lean/`. The old `experiments/lean-planner/` paths are one-line pointers kept for experiment scripts and tests. Do not move main-flow code back into `experiments/`.

@@ -129,3 +129,39 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': a zoomed and shifted 
  /* The requested change inside the area survives the line-up. */
  const px=(await rgb(file)).data,at=(Math.round(.4*H)*W+Math.round(.3*W))*3;assert.ok(px[at]>150&&px[at+1]<60,'the red change is kept');
 });
+
+// Error fixes 16-19 (editor test, 10 Nov 2026). A pin's square cut a headline in half ("Sust after fter offg
+// workcrs."), recoloured half of the wrong cushion, left a leaf behind and never added the lamp or the dog;
+// and the editor changed the real mattress when asked. Now: a wording pin covers the whole text block the
+// local text reader finds under it; an add/replace/remove pin uses at least the Large square; the editor can
+// preview the areas for free; and a request that changes the product needs the user's confirmation.
+const headline=[{text:'Support after',confidence:1,box:{x:0.05,y:0.20,width:0.40,height:0.05}},{text:'office hours.',confidence:1,box:{x:0.05,y:0.26,width:0.38,height:0.05}},{text:'Shop now',confidence:1,box:{x:0.40,y:0.90,width:0.2,height:0.04}}];
+for(const brand of ['Duroflex','Sleepyhead']){
+ test(brand+': a wording pin covers the whole headline; an add pin uses the Large area',async t=>{
+  const f=await fixture(t,brand);f.runtime.editOcr=async()=>({status:'measured',rows:headline});const base='/creative-ai/api/jobs/'+f.job.id+'/ai-edits';
+  const marks=[{type:'pin',x:0.24,y:0.22,area:'large',comment:'Change this headline to: Rest after long workdays.'},{type:'pin',x:0.75,y:0.7,area:'medium',comment:'Add a small dog sleeping on the rug here'}];
+  const preview=await f.api(base+'/areas',{...f.unit,annotations:marks});assert.equal(preview.status,200,JSON.stringify(preview.body));assert.equal(f.calls.length,0,'preview is free');
+  const [text,add]=preview.body.areas;assert.equal(text.basis,'text-block');assert.ok(text.box.x<=0.05&&text.box.x+text.box.width>=0.45&&text.box.y<=0.2&&text.box.y+text.box.height>=0.31,'both headline lines, full width: '+JSON.stringify(text.box));
+  assert.ok(text.box.y+text.box.height<0.5,'the button text is not included');assert.equal(add.basis,'add-or-replace');assert.ok(Math.abs(add.box.width-0.42*1080/1080)<0.01,'Large square');
+  const created=await f.api(base,{...f.unit,annotations:marks,requestKey:'areas-request-0001',sourceVersionId:'original',expectedVersionId:'original'});assert.equal(created.status,202,JSON.stringify(created.body));
+  const saved=await f.done(created.body.id);assert.equal(saved.status,'finished',saved.error);
+  const child=await f.runtime.refinements.store(f.job.id).read(saved.id);assert.equal(child.refinement.areaVersion,1);
+  assert.deepEqual(child.refinement.annotations.map(a=>a.areaBasis),['text-block','add-or-replace']);assert.deepEqual(child.refinement.annotations[0].areaBox,text.box,'the saved area is the previewed one');
+  assert.ok(f.calls[0].mask,'masked to the adapted areas');
+  const again=await f.api(base,{...f.unit,annotations:marks,requestKey:'areas-request-0001',sourceVersionId:'original',expectedVersionId:'original'});assert.equal(again.body.id,created.body.id,'the same Send is recognised, never bought twice');
+ });
+ test(brand+': changing the product itself needs a confirmation',async t=>{
+  const f=await fixture(t,brand),base='/creative-ai/api/jobs/'+f.job.id+'/ai-edits',product='product';
+  const logo=await f.api(base+'/areas',{...f.unit,instruction:'Make the '+brand+' logo bigger'});assert.equal(logo.body.productChange,false,'the brand name or logo is not the product');
+  const send={...f.unit,instruction:'Make the '+product+' fabric dark grey',requestKey:'product-change-0001',sourceVersionId:'original',expectedVersionId:'original'};
+  const refused=await f.api(base,send);assert.notEqual(refused.status,202);assert.match(refused.body.error,/changes the product itself/);assert.equal(f.calls.length,0,'nothing paid');
+  // Live recheck, 10 Nov 2026: the real server reply lacked the code the editor needs to show "Send anyway".
+  {const handler=require('../../lib/creative-ai/runtime/http').createHandler({root:f.root,provider:{checkAccess:async()=>({})}}),res={headers:{},statusCode:0,writeHead(c,h){this.statusCode=c;Object.assign(this.headers,h||{});},end(b){this.body=String(b||'');this.writableEnded=true;},setHeader(){},getHeader(){}};
+   const req=require('node:stream').Readable.from([JSON.stringify({...send,requestKey:'product-change-0002'})]);Object.assign(req,{method:'POST',url:base,headers:{host:'127.0.0.1','content-type':'application/json'}});
+   await handler.handle(req,res,base,async r=>{let t='';for await(const c of r)t+=c;return JSON.parse(t);});assert.equal(res.statusCode,409);assert.equal(JSON.parse(res.body).code,'PRODUCT_CHANGE_CONFIRM');}
+  const preview=await f.api(base+'/areas',{...f.unit,instruction:send.instruction});assert.equal(preview.body.productChange,true);
+  const ok=await f.api(base,{...send,confirmProductChange:true});assert.equal(ok.status,202,JSON.stringify(ok.body));const saved=await f.done(ok.body.id);
+  assert.equal((await f.runtime.refinements.store(f.job.id).read(saved.id)).refinement.productChangeConfirmed,true);
+  const words=await f.api(base+'/areas',{...f.unit,instruction:'Change the headline to "A '+product+' for deep sleep"'});assert.equal(words.body.productChange,false,'a wording change is not a product change');
+ });
+}

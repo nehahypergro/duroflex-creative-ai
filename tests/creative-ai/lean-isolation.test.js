@@ -10,7 +10,8 @@ for(const brand of ['duroflex','sleepyhead'])test(brand+': lean wire preserves s
  const input={brand:{mandatory:[{id:'font',text:'Approved Font Bold'}]},product:{facts:[{id:'sku-feature',text:'Supported feature with its exact qualifier',sourceIds:['official-page']}]}};
  for(const contextKind of ['lean-planning','lean-review','lean-correction'])await p.reason({contextKind,input,instructions:'Use the resolved contract.',schema,strictSchema:true,maxOutputTokens:100},store.budget(job.id));
  for(const body of bodies){const data=JSON.parse(body.input.at(-1).content[0].text.split('Return JSON matching this contract. ')[1]);assert.equal(data.input.handoffAuthority,undefined);assert.deepEqual(data.input.product.facts,input.product.facts);assert.doesNotMatch(JSON.stringify(body),/Copywriter owns|code computes exact-copy verdicts|creative director chooses/i);}
- assert.deepEqual(bodies.map(b=>b.model),['gpt-6.1-sol','gpt-6-luna','gpt-6-luna']);assert.deepEqual(bodies.map(b=>b.reasoning.effort),['high','medium','medium']);
+ // Image checker switched to gpt-6.1-sol medium for new jobs (user decision, 10 Nov 2026, checker trial).
+ assert.deepEqual(bodies.map(b=>b.model),['gpt-6.1-sol','gpt-6.1-sol','gpt-6-luna']);assert.deepEqual(bodies.map(b=>b.reasoning.effort),['high','medium','medium']);
 });
 test('new lean jobs do not require unused legacy role-model access',async t=>{
  const store=await storeFor(t),config=policy.configure(base,{leanWorkflowVersion:1}),job=await store.create({leanWorkflowVersion:1},config,[]),p=new OpenAIProvider(base);

@@ -68,3 +68,29 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': plain size/variant la
  for(const text of ['Queen variant','Queen size','Size: Queen','Queen 72 x 60 size'])assert.doesNotThrow(()=>planning920.validateCitations([{role:'variant label',text,factIds:['v1']}],product),text);
  assert.throws(()=>planning920.validateCitations([{role:'variant label',text:'Queen bestseller',factIds:['v1']}],product),/does not support copy/);
 });
+// Live A+ retry, 9 Nov 2026 (job creative-d5ab6c1e): the backup planner cited the official product picture
+// "sku-product-image-2" as the source of the headline "5 Zone Dual Density Layer", and the whole plan was
+// rejected as "Unknown product fact citation". A picture is not a written fact and cannot back wording here:
+// the picture ID is dropped from the citation (recorded), the wording stays for the visual review, and a
+// genuinely unknown fact ID still fails. Both brands share this check.
+for(const [brand,product,fact,words] of [['Duroflex',{id:'product-dfb69ef80bb5fad29770',name:'Posture Perfect Pocket Spring Orthopedic Mattress',variant:{id:'1',name:'Queen',options:[]},facts:[{id:'sku-fact-4',text:'Our Proprietary Dual Density Layer helps maintain the natural curves of the body.'}]},'sku-fact-4','Dual Density Layer'],['Sleepyhead',ortho,'sku-fact-3','Cool-to-touch knitted fabric']])
+ test(brand+': an official picture cited as a fact is dropped, not a plan failure',()=>{
+  const copy=[{role:'headline',text:'5 Zone Dual Density Layer',factIds:['sku-product-image-2']},{role:'support',text:words,factIds:[fact,'technology-image']}];
+  assert.doesNotThrow(()=>validateCitations(copy,product));
+  assert.deepEqual(copy[0].factIds,[]);assert.deepEqual(copy[0].droppedCitations,['sku-product-image-2']);
+  assert.deepEqual(copy[1].factIds,[fact]);
+  assert.throws(()=>validateCitations([{role:'headline',text:'Lasts forever',factIds:['sku-fact-99']}],product),/Unknown product fact citation: sku-fact-99/);
+ });
+// Live run, 10 Nov 2026 (Duroflex Quboid infographic, creative-f09ae10b): the plan labelled layers with the
+// words printed on the official technology picture ("Cool gel memory foam", "3 Zone Copper Infused NRG Layer")
+// and was rejected because no written fact contained them. New jobs (plan rules v1) read the picture's printed
+// words with the local text reader and add them as a citable fact, so real layer names can be cited and checked.
+const pictureFact=require('../../lib/creative-ai/runtime/technology-visual').pictureTextFact;
+for(const [brand,rows] of [['Duroflex',['Cool gel','memory foam','3 Zone Copper','Infused NRG Layer','PU foam layer','Jacquard woven','fabric','12345']],['Sleepyhead',['BodyIQ','memory foam','Support foam','Knitted fabric']]])test(brand+': words printed on the official technology picture become a citable fact',()=>{
+ const fact=pictureFact(rows.map(text=>({text,confidence:0.9})));
+ assert.equal(fact.id,'technology-picture-text');assert.match(fact.text,/^Words printed on the official technology picture:/);assert.doesNotMatch(fact.text,/12345/,'number-only text is ignored');
+ const product={id:'p',name:brand+' Mattress',variant:null,facts:[fact]};
+ const label=brand==='Duroflex'?'Cool gel\nmemory foam':'BodyIQ\nmemory foam';
+ assert.doesNotThrow(()=>validateCitations([{role:'construction label',text:label,factIds:['technology-picture-text']}],product));
+ assert.equal(pictureFact([]),null);assert.equal(pictureFact([{text:'ab',confidence:0.1}]),null,'low-confidence reads are ignored');
+});

@@ -80,11 +80,11 @@ function planFor(input,{offer=null,banned=false,longAlt=false}={}){
  const a=input.aplus,font=input.brand.fonts[0].family,tech=a.technology.factIds||[];
  const name={role:'product name',text:input.product.name,factIds:[input.product.id]};
  const pages=input.format.pages.map(p=>{const info=a.pages.find(x=>x.id===p.id);let copy=[];
-  if(info.textRule==='panel'){copy=[name,{role:'headline',text:info.role==='hero'?'Sleep that resets you':'Made for deep rest',factIds:[]}];if(info.role==='technology'&&tech.length)copy.push({role:'technology chip',text:'5 Zone Orthopedic Support',factIds:[tech[0]]});if(offer&&info.role==='hero')copy.push({role:'offer',text:offer,factIds:[]});if(banned&&info.role==='lifestyle')copy.push({role:'chip',text:'Rated 4.8 stars by customers',factIds:[]},{role:'chip',text:'Visit www.example.com',factIds:[]});}
+  if(info.textRule==='panel'){copy=[name,{role:'headline',text:info.role==='hero'?'Sleep that resets you':'Made for deep rest · '+info.unit,factIds:[]}];if(info.role==='technology'&&tech.length)copy.push({role:'technology chip',text:'5 Zone Orthopedic Support',factIds:[tech[0]]});if(offer&&info.role==='hero')copy.push({role:'offer',text:offer,factIds:[]});if(banned&&info.role==='lifestyle')copy.push({role:'chip',text:'Rated 4.8 stars by customers',factIds:[]},{role:'chip',text:'Visit www.example.com',factIds:[]});}
   if(info.textRule==='label'&&info.unit==='detail-1')copy=[{role:'label',text:'Soft knit cover',factIds:[]}];
   return {id:p.id,purpose:info.moduleName,copy,artDirection:'Exact product, calm bedroom, one visual system',hierarchy:'Name, headline, chips',palette:'Brand colours',typography:copy.length?font+' Bold 700':'No campaign text',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,'Follow the page rule and natural space'])),formatConstraints:['Flat artwork'],altText:longAlt&&info.role==='hero'?'x'.repeat(101):'The exact mattress shown for the '+info.moduleName.toLowerCase()};});
  for(const p of pages){const info=a.pages.find(x=>x.id===p.id);if(info.textRule==='mobile'){const desk=pages.find(x=>x.id===info.pairOf);p.copy=desk.copy.slice(0,2);p.typography=font+' Bold 700';}}
- return {message:'Deep, supported rest',audience:'Shoppers',objective:'Consideration',insight:{text:'Rest matters',basis:'hypothesis'},desiredAction:'Explore',concept:'One calm story',
+ return {...(input?.checklist?.setRules?{setRules:['The same product colourway and label on every page','The same bright bedroom family on every page']}:{}),message:'Deep, supported rest',audience:'Shoppers',objective:'Consideration',insight:{text:'Rest matters',basis:'hypothesis'},desiredAction:'Explore',concept:'One calm story',
   guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].map(r=>({id:r.id,decision:'apply',reason:'Applies'})),pages,omitted:[],
   aplus:{native:a.units.map(u=>({unitId:u.unitId,headline:'About '+u.unitId,body:banned&&u.unitId==='hero'?'Comfort you can feel. Call us now on 1800 123 4567.':'Comfort you can feel.'})),faq:a.faq?[1,2,3].map(n=>({question:'Question '+n+'?',answer:'Answer from the product page.',factIds:[input.product.facts[0].id]})):[]}};
 }
@@ -173,6 +173,12 @@ for(const brand of brands)test(brand+': Amazon text fields, alt text and on-imag
  const extra=structuredClone(full);extra.pages[1].copy.push({role:'chip',text:'Memory foam',factIds:[]});assert.throws(()=>planning.validatePlan(extra,input),/mobile version must reuse/,'never more blocks than its desktop page');
  const wordy=planFor(input);wordy.pages[12].copy=[{role:'label',text:'Four words on label',factIds:[]}];assert.throws(()=>planning.validatePlan(wordy,input),/small image/);
  const noName=planFor(input);noName.pages[0].copy=noName.pages[0].copy.slice(1);assert.throws(()=>planning.validatePlan(noName,input),/hero must name the product/);
+ /* Live run 10 Nov 2026 (Posture Perfect A+): the hero showed the exact product name but cited the fact that states
+    it ("sku-fact-1"), not the product ID, and the whole page failed planning. Showing the exact name is what counts. */
+ const byText=planFor(input);byText.pages[0].copy[0]={...byText.pages[0].copy[0],factIds:[input.product.facts[0].id]};byText.pages[1].copy[0]=structuredClone(byText.pages[0].copy[0]);
+ assert.doesNotThrow(()=>planning.validatePlan(byText,input),'the exact product name on the hero is enough');
+ const otherName=structuredClone(byText);otherName.pages[0].copy[0].text='A different mattress';otherName.pages[1].copy[0].text='A different mattress';
+ assert.throws(()=>planning.validatePlan(otherName,input),/hero must name the product/,'another name with no product citation still fails');
  const schema=planning.schemaFor(input);assert.equal(schema.properties.aplus.properties.native.minItems,input.aplus.units.length);assert.ok(schema.properties.pages.items.required.includes('altText'));
  // Image-only small pages may carry no words at all.
  assert.doesNotThrow(()=>planning.validatePlan(planFor(input),input));
@@ -214,4 +220,15 @@ test('the A+ estimate counts every image and scales completed runs of the same b
   const b=await estimateBrief(runtime,'brand-duroflex',basic,1);assert.ok(b.high<e.high,'6 images cost less than 14');
   runtime.store.list=async()=>[];const none=await estimateBrief(runtime,'brand-duroflex',premium,1);assert.equal(none.status,'unavailable');assert.match(none.message,/14 images/);
  }finally{await fs.rm(root,{recursive:true,force:true});}
+});
+// Error fix 10 (user decision, 10 Nov 2026: "refer to Amazon guidelines"). The A+ technology panel came back
+// with the official diagram's eight tiny layer labels and was flagged as over the word limit. Amazon's A+
+// guidance asks for image text that is readable on a phone, and Premium modules carry the detail in their own
+// text fields. New jobs: the panel redraws the construction clean, with at most three large labels, and every
+// layer name goes into the module's Amazon text body.
+for(const brand of brands)test(brand+': the technology panel keeps few, large labels and puts the layer list in the Amazon text',async t=>{
+ const f=await fixture(t,{brand}),tech=f.records.filter(r=>r.input.aplus.pages.find(p=>p.id===r.placementId).role==='technology');
+ for(const r of tech){assert.match(r.prompt,/do not reproduce its small printed labels/i);assert.match(r.prompt,/at most three large labels/i);}
+ assert.match(f.records[0].input.format.guidance.mandatory.find(x=>x.id.startsWith('aplus')).text,/layer name.*Amazon text body/i);
+ assert.equal(f.records[0].input.aplus.technologyLabelsVersion,1);
 });

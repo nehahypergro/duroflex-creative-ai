@@ -139,3 +139,21 @@
 .home-brief-file span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:260px}
 .home-brief-file .icon{width:14px;height:14px;color:var(--purple)}
 .home-brief-file button{border:0;background:transparent;cursor:pointer;font-size:16px;line-height:1;color:var(--muted);padding:0 4px}
+/* Brief beside the design, redesigned 10 Nov 2026: ask, tags, this image, "Did it deliver?", full brief on demand. */
+.review-brief-summary .brief-ask{margin:0 0 10px;font-size:15.5px;line-height:1.45;font-weight:600;color:var(--ink)}
+.review-brief-summary .brief-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+.review-brief-summary .brief-tags li{padding:3px 9px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12.5px;color:var(--ink)}
+.review-brief-summary .brief-this-image{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;margin:0 0 12px;padding:8px 10px;border-radius:8px;background:#fff;border:1px solid var(--line)}
+.review-brief-summary .brief-this-image span{width:100%;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.review-brief-summary .brief-this-image strong{font-size:13.5px;color:var(--ink)}
+.review-brief-summary .brief-this-image small{font-size:12.5px;color:var(--muted)}
+.review-brief-summary .brief-delivered h3{margin:0 0 6px;font-size:13px;font-weight:700;color:var(--ink)}
+.review-brief-summary .brief-delivered ul{margin:0 0 10px;padding:0;list-style:none;display:grid;gap:6px}
+.review-brief-summary .brief-delivered li{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--ink)}
+.review-brief-summary .brief-delivered li small{color:var(--muted);margin-left:4px}
+.review-brief-summary .brief-delivered li em{display:block;font-style:normal;font-size:12.5px;color:#7a2e0e;margin-top:2px}
+.review-brief-summary .brief-delivered-mark{flex:none;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-size:12px;font-weight:700;color:#fff;background:#12805c}
+.review-brief-summary .brief-delivered li.is-check .brief-delivered-mark{background:#b54708}
+.review-brief-summary .brief-delivered li.is-unsure .brief-delivered-mark{background:#667085}
+.review-brief-summary .brief-full summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--purple);min-height:32px;display:flex;align-items:center}
+.review-brief-summary .brief-full .review-brief-text{-webkit-line-clamp:unset;display:block}

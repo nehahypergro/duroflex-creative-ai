@@ -26,6 +26,9 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   // The preview helper serves studio files only; the editor modules come straight from public/.
   await page.route('**/creative-ai/editor-*',async route=>{const name=new URL(route.request().url()).pathname.split('/').pop();if(!/^editor-(chat-tools|chat|image-only)\.(js|css)$/.test(name))return route.fulfill({status:404,body:''});return route.fulfill({body:await fs.readFile(path.join(pub,name)),contentType:name.endsWith('.css')?'text/css':'text/javascript'});});
   await page.route('**/creative-ai/api/jobs**',async route=>{const req=route.request(),u=new URL(req.url()),p=u.pathname,s=state[id];
+   // Edit areas v1 (10 Nov 2026): a free preview of each pin's real area; a product change needs confirming.
+   if(p.endsWith('/ai-edits/areas')&&req.method()==='POST'){const body=req.postDataJSON();return route.fulfill({status:200,json:{areas:(body.annotations||[]).map((a,i)=>({number:i+1,box:/headline/i.test(a.comment||'')?{x:0.05,y:0.1,width:0.6,height:0.12}:{x:a.x-0.05,y:a.y-0.05,width:0.1,height:0.1},basis:/headline/i.test(a.comment||'')?'text-block':'pin-area'})),tooLarge:false,productChange:false}});}
+   if(p.endsWith('/ai-edits')&&req.method()==='POST'&&/fabric/.test(req.postDataJSON().instruction||'')&&!req.postDataJSON().confirmProductChange)return route.fulfill({status:409,json:{error:'This looks like it changes the product itself.',code:'PRODUCT_CHANGE_CONFIRM'}});
    if(p.endsWith('/ai-edits')&&req.method()==='POST'){const body=req.postDataJSON();posts.push({p,body});s.versions.push({id:v2,status:'running',instruction:body.instruction,annotations:(body.annotations||[]).map((a,i)=>({...a,number:i+1})),masked:!!body.annotations?.some(a=>a.type==='box'),sourceVersionId:body.sourceVersionId,result:null,costs:null});return route.fulfill({status:202,json:s.versions.at(-1)});}
    if(p.endsWith('/ai-edits/selected')&&req.method()==='POST'){const body=req.postDataJSON();posts.push({p,body});s.active=body.versionId;return route.fulfill({status:200,json:{versionId:body.versionId}});}
    if(req.method()!=='GET')return route.fulfill({status:501,json:{error:'Read-only test.'}});
@@ -73,6 +76,14 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   assert.equal(await send.isDisabled(),true,'oversized areas cannot be sent');assert.match(await dialog.locator('.ec-chat-status').innerText(),/more than about a third/);
   for(let i=0;i<3;i++)await dialog.locator('[data-pin-remove]').last().click();
   assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),2);assert.equal(await send.isDisabled(),false,'back within the limit');assert.doesNotMatch(await dialog.locator('.ec-chat-status').innerText(),/more than about a third/,'the size warning clears');
+  /* A pin on a headline shows the whole text line it will change, before Send. */
+  await at(.3,.15);await pop.waitFor();await dialog.locator('[data-io-comment]').fill('Change this headline to: Rest well');await dialog.locator('[data-io-pop-done]').click();
+  await page.waitForFunction(()=>[...document.querySelectorAll('#editableDialog [data-io-pins] li')].some(li=>/Whole text line/.test(li.textContent)));
+  {const boxes=await dialog.locator('.ec-io-overlay .ec-io-area-box').evaluateAll(els=>els.map(e=>Number(e.getAttribute('width'))));assert.ok(boxes.some(w=>Math.abs(w-0.6*1080)<2),'the drawn area is the server\'s whole-line area');}
+  await dialog.locator('[data-pin-remove]').last().click();
+  /* A request that changes the product needs a confirmation before anything is paid. */
+  await dialog.locator('[data-chat-input]').fill('Make the mattress fabric grey');await send.click();
+  await dialog.locator('[data-io-confirm]').waitFor();assert.match(await dialog.locator('.ec-chat-status').innerText(),/changes the product itself/);
   await dialog.locator('[data-chat-input]').fill('   ');assert.equal(await send.isDisabled(),false,'pin comments are enough even with a blank note');
   await page.screenshot({path:path.join(shots,slug+'-annotate-1366.png')});
   await send.click();

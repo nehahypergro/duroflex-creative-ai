@@ -24,6 +24,9 @@ window.StudioData = (() => {
     }));
     return result;
   }
+  // Creative reference v1 (10 Nov 2026): studio.js adds the chosen reference picture (kept on this device)
+  // to the brief just before readiness and generation, so saved drafts stay small.
+  let augmentDraft=async d=>d;
   async function post(path,body) {const response=await fetch('/creative-ai/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});return responseJson(response);}
   async function designDetails(job,id,signal){
     if(!job.results.some(r=>r.imageUrl))return;
@@ -71,8 +74,9 @@ window.StudioData = (() => {
     resumeWork:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/resume-work',input),
     restartPreview:id=>get('jobs/'+encodeURIComponent(id)+'/restart'),
     restart:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/restart',input),
-    preflight:draft=>post('studio/preflight',{draft}),
-    generate:(draft,token)=>post('studio/generate',{draft,token}),
+    preflight:async draft=>post('studio/preflight',{draft:await augmentDraft(draft)}),
+    generate:async(draft,token)=>post('studio/generate',{draft:await augmentDraft(draft),token}),
+    setDraftAugmenter(fn){augmentDraft=typeof fn==='function'?fn:async d=>d;},
     // Resolve only metadata already accessible through the authenticated jobs index.
     // Never fetch an unlisted project's private detail to guess its owner or visibility.
     async projectLocation(id){const jobs=await get('jobs');const row=jobs.find(j=>j.id===id);return row?{brandId:row.brandId||row.intake?.brandId}:null;},

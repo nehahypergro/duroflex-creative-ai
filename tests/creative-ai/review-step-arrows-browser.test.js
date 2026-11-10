@@ -11,9 +11,9 @@ test('design page steps through every image in the project with arrows and keys 
  try{for(const b of f.brands){
   const id='steps-'+b.id.slice(-6),ids=['hero','technology','lifestyle'];
   const url=i=>'/creative-ai/api/jobs/'+id+'/files/static-lean-'+ids[i]+'.png';
-  const job={id,name:'Step test',brandId:b.id,status:'finished',createdAt:'2026-11-09T10:00:00Z',updatedAt:'2026-11-09T10:05:00Z',activeStages:[],intake:{brandId:b.id,campaignName:'Step test',leanWorkflowVersion:1,productName:b.name+' Mattress'},briefSummary:{brief:'Amazon A+ Premium content for the '+b.name+' mattress. Purchase objective.',productName:b.name+' Mattress',objective:'Purchase',language:'English'},
+  const job={id,name:'Step test',brandId:b.id,status:'finished',createdAt:'2026-11-09T10:00:00Z',updatedAt:'2026-11-09T10:05:00Z',activeStages:[],intake:{brandId:b.id,campaignName:'Step test',leanWorkflowVersion:1,productName:b.name+' Mattress'},briefSummary:{brief:'Amazon A+ Premium content for the '+b.name+' mattress. Purchase objective.',productName:b.name+' Mattress',objective:'Purchase',language:'English',ask:'Get shoppers to buy the '+b.name+' mattress on Amazon.'},
    placements:ids.map(p=>({id:p,name:'A+ '+p,dimensions:{width:1464,height:600}})),
-   results:ids.map((p,i)=>({route:'continuity',placementId:p,imageUrl:url(i),width:1464,height:600,sha256:String(i).repeat(64),originalArtwork:true,editable:false,ready:true,leanWorkflowVersion:1}))};
+   results:ids.map((p,i)=>({route:'continuity',placementId:p,imageUrl:url(i),width:1464,height:600,sha256:String(i).repeat(64),originalArtwork:true,editable:false,ready:true,leanWorkflowVersion:1,...(i===0?{visualReview:{status:'completed',conclusion:'clear_mismatch',checks:[{id:'copy-0',name:'headline',result:'no_mismatch'},{id:'product',name:'Product identity',result:'no_mismatch'},{id:'physical-realism',name:'Physical realism',result:'no_mismatch'},{id:'spatial-layout',name:'Planned spatial arrangement',result:'clear_mismatch',evidence:'The mattress runs off the right edge.'}]}}:{})}))};
   jobs.push(job);
   const page=await browser.newPage({viewport:{width:1366,height:900}});page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/creative-ai/api/jobs**',async route=>{const p=new URL(route.request().url()).pathname;if(route.request().method()!=='GET')return route.fulfill({status:501,json:{}});
@@ -30,6 +30,11 @@ test('design page steps through every image in the project with arrows and keys 
   await page.keyboard.press('ArrowLeft');await page.waitForFunction(id=>location.hash==='#review/'+id+'/1/0',id);
   await counted('2 of 3');await prev.click();await page.waitForFunction(id=>location.hash==='#review/'+id+'/0/0',id);await counted('1 of 3');
   assert.match(await next.getAttribute('aria-label'),/Next image/);
+  /* Brief panel redesign (10 Nov 2026): the ask, tags, this image, "Did it deliver?" and the full brief on demand. */
+  {const panel=page.locator('.review-brief-summary');assert.match(await panel.locator('.brief-ask').innerText(),/Get shoppers to buy/);
+   assert.deepEqual(await panel.locator('.brief-tags li').allInnerTexts(),['Purchase','English']);assert.match(await panel.locator('.brief-this-image').innerText(),/A\+ hero[\s\S]*1464 × 600/);
+   const rows=await panel.locator('.brief-delivered li').allInnerTexts();assert.equal(rows.length,4);assert.match(rows.find(t=>/Layout/.test(t)),/Check[\s\S]*runs off the right edge/);assert.match(rows.find(t=>/Looks real/.test(t)),/Delivered/);
+   assert.equal(await panel.locator('.brief-full').getAttribute('open'),null,'the full brief is folded away');}
   /* User request, 9 Nov 2026: show the brief on the left of the design so it never needs scrolling to. */
   const brief=await page.locator('.review-brief-summary').boundingBox(),art=await page.locator('.focused-art').boundingBox();
   assert.ok(brief&&art&&brief.x+brief.width<=art.x+1,'the brief sits to the left of the design on a laptop');

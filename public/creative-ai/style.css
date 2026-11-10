@@ -34,3 +34,7 @@
 .design-glance{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.design-choice{display:flex;gap:10px;padding:14px;background:#faf8ff;border:1px solid var(--line);border-radius:12px}.design-icon{font-size:22px;color:var(--purple);line-height:1.2;flex:0 0 25px}.design-choice h3{margin:0 0 5px;font-size:13px}.design-choice p{margin:0;font-size:13px;line-height:1.5;color:#51475e}.glance-intent{margin-top:0}.glance-check{display:flex;flex-direction:column;gap:4px;margin-top:16px;padding:12px;border-radius:10px;background:#edf8ef;font-size:12px}.glance-check.attention{background:#fff4df;color:#714b11}.reasoning-details{margin-top:18px}.reasoning-details>summary{cursor:pointer;font-weight:650;padding:15px 0;color:var(--purple)}.reasoning-details>.card{margin-top:14px}@media(max-width:640px){.design-glance{grid-template-columns:1fr}}
 
 .design-glance{grid-template-columns:1fr;gap:8px}.design-choice{padding:10px 12px}.design-choice h3{margin-bottom:3px}.design-choice p{line-height:1.4}.design-choice:last-child{grid-column:auto}
+/* Creative reference v1 (10 Nov 2026): what to borrow from a reference picture. */
+.reference-chip .reference-use{margin:0 4px 0 8px;min-height:30px;max-width:180px;border:1px solid var(--line, #d0d5dd);border-radius:6px;background:#fff;font:inherit;font-size:13px;padding:2px 6px}
+.understood-reference .reference-chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.understood-reference h2 small{font-weight:400;color:var(--muted, #667085);font-size:13px;margin-left:6px}

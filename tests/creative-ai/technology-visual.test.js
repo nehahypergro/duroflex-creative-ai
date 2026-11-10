@@ -11,7 +11,7 @@ const brands=['Duroflex','Sleepyhead'];
 
 function planFor(input,{generic=false}={}){
  const t=input.technologyVisual,font=input.brand.fonts[0].family;
- return {message:'Know what is inside',audience:'Shoppers',objective:'Education',insight:{text:'People want to know why',basis:'hypothesis'},desiredAction:'Explore',concept:'The technology inside',
+ return {...(input?.checklist?.setRules?{setRules:['The same product colourway and label on every page','The same bright bedroom family on every page']}:{}),message:'Know what is inside',audience:'Shoppers',objective:'Education',insight:{text:'People want to know why',basis:'hypothesis'},desiredAction:'Explore',concept:'The technology inside',
   guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].map(r=>({id:r.id,decision:'apply',reason:'Applies'})),
   pages:input.format.pages.map(p=>({id:p.id,purpose:'Technology visual',copy:[{role:'product name',text:input.product.name,factIds:[input.product.id]},generic||!t?.factIds?.length?{role:'headline',text:'Sleep better every night',factIds:[]}:{role:'technology',text:'5 Zone Orthopedic Support',factIds:[t.factIds[0]]}],artDirection:'Exact product, clear technology view',hierarchy:'Technology name first',palette:'Brand colours',typography:font+' Bold 700',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,'Clear regions'])),formatConstraints:['Flat artwork']})),omitted:[]};
 }

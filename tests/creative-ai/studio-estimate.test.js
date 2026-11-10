@@ -56,3 +56,26 @@ test('a format with no comparable runs is estimated from this brand\'s other for
   assert.equal(campaignCost([{prepared:{cost:{status:'historical-estimate',low:10,high:12}}},{prepared:{cost:{status:'unavailable'}}}]).status,'unavailable');
  }finally{await fs.rm(root,{recursive:true,force:true});}
 });
+
+// User decision, 10 Nov 2026 (checker trial: gpt-6.1-sol medium caught 7 of 8 failing images against 2 of 8 for
+// gpt-6-luna medium, at about $0.0448 against $0.0026 per check): new jobs check images with gpt-6.1-sol.
+// Estimates scaled from runs checked by the earlier luna checker add the measured difference per check (one check
+// per image low, two high), and a run checked by sol keeps its checks as per-image cost, not as planning.
+test('estimates include the more careful image checker, for both brands',async()=>{
+ const policy=require('../../lib/creative-ai/runtime/lean-policy');assert.equal(policy.roles['lean-review'].model,'gpt-6.1-sol');assert.equal(policy.roles['lean-review'].reasoningEffort,'medium');
+ for(const brand of ['duroflex','sleepyhead']){
+  const root=await fs.mkdtemp(path.join(os.tmpdir(),'studio-estimate-checker-'));try{await fs.mkdir(path.join(root,'output/cost-tracking'),{recursive:true});await fs.writeFile(path.join(root,'output/cost-tracking/currency.json'),JSON.stringify({displayCurrency:'INR',usdToInr:100,rateDate:'2026-10-20',source:'https://example.test/fx'}));await fs.writeFile(path.join(root,'workspace.json'),JSON.stringify({artworkDelivery:'original',artworkWorkflow:'lean-v1'}));
+   const at='2026-11-10T00:01:00Z',r=(kind,model,key,out,extra={})=>({kind,model,recordedAt:at,requestKey:key,usage:kind==='image'?{input_tokens:0,output_tokens:out,input_tokens_details:{text_tokens:0,image_tokens:0}}:{input_tokens:0,output_tokens:out},...extra});
+   const base=(id,review,receipts)=>({id,status:'finished',createdAt:'2026-11-10T00:00:00Z',intake:{brandId:brand,leanWorkflowVersion:1},runtimeConfig:{roleModels:{'lean-planning':{model:'gpt-6.1-sol'},'lean-review':{model:review}},leanImageOptions:[{route:'continuity',model:'gpt-image-2'}]},selection:[{description:{dimensions:{width:1080,height:1080}}}],results:[{imageUrl:'a'}],budget:{receipts,requestStates:{}}});
+   const luna=base('luna-checked','gpt-6-luna',[r('reasoning','gpt-6.1-sol','plan',10000),r('image','gpt-image-2','img',10000),r('reasoning','gpt-6-luna','rev',1000)]);
+   const runtime={root,config:{imageModel:'gpt-image-2',reasoningModel:'gpt-6-luna'},store:{list:async()=>[luna]}};
+   const out=await estimateBrief(runtime,brand,{width:1080,height:1080},1),{estimate:priced}=require('../../lib/cost-tracker'),raw=luna.budget.receipts.reduce((s,x)=>s+priced(x),0)*100;
+   assert.ok(out.low>=Math.floor(raw+0.0422*100)-1,'a luna-checked run adds about one careful check: '+out.low+' vs '+raw);assert.ok(out.high>=Math.ceil(raw+2*0.0422*100)-1);assert.match(out.message,/careful image checker/);
+   // A+ scaling from a sol-checked run: its direct image checks are per-image cost, not planning.
+   const sol=base('sol-checked','gpt-6.1-sol',[r('reasoning','gpt-6.1-sol','plan',10000),r('image','gpt-image-2','img',10000),r('reasoning','gpt-6.1-sol','rev',20000,{handoff:{directCheck:true}})]);
+   runtime.store.list=async()=>[sol];const aplus=await estimateBrief(runtime,brand,{width:1464,height:600,aplus:{name:'Premium A+ page',imageCount:14},unitCount:14},1);
+   const check=priced(sol.budget.receipts[2])*100,plan=priced(sol.budget.receipts[0])*100,image=priced(sol.budget.receipts[1])*100;
+   assert.ok(Math.abs(aplus.low-Math.floor(plan+14*(image+check)))<=1,'14 images each carry a check: '+aplus.low);assert.ok(Math.abs(aplus.high-Math.ceil(2*plan+14*(image+check)))<=1,'the check is not doubled as planning: '+aplus.high);
+  }finally{await fs.rm(root,{recursive:true,force:true});}
+ }
+});

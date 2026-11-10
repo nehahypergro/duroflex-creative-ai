@@ -16,7 +16,7 @@ async function assertFree(port) {
 async function start({root = path.resolve(__dirname, '../..'), port = 1842,
   mongoPort = 28571, privateDir = path.join(root, 'work/admin-private'),
   binaryDir = path.join(root, 'work/mongodb-binaries'),
-  createRepl, connect, createApp} = {}) {
+  createRepl, connect, createApp, shutdownGraceMs = 3000} = {}) {
   await assertFree(port);
   await assertFree(mongoPort);
   await fs.mkdir(path.join(privateDir, 'database'), {recursive: true, mode: 0o700});
@@ -34,7 +34,13 @@ async function start({root = path.resolve(__dirname, '../..'), port = 1842,
   const close = () => closing ||= (async () => {
     stopMaintenance?.();
     app?.runtime?.stopStartupReconciliation?.();
-    if (app?.server.listening) await new Promise(resolve => app.server.close(resolve));
+    // Restart fix (10 Nov 2026): an open Studio tab keeps a keep-alive or streaming connection, so
+    // server.close() alone never finished and the supervisor could not start the new process.
+    if (app?.server.listening) await new Promise(resolve => {
+      const force = setTimeout(() => app.server.closeAllConnections?.(), shutdownGraceMs);
+      app.server.close(() => { clearTimeout(force); resolve(); });
+      app.server.closeIdleConnections?.();
+    });
     if (client) await client.close();
     if (repl) await repl.stop({doCleanup: false, force: false});
   })();

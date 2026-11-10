@@ -74,13 +74,13 @@ test('the Studio request pins the banner contract and only the user\'s own wordi
 function planFor(input,{headlines=null,cta='Shop now',offer=null,banned=false,ctaBy=null}={}){
  const b=input.displayBanners,font=input.brand.fonts[0].family;
  const pages=input.format.pages.map((p,i)=>{const info=b?.pages.find(x=>x.id===p.id)||{textClass:'card',name:p.name};
-  const copy=[{role:'headline',text:headlines?headlines[i]:'Wake up without back pain',factIds:[]}];
+  const copy=[{role:'headline',text:headlines?headlines[i]:b?'Wake up without back pain':'Wake up without back pain'+(i?' '+(i+1):''),factIds:[]}];
   if(info.textClass==='card')copy.push({role:'supporting',text:'Orthopedic support for deep sleep',factIds:[]});
   if(offer)copy.push({role:'offer',text:offer,factIds:[]});
   if(banned&&info.textClass==='card')copy.push({role:'supporting',text:'Rated 4.8 stars by customers',factIds:[]});
   copy.push({role:'cta',text:ctaBy?ctaBy(i):cta,factIds:[]});
   return {id:p.id,purpose:info.name,copy,artDirection:'Exact product, one calm visual system across sizes',hierarchy:'Logo, product, headline, CTA',palette:'Brand colours',typography:font+' Bold 700',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,'Follow the size rule'])),formatConstraints:['Flat artwork']};});
- return {message:'Wake up rested',audience:'Shoppers',objective:'Consideration',insight:{text:'Back pain ruins mornings',basis:'hypothesis'},desiredAction:'Shop',concept:'One clear promise',
+ return {...(input?.checklist?.setRules?{setRules:['The same product colourway and label on every page','The same bright bedroom family on every page']}:{}),message:'Wake up rested',audience:'Shoppers',objective:'Consideration',insight:{text:'Back pain ruins mornings',basis:'hypothesis'},desiredAction:'Shop',concept:'One clear promise',
   guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].map(r=>({id:r.id,decision:'apply',reason:'Applies'})),pages,omitted:[]};
 }
 // The fake image model paints the band that will be kept red and everything else blue, so the test

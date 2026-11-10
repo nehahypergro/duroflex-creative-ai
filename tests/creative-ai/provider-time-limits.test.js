@@ -279,3 +279,87 @@ test('fallback: lean planning replacement goes directly to the pinned backup mod
   const lost=receipts.find(r=>r.requestId==='resp_bg');assert.equal(lost.model,'gpt-6.1-sol');assert.equal(lost.chargeStatus,'unknown');
  }finally{Date.now=realNow;}
 });
+// Live A+ retry, 9 Nov 2026 (job creative-d5ab6c1e): the main planner was slow, the backup wrote the plan,
+// the plan failed validation, and the single repair request went back to the slow main planner, which timed
+// out again. User decision, 10 Nov 2026 ("fix 5"): once the backup model has written a response, the repair
+// of that response also goes directly to the backup model, and its receipt says so.
+test('fallback: the repair of a backup-written plan also goes to the backup model',async()=>{
+ const p=new OpenAIProvider({reasoningModel:'gpt-6-luna',roleModels:{'lean-planning':{model:'gpt-6.1-sol',reasoningEffort:'high'}},fallbackModels:{'lean-planning':{model:'gpt-6-luna',reasoningEffort:'high'}},reasoningBackground:true,reasoningStore:true,reasoningTimeoutMs:900000,maxOutputTokens:25000,maxRecoveryOutputTokens:50000,reasoningCallLimits:{planningMs:240000,reviewMs:240000,queuedMs:90000,retryMinimumMs:120000,pollMaxIntervalMs:4000}});
+ let clock=0;const bodies=[],receipts=[],saved=new Map();p.sleep=async ms=>{clock+=ms;};
+ const realNow=Date.now;Date.now=()=>1e12+clock;
+ try{
+  p.sendReasoning=async b=>{bodies.push(structuredClone(b));if(b.background)return {ok:true,json:async()=>({id:'resp_bg',status:'queued'})};return bodies.filter(x=>!x.background).length===1?completed('resp_backup',{ok:false}):completed('resp_repair',{ok:true});};
+  p.retrieveReasoning=async id=>{clock+=5000;return {ok:true,json:async()=>({id,status:'queued',output:[]})};};
+  p.cancelReasoning=async id=>({ok:true,json:async()=>({id,status:'cancelled'})});
+  const budget={reserve:async()=>{},receipt:async r=>receipts.push(r),remainingMs:async()=>40*60*1000,loadResponse:async(k,key)=>structuredClone(saved.get(key)),saveResponse:async(k,key,v)=>{saved.set(key,structuredClone(v));},waiting:async()=>{}};
+  const out=await p.reason({contextKind:'lean-planning',instructions:'plan',input:{},schema:{type:'object',properties:{ok:{type:'boolean'}},required:['ok'],additionalProperties:false},validate:v=>{if(!v.ok)throw Error('Unknown product fact citation: sku-product-image-2 (headline)');}},budget);
+  assert.deepEqual(out,{ok:true});
+  assert.deepEqual(bodies.map(b=>[b.model,!!b.background]),[['gpt-6.1-sol',true],['gpt-6-luna',false],['gpt-6-luna',false]],'the repair skips the slow main model');
+  const repair=receipts.find(r=>r.requestId==='resp_repair');assert.equal(repair.model,'gpt-6-luna');assert.equal(repair.fallback.reason,'repair-follows-backup');assert.equal(repair.fallback.primaryModel,'gpt-6.1-sol');
+ }finally{Date.now=realNow;}
+});
+// User request, 10 Nov 2026 ("Can we make this longer for bigger files or more images"), after a 14-image A+ plan
+// timed out twice at the fixed 4-minute planning limit. Saved runs: 10+ image plans finished in up to 235 s and half
+// of their calls hit the 240 s limit; one-image plans take about 100 s. New jobs pin planningCallScaleVersion 1:
+// lean planning gets 4 minutes plus 20 s per extra image, at most 8 minutes. The backup model gets the same limit.
+function scaled({pin,pages}){
+ const p=new OpenAIProvider({reasoningModel:'gpt-6-luna',...(pin?{planningCallScaleVersion:1}:{}),roleModels:{'lean-planning':{model:'gpt-6.1-sol',reasoningEffort:'high'}},fallbackModels:{'lean-planning':{model:'gpt-6-luna',reasoningEffort:'high'}},reasoningBackground:true,reasoningStore:true,reasoningTimeoutMs:1800000,maxOutputTokens:25000,maxRecoveryOutputTokens:50000,reasoningCallLimits:{planningMs:240000,reviewMs:240000,queuedMs:90000,retryMinimumMs:120000,pollMaxIntervalMs:4000}});
+ let clock=0;const cancels=[],directLimits=[];p.sleep=async ms=>{clock+=ms;};
+ p.sendReasoning=async(b,timeout)=>{if(b.background)return {ok:true,json:async()=>({id:'resp_bg',status:'in_progress'})};directLimits.push(timeout);return completed('resp_backup',{ok:true});};
+ p.retrieveReasoning=async id=>{clock+=4000;return {ok:true,json:async()=>({id,status:'in_progress',output:[]})};};
+ p.cancelReasoning=async id=>{cancels.push(clock);return {ok:true,json:async()=>({id,status:'cancelled'})};};
+ const saved=new Map(),budget={reserve:async()=>{},receipt:async()=>{},remainingMs:async()=>40*60*1000,loadResponse:async(k,key)=>structuredClone(saved.get(key)),saveResponse:async(k,key,v)=>{saved.set(key,structuredClone(v));},waiting:async()=>{}};
+ return {run:async(kind='lean-planning')=>{const realNow=Date.now;Date.now=()=>1e12+clock;try{await p.reason({contextKind:kind,callPages:pages,instructions:'plan',input:{},schema:{type:'object',properties:{ok:{type:'boolean'}},required:['ok'],additionalProperties:false}},budget);}finally{Date.now=realNow;}return {cancel:cancels[0],direct:directLimits[0]};}};
+}
+test('planning call limit grows with the number of images on new jobs, up to 8 minutes, and the backup gets the same limit',async()=>{
+ const big=await scaled({pin:true,pages:14}).run();
+ assert.ok(big.cancel>=480000&&big.cancel<490000,'a 14-image plan waits 8 minutes: '+big.cancel);
+ assert.ok(big.direct<=480000&&big.direct>240000,'the backup model gets the same longer limit: '+big.direct);
+ const six=await scaled({pin:true,pages:6}).run();
+ assert.ok(six.cancel>=340000&&six.cancel<350000,'6 images: 4 min + 5 x 20 s: '+six.cancel);
+ const one=await scaled({pin:true,pages:1}).run();
+ assert.ok(one.cancel>=240000&&one.cancel<250000,'one image keeps 4 minutes: '+one.cancel);
+ const old=await scaled({pin:false,pages:14}).run();
+ assert.ok(old.cancel>=240000&&old.cancel<250000,'earlier jobs keep their fixed limit: '+old.cancel);
+ const review=await scaled({pin:true,pages:14}).run('lean-review');
+ assert.ok(review.cancel>=240000&&review.cancel<250000,'reviews are per image and keep their own limit: '+review.cancel);
+});
+test('new lean jobs pin the scaled planning limit; the snapshot keeps it',()=>{
+ const policy=require('../../lib/creative-ai/runtime/lean-policy'),pc=require('../../lib/creative-ai/runtime/provider-config');
+ const c=policy.configure({},{leanWorkflowVersion:1});assert.equal(c.planningCallScaleVersion,1);
+ assert.equal(pc.snapshot(c).planningCallScaleVersion,1);assert.equal(pc.snapshot({}).planningCallScaleVersion,undefined);
+});
+// User decision, 10 Nov 2026 ("switch image checks to direct sending"): in the A+ rerun, 10 of 13 image checks sent
+// through OpenAI's background queue stalled past the 4-minute limit, while the same checks sent directly finished in
+// about 23 s. New jobs pin directCheckVersion 1: image checks (lean-review) are sent directly, never through the
+// queue, with the review call limit as their timeout. Planning keeps the queue (it can be confirmed cancelled).
+function checkRun({pin,kind}){
+ const p=new OpenAIProvider({reasoningModel:'gpt-6-luna',...(pin?{directCheckVersion:1}:{}),reasoningBackground:true,reasoningStore:true,reasoningTimeoutMs:900000,maxOutputTokens:25000,maxRecoveryOutputTokens:50000,reasoningCallLimits:{planningMs:240000,reviewMs:240000,queuedMs:90000,retryMinimumMs:120000,pollMaxIntervalMs:4000}});
+ const sent=[];p.sleep=async()=>{};
+ p.sendReasoning=async(b,timeout)=>{sent.push({body:structuredClone(b),timeout});return b.background?{ok:true,json:async()=>({id:'resp_bg',status:'completed',output:[{content:[{type:'output_text',text:'{"ok":true}'}]}]})}:completed('resp_direct',{ok:true});};
+ p.retrieveReasoning=async id=>completed(id,{ok:true});
+ const receipts=[],saved=new Map(),budget={reserve:async()=>{},receipt:async r=>receipts.push(r),remainingMs:async()=>40*60*1000,loadResponse:async(k,key)=>structuredClone(saved.get(key)),saveResponse:async(k,key,v)=>{saved.set(key,structuredClone(v));},waiting:async()=>{}};
+ return p.reason({contextKind:kind,instructions:'check',input:{},schema:{type:'object',properties:{ok:{type:'boolean'}},required:['ok'],additionalProperties:false}},budget).then(()=>({sent,receipts}));
+}
+test('image checks on new jobs are sent directly, not through the background queue; planning and older jobs keep the queue',async()=>{
+ const check=await checkRun({pin:true,kind:'lean-review'});
+ assert.equal(check.sent.length,1,'one request only');
+ assert.equal(check.sent[0].body.background,undefined,'no background queue');assert.equal(check.sent[0].body.store,false);
+ assert.ok(check.sent[0].timeout<=240000,'the review call limit is its timeout: '+check.sent[0].timeout);
+ assert.equal(check.receipts[0].requestId,'resp_direct');assert.equal(check.receipts[0].handoff.directCheck,true,'the receipt says it was sent directly');
+ const plan=await checkRun({pin:true,kind:'lean-planning'});assert.equal(plan.sent[0].body.background,true,'planning keeps the queue');
+ const old=await checkRun({pin:false,kind:'lean-review'});assert.equal(old.sent[0].body.background,true,'earlier jobs keep the queue');
+});
+test('new lean jobs pin direct image checks; the snapshot keeps it',()=>{
+ const policy=require('../../lib/creative-ai/runtime/lean-policy'),pc=require('../../lib/creative-ai/runtime/provider-config');
+ const c=policy.configure({},{leanWorkflowVersion:1});assert.equal(c.directCheckVersion,1);
+ assert.equal(pc.snapshot(c).directCheckVersion,1);assert.equal(pc.snapshot({}).directCheckVersion,undefined);
+});
+test('a Re-run check is sent directly even on an older job without the direct-check pin',async()=>{
+ const p=new OpenAIProvider({reasoningModel:'gpt-6-luna',reasoningBackground:true,reasoningStore:true,reasoningTimeoutMs:900000,maxOutputTokens:25000,maxRecoveryOutputTokens:50000,reasoningCallLimits:{planningMs:240000,reviewMs:240000,queuedMs:90000,retryMinimumMs:120000,pollMaxIntervalMs:4000}});
+ const sent=[];p.sleep=async()=>{};p.sendReasoning=async(b,timeout)=>{sent.push({body:structuredClone(b),timeout});return completed('resp_direct',{ok:true});};
+ const saved=new Map(),receipts=[],budget={reserve:async()=>{},receipt:async r=>receipts.push(r),remainingMs:async()=>40*60*1000,loadResponse:async(k,key)=>structuredClone(saved.get(key)),saveResponse:async(k,key,v)=>{saved.set(key,structuredClone(v));},waiting:async()=>{}};
+ await p.reason({contextKind:'lean-review',directCheck:true,maxProviderRequests:1,instructions:'check',input:{},schema:{type:'object',properties:{ok:{type:'boolean'}},required:['ok'],additionalProperties:false}},budget);
+ assert.equal(sent.length,1);assert.equal(sent[0].body.background,undefined);assert.equal(sent[0].body.store,false);assert.ok(sent[0].timeout<=240000);
+ assert.equal(receipts[0].handoff.directCheck,true);
+});

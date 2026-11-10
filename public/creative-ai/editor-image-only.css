@@ -65,3 +65,6 @@
 #editableDialog .ec-io-area button{font-size:11px;padding:4px 8px;border-radius:6px}
 #editableDialog .ec-io-area button[aria-pressed=true]{background:#eadcff;color:#713bd0;border-color:#8c41e2}
 #editableDialog .ec-io-pins .ec-io-pin-edit small{flex:none;margin-left:auto;font-size:10px;color:var(--ec-muted)}
+/* Product-change confirmation (10 Nov 2026): shown only after the server asks for it. */
+#editableDialog.ec-image-only .ec-io-confirm{margin:6px 0 0;min-height:36px;padding:0 14px;border-radius:8px;border:1px solid #b42318;background:#fff;color:#b42318;font:inherit;font-weight:600;cursor:pointer}
+#editableDialog.ec-image-only .ec-io-confirm:hover{background:#fef3f2}

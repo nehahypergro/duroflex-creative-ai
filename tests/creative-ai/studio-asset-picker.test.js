@@ -23,7 +23,8 @@ test('every spec card exists once with its exact name, division, size label, ord
 });
 
 test('every ready card reaches an existing generation profile with a real saved product for both brands',()=>{
- const ready=M.assetCatalogue.filter(c=>c.status==='ready');assert.ok(ready.length>=40);
+ // Tool cards (Web Push Icon, 10 Nov 2026) open their own tool instead of a generation request.
+ const ready=M.assetCatalogue.filter(c=>c.status==='ready'&&!c.preset.tool);assert.ok(ready.length>=40);
  for(const brandId of brands){const p=savedProduct(brandId);
   for(const c of ready){const d=withProduct(M.startAssetDraft(brandId,[c.id]),p),profile=M.generationProfile(d);
    assert.ok(profile,c.id+' generates for '+brandId);assert.equal(d.creationMode,'quick');assert.equal(d.outputs[0].assetCardId,c.id);assert.equal(d.outputs[0].assetChannel,c.channel);assert.equal(d.outputs[0].planningOnly,undefined);

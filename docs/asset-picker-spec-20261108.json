@@ -32,7 +32,7 @@
       {"name": "Homepage Hero", "size": "≈ 1920 × 700", "channel": "Own website"},
       {"name": "Mobile Banner", "size": "1080 × 1350", "channel": "Own website (mobile)"},
       {"name": "Category Tile", "size": "Choose size", "channel": "Own website"},
-      {"name": "Collection Card", "size": "Choose size", "channel": "Own website"},
+      {"name": "Collection Card", "size": "1600 × 900", "channel": "Own website"},
       {"name": "Multi-category Module", "size": "Homepage module", "channel": "Own website"},
       {"name": "Landing Page Hero", "size": "Desktop + mobile", "channel": "Own website"},
       {"name": "Landing Page Modules", "size": "Benefit · feature · CTA", "channel": "Own website"}

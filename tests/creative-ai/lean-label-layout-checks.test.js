@@ -19,20 +19,21 @@ const solid=(w,h,c)=>sharp({create:{width:w,height:h,channels:3,background:c}}).
 const labelled=async()=>sharp(await solid(1600,1200,'#d8dde6')).composite([{input:await solid(200,80,'#13306b'),left:900,top:900}]).png().toBuffer();
 // What the local text reader returns for that photo (normalised boxes, top-left origin).
 const labelRows=[{text:'BRANDMARK',confidence:1,box:{x:920/1600,y:915/1200,width:160/1600,height:28/1200}},{text:'POSTURE',confidence:1,box:{x:940/1600,y:948/1200,width:120/1600,height:20/1200}}];
-function planFor(input){return {message:'Comfort at home',audience:'Shoppers',objective:'Consideration',insight:{text:'A comfortable home matters',basis:'hypothesis'},desiredAction:'Explore',concept:'A clear choice',guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].map(r=>({id:r.id,decision:'apply',reason:'Applicable supplied requirement'})),pages:input.format.pages.map(p=>({id:p.id,purpose:p.name,copy:[{role:'headline',text:'Comfort at home',factIds:[]}],artDirection:'Product on the right, copy left',hierarchy:'Headline then product',palette:'Use brand colours',typography:input.brand.fonts[0].family+' Bold 700',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,k==='ctaPlacement'?'CTA bottom right at 77-81% height':k==='logoPlacement'?'Follow resolved logo inclusion and corner policy':'Follow this page’s hierarchy'])),formatConstraints:['Flat artwork, no mockup']})),omitted:[]};}
-async function fixture(t,{brand='Duroflex',pinned=true,rows=labelRows,reply=null}={}){
+function planFor(input){return {...(input?.checklist?.setRules?{setRules:['The same product colourway and label on every page','The same bright bedroom family on every page']}:{}),message:'Comfort at home',audience:'Shoppers',objective:'Consideration',insight:{text:'A comfortable home matters',basis:'hypothesis'},desiredAction:'Explore',concept:'A clear choice',guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].map(r=>({id:r.id,decision:'apply',reason:'Applicable supplied requirement'})),pages:input.format.pages.map(p=>({id:p.id,purpose:p.name,copy:[{role:'headline',text:'Comfort at home',factIds:[]}],artDirection:'Product on the right, copy left',hierarchy:'Headline then product',palette:'Use brand colours',typography:input.brand.fonts[0].family+' Bold 700',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,k==='ctaPlacement'?'CTA bottom right at 77-81% height':k==='logoPlacement'?'Follow resolved logo inclusion and corner policy':'Follow this page’s hierarchy'])),formatConstraints:['Flat artwork, no mockup']})),omitted:[]};}
+async function fixture(t,{brand='Duroflex',pinned=true,rows=labelRows,reply=null,reference=null}={}){
  const root=await fs.mkdtemp(path.join(os.tmpdir(),'label-layout-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
  const store=new JobStore(path.join(root,'output/creative-ai/jobs')),brandId='brand-'+brand.toLowerCase(),site='https://'+brand.toLowerCase()+'.test/';
  const shots=[await labelled(),await solid(1600,1200,'#1f5a7a')],ids=['sku-1','sku-2'];
- const intake={brandId,brandUrl:site,brief:'Introduce this exact SKU.',productName:brand+' Product',productPageUrl:site+'products/exact',productVariantId:'queen',originalArtworkVersion:1,leanWorkflowVersion:1,conceptRoutes:['continuity'],approvedLogoReference:{assetId:'approved-logo'},productReferencePolicy:{sourceAssetId:ids[0],referenceAssetIds:ids,variant:{id:'queen',sku:'EXACT-Q',name:'Queen'}}};
+ const savedReference=reference?await require('../../lib/creative-ai/runtime/creative-reference').save(root,brandId,reference):null;
+ const intake={...(savedReference?{creativeReference:savedReference}:{}),brandId,brandUrl:site,brief:'Introduce this exact SKU.',productName:brand+' Product',productPageUrl:site+'products/exact',productVariantId:'queen',originalArtworkVersion:1,leanWorkflowVersion:1,conceptRoutes:['continuity'],approvedLogoReference:{assetId:'approved-logo'},productReferencePolicy:{sourceAssetId:ids[0],referenceAssetIds:ids,variant:{id:'queen',sku:'EXACT-Q',name:'Queen'}}};
  const selection=[{id:'page-1',description:{name:'Flyer',formatId:'flyer',dimensions:{width:2048,height:2048}},jobInputs:{logoPolicy:{treatment:'omit',reason:'No logo on this page'}}}];
- const config=policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake);if(!pinned){delete config.labelCheckVersion;delete config.layoutCheckVersion;delete config.labelGenerationVersion;}if(pinned==='no-label-generation')delete config.labelGenerationVersion;
+ const config=policy.configure({maxConcurrentUnits:2,maxReasoningCalls:100,jobTimeoutMs:3600000},intake);if(!pinned){delete config.labelCheckVersion;delete config.layoutCheckVersion;delete config.labelGenerationVersion;delete config.realismCheckVersion;delete config.planRulesVersion;}if(pinned==='no-label-generation')delete config.labelGenerationVersion;
  const job=await store.create(intake,config,selection);
  const sources=shots.map((_,i)=>({id:'src-'+(i+1),kind:'product',label:'Product photo',reference:site+'cdn/photo-'+(i+1)+'.jpg',collectedAt:'2026-11-09T00:00:00.000Z',status:'available'}));
  const assets=shots.map((b,i)=>({id:ids[i],kind:'product',label:'Exact SKU photo '+(i+1),sourceIds:['src-'+(i+1)],imageData:uri(b)}));
  const context={job,intake,brand:{id:brandId,name:brand,canvasAssets:{fonts:[{approved:true,brandId,family:brand==='Duroflex'?'Poppins':'Source Sans Pro',weight:700,style:'normal'}]}},research:{brandKnowledge:{brandId},dossier:{version:1,event:'research.completed',researchId:'test-'+brand.toLowerCase(),brandName:brand,demo:false,completedAt:'2026-11-09T00:00:00.000Z',sources,assets,findings:[]},productBriefEvidence:{productProfileId:'product-exact',assetIds:ids,evidence:[]},facts:[]},guardian:{requirements:[],preferences:[],visualRules:[]}};
  const calls=[],ocrCalls=[];
- const runtime={store,config,readCarouselPlan:async()=>null,labelOcr:async file=>{ocrCalls.push(file);return {status:'measured',rows};},provider:{reason:async request=>{calls.push({kind:request.contextKind,request});const out=request.contextKind==='lean-planning'?planFor(request.input):reply?reply(request.input.requirements):{checks:request.input.requirements.map(r=>({id:r.id,result:'no_mismatch',evidence:'Observed '+r.name,location:'Whole image'}))};if(request.validate)request.validate(out);return out;},generate:async request=>{calls.push({kind:'image',request});return {imageData:uri(await solid(2048,2048,'#e9e2d6'))};}}};
+ const runtime={root,store,config,readCarouselPlan:async()=>null,labelOcr:async file=>{ocrCalls.push(file);return {status:'measured',rows};},provider:{reason:async request=>{calls.push({kind:request.contextKind,request});const out=request.contextKind==='lean-planning'?planFor(request.input):request.contextKind==='lean-reference'?{layout:'Product large on the right; headline top left; small button bottom left; lots of empty wall.',look:'Warm beige palette, soft morning daylight, photographic, calm.',idea:'A slow, calm morning at home.',avoid:['Acme Sleep','Wake up happy']}:reply?reply(request.input.requirements):{checks:request.input.requirements.map(r=>({id:r.id,result:'no_mismatch',evidence:'Observed '+r.name,location:'Whole image'}))};if(request.validate)request.validate(out);return out;},generate:async request=>{calls.push({kind:'image',request});return {imageData:uri(await solid(2048,2048,'#e9e2d6'))};}}};
  runtime.activity=new (require('../../lib/creative-ai/workflow-producer').ActivityLedger)(path.join(root,'output/creative-ai/activity'));runtime.eventQueues=new Map();
  const proto=require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype;for(const key of ['log','beginTask','finishTask','artifact','stage'])runtime[key]=proto[key].bind(runtime);
  await runtime.log(job.id,'job.created','created',{details:{config:{jobId:job.id,assignmentId:job.id,mode:'production',conceptRoutes:intake.conceptRoutes,concepts:intake.conceptRoutes.map(route=>({id:require('../../lib/creative-ai/creative-director').conceptIdFor({assignmentId:job.id},route),route})),placements:selection.map(s=>({id:s.id,label:s.description.name}))}}});
@@ -117,3 +118,61 @@ for(const brand of ['Duroflex','Sleepyhead']){
   }
  });
 }
+
+// User request, 10 Nov 2026: "we need a check for hallucinations, so in some images a person is floating in
+// the mattress". New records (realismCheckVersion 1) add a physical-realism requirement to the existing
+// review call (no extra paid call); a real defect is a clear_mismatch, so the design is never "Ready".
+for(const brand of ['Duroflex','Sleepyhead']){
+ test(brand+': the review checks that the scene is physically real',async t=>{
+  const f=await fixture(t,{brand});const req=f.record.reviewContract.requirements.find(r=>r.id==='physical-realism');
+  assert.ok(req,'requirement present');assert.match(req.expected,/floating/);assert.match(req.expected,/fingers/);assert.equal(f.record.realismCheckVersion,1);
+  const g=await fixture(t,{brand,reply:requirements=>({checks:requirements.map(r=>r.id==='physical-realism'?{id:r.id,result:'clear_mismatch',evidence:'The woman hovers above the mattress with no contact or shadow.',location:'Centre'}:{id:r.id,result:'no_mismatch',evidence:'Observed '+r.name,location:'Whole image'})})});
+  await flow.generate(g.runtime,g.job.id,g.record,g.store.budget(g.job.id));
+  const r=await result(g);assert.equal(r.visualReview.conclusion,'clear_mismatch');assert.notEqual(r.ready,true);
+  const old=await fixture(t,{brand,pinned:false});assert.equal(old.record.reviewContract.requirements.some(r=>r.id==='physical-realism'),false);assert.equal(old.record.realismCheckVersion,undefined);
+ });
+}
+
+// Plan rules v1 (10 Nov 2026): new records carry the composition rule in the plan, the image brief and the review.
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': new records carry the composition rule; earlier ones do not',async t=>{
+ const f=await fixture(t,{brand});assert.equal(f.record.input.planRules.version,1);
+ assert.ok(f.record.input.format.guidance.mandatory.some(r=>r.id==='composition-layout'));assert.match(f.record.prompt,/clear margin from every edge/);assert.match(f.record.prompt,/01 \/ 05/);
+ assert.ok(f.record.reviewContract.requirements.some(r=>r.id==='placement-composition-layout'),'the review checks it');
+ const old=await fixture(t,{brand,pinned:false});assert.equal(old.record.input.planRules,undefined);assert.doesNotMatch(old.record.prompt,/clear margin from every edge/);
+});
+// Error fixes 12 and 13 (10 Nov 2026 batch). Sleepyhead Napster Mini (creative-a12ec49d): the text reader read
+// the label ("Seopyhead") and a stray number ("134770") far away; the joined box covered 94% of the photo, so
+// the "close-up" was the whole picture and the image AI drew a square label. Sleepyhead Original
+// (creative-8a014081): the close-up was right, but the label was drawn in the middle of the side instead of
+// near its end. Number-only text is ignored, a box covering most of the photo is refused, and the image brief
+// says where the label sits on the reference photo. New plans also name the product's visible construction.
+for(const brand of ['Duroflex','Sleepyhead']){
+ test(brand+': a stray number does not stretch the label close-up over the whole photo',async t=>{
+  const rows=[{text:'Seopyhead',confidence:0.9,box:{x:0.58,y:0.80,width:0.07,height:0.03}},{text:'134770',confidence:0.8,box:{x:0.02,y:0.81,width:0.08,height:0.02}}];
+  const f=await fixture(t,{brand,rows});const l=f.record.skuCheck.label;
+  assert.equal(l.status,'found');assert.deepEqual(l.readText,['Seopyhead']);
+  assert.ok(l.box.width<=0.5*l.source.width&&l.box.height<=0.5*l.source.height,'a close-up, not the whole photo: '+JSON.stringify(l.box));
+  const spread=await fixture(t,{brand,rows:[{text:'Brandmark',confidence:1,box:{x:0.05,y:0.1,width:0.2,height:0.05}},{text:'Posture',confidence:1,box:{x:0.7,y:0.2,width:0.2,height:0.05}}]});
+  assert.notEqual(spread.record.skuCheck.label.status,'found','text spread across the photo is not one label');
+ });
+ test(brand+': the image brief says where the label sits and asks for the visible construction',async t=>{
+  const f=await fixture(t,{brand});
+  assert.match(f.record.prompt,/In reference image 1 the label sits in the (right|centre|left) part/);
+  assert.match(f.record.prompt,/visible construction/);
+ });
+}
+
+// Creative reference v1 (user request, 10 Nov 2026: "attach a reference and we make something similar").
+for(const brand of ['Duroflex','Sleepyhead'])test(brand+': a reference picture is described once in words and followed; nothing from it is copied or sent to the image AI',async t=>{
+ const pic=await sharp({create:{width:900,height:600,channels:3,background:'#d9c4a8'}}).png().toBuffer();
+ const f=await fixture(t,{brand,reference:{name:'moodboard.png',use:['layout','look'],imageData:'data:image/png;base64,'+pic.toString('base64')}});
+ const reads=f.calls.filter(c=>c.kind==='lean-reference');assert.equal(reads.length,1,'one reading call');
+ assert.deepEqual(reads[0].request.images.map(i=>i.id),['creative-reference']);assert.match(reads[0].request.instructions,/Never name or transcribe brands/);
+ const rule=f.record.input.format.guidance.mandatory.find(r=>r.id==='creative-reference');assert.ok(rule);
+ assert.match(rule.text,/LAYOUT to follow: Product large on the right/);assert.match(rule.text,/LOOK to follow: Warm beige/);assert.doesNotMatch(rule.text,/IDEA to follow/,'only the chosen aspects');
+ assert.match(rule.text,/"Acme Sleep"/);assert.match(f.record.prompt,/LAYOUT to follow/);
+ assert.ok(!f.record.attachments.some(a=>a.assetId==='creative-reference'),'the image AI never gets the picture');
+ assert.ok(f.record.reviewContract.requirements.some(r=>r.id==='placement-creative-reference'),'the review checks nothing is copied');
+ assert.equal(f.record.input.creativeReference.use.join(','),'layout,look');
+ const job=await f.store.read(f.job.id);assert.equal(job.runtimeConfig.creativeReferenceVersion,1);assert.equal(job.intake.creativeReference.imageData,undefined,'the job pins the hash, not the picture');
+});

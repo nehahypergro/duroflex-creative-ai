@@ -1053,7 +1053,8 @@ default:return frame(14,9,36,38)} }
   }
   function nextProjectName(base,names){
     const used=new Set(names.map(v=>String(v).trim().toLocaleLowerCase()));
-    let name=base,n=2;while(used.has(name.trim().toLocaleLowerCase()))name=base+' ('+(n++)+')';return name;
+    // Naming v2 (10 Nov 2026): a repeat of the same name reads "· try 2", not "(2)".
+    let name=base,n=2;while(used.has(name.trim().toLocaleLowerCase()))name=base+' · try '+(n++);return name;
   }
   function disambiguateProjectNames(projects){
     const used=new Map(),named=new Map(),assignments=new Map();
@@ -1077,8 +1078,13 @@ default:return frame(14,9,36,38)} }
     if(!labels.length)for(const slot of p.placements||[])labels.push(slot.pdp?'PDP images':slot.carousel?'Carousel':slot.amazon||slot.aplus?'A+ content':String(slot.name||'Creative').split(/\s*[·|]\s*/)[0]);
     const kinds=[...new Set(labels)],asset=kinds.length>1?'Campaign':kinds[0]||((p.creationMode==='campaign')?'Campaign':'Creative');
     const subject=shortProductName(full)||(p.focus==='brand'||p.intake?.focus==='brand'?'Brand':'');
-    const focus=projectBriefFocus(p),kind=asset.length>28?asset.slice(0,27).trimEnd()+'…':asset;
-    return subject||focus?[subject,focus,kind].filter(Boolean).join(' · '):asset==='Creative'?'New creative':asset;
+    // Naming v2 (user decision, 10 Nov 2026): Product · Format · Goal · date. The format is the chosen asset
+    // card's name; a guessed product feature (e.g. "Doctor recommended") is no longer part of the name.
+    const outs=Array.isArray(p.outputs)?p.outputs:[],card=outs.length===1&&outs[0].assetCardId?assetCard(outs[0].assetCardId):null;
+    const format=card?.name||asset,kind=format.length>28?format.slice(0,27).trimEnd()+'…':format;
+    const goal=String(p.objective||p.intake?.objective||p.submittedBrief?.objective||'').trim().slice(0,20);
+    const created=p.createdAt?new Date(p.createdAt):null,date=created&&!isNaN(created)?created.toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'';
+    return subject?[subject,kind,goal,date].filter(Boolean).join(' · '):format==='Creative'?'New creative':[kind,goal,date].filter(Boolean).join(' · ');
   }
   function normalizeJob(j,brandId) {
     if((j.brandId||j.intake?.brandId)!==brandId)throw Error('This project belongs to a different brand.');
@@ -1208,8 +1214,13 @@ default:return frame(14,9,36,38)} }
       const platform=emailImage(o)?'Email':'Website',customProfiles=slots.map(([name,w,h],i)=>({id:'custom:client-'+platform.toLowerCase()+'-'+(i?'mobile':'desktop')+'-'+w+'x'+h,name:platform+' '+name,platform,publisher:'client',placement:i?'mobile-image':'desktop-image',assetType:'static',canvas:{width:w,height:h,unit:'px'},exportContract:{formats:['png']},displayContext:'Separately compose '+name+' for the same assignment. Preserve exact product identity and a coherent visual system; do not stretch or blindly crop the other variant. '+(emailImage(o)?'Native email headings, body, links and buttons remain outside the image. ':'')+assetRequirementSummary(o,d).join('; ')}));
       return {placementId:customProfiles[0].id,placementIds:customProfiles.map(p=>p.id),customProfiles,label:platform+' desktop + mobile images',width:o.width,height:o.height,unitCount:2,omitLogo:true};
     }
+    if(o.staticValues?.assetSet)return assetSetProfile(o);
     if(retailEntry(o))return retailProfile(o);
     const profile=(slug,label,extra={})=>({placementId:'custom:studio-'+slug,label,width:o.width,height:o.height,...extra});
+    // Coming-soon cards made usable (10 Nov 2026): existing Studio presets, exact sizes only.
+    if(o.featureId===7&&o.staticValues?.websiteType==='Collection card')return o.slides===1&&o.formatId==='custom'&&o.width===1600&&o.height===900?profile('commerce-collection','collection card',{omitLogo:true}):null;
+    if(o.featureId===15&&o.formatId==='infographic')return o.slides===1&&o.width===1080&&o.height===1920?profile('marketing-infographic','infographic'):null;
+    if(o.featureId===11&&o.formatId==='one-pager')return o.slides===1&&o.width===1240&&o.height===1754?profile('sales-one-pager','sales one-pager'):null;
     if(pushImage(o)){
       const v=o.staticValues,destination=pushDestinations[v.pushDestination],size=pushPresets[v.pushPreset];
       if(!destination||!Object.hasOwn(pushPresets,v.pushPreset)||o.slides!==1||![o.width,o.height].every(v=>Number.isInteger(v)&&v>=64&&v<=8192)||o.width*o.height>40000000||Math.max(o.width/o.height,o.height/o.width)>20)return null;
@@ -1291,9 +1302,9 @@ default:return frame(14,9,36,38)} }
     // Persist the assignment identity, not just its canvas. Equal-sized assets
     // need different strategy without routing by user-authored keywords.
     const recipeIdentity={2:'technology-visual',3:'offer-creative',4:'proof-claim',10:'local-store',12:'partner-creative',15:'editorial-cover'}[o.featureId];
-    if(recipeIdentity&&((o.featureId===15&&o.width===1200&&o.height===628&&o.formatId==='custom')||(o.featureId!==15&&o.width===1080&&o.height===1080&&o.formatId==='square'))){
+    if(recipeIdentity&&((o.featureId===15&&o.width===1200&&[628,630].includes(o.height)&&o.formatId==='custom')||(o.featureId!==15&&o.width===1080&&o.height===1080&&o.formatId==='square'))){
       const id='custom:recipe-'+recipeIdentity+'-'+o.width+'x'+o.height,label=features.find(f=>f.id===o.featureId).name;
-      return {placementId:id,label,width:o.width,height:o.height,customProfiles:[{id,name:label,platform:o.featureId===15?'Website / link preview':o.featureId===10?'Local store':'Static campaign image',publisher:'studio',placement:recipeIdentity,assetType:'static',canvas:{width:o.width,height:o.height,unit:'px'},exportContract:{formats:['png']},displayContext:staticRecipe(o.featureId).story+' Canvas is the selected Studio preset. Native fields, publishing and acceptance are separate. Use the selected format playbook; the brief supplies the facts.'}]};
+      return {placementId:id,label,width:o.width,height:o.height,customProfiles:[{id,name:label,platform:o.featureId===15?'Website / link preview':o.featureId===10?'Local store':'Static campaign image',publisher:'studio',placement:recipeIdentity,assetType:'static',canvas:{width:o.width,height:o.height,unit:'px'},exportContract:{formats:['png']},displayContext:staticRecipe(o.featureId).story+' Canvas is the selected Studio preset. Native fields, publishing and acceptance are separate. Use the selected format playbook; the brief supplies the facts.'+(o.featureId===12?' No partner logo file is attached in this Studio: name the partner only in plain text, exactly as the brief writes it; never draw or imitate a partner logo.':'')}]};
     }
     if(o.featureId===13&&o.width===1200&&o.height===627&&o.formatId==='linkedin')return {placementId:'custom:studio-linkedin-post',label:'LinkedIn post',width:1200,height:627};
     if(o.width!==1080)return null;
@@ -1343,26 +1354,26 @@ default:return frame(14,9,36,38)} }
         ['homepage-hero','Homepage Hero','≈ 1920 × 700','Own website','','ready','web',fmt(7,'custom',1920,700,{websiteType:'Banner'})],
         ['mobile-banner','Mobile Banner','1080 × 1350','Own website (mobile)','','ready','mobile',fmt(7,'portrait',1080,1350,{websiteType:'Banner',brandedHost:'Yes'})],
         ['category-tile','Category Tile','Choose size','Own website','','ready','tile',fmt(7,'custom',1080,1080,{websiteType:'Category tile'})],
-        ['collection-card','Collection Card','Choose size','Own website','','soon','tile',plan(7,1080,1080)],
+        ['collection-card','Collection Card','1600 × 900','Own website','','ready','tile',fmt(7,'custom',1600,900,{websiteType:'Collection card'})],
         ['multi-category-module','Multi-category Module','Homepage module','Own website','','soon','grid',plan(7,1920,1080)],
         ['landing-page-hero','Landing Page Hero','Desktop + mobile','Own website','','ready','web',fmt(7,'banner',1920,640,{websiteType:'Banner',responsiveMode:'Desktop + mobile',mobileWidth:'1080',mobileHeight:'1350'})],
-        ['landing-page-modules','Landing Page Modules','Benefit · feature · CTA','Own website','','soon','grid',plan(7,1440,900)]
+        ['landing-page-modules','Landing Page Modules','Benefit · feature · CTA','Own website','','ready','grid',{featureId:7,assetSet:'landing-page-modules'}]
       ],
       marketplace:[
         ['product-page-images','Product Page Images','12-image PDP pack','Own website / marketplace','','ready','bag',fmt(5,'custom',1600,1600,null,{pdpPack:true})],
-        ['marketplace-product-images','Marketplace Product Images','White background + gallery','Marketplace','','soon','bag',plan(1,1600,1600)],
-        ['listing-feature-cards','Listing Feature Cards','Benefit & feature cards','Own website / marketplace','','soon','cards',plan(1,1080,1080)],
+        ['marketplace-product-images','Marketplace Product Images','White background + gallery','Marketplace','','ready','bag',{featureId:5,assetSet:'marketplace-product-images'}],
+        ['listing-feature-cards','Listing Feature Cards','Benefit & feature cards','Own website / marketplace','','ready','cards',{featureId:5,assetSet:'listing-feature-cards'}],
         ['amazon-aplus','Amazon A+ Content','Standard & Premium modules','Amazon','','ready','amazon',{featureId:6,aplusPage:'premium'}]
       ],
       messaging:[
         ['whatsapp-image','WhatsApp Image','1080 × 1080','WhatsApp','','ready','whatsapp',fmt(14,'square',1080,1080,{channel:'WhatsApp'})],
         ['whatsapp-status','WhatsApp Status','1080 × 1920','WhatsApp','','ready','whatsapp',fmt(14,'story',1080,1920,{channel:'WhatsApp'})],
         ['email-banner','Email Banner','Header / hero','Email','','ready','email',{featureId:14,emailPreset:'Email hero'}],
-        ['email-product-block','Email Product Block','Product module image','Email','','soon','email',plan(14,600,400)],
+        ['email-product-block','Email Product Block','Product module image','Email','','ready','email',{featureId:14,emailPreset:'Custom email image',size:[1200,800]}],
         ['rcs-card','RCS Card','Rich card image','RCS','','ready','rcs',{featureId:14,rcsPreset:'Single card · medium image'}],
         ['rcs-carousel','RCS Carousel','Card set','RCS','','ready','rcs',{featureId:14,rcsPreset:'Carousel medium · medium image'}],
         ['web-push','Web Push','Push image','Web push','','ready','bell',{featureId:14,push:['Web','Landscape image · 2:1']}],
-        ['web-push-icon','Web Push Icon','Icon from brand artwork','Web push','','soon','bell',plan(14,512,512,{tool:'push-icons'})]
+        ['web-push-icon','Web Push Icon','Icon from brand artwork','Web push','','ready','bell',plan(14,512,512,{tool:'push-icons'})]
       ],
       retail:[
         ['google-business-post','Google Business Post','Update · offer · event','Google Business Profile','','ready','pin',{featureId:10,retailPreset:'store'}],
@@ -1399,11 +1410,11 @@ default:return frame(14,9,36,38)} }
         ['product-seeding-pack','Product Seeding Pack','Ordered image set','Media','','soon','box',plan(1,1080,1350)],
         ['blog-hero','Blog Hero','Lead image','Blog','','ready','news',fmt(15,'custom',1200,628)],
         ['article-illustration','Article Illustration','Visual story','Blog','','soon','news',plan(15,1600,900)],
-        ['infographic','Infographic','Facts or steps','Blog / social','','soon','chart',plan(15,1080,1350)],
-        ['blog-link-preview','Blog / Link Preview','1200 × 630','Website / blog','','soon','link',plan(15,1200,630)]
+        ['infographic','Infographic','Facts or steps','Blog / social','','ready','chart',fmt(15,'infographic',1080,1920)],
+        ['blog-link-preview','Blog / Link Preview','1200 × 630','Website / blog','','ready','link',fmt(15,'custom',1200,630)]
       ],
       sales:[
-        ['sales-one-pager','Sales One-pager','A4','Internal / dealer','','soon','file',plan(11,...A4)],
+        ['sales-one-pager','Sales One-pager','A4','Internal / dealer','','ready','file',fmt(11,'one-pager',...A4)],
         ['product-cheat-sheet','Product Cheat Sheet','A4','Internal / dealer','','soon','checklist',plan(11,...A4)],
         ['mobile-reference-card','Mobile Reference Card','Phone screen','Internal / dealer','','soon','mobile',plan(1,1080,1920)],
         ['battlecard','Battlecard','Comparison facts','Internal / dealer','','soon','compare',plan(11,1754,1240)],
@@ -1417,11 +1428,45 @@ default:return frame(14,9,36,38)} }
   })();
   function assetCard(id){return assetCatalogue.find(c=>c.id===id)||null;}
   // Builds one draft output through the existing preset helpers; never a new profile.
+  // Coming-soon cards made usable (user request, 10 Nov 2026). Each set is ONE coordinated job: a shared
+  // familyId gives one plan for every image, and each image keeps its own job. The marketplace main image
+  // follows marketplace main-image rules: the exact product alone on pure white, with no words.
+  const assetSets={
+    'landing-page-modules':{featureId:7,name:'Landing page modules',width:1600,height:900,platform:'Website',placement:'landing-module',id:i=>'custom:client-landing-module-0'+(i+1),slots:[
+      {name:'Benefit module',job:'Lead with the one main benefit for the shopper, with the exact product clearly visible.'},
+      {name:'Feature module',job:'Show one supported feature or technology of the exact product up close, with a short explanation.'},
+      {name:'Call-to-action module',job:'Close the page: the exact product, one short reason to act and a clear button-style call to action.'}]},
+    'marketplace-product-images':{featureId:5,name:'Marketplace product images',width:1600,height:1600,platform:'Marketplace',placement:'listing-image',id:i=>i?'custom:recipe-product-image-0'+(i+1):'custom:recipe-marketplace-main-01',slots:[
+      {name:'Main image · white background',textPolicy:'none',job:'Marketplace MAIN image: only the exact product, complete and unobstructed, on a pure white background (RGB 255, 255, 255), filling about 85% of the frame. No text, logo, badge, watermark, props, people or room.'},
+      {name:'Alternate angle · white background',textPolicy:'none',job:'The exact product from a second angle on a pure white background, complete and unobstructed. No text, logo, badge, props or people.'},
+      {name:'Lifestyle',textPolicy:'optional',job:'The exact product in a believable room that suits it, at true scale; at most a short headline.'},
+      {name:'Surface and edge detail',textPolicy:'optional',job:'A close view of the supported surface, edge and label detail of the exact product; at most a one-to-three word label.'},
+      {name:'Key benefit',job:'One supported benefit, shown and named in a short headline with the exact product.'},
+      {name:'Technology or construction',job:'The supported technology or construction of the exact product, using only official evidence; short labels only.'}]},
+    'listing-feature-cards':{featureId:5,name:'Listing feature cards',width:1600,height:1600,platform:'Own website / marketplace',placement:'feature-card',id:i=>'custom:recipe-listing-feature-0'+(i+1),slots:[
+      {name:'Benefit card',job:'One supported benefit in a short headline with the exact product.'},
+      {name:'Feature card 1',job:'One supported feature of the exact product with a short headline and one supporting line.'},
+      {name:'Feature card 2',job:'A different supported feature of the exact product with a short headline and one supporting line.'}]}
+  };
+  function applyAssetSet(o,key){
+    const set=assetSets[key];if(!set||set.featureId!==o.featureId)throw Error('Choose an available asset.');
+    Object.assign(o,{formatId:'custom',width:set.width,height:set.height,slides:1,staticValues:{...o.staticValues,assetSet:key}});
+    o.staticParts=set.slots.map(slot=>({id:uid(),name:slot.name,copy:'',alt:'',width:set.width,height:set.height,visualIntent:slot.job}));return o;
+  }
+  function assetSetProfile(o){
+    const key=o.staticValues?.assetSet,set=assetSets[key];if(!set||set.featureId!==o.featureId||o.slides!==1)return null;
+    const parts=Array.isArray(o.staticParts)?o.staticParts:[];if(parts.length!==set.slots.length||parts.some(p=>p.width!==set.width||p.height!==set.height))return null;
+    const ids=set.slots.map((s,i)=>set.id(i)),n=ids.length;
+    const customProfiles=set.slots.map((s,i)=>({id:ids[i],name:set.name+' · '+s.name,platform:set.platform,publisher:'studio',placement:set.placement,assetType:'static',canvas:{width:set.width,height:set.height,unit:'px'},exportContract:{formats:['png']},displayContext:set.name+': '+s.name+' (image '+(i+1)+' of '+n+'). '+s.job}));
+    const jobInputs=Object.fromEntries(set.slots.map((s,i)=>[ids[i],{formatIntent:{familyId:key,relationship:'coordinated-set',page:i+1,pages:n,...(s.textPolicy?{textPolicy:s.textPolicy}:{}),direction:s.job}}]));
+    return {placementId:ids[0],placementIds:ids,customProfiles,jobInputs,assetSet:key,label:set.name,width:set.width,height:set.height,unitCount:n,omitLogo:true};
+  }
   function assetCardOutput(cardOrId,language='English'){
     const card=typeof cardOrId==='string'?assetCard(cardOrId):cardOrId;if(!card)throw Error('Choose an available asset.');
     const p=card.preset,o=output(p.featureId);
     if(p.retailPreset)applyRetailPreset(o,p.retailPreset);
-    else if(p.emailPreset)applyEmailPreset(o,p.emailPreset);
+    else if(p.emailPreset){applyEmailPreset(o,p.emailPreset);if(p.size)[o.width,o.height]=p.size;}
+    else if(p.assetSet)applyAssetSet(o,p.assetSet);
     else if(p.rcsPreset)applyRcsPreset(o,p.rcsPreset);
     else if(p.push)applyPushPreset(o,p.push[0],p.push[1]);
     // A+ card (9 Nov 2026): the whole Premium page by default; Basic and Brand Story stay one select away.
@@ -1501,6 +1546,15 @@ default:return frame(14,9,36,38)} }
   // draft. Every value stays editable on the appreciation page and is confirmed there;
   // nothing here is generation authority. Unclear product/variant and offer gaps stay
   // empty so validation keeps asking. See docs/brief-reader-20261108.md.
+  // Size from the brief (user decision, 10 Nov 2026, fix 9 from the asset evaluation): a brief that names a paper size
+  // ("an A4 poster") chooses the matching print preset of the same kind, and the read-back page says so. A size the
+  // user picks afterwards is kept; briefSizeMismatch() reports a print size that differs from the brief.
+  function briefPaperSize(text){const t=String(text||''),m=/\bA([1-6])\b/.exec(t)||/\ba([1-6])(?=[\s-]*(size|sized|poster|flyer|leaflet|sheet|paper|print))/i.exec(t);return m?'A'+m[1]:null;}
+  function briefPrintPreset(o,paper){const id=o?.staticValues?.printPreset;if(!paper||!id||!/-a[1-6]$/.test(id))return null;const want=id.replace(/-a[1-6]$/,'-a'+paper.slice(1));return retailPrintPresets.some(p=>p.id===want)?want:null;}
+  function applyBriefPaperSize(d){const paper=briefPaperSize(d.brief);if(!paper)return null;const applied=[];
+    for(const o of d.outputs||[]){const want=briefPrintPreset(o,paper);if(want&&want!==o.staticValues.printPreset){o.staticValues.printPreset=want;applyRetailPreset(o,o.staticValues.retailPreset);applied.push({outputId:o.id,preset:retailPrintPresets.find(p=>p.id===want)?.name||want});}}
+    d.briefPaperSize={paper,applied};return d.briefPaperSize;}
+  function briefSizeMismatch(d){const paper=briefPaperSize(d.brief);if(!paper)return [];return (d.outputs||[]).filter(o=>{const id=o.staticValues?.printPreset;return id&&/-a[1-6]$/.test(id)&&!id.endsWith('-a'+paper.slice(1))&&briefPrintPreset(o,paper);}).map(o=>({outputId:o.id,paper,chosen:retailPrintPresets.find(p=>p.id===o.staticValues.printPreset)?.name||o.staticValues.printPreset}));}
   function draftFromReading(brandId,reading,{brief='',products=[],today=new Date().toISOString().slice(0,10),id=null,briefDocuments=null}={}){
     const r=reading?.result;if(!r||!Array.isArray(r.assets))throw Error('The brief has not been read yet.');
     const ids=[...new Set(r.assets.map(a=>a.cardId))].filter(id=>assetCard(id)?.status==='ready');
@@ -1523,6 +1577,7 @@ default:return frame(14,9,36,38)} }
       if(v.promotionMode==='Yes')Object.assign(v,{offer:offer.wording||'',offerSku:p?p.name+(variantName?' · '+variantName:''):'',offerValidity:'Date range',offerStart:offer.startDate||today,offerEnd:offer.endDate||'',terms:offer.terms||''});
       if(!r.contactDetails&&!v.contactMode)v.contactMode='None';}
     const mandatory=(r.exactWording||[]).filter(w=>!['offer','terms','validity'].includes(w.kind)).map(w=>w.text);if(mandatory.length)d.mandatoryInfo=mandatory.join('\n');
+    applyBriefPaperSize(d);
     d.name=projectTitle(d,{automatic:true,productName:p?.name});
     d.briefReading={version:1,id:reading.id,readAt:reading.updatedAt||null,decision:ids.length>1?'campaign':'design',result:clone(r),offerStartAssumed:!!(d.messageType==='Offer / price / EMI'&&!offer.startDate),variantDefaulted};
     return d;
@@ -1610,5 +1665,5 @@ default:return frame(14,9,36,38)} }
     messaging:[[14,'WhatsApp Visual','1080 × 1080 px'],[14,'Email Header / Hero','1200 × 600 px',null,null,'Email'],[14,'RCS Card Images','1260 × 540 px · Adjustable',null,null,'RCS'],[14,'Push Notification Image','1024 × 512 px · Adjustable',null,null,'Push'],[14,'Push Notification Icons','Multiple sizes · Icon set',null,null,'Push icons']],
     corporate:[[13,'LinkedIn Post','1200 × 627 px'],[9,'LinkedIn Feature Carousel','1080 × 1080 px · Page set','LinkedIn','Feature'],[9,'LinkedIn Story Carousel','1080 × 1080 px · Page set','LinkedIn','Story'],[15,'Blog / Link Preview','1080 × 1080 px · Adjustable']]
   };return (catalogue[group]||[]).map(([id,name,ratio,carouselPlatform,narrativeType,imagePlatform,websiteType,amazonPreset])=>({id,name,ratio,carouselPlatform,narrativeType,imagePlatform,websiteType,amazonPreset}));}
-  return {displayBannerSizes,displayBannerSets,displayBannerSetNames,displayBanners,displayBannerSlots,displayBannerSummary,displayBannerRows,displayBannerNotes,aplusPageTypes,aplusSlots,aplusSummary,aplusPage,aplusPresetName,aplusNotes,aplusModuleRows,technologyPattern,technologyExclusion,technologyFeatures,applyTechnologyDefault,resultNotes,messageTypes,assetDivisions,assetCatalogue,assetCard,assetCardOutput,startAssetDraft,draftFromReading,productNameCheck,readingBriefName,defaultVariant,openReadingQuestions,resolveReadingQuestion,backupModelNote,assetPlatformNote,assetPlatformNotes,applyMessageType,syncMessageTypeOffer,campaignValidation,campaignGenerationSupported,selectBriefProduct,toolFormats,communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,designCheck,projectStatusMatches,projectProductName,projectProductId,outputsBadge,refreshFailurePlan,safeAsset,normalizeJob,storage};
+  return {briefPaperSize,applyBriefPaperSize,briefSizeMismatch,displayBannerSizes,displayBannerSets,displayBannerSetNames,displayBanners,displayBannerSlots,displayBannerSummary,displayBannerRows,displayBannerNotes,aplusPageTypes,aplusSlots,aplusSummary,aplusPage,aplusPresetName,aplusNotes,aplusModuleRows,technologyPattern,technologyExclusion,technologyFeatures,applyTechnologyDefault,resultNotes,messageTypes,assetDivisions,assetCatalogue,assetCard,assetCardOutput,startAssetDraft,draftFromReading,productNameCheck,readingBriefName,defaultVariant,openReadingQuestions,resolveReadingQuestion,backupModelNote,assetPlatformNote,assetPlatformNotes,applyMessageType,syncMessageTypeOffer,campaignValidation,campaignGenerationSupported,selectBriefProduct,toolFormats,communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,designCheck,projectStatusMatches,projectProductName,projectProductId,outputsBadge,refreshFailurePlan,safeAsset,normalizeJob,storage};
 });

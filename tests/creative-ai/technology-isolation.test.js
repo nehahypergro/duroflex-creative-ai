@@ -103,3 +103,27 @@ for(const name of ['Duroflex','Sleepyhead'])test(name+': a forged or altered lab
  await assert.rejects(()=>f.provider.generate(f.request([product,label()]),f.store.budget(f.job.id)),e=>e.code==='BRAND_ISOLATION'&&!/label close-up/.test(e.message));
  assert.equal(f.calls(),0);
 });
+// Creative reference v1 (10 Nov 2026): the user's reference picture reaches only the reference-reading step,
+// and only as this job's own saved picture (bound by hash). Both brands.
+for(const name of ['Duroflex','Sleepyhead'])test(name+': only the job\'s own reference picture reaches the reference step',async t=>{
+ const f=await fixture(t,name),cr=require('../../lib/creative-ai/runtime/creative-reference'),sharp=require('sharp');
+ const pic=await sharp({create:{width:640,height:400,channels:3,background:'#c0a080'}}).png().toBuffer();
+ const ref=await cr.save(f.root,f.own.id,{name:'ref.png',use:['layout'],imageData:'data:image/png;base64,'+pic.toString('base64')});
+ const job=await f.create({creativeReference:ref}),imageData=await cr.load(f.root,f.own.id,ref);let reads=0;
+ const provider=new BrandScopedProvider({reason:async()=>{reads++;return {layout:'x',look:'y',idea:'z',avoid:[]};},generate:async()=>({ok:true})},f.brands);
+ const ask=(images,kind='lean-reference')=>provider.reason({contextKind:kind,instructions:'Describe',input:{use:['layout']},images,schema:cr.schema},f.store.budget(job.id));
+ await ask([{id:'creative-reference',imageData}]);assert.equal(reads,1,'its own picture is read');
+ const other=await sharp({create:{width:640,height:400,channels:3,background:'#203040'}}).jpeg().toBuffer();
+ await assert.rejects(ask([{id:'creative-reference',imageData:'data:image/jpeg;base64,'+other.toString('base64')}]),/does not match this job/);
+ await assert.rejects(ask([{id:'creative-reference',imageData}],'lean-planning'),/only be read by the reference step/);
+ assert.equal(reads,1,'nothing else was sent');
+ assert.ok((await fs.readdir(cr.dir(f.root,f.own.id))).includes(ref.sha256+'.jpg'),'saved in this brand\'s own store');
+});
+// Live run, 10 Nov 2026 (Sleepyhead post with its own earlier banner as the reference): the "do not copy" list
+// included "sleepyhead", the brand's own name. The job's own brand name, and the brand's own product and
+// technology names, are never on that list.
+for(const name of ['Duroflex','Sleepyhead'])test(name+': the reference avoid-list never blocks the brand\'s own name',()=>{
+ const cr=require('../../lib/creative-ai/runtime/creative-reference');
+ const r=cr.section({layout:'x',look:'y',idea:'z',avoid:['“'+name.toLowerCase()+'”','“'+name.toUpperCase()+' logo”','“Try the Original.”','Acme Beds']},{name:'ref.png',use:['layout']},{brandName:name});
+ assert.deepEqual(r.creativeReference.avoid,['“Try the Original.”','Acme Beds']);assert.doesNotMatch(r.rule.text,new RegExp('"“?'+name,'i'));
+});
