@@ -18,7 +18,7 @@ const {JobStore}=require('../../lib/creative-ai/runtime/store'),flow=require('..
 const checklist=require('../../lib/creative-ai/lean/checklist'),edge=require('../../lib/creative-ai/lean/edge-extend'),correction=require('../../lib/creative-ai/lean/correction'),visual=require('../../lib/creative-ai/lean/visual-review'),{fingerprint}=require('../../lib/creative-ai/art-director');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const brands=['Duroflex','Sleepyhead'];
-const FEATURES={features:[{feature:'Basket-weave quilting: pairs of long rectangles alternating with pairs of squares',where:'top surface'},{feature:'Thin white quilted top band over a tall charcoal side wall',where:'sides'},{feature:'Orange rectangular label reading "sleepyhead" on the charcoal side wall near the front-left corner',where:'front long side'}],labelWords:'sleepyhead'};
+const FEATURES={features:[{feature:'Basket-weave quilting: pairs of long rectangles alternating with pairs of squares',where:'top surface'},{feature:'Thin white quilted top band over a tall charcoal side wall',where:'sides'},{feature:'Orange rectangular label reading "sleepyhead" on the charcoal side wall near the front-left corner',where:'front long side'}],labelWords:'sleepyhead',photoBackdrop:'Curved yellow stair wall with red trim, white staircase on the right, globe wall lights, a cactus on the left'};
 
 function planFor(input,{setRules=true}={}){return {...(input?.checklist?.setRules&&setRules?{setRules:['The same low grey base under the mattress on every page','The same bright bedroom family on every page']}:{}),message:'Comfort at home',audience:'Shoppers',objective:'Consideration',insight:{text:'A comfortable home matters',basis:'hypothesis'},desiredAction:'Explore',concept:'A clear choice',guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].map(r=>({id:r.id,decision:'apply',reason:'Applicable supplied requirement'})),pages:input.format.pages.map((p,i)=>({id:p.id,purpose:i?'Alternate product angle: the opposite long side, seen from front-right':p.name,copy:[{role:'headline',text:'Comfort at home'+(i?' '+(i+1):''),factIds:[]}],artDirection:'Product on the right, copy left',hierarchy:'Headline then product',palette:'Use brand colours',typography:input.brand.fonts[0].family+' Bold 700',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,k==='productPlacement'?'Whole mattress, front-right three-quarter view':'Follow this page’s resolved hierarchy'])),formatConstraints:['Flat artwork, no mockup']})),omitted:[]};}
 async function fixture(t,{brand='Duroflex',pages=1,root:sharedRoot=null,review=()=>'no_mismatch',fingerprintFails=false,pinned=true,planOptions}={}){
@@ -133,7 +133,7 @@ test('checklist requirements, validation and correction scope',()=>{
  // Live trial, 10 Nov 2026: a product with no readable label returned labelWords "" and the schema check refused it
  // ("$.labelWords: invalid string length"), failing the reading after its repair.
  const check=require('../../lib/creative-ai/marketing-strategist/schema-validator').check;
- assert.deepEqual(check(checklist.fingerprintSchema,{features:FEATURES.features,labelWords:''}),[],'no readable label is a valid answer');
+ assert.deepEqual(check(checklist.fingerprintSchema,{features:FEATURES.features,labelWords:'',photoBackdrop:''}),[],'no readable label is a valid answer');
  assert.equal(checklist.promptLine({features:FEATURES.features,labelWords:''}).includes('label reads exactly'),false);
  assert.ok(!checklist.requirements({fingerprint:{features:FEATURES.features,labelWords:''},page,plan:{},input}).some(r=>r.id==='label-wording'));
  assert.deepEqual(ids,['product-feature-1','product-feature-2','product-feature-3','label-wording','pointers','slot-purpose','reference-backdrop','set-rules']);
@@ -149,8 +149,9 @@ test('checklist requirements, validation and correction scope',()=>{
 
 test('text-size minimum follows how each format is viewed (fix 8)',()=>{
  const m=(name,w,h,id='x')=>checklist.minTextPx({id,description:{name,dimensions:{width:w,height:h}}});
- assert.equal(m('Premium A+ page · Hero · mobile',600,450).normal,16);assert.equal(m('Premium A+ page · Hero · desktop',1464,600).normal,16);
- assert.equal(m('Social square',1080,1080).normal,28);assert.equal(m('Product hero',1600,1600,'custom:recipe-pdp-01').normal,40);
+ // 8.5 CSS px since the live Sofa Drip Pro batch (10 Nov 2026).
+ assert.equal(m('Premium A+ page · Hero · mobile',600,450).normal,14);assert.equal(m('Premium A+ page · Hero · desktop',1464,600).normal,13);
+ assert.equal(m('Social square',1080,1080).normal,24);assert.equal(m('Product hero',1600,1600,'custom:recipe-pdp-01').normal,34);
  assert.equal(m('Web Push',1024,512),null,'notification images carry no words');assert.equal(checklist.minTextPx({description:{name:'Poster',dimensions:{width:1200,height:1697}}},{print:true}),null,'print keeps its own rules');
  const min={normal:16,fine:13,viewWidth:390};
  const check=checklist.textSizeCheck([{text:'Posture Perfect Pocket Spring',box:{height:12/450}},{text:'Price shown on Amazon',box:{height:0.01}}],{copy:[{role:'product name',text:'Posture Perfect Pocket Spring Orthopedic Mattress'}],min,width:600,height:450});
@@ -202,4 +203,43 @@ test('brand isolation sends an edge-fit anchor only when it re-derives the same 
   await assert.rejects(verify({scope:sent.scope,attachments:[sent.attachments[0]],mask:await sharp(sent.mask).flip().png().toBuffer()}),/edge mask changed/);
   assert.equal(key.length,24);
  }
+});
+
+// Live Sofa Drip Pro batch, 10 Nov 2026 (first live jobs with the checklist):
+//  - slot-purpose failed 14 images only because the sofa faced front-right instead of the planned front-left;
+//  - text-size failed lines that were only a little under the minimum (26 px vs 28, 35 px vs 40);
+//  - 8 images recreated the official photos' very distinctive room (curved yellow stair wall, red trim).
+test('slot purpose accepts a mirrored camera angle; the planner names the kind of view, not left or right',()=>{
+ const page={purpose:'Hero: front-left three-quarter view of the whole sofa'},input={format:{pages:[{id:'a'}]}};
+ const slot=checklist.requirements({fingerprint:null,page,plan:{},input}).find(r=>r.id==='slot-purpose');
+ assert.match(slot.expected,/mirrored/i);assert.match(slot.expected,/front-left and front-right/i);
+ const rule=checklist.section({format:{pages:[{id:'a'}]}},[{id:'a',description:{name:'Social square',dimensions:{width:1080,height:1080}}}]).rule.text;
+ assert.match(rule,/kind of product view/);assert.match(rule,/not a left or right camera direction/);
+ assert.match(require('../../lib/creative-ai/lean/visual-review').contract({product:{name:'P',variant:{},appearance:'A',facts:[]},format:{name:'F',pages:[{id:'a',name:'A',size:'1x1'}]},brand:{mandatory:[]},requirements:{pages:[{id:'a',logo:{treatment:'omit'}}]},mainWorkflowVersion:1},{pages:[{id:'a',purpose:'front-left view',copy:[]}]},'a',{checklist:{fingerprint:null}}).requirements.find(r=>r.id==='structure').expected,/left or right camera direction is not part of the structure/i);
+});
+test('text-size minimum is readable-on-a-phone, not strict: slightly smaller lines pass, tiny ones fail',()=>{
+ const m=(name,w,h,id='x')=>checklist.minTextPx({id,description:{name,dimensions:{width:w,height:h}}});
+ assert.equal(m('Social square',1080,1080).normal,24);assert.equal(m('Premium A+ page · Hero · mobile',600,450).normal,14);
+ const feed=m('Social square',1080,1080),copy=[{role:'feature',text:'Removable back cushion'}];
+ assert.equal(checklist.textSizeCheck([{text:'Removable back cushion',box:{height:26/1080}}],{copy,min:feed,width:1080,height:1080}).result,'no_mismatch','26 px on a feed post is readable');
+ const mobile=m('Premium A+ page · Hero · mobile',600,450);
+ assert.equal(checklist.textSizeCheck([{text:'Removable back cushion',box:{height:10/450}}],{copy,min:mobile,width:600,height:450}).result,'clear_mismatch','10 px chips on an A+ mobile image are too small');
+});
+test('the product reading describes the official photos\' room so the image brief and the check can keep it out',()=>{
+ const check=require('../../lib/creative-ai/marketing-strategist/schema-validator').check;
+ assert.deepEqual(check(checklist.fingerprintSchema,FEATURES),[]);assert.deepEqual(check(checklist.fingerprintSchema,{...FEATURES,photoBackdrop:''}),[],'a plain studio photo has no room to describe');
+ assert.match(checklist.promptLine(FEATURES),/Do not recreate the room shown in the official product photos: Curved yellow stair wall/);
+ const backdrop=checklist.requirements({fingerprint:FEATURES,page:{purpose:'p'},plan:{},input:{format:{pages:[{id:'a'}]}}}).find(r=>r.id==='reference-backdrop');
+ assert.match(backdrop.expected,/Curved yellow stair wall/);
+ assert.equal(checklist.FINGERPRINT_VERSION,2,'new readings include the room; earlier saved readings are not reused');
+});
+test('wide desktop website images are judged at desktop size, and a 1-pixel measuring difference is not a fault',()=>{
+ // Live batch, 10 Nov 2026: a 1920x640 "Website Desktop image" was judged as a phone feed (needs 42 px); a LinkedIn
+ // announcement line at 26 px against 27 px was flagged.
+ const desk=checklist.minTextPx({id:'custom:client-website-desktop-1920x640',description:{name:'Website Desktop image',dimensions:{width:1920,height:640}}});
+ assert.ok(desk.viewWidth>=1280&&desk.normal<=13,'desktop: '+JSON.stringify(desk));
+ const post=checklist.minTextPx({id:'x',description:{name:'LinkedIn product announcement',dimensions:{width:1200,height:627}}});
+ assert.equal(checklist.textSizeCheck([{text:'Removable back',box:{height:26/627}}],{copy:[{role:'feature',text:'Removable back cushion'}],min:post,width:1200,height:627}).result,'no_mismatch');
+ const mobile=checklist.minTextPx({id:'x',description:{name:'Premium A+ page · Hero · mobile',dimensions:{width:600,height:450}}});
+ assert.equal(checklist.textSizeCheck([{text:'Removable back cushion',box:{height:12/450}}],{copy:[{role:'feature',text:'Removable back cushion'}],min:mobile,width:600,height:450}).result,'clear_mismatch','12 px on an A+ mobile image stays flagged');
 });

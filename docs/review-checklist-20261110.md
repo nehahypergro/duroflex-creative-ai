@@ -139,3 +139,18 @@ Estimates:
 - A run checked by luna adds the measured difference per check: one check per image at the low end, two at the high end.
 - In a sol-checked run, the direct image checks count as per-image cost, not planning.
 - The estimate message says "and the more careful image checker".
+
+## Fixes from the Sofa Drip Pro live batch (10 Nov 2026)
+
+The 52-card Sleepyhead Sofa Drip Pro batch found three planning failures and three over-strict checks. Each fix has a regression test, and the planning fixes replay the saved failed jobs (6cfc75af, ed731707, abfe8859).
+
+| Problem seen | Fix |
+|---|---|
+| Brochure failed: the planner wrote no objective-playbook note | A missing note is filled as "Applied automatically…", with a reason that says so |
+| Brochure failed "too verbose" | The size check measures only the planner's writing; rule decisions are not counted and set rules get their own room (1,500 characters) |
+| LinkedIn Square failed: the planner wrote "adapt" for the brand typeface rule | "adapt" with a reason on a mandatory rule is recorded as "apply" and the note is kept. Only the objective playbook and the PDP technology rule keep "adapt"; "not applicable" still fails |
+| Mirrored camera angle flagged as the wrong view | The slot-purpose and structure checks treat front-left and front-right three-quarter views as the same kind of view; the planner names the kind of view, not a direction |
+| Readable text flagged as too small | Minimum 8.5 CSS px (fine print 7), 1 px measuring tolerance, wide desktop images judged at a 1280 px screen |
+| Images copied the official photos' room | Product fingerprint v2 also describes the photos' room (`photoBackdrop`). The image brief says not to recreate it and the backdrop check names it. v1 readings are not reused |
+
+In the rerun of the 28 cards that were not fully Ready, the first 9 cards went from 15 to 23 Ready images (A+ 6 → 10, PMax 1 → 3). The rest stopped when the OpenAI credit ran out.

@@ -46,8 +46,10 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': pinned planning packe
  assert.deepEqual(input.format.guidance.rulePlacements['objective-playbook'],['page-1']);
  /* Planner must account for it like any mandatory rule */
  const plan={message:'m',audience:'a',objective:'Purchase',insight:{text:'i',basis:'hypothesis'},desiredAction:'Buy',concept:'c',guidanceDecisions:[...input.brand.mandatory,...input.brand.preferences,...input.format.guidance.mandatory].filter(x=>x.id!=='objective-playbook').map(x=>({id:x.id,decision:'apply',reason:'Applies'})),pages:[{id:'page-1',purpose:'Sell',copy:[{role:'headline',text:brand+' Product',factIds:['product-exact']}],artDirection:'Product hero',hierarchy:'Product then CTA',palette:'Brand',typography:input.brand.fonts[0].family+' Bold 700',spatial:Object.fromEntries(planning.spatialFields.map(k=>[k,'Clear region'])),formatConstraints:['Safe area']}],omitted:[]};
- assert.throws(()=>planning.validatePlan(plan,input),/objective-playbook/);
- plan.guidanceDecisions.push({id:'objective-playbook',decision:'apply',reason:'Purchase story'});assert.doesNotThrow(()=>planning.validatePlan(plan,input));
+ // 10 Nov 2026 live batch (Sofa Drip Pro brochure): a missing playbook note no longer fails the job; it is filled as
+ // "apply" with a reason that says the planner wrote no note. The planner's own note is kept when it writes one.
+ const missing=structuredClone(plan);assert.doesNotThrow(()=>planning.validatePlan(missing,input));assert.match(missing.guidanceDecisions.find(d=>d.id==='objective-playbook').reason,/^Applied automatically: the planner did not write a note/);
+ plan.guidanceDecisions.push({id:'objective-playbook',decision:'apply',reason:'Purchase story'});assert.doesNotThrow(()=>planning.validatePlan(plan,input));assert.equal(plan.guidanceDecisions.find(d=>d.id==='objective-playbook').reason,'Purchase story');
  /* The visual review checks the plan's outcome, not the playbook wording itself */
  const contract=review.contract(input,plan,'page-1');assert(!contract.requirements.some(x=>/objective-playbook/.test(x.id)));
  assert.doesNotMatch(planning.imagePrompt(plan,input),/OBJECTIVE PLAYBOOK/);
@@ -101,5 +103,8 @@ for(const brand of ['Duroflex','Sleepyhead'])test(brand+': the objective playboo
  d.decision='adapt';d.reason='A+ forbids on-image CTAs; purchase intent shapes product prominence instead.';assert.doesNotThrow(()=>planning.validatePlan(plan,input));
  d.decision='not-applicable';assert.throws(()=>planning.validatePlan(plan,input),/objective-playbook/);
  d.decision='adapt';d.reason=' ';assert.throws(()=>planning.validatePlan(plan,input),/objective-playbook|reason/,'an adaptation needs a real reason');
- const other=plan.guidanceDecisions.find(x=>x.id!=='objective-playbook'&&input.format.guidance.mandatory.some(m=>m.id===x.id));if(other){d.decision='apply';d.reason='ok';other.decision='adapt';assert.throws(()=>planning.validatePlan(plan,input),/Mandatory rule cannot be omitted/);}
+ const other=plan.guidanceDecisions.find(x=>x.id!=='objective-playbook'&&input.format.guidance.mandatory.some(m=>m.id===x.id));if(other){d.decision='apply';d.reason='ok';other.decision='adapt';other.reason='Fits this format';
+  // 10 Nov 2026 live batch: "adapt" on another mandatory rule is recorded as "apply" with the planner's note (never downgraded).
+  assert.doesNotThrow(()=>planning.validatePlan(plan,input));assert.equal(other.decision,'apply');assert.match(other.reason,/^Adapted by the planner: Fits this format/);
+  other.decision='not-applicable';assert.throws(()=>planning.validatePlan(plan,input),/Mandatory rule cannot be omitted/);}
 });

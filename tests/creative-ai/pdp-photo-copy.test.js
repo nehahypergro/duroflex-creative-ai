@@ -68,3 +68,53 @@ test('Duroflex: any skipped format-rule decision is filled; brand rules are not'
  const brandRule=evidence.input.brand.mandatory.find(r=>!['req-source-precedence','current-source-acceptance'].includes(r.id));
  if(brandRule){const missing=structuredClone(evidence.plan);missing.guidanceDecisions=missing.guidanceDecisions.filter(d=>d.id!==brandRule.id);assert.throws(()=>planning.validatePlan(missing,evidence.input),new RegExp(brandRule.id));}
 });
+// Live batch, 10 Nov 2026 (Sleepyhead Sofa Drip Pro brochure, creative-6cfc75af): after the bounded repair the plan
+// had all 28 other decisions but no written note for objective-playbook, and the whole job failed. The playbook is
+// planning-only guidance the planner already had; nothing downstream reads the note. A missing note is filled as
+// "apply" with an honest reason; brand requirements and preferences still need the planner's own decision.
+const brochureDir=path.resolve(__dirname,'../../output/creative-ai/jobs/creative-6cfc75af-c61a-4831-aa15-ed565113fad7');
+const brochure=fs.existsSync(brochureDir)?(()=>{const files=fs.readdirSync(brochureDir);return {input:JSON.parse(fs.readFileSync(path.join(brochureDir,files.find(f=>f.startsWith('lean-input-'))))),plan:JSON.parse(fs.readFileSync(path.join(brochureDir,files.find(f=>f.startsWith('invalid-'))))).output};})():null;
+test('Sleepyhead: the saved brochure plan with no objective-playbook note now passes, marked automatic',{skip:!brochure&&'saved run not available'},()=>{
+ const plan=structuredClone(brochure.plan);assert.doesNotThrow(()=>planning.validatePlan(plan,brochure.input));
+ const filled=plan.guidanceDecisions.find(d=>d.id==='objective-playbook');assert.equal(filled.decision,'apply');assert.match(filled.reason,/^Applied automatically: the planner did not write a note/);
+});
+test('Duroflex: a missing objective-playbook note is filled; a missing brand-rule decision still fails',{skip:!evidence&&'saved run not available'},()=>{
+ assert.ok(evidence.input.format.guidance.mandatory.some(r=>r.id==='objective-playbook')||evidence.input.brand.mandatory.some(r=>r.id==='objective-playbook'),'the saved plan carries the playbook rule');
+ const plan=structuredClone(evidence.plan);plan.guidanceDecisions=plan.guidanceDecisions.filter(d=>d.id!=='objective-playbook');assert.doesNotThrow(()=>planning.validatePlan(plan,evidence.input));
+ assert.match(plan.guidanceDecisions.find(d=>d.id==='objective-playbook').reason,/^Applied automatically: the planner did not write a note/);
+});
+// Live batch, 10 Nov 2026 (Sleepyhead Sofa Drip Pro brochure retry, creative-ed731707): "Planner output is too
+// verbose". The plan's words were ordinary (two pages, 12,629 characters), but the size check also counted the ~30
+// rule decisions (IDs and one-word decisions, 5,967 characters) and the new set rules. The check now measures the
+// planner's own writing; decisions are not counted and a set's shared rules get their own allowance.
+const verboseDir=path.resolve(__dirname,'../../output/creative-ai/jobs/creative-ed731707-ffc7-4ac6-95ec-33eb8c25bbe9');
+const verbose=fs.existsSync(verboseDir)?(()=>{const files=fs.readdirSync(verboseDir);return {input:JSON.parse(fs.readFileSync(path.join(verboseDir,files.find(f=>f.startsWith('lean-input-'))))),plan:JSON.parse(fs.readFileSync(path.join(verboseDir,files.find(f=>f.startsWith('invalid-'))))).output};})():null;
+test('Sleepyhead: the saved brochure plan is not rejected as too verbose; a truly long plan still is',{skip:!verbose&&'saved run not available'},()=>{
+ assert.doesNotThrow(()=>planning.validatePlan(structuredClone(verbose.plan),verbose.input));
+ const long=structuredClone(verbose.plan);long.pages[0].artDirection='x '.repeat(9000);assert.throws(()=>planning.validatePlan(long,verbose.input),/too verbose/);
+});
+test('Duroflex: a long list of rule decisions alone never makes a plan too verbose',{skip:!evidence&&'saved run not available'},()=>{
+ const plan=structuredClone(evidence.plan),input=structuredClone(evidence.input);
+ for(let i=0;i<1000;i++){const id='custom:extra-'+i+'-layout';input.format.guidance.mandatory.push({id,tier:'contract',text:'Extra placement rule '+i,sourceIds:[]});plan.guidanceDecisions.push({id,decision:'apply',reason:'Applies'});}
+ assert.doesNotThrow(()=>planning.validatePlan(plan,input));
+});
+// Live batch, 10 Nov 2026 (Sleepyhead Sofa Drip Pro LinkedIn square, creative-abfe8859): the planner chose "adapt" for
+// the brand typeface rule ("use the supplied Source Sans Pro files; do not claim Migrena Grotesque") and the whole job
+// failed as "Mandatory rule cannot be omitted". Adapting is not omitting: brand and format rules still reach the image
+// brief and the check whatever the decision says. Any mandatory rule may be adapted with a written reason;
+// "not-applicable" still fails.
+const typeDir=path.resolve(__dirname,'../../output/creative-ai/jobs/creative-abfe8859-d28a-4c19-ab71-992c6e9252ee');
+const typeRun=fs.existsSync(typeDir)?(()=>{const files=fs.readdirSync(typeDir);return {input:JSON.parse(fs.readFileSync(path.join(typeDir,files.find(f=>f.startsWith('lean-input-'))))),plan:JSON.parse(fs.readFileSync(path.join(typeDir,files.filter(f=>f.startsWith('invalid-')).sort().at(-1)))).output};})():null;
+test('Sleepyhead: an adapted brand typeface rule is recorded as apply with the planner\'s note, still reaches the brief and the check; not-applicable fails',{skip:!typeRun&&'saved run not available'},()=>{
+ const plan=structuredClone(typeRun.plan);assert.doesNotThrow(()=>planning.validatePlan(plan,typeRun.input));
+ const d=plan.guidanceDecisions.find(x=>x.id==='req-typeface');assert.equal(d.decision,'apply','never downgraded');assert.match(d.reason,/^Adapted by the planner: Use supplied Source Sans Pro/);
+ const page=plan.pages[0],rule=typeRun.input.brand.mandatory.find(r=>r.id==='req-typeface');
+ assert.ok(planning.imagePrompt(plan,typeRun.input,page).includes(rule.text),'the rule still reaches the image brief');
+ assert.ok(require('../../lib/creative-ai/lean/visual-review').contract(typeRun.input,plan,page.id).requirements.some(r=>r.id==='brand-req-typeface'),'and the check');
+ const dropped=structuredClone(typeRun.plan);dropped.guidanceDecisions.find(d=>d.id==='req-typeface').decision='not-applicable';assert.throws(()=>planning.validatePlan(dropped,typeRun.input),/Mandatory rule cannot be omitted: req-typeface/);
+});
+test('Duroflex: a mandatory brand rule adapted with a reason is recorded as apply; without a reason it fails',{skip:!evidence&&'saved run not available'},()=>{
+ const rule=evidence.input.brand.mandatory.find(r=>!['req-source-precedence','current-source-acceptance'].includes(r.id));
+ const plan=structuredClone(evidence.plan);plan.guidanceDecisions.find(d=>d.id===rule.id).decision='adapt';assert.doesNotThrow(()=>planning.validatePlan(plan,evidence.input));assert.equal(plan.guidanceDecisions.find(d=>d.id===rule.id).decision,'apply');
+ const blank=structuredClone(evidence.plan);Object.assign(blank.guidanceDecisions.find(d=>d.id===rule.id),{decision:'adapt',reason:' '});assert.throws(()=>planning.validatePlan(blank,evidence.input));
+});
