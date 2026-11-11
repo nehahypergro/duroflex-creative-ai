@@ -1,5 +1,24 @@
 # Creative AI brand isolation
 
+## Channel craft (11 Nov 2026, after the grade-by-grade review)
+
+- New lean jobs pin `channelCraftVersion: 1` (`lean/channel-craft.js`; user request, 11 Nov 2026). Earlier jobs keep their contracts.
+- **Picture jobs (layout checks, never auto-corrected):**
+  - A+: each module its own picture; people in one or two modules.
+  - PMax: lifestyle with people, plain background, close-up.
+  - Carousels: hook → features → hero with the action, with one backdrop running across slides.
+  - RCS: look → feature in use → detail, by each card's place in the job's set.
+  - Web push: a tight crop.
+  - Display banners: a room or the campaign's colours.
+- **Plan checks:**
+  - No web address on any image (a bare domain only on print).
+  - Story headlines are one line of six words or fewer.
+  - Website heroes have at most three text blocks.
+- **Text size:** stories need 12 CSS px; wide desktop images of any class need 14 CSS px.
+- **Campaign look (planning only):** this product's recent palettes and people share, from the same brand-scoped history as the headlines.
+- **Read-back page:** asks a Purchase brief "Have a price or offer?" (`StudioModel.offerSuggested`) and never fills one in.
+- See `docs/channel-craft-20261111.md`.
+
 ## Marketing rules (11 Nov 2026, after the marketing-manager review)
 
 - New lean jobs pin `marketingRulesVersion: 1` (`lean/marketing-rules.js`). The user chose review fixes 2, 3, 5, 6, 7 and 8 and decided to leave "conditional" out of warranty wording ("3-year warranty"). Earlier jobs keep their contracts.
