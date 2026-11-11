@@ -1,5 +1,18 @@
 # Creative AI brand isolation
 
+## Marketing rules (11 Nov 2026, after the marketing-manager review)
+
+- New lean jobs pin `marketingRulesVersion: 1` (`lean/marketing-rules.js`). The user chose review fixes 2, 3, 5, 6, 7 and 8 and decided to leave "conditional" out of warranty wording ("3-year warranty"). Earlier jobs keep their contracts.
+- **Fresh headlines:** each planning unit gets this brand's recent headlines for the same product. They come from `brands/<brandId>/campaign-headlines.json`, are saved once per unit, and are never shared across brands. An exact repeat or an overused opening word fails the plan check.
+- **Short product name:** ad copy uses the short name ("Sofa Drip Pro"). The full catalogue name is only for marketplace, product-page, A+ and close-reading pages.
+- **Features shown working:** checked by the image check as layout (not auto-corrected).
+- **Story safe zone:** top 14% and bottom 20% stay clear of words, logo and button. It is measured by the local text reader and not judged by eye.
+- **Bigger text:**
+  - Wide desktop web images: 14 CSS px.
+  - Distance and at-shelf print: 10 mm per metre of reading distance, where the distance is trim height ÷ 700 mm, from 0.6 to 4 m.
+- **Spelling check:** a free local-reader `copy-spelling` check. It reports clear typos only, ignores letters the reader confuses, blocks Ready and goes to the single correction. It was replayed on 263 saved images: 1 flag, the real "cusshion".
+- See `docs/marketing-rules-20261111.md`.
+
 ## Review checklist, edge fit and size from the brief (10 Nov 2026, after the asset evaluation)
 
 - New lean jobs pin `reviewChecklistVersion: 1` and `edgeFitVersion: 1` (`lean/checklist.js`, `lean/edge-extend.js`). Earlier jobs keep their contracts.
