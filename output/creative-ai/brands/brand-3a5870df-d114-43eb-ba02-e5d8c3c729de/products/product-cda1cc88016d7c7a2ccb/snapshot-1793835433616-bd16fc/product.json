@@ -1,0 +1,236 @@
+{
+  "id": 10188711657656,
+  "title": "Napster Sofa Cum Bed 3 seater (Fabric, Indigo Blue)",
+  "handle": "napster-sofa-bed-indigo-blue",
+  "description": "<p>Ever looked at your sofa and thought, “This should totally be a bed”? Same. That’s exactly why we created Napstera sofa cum bed that does more than just sit pretty. Designed for the way you live (and lounge), Napster is a shapeshifting sofabed that flips, folds, and flexes into 6 mood-matching comfort modes—from Netflix binges to nap marathons.\n<br>By day, it’s your stylish go-to for chilling, scrolling, or catching up over chai. By night, it transforms into a spacious queen-size bed (72 x 60 x 7.5 inches), perfect for you or your always-crashing friends. Whether you’re in Recharge Mode (lounger), Catch-Up Mode (upright seater), or full Crash Zone (flatbed), Napster has your back—literally.\n<br>Made with premium warp knit polyester fabric and firm high-density foam, it offers the perfect mix of support and snuggle. It’s low-maintenance, lightweight, easy to move, and crafted to last. No tools. No weird gaps. Just a smooth fold-out design that saves space and looks good doing it.\n<br>Available in two aesthetic-as-hell colours, Napster blends into your vibe without trying too hard. It’s the ultimate sofa cum bed for compact homes, cozy corners, and big chill energy.\n<br>So if you’re the napper, the host, or the \"\"5 more mins\"\" type—Napster is your new favourite place to be.\n<br>Sit. Lounge. Nap. Repeat.</p>",
+  "published_at": "2026-01-30T15:47:12+05:30",
+  "created_at": "2026-01-10T02:55:55+05:30",
+  "vendor": "Sleepyhead",
+  "type": "Sofabeds",
+  "tags": [
+    "BAU26",
+    "DEALS10",
+    "FEST5",
+    "FESTGRAND",
+    "OLDMONEY5",
+    "PAYDAY5",
+    "SALE5",
+    "Sofabeds",
+    "Sofas",
+    "Summer"
+  ],
+  "price": 899900,
+  "price_min": 899900,
+  "price_max": 899900,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 1499900,
+  "compare_at_price_min": 1499900,
+  "compare_at_price_max": 1499900,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 52455656849592,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "SHNAP720060000750IB",
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": null,
+      "available": true,
+      "name": "Napster Sofa Cum Bed 3 seater (Fabric, Indigo Blue)",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 899900,
+      "weight": 0,
+      "compare_at_price": 1499900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/lifestyle_image_1.jpg?v=1768840211",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/2_24_3.jpg?v=1768840211",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/1_28_2.jpg?v=1768840211",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/3_31_3.jpg?v=1768840211",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/4_27_3.jpg?v=1768840211",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/6_12_2.jpg?v=1768840211",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/7_6_7.jpg?v=1768840211"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0918/6479/3272/files/lifestyle_image_1.jpg?v=1768840211",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/napster-sofa-bed-indigo-blue",
+  "media": [
+    {
+      "alt": "Napster|Sofa|Cum|Bed|3|seater|Fabric|Indigo|Blue",
+      "id": 58961326637240,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/lifestyle_image_1.jpg?v=1768840211"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/lifestyle_image_1.jpg?v=1768840211",
+      "width": 1000
+    },
+    {
+      "alt": "napster-sofa-bed-indigo-blue",
+      "id": 59087758753976,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/preview_images/4a5d5d2ce4bf4d64a1f2ca1850533e17.thumbnail.0000000000.jpg?v=1768839934"
+      },
+      "aspect_ratio": 1,
+      "duration": 7530,
+      "media_type": "video",
+      "sources": [
+        {
+          "format": "mp4",
+          "height": 480,
+          "mime_type": "video/mp4",
+          "url": "https://cdn.shopify.com/videos/c/vp/4a5d5d2ce4bf4d64a1f2ca1850533e17/4a5d5d2ce4bf4d64a1f2ca1850533e17.SD-480p-0.9Mbps-67296800.mp4",
+          "width": 480
+        },
+        {
+          "format": "mp4",
+          "height": 720,
+          "mime_type": "video/mp4",
+          "url": "https://cdn.shopify.com/videos/c/vp/4a5d5d2ce4bf4d64a1f2ca1850533e17/4a5d5d2ce4bf4d64a1f2ca1850533e17.HD-720p-1.6Mbps-67296800.mp4",
+          "width": 720
+        },
+        {
+          "format": "m3u8",
+          "height": 720,
+          "mime_type": "application/x-mpegURL",
+          "url": "https://cdn.shopify.com/videos/c/vp/4a5d5d2ce4bf4d64a1f2ca1850533e17/4a5d5d2ce4bf4d64a1f2ca1850533e17.m3u8",
+          "width": 720
+        }
+      ]
+    },
+    {
+      "alt": "Napster|Sofa|Cum|Bed|3|seater|Fabric|Indigo|Blue",
+      "id": 58961326080184,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/2_24_3.jpg?v=1768840211"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/2_24_3.jpg?v=1768840211",
+      "width": 1000
+    },
+    {
+      "alt": "Napster|Sofa|Cum|Bed|3|seater|Fabric|Indigo|Blue",
+      "id": 58961325949112,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/1_28_2.jpg?v=1768840211"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/1_28_2.jpg?v=1768840211",
+      "width": 1000
+    },
+    {
+      "alt": "Napster|Sofa|Cum|Bed|3|seater|Fabric|Indigo|Blue",
+      "id": 58961326244024,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/3_31_3.jpg?v=1768840211"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/3_31_3.jpg?v=1768840211",
+      "width": 1000
+    },
+    {
+      "alt": "Napster|Sofa|Cum|Bed|3|seater|Fabric|Indigo|Blue",
+      "id": 58961326375096,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/4_27_3.jpg?v=1768840211"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/4_27_3.jpg?v=1768840211",
+      "width": 1000
+    },
+    {
+      "alt": "Napster|Sofa|Cum|Bed|3|seater|Fabric|Indigo|Blue",
+      "id": 58961326473400,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/6_12_2.jpg?v=1768840211"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/6_12_2.jpg?v=1768840211",
+      "width": 1000
+    },
+    {
+      "alt": "Napster|Sofa|Cum|Bed|3|seater|Fabric|Indigo|Blue",
+      "id": 58961326571704,
+      "position": 8,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/7_6_7.jpg?v=1768840211"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/7_6_7.jpg?v=1768840211",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

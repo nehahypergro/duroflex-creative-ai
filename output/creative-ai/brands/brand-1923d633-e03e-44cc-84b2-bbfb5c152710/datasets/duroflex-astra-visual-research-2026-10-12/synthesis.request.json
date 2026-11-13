@@ -1,0 +1,24 @@
+{
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "sourceImageCount": 371,
+  "batches": [
+    "supplied-draft-visual-guide-1",
+    "supplied-draft-visual-guide-2",
+    "supplied-draft-visual-guide-3",
+    "supplied-draft-visual-guide-4",
+    "supplied-positioning-1",
+    "supplied-positioning-2",
+    "supplied-positioning-3",
+    "user-selected-spatial-inspiration-1",
+    "user-selected-spatial-inspiration-2",
+    "current-official-website-1",
+    "current-official-website-2"
+  ],
+  "model": "gpt-6-astra",
+  "reasoning": {
+    "effort": "high"
+  },
+  "maxOutputTokens": 22000,
+  "requestHash": "24c326fd6aa64cefa30d01fbef11e57eb454fa4953eda1085b8c3e2a7780b639",
+  "startedAt": "2026-10-11T21:30:27.888Z"
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "productIds": [
+    "product-985736dbde7586ad61c7"
+  ],
+  "logoSha256": "bc73e039c13b91fe41fd295198200e7e73ac2728b0212b42f35767ed92e45278",
+  "authorization": {
+    "sourceJobId": "creative-95a4a2e5-fb36-4068-9dce-b64e13af46d4",
+    "note": "Current conversation: user explicitly authorized other fonts across both brands (Let there be other fonts no need to flag). This saves that later direction against the failed square acceptance brief; the failed job is provenance, not approval of its output."
+  },
+  "clarification": {
+    "version": 1,
+    "text": "Use the approved Sleepyhead logo and exact saved Bubbles Canyon Rose two-seater identity. Alternative fonts are permitted by the user’s later instruction for both studios: “Let there be other fonts no need to flag.” For this raster-image test, choose appropriate legible typography; do not block strategy solely to obtain the guideline-named font files. When reconstructing editable text, use available library fonts and preserve their provenance. This permission does not assert possession or licensing of any missing proprietary font, and does not approve generated artwork.",
+    "nonEssentialFactIds": [],
+    "createdAt": "2026-10-21T12:58:20.149Z"
+  },
+  "factBindings": {}
+}

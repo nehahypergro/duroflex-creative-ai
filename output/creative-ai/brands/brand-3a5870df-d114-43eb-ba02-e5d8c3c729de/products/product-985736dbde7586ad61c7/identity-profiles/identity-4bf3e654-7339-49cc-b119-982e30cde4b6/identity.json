@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-4bf3e654-7339-49cc-b119-982e30cde4b6",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-985736dbde7586ad61c7",
+  "productName": "Sofa Bubbles - 2 Seater Sofa (Fabric, Canyon Rose)",
+  "pageUrl": "https://mysleepyhead.com/products/sofa-bubbles-2-seater-sofa-fabric-canyon-rose",
+  "productSnapshot": "snapshot-1792577073654-85ef1a",
+  "variant": {
+    "id": "52485277941944",
+    "sku": "SHBU2SSRS",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-46a10451c71e0d0f",
+    "snapshot": "snapshot-1792577073654-85ef1a",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/Bubble_2S_Canyon_Rose_7.jpg?v=1768928708",
+    "sha256": "6c245ba0352519aede621c56a03215d10faa4fb49604f3cc4e97eba61e328233",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 2000,
+    "height": 2000,
+    "rasterHash": "d4981e082cd0e2785811205071150a5c29539215dab717aa8ef47b11e4e1c752",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-21T10:51:54.892Z"
+  },
+  "createdAt": "2026-10-21T10:51:54.892Z",
+  "profileHash": "52e7db121d0e84a9a4686e59d101ccf68477102e028a09e55c628c2203c90018"
+}

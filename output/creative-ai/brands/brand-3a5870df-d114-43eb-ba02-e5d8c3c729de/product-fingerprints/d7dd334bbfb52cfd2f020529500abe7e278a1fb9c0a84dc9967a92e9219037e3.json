@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "key": "d7dd334bbfb52cfd2f020529500abe7e278a1fb9c0a84dc9967a92e9219037e3",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "productId": "product-56e87d550730114614b8",
+  "variantId": "54103381442744",
+  "photoHashes": [
+    "daabb1f657d90c97059249868966723c3c4b2ba7fc35940d729410f41fb35b4a",
+    "97c32f826253b708319a5922697a481e0842726697884922597f422dc45d3f42"
+  ],
+  "features": [
+    {
+      "feature": "Wide three-seat sofa with a low, rectangular upholstered body and two broad back cushions.",
+      "where": "Overall silhouette and back"
+    },
+    {
+      "feature": "Two separate, thick back cushions, each with a horizontal seam across the front.",
+      "where": "Back cushions"
+    },
+    {
+      "feature": "Broad upholstered seat with a visible vertical seam near the centre of the front edge.",
+      "where": "Seat and front apron"
+    },
+    {
+      "feature": "Wide, slightly outward-angled arms with squared padded tops and visible stitched seams along the sides.",
+      "where": "Both arms"
+    },
+    {
+      "feature": "Medium brown-taupe woven upholstery and short tapered warm-brown wooden legs.",
+      "where": "Upholstery and base"
+    }
+  ],
+  "labelWords": "",
+  "jobId": "creative-60e27bc3-b632-4023-a934-f305957088c9",
+  "createdAt": "2026-11-10T15:08:47.489Z"
+}

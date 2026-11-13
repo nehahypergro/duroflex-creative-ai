@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-5eadb1a8-3da1-4be6-80a9-4765942a0152",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-68147125abc89e2cad92",
+  "productName": "LiveIn 100% Latex Mattress",
+  "pageUrl": "https://www.duroflexworld.com/products/duroflex-livein-100-latex-mattress",
+  "productSnapshot": "snapshot-1791916699833-ed1427",
+  "variant": {
+    "id": "51541064155268",
+    "sku": "LIVEIN100PCTLTX750048000800GREEN",
+    "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3 cm)",
+    "configuration": "Official website variant Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-cd6e48b5686256bb",
+    "snapshot": "snapshot-1791916699833-ed1427",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/Livein-Latex-Webp_1_600x600.webp?v=1790243856",
+    "sha256": "14c65d02ecdbbe32aeed9c203a56a9a572e090caf97517af3780f702d9051ed1",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "7c4fb4c8b1c87e2fbf4d212e9b424e7e3e6eaf738f4689e8f1cd3eaa639ffdc5",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-03T19:05:34.916Z"
+  },
+  "createdAt": "2026-11-03T19:05:34.916Z",
+  "profileHash": "c4f0e7795273b15c1abcf84a57dde017346667b287f33cb59b9128d0828aa2f8"
+}

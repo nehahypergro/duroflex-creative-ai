@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "productIds": [
+    "product-c59347f7ba8d81723530"
+  ],
+  "logoSha256": "bc73e039c13b91fe41fd295198200e7e73ac2728b0212b42f35767ed92e45278",
+  "authorization": {
+    "sourceJobId": "creative-95a4a2e5-fb36-4068-9dce-b64e13af46d4",
+    "note": "User requested end-to-end static tests for this exact product URL on 22 October 2026 and confirmed selected variants. Prior source job records this brand’s approved identity/font choice only; its artwork or SKU is not reused. Current conversation: user explicitly authorized other fonts across both brands (Let there be other fonts no need to flag). This saves that later direction against the failed square acceptance brief; the failed job is provenance, not approval of its output."
+  },
+  "clarification": {
+    "version": 1,
+    "text": "Use the approved Sleepyhead logo and exact selected saved Sense Ortho Ultra Mattress - Ivory White identity. Alternative fonts are permitted by the user’s later instruction for both studios: “Let there be other fonts no need to flag.” For this raster-image test, choose appropriate legible typography; do not block strategy solely to obtain the guideline-named font files. When reconstructing editable text, use available library fonts and preserve their provenance. This permission does not assert possession or licensing of any missing proprietary font, and does not approve generated artwork.",
+    "nonEssentialFactIds": [],
+    "createdAt": "2026-10-21T19:17:55.469Z"
+  },
+  "factBindings": {}
+}

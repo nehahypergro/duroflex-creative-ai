@@ -1,0 +1,23 @@
+{
+  "kind": "reasoning",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "model": "gpt-6-astra",
+  "requestId": "resp_0048c1cea05aaa3c016acbff45109887d1b87e602d862e5961",
+  "usage": {
+    "input_tokens": 52101,
+    "input_tokens_details": {
+      "cache_write_tokens": 52098,
+      "cached_tokens": 0
+    },
+    "output_tokens": 8410,
+    "output_tokens_details": {
+      "reasoning_tokens": 3559
+    },
+    "total_tokens": 60511
+  },
+  "status": "completed",
+  "estimatedUsd": 1.071755,
+  "recordedAt": "2026-10-11T21:30:15.742Z",
+  "rateSource": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+  "rateBasis": "Standard list estimate, not invoice; no tools/image generation"
+}

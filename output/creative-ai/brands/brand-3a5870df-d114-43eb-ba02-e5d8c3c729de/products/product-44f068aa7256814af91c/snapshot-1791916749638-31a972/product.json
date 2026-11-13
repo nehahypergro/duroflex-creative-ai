@@ -1,0 +1,142 @@
+{
+  "id": 10188710084792,
+  "title": "Sofa Bae - 3+2 Seater Sofa Set (Fabric, Stone Grey)",
+  "handle": "sofa-bae-3-2-seater-sofa-set-grey-color",
+  "body_html": "<p>A sofa designed to redefine the way you lounge. Made for trendy homes, this sofa features a modern design that also offers a breakthrough in space management. The seat cushions are removable, so it’s super easy to keep clean. It comes in different options like 1 seater, 2 seater, 3 seater and L-shape sofa. The interchangeable L-shape sofa set comes with rearrangeable seat cushions that give you the freedom to switch up the sectional when your needs change. Use the rearrangeable lounger cushions to arrange this set in a way that best suits your home. The ottoman is perfect for relaxing with your feet up or for extra seating.</p>",
+  "published_at": "2026-01-29T01:56:20+05:30",
+  "created_at": "2026-01-10T02:53:15+05:30",
+  "updated_at": "2026-10-13T23:23:14+05:30",
+  "vendor": "Sleepyhead",
+  "product_type": "Sofa",
+  "tags": [
+    "BAU26",
+    "COMFORT20",
+    "DEALS20",
+    "FEST16",
+    "OLDMONEY5",
+    "PAYDAY5",
+    "SALE5",
+    "Sofas",
+    "Summer"
+  ],
+  "variants": [
+    {
+      "id": 52455651737784,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "SHBE32SSSSG",
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": null,
+      "available": true,
+      "price": "27839.00",
+      "grams": 0,
+      "compare_at_price": "45999.00",
+      "position": 1,
+      "product_id": 10188710084792,
+      "created_at": "2026-01-10T02:53:15+05:30",
+      "updated_at": "2026-10-13T23:23:14+05:30"
+    }
+  ],
+  "images": [
+    {
+      "id": 55648252854456,
+      "created_at": "2026-01-12T09:01:25+05:30",
+      "position": 1,
+      "updated_at": "2026-01-29T01:56:20+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/sleepy_head-day_114894_1.jpg?v=1769631980",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 55648252428472,
+      "created_at": "2026-01-12T09:01:22+05:30",
+      "position": 2,
+      "updated_at": "2026-01-29T01:56:20+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/3_seaer_2_-_grey__1.jpg?v=1769631980",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 55648252330168,
+      "created_at": "2026-01-12T09:01:21+05:30",
+      "position": 3,
+      "updated_at": "2026-01-29T01:56:20+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/2_seater_2_-_grey_1.jpg?v=1769631980",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 55648252559544,
+      "created_at": "2026-01-12T09:01:22+05:30",
+      "position": 4,
+      "updated_at": "2026-01-29T01:56:20+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/sleepyhead_limbo_shots_1229_2_1_1.jpg?v=1769631980",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 55648252690616,
+      "created_at": "2026-01-12T09:01:23+05:30",
+      "position": 5,
+      "updated_at": "2026-01-29T01:56:20+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/sleepyhead_limbo_shots_1252_2_1_1.jpg?v=1769631980",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 55648252756152,
+      "created_at": "2026-01-12T09:01:24+05:30",
+      "position": 6,
+      "updated_at": "2026-01-29T01:56:20+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/sleepyhead_limbo_shots_1318_4_grey_1.jpg?v=1769631980",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 55648252821688,
+      "created_at": "2026-01-12T09:01:24+05:30",
+      "position": 7,
+      "updated_at": "2026-01-29T01:56:20+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/sleepyhead_limbo_shots_1329_4_grey_1.jpg?v=1769631980",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 55648253083832,
+      "created_at": "2026-01-12T09:01:25+05:30",
+      "position": 8,
+      "updated_at": "2026-01-12T09:01:27+05:30",
+      "product_id": 10188710084792,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/sleepy-head_day_35224_3.jpg?v=1768188687",
+      "width": 1000,
+      "height": 1000
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

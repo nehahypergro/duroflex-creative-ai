@@ -1,0 +1,285 @@
+{
+  "batchSummary": "Reviewed all 18 supplied assets from five Duroflex collection pages captured on 11 October 2026 UTC. The sample spans domestic product scenes, destination-style bedrooms, performance-led pillow graphics and dark technology-led massager imagery—not one consistently expressed visual world. Several interiors overlap with the draft guide’s warmth and restraint; others emphasise spectacle or luxury. These are dated observations, not evidence of draft adoption or product efficacy. Applications below are advisory: adapt the room around the verified SKU, preserving its colour, fabric appearance, branding and construction.",
+  "observations": [
+    {
+      "imageId": "W08-I005",
+      "visibleEvidence": "A grey recliner with extended footrest fills a cream arch, framed by magenta flowers, an orange shrub, patterned tiles and a sea-and-cliff view.",
+      "spatialReading": "The close three-quarter view prioritises upholstery and extension. Bright upper-left illumination models the cushions; tight cropping limits circulation assessment. Broad darkening crosses the lower edge.",
+      "brandMeaning": "Destination escapism and decorative abundance outweigh the draft’s everyday domestic calm.",
+      "application": "Borrow mechanism visibility; replace scenic ornament with restrained architecture and clear recline space. Do not reproduce the bottom fade.",
+      "authorityAndLimits": "The still does not establish powered operation, durability or outdoor suitability."
+    },
+    {
+      "imageId": "W08-I007",
+      "visibleEvidence": "A tan recliner shows its side handle and exposed footrest linkage beside a palm, patterned tripod lamp, pastel artwork and foreground books with a mug.",
+      "spatialReading": "A three-quarter camera reveals construction against pale panelled walls, brown flooring and a grey rug. Soft left-side light separates upholstery; props crowd the foreground route. No opening is visible.",
+      "brandMeaning": "A recognisable reading corner is closer to the draft’s warm, lived-in direction.",
+      "application": "Retain tactile layering and functional visibility; simplify the lampshade and move the mug/books out of circulation.",
+      "authorityAndLimits": "Full extension clearance and operational behaviour remain unverified."
+    },
+    {
+      "imageId": "W09-I002",
+      "visibleEvidence": "A pink channelled, arched headboard and matching footboard frame cream bedding beneath a timber-looking beam ceiling, with veined wall panels and sea-facing glazing.",
+      "spatialReading": "Centred frontal framing makes the bed dominant. Side daylight rakes the warm surfaces; a sand-coloured rug and open foreground reinforce symmetry. No personal activity is depicted.",
+      "brandMeaning": "Warmth aligns with the draft palette, but the setting reads as a destination suite rather than an everyday home.",
+      "application": "Borrow silhouette clarity and restrained bedding; domesticate the surrounding architecture without changing the pink SKU.",
+      "authorityAndLimits": "Upholstery composition and coastal location cannot be established visually."
+    },
+    {
+      "imageId": "W09-I003",
+      "visibleEvidence": "A taupe buttoned bed carries an uncovered blue-and-white mattress with Restore, airboost, Duroflex and Duropedic labels. Sage walls meet a clay-coloured recess containing a bench and hat.",
+      "spatialReading": "Frontal framing foregrounds the mattress branding. Left-side daylight and warm lamps layer illumination; a plant, slippers and folded throw suggest routine without occupants.",
+      "brandMeaning": "Sage, clay and brown provide a strong overlap with the draft’s warmer domestic world.",
+      "application": "Borrow layered depth and modest activity cues; clarify whether the bed or mattress is the intended hero.",
+      "authorityAndLimits": "The listed hydraulic storage mechanism is not shown."
+    },
+    {
+      "imageId": "W09-I004",
+      "visibleEvidence": "A grey headboard and dark wood-looking frame support a branded blue-and-white mattress between tall windows. Four lantern-shaped pendants, amber bedside lamps, books and glasses furnish the sage room.",
+      "spatialReading": "Centred framing, an oval green rug and visible side floor establish order. Diffuse window light mixes with warm fixtures; numerous lights compete above the bed.",
+      "brandMeaning": "The colour layering approaches draft restorative modernism, although styling remains showroom-like.",
+      "application": "Borrow green–grey–brown balance; reduce overhead decoration while preserving the actual bed and mattress.",
+      "authorityAndLimits": "Glazing appearance does not verify weather; construction materials remain unconfirmed."
+    },
+    {
+      "imageId": "W09-I005",
+      "visibleEvidence": "Rust-coloured upholstered head and foot panels surround a bare grey mattress. Rounded bedside units, metallic-looking lamps and a bordered rug sit within a glazed, sea-facing room.",
+      "spatialReading": "Frontal symmetry exposes the frame and surrounding floor. Right-side sunlight cuts diagonally across the headboard; pale veined flooring and the timber-looking ceiling add visual richness. No occupant appears.",
+      "brandMeaning": "Earthy product colour supports warmth, while the ocean panorama sustains a luxury-retreat mood.",
+      "application": "Retain the rust SKU and structural legibility; simplify the floor/rug relationship and surrounding spectacle.",
+      "authorityAndLimits": "Rust upholstery is product colour, not evidence of a brand-red rule."
+    },
+    {
+      "imageId": "W10-I002",
+      "visibleEvidence": "A person in a white athletic-style top rests on a textured white pillow. A black footer reads “100% Latex. Cool by Nature.” in white italics beside orange chevrons; thin grid lines have orange square markers.",
+      "spatialReading": "Tight side framing shows head–pillow contact under warm facial light against a cool dark background. No room is shown.",
+      "brandMeaning": "Performance-oriented styling connects rest with energy, but differs from the draft’s warm domestic treatment.",
+      "application": "Borrow clear contact visibility, not the lighting or graphics as universal rules.",
+      "authorityAndLimits": "Composition and cooling are stated claims, not visually demonstrated facts."
+    },
+    {
+      "imageId": "W10-I003",
+      "visibleEvidence": "An overhead view shows a person with closed eyes, a braid and white athletic-style top resting on a pale hexagon-patterned pillow. Orange chevrons accompany “Performance Starts with Rest” in a black footer.",
+      "spatialReading": "The pillow frames the head against a dark padded surface. Soft facial illumination, thin grid lines and orange markers create a controlled campaign composition; no room is shown.",
+      "brandMeaning": "The proposition directly links rest to renewed performance, consistent with motivating reset.",
+      "application": "Borrow the legible contact and message hierarchy; retain the pillow’s actual pattern and edging.",
+      "authorityAndLimits": "The pose does not demonstrate performance improvement."
+    },
+    {
+      "imageId": "W10-I004",
+      "visibleEvidence": "A person in a white, dark-piped sleep shirt and beige trousers holds a phone while leaning against a white wedge pillow on a quilted mattress. A saturated blue backdrop and thin white border frame the scene.",
+      "spatialReading": "The seated, folded-leg pose partly occludes the wedge, although its right-side profile remains visible. Soft frontal light shows contact; no room architecture is shown.",
+      "brandMeaning": "Ordinary phone use conveys approachable everyday support, distinct from the performance campaign.",
+      "application": "Borrow the activity; reveal more wedge geometry in a complementary home.",
+      "authorityAndLimits": "Visible support is not clinical alignment evidence."
+    },
+    {
+      "imageId": "W10-I010",
+      "visibleEvidence": "A yellow-and-white handled pouch displays an outlined lowercase Duroflex logo, widely spaced “SNUGGLE,” three feature icons and a printed person wearing blue sleepwear with an eye mask pushed up.",
+      "spatialReading": "The pack is isolated on white with visible reflections and creases. The person and pillow are packaging artwork; no room or live product use is shown.",
+      "brandMeaning": "Yellow packaging creates a distinct retail identity from the dark pillow campaigns.",
+      "application": "Preserve the supplied pack artwork for identification; do not extend its yellow into room styling.",
+      "authorityAndLimits": "Printed filling and comfort statements are claims, not material verification."
+    },
+    {
+      "imageId": "W11-I000",
+      "visibleEvidence": "A dark twin-opening foot massager with a glossy control strip appears beneath thin white uppercase “DESIGNED FOR TARGETED RELIEF.” Its product name sits lower right; cyan light accents the black background.",
+      "spatialReading": "A tilted three-quarter presentation exposes openings and controls, appearing suspended above a reflective plane. No room or user is shown.",
+      "brandMeaning": "The treatment prioritises technological spectacle over the draft’s human warmth; no Duroflex master logo or red accent is visible.",
+      "application": "Borrow control visibility; add grounded home-use imagery with credible contact.",
+      "authorityAndLimits": "“Targeted relief” is a proposition, not demonstrated efficacy."
+    },
+    {
+      "imageId": "W11-I001",
+      "visibleEvidence": "A grey ottoman-shaped unit has a stitched cushion top, dark piping, front pull tab and black lower base. Thin white text reads “YOUR DAILY RECOVERY PARTNER,” with the product name below.",
+      "spatialReading": "The closed unit is isolated at three-quarter angle against a black-to-grey backdrop. No room, leg access or user contact is shown.",
+      "brandMeaning": "Companion language echoes supplied positioning, while the presentation remains object-led and lacks a visible Duroflex master logo.",
+      "application": "Pair this closed-form view with an accurate open/use view in a calm living room.",
+      "authorityAndLimits": "The still does not demonstrate conversion or recovery benefits."
+    },
+    {
+      "imageId": "W11-I002",
+      "visibleEvidence": "A cream curved back massager shows a mesh-like face, raised contours, carry loop and side controls. “MASSAGE ON THE GO” appears above in thin white capitals; the product name sits below.",
+      "spatialReading": "Diagonal isolation against black and a warm angular light field emphasises shape. No room, supporting surface or body contact is shown.",
+      "brandMeaning": "Portable-technology messaging is clear, but everyday use remains abstract. No red or Duroflex master logo is visible.",
+      "application": "Retain control and loop detail; supplement with supported seated use.",
+      "authorityAndLimits": "Portability is stated; fit, battery behaviour and benefits are not demonstrated."
+    },
+    {
+      "imageId": "W11-I003",
+      "visibleEvidence": "A blue-and-white U-shaped device shows ribbed surfaces, a side control panel and drawcord toggle. Thin white “MASSAGE ON THE GO” text and a smaller product name sit against black with a blue glow.",
+      "spatialReading": "The floating three-quarter presentation exposes the inner curve and fastening components. No room or wearer is shown.",
+      "brandMeaning": "It extends the massager campaign’s technology language without visible red or a Duroflex master logo.",
+      "application": "Preserve cord, control and contour geometry; add an anatomically supported wearing demonstration.",
+      "authorityAndLimits": "Heating, massage action and suitable fit cannot be inferred from this still."
+    },
+    {
+      "imageId": "W12-I003",
+      "visibleEvidence": "A wide banner places raised white mattress sections on a dark base inside a night-time city-view room. A diagonal white divider separates an orange-to-dark graphic panel containing the Wave Plus mark and “Smart Beds with Unique Sleep Mode.”",
+      "spatialReading": "The compressed room crop combines dark wood-looking walls, amber lighting and an orange rug; circulation is not assessable.",
+      "brandMeaning": "Technology and luxury dominate rather than ordinary domestic restoration.",
+      "application": "Borrow the clear room/message separation, not photographic fades or suite styling.",
+      "authorityAndLimits": "The wording does not explain or verify the named sleep mode."
+    },
+    {
+      "imageId": "W12-I004",
+      "visibleEvidence": "A white mattress with red side stripes bends over a black adjustable base. Dark wall panels, ceiling light strips, a wall-mounted technical outline, an orange rug and city-view glazing surround it.",
+      "spatialReading": "A low three-quarter view exposes the raised head section, base and legs. Warm interior light contrasts with the cool skyline; tight boundaries suggest a display suite. No user appears.",
+      "brandMeaning": "Functional legibility is strong, but glossy luxury conflicts with the draft’s restrained-home direction.",
+      "application": "Retain articulation and exact product stripes; simplify the architectural setting.",
+      "authorityAndLimits": "One depicted position does not verify motion range or health benefits."
+    },
+    {
+      "imageId": "W12-I005",
+      "visibleEvidence": "A white-and-grey Neuma-branded mattress with turquoise detailing rests on a low dark platform. Curved plaster-looking architecture, a rounded niche, slim shelves and sparse brown and black vessels surround it.",
+      "spatialReading": "Frontal framing leaves substantial wall space above the product. Directional light forms an oval wall patch and diagonal floor shadows; no opening or activity is visible.",
+      "brandMeaning": "Sculptural quiet approaches the draft’s stillness, but risks austere retreat styling.",
+      "application": "Borrow architectural negative space and tactile contrast; add modest domestic cues without changing the SKU.",
+      "authorityAndLimits": "Firmness adjustability is not visible; the light patch’s production method is unknown."
+    },
+    {
+      "imageId": "W12-I007",
+      "visibleEvidence": "A brown channelled bed with cream bedding repeats the sea-facing, veined-wall and beam-ceiling setting seen with the pink bed.",
+      "spatialReading": "Centred framing, side daylight and a sand rug create a warm tonal composition with an open foreground. Bedding conceals the mattress and any adjustable mechanism; no activity is shown.",
+      "brandMeaning": "It presents bedroom ambience more clearly than smart functionality and retains the destination-suite association.",
+      "application": "Keep the brown SKU distinct; add an articulated view if communicating the listed adjustable combination.",
+      "authorityAndLimits": "The image alone cannot confirm the advertised component combination."
+    }
+  ],
+  "relationships": [
+    {
+      "finding": "The Celeste room composition is reused across bed and smart-sleep categories.",
+      "evidenceIds": [
+        "W09-I002",
+        "W12-I007"
+      ],
+      "interpretation": "Architecture, bedding, framing and lighting closely match, while the upholstery changes from pink to brown. This demonstrates a shared presentation template, not proof of how it was produced. It also shows why a furnished hero cannot independently explain the smart combination’s mechanism."
+    },
+    {
+      "finding": "The two recliner assets offer very different interpretations of relaxation.",
+      "evidenceIds": [
+        "W08-I005",
+        "W08-I007",
+        "V013",
+        "V018"
+      ],
+      "interpretation": "The flower-framed coastal arch sells escape; the lamp, mug and books establish an ordinary domestic corner. Both expose reclining form, but the latter is closer to the draft’s home-based direction. Borrow its everyday context while reducing patterned decoration and protecting circulation."
+    },
+    {
+      "finding": "Sage bedrooms provide a stronger draft-aligned foundation than the coastal suite scenes.",
+      "evidenceIds": [
+        "W09-I003",
+        "W09-I004",
+        "W09-I002",
+        "W09-I005",
+        "V012",
+        "V018",
+        "V036"
+      ],
+      "interpretation": "Sage, clay, dark brown and small routine objects establish layered domestic warmth. The coastal rooms also use warm surfaces, but ocean panoramas, symmetry and rich finishes shift the mood toward destination luxury. These are relative visual overlaps with a draft, not adoption findings."
+    },
+    {
+      "finding": "Bed-category imagery sometimes gives the mattress stronger identification than the bed.",
+      "evidenceIds": [
+        "W09-I003",
+        "W09-I004",
+        "W09-I005",
+        "W09-I002",
+        "W09"
+      ],
+      "interpretation": "The first two images prominently expose blue-and-white mattresses and readable labels, whereas the pink bed uses bedding to privilege its frame silhouette. The rust bed exposes an unlabelled mattress. Future assets should explicitly choose frame, mattress or combination hierarchy rather than treating these approaches as interchangeable."
+    },
+    {
+      "finding": "Pillow merchandising contains three distinct visual systems.",
+      "evidenceIds": [
+        "W10-I002",
+        "W10-I003",
+        "W10-I004",
+        "W10-I010",
+        "P053",
+        "V095",
+        "V108"
+      ],
+      "interpretation": "The Energise pair shares athletic styling, dark fields, orange markers and italic performance copy. The wedge uses blue-backed everyday activity; Snuggle uses yellow packaging. Performance-to-rest messaging supports motivating reset, but this sample does not yet show the draft’s proposed single-world continuity across those treatments."
+    },
+    {
+      "finding": "Neuma massagers have a consistent campaign layout, but Neuma mattress imagery inhabits another world.",
+      "evidenceIds": [
+        "W11-I000",
+        "W11-I001",
+        "W11-I002",
+        "W11-I003",
+        "W12-I005",
+        "V095",
+        "V108"
+      ],
+      "interpretation": "The massagers repeat thin white headlines, dark isolation and angled products; the mattress uses a quiet architectural room with daylight. Both prioritise product form, but shared naming alone does not establish visual continuity. Neither treatment should become a new permanent identity rule from this sample."
+    },
+    {
+      "finding": "Smart-sleep presentation ranges from night-time spectacle to sculptural stillness.",
+      "evidenceIds": [
+        "W12-I003",
+        "W12-I004",
+        "W12-I005",
+        "W12-I007",
+        "V004",
+        "V014"
+      ],
+      "interpretation": "The Wave assets explain articulation through exposed bases and raised surfaces inside a luminous city suite. Neuma supplies quiet negative space without demonstrating adjustment; the brown Celeste scene supplies ambience while concealing technology. A coherent system needs both domestic context and separate, accurate functional explanation."
+    },
+    {
+      "finding": "The clearest red accents are attached to actual products, not flooded across rooms.",
+      "evidenceIds": [
+        "W09-I003",
+        "W09-I004",
+        "W12-I004",
+        "W09-I002",
+        "W09-I005",
+        "V128"
+      ],
+      "interpretation": "Small red Duroflex marks and mattress stripes provide controlled identification consistent with the draft’s punctuation idea. Pink and rust bed upholstery are SKU colours, not decorative misuse of brand red. Preserve those product colours rather than recolouring them to enforce a room palette."
+    },
+    {
+      "finding": "Human use is concentrated in pillows; other categories largely rely on unoccupied scenes or isolated objects.",
+      "evidenceIds": [
+        "W10-I002",
+        "W10-I003",
+        "W10-I004",
+        "W08-I007",
+        "W09-I003",
+        "W11-I001",
+        "W12-I004",
+        "V065",
+        "P055"
+      ],
+      "interpretation": "Pillows show head or torso contact and an everyday phone activity. Books, slippers and cups elsewhere imply life without depicting it; the ottoman and adjustable bed do not show users. This sample offers stronger product-form coverage than the inhabited and explanatory coverage proposed by the draft."
+    },
+    {
+      "finding": "Graphic contrast devices must remain distinct from architectural scene construction.",
+      "evidenceIds": [
+        "W10-I002",
+        "W10-I003",
+        "W11-I000",
+        "W12-I003",
+        "W08-I005",
+        "W12-I005"
+      ],
+      "interpretation": "Black footers, isolated-product glows and the Wave banner’s divided panel are graphic treatments. They do not justify adding fades, haze or white patches to room photographs. For scene copy, use genuinely planned wall or opening space; do not reproduce the recliner image’s fade-like lower-edge darkening."
+    }
+  ],
+  "contradictions": [
+    "Draft-direction tension: W08-I005, W09-I002, W09-I005, W12-I003, W12-I004 and W12-I007 emphasise destination scenery or suite luxury, while V013–V018 propose restrained contemporary homes rather than hotel-showroom styling. This does not establish whether the draft was adopted.",
+    "Verbal-positioning tension: W11’s page copy uses “clinical-grade,” medical-wellness language, condition-specific relief and healing claims; W12 makes broad circulation, pain and adaptive-intelligence claims. These exceed what the supplied stills establish and sit uneasily with P055/P057’s explicit restraint against overpromising.",
+    "W11 contains an internal offer inconsistency: its product cards show discounts ranging from 4% to 20%, while comparison and promotional copy repeatedly states flat 50% launch discounts. None should be treated as an enduring brand rule.",
+    "Communication mismatch: W09-I003 does not show the listed hydraulic storage, W11-I001 conceals the leg-massager configuration, and W12-I007 does not reveal the advertised adjustable combination. The images may serve ambience or recognition, but they do not independently explain those functions.",
+    "Client-policy conflict to avoid reproducing: W08-I005 has broad fade-like lower-edge darkening. Whatever its production origin, this observed treatment is not permission to add contrast fades to future scene photographs."
+  ],
+  "gaps": [
+    "No full-page screenshots, responsive states or surrounding navigation are supplied; asset graphics cannot establish complete website typography, logo hierarchy or user-interface behaviour.",
+    "No verified SKU references, engineering drawings or measured layouts establish exact dimensions, materials, recline clearance, storage operation or combination compatibility.",
+    "The stills do not substantiate medical outcomes, cooling, pressure relief, firmness adjustment or motor behaviour. Supplied positioning is strategy, not exact-product efficacy evidence.",
+    "No source-production records establish photographic, rendered or synthetic origins, or distinguish captured lighting from post-production.",
+    "The sample lacks occupied recliner, massager and adjustable-bed demonstrations and does not establish complete coverage of the draft’s four proposed shot classes.",
+    "This is a dated representative website sample, not a complete media audit. Videos were not reviewed, and supplied draft excerpts or derived research do not constitute adoption or quality approval."
+  ]
+}

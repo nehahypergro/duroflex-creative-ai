@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "key": "609bc433e08d7b5f04fc1674a05908effa478ed58d467e193eb7f995dbd28470",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "productId": "product-c50d1614592ab87f4bb9",
+  "variantId": "51130792411268",
+  "photoHashes": [
+    "a6fc5df2356531f6534dcad287e9e23dcbddefd606cd600229090b217e5438c0",
+    "e467eaba73696e11ba4e22cefb2d9786e256bcb0359fae0b90c20b187cbd505b",
+    "682619b055095245464825d5b439db97700176b2527b334d4717e36362b8e29c"
+  ],
+  "features": [
+    {
+      "feature": "Elongated rectangular pillow with rounded corners and a contoured profile: raised long sides around a lower central area.",
+      "where": "Overall pillow shape"
+    },
+    {
+      "feature": "Light gray cover with a dense, repeating raised hexagonal honeycomb texture.",
+      "where": "Covered pillow top and sides"
+    },
+    {
+      "feature": "Cover has visible stitched seams tracing the perimeter and contour.",
+      "where": "Around the pillow edges"
+    },
+    {
+      "feature": "In the uncovered view, the foam is turquoise-blue with orderly rows of small dark perforations.",
+      "where": "Exposed pillow top"
+    },
+    {
+      "feature": "The exposed foam has a solid turquoise-blue side wall without the top perforation pattern.",
+      "where": "Exposed pillow sides"
+    }
+  ],
+  "labelWords": "",
+  "jobId": "creative-3b45a0ef-804c-4514-80e1-dc00f46ed245",
+  "createdAt": "2026-11-10T14:10:08.543Z"
+}

@@ -1,0 +1,198 @@
+{
+  "id": 10194973360312,
+  "title": "Sofa Bubbles - 2 Seater Sofa (Fabric, Canyon Rose)",
+  "handle": "sofa-bubbles-2-seater-sofa-fabric-canyon-rose",
+  "description": "<p>Meet the Bubbles Sofa: the unofficial meeting spot of your home.\n<br>It’s where chai turns into long conversations, quick sits turn into hour-long catch-ups, and “just five minutes” never really means five minutes.</p>\n\n<p>Made for compact homes, shared apartments, and first homes, Bubbles fits right in without trying too hard. The luxury-touch polyester fabric feels soft and inviting, while the 6” ultra-plush foam gives you that sink-in comfort that makes standing up feel optional.</p>\n\n<p>The sloped wooden legs keep things light, airy, and easy to clean underneath, because comfort shouldn’t come with extra chores. It comes with a 3-year warranty so you can relax knowing Bubbles is built for everyday life, not just good looks.</p>\n\n<p>Bubbles has a way of turning short breaks into long hangs. And honestly? That's kind of the point. It’s where plans are made, gossip is shared, and “last episode” turns into three more. Don’t be surprised if your gang forgets they were ever planning to leave!</p>",
+  "published_at": "2026-01-19T21:12:35+05:30",
+  "created_at": "2026-01-19T21:12:34+05:30",
+  "vendor": "Sleepyhead",
+  "type": "Sofa",
+  "tags": [
+    "bangalore_specific",
+    "DEALS5",
+    "FEST5",
+    "FESTGRAND",
+    "OLDMONEY5",
+    "PAYDAY5",
+    "SALE5",
+    "Sofas",
+    "Summer"
+  ],
+  "price": 2564900,
+  "price_min": 2564900,
+  "price_max": 2564900,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 3225000,
+  "compare_at_price_min": 3225000,
+  "compare_at_price_max": 3225000,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 52485277941944,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "SHBU2SSRS",
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": null,
+      "available": true,
+      "name": "Sofa Bubbles - 2 Seater Sofa (Fabric, Canyon Rose)",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 2564900,
+      "weight": 0,
+      "compare_at_price": 3225000,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_7.jpg?v=1768928708",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_4.jpg?v=1768928701",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_2.jpg?v=1768928708",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_3.jpg?v=1768928712",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_6.jpg?v=1768928707",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_1.jpg?v=1768928708",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_5.jpg?v=1768928708"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_7.jpg?v=1768928708",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/sofa-bubbles-2-seater-sofa-fabric-canyon-rose",
+  "media": [
+    {
+      "alt": "Sofa|Bubbles|2|Seater|Sofa|Fabric|Canyon|Rose",
+      "id": 59108433526968,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_7.jpg?v=1768928708"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_7.jpg?v=1768928708",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Bubbles|2|Seater|Sofa|Fabric|Canyon|Rose",
+      "id": 59108431986872,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_4.jpg?v=1768928701"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_4.jpg?v=1768928701",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Bubbles|2|Seater|Sofa|Fabric|Canyon|Rose",
+      "id": 59108433658040,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_2.jpg?v=1768928708"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_2.jpg?v=1768928708",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Bubbles|2|Seater|Sofa|Fabric|Canyon|Rose",
+      "id": 59108434346168,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_3.jpg?v=1768928712"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_3.jpg?v=1768928712",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Bubbles|2|Seater|Sofa|Fabric|Canyon|Rose",
+      "id": 59108433428664,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_6.jpg?v=1768928707"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_6.jpg?v=1768928707",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Bubbles|2|Seater|Sofa|Fabric|Canyon|Rose",
+      "id": 59108433592504,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_1.jpg?v=1768928708"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_1.jpg?v=1768928708",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Bubbles|2|Seater|Sofa|Fabric|Canyon|Rose",
+      "id": 59108433625272,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_5.jpg?v=1768928708"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Bubble_2S_Canyon_Rose_5.jpg?v=1768928708",
+      "width": 2000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

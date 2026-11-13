@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-3fc1c596-b53c-471a-8b63-cdc3a68218ac",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-a4233935814625207a1b",
+  "productName": "Sofa Drip - 3 Seater Sofa (Fabric, Pine Green)",
+  "pageUrl": "https://mysleepyhead.com/products/sofa-drip-3-seater-sofa-fabric-pine-green",
+  "productSnapshot": "snapshot-1792577064510-915bea",
+  "variant": {
+    "id": "54078617223352",
+    "sku": "SHDP3SGREEN",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-914f31181e101187",
+    "snapshot": "snapshot-1792577064510-915bea",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/Drip_PDP_3S_Green_1.jpg?v=1789113301",
+    "sha256": "2abfa5a66181cc9fc9a38fc763eca0af66e6e2e9c523c19b180b83212d06f988",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 1200,
+    "height": 1200,
+    "rasterHash": "abb196b6876d4efe4784c40df7a9c439707e47fab8a85a79d023c3094d3d158e",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-21T11:16:49.189Z"
+  },
+  "createdAt": "2026-10-21T11:16:49.189Z",
+  "profileHash": "ad2c6b032dc539385f29692b5f37a588c9d65e28ad9961d9f6e45699d4319c6d"
+}

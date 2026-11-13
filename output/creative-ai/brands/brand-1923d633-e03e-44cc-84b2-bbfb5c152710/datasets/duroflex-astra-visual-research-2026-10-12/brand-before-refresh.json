@@ -1,0 +1,2706 @@
+{
+  "version": 1,
+  "id": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "name": "Duroflex",
+  "brandUrl": "https://www.duroflexworld.com/",
+  "createdAt": "2026-10-11T19:16:36.799Z",
+  "updatedAt": "2026-10-11T20:42:07.518Z",
+  "documents": [
+    {
+      "id": "doc-3d51ae63-ac10-47e4-8deb-da27fd857244",
+      "name": "3. Final Duroflex refreshed brand positioning_20.05.2025 - Copy.pptx",
+      "format": "pptx",
+      "kind": "positioning",
+      "category": "positioning",
+      "draft": false,
+      "sha256": "8586f4e20076cf43b8bdf3796f06e59d8db20c9723bbe5219d9697ca752ce6f6",
+      "bytes": 9269971,
+      "slideCount": 115,
+      "uploadedAt": "2026-10-11T19:16:48.527Z",
+      "coverage": "All 115 slides and available notes indexed from OOXML, including hidden slides; 106 visible slides rendered as actual page references via LibreOffice and Poppler. Hidden slides have text only. Rendering may substitute fonts or alter layout; visual availability does not mean every page was model-inspected.",
+      "visuals": [
+        {
+          "slide": 1,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 1 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 2,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 2 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 3,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 3 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 4,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 4 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 5,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 5 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 6,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 6 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 7,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 7 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 8,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 8 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 9,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 9 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 10,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 10 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 11,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 11 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 12,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 12 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 13,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 13 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 14,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 14 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 15,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 15 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 16,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 16 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 17,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 17 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 18,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 18 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 19,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 19 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 20,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 20 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 21,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 21 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 22,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 22 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 23,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 23 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 24,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 24 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 25,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 25 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 26,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 26 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 27,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 27 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 28,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 28 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 29,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 29 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 30,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 30 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 31,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 31 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 32,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 32 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 33,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 33 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 34,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 34 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 35,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 35 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 36,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 36 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 37,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 37 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 38,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 38 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 39,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 39 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 40,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 40 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 41,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 41 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 42,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 42 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 43,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 43 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 53,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 44 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 54,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 45 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 55,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 46 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 56,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 47 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 57,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 48 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 58,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 49 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 59,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 50 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 60,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 51 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 61,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 52 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 62,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 53 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 63,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 54 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 64,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 55 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 65,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 56 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 66,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 57 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 67,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 58 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 68,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 59 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 69,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 60 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 70,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 61 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 71,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 62 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 72,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 63 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 73,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 64 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 74,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 65 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 75,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 66 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 76,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 67 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 77,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 68 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 78,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 69 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 79,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 70 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 80,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 71 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 81,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 72 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 82,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 73 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 83,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 74 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 84,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 75 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 85,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 76 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 86,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 77 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 87,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 78 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 88,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 79 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 89,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 80 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 90,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 81 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 91,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 82 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 92,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 83 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 93,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 84 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 94,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 85 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 95,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 86 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 96,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 87 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 97,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 88 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 98,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 89 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 99,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 90 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 100,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 91 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 101,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 92 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 102,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 93 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 103,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 94 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 104,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 95 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 105,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 96 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 106,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 97 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 107,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 98 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 108,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 99 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 109,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 100 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 110,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 101 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 111,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 102 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 112,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 103 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 113,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 104 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 114,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 105 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 115,
+          "width": 1600,
+          "height": 901,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 106 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        }
+      ],
+      "note": "Supplied Strategic Blueprint dated 20 May 2025. Positioning and proposed architecture are not current exact-SKU efficacy proof. 9 hidden slides retained as text only."
+    },
+    {
+      "id": "doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8",
+      "name": "6. Duroflex_Visual_World_Guide_Book_Architecture_125pp.pptx",
+      "format": "pptx",
+      "kind": "visual",
+      "category": "visual-guidelines",
+      "draft": true,
+      "sha256": "b65e6334a9cf7d427a09eede6091bbf6161614da7e2562cf0d97cd32c3e8a135",
+      "bytes": 407240392,
+      "slideCount": 151,
+      "uploadedAt": "2026-10-11T19:17:00.373Z",
+      "coverage": "All 151 slides and available notes indexed from OOXML, including hidden slides; 151 visible slides rendered as actual page references via LibreOffice and Poppler. Hidden slides have text only. Rendering may substitute fonts or alter layout; visual availability does not mean every page was model-inspected.",
+      "visuals": [
+        {
+          "slide": 1,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 1 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 2,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 2 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 3,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 3 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 4,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 4 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 5,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 5 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 6,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 6 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 7,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 7 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 8,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 8 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 9,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 9 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 10,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 10 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 11,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 11 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 12,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 12 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 13,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 13 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 14,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 14 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 15,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 15 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 16,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 16 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 17,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 17 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 18,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 18 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 19,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 19 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 20,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 20 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 21,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 21 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 22,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 22 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 23,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 23 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 24,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 24 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 25,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 25 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 26,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 26 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 27,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 27 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 28,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 28 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 29,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 29 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 30,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 30 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 31,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 31 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 32,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 32 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 33,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 33 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 34,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 34 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 35,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 35 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 36,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 36 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 37,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 37 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 38,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 38 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 39,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 39 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 40,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 40 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 41,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 41 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 42,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 42 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 43,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 43 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 44,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 44 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 45,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 45 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 46,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 46 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 47,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 47 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 48,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 48 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 49,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 49 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 50,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 50 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 51,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 51 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 52,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 52 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 53,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 53 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 54,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 54 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 55,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 55 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 56,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 56 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 57,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 57 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 58,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 58 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 59,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 59 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 60,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 60 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 61,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 61 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 62,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 62 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 63,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 63 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 64,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 64 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 65,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 65 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 66,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 66 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 67,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 67 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 68,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 68 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 69,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 69 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 70,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 70 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 71,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 71 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 72,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 72 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 73,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 73 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 74,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 74 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 75,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 75 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 76,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 76 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 77,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 77 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 78,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 78 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 79,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 79 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 80,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 80 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 81,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 81 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 82,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 82 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 83,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 83 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 84,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 84 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 85,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 85 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 86,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 86 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 87,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 87 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 88,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 88 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 89,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 89 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 90,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 90 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 91,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 91 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 92,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 92 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 93,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 93 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 94,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 94 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 95,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 95 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 96,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 96 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 97,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 97 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 98,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 98 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 99,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 99 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 100,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 100 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 101,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 101 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 102,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 102 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 103,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 103 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 104,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 104 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 105,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 105 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 106,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 106 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 107,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 107 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 108,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 108 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 109,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 109 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 110,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 110 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 111,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 111 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 112,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 112 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 113,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 113 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 114,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 114 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 115,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 115 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 116,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 116 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 117,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 117 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 118,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 118 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 119,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 119 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 120,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 120 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 121,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 121 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 122,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 122 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 123,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 123 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 124,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 124 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 125,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 125 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 126,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 126 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 127,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 127 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 128,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 128 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 129,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 129 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 130,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 130 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 131,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 131 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 132,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 132 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 133,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 133 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 134,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 134 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 135,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 135 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 136,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 136 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 137,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 137 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 138,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 138 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 139,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 139 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 140,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 140 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 141,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 141 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 142,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 142 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 143,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 143 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 144,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 144 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 145,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 145 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 146,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 146 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 147,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 147 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 148,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 148 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 149,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 149 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 150,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 150 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        },
+        {
+          "slide": 151,
+          "width": 1600,
+          "height": 900,
+          "method": "Actual PPTX rendered via local LibreOffice PDF page 151 then Poppler. Hidden slides excluded from PDF, retained in XML text. Conversion may substitute fonts or alter layout; not pixel fidelity proof."
+        }
+      ],
+      "note": "The supplied cover explicitly labels this draft structure/art-direction blueprint. Keep draft authority. Assistant visually checked rendered slides 1, 18, 36, 46, 125 and 148; other rendered slides are available references, not individually inspected."
+    },
+    {
+      "id": "doc-b6a286fa-7d7f-4138-80bf-69a0e01b53a3",
+      "name": "Duroflex interior reference analysis.txt",
+      "format": "txt",
+      "kind": "reference",
+      "category": "other",
+      "note": "Assistant visual analysis of the Duroflex-only Archive.zip, with per-image source hashes and asset IDs. Advisory interior interpretation; not approved brand guidelines, product proof or completed runtime research.",
+      "draft": false,
+      "sha256": "24a67dbe16bbe799b7699e697ab1bc05ee603a7361488e8474ddf53b4ee2e0cd",
+      "bytes": 32257,
+      "slideCount": 3,
+      "uploadedAt": "2026-10-11T19:22:12.946Z",
+      "coverage": "All UTF-8 text indexed. CSV is retained as text; cells and formulas are not executed.",
+      "visuals": []
+    }
+  ],
+  "researchIds": [
+    "creative-0cf699fc-2937-404b-b6f0-700bb9ad7793",
+    "creative-0ce0a865-e5e6-4f42-888d-9301da791f64",
+    "creative-48e55026-3ef1-45cd-af77-a54aa4f86f14"
+  ],
+  "latestResearchId": "creative-48e55026-3ef1-45cd-af77-a54aa4f86f14",
+  "profile": {
+    "status": "Duroflex brand world · draft visual guidance",
+    "basis": "Supplied Strategic Blueprint, draft Visual World Guide and 58 unique interior references with source-linked assistant observations. Current website/model research status is shown in the Research tab.",
+    "configuredAt": "2026-10-11T19:24:06.983Z",
+    "sections": [
+      {
+        "title": "Positioning",
+        "summary": "Restoration, pause, reset and recovery; warm, dependable and clear without overpromising. Strategic Blueprint slides 56–57; positioning does not establish exact-product benefits."
+      },
+      {
+        "title": "Draft visual world",
+        "summary": "Warm Indian modernism, tactile natural-looking materials, calm daylight, edited styling and restrained brand-red identification. The supplied visual guide remains draft guidance."
+      },
+      {
+        "title": "Interior inspiration",
+        "summary": "58 unique images, all visually reviewed at contact-sheet scale. Warm timber and neutral tactile rooms with coastal, craft, Japanese-influenced, softly upholstered and darker architectural variations. Each image has its own observation and source hash."
+      },
+      {
+        "title": "Reference application",
+        "summary": "Choose a coherent room that complements the exact Duroflex SKU. Borrow light, surfaces and selected objects; preserve actual product colour, fabric, construction and branding. Interior references are advisory and cannot prove product claims."
+      },
+      {
+        "title": "Coverage",
+        "summary": "257 visible deck slide previews are available; 9 hidden positioning slides retain text only. Runtime research uses bounded text and representative images, so it cannot claim every source image was model-inspected."
+      }
+    ],
+    "sourcePrecedence": [
+      "Explicit user brief and named Duroflex scope govern the current assignment.",
+      "Supplied positioning provides strategy. The Visual World Guide explicitly remains draft direction.",
+      "Archive.zip images and assistant analysis are advisory interior inspiration, not mandatory brand rules or approved product imagery.",
+      "Current exact-SKU official sources establish product identity and available facts; positioning or reference furniture cannot substantiate efficacy claims.",
+      "Keep source gaps and draft status visible; do not borrow Sleepyhead guidance."
+    ],
+    "visualReferenceSlides": {
+      "doc-3d51ae63-ac10-47e4-8deb-da27fd857244": [
+        56,
+        57,
+        86
+      ],
+      "doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8": [
+        18,
+        36,
+        70,
+        125,
+        128,
+        148
+      ]
+    }
+  },
+  "defaults": {
+    "language": "English",
+    "region": "India",
+    "objective": "consideration",
+    "placementIds": []
+  },
+  "assets": [
+    {
+      "id": "asset-c359ad93-b65d-41d9-9c07-400e170eedd0",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_44.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R20 | Interior inspiration: Urban warm contemporary. Soft sage wall, rounded upholstered bed, vertical relief, ceiling fan and compact wall-mounted desk; small orange graphic art. Borrow climate-aware domestic cues and restrained colour. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "300b3715cb75133d7e427e6b232c9a6fda19fd5408ff80527a6863109b2544a8",
+      "bytes": 176025,
+      "originalPath": "assets/sample-creatives/asset-c359ad93-b65d-41d9-9c07-400e170eedd0.jpg",
+      "previewPath": "assets/sample-creatives/asset-c359ad93-b65d-41d9-9c07-400e170eedd0-preview.png",
+      "width": 1440,
+      "height": 1253,
+      "uploadedAt": "2026-10-11T19:22:11.573Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-61431423-84d7-4a18-a0f3-2e22d2b68620",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_58.png",
+      "format": "png",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R36 | Interior inspiration: Japanese-influenced tactile. Low timber platform, warm timber ceiling, framed botanical artwork, bare branches, globe pendant and round floor cushion. Borrow sparse asymmetry and soft directional daylight. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "df6158ab217f5d1d235a91871735631dce894cbb38dfbdb81fad65eaaf8df37a",
+      "bytes": 864220,
+      "originalPath": "assets/sample-creatives/asset-61431423-84d7-4a18-a0f3-2e22d2b68620.png",
+      "previewPath": "assets/sample-creatives/asset-61431423-84d7-4a18-a0f3-2e22d2b68620-preview.png",
+      "width": 1024,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.201Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-84ed1274-bfca-4d83-a89d-dabab185a182",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_32.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R34 | Interior inspiration: Soft pastel contemporary. Sage and blush walls, pale wood, restrained abstract artwork, small pouffe and bedside pendant. Borrow a muted complementary colour pair, chosen to suit the exact product. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "fcd194390c50416cc8c2914b4a8ff7aa2e306616243ef8e3e716cdcab3942ea0",
+      "bytes": 84469,
+      "originalPath": "assets/sample-creatives/asset-84ed1274-bfca-4d83-a89d-dabab185a182.jpg",
+      "previewPath": "assets/sample-creatives/asset-84ed1274-bfca-4d83-a89d-dabab185a182-preview.png",
+      "width": 1024,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.153Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-3dad5c4e-052a-4251-9540-95cdaccd11a4",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_14.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R01 | Interior inspiration: Mediterranean tactile. Plaster arch and exposed brick niche; timber beams; white bedding and taupe throw; small bedside vessels; warm side daylight. Borrow architectural depth and restrained texture, not a mandatory rustic theme. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "6719121128102a3bcaebc8b45c0edcb945bf59fae96a2ddd990f226384203b43",
+      "bytes": 263163,
+      "originalPath": "assets/sample-creatives/asset-3dad5c4e-052a-4251-9540-95cdaccd11a4.jpg",
+      "previewPath": "assets/sample-creatives/asset-3dad5c4e-052a-4251-9540-95cdaccd11a4-preview.png",
+      "width": 1076,
+      "height": 1290,
+      "uploadedAt": "2026-10-11T19:22:10.867Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-b21867c1-bce3-4218-a032-4da7208fc39e",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_36.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R26 | Interior inspiration: Tropical indoor-outdoor. Full-height glazing, open garden/water-edge outlook, low pale platform, sheers and woven rug. Borrow greenery continuity and filtered daylight; luxury resort scenery is optional. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "52cca699422fbe5fcef0e8b827f375fa076b7df5954388706b11471a85ad73ea",
+      "bytes": 72630,
+      "originalPath": "assets/sample-creatives/asset-b21867c1-bce3-4218-a032-4da7208fc39e.jpg",
+      "previewPath": "assets/sample-creatives/asset-b21867c1-bce3-4218-a032-4da7208fc39e-preview.png",
+      "width": 735,
+      "height": 553,
+      "uploadedAt": "2026-10-11T19:22:11.791Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-e5d943d8-784b-4e4e-bd33-234af6e2d7f9",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_59.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R43 | Interior inspiration: Warm wood contemporary. Dark timber wall, round mirror, low upholstered bed, woven rug and small warm bedside lamps. Borrow wood depth while retaining fabric detail and natural exposure. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "a6435fbee930a168b6035d3dee33666b2e3a4c8d2d40faf681ab179bcd8e5ea2",
+      "bytes": 99098,
+      "originalPath": "assets/sample-creatives/asset-e5d943d8-784b-4e4e-bd33-234af6e2d7f9.jpg",
+      "previewPath": "assets/sample-creatives/asset-e5d943d8-784b-4e4e-bd33-234af6e2d7f9-preview.png",
+      "width": 667,
+      "height": 1000,
+      "uploadedAt": "2026-10-11T19:22:12.486Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-723c987c-42e5-43e8-8520-94bcd33c196a",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_18_19.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R58 | Interior inspiration: Mid-century garden. Sloped timber ceiling, slim wood furniture, warm rust bedding, framed picture and bright garden opening. Borrow domestic wood warmth and one earth-colour accent. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "e51bda4487d57e46db43414256915abcb846b34eee5c59d0abfe9f5f107493de",
+      "bytes": 116427,
+      "originalPath": "assets/sample-creatives/asset-723c987c-42e5-43e8-8520-94bcd33c196a.jpg",
+      "previewPath": "assets/sample-creatives/asset-723c987c-42e5-43e8-8520-94bcd33c196a-preview.png",
+      "width": 731,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.902Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-d24b77be-6eff-4dcf-b3ed-65815b681836",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_21.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R02 | Interior inspiration: Light timber minimal. Pale beams, low upholstered bed, full-height openings and sheer curtains; cream, sand and warm timber; long natural window shadows. Borrow breathable spacing and quiet wall area. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "95ccc089da3052da06972620a92aec46ba9b180ceb50e257bb13d1da86aa2d51",
+      "bytes": 166993,
+      "originalPath": "assets/sample-creatives/asset-d24b77be-6eff-4dcf-b3ed-65815b681836.jpg",
+      "previewPath": "assets/sample-creatives/asset-d24b77be-6eff-4dcf-b3ed-65815b681836-preview.png",
+      "width": 1200,
+      "height": 992,
+      "uploadedAt": "2026-10-11T19:22:10.905Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-7d48bc2d-fd30-4a90-8bef-1c4120cf5026",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_32.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R03 | Interior inspiration: Mediterranean collected. Arched window and alcoves; wood bedside cabinets; woven hanging, ceramics, olive-like greenery and sage bedding. Borrow an edited lived-in mix; reduce decorative density around the product. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "45d580da4e491686399841695c2ee07370c52ebefc5ffd3aa8e1924d0b4940e6",
+      "bytes": 118203,
+      "originalPath": "assets/sample-creatives/asset-7d48bc2d-fd30-4a90-8bef-1c4120cf5026.jpg",
+      "previewPath": "assets/sample-creatives/asset-7d48bc2d-fd30-4a90-8bef-1c4120cf5026-preview.png",
+      "width": 1200,
+      "height": 670,
+      "uploadedAt": "2026-10-11T19:22:10.933Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-06f5ece4-5f80-436b-af5d-75ad4a4f103d",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_38.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R04 | Interior inspiration: Coastal Mediterranean. White curved opening frames blue sea; blue textile accent, timber bench and patterned floor. Borrow indoor-outdoor light and a small blue accent; sea view is optional, not brand geography. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "6f47a62272f1bc76c227c480625c54b4cfb31af7d45799776180a3eb271c175b",
+      "bytes": 94461,
+      "originalPath": "assets/sample-creatives/asset-06f5ece4-5f80-436b-af5d-75ad4a4f103d.jpg",
+      "previewPath": "assets/sample-creatives/asset-06f5ece4-5f80-436b-af5d-75ad4a4f103d-preview.png",
+      "width": 735,
+      "height": 1318,
+      "uploadedAt": "2026-10-11T19:22:10.960Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-09e07ad8-e21f-4eef-8161-5e8787ffb8bb",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_42.webp",
+      "format": "webp",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R05 | Interior inspiration: Mediterranean collected. Arched dark-framed window, timber ceiling, terracotta-like floor, patterned rug, cane chair and muted orange cushion. Borrow one craft accent; pattern can compete with product identity. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "50de0025e748f497be2a56c0ba72f81dcb9a5cd8484cccbb4a60edc624edd1f1",
+      "bytes": 160146,
+      "originalPath": "assets/sample-creatives/asset-09e07ad8-e21f-4eef-8161-5e8787ffb8bb.webp",
+      "previewPath": "assets/sample-creatives/asset-09e07ad8-e21f-4eef-8161-5e8787ffb8bb-preview.png",
+      "width": 896,
+      "height": 1344,
+      "uploadedAt": "2026-10-11T19:22:11.004Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-c6cd31b0-d30a-4d2a-8b87-8ffe1da7a8a2",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_53.png",
+      "format": "png",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R06 | Interior inspiration: Light timber minimal. Pitched pale timber ceiling, creamy wall, white bedding, woven rug and full curtains; quiet side-window daylight. Borrow tactile calm and low prop density. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "bc602c1d59485a7a1b2b28130f12567dce67583dc44aaa2b994a16717100216e",
+      "bytes": 1779344,
+      "originalPath": "assets/sample-creatives/asset-c6cd31b0-d30a-4d2a-8b87-8ffe1da7a8a2.png",
+      "previewPath": "assets/sample-creatives/asset-c6cd31b0-d30a-4d2a-8b87-8ffe1da7a8a2-preview.png",
+      "width": 896,
+      "height": 1344,
+      "uploadedAt": "2026-10-11T19:22:11.053Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-f72d3bed-a1ed-446f-82dd-c78cbcd338e1",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_57.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R07 | Interior inspiration: Modern coastal. Broad glass corner overlooking water; low pale bed, dark bedside furniture and pale wood floor. Borrow openness and horizon light; avoid letting a spectacular view make the SKU secondary. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "97dfac962590b80d07f0d52f104e62c1466cb441ae6740dd869d80a93a32e430",
+      "bytes": 249369,
+      "originalPath": "assets/sample-creatives/asset-f72d3bed-a1ed-446f-82dd-c78cbcd338e1.jpg",
+      "previewPath": "assets/sample-creatives/asset-f72d3bed-a1ed-446f-82dd-c78cbcd338e1-preview.png",
+      "width": 2000,
+      "height": 1333,
+      "uploadedAt": "2026-10-11T19:22:11.109Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-e34af7d3-829d-47b3-ad53-8f2377eefed7",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_02.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R08 | Interior inspiration: Soft coastal. Powder-blue wall, striped blue linen-like runner, distressed-looking bedside table, sheer curtains and coarse woven rug. Borrow restrained cool accents and diffused daylight, not automatic beach styling. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "4e9f103005b3ef6ac4b0387fadadd10f9db4f303f9f230b0ad5b43bbcb07c385",
+      "bytes": 74238,
+      "originalPath": "assets/sample-creatives/asset-e34af7d3-829d-47b3-ad53-8f2377eefed7.jpg",
+      "previewPath": "assets/sample-creatives/asset-e34af7d3-829d-47b3-ad53-8f2377eefed7-preview.png",
+      "width": 1024,
+      "height": 768,
+      "uploadedAt": "2026-10-11T19:22:11.130Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-7fd4580c-a2d9-4a85-9a56-761769747e59",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_14.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R09 | Interior inspiration: Soft coastal. Blue-white pillows and throw, upholstered headboard, wicker-like bench storage, pale artwork and small bedside lamps. Borrow layered textiles; edit the multiple patterns. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "e0fb2c82d0a6e71c0dce77788411e4f403d9539da77d43a89ac483661fea8018",
+      "bytes": 150289,
+      "originalPath": "assets/sample-creatives/asset-7fd4580c-a2d9-4a85-9a56-761769747e59.jpg",
+      "previewPath": "assets/sample-creatives/asset-7fd4580c-a2d9-4a85-9a56-761769747e59-preview.png",
+      "width": 1024,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:11.160Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-7a7ff4ff-3c3c-4280-b941-12d722cc8daf",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_20.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R10 | Interior inspiration: Warm coastal natural. Timber beams, woven pendant and rug, bench, cream bedding and glazing toward the sea. Borrow natural texture and indoor-outdoor connection. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "b336ed7012aeabd8b52cc3c67c50357b741fe4f41eb8231f3d834525a84bfa7e",
+      "bytes": 176496,
+      "originalPath": "assets/sample-creatives/asset-7a7ff4ff-3c3c-4280-b941-12d722cc8daf.jpg",
+      "previewPath": "assets/sample-creatives/asset-7a7ff4ff-3c3c-4280-b941-12d722cc8daf-preview.png",
+      "width": 960,
+      "height": 1440,
+      "uploadedAt": "2026-10-11T19:22:11.201Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-1d65a5ed-a132-4005-b1f9-b3c6a3438d12",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_24.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R11 | Interior inspiration: Warm coastal natural. Curved cane-like headboard, washed cream bedding, woven floor rug and warm lamp; bright water-facing windows. Borrow curved craft detail and soft fabric volume. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "376ef2d102b664a982c4b3b43299ac19ff7857df3b603ee149e870e00fe0cd3f",
+      "bytes": 126251,
+      "originalPath": "assets/sample-creatives/asset-1d65a5ed-a132-4005-b1f9-b3c6a3438d12.jpg",
+      "previewPath": "assets/sample-creatives/asset-1d65a5ed-a132-4005-b1f9-b3c6a3438d12-preview.png",
+      "width": 1184,
+      "height": 864,
+      "uploadedAt": "2026-10-11T19:22:11.231Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-9de854c5-1f1a-4ced-8497-a291b1f94d81",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_51.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R12 | Interior inspiration: Country collected. Exposed beams, traditional wood furniture, patterned rug and floral/striped pink-sage bedding. Borrow warmth selectively; this is a busier heritage exception, not the default room. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "0acbe6e9ce79581166961f34ab6aebccb8837f334d783e39aacc5b35d3a910cb",
+      "bytes": 222503,
+      "originalPath": "assets/sample-creatives/asset-9de854c5-1f1a-4ced-8497-a291b1f94d81.jpg",
+      "previewPath": "assets/sample-creatives/asset-9de854c5-1f1a-4ced-8497-a291b1f94d81-preview.png",
+      "width": 1024,
+      "height": 1536,
+      "uploadedAt": "2026-10-11T19:22:11.277Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-86e21b8b-ce4b-459a-9d80-a27b1f6540fe",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_56.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R13 | Interior inspiration: Contemporary warm neutral. Pale wall panels, upholstered bed, wood bench, faded patterned rug and slim framed artwork. Borrow domestic proportions and layered neutrals. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "1f2724784c314d85e0d0765fe99f99f2e1e5b6e168708c74b7738190cfd12c1c",
+      "bytes": 675048,
+      "originalPath": "assets/sample-creatives/asset-86e21b8b-ce4b-459a-9d80-a27b1f6540fe.jpg",
+      "previewPath": "assets/sample-creatives/asset-86e21b8b-ce4b-459a-9d80-a27b1f6540fe-preview.png",
+      "width": 3024,
+      "height": 4536,
+      "uploadedAt": "2026-10-11T19:22:11.336Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-c94362f3-f604-4c91-9703-b871444d1662",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_01.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R14 | Interior inspiration: Lodge retreat. High timber pitch, tall gridded windows, stone fireplace wall, lounge seating and heavy textured bedding. Borrow enveloping materials; fireplace and alpine cues are optional, not Indian climate defaults. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "7853de988a5d525625935dfca9b064610e07fe2792738d2b99eefe7b35036e24",
+      "bytes": 84426,
+      "originalPath": "assets/sample-creatives/asset-c94362f3-f604-4c91-9703-b871444d1662.jpg",
+      "previewPath": "assets/sample-creatives/asset-c94362f3-f604-4c91-9703-b871444d1662-preview.png",
+      "width": 1000,
+      "height": 750,
+      "uploadedAt": "2026-10-11T19:22:11.360Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-8656eec4-1548-443c-a23d-d6d855891722",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_05.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R15 | Interior inspiration: Light timber minimal. White pitched room, exposed beams, woven pendant, timber bench and muted sage accents. Borrow airy daylight and a single natural-fibre focal object. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "c55dbf109f1156a7c57d0feb46053e9392049a8645a50a7f2a6bbda64155d4c8",
+      "bytes": 419342,
+      "originalPath": "assets/sample-creatives/asset-8656eec4-1548-443c-a23d-d6d855891722.jpg",
+      "previewPath": "assets/sample-creatives/asset-8656eec4-1548-443c-a23d-d6d855891722-preview.png",
+      "width": 1706,
+      "height": 2560,
+      "uploadedAt": "2026-10-11T19:22:11.406Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-00e0e7c3-af9c-472d-b2df-7c0801a5a811",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_15.png",
+      "format": "png",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R16 | Interior inspiration: Japanese-influenced tactile. Low platform bed, plaster-like walls, timber ceiling, grid window and indoor tree; ceramic bowls on a low table. Borrow low visual centre, asymmetry and strong natural light. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "8eadf9fd71f10462182b31e363875f30b7c31238f0680014fa65647a8104cdee",
+      "bytes": 1681223,
+      "originalPath": "assets/sample-creatives/asset-00e0e7c3-af9c-472d-b2df-7c0801a5a811.png",
+      "previewPath": "assets/sample-creatives/asset-00e0e7c3-af9c-472d-b2df-7c0801a5a811-preview.png",
+      "width": 896,
+      "height": 1344,
+      "uploadedAt": "2026-10-11T19:22:11.457Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-d1c483bd-aa8b-4c1a-9950-3b94e496f3a8",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_24.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R17 | Interior inspiration: Japanese-influenced tactile. Dark exposed timber frame, paper-screen-like partitions, low bedding, woven floor and basket. Borrow filtered light and spare styling; exact regional architecture is not required. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "e750cf59fa71cbc87e44eb85cd8c821a7b70593acd8f408a9664346894383920",
+      "bytes": 83384,
+      "originalPath": "assets/sample-creatives/asset-d1c483bd-aa8b-4c1a-9950-3b94e496f3a8.jpg",
+      "previewPath": "assets/sample-creatives/asset-d1c483bd-aa8b-4c1a-9950-3b94e496f3a8-preview.png",
+      "width": 768,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:11.480Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-5b99c5c8-e3cd-4047-a380-db478a280c7a",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_33.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R18 | Interior inspiration: Indian craft contemporary. Cane-like headboard and chair, carved screen, traditional rug and wine-toned cushions; warm filtered side light. Borrow one craft element within an edited contemporary room. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "3046aaf3f0c33266c64251330ab748ed3642b56ed995ba2d3e4907a841fab474",
+      "bytes": 132633,
+      "originalPath": "assets/sample-creatives/asset-5b99c5c8-e3cd-4047-a380-db478a280c7a.jpg",
+      "previewPath": "assets/sample-creatives/asset-5b99c5c8-e3cd-4047-a380-db478a280c7a-preview.png",
+      "width": 1137,
+      "height": 807,
+      "uploadedAt": "2026-10-11T19:22:11.507Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-fe6159df-4e14-4c97-bc47-14476e685bf5",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_40.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R19 | Interior inspiration: Urban warm contemporary. Full-height wood joinery, fluted wall, round mirror, curved rug, ceiling cove and muted brown bedding. Borrow tonal wood and rounded geometry; daylight should remain believable alongside fixtures. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "0d9c2c601d9634a779612c5b457a8e89e134085987dc69802cff740d93814331",
+      "bytes": 92006,
+      "originalPath": "assets/sample-creatives/asset-fe6159df-4e14-4c97-bc47-14476e685bf5.jpg",
+      "previewPath": "assets/sample-creatives/asset-fe6159df-4e14-4c97-bc47-14476e685bf5-preview.png",
+      "width": 980,
+      "height": 895,
+      "uploadedAt": "2026-10-11T19:22:11.530Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-084cb7c0-4daa-4072-a298-ac866b1433de",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_48.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R21 | Interior inspiration: Indian craft contemporary. Curved cane-like headboard, plaster-like wall, slim pendant and patterned tile floor; terracotta-toned bed base. Borrow one sculptural outline; do not copy the reference bed as a Duroflex SKU. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "91f82e4e83da7952b48a2914fa17b30328b80bbad315d13edfbb3a39babab793",
+      "bytes": 255720,
+      "originalPath": "assets/sample-creatives/asset-084cb7c0-4daa-4072-a298-ac866b1433de.jpg",
+      "previewPath": "assets/sample-creatives/asset-084cb7c0-4daa-4072-a298-ac866b1433de-preview.png",
+      "width": 1200,
+      "height": 1800,
+      "uploadedAt": "2026-10-11T19:22:11.632Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-d7767e31-5c50-4e35-9af4-3a83639e8af9",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_52.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R22 | Interior inspiration: Urban warm contemporary. Wood platform, vertically segmented headboard, tall window, taupe curtains and a compact chair. Borrow functional openness and fabric-wood balance. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "384835c1a0866a0b663db6e91897982c6c23541c8fa1f86b40562128cb6ac87e",
+      "bytes": 101769,
+      "originalPath": "assets/sample-creatives/asset-d7767e31-5c50-4e35-9af4-3a83639e8af9.jpg",
+      "previewPath": "assets/sample-creatives/asset-d7767e31-5c50-4e35-9af4-3a83639e8af9-preview.png",
+      "width": 700,
+      "height": 907,
+      "uploadedAt": "2026-10-11T19:22:11.656Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-c741c588-bc2a-4f27-9f73-e298069425d8",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_56.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R23 | Interior inspiration: Soft contemporary premium. Broad upholstered curved headboard, padded bench, tonal beige textiles, drapes and pale sculptural ceiling light. Borrow softness; reduce hotel-suite staging and matching-set excess. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "b21f0e450743b764aa914be85afba82c024826122bc1602ffb79a15f114d55f8",
+      "bytes": 807907,
+      "originalPath": "assets/sample-creatives/asset-c741c588-bc2a-4f27-9f73-e298069425d8.jpg",
+      "previewPath": "assets/sample-creatives/asset-c741c588-bc2a-4f27-9f73-e298069425d8-preview.png",
+      "width": 3500,
+      "height": 1969,
+      "uploadedAt": "2026-10-11T19:22:11.729Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-b436a39c-e2cb-4626-87c5-60338ac89047",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_00.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R24 | Interior inspiration: Light timber minimal. Simple wood bed and bedside units, pale stone-like floor, tall plain wall and slim pendants. Borrow ample genuine wall space and a clear product silhouette. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "dd6a0e9e071901b73ed2f3dc860f7ab04d56b04aacb225c61f8f583230b8a4ac",
+      "bytes": 26173,
+      "originalPath": "assets/sample-creatives/asset-b436a39c-e2cb-4626-87c5-60338ac89047.jpg",
+      "previewPath": "assets/sample-creatives/asset-b436a39c-e2cb-4626-87c5-60338ac89047-preview.png",
+      "width": 533,
+      "height": 533,
+      "uploadedAt": "2026-10-11T19:22:11.741Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-3c3b025e-74e9-4701-812b-7938649ea8ed",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_18.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R25 | Interior inspiration: Architectural warm minimal. Tall arched wall recess, dark ceiling, white curtains, patterned rug and paired dark lamps. Borrow architectural framing; reduce hard contrast if it dominates the product. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "d4258d95e210e0a43c25240bd6d620837699250a4bc5644ab685e222132692dd",
+      "bytes": 138618,
+      "originalPath": "assets/sample-creatives/asset-3c3b025e-74e9-4701-812b-7938649ea8ed.jpg",
+      "previewPath": "assets/sample-creatives/asset-3c3b025e-74e9-4701-812b-7938649ea8ed-preview.png",
+      "width": 1012,
+      "height": 1265,
+      "uploadedAt": "2026-10-11T19:22:11.773Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-abb14da5-d25f-4229-9865-6227a6b4be0e",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_41.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R27 | Interior inspiration: Mediterranean natural. Black arched window, recessed curved headboard wall, woven pendants, wood bed and light warm textiles. Borrow one arch and natural-fibre accent with realistic sunlight. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "cfd33058494961a19858c9badc63b70ce49d373accf0d071a2a0b82a387b7473",
+      "bytes": 67046,
+      "originalPath": "assets/sample-creatives/asset-abb14da5-d25f-4229-9865-6227a6b4be0e.jpg",
+      "previewPath": "assets/sample-creatives/asset-abb14da5-d25f-4229-9865-6227a6b4be0e-preview.png",
+      "width": 863,
+      "height": 575,
+      "uploadedAt": "2026-10-11T19:22:11.809Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-cd16fae9-cd13-44ed-95c7-74f01e177d93",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_48.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R28 | Interior inspiration: Tropical craft. High woven-looking pitched ceiling, timber beams, broad fan, low timber platform, botanical greenery and patterned rug. Borrow craft tactility; keep the environment contemporary and the product prominent. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "584d2c897b0dcf650d0f281622a9adcf91b1f3983294a4b8d2082758b922ab3a",
+      "bytes": 1871717,
+      "originalPath": "assets/sample-creatives/asset-cd16fae9-cd13-44ed-95c7-74f01e177d93.jpg",
+      "previewPath": "assets/sample-creatives/asset-cd16fae9-cd13-44ed-95c7-74f01e177d93-preview.png",
+      "width": 5110,
+      "height": 3650,
+      "uploadedAt": "2026-10-11T19:22:11.942Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-4aeceeee-994e-4355-b1ba-46ee7042e9a1",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_52.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R29 | Interior inspiration: Tropical craft. Timber/bamboo-like pitch, woven pendant and bedside trunk, cane seating and lush window greenery. Borrow filtered tropical daylight; reduce abundance of woven decorative objects. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "c940aad94e26979a4bd873b892e7e99e531ca451cfa6a1ea82ec0e95122b8b8a",
+      "bytes": 189991,
+      "originalPath": "assets/sample-creatives/asset-4aeceeee-994e-4355-b1ba-46ee7042e9a1.jpg",
+      "previewPath": "assets/sample-creatives/asset-4aeceeee-994e-4355-b1ba-46ee7042e9a1-preview.png",
+      "width": 800,
+      "height": 1200,
+      "uploadedAt": "2026-10-11T19:22:11.984Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-1624be2e-fea8-4cd4-af18-f2a18963c9c5",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_02.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R30 | Interior inspiration: Soft pastel contemporary. Pale blush upholstered bed, muted blue wall, round mirror, small round ottoman and cream rug. Borrow a restrained colour relationship and rounded softness. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "ce791a45ec76da8791245902acbd9928f95f333b9c6a27790a2a3dedae0d5607",
+      "bytes": 70648,
+      "originalPath": "assets/sample-creatives/asset-1624be2e-fea8-4cd4-af18-f2a18963c9c5.jpg",
+      "previewPath": "assets/sample-creatives/asset-1624be2e-fea8-4cd4-af18-f2a18963c9c5-preview.png",
+      "width": 800,
+      "height": 800,
+      "uploadedAt": "2026-10-11T19:22:12.005Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-68db6476-8292-44df-bad3-c22ce33d4328",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_08.png",
+      "format": "png",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R31 | Interior inspiration: Soft contemporary premium. Cream rounded bed, fine wall moulding, pale framed relief art, small pleated-looking ottoman and sheer curtains. Borrow gentle geometry; decorative trim is a variation, not a universal rule. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "f899bbd1fa7bad729ffc3d877fe24c47af7227a2ea080a8bba3a566e0c3e4739",
+      "bytes": 2907057,
+      "originalPath": "assets/sample-creatives/asset-68db6476-8292-44df-bad3-c22ce33d4328.png",
+      "previewPath": "assets/sample-creatives/asset-68db6476-8292-44df-bad3-c22ce33d4328-preview.png",
+      "width": 1024,
+      "height": 1820,
+      "uploadedAt": "2026-10-11T19:22:12.069Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-b4217baa-2fd6-4576-93fe-d591d7a246c4",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_12.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R32 | Interior inspiration: Soft contemporary premium. Grey-taupe upholstered bed and bench, panelled walls, large monochrome floral artwork and layered curtains. Borrow tonal depth; avoid generic hotel sameness and oversized art competing with SKU. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "61f312d3a1cba3f792f648284fe3302be6d29f236b9754099099232a863a63cb",
+      "bytes": 87091,
+      "originalPath": "assets/sample-creatives/asset-b4217baa-2fd6-4576-93fe-d591d7a246c4.jpg",
+      "previewPath": "assets/sample-creatives/asset-b4217baa-2fd6-4576-93fe-d591d7a246c4-preview.png",
+      "width": 736,
+      "height": 1104,
+      "uploadedAt": "2026-10-11T19:22:12.095Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-2dade492-4e73-454a-ab2a-cb88a3d5f915",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_25.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R33 | Interior inspiration: Soft sculptural neutral. Cloud-like curved upholstered bed, cream tactile rug, tall arched mirror, full sheers and diffuse golden light. Borrow softness and warm luminance; the sculptural bed is inspiration, not product evidence. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "712cac43ec9fd46fc063d92fe363a087e6ebf7024d8e86a2471daa8026ac9ee3",
+      "bytes": 112731,
+      "originalPath": "assets/sample-creatives/asset-2dade492-4e73-454a-ab2a-cb88a3d5f915.jpg",
+      "previewPath": "assets/sample-creatives/asset-2dade492-4e73-454a-ab2a-cb88a3d5f915-preview.png",
+      "width": 1024,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.128Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-5e923aa2-a391-4f88-bede-6665ae9133d8",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_52.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R35 | Interior inspiration: Warm contemporary premium. Textured beige wall, full-height glazing, small lounge group and taupe quilted bedding. Borrow material layering and quiet daylight; prevent hotel-room staging. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "c38dc428dee6abd4f820ef91bc8223a34397c111c4d00fdbc98eda85af8a323c",
+      "bytes": 36986,
+      "originalPath": "assets/sample-creatives/asset-5e923aa2-a391-4f88-bede-6665ae9133d8.jpg",
+      "previewPath": "assets/sample-creatives/asset-5e923aa2-a391-4f88-bede-6665ae9133d8-preview.png",
+      "width": 600,
+      "height": 455,
+      "uploadedAt": "2026-10-11T19:22:12.165Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-bb17d71f-e4d8-460a-9f23-035fc89d20fa",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_02.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R37 | Interior inspiration: Contemporary warm neutral. Taupe plaster-like wall, two quiet abstract prints, cream bed, relaxed sage throw, natural rug and plants. Borrow edited domestic styling and honest fabric folds. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "9694995889f10302266d886d95c96ccaad26be2683b2150e59e43fb0600c86f3",
+      "bytes": 115377,
+      "originalPath": "assets/sample-creatives/asset-bb17d71f-e4d8-460a-9f23-035fc89d20fa.jpg",
+      "previewPath": "assets/sample-creatives/asset-bb17d71f-e4d8-460a-9f23-035fc89d20fa-preview.png",
+      "width": 1024,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.236Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-6bb9cd49-71b0-4f26-9b4e-ee99196285b1",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_13.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R38 | Interior inspiration: Soft coastal. Pale beams, ocean-facing window, cane-like lounge chair, woven baskets, wood bench and a light-blue runner. Borrow fresh daylight and small cool accents, not a compulsory coastal setting. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "1cc43090834c1bf3c64c26261f118fed7e4641917f7b6cb523f00800b699615f",
+      "bytes": 294807,
+      "originalPath": "assets/sample-creatives/asset-6bb9cd49-71b0-4f26-9b4e-ee99196285b1.jpg",
+      "previewPath": "assets/sample-creatives/asset-6bb9cd49-71b0-4f26-9b4e-ee99196285b1-preview.png",
+      "width": 1600,
+      "height": 1067,
+      "uploadedAt": "2026-10-11T19:22:12.290Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-bc3cc985-996c-4f7a-8574-588f59383b7b",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_25.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R39 | Interior inspiration: Indian craft contemporary. Dark wood frame around cane-like wall panels, linen-toned bed, woven rug, framed art and visible wall-mounted air conditioner. Borrow tactile craft and realistic home cues. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "6f8c1b2f0a9eb01d61713a9461b2d1677810c9bf5ba37b763c206ae8711161f0",
+      "bytes": 923639,
+      "originalPath": "assets/sample-creatives/asset-bc3cc985-996c-4f7a-8574-588f59383b7b.jpg",
+      "previewPath": "assets/sample-creatives/asset-bc3cc985-996c-4f7a-8574-588f59383b7b-preview.png",
+      "width": 4000,
+      "height": 3000,
+      "uploadedAt": "2026-10-11T19:22:12.395Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-6f250e81-c9b8-4102-913a-65687e69358f",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_32.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R40 | Interior inspiration: Soft pastel contemporary. Warm peach wall, curved cream bed, floating wood bedside, small brass-toned sconce and a plant. Borrow restrained warm colour and low prop density. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "2611adbe7ebfc65d410ff89bc079ae7d300301698d1dde6b8e1a130a4a2ba9e6",
+      "bytes": 22929,
+      "originalPath": "assets/sample-creatives/asset-6f250e81-c9b8-4102-913a-65687e69358f.jpg",
+      "previewPath": "assets/sample-creatives/asset-6f250e81-c9b8-4102-913a-65687e69358f-preview.png",
+      "width": 450,
+      "height": 450,
+      "uploadedAt": "2026-10-11T19:22:12.407Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-12acb4fc-848b-4c30-983c-535a6913a6af",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_45.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R41 | Interior inspiration: Urban warm contemporary. Wood trim, textured neutral feature wall, large abstract artwork, warm layered bedding and rounded pouffe. Borrow tactile contrast; keep decorative art subordinate. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "48bed31918416c600c9a65632372a94cae5fb26146c1b4200c3b032e1bf133dd",
+      "bytes": 98226,
+      "originalPath": "assets/sample-creatives/asset-12acb4fc-848b-4c30-983c-535a6913a6af.jpg",
+      "previewPath": "assets/sample-creatives/asset-12acb4fc-848b-4c30-983c-535a6913a6af-preview.png",
+      "width": 1000,
+      "height": 1000,
+      "uploadedAt": "2026-10-11T19:22:12.436Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-80e82564-663e-4670-b664-9e5fc0f8a861",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_52.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R42 | Interior inspiration: Architectural dark retreat. Concrete-like ceiling/walls, low wood platform, charcoal bedding and full-height lake/mountain glazing. Borrow strong material contrast as an optional darker variation; no unverified geography. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "10e9d93800f09ad6d7d4cf23601bc1215fb5a79b3dd368cbff54eda1efbaa269",
+      "bytes": 77452,
+      "originalPath": "assets/sample-creatives/asset-80e82564-663e-4670-b664-9e5fc0f8a861.jpg",
+      "previewPath": "assets/sample-creatives/asset-80e82564-663e-4670-b664-9e5fc0f8a861-preview.png",
+      "width": 736,
+      "height": 915,
+      "uploadedAt": "2026-10-11T19:22:12.461Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-e8a236bc-d2f5-499a-8b46-2222b4764e14",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_07.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R44 | Interior inspiration: Soft contemporary premium. Tall beige panelling, padded bed and tufted bench, brass-toned wall lights and herringbone wood floor. Borrow tonal softness; matching hotel-suite treatment is an exception to edit. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "81f43f35f1ad1a44c9fef38c651ecd3898fa1cc649b57996f230161e3ea4773a",
+      "bytes": 86097,
+      "originalPath": "assets/sample-creatives/asset-e8a236bc-d2f5-499a-8b46-2222b4764e14.jpg",
+      "previewPath": "assets/sample-creatives/asset-e8a236bc-d2f5-499a-8b46-2222b4764e14-preview.png",
+      "width": 832,
+      "height": 1248,
+      "uploadedAt": "2026-10-11T19:22:12.510Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-88d6ac91-05c2-4b4f-955b-ab118f60e2e5",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_18.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R45 | Interior inspiration: Japanese-influenced tactile. Low loosely dressed bed, muted plaster-like walls, indoor tree, woven basket and round ceiling fixture. Borrow empty breathing space, natural folds and a single organic accent. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "a00617e3d5ac98f2e0fbcfa14b05a745bc50777f3f0e53b83e052f5dec2d9a9a",
+      "bytes": 91836,
+      "originalPath": "assets/sample-creatives/asset-88d6ac91-05c2-4b4f-955b-ab118f60e2e5.jpg",
+      "previewPath": "assets/sample-creatives/asset-88d6ac91-05c2-4b4f-955b-ab118f60e2e5-preview.png",
+      "width": 736,
+      "height": 1040,
+      "uploadedAt": "2026-10-11T19:22:12.535Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-935e96be-d658-4a41-8050-ea769f582df2",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_50.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R46 | Interior inspiration: Contemporary warm neutral. Wood panels, large quiet abstract art, low upholstered bed, timber bench, plants and globe-like bedside lamps. Borrow balanced domestic layering and usable negative space. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "f24a657980c2f08d8643f0aafb4ca11ed73af07dfdfab773b668774f8cbe5cbe",
+      "bytes": 109666,
+      "originalPath": "assets/sample-creatives/asset-935e96be-d658-4a41-8050-ea769f582df2.jpg",
+      "previewPath": "assets/sample-creatives/asset-935e96be-d658-4a41-8050-ea769f582df2-preview.png",
+      "width": 1024,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.566Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-f800fc2c-8b1c-43a4-a261-dcc312ba64bc",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_57.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R47 | Interior inspiration: Contemporary warm neutral. Plain cream walls, two small framed works, low relaxed bed, round pouffe and suspended bedside lights. Borrow sparse asymmetry and soft window shadows. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "1bd1d6e4518857297486bf33d978ba5842d6a28862fb529992dc91253cedeb91",
+      "bytes": 154308,
+      "originalPath": "assets/sample-creatives/asset-f800fc2c-8b1c-43a4-a261-dcc312ba64bc.jpg",
+      "previewPath": "assets/sample-creatives/asset-f800fc2c-8b1c-43a4-a261-dcc312ba64bc-preview.png",
+      "width": 992,
+      "height": 1440,
+      "uploadedAt": "2026-10-11T19:22:12.606Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-6df9a7db-b0de-46d0-94b5-a7f9e8f101d6",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_01.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R48 | Interior inspiration: Japanese-influenced tactile. Wood ceiling/frame, paper-screen-like sliding partition, low timber bed, woven floor and small wall calligraphy. Borrow grid rhythm and garden light; do not invent or reproduce unreadable script. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "af492f87bd34da28597cddebcca750ca4ce002b821a986fb78e2cf10a19ac0e6",
+      "bytes": 72751,
+      "originalPath": "assets/sample-creatives/asset-6df9a7db-b0de-46d0-94b5-a7f9e8f101d6.jpg",
+      "previewPath": "assets/sample-creatives/asset-6df9a7db-b0de-46d0-94b5-a7f9e8f101d6-preview.png",
+      "width": 640,
+      "height": 640,
+      "uploadedAt": "2026-10-11T19:22:12.624Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-8367f195-d858-4684-928e-77e5486128a2",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_07.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R49 | Interior inspiration: Light timber minimal. Low timber platform, large black-framed garden window, cream walls and loosely folded taupe bedding. Borrow a clear product outline, honest folds and a single plant. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "47c98c39eff4fac00ac2b6d42451b1a7d8807531ba67901302b3917f141f4f15",
+      "bytes": 120639,
+      "originalPath": "assets/sample-creatives/asset-8367f195-d858-4684-928e-77e5486128a2.jpg",
+      "previewPath": "assets/sample-creatives/asset-8367f195-d858-4684-928e-77e5486128a2-preview.png",
+      "width": 832,
+      "height": 1216,
+      "uploadedAt": "2026-10-11T19:22:12.656Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-f9a7af0f-09d6-419a-8bd5-2861ed9360b5",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_11.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R50 | Interior inspiration: Light timber minimal. Pale timber slatted headboard wall, floating bedside, low wood platform and warm sunlight. Borrow fine vertical rhythm and uncluttered circulation. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "6d51921df193ef281e22bf62d66df67768a54b17da6cdc11406bcfa0a6325b10",
+      "bytes": 261008,
+      "originalPath": "assets/sample-creatives/asset-f9a7af0f-09d6-419a-8bd5-2861ed9360b5.jpg",
+      "previewPath": "assets/sample-creatives/asset-f9a7af0f-09d6-419a-8bd5-2861ed9360b5-preview.png",
+      "width": 1728,
+      "height": 2304,
+      "uploadedAt": "2026-10-11T19:22:12.720Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-45bc9370-f8c1-43fb-9092-3fa0c21f7a75",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_23.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R51 | Interior inspiration: Architectural dark retreat. Dark timber wall, deep floating platform edge, white curtain, small wall sconce and compact vase. Borrow contrast and tactile wood without losing product detail to shadow. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "84167a8b1d0f35a23d3965057ffcd0288e1a78d2ca47bbb26555041a54e6b9de",
+      "bytes": 61697,
+      "originalPath": "assets/sample-creatives/asset-45bc9370-f8c1-43fb-9092-3fa0c21f7a75.jpg",
+      "previewPath": "assets/sample-creatives/asset-45bc9370-f8c1-43fb-9092-3fa0c21f7a75-preview.png",
+      "width": 736,
+      "height": 920,
+      "uploadedAt": "2026-10-11T19:22:12.742Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-e8e2ef66-03a9-44cc-8cd1-f9a85663bc51",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_44.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R52 | Interior inspiration: Japanese-influenced tactile. Paper-screen-like window, timber ceiling grid, pale paper lantern, low wood bed and dark floor edging. Borrow filtered light and geometric restraint, not literal regional set dressing. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "084869e8989baab6a712b0d63c1864cc65a6384fe94826382e174cf0d92417e4",
+      "bytes": 93868,
+      "originalPath": "assets/sample-creatives/asset-e8e2ef66-03a9-44cc-8cd1-f9a85663bc51.jpg",
+      "previewPath": "assets/sample-creatives/asset-e8e2ef66-03a9-44cc-8cd1-f9a85663bc51-preview.png",
+      "width": 683,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.767Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-dd4378b9-de28-44ec-9131-75617716b319",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_48.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R53 | Interior inspiration: Architectural dark retreat. Dark vertical timber, broad low upholstered platform, ceramic vessels on a black low table and subdued side light. Borrow premium depth selectively; avoid underexposure and showroom sculpture overload. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "c5a13f2ae77662ce1cd7cd9655d0cabfd2194ef5e5b65b086e91b44d4aa89e97",
+      "bytes": 80671,
+      "originalPath": "assets/sample-creatives/asset-dd4378b9-de28-44ec-9131-75617716b319.jpg",
+      "previewPath": "assets/sample-creatives/asset-dd4378b9-de28-44ec-9131-75617716b319-preview.png",
+      "width": 736,
+      "height": 736,
+      "uploadedAt": "2026-10-11T19:22:12.785Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-70d9a5fd-8bbb-4ec6-b1b4-bf0d56934d11",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_52.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R54 | Interior inspiration: Japanese-influenced tactile. Warm timber posts and screens, paper lantern, low platform, indoor tree and broad garden-facing opening. Borrow layered depth, filtered daylight and restrained natural materials. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "178198662d6673b84a2815b0c8afbff041764b9dcb35973077329f10715444da",
+      "bytes": 73712,
+      "originalPath": "assets/sample-creatives/asset-70d9a5fd-8bbb-4ec6-b1b4-bf0d56934d11.jpg",
+      "previewPath": "assets/sample-creatives/asset-70d9a5fd-8bbb-4ec6-b1b4-bf0d56934d11-preview.png",
+      "width": 736,
+      "height": 736,
+      "uploadedAt": "2026-10-11T19:22:12.805Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-f3908c0c-1141-4d2b-9cf1-90b1f377a4e6",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_56.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R55 | Interior inspiration: Japanese-influenced tactile. Full-height garden glazing, timber ceiling edge, plain wall, low wood bed and bench; long window shadows. Borrow quiet architecture with convincing contact shadows. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "2cb9e397677429b9353240ea7594543e8210800992e568c34494f107333e4872",
+      "bytes": 129782,
+      "originalPath": "assets/sample-creatives/asset-f3908c0c-1141-4d2b-9cf1-90b1f377a4e6.jpg",
+      "previewPath": "assets/sample-creatives/asset-f3908c0c-1141-4d2b-9cf1-90b1f377a4e6-preview.png",
+      "width": 932,
+      "height": 1200,
+      "uploadedAt": "2026-10-11T19:22:12.847Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-af935b8d-10c6-411d-bb10-7201b28250dc",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_18_02.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R56 | Interior inspiration: Japanese-influenced tactile. Low wood platform, screen-like window, spare art and two small globe lamps; folded neutral bedding. Borrow intimate warmth and a clean floor plane. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "211d9f9007171659a840b6a269cb52f9bc8bdf6da1d0e09eb7bf73218beb9fb5",
+      "bytes": 97958,
+      "originalPath": "assets/sample-creatives/asset-af935b8d-10c6-411d-bb10-7201b28250dc.jpg",
+      "previewPath": "assets/sample-creatives/asset-af935b8d-10c6-411d-bb10-7201b28250dc-preview.png",
+      "width": 736,
+      "height": 1104,
+      "uploadedAt": "2026-10-11T19:22:12.874Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    },
+    {
+      "id": "asset-c67be532-341f-4b62-a0fa-4d59c4e36480",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "name": "ChatGPT Image 7 Oct 2026, 15_18_24.jpg",
+      "format": "jpg",
+      "category": "sample-creatives",
+      "draft": false,
+      "note": "R59 | Interior inspiration: Mid-century garden. Timber bed and dresser, small pendants, neutral rug and broad garden glazing. Borrow modest home scale and indoor-outdoor calm. Assistant visual observation; advisory reference, not brand rules or product evidence.",
+      "sha256": "ff99328346f803d342182aa2da08798c642dcf0e89426f98a6e22e06a3cf086b",
+      "bytes": 159952,
+      "originalPath": "assets/sample-creatives/asset-c67be532-341f-4b62-a0fa-4d59c4e36480.jpg",
+      "previewPath": "assets/sample-creatives/asset-c67be532-341f-4b62-a0fa-4d59c4e36480-preview.png",
+      "width": 1024,
+      "height": 1024,
+      "uploadedAt": "2026-10-11T19:22:12.936Z",
+      "status": "visual-reference",
+      "trainingNote": "Actual image available as a visual reference in this brand’s next research refresh. Samples are not mandatory rules or product proof."
+    }
+  ]
+}

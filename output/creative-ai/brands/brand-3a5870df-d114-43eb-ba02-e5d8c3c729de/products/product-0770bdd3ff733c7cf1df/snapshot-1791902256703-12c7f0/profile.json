@@ -1,0 +1,1188 @@
+{
+  "version": 1,
+  "id": "product-0770bdd3ff733c7cf1df",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "name": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+  "sku": "SHORG720035000500GREY",
+  "description": "Enhanced comfort and support: Smartly contours to mirror every body shape, weight, and sleep position. Personalized comfort with BodyIQ Technology: Adapts intelligently to each body position, providing tailored support throughout the night. Ideal ratio of softness, firmness, and support: Suitable for every body shape and lifestyle. Pressure relief and spinal alignment: Alleviates pressure points and promotes ideal spinal alignment. Zero partner disturbance: Ensures peaceful sleep by minimizing disturbance from partner movements.",
+  "brand": "",
+  "taxonomy": [
+    {
+      "name": "Mattresses",
+      "url": "https://mysleepyhead.com/collections/mattresses",
+      "basis": "Website breadcrumb"
+    }
+  ],
+  "category": "Mattresses",
+  "variants": [
+    {
+      "id": "53482057498808",
+      "sku": "SHORG720035000500GREY",
+      "name": "Single / 72 X 35 (183 cm x 89 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "72 X 35 (183 cm x 89 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057531576",
+      "sku": "SHORG720035000600GREY",
+      "name": "Single / 72 X 35 (183 cm x 89 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "72 X 35 (183 cm x 89 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057564344",
+      "sku": "SHORG720035000800GREY",
+      "name": "Single / 72 X 35 (183 cm x 89 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "72 X 35 (183 cm x 89 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057597112",
+      "sku": "SHORG720036000500GREY",
+      "name": "Single / 72 X 36 (183 cm x 92 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "72 X 36 (183 cm x 92 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057629880",
+      "sku": "SHORG720036000600GREY",
+      "name": "Single / 72 X 36 (183 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "72 X 36 (183 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057662648",
+      "sku": "SHORG720036000800GREY",
+      "name": "Single / 72 X 36 (183 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "72 X 36 (183 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057695416",
+      "sku": "SHORG750035000500GREY",
+      "name": "Single / 75 X 35 (191 cm x 89 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "75 X 35 (191 cm x 89 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057728184",
+      "sku": "SHORG750035000600GREY",
+      "name": "Single / 75 X 35 (191 cm x 89 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "75 X 35 (191 cm x 89 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057760952",
+      "sku": "SHORG750035000800GREY",
+      "name": "Single / 75 X 35 (191 cm x 89 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "75 X 35 (191 cm x 89 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057793720",
+      "sku": "SHORG750036000500GREY",
+      "name": "Single / 75 X 36 (191 cm x 92 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "75 X 36 (191 cm x 92 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057826488",
+      "sku": "SHORG750036000600GREY",
+      "name": "Single / 75 X 36 (191 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "75 X 36 (191 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057859256",
+      "sku": "SHORG750036000800GREY",
+      "name": "Single / 75 X 36 (191 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "75 X 36 (191 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057892024",
+      "sku": "SHORG780035000500GREY",
+      "name": "Single / 78 X 35 (198 cm x 89 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "78 X 35 (198 cm x 89 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057924792",
+      "sku": "SHORG780035000600GREY",
+      "name": "Single / 78 X 35 (198 cm x 89 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "78 X 35 (198 cm x 89 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057957560",
+      "sku": "SHORG780035000800GREY",
+      "name": "Single / 78 X 35 (198 cm x 89 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "78 X 35 (198 cm x 89 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482057990328",
+      "sku": "SHORG780036000500GREY",
+      "name": "Single / 78 X 36 (198 cm x 92 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "78 X 36 (198 cm x 92 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058023096",
+      "sku": "SHORG780036000600GREY",
+      "name": "Single / 78 X 36 (198 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "78 X 36 (198 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058055864",
+      "sku": "SHORG780036000800GREY",
+      "name": "Single / 78 X 36 (198 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "78 X 36 (198 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058088632",
+      "sku": "SHORG720048000500GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 5 (12.7cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058121400",
+      "sku": "SHORG720048000600GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058154168",
+      "sku": "SHORG720048000800GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058186936",
+      "sku": "SHORG750048000500GREY",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 5 (12.7cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058219704",
+      "sku": "SHORG750048000600GREY",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058252472",
+      "sku": "SHORG750048000800GREY",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058285240",
+      "sku": "SHORG780048000500GREY",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 5 (12.7cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058318008",
+      "sku": "SHORG780048000600GREY",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058350776",
+      "sku": "SHORG780048000800GREY",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058383544",
+      "sku": "SHORG720060000500GREY",
+      "name": "Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm)",
+      "options": [
+        "Queen",
+        "72 X 60 (183 cm x 152 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058416312",
+      "sku": "SHORG720060000600GREY",
+      "name": "Queen / 72 X 60 (183 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "72 X 60 (183 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058449080",
+      "sku": "SHORG720060000800GREY",
+      "name": "Queen / 72 X 60 (183 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "72 X 60 (183 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058481848",
+      "sku": "SHORG750060000500GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 5 (12.7cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058514616",
+      "sku": "SHORG750060000600GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058547384",
+      "sku": "SHORG750060000800GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058580152",
+      "sku": "SHORG780060000500GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 5 (12.7cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058612920",
+      "sku": "SHORG780060000600GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058645688",
+      "sku": "SHORG780060000800GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058678456",
+      "sku": "SHORG720070000500GREY",
+      "name": "King / 72 X 70 (183 cm x 178 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "72 X 70 (183 cm x 178 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058711224",
+      "sku": "SHORG720070000600GREY",
+      "name": "King / 72 X 70 (183 cm x 178 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "72 X 70 (183 cm x 178 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058743992",
+      "sku": "SHORG720070000800GREY",
+      "name": "King / 72 X 70 (183 cm x 178 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "72 X 70 (183 cm x 178 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058776760",
+      "sku": "SHORG720072000500GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058809528",
+      "sku": "SHORG720072000600GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058842296",
+      "sku": "SHORG720072000800GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058875064",
+      "sku": "SHORG750070000500GREY",
+      "name": "King / 75 X 70 (191 cm x 178 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "75 X 70 (191 cm x 178 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058907832",
+      "sku": "SHORG750070000600GREY",
+      "name": "King / 75 X 70 (191 cm x 178 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "75 X 70 (191 cm x 178 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058940600",
+      "sku": "SHORG750070000800GREY",
+      "name": "King / 75 X 70 (191 cm x 178 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "75 X 70 (191 cm x 178 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482058973368",
+      "sku": "SHORG750072000500GREY",
+      "name": "King / 75 X 72 (191 cm x 183 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "75 X 72 (191 cm x 183 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059006136",
+      "sku": "SHORG750072000600GREY",
+      "name": "King / 75 X 72 (191 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "75 X 72 (191 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059038904",
+      "sku": "SHORG750072000800GREY",
+      "name": "King / 75 X 72 (191 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "75 X 72 (191 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059071672",
+      "sku": "SHORG780070000500GREY",
+      "name": "King / 78 X 70 (198 cm x 178 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "78 X 70 (198 cm x 178 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059104440",
+      "sku": "SHORG780070000600GREY",
+      "name": "King / 78 X 70 (198 cm x 178 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "78 X 70 (198 cm x 178 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059137208",
+      "sku": "SHORG780070000800GREY",
+      "name": "King / 78 X 70 (198 cm x 178 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "78 X 70 (198 cm x 178 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059169976",
+      "sku": "SHORG780072000500GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "5 (12.7cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059202744",
+      "sku": "SHORG780072000600GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059235512",
+      "sku": "SHORG780072000800GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059268280",
+      "sku": "SHORG780072001000GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 10 (25.4cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "10 (25.4cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059301048",
+      "sku": "SHORG750072001000GREY",
+      "name": "King / 75 X 72 (191 cm x 183 cm) / 10 (25.4cm)",
+      "options": [
+        "King",
+        "75 X 72 (191 cm x 183 cm)",
+        "10 (25.4cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059333816",
+      "sku": "SHORG720048001000GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 10 (25.4cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "10 (25.4cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059366584",
+      "sku": "SHORG780060001000GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 10 (25.4cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "10 (25.4cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059399352",
+      "sku": "SHORG750060001000GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 10 (25.4cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "10 (25.4cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "53482059432120",
+      "sku": "SHORG720072001000GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 10 (25.4cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "10 (25.4cm)"
+      ],
+      "available": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Single",
+        "Double",
+        "Queen",
+        "King"
+      ]
+    },
+    {
+      "name": "Dimensions",
+      "position": 2,
+      "values": [
+        "72 X 35 (183 cm x 89 cm)",
+        "72 X 36 (183 cm x 92 cm)",
+        "75 X 35 (191 cm x 89 cm)",
+        "75 X 36 (191 cm x 92 cm)",
+        "78 X 35 (198 cm x 89 cm)",
+        "78 X 36 (198 cm x 92 cm)",
+        "72 x 48 (183 cm x 122 cm)",
+        "75 x 48 (191 cm x 122 cm)",
+        "78 x 48 (198 cm x 122 cm)",
+        "72 X 60 (183 cm x 152 cm)",
+        "75 X 60 (191 cm x 152 cm)",
+        "78 X 60 (198 cm x 152 cm)",
+        "72 X 70 (183 cm x 178 cm)",
+        "72 X 72 (183 cm x 183 cm)",
+        "75 X 70 (191 cm x 178 cm)",
+        "75 X 72 (191 cm x 183 cm)",
+        "78 X 70 (198 cm x 178 cm)",
+        "78 X 72 (198 cm x 183 cm)"
+      ]
+    },
+    {
+      "name": "Height",
+      "position": 3,
+      "values": [
+        "5 (12.7cm)",
+        "6 (15.2cm)",
+        "8 (20.3cm)",
+        "10 (25.4cm)"
+      ]
+    }
+  ],
+  "contentSections": [
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Home Mattresses Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey"
+    },
+    {
+      "heading": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+      "group": "supporting-content",
+      "text": "Skip to product information Link Close share Copy link Open media 1 in modal Open media 2 in modal Open media 3 in modal Open media 4 in modal Open media 5 in modal Open media 6 in modal 1 / of 6 Zero Motion Transfer Pressure Relief Sleep 100 Night Free Trial Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey Pressure relieving comfort with BodyIQ Memory Foam ★★★★★ ★★★★★ 4.5/5 (25473 reviews) Single / 72 X 35 (183 cm x 89 cm) / 5 (12.7cm) Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Dimensions 72 X 35 (183 cm x 89 cm) Variant sold out or unavailable 72 X 36 (183 cm x 92 cm) Variant sold out or unavailable 75 X 35 (191 cm x 89 cm) Variant sold out or unavailable 75 X 36 (191 cm x 92 cm) Variant sold out or unavailable 78 X 35 (198 cm x 89 cm) Variant sold out or unavailable 78 X 36 (198 cm x 92 cm) Variant sold out or unavailable 72 x 48 (183 cm x 122 cm) Variant sold out or unavailable 75 x 48 (191 cm x 122 cm) Variant sold out or unavailable 78 x 48 (198 cm x 122 cm) Variant sold out or unavailable 72 X 60 (183 cm x 152 cm) Variant sold out or unavailable 75 X 60 (191 cm x 152 cm) Variant sold out or unavailable 78 X 60 (198 cm x 152 cm) Variant sold out or unavailable 72 X 70 (183 cm x 178 cm) Variant sold out or unavailable 72 X 72 (183 cm x 183 cm) Variant sold out or unavailable 75 X 70 (191 cm x 178 cm) Variant sold out or unavailable 75 X 72 (191 cm x 183 cm) Variant sold out or unavailable 78 X 70 (198 cm x 178 cm) Variant sold out or unavailable 78 X 72 (198 cm x 183 cm) Variant sold out or unavailable Height 5 (12.7cm) Variant sold out or unavailable 6 (15.2cm) Variant sold out or unavailable 8 (20.3cm) Variant sold out or unavailable 10 (25.4cm) Variant sold out or unavailable Regular price ₹ 5,639 Sale price MRP: Regular price ₹ 11,599 ₹ 5,639 51% OFF (Inclusive of all taxes) Sale Sold out Taxes included. Get it as low as ₹5356 (54%OFF) With Bank or UPI offer Check Schedule Delivery Schedule Delivery Delivery date Confirm Close Single / 72 X 35 (183 cm x 89 cm) / 5 (12.7cm) Choose from 62 customisation options Product added to cart Add to cart Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Product Description",
+      "group": "supporting-content",
+      "text": "Product Description Enhanced comfort and support: Smartly contours to mirror every body shape, weight, and sleep position. Personalized comfort with BodyIQ Technology: Adapts intelligently to each body position, providing tailored support throughout the night. Ideal ratio of softness, firmness, and support: Suitable for every body shape and lifestyle. Pressure relief and spinal alignment: Alleviates pressure points and promotes ideal spinal alignment. Zero partner disturbance: Ensures peaceful sleep by minimizing disturbance from partner movements. Read more Product information Mattres Feel Medium Firm Dimension 72\" x 35\" x 5\" Length 72\" Depth 35\" Heigth 5\" Material Memory Foam Size Single Color Grey Model Original Warranty 10 Years Assembly Required DIY (Do-It-Yourself) Additional Details Features 100 Nights Trial BodyIQ orthopedic memory foam technology Personalised comfort and orthopedic support Benefits Free home delivery 10 Years Warranty Technology that smartly adapts to any body shape Warranty Period 10 Years warranty Care Instructions Always place the mattress on flat surface Returns & Replacements Returnable under 100 Nights Trial Policy"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "FREE SHIPPING BEST PRICE GUARANTEE 100 NIGHTS TRIAL"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Bought Together Overview Reviews FAQs Product added to cart Add to cart Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Pressure Relieving Comfort",
+      "group": "a-plus-content",
+      "text": "Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort"
+    },
+    {
+      "heading": "The Shape of Great Sleep",
+      "group": "supporting-content",
+      "text": "The Shape of Great Sleep Experience Unprecedented Comfort with BodyIQ Orthopedic Memory Foam Personalized Comfort: Sleepyhead's BodyIQ Orthopedic Memory Foam Technology adjusts to your body's unique contours for tailored comfort. Orthopedic Support: Designed with in-built intelligence, it offers orthopedic support customized to your weight and sleep position. Refreshingly Deep Sleep: The result? A deeply restorative slumber that recharges your body and mind. Elevated Comfort: Say goodbye to one-size-fits-all mattresses; say hello to the future of personalized sleep. Multi-layered Support Our revolutionary mattress offers a multi-layered support system that guarantees a heavenly slumber. With three layers meticulously designed to cater to your needs, it's the ultimate blend of support and comfort that suits everyone. The first layer is crafted with soft foam . It provides a gentle cradle, offering initial plushness while maintaining proper alignment for your spine. The second layer boasts BodyIQ Orthopedic Memory Foam , which moulds to the contours of your body, providing personalised support where you need it most. It adapts to your unique shape, relieving pressure points and promoting proper spinal alignment. Completing the trifecta is the high-resilient foam layer . It offers exceptional durability and robust support, ensuring long-lasting comfort and preventing any sinking sensation Keep Calm and Sleep Steady Say goodbye to sleep disturbances caused by your partner's tossing and turning! Our mattress features an exceptional quality known as zero motion transfer, made possible by the remarkable properties of memory foam. The magic lies in memory foam's ability to isolate and absorb any movement that occurs on the mattress surface. When your partner shifts positions or gets out of bed, the memory foam works like a silent superhero, diligently absorbing those movements. As a result, you experience minimal to zero motion transfer, ensuring an uninterrupted slumber. By minimising motion transfer, we prioritise your sleep quality and enhance your overall sleep experience. So, whether you're a light sleeper or simply cherish uninterrupted sleep, you wake up refreshed, rejuvenated, and undisturbed."
+    },
+    {
+      "heading": "WHAT OUR SLEEP ADDICTS SAY",
+      "group": "supporting-content",
+      "text": "WHAT OUR SLEEP ADDICTS SAY"
+    },
+    {
+      "heading": "Customer Reviews",
+      "group": "supporting-content",
+      "text": "Customer Reviews Based on 25473 reviews Write a review 51% (13060) 48% (12286) 0% (125) 0% (0) 0% (2) A Argh Das it's nice for using it's nice in comfort B Bhavin Good Product is good D Danish Khan Very good Mattress quality is good D Dikshith very well designed for body comfort very well designed for body comfort and super comfortable s sandeep very well designed for body comfort very well designed for body comfort 1 2 3"
+    },
+    {
+      "heading": "FAQs",
+      "group": "supporting-content",
+      "text": "FAQs What is the Original – 3 Layered BodyIQ Orthopedic Memory Foam Mattress? Original is a medium firm mattress featuring Sleepyhead’s BodyIQ Orthopedic Memory Foam technology. It contours to your body shape, weight, and sleep position to provide personalized support throughout the night. What problem does the Original mattress solve? It helps relieve pressure points and ensures proper spinal alignment by adapting to your body. It also minimizes partner disturbance with zero motion transfer for uninterrupted sleep. Who is the Original mattress best suited for? It is ideal for people looking for orthopedic support with a medium firm feel, those needing pressure relief and spinal alignment, and couples who want minimal motion transfer. How does the Original mattress work? It uses a three-layer system: a soft foam top layer for comfort, a BodyIQ Orthopedic Memory Foam layer that adapts to your body and relieves pressure, and a high-resilient foam base for strong support and durability. How is the Original mattress different from other mattresses? Unlike standard mattresses, it uses BodyIQ Orthopedic Memory Foam to adjust to your unique body profile, offering personalized support along with a multi-layer design and zero motion transfer. How does the Original mattress feel? It has a medium firm feel with a balance of plush comfort on top and strong underlying support for stability and proper alignment. Does the Original mattress come with a warranty or trial? Yes, it comes with a 10-year warranty and a 100-night free trial. How should I care for the Original mattress? Use a mattress protector, place it on a flat and supportive base, rotate it periodically if recommended, and avoid folding or standing on it."
+    }
+  ],
+  "identityBasis": "Product structured metadata",
+  "pageUrl": "https://mysleepyhead.com/products/original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+  "requestedUrl": "https://mysleepyhead.com/products/original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+  "collectedAt": "2026-10-13T14:37:36.703Z",
+  "snapshot": "snapshot-1791902256703-12c7f0",
+  "pageHash": "75b26143654d36ef134b97779c6ba31a4e18db6ae597a5c9f9de388adde9d352",
+  "assets": [
+    {
+      "id": "media-4d1ff9f39206d452",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_7.jpg?v=1779189393",
+      "label": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Product structured metadata",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/product-images/media-4d1ff9f39206d452.jpg",
+      "bytes": 368125,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 2000,
+      "height": 2000,
+      "sha256": "a0178e002401071ab4c766a75ebad568abc05cecc66d881becfe979192939ddf",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_7.jpg?v=1779189393",
+      "preview": "snapshot-1791902256703-12c7f0/product-images/media-4d1ff9f39206d452-preview.png"
+    },
+    {
+      "id": "media-545e85a22cf12f62",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_2.jpg?v=1779189393",
+      "label": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/product-images/media-545e85a22cf12f62.jpg",
+      "bytes": 369252,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 2000,
+      "height": 2000,
+      "sha256": "adf6798879a854665d150864ec1d10c147cf15381232ca6d59ef529cd55ecb2e",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_2.jpg?v=1779189393",
+      "preview": "snapshot-1791902256703-12c7f0/product-images/media-545e85a22cf12f62-preview.png"
+    },
+    {
+      "id": "media-fcb971f385541b5a",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_3.jpg?v=1779189393",
+      "label": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/product-images/media-fcb971f385541b5a.jpg",
+      "bytes": 505815,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 2000,
+      "height": 2000,
+      "sha256": "c756e8b932a07a6b1673c28e39c67bca193cae3ba845bad67d37419d430f6653",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_3.jpg?v=1779189393",
+      "preview": "snapshot-1791902256703-12c7f0/product-images/media-fcb971f385541b5a-preview.png"
+    },
+    {
+      "id": "media-66c26b1a4c4ec3d0",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_5.jpg?v=1779189393",
+      "label": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/product-images/media-66c26b1a4c4ec3d0.jpg",
+      "bytes": 353463,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 2000,
+      "height": 2000,
+      "sha256": "1c07d9dd9ddf146bb4612a57ecced8afaac954e07aa6994ab7f255ed98448a90",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_5.jpg?v=1779189393",
+      "preview": "snapshot-1791902256703-12c7f0/product-images/media-66c26b1a4c4ec3d0-preview.png"
+    },
+    {
+      "id": "media-c8ecf97f2108a62e",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_1.jpg?v=1779189393",
+      "label": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/product-images/media-c8ecf97f2108a62e.jpg",
+      "bytes": 389896,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 2000,
+      "height": 2000,
+      "sha256": "8a7037d76452d9b7607029f7e3445aae1bd858005693e5f255639d0321c471da",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Original_Grey_1.jpg?v=1779189393",
+      "preview": "snapshot-1791902256703-12c7f0/product-images/media-c8ecf97f2108a62e-preview.png"
+    },
+    {
+      "id": "media-5a185f4446dfe8fb",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "label": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/product-images/media-5a185f4446dfe8fb.jpg",
+      "bytes": 868076,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 4096,
+      "height": 4096,
+      "sha256": "379fb201086f1c98313209e6a6f02216da78f84ec9bf3cd0dc51f6c520aef547",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "preview": "snapshot-1791902256703-12c7f0/product-images/media-5a185f4446dfe8fb-preview.png"
+    },
+    {
+      "id": "media-fbaa829472ef9045",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Zero_Motion_Transfer.svg?v=18189233046525080115",
+      "label": "Zero Motion Transfer",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/tiles/media-fbaa829472ef9045.svg",
+      "bytes": 4063,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "8ac321fcbdc54dd866f3d9cffa2d3552b60687f334f08f0b97514f62e1edbf38",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Zero_Motion_Transfer.svg?v=18189233046525080115",
+      "preview": "snapshot-1791902256703-12c7f0/tiles/media-fbaa829472ef9045-preview.png"
+    },
+    {
+      "id": "media-59a77f77d327ee04",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Preasure_Relief_Sleep.svg?v=14284801494349883673",
+      "label": "Pressure Relief Sleep",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/tiles/media-59a77f77d327ee04.svg",
+      "bytes": 1922,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "be9d8dd31e3f7e44accffe937e7fa048a089f9fa90d3dc3ab8120d2b01068d1f",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Preasure_Relief_Sleep.svg?v=14284801494349883673",
+      "preview": "snapshot-1791902256703-12c7f0/tiles/media-59a77f77d327ee04-preview.png"
+    },
+    {
+      "id": "media-f1b1dcf3968f3934",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_100_Nights_Free_Trail.svg?v=4993833255583898332",
+      "label": "100 Night Free Trial",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/tiles/media-f1b1dcf3968f3934.svg",
+      "bytes": 2163,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 97,
+      "height": 97,
+      "sha256": "2881e890437e592243fd8213d449552154430e7a3ff128f6332cc6e896963b91",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_100_Nights_Free_Trail.svg?v=4993833255583898332",
+      "preview": "snapshot-1791902256703-12c7f0/tiles/media-f1b1dcf3968f3934-preview.png"
+    },
+    {
+      "id": "media-f8efbeb6cbcf3f8f",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_1.jpg?v=1779189455",
+      "label": "original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/a-plus-content/media-f8efbeb6cbcf3f8f.jpg",
+      "bytes": 234970,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "51d5716037ebff874d6b36f08e3df4a3b3402621bb3848ce62a751f7e834e790",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_1.jpg?v=1779189455",
+      "preview": "snapshot-1791902256703-12c7f0/a-plus-content/media-f8efbeb6cbcf3f8f-preview.png"
+    },
+    {
+      "id": "media-4fc312103db61778",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_2.jpg?v=1779189456",
+      "label": "original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/a-plus-content/media-4fc312103db61778.jpg",
+      "bytes": 255042,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "3f97956b887ef48b447f57a9d2c25f6bea85ad59be90d46b5f8b7c48fc68e087",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_2.jpg?v=1779189456",
+      "preview": "snapshot-1791902256703-12c7f0/a-plus-content/media-4fc312103db61778-preview.png"
+    },
+    {
+      "id": "media-fc1ed70bb85e30ac",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_3.jpg?v=1779189455",
+      "label": "original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/a-plus-content/media-fc1ed70bb85e30ac.jpg",
+      "bytes": 289175,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "fe53ed5c1bab7949b3fc99af3fb16a8babfd8baf68037b1b865fadf753ce3997",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_3.jpg?v=1779189455",
+      "preview": "snapshot-1791902256703-12c7f0/a-plus-content/media-fc1ed70bb85e30ac-preview.png"
+    },
+    {
+      "id": "media-9e71dfc6581ab02f",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_4.jpg?v=1779189455",
+      "label": "original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1791902256703-12c7f0/a-plus-content/media-9e71dfc6581ab02f.jpg",
+      "bytes": 197423,
+      "collectedAt": "2026-10-13T14:37:36.703Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "358a3aba8557955aa15ebb50726b622a3db8cdcd8904dbd288fe4b3f805d0e8f",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_A_4.jpg?v=1779189455",
+      "preview": "snapshot-1791902256703-12c7f0/a-plus-content/media-9e71dfc6581ab02f-preview.png"
+    }
+  ],
+  "gaps": [
+    "No videos exposed in the collected page / product JSON."
+  ],
+  "downloadedBytes": 3839385,
+  "jobId": null,
+  "history": [],
+  "limits": [
+    "Website snapshot, not approved product substantiation.",
+    "Category comes from website breadcrumbs or product type; missing taxonomy remains Uncategorized.",
+    "Asset folder roles inferred from page sections; inspect before reuse.",
+    "Only media exposed in HTML / official product JSON is discoverable; protected or client-only assets may be missing."
+  ],
+  "audit": {
+    "pageUrl": "https://mysleepyhead.com/products/original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+    "snapshot": "snapshot-1791902256703-12c7f0",
+    "identityStatus": "matched",
+    "identityNote": "The title matches the named Original mattress. The saved selected catalogue record identifies the Queen variant, SKU SHORG720060000500GREY. The page’s Single default metadata describes a different default and does not override the selected record.",
+    "facts": [
+      {
+        "id": "sku-selected-variant",
+        "kind": "product",
+        "text": "The explicitly selected official product variant is Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm); SKU SHORG720060000500GREY; variant ID 53482058383544. Exact saved options: Size: Queen; Dimensions: 72 X 60 (183 cm x 152 cm); Height: 5 (12.7cm).",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-variant-record"
+        ],
+        "essential": true
+      },
+      {
+        "id": "sku-fact-1",
+        "kind": "product",
+        "text": "Product: Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-2",
+        "kind": "product",
+        "text": "Selected variant: Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm); SKU SHORG720060000500GREY; variant ID 53482058383544.",
+        "status": "unverified",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-3",
+        "kind": "product",
+        "text": "Material: Memory Foam.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-4",
+        "kind": "product",
+        "text": "“Original is a medium firm mattress featuring Sleepyhead’s BodyIQ Orthopedic Memory Foam technology.”",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-5",
+        "kind": "product",
+        "text": "“It uses a three-layer system: a soft foam top layer for comfort, a BodyIQ Orthopedic Memory Foam layer that adapts to your body and relieves pressure, and a high-resilient foam base for strong support and durability.”",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-6",
+        "kind": "product",
+        "text": "“It contours to your body shape, weight, and sleep position to provide personalized support throughout the night.”",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-7",
+        "kind": "product",
+        "text": "“Zero partner disturbance: Ensures peaceful sleep by minimizing disturbance from partner movements.”",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-8",
+        "kind": "product",
+        "text": "“Yes, it comes with a 10-year warranty and a 100-night free trial.”",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      }
+    ],
+    "evidence": [
+      {
+        "factId": "sku-fact-1",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-1",
+        "quote": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey Enhanced comfort and support: Smartly contours to mirror every body shape, weight, and sleep position."
+      },
+      {
+        "factId": "sku-fact-2",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-6",
+        "quote": "Home Mattresses Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey Skip to product information Link Close share Copy link Open media 1 in modal Open media 2 in modal Open media 3 in modal Open media 4 in modal Open media 5 in modal Open media 6 in modal 1 / of 6 Zero Motion Transfer Pressure Relief Sleep 100 Night Free Trial Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey Pressure relieving comfort with BodyIQ Memory Foam ★★★★★ ★★★★★ 4.5/5 (25473 reviews) Single / 72 X 35 (183 cm x 89 cm) / 5 (12.7cm) Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Dimensions 72 X 35 (183 cm x 89 cm) Variant sold out or unavailable 72 X 36 (183 cm x 92 cm) Variant sold out or unavailable 75 X 35 (191 cm x 89 cm) Variant sold out or unavailable 75 X 36 (191 cm x 92 cm) Variant sold out or unavailable 78 X 35 (198 cm x 89 cm) Variant sold out or unavailable 78 X 36 (198 cm x 92 cm) Variant sold out or unavailable 72 x 48 (183 cm x 122 cm) Variant sold out or unavailable 75 x 48 (191 cm x 122 cm) Variant sold out or unavailable 78 x 48 (198 cm x 122 cm) Variant sold out or unavailable 72 X 60 (183 cm x 152 cm) Variant sold out or unavailable 75 X 60 (191 cm x 152 cm) Variant sold out or unavailable 78 X 60 (198 cm x 152 cm) Variant sold out or unavailable 72 X 70 (183 cm x 178 cm) Variant sold out or unavailable 72 X 72 (183 cm x 183 cm) Variant sold out or unavailable 75 X 70 (191 cm x 178 cm) Variant sold out or unavailable 75 X 72 (191 cm x 183 cm) Variant sold out or unavailable 78 X 70 (198 cm x 178 cm) Variant sold out or unavailable 78 X 72 (198 cm x 183 cm) Variant sold out"
+      },
+      {
+        "factId": "sku-fact-3",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-13",
+        "quote": "Read more Product information Mattres Feel Medium Firm Dimension 72\" x 35\" x 5\" Length 72\" Depth 35\" Heigth 5\" Material Memory Foam Size Single Color Grey Model Original Warranty 10 Years Assembly Required DIY (Do-It-Yourself) Additional Details Features 100 Nights Trial BodyIQ orthopedic memory foam technology Personalised comfort and orthopedic support Benefits Free home delivery 10 Years Warranty Technology that smartly adapts to any body shape Warranty Period 10 Years warranty Care Instructions Always place the mattress on flat surface Returns & Replacements Returnable under 100 Nights Trial Policy FREE SHIPPING BEST PRICE GUARANTEE 100 NIGHTS TRIAL Bought Together Overview Reviews FAQs Product added to cart Add to cart Couldn't load pickup availability Refresh Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving"
+      },
+      {
+        "factId": "sku-fact-4",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-34",
+        "quote": "Original is a medium firm mattress featuring Sleepyhead’s BodyIQ Orthopedic Memory Foam technology."
+      },
+      {
+        "factId": "sku-fact-5",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-42",
+        "quote": "It uses a three-layer system: a soft foam top layer for comfort, a BodyIQ Orthopedic Memory Foam layer that adapts to your body and relieves pressure, and a high-resilient foam base for strong support and durability."
+      },
+      {
+        "factId": "sku-fact-6",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-35",
+        "quote": "It contours to your body shape, weight, and sleep position to provide personalized support throughout the night."
+      },
+      {
+        "factId": "sku-fact-7",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-12",
+        "quote": "Zero partner disturbance: Ensures peaceful sleep by minimizing disturbance from partner movements."
+      },
+      {
+        "factId": "sku-fact-8",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-48",
+        "quote": "Yes, it comes with a 10-year warranty and a 100-night free trial."
+      },
+      {
+        "factId": "sku-selected-variant",
+        "sourceId": "source-selected-variant-record",
+        "passageId": "source-selected-variant-record-passage-1",
+        "quote": "The explicitly selected official product variant is Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm); SKU SHORG720060000500GREY; variant ID 53482058383544. Exact saved options: Size: Queen; Dimensions: 72 X 60 (183 cm x 152 cm); Height: 5 (12.7cm)."
+      }
+    ],
+    "collectedAt": "2026-10-13T14:37:36.703Z",
+    "jobId": "creative-2c3142bd-ba5e-411f-8104-f61ac904fe9f"
+  }
+}

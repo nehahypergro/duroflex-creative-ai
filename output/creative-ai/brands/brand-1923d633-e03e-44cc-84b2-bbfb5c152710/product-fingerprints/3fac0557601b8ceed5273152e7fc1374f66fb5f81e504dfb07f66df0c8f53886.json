@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "key": "3fac0557601b8ceed5273152e7fc1374f66fb5f81e504dfb07f66df0c8f53886",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "productId": "product-63cfb9d009461f5b00eb",
+  "variantId": "50679939858564",
+  "photoHashes": [
+    "9978b946b188276c1dabd5066748df6e477231233ceaf389fa7a046560351d0c",
+    "fb2f12ad46f6114e42f1773f2de55ddd5cbb1d3160ccbecb5347de95c2416de6",
+    "5697fc646feab5804789aa98e318426324043e9bc9ff841f6ab8ed3571be7130"
+  ],
+  "features": [
+    {
+      "feature": "Rectangular mattress with a white quilted top featuring an irregular interlocking geometric pattern and small orange accents.",
+      "where": "Top surface"
+    },
+    {
+      "feature": "Dark charcoal piping outlines the top edge.",
+      "where": "Seam between top and side wall"
+    },
+    {
+      "feature": "Tall tan/caramel fabric side wall.",
+      "where": "Sides"
+    },
+    {
+      "feature": "Dark charcoal fabric band runs along the lower edge.",
+      "where": "Bottom perimeter"
+    },
+    {
+      "feature": "Large white product label with red, orange and black lettering.",
+      "where": "Side wall near one end"
+    },
+    {
+      "feature": "Inset rectangular panel outlined with dark stitching.",
+      "where": "Side wall"
+    }
+  ],
+  "labelWords": "duroflex ENERGISE wave kinect PROPEL",
+  "jobId": "creative-3b45a0ef-804c-4514-80e1-dc00f46ed245",
+  "createdAt": "2026-11-10T14:10:35.527Z"
+}

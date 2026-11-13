@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "sourceId": "creative-0cf699fc-2937-404b-b6f0-700bb9ad7793",
+  "preservesOriginalFailure": true,
+  "reusedMainAnalysis": false,
+  "reason": "Official homepage bytes changed; require fresh analysis. Unavailable-source evidence validation remains intact.",
+  "instructionsAdded": "Findings with basis evidence must have nonempty sourceIds and every cited source must have status available or partial. An access gap can be recorded as an inference in conflicts; never mark it evidence or supported product/ad facts. Report inaccessible Meta sources only as a gap. Preserve their unavailable status.",
+  "checkedAt": "2026-10-11T20:40:48.150Z"
+}

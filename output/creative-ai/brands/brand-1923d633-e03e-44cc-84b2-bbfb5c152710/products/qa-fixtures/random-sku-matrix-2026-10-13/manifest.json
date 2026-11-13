@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "mode": "website-source-fixtures-only",
+  "seed": "brand-ratio-sku-20261013-v1",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "brandUrl": "https://www.duroflexworld.com/",
+  "researchId": "creative-d23cdaaa-c97d-432c-83f4-05d59dd11be1",
+  "collectedAt": "2026-10-13T17:53:14.218Z",
+  "catalogSources": [
+    {
+      "url": "https://www.duroflexworld.com/products.json?limit=250&page=1",
+      "file": "catalog-1.json",
+      "sha256": "5df8ff2d6c5668f1f123ce3b3f5eebcc439568e09a28e192f3e3c51b483753c2",
+      "count": 250
+    },
+    {
+      "url": "https://www.duroflexworld.com/products.json?limit=250&page=2",
+      "file": "catalog-2.json",
+      "sha256": "567bffc3a31d2972d256029b3120d47fb4d831b275c1c3dd17cc90b6c55a446b",
+      "count": 156
+    }
+  ],
+  "catalogProducts": 406,
+  "sampling": "Ten product handles ranked by seeded SHA-256 from up to four public catalog pages; one seeded exact SKU variant each. Availability is retained, not filtered.",
+  "directory": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/products/qa-fixtures/random-sku-matrix-2026-10-13",
+  "products": [
+    {
+      "productId": "product-d6f4fc4c3c9fe8b7db1e",
+      "handle": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "name": "Cove Brushed Nickel Grey Leatherette + Pumice Stone Grey Fabric 3 Seater Sofa + Lounger",
+      "category": "Sofas",
+      "variant": {
+        "id": "52329088745604",
+        "sku": "COVESOFADGREYLGREY3SL",
+        "name": "Default Title",
+        "options": [
+          "Default Title"
+        ],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger?variant=52329088745604",
+      "sourceUrl": "https://www.duroflexworld.com/products/cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "file": "product-d6f4fc4c3c9fe8b7db1e.html",
+      "jsonFile": "product-d6f4fc4c3c9fe8b7db1e.json",
+      "pageHash": "65e6334b19fdec87aff7bdd47c43ac542579cf2019a2e239122fff63636ca8b5",
+      "jsonHash": "77e658c3033d1e144d1fd0d546df447c0c238d72b321db3389e3b33746e41840",
+      "selectionRank": "0036acdc17175d64cccbc66e5702ae53613bfae51d8ccb80f326a975f07c258e",
+      "reusedSavedPage": true
+    },
+    {
+      "productId": "product-4f8e86b4d71f24c7cef9",
+      "handle": "avalon-posture-pro-rocking-rotating-single-seater-fabric-recliner-brown-motorized",
+      "name": "Avalon Posture Pro Rocking & Rotating Single Seater Fabric Recliner, Brown, Motorized",
+      "category": "Recliner",
+      "variant": {
+        "id": "44758829334660",
+        "sku": "AVALONPPRORECMOTRRRFABBR1S",
+        "name": "Default Title",
+        "options": [],
+        "available": false
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/avalon-posture-pro-rocking-rotating-single-seater-fabric-recliner-brown-motorized?variant=44758829334660",
+      "sourceUrl": "https://www.duroflexworld.com/products/avalon-posture-pro-rocking-rotating-single-seater-fabric-recliner-brown-motorized",
+      "file": "product-4f8e86b4d71f24c7cef9.html",
+      "jsonFile": "product-4f8e86b4d71f24c7cef9.json",
+      "pageHash": "89ac72ca2b410cfcedf52b20d51984002f1cb9550ec210630d8b0140fef9b324",
+      "jsonHash": "72e8a805e7a5cab4b2fb7b9ed08c18a46a01598f325b8b1f3c89564cee711048",
+      "selectionRank": "0051e87d85bc4df24f70ccbcee59867ebc502dcf0fed5075d2fc69001e76ea3f",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-b2e17fcf89b99769068e",
+      "handle": "cove-simply-taupe-leatherette-feather-brown-fabric-1-seater-sofa",
+      "name": "Cove Simply Taupe Leatherette + Feather Brown Fabric 1 Seater Sofa",
+      "category": "Sofas",
+      "variant": {
+        "id": "52329081536644",
+        "sku": "COVESOFATAUPEBROWN1S",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/cove-simply-taupe-leatherette-feather-brown-fabric-1-seater-sofa?variant=52329081536644",
+      "sourceUrl": "https://www.duroflexworld.com/products/cove-simply-taupe-leatherette-feather-brown-fabric-1-seater-sofa",
+      "file": "product-b2e17fcf89b99769068e.html",
+      "jsonFile": "product-b2e17fcf89b99769068e.json",
+      "pageHash": "84c194c98da946ace964ead98ce3768e63ca88468436717f3d2b5ea27127eddf",
+      "jsonHash": "50acb03d414ae52bc39ce87d293a43dd52513dd4a5a216b04ed35d4afba9b5c3",
+      "selectionRank": "014ab592059780e6055ec26e15a6f8d7eada4f20570f402cd5818471d96ad81b",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-02901c97d9167e33fbb4",
+      "handle": "duro-octave-sofa-3s-fab-dian003",
+      "name": "Octave 3 Seater Water & Stain Repellent Fabric - Honey",
+      "category": "Sofas",
+      "variant": {
+        "id": "50533517918340",
+        "sku": "OCTAVESOFA3SFABDIAN003",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/duro-octave-sofa-3s-fab-dian003?variant=50533517918340",
+      "sourceUrl": "https://www.duroflexworld.com/products/duro-octave-sofa-3s-fab-dian003",
+      "file": "product-02901c97d9167e33fbb4.html",
+      "jsonFile": "product-02901c97d9167e33fbb4.json",
+      "pageHash": "44235e135f5462970410fd940b5507fdb75bbf6d5be8709060c9976a1f96dad6",
+      "jsonHash": "1c020472246f94356ea377cf8dc094b283982c16271b69ecdb84e69ab1dcb635",
+      "selectionRank": "016874eb83ab35deb76c19984655b0ef1530aa02d01d9d827aecd84957171334",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-a9146a2170e0006efa92",
+      "handle": "duro-crescendo-sofa-3day-bed-lh-complea-fern30",
+      "name": "Cresendo 3 Seater with LH Lounger Leatherette fabric - Golden Orange",
+      "category": "Sofas",
+      "variant": {
+        "id": "50650320437380",
+        "sku": "CRESCENDO3DBLHCOMLFERN30",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/duro-crescendo-sofa-3day-bed-lh-complea-fern30?variant=50650320437380",
+      "sourceUrl": "https://www.duroflexworld.com/products/duro-crescendo-sofa-3day-bed-lh-complea-fern30",
+      "file": "product-a9146a2170e0006efa92.html",
+      "jsonFile": "product-a9146a2170e0006efa92.json",
+      "pageHash": "35e74be5dae39113d94a749fa4c95cee87eed0f3d643e0056fb2f26f37204f86",
+      "jsonHash": "29e1299dac59d1a116af7ec2ecc475570e7e580fe5c1b223e9ba08523ebad507",
+      "selectionRank": "016c56c61c3ac20a2df205a679aab57e2ec0b27af0f3020403d510c09748706f",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-0ed5b7a4608078195585",
+      "handle": "mattress-protector",
+      "name": "Duro Safe - Waterproof Mattress Protector",
+      "category": "Accessories",
+      "variant": {
+        "id": "41775148695684",
+        "sku": "PROT78003600GREYMP",
+        "name": "Single / 78\" x 36\" (1.98m x 91.4cm) / GREY",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/mattress-protector?variant=41775148695684",
+      "sourceUrl": "https://www.duroflexworld.com/products/mattress-protector",
+      "file": "product-0ed5b7a4608078195585.html",
+      "jsonFile": "product-0ed5b7a4608078195585.json",
+      "pageHash": "a675f1aea76fcdffeb52e22476ac0e4cec4490fea74ad5ca0142bc8b396e1b8a",
+      "jsonHash": "a786e03a2a63378818836ec02541d52f279b0afd4dfc7565c7e16c784ead6886",
+      "selectionRank": "01c61a98929db5242e06852a789b32828d6594aff0895b37c436b6d4dcb4a6c7",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-62f4bfa6d294c1e5728c",
+      "handle": "rhapsody-mov-e-dark-grey-leatherette-3-seater-sofa",
+      "name": "Rhapsody mov.E Dark Grey Leatherette 3 Seater Sofa",
+      "category": "Sofas",
+      "variant": {
+        "id": "51608438243460",
+        "sku": "RHAPSODYMSOFADGREY3S",
+        "name": "Default Title",
+        "options": [],
+        "available": false
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/rhapsody-mov-e-dark-grey-leatherette-3-seater-sofa?variant=51608438243460",
+      "sourceUrl": "https://www.duroflexworld.com/products/rhapsody-mov-e-dark-grey-leatherette-3-seater-sofa",
+      "file": "product-62f4bfa6d294c1e5728c.html",
+      "jsonFile": "product-62f4bfa6d294c1e5728c.json",
+      "pageHash": "6c5aa53c52510103a2cdbea5a9f37fdc683ee98d7cf2f68348241f0631f6d7ac",
+      "jsonHash": "bad1f5bfcce74f719a8bf89fed8bbd50e7b41a6f62378de2a76e0fda8aca41bb",
+      "selectionRank": "046bed6216290e72f0f67b2e03b2579ac59b4af4f03e7e7b1e0c81c23a904967",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-68147125abc89e2cad92",
+      "handle": "duroflex-livein-100-latex-mattress",
+      "name": "LiveIn 100% Latex Mattress",
+      "category": "Mattress",
+      "variant": {
+        "id": "51541064155268",
+        "sku": "LIVEIN100PCTLTX750048000800GREEN",
+        "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3 cm)",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/duroflex-livein-100-latex-mattress?variant=51541064155268",
+      "sourceUrl": "https://www.duroflexworld.com/products/duroflex-livein-100-latex-mattress",
+      "file": "product-68147125abc89e2cad92.html",
+      "jsonFile": "product-68147125abc89e2cad92.json",
+      "pageHash": "a9336990ed4f182f46a4cae2992756db3ba88156e7a3b1a03aed79ffc1122119",
+      "jsonHash": "2e5cccebb0d848da3f94192b124045151368ec1ddb6b001548dfba7428b8cb3b",
+      "selectionRank": "052cea51ab2c4e1039173667f91a99a056c2aa114e3d698f81969fb9798cac26",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-a6ddf70379db9bdc35b6",
+      "handle": "duro-crescendo-sofa-2-day-bed-lh-complea-fern32",
+      "name": "Cresendo 2 Seater with LH Lounger Leatherette fabric - Tobacco Brown",
+      "category": "Sofas",
+      "variant": {
+        "id": "50650319880324",
+        "sku": "CRESCENDO2DBLHCOMLFERN32",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/duro-crescendo-sofa-2-day-bed-lh-complea-fern32?variant=50650319880324",
+      "sourceUrl": "https://www.duroflexworld.com/products/duro-crescendo-sofa-2-day-bed-lh-complea-fern32",
+      "file": "product-a6ddf70379db9bdc35b6.html",
+      "jsonFile": "product-a6ddf70379db9bdc35b6.json",
+      "pageHash": "0d208bc74eea3dd15c6513ebcea2ce815dc88045b769134d2816520b7c83e223",
+      "jsonHash": "5235c869c4c9c98345d074f69ad72194172764738949503c3101907cfc8a6305",
+      "selectionRank": "054ce6a1f3d43774126fed697a91f4e1fc5118a83b12e64eca0a763a2dfc9422",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-8323b4577ccb489f0201",
+      "handle": "duro-crescendo-sofa-2scr3s-complea-fern12",
+      "name": "Crescendo 2 Seater + Corner + 3 Seater Leatherette Fabric - Pewter Grey",
+      "category": "Sofas",
+      "variant": {
+        "id": "50533522669700",
+        "sku": "CRESCENDO2SCR3SCOMLFERN12",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://www.duroflexworld.com/products/duro-crescendo-sofa-2scr3s-complea-fern12?variant=50533522669700",
+      "sourceUrl": "https://www.duroflexworld.com/products/duro-crescendo-sofa-2scr3s-complea-fern12",
+      "file": "product-8323b4577ccb489f0201.html",
+      "jsonFile": "product-8323b4577ccb489f0201.json",
+      "pageHash": "aee9fc267d5b4f32aa199207bb09184c7a483a2e15c86509c37070fdb18a7992",
+      "jsonHash": "02e9c70f46722ce372d7974852d5bea3007e693d9e06c4c8564b0e0a9f05f7d6",
+      "selectionRank": "05b2ed98d96b9e46595cba9d5979654ef77834522c50b00591583c83af7d1529",
+      "reusedSavedPage": false
+    }
+  ],
+  "limits": [
+    "Source snapshots only; no image download, audit, approved claims or visual inspection.",
+    "QA variant choices do not authorize production campaigns. Existing product profiles and historical jobs remain unchanged."
+  ]
+}

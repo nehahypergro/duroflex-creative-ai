@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-2cdb3d22-e3e7-46e0-a0b7-269b9f75d2b2",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-20b8cdb128e5b41b7655",
+  "productName": "Napster Mini Mattress",
+  "pageUrl": "https://mysleepyhead.com/products/napster-mini-mattress",
+  "productSnapshot": "snapshot-1792609806763-aa1f4a",
+  "variant": {
+    "id": "52529775476920",
+    "sku": "NAPSTERMINI720036000400BLUE",
+    "name": "Single / 72 X 36 (183 cm x 92 cm) / 4 (10.16cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Single / 72 X 36 (183 cm x 92 cm) / 4 (10.16cm)",
+    "configuration": "Official website variant Single / 72 X 36 (183 cm x 92 cm) / 4 (10.16cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-48fa7bd79d9892e5",
+    "snapshot": "snapshot-1792609806763-aa1f4a",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/NapsterMini_1.jpg?v=1769536847",
+    "sha256": "bdfefdca6b688783e5a750840bc964c7c6dd9aa488ceeac1a3db735b6cfbc711",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 1000,
+    "height": 1000,
+    "rasterHash": "b2c476bab1965e16594afb497c65e341e5fbc1ed1c404f52947709cbdd1991f4",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-21T19:23:23.009Z"
+  },
+  "createdAt": "2026-10-21T19:23:23.009Z",
+  "profileHash": "4642bae2b5cd709924a1ceb350a4c8866e68cb42081f8c6681263a39748111ca"
+}

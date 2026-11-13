@@ -1,0 +1,282 @@
+{
+  "id": 15447014178948,
+  "title": "Airboost Duo Topper",
+  "handle": "airboost-duo-topper",
+  "description": "",
+  "published_at": "2026-10-29T16:21:02+05:30",
+  "created_at": "2026-10-26T12:49:21+05:30",
+  "vendor": "Duroflex",
+  "type": "Accessories",
+  "tags": [
+    "BAUSALE26",
+    "CART5",
+    "INDIA",
+    "King Size Mattress",
+    "Memory Foam",
+    "Queen Size Mattress",
+    "searchfilter",
+    "searchfilter_Sleep Accessories",
+    "video_shop"
+  ],
+  "price": 799900,
+  "price_min": 799900,
+  "price_max": 959900,
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": 999900,
+  "compare_at_price_min": 999900,
+  "compare_at_price_max": 1199900,
+  "compare_at_price_varies": true,
+  "variants": [
+    {
+      "id": 67854734164100,
+      "title": "Queen / 78 x 60 (198cm  x 152cm) / 2 (5.08cm)",
+      "option1": "Queen",
+      "option2": "78 x 60 (198cm  x 152cm)",
+      "option3": "2 (5.08cm)",
+      "sku": "ABDUOTOP780060000200BLUE",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Airboost Duo Topper - Queen / 78 x 60 (198cm  x 152cm) / 2 (5.08cm)",
+      "public_title": "Queen / 78 x 60 (198cm  x 152cm) / 2 (5.08cm)",
+      "options": [
+        "Queen",
+        "78 x 60 (198cm  x 152cm)",
+        "2 (5.08cm)"
+      ],
+      "price": 799900,
+      "weight": 0,
+      "compare_at_price": 999900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 67854734196868,
+      "title": "King / 78 x 72 (198cm  x 183cm) / 2 (5.08cm)",
+      "option1": "King",
+      "option2": "78 x 72 (198cm  x 183cm)",
+      "option3": "2 (5.08cm)",
+      "sku": "ABDUOTOP780072000200BLUE",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Airboost Duo Topper - King / 78 x 72 (198cm  x 183cm) / 2 (5.08cm)",
+      "public_title": "King / 78 x 72 (198cm  x 183cm) / 2 (5.08cm)",
+      "options": [
+        "King",
+        "78 x 72 (198cm  x 183cm)",
+        "2 (5.08cm)"
+      ],
+      "price": 959900,
+      "weight": 0,
+      "compare_at_price": 1199900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_1.jpg?v=1793000993",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_2.jpg?v=1793000993",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_3.jpg?v=1793000993",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_4.jpg?v=1793000993",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_5.jpg?v=1793000993",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_6.jpg?v=1793000993",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_7.jpg?v=1793000994",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_8.jpg?v=1793000993",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_9.jpg?v=1793000993"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_1.jpg?v=1793000993",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Queen",
+        "King"
+      ]
+    },
+    {
+      "name": "Dimension",
+      "position": 2,
+      "values": [
+        "78 x 60 (198cm  x 152cm)",
+        "78 x 72 (198cm  x 183cm)"
+      ]
+    },
+    {
+      "name": "Height (in inch)",
+      "position": 3,
+      "values": [
+        "2 (5.08cm)"
+      ]
+    }
+  ],
+  "url": "/products/airboost-duo-topper",
+  "media": [
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355403908,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_1.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_1.jpg?v=1793000993",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355436676,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_2.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_2.jpg?v=1793000993",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355469444,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_3.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_3.jpg?v=1793000993",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355502212,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_4.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_4.jpg?v=1793000993",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355534980,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_5.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_5.jpg?v=1793000993",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355567748,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_6.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_6.jpg?v=1793000993",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355600516,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_7.jpg?v=1793000994"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_7.jpg?v=1793000994",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355633284,
+      "position": 8,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_8.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_8.jpg?v=1793000993",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress Topper",
+      "id": 54860355666052,
+      "position": 9,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_9.jpg?v=1793000993"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/AB_TPR_9.jpg?v=1793000993",
+      "width": 3000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

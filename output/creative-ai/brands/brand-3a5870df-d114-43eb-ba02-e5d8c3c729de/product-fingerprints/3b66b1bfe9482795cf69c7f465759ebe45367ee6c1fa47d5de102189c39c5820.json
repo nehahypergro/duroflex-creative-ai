@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "key": "3b66b1bfe9482795cf69c7f465759ebe45367ee6c1fa47d5de102189c39c5820",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "productId": "product-0770bdd3ff733c7cf1df",
+  "variantId": "53482058383544",
+  "photoHashes": [
+    "18734c0cf322cbbb2f871cde8e6b5dc0c811db5509fb72853cd1df928d70b51a",
+    "870c0121b6760c823e8ba29d7210c50f91740dd7278cfd2bb6ec210db298fcdd",
+    "b92ec26f07bccb23a17a627aa296a819b0c32102ffcbffa0085b1550e4612bd2"
+  ],
+  "features": [
+    {
+      "feature": "Rectangular mattress with rounded corners and a low, even profile.",
+      "where": "Overall shape"
+    },
+    {
+      "feature": "Light grey top with fine, closely spaced linear texture and a broad dark charcoal zigzag motif running lengthwise.",
+      "where": "Top surface"
+    },
+    {
+      "feature": "Dark charcoal textured fabric side wall.",
+      "where": "Side wall"
+    },
+    {
+      "feature": "Bright orange piping outlines the top edge and runs along the lower edge of the side wall.",
+      "where": "Top and bottom perimeter"
+    },
+    {
+      "feature": "Small two-tone “sleepyhead original” logo, with orange “sleepyhead” and white “original.”",
+      "where": "Side wall near one corner"
+    },
+    {
+      "feature": "Exploded view shows three foam slabs: light grey above orange above pink, over a dark cover base.",
+      "where": "Layered construction shown in product image"
+    }
+  ],
+  "labelWords": "sleepyhead original",
+  "jobId": "creative-9de36c2a-217a-4f52-8e82-13d85bd4ffc5",
+  "createdAt": "2026-11-10T14:11:24.098Z"
+}

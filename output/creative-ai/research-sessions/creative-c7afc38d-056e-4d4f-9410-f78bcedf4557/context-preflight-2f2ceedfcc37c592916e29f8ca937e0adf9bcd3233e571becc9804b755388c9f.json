@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "model": "gpt-6-luna",
+  "requestKey": "2f2ceedfcc37c592916e29f8ca937e0adf9bcd3233e571becc9804b755388c9f",
+  "requestHash": "1f2108a28922ab1aaea657aeccff9c475be56bdc4f95b68bd0170e027534981c",
+  "attempt": 0,
+  "stage": "general",
+  "contextWindow": 1050000,
+  "outputTokens": 1000,
+  "safetyTokens": 4096,
+  "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+  "limitsCheckedAt": "2026-10-13",
+  "method": "responses.input_tokens",
+  "countedAt": "2026-10-23T19:28:40.501Z",
+  "attempts": [
+    {
+      "number": 1,
+      "status": "passed"
+    }
+  ],
+  "inputTokens": 8343,
+  "totalReservedTokens": 13439,
+  "remainingTokens": 1036561,
+  "status": "passed",
+  "elapsedMs": 1508
+}

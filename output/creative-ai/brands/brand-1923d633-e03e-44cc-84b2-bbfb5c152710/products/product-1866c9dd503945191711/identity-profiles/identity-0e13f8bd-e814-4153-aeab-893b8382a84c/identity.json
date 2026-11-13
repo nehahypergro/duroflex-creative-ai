@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-0e13f8bd-e814-4153-aeab-893b8382a84c",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-1866c9dd503945191711",
+  "productName": "Back Magic Pro Plus Orthopedic Mattress",
+  "pageUrl": "https://www.duroflexworld.com/products/back-magic-pro-plus-orthopedic-mattress?variant=51542131605636",
+  "productSnapshot": "snapshot-1793832655231-91b9d5",
+  "variant": {
+    "id": "51542132588676",
+    "sku": "BMPROPL720060000600DBLUE",
+    "name": "Queen / 72 x 60 (183 cm x 152 cm) / 6 (15.2 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 72 x 60 (183 cm x 152 cm) / 6 (15.2 cm)",
+    "configuration": "Official website variant Queen / 72 x 60 (183 cm x 152 cm) / 6 (15.2 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-0d3123d8f99cbdb6",
+    "snapshot": "snapshot-1793832655231-91b9d5",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/Back_Magic_Pro_Plus_600x600.webp?v=1793681585",
+    "sha256": "906864f63a56fcb2bb954d5567cb28f9b9e6239224e521fec347f0e61a7171e3",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "790e970df9e514a7174467dfc75584535345611f66d9a4856bdc051086cafdde",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-09T20:32:54.643Z"
+  },
+  "createdAt": "2026-11-09T20:32:54.643Z",
+  "profileHash": "6c8007a7c4d555600a6e4b4aa350f6bd1f5db6e47d7a4cab5fd6952de36c4d52"
+}

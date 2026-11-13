@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-f182df39-17d3-4456-afa0-7cb6ee79c296",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-59a882cc8517284db651",
+  "productName": "Strength Plus Memory Foam Coir Orthopedic Mattress With Euro Top",
+  "pageUrl": "https://www.duroflexworld.com/products/new-strength-plus-memory-foam-coir-orthopedic-mattress-with-euro-top",
+  "productSnapshot": "snapshot-1793627016415-9a0de8",
+  "variant": {
+    "id": "51541051474052",
+    "sku": "NSTRPL7200600006000200WHITE",
+    "name": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+    "configuration": "Official website variant Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-630e12d8e1c32b3f",
+    "snapshot": "snapshot-1793627016415-9a0de8",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/1_5ca3c525-591d-4093-aee3-b2976cbaa36e_600x600.png?v=1749639388",
+    "sha256": "f87fd10ee85964ebabb08a396fb84e232108ba83ad01c1d473f24b4495e87ceb",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "01cfae4b708d6c16ae90dadfdfd9c6ed3fdfce20675ab9cef25392c731a85f84",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-02T13:51:41.597Z"
+  },
+  "createdAt": "2026-11-02T13:51:41.597Z",
+  "profileHash": "86ccd21b5d23092db3cea2948b61f758cd909ebf358d771ae3a65cf822a4a583"
+}

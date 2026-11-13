@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-9879df5b-46c5-41f9-b3c0-67bfef953c17",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-0c4782a0d37b3e0ad5d9",
+  "productName": "Avalon Elite mov.E Yellow Fabric 3 Seater Sofa",
+  "pageUrl": "https://www.duroflexworld.com/products/avalon-elite-mov-e-3-seater-yellow",
+  "productSnapshot": "snapshot-1791807067969-b92cc3",
+  "variant": {
+    "id": "51907413803140",
+    "sku": "AVALONELITEMOVFABYELLOW3S",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-a2e8a9fb76228a86",
+    "snapshot": "snapshot-1791807067969-b92cc3",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/2_941dc63d-04b9-42b2-b710-ade2687e2bdc_600x600.jpg?v=1780378805",
+    "sha256": "0cff91a85f83f20b7862fe8bd42ec3f2c564b2d96027b340b9c16a173cf652cb",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "01e87e5f9a30801326262ad7ec29749c67ead92bf9395f70843e4fc43fb3ce4c",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-12T13:46:04.151Z"
+  },
+  "createdAt": "2026-10-12T13:46:04.151Z",
+  "profileHash": "36b99467250b511ca688fe41c6c7d41e177cd7316b6c8dd979538ef30b52a741"
+}

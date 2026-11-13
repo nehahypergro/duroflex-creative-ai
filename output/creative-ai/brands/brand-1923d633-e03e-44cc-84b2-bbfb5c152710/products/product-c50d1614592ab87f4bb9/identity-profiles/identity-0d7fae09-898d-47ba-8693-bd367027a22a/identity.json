@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-0d7fae09-898d-47ba-8693-bd367027a22a",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-c50d1614592ab87f4bb9",
+  "productName": "Spine Contour Pillow",
+  "pageUrl": "https://www.duroflexworld.com/products/spine-contour-pillow",
+  "productSnapshot": "snapshot-1793627113608-7c2407",
+  "variant": {
+    "id": "51130792411268",
+    "sku": "SPINECONTOUR240016500400",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-6ba656486b131533",
+    "snapshot": "snapshot-1793627113608-7c2407",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/1_da1fd5ab-2cae-48e4-b756-7fa3facb75cc_600x600.jpg?v=1758870297",
+    "sha256": "d25800fce5d97122fa030e5ca00fa78e474e79c88005bea93a3bb43d1ebf9d4a",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "a6fc5df2356531f6534dcad287e9e23dcbddefd606cd600229090b217e5438c0",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-02T13:51:54.825Z"
+  },
+  "createdAt": "2026-11-02T13:51:54.825Z",
+  "profileHash": "5606617567e4fdb6570e32f4b25b59264e9eb8e0b95361a0eb36ed75afbfa8b6"
+}

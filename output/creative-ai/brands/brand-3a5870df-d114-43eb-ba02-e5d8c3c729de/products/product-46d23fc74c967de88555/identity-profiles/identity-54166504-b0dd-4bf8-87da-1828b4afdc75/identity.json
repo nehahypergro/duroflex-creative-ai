@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-54166504-b0dd-4bf8-87da-1828b4afdc75",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-46d23fc74c967de88555",
+  "productName": "Sofa Kiki - 3 Seater Sofa (Fabric, Sapling Green)",
+  "pageUrl": "https://mysleepyhead.com/products/sofa-kiki-3-seater-sofa-green-color",
+  "productSnapshot": "snapshot-1793736878594-248ac7",
+  "variant": {
+    "id": "52400345645240",
+    "sku": "SHKK3SSSG",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-9ab33d84257a15e9",
+    "snapshot": "snapshot-1793736878594-248ac7",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/Kiki_3S_Sapling_Green_1.jpg?v=1768928771",
+    "sha256": "942b23e9c42e1bf2f5cde8059d456b707f49e5e8d05e13e73e47d001b3455d20",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 2000,
+    "height": 2000,
+    "rasterHash": "cad522352b24fd0517f18acb4f9032860fb7af91cd89af649c4c90ee6933dc37",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-04T03:54:53.013Z"
+  },
+  "createdAt": "2026-11-04T03:54:53.013Z",
+  "profileHash": "714f6329af3db71fcf364ff7085c4b3d2b7fbf1f20f9fab6d486bde0303770a2"
+}

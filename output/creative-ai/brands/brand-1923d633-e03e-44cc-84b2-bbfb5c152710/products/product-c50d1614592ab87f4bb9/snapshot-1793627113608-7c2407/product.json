@@ -1,0 +1,311 @@
+{
+  "id": 10122906599556,
+  "title": "Spine Contour Pillow",
+  "handle": "spine-contour-pillow",
+  "description": "<p><span data-sheets-root=\"1\">No more aches and pains! Our Duroflex Duropedic Spine Contour Pillow is built to give your neck and spine the optimal level of comfort. Its unique, elevated shape, featuring a dual height for maximum comfort, is perfect if you're dealing with neck pain, stiffness from poor posture, or even issues like cervical spondylosis. <br>Stay cool all night with our pillow's advanced open-cell Ice Dough™ technology and Arctic Ice™ outer fabric, designed to boost breathability and absorb body heat to give you a restorative sleep.<br></span></p>",
+  "published_at": "2025-09-26T18:55:55+05:30",
+  "created_at": "2025-09-23T13:07:48+05:30",
+  "vendor": "Duroflex",
+  "type": "Pillows",
+  "tags": [
+    "All FBT",
+    "all_products2025",
+    "BAUSALE26",
+    "BFSALE5",
+    "Binary",
+    "CARNIVAL7",
+    "CART5",
+    "Cervical Neck Pillow",
+    "Cervical Pillow",
+    "Cervical Pillows",
+    "Cover Stitching Work From Home Pillow",
+    "Covers Pillow",
+    "custom_product",
+    "DEALS12",
+    "DuroFBT",
+    "Duropedic Pillow",
+    "FEST5",
+    "For Back Pain Pillow",
+    "For Neck Pain Pillow",
+    "HF2024",
+    "INDIA",
+    "Memory Foam Pillows",
+    "Memory Pillow",
+    "Neck For Pain Pillow",
+    "Neck Pillow",
+    "Neck Rest Pillow",
+    "Neck Support Pillow",
+    "nosavenow",
+    "offer section",
+    "Orthopedic Pillow",
+    "PAYDAY",
+    "PAYDAY5",
+    "Pillow",
+    "RDAY2OFF",
+    "Recron Pillow",
+    "REST5",
+    "SALE5",
+    "searchfilter_Pillow",
+    "Set Pillow",
+    "Sleeping Pillow",
+    "Soft Pillow",
+    "Summer",
+    "video_shop",
+    "Wedge Pillow"
+  ],
+  "price": 179900,
+  "price_min": 179900,
+  "price_max": 179900,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 449900,
+  "compare_at_price_min": 449900,
+  "compare_at_price_max": 449900,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 51130792411268,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "SPINECONTOUR240016500400",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Spine Contour Pillow",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 179900,
+      "weight": 1100,
+      "compare_at_price": 449900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/1_da1fd5ab-2cae-48e4-b756-7fa3facb75cc.jpg?v=1758870297",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/2_25b4c90c-7cd8-4044-a917-caec165eda08.jpg?v=1758870297",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Spine_Contour_Listing_Gif.gif?v=1758891502",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/4_0f7dd62b-7b6e-4efe-809a-db2b407aabc8.jpg?v=1761544447",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/5_787a4b62-d5a6-4031-90f6-f2588851f66c.jpg?v=1761544447",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/6_8e4604e5-c4be-4d48-94ba-f73d7942288f.jpg?v=1761544447",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/7_28fd1c4e-bb65-4689-9941-a9a8cfb92bbd.jpg?v=1761544447",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/8_819c618d-b3a3-4437-9499-9bedb6ac2bc7.jpg?v=1761544447",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/9_5b442f1b-7d5e-4652-ad70-0fe0e2fdb925.jpg?v=1761544447"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/1_da1fd5ab-2cae-48e4-b756-7fa3facb75cc.jpg?v=1758870297",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/spine-contour-pillow",
+  "media": [
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650717847684,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_da1fd5ab-2cae-48e4-b756-7fa3facb75cc.jpg?v=1758870297"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_da1fd5ab-2cae-48e4-b756-7fa3facb75cc.jpg?v=1758870297",
+      "width": 1000
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650717880452,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_25b4c90c-7cd8-4044-a917-caec165eda08.jpg?v=1758870297"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_25b4c90c-7cd8-4044-a917-caec165eda08.jpg?v=1758870297",
+      "width": 1000
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50653079666820,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 700,
+        "width": 700,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Spine_Contour_Listing_Gif.gif?v=1758891502"
+      },
+      "aspect_ratio": 1,
+      "height": 700,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Spine_Contour_Listing_Gif.gif?v=1758891502",
+      "width": 700
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50825070313604,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1080,
+        "width": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/preview_images/0c9e1fe439c24c39977375a0d72a9cfe.thumbnail.0000000000.jpg?v=1761416457"
+      },
+      "aspect_ratio": 1,
+      "duration": 33000,
+      "media_type": "video",
+      "sources": [
+        {
+          "format": "mp4",
+          "height": 480,
+          "mime_type": "video/mp4",
+          "url": "https://cdn.shopify.com/videos/c/vp/0c9e1fe439c24c39977375a0d72a9cfe/0c9e1fe439c24c39977375a0d72a9cfe.SD-480p-0.9Mbps-60886133.mp4",
+          "width": 480
+        },
+        {
+          "format": "mp4",
+          "height": 1080,
+          "mime_type": "video/mp4",
+          "url": "https://cdn.shopify.com/videos/c/vp/0c9e1fe439c24c39977375a0d72a9cfe/0c9e1fe439c24c39977375a0d72a9cfe.HD-1080p-2.5Mbps-60886133.mp4",
+          "width": 1080
+        },
+        {
+          "format": "mp4",
+          "height": 720,
+          "mime_type": "video/mp4",
+          "url": "https://cdn.shopify.com/videos/c/vp/0c9e1fe439c24c39977375a0d72a9cfe/0c9e1fe439c24c39977375a0d72a9cfe.HD-720p-1.6Mbps-60886133.mp4",
+          "width": 720
+        },
+        {
+          "format": "m3u8",
+          "height": 1080,
+          "mime_type": "application/x-mpegURL",
+          "url": "https://cdn.shopify.com/videos/c/vp/0c9e1fe439c24c39977375a0d72a9cfe/0c9e1fe439c24c39977375a0d72a9cfe.m3u8",
+          "width": 1080
+        }
+      ]
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650717913220,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_0f7dd62b-7b6e-4efe-809a-db2b407aabc8.jpg?v=1761544447"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_0f7dd62b-7b6e-4efe-809a-db2b407aabc8.jpg?v=1761544447",
+      "width": 1000
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650717945988,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_787a4b62-d5a6-4031-90f6-f2588851f66c.jpg?v=1761544447"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_787a4b62-d5a6-4031-90f6-f2588851f66c.jpg?v=1761544447",
+      "width": 1000
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650717978756,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_8e4604e5-c4be-4d48-94ba-f73d7942288f.jpg?v=1761544447"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_8e4604e5-c4be-4d48-94ba-f73d7942288f.jpg?v=1761544447",
+      "width": 1000
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650718011524,
+      "position": 8,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_28fd1c4e-bb65-4689-9941-a9a8cfb92bbd.jpg?v=1761544447"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_28fd1c4e-bb65-4689-9941-a9a8cfb92bbd.jpg?v=1761544447",
+      "width": 1000
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650718109828,
+      "position": 9,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/8_819c618d-b3a3-4437-9499-9bedb6ac2bc7.jpg?v=1761544447"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/8_819c618d-b3a3-4437-9499-9bedb6ac2bc7.jpg?v=1761544447",
+      "width": 1000
+    },
+    {
+      "alt": "spine-contour-pillow",
+      "id": 50650718208132,
+      "position": 10,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/9_5b442f1b-7d5e-4652-ad70-0fe0e2fdb925.jpg?v=1761544447"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/9_5b442f1b-7d5e-4652-ad70-0fe0e2fdb925.jpg?v=1761544447",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

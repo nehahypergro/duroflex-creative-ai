@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-4996062d-c581-40cd-a82a-78e53539501b",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-0770bdd3ff733c7cf1df",
+  "productName": "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey",
+  "pageUrl": "https://mysleepyhead.com/products/original-3-layered-bodyiq-orthopedic-memory-foam-mattress-grey",
+  "productSnapshot": "snapshot-1791902256703-12c7f0",
+  "variant": {
+    "id": "53482058383544",
+    "sku": "SHORG720060000500GREY",
+    "name": "Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm)",
+    "configuration": "Official website variant Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-4d1ff9f39206d452",
+    "snapshot": "snapshot-1791902256703-12c7f0",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/Original_Grey_7.jpg?v=1779189393",
+    "sha256": "a0178e002401071ab4c766a75ebad568abc05cecc66d881becfe979192939ddf",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 2000,
+    "height": 2000,
+    "rasterHash": "18734c0cf322cbbb2f871cde8e6b5dc0c811db5509fb72853cd1df928d70b51a",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-09T20:34:20.106Z"
+  },
+  "createdAt": "2026-11-09T20:34:20.106Z",
+  "profileHash": "1c7e38547595b4e07d0c4a1e827d9d5bbdfd65f7a5a3d2c916d3a42a6821d585"
+}

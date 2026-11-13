@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-582719a1-c44c-46a5-a034-b64587e2cc7a",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-45b3f915e4bf3558c623",
+  "productName": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+  "pageUrl": "https://www.duroflexworld.com/products/duropedic-airboost-68-adjustable-firmness-mattress?_gl=1*20p93k*_up*MQ..*_gs*MQ..",
+  "productSnapshot": "snapshot-1792609769891-291d6d",
+  "variant": {
+    "id": "51476984692868",
+    "sku": "AIRBOOST68AIPRO780060000800BLUE",
+    "name": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+    "configuration": "Official website variant Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-a0f5814c8fac19b0",
+    "snapshot": "snapshot-1792609769891-291d6d",
+    "sourceUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Airboost-6_8_jpg.jpg?v=1773923691",
+    "sha256": "3d13bc29a66269211d22200a146eba0a463ebc351c9687cb5e945410b0805a5a",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 1000,
+    "height": 1000,
+    "rasterHash": "76007750d2cfb1f8a51c6921615658fa5260f195d6926f38edb6308edf0548e4",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-21T19:19:42.939Z"
+  },
+  "createdAt": "2026-10-21T19:19:42.939Z",
+  "profileHash": "99c2a10019ec9dfb74ad6ce91fb328cd7d5a5282a1ec2222ce587031f1b848e5"
+}

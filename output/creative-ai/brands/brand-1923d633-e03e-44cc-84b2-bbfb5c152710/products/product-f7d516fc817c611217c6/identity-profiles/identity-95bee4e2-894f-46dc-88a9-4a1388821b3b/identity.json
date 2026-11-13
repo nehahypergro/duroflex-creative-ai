@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-95bee4e2-894f-46dc-88a9-4a1388821b3b",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-f7d516fc817c611217c6",
+  "productName": "Avalon Grande Brown Fabric Recliner - Rock, Rotate & Recline",
+  "pageUrl": "https://www.duroflexworld.com/products/avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+  "productSnapshot": "snapshot-1793736662051-cd0edd",
+  "variant": {
+    "id": "52348538192004",
+    "sku": "GRANDRECRRRFABBR1S",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-5b8325f65647f648",
+    "snapshot": "snapshot-1793736662051-cd0edd",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/2_a610ea44-d931-4083-a8eb-d46fd2727158_600x600.jpg?v=1781856094",
+    "sha256": "6914dc2896946480069574e9acba67dceb1eb8343ddf476d56bbd2750757b863",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "1b33d871097b658137afeceb80a58d07ef964932c5bd01462fbde15043dd502c",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-08T08:49:18.049Z"
+  },
+  "createdAt": "2026-11-08T08:49:18.049Z",
+  "profileHash": "369ea219c5238551efc7fabdd897f22addd43ca3cbf2bd4d3040f41c3ccab17c"
+}

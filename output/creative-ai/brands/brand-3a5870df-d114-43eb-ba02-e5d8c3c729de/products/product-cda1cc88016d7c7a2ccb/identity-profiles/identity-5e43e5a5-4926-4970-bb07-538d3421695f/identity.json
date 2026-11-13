@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-5e43e5a5-4926-4970-bb07-538d3421695f",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-cda1cc88016d7c7a2ccb",
+  "productName": "Napster Sofa Cum Bed 3 seater (Fabric, Indigo Blue)",
+  "pageUrl": "https://mysleepyhead.com/products/napster-sofa-bed-indigo-blue",
+  "productSnapshot": "snapshot-1793835433616-bd16fc",
+  "variant": {
+    "id": "52455656849592",
+    "sku": "SHNAP720060000750IB",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-4bb397e31bc152c1",
+    "snapshot": "snapshot-1793835433616-bd16fc",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/lifestyle_image_1.jpg?v=1768840211",
+    "sha256": "5d3c8a24ff5a1242b6c1f41f04fdcfe0f6908ff5dbcec889d5b6a30dfd10b690",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 1000,
+    "height": 1000,
+    "rasterHash": "981f371e4739b5c4fe5181b97594bf911549b746034fb81cfd902798cb38907b",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-05T08:55:19.030Z"
+  },
+  "createdAt": "2026-11-05T08:55:19.030Z",
+  "profileHash": "571c11d6b47d15683ccd2be2efd3b8c61e50459ac17d2c522a8609a7b82fea3a"
+}

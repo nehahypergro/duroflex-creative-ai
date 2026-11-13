@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-40691e0a-40dd-4344-a3de-788a4ccc630f",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-56e87d550730114614b8",
+  "productName": "Sofa Drip Pro - 3 Seater Sofa (Fabric, Coco Brown)",
+  "pageUrl": "https://mysleepyhead.com/products/sofa-drip-pro-3-seater-sofa-fabric-coco-brown",
+  "productSnapshot": "snapshot-1792577048910-f09181",
+  "variant": {
+    "id": "54103381442744",
+    "sku": "SHDPPRO3SBRWN",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-238c564f65ac8e2f",
+    "snapshot": "snapshot-1792577048910-f09181",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/Drip_pro_PDP_3S_Brown_1.jpg?v=1789460454",
+    "sha256": "2288db0acae075490cc012c7fa38b07b0bd5f5bb69eef42c7dd10bc9a1679bfe",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 1200,
+    "height": 1200,
+    "rasterHash": "daabb1f657d90c97059249868966723c3c4b2ba7fc35940d729410f41fb35b4a",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-21T10:43:31.894Z"
+  },
+  "createdAt": "2026-10-21T10:43:31.894Z",
+  "profileHash": "fe60e05414e77e63211eeebba0bf5e25113703b5e76312ebff49b1e0a491015d"
+}

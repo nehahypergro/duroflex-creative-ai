@@ -1,0 +1,481 @@
+{
+  "batchSummary": "Reviewed all 38 reference images individually. The most useful Duroflex starting points combine legible bedroom layouts, warm layered surfaces, restrained greenery and daylight with a visible architectural source. R20 and R22 offer particularly useful domestic-scale references; many others require substantial editing of resort, rustic or ornamental cues. Borrow spatial principles, not reference furniture identities or whole palettes. All references remain advisory and potentially synthetic; materials and origins are unverified. The supplied positioning is strategy, and the Visual World Guide remains a draft blueprint—not adoption, quality approval or product-efficacy evidence. Any execution must adapt the room to the exact SKU while preserving its colour, fabric, branding and construction.",
+  "observations": [
+    {
+      "imageId": "R20",
+      "visibleEvidence": "A cream bed sits against sage walls beneath orange abstract artwork. Woven-looking headboard panels, an oval mirror, dual-screen desk, slatted upper wall and ceiling fan add detail.",
+      "spatialReading": "The frontal view keeps the bed dominant, with a usable left-side passage. Daylight enters from the curtained right edge; the workstation supplies an everyday-use cue.",
+      "brandMeaning": "Useful domestic, contemporary mattress mood rather than destination luxury.",
+      "application": "Borrow integrated functionality and sage-neutral layering; simplify artwork and screen prominence around the exact SKU.",
+      "authorityAndLimits": "Orange artwork is not evidence of Duroflex red."
+    },
+    {
+      "imageId": "R36",
+      "visibleEvidence": "A low platform bed, taupe textiles, wood-toned ceiling, globe pendant and round ottoman face full-height left glazing. An open publication rests on the ottoman.",
+      "spatialReading": "A frontal composition shows generous foreground space. Left sunlight creates diagonal wall and floor shadows; oversized branches compete with the bed.",
+      "brandMeaning": "A warm, quiet bedroom mood with strong daylight structure.",
+      "application": "Borrow tonal depth and window geometry; reduce decorative branches and platform projections that complicate circulation or SKU presentation.",
+      "authorityAndLimits": "The low bed does not establish mattress construction."
+    },
+    {
+      "imageId": "R34",
+      "visibleEvidence": "Mint and blush walls surround a heavily dressed bed, large abstract artwork, paired woven-looking pendants, small tables and two foreground poufs.",
+      "spatialReading": "Tall left glazing brightens the three-quarter view. The bed anchors the frame, but poufs crowd its approach and multiple pastel accents spread attention.",
+      "brandMeaning": "An airy, cheerful bedding mood, not a demonstrated wellbeing benefit.",
+      "application": "Borrow daylight and gentle colour separation; reduce foreground furniture and artwork dominance. Adapt colours to the SKU, not vice versa.",
+      "authorityAndLimits": "Reference pastels are not an expanded brand palette."
+    },
+    {
+      "imageId": "R01",
+      "visibleEvidence": "A neutral bed is framed by tall plaster-looking arches, exposed brickwork, rough ceiling beams and paired black lanterns. A taupe throw interrupts white bedding.",
+      "spatialReading": "The axial portrait view creates layered depth through foreground arches. Soft light enters from the left; narrow side passages remain visible.",
+      "brandMeaning": "Sheltered calm is useful, but the overall character is strongly rustic.",
+      "application": "Borrow architectural framing and restrained bedding; replace distressed surfaces and historical lantern styling with contemporary details.",
+      "authorityAndLimits": "Neither age nor heritage provenance can be established."
+    },
+    {
+      "imageId": "R26",
+      "visibleEvidence": "A white bed with hanging sheer fabric occupies the right side beside broad glazing and an open pool courtyard. Pale flooring and a coarse-looking rug reflect strong daylight.",
+      "spatialReading": "The diagonal view connects bedroom, water and planting. The open left route is clear, but the pool competes with the bed.",
+      "brandMeaning": "Airiness is transferable; resort escape conflicts with an everyday-reset emphasis.",
+      "application": "Borrow shaded indoor-outdoor connection; substitute a domestic garden outlook and simplify canopy-like styling.",
+      "authorityAndLimits": "The scene does not prove climate performance or location."
+    },
+    {
+      "imageId": "R43",
+      "visibleEvidence": "A grey upholstered bed stands against vertical wood-toned boards beneath a round mirror. Paired lamps illuminate neutral bedding; a right window reveals foliage.",
+      "spatialReading": "The three-quarter portrait view shows a clear foreground rug and floor. Right daylight combines with warm lamp pools; the mirror repeats the opening.",
+      "brandMeaning": "Useful intimate, sheltered mattress mood.",
+      "application": "Borrow warm-cool surface contrast; lighten extensive panelling and reduce matching-lamp formality if it becomes lodge-like. Check reflections when inserting the SKU.",
+      "authorityAndLimits": "Visible grain does not verify timber composition."
+    },
+    {
+      "imageId": "R58",
+      "visibleEvidence": "Rust-coloured bedding sits below a steep reddish wood-toned ceiling. A dresser, small stool lamp, globe pendant and tall plant accompany a large right window.",
+      "spatialReading": "The tall composition gives substantial weight to the ceiling. Right daylight brightens open floor space; wrinkled bedding and small dresser objects suggest use.",
+      "brandMeaning": "A warm, informal bedroom mood with more visual energy than beige-only references.",
+      "application": "Borrow domestic looseness and greenery; reduce ceiling dominance and adapt the extensive rust colour around the product.",
+      "authorityAndLimits": "Rust textiles are not a Duroflex red specification."
+    },
+    {
+      "imageId": "R02",
+      "visibleEvidence": "A cream bed with clay and charcoal accents sits among pale beams, arched niches, tall glazed doors and a built-in bench.",
+      "spatialReading": "The bed occupies the right of a broad diagonal composition. Left sunlight throws long shadows across the rug; foreground circulation remains open.",
+      "brandMeaning": "A breathable, tactile bedroom mood with selective architectural warmth.",
+      "application": "Borrow directional light, recess depth and restrained contrast. Simplify Mediterranean-style detailing rather than copying the complete setting.",
+      "authorityAndLimits": "The dressed bed supplies no exact mattress evidence."
+    },
+    {
+      "imageId": "R03",
+      "visibleEvidence": "Sage bedding, blue stripes and floral pillows sit beneath beams and a hanging textile. An arched blue window, niche ceramics and weathered-looking cabinets surround the bed.",
+      "spatialReading": "Right-side sunlight crosses the room toward the left wall. An arch beside the bed leads to storage; patterned surfaces compete within the wide composition.",
+      "brandMeaning": "Warm domestic layering is useful; rustic decoration is excessive for the draft direction.",
+      "application": "Borrow the opening-to-storage relationship and muted contrast; remove competing prints and distressed finishes.",
+      "authorityAndLimits": "Stylistic resemblance does not establish geographic origin."
+    },
+    {
+      "imageId": "R04",
+      "visibleEvidence": "White arches open toward a vivid blue sea view. Blue patterned bedding and floor tiles surround a pale bed, with a wooden-looking bench and drinks tray at its foot.",
+      "spatialReading": "The portrait view draws attention through the opening, away from the mattress. Strong exterior light brightens the room; the bench narrows the foot approach.",
+      "brandMeaning": "Freshness is useful, but destination scenery overwhelms everyday restoration.",
+      "application": "Borrow aperture depth; replace the scenic spectacle and reduce pattern repetition and foreground obstruction.",
+      "authorityAndLimits": "No location or hospitality provenance is verified."
+    },
+    {
+      "imageId": "R05",
+      "visibleEvidence": "Dark ceiling beams and a large lantern overlook white bedding, blue-orange cushions, a patterned rug and a woven-looking chair. An arched glazed door occupies the right.",
+      "spatialReading": "Right daylight illuminates a compact seating-and-bed arrangement. The portrait crop cuts the bed at left while the rug and overhead lantern attract attention.",
+      "brandMeaning": "Tactile warmth is transferable; ornamental rustic styling is not a complete Duroflex direction.",
+      "application": "Borrow window scale and a secondary reading seat; simplify the lantern, rug and cushion patterns.",
+      "authorityAndLimits": "The cropped frame cannot establish full circulation."
+    },
+    {
+      "imageId": "R06",
+      "visibleEvidence": "A white-and-taupe bed sits beneath pale pitched beams beside large windows. A textured rug, weathered-looking bedside table and sculptural driftwood-like objects add texture.",
+      "spatialReading": "The side-on portrait crop emphasizes bedding and the open foreground aisle. Soft back-left daylight reveals layered pale surfaces, while the headboard extends outside the frame.",
+      "brandMeaning": "A quiet, tactile mattress or bedding mood.",
+      "application": "Borrow tonal separation and accessible floor space; replace rustic sculptural props and widen framing for a complete product hero.",
+      "authorityAndLimits": "The objects' actual materials are unverified."
+    },
+    {
+      "imageId": "R07",
+      "visibleEvidence": "Wraparound glazing reveals an ocean horizon. A white bed, grey rug, dark chairs and bedside cabinet occupy a large, pale room with sculptural pendant lighting.",
+      "spatialReading": "The wide corner view emphasizes the panorama and expansive circulation. Daylight enters across the left and rear; the bed remains secondary to the architecture.",
+      "brandMeaning": "Spatial openness is useful, but the luxury outlook risks making rest feel exceptional.",
+      "application": "Borrow clear zoning and horizon-level openness; use a domestic outlook and bring the SKU forward.",
+      "authorityAndLimits": "The view does not establish location or ownership."
+    },
+    {
+      "imageId": "R08",
+      "visibleEvidence": "Pale blue walls, white bedding and blue stripes surround a simple upholstered bed. Weathered-looking tables hold coral-shaped ornaments beside bright right windows.",
+      "spatialReading": "A compact three-quarter view retains visible floor around the bed. Right daylight and lifted curtains suggest air movement; the upper left wall offers genuine visual breathing room.",
+      "brandMeaning": "A light, fresh bedding mood without needing elaborate architecture.",
+      "application": "Borrow simple proportions and daylight; remove literal coastal ornaments and soften repeated stripes.",
+      "authorityAndLimits": "Curtain movement does not prove ventilation or cooling performance."
+    },
+    {
+      "imageId": "R09",
+      "visibleEvidence": "A tan upholstered bed carries numerous blue and floral cushions beneath seascape artwork. White wall panelling, a woven blind and a tray-covered bench complete the setting.",
+      "spatialReading": "Left daylight gives soft definition. The tight three-quarter composition is bed-led, but the bench obscures its foot and layered accessories consume surrounding space.",
+      "brandMeaning": "Inviting textile richness is useful; coordinated coastal styling becomes overly staged.",
+      "application": "Borrow blue-neutral depth within supplied guidance; reduce cushions, decorative vessels and bench obstruction.",
+      "authorityAndLimits": "Surface styling cannot establish mattress comfort or quality."
+    },
+    {
+      "imageId": "R10",
+      "visibleEvidence": "A cream bed, draped bench and coarse-looking rug sit beside corner glazing overlooking dunes and water. Pale beams and a large woven-looking pendant frame the room.",
+      "spatialReading": "The portrait crop cuts the bed at right. Left sunlight makes long, legible floor shadows; glazing-side circulation stays open, while the bench partly hides the base.",
+      "brandMeaning": "An informal, sunlit bedroom mood with restrained lived-use cues.",
+      "application": "Borrow coherent sunlight and relaxed textile placement; reduce pendant dominance and reframe the exact product.",
+      "authorityAndLimits": "The coastal setting is inspiration, not a required context."
+    },
+    {
+      "imageId": "R11",
+      "visibleEvidence": "A curved, woven-looking bed frame supports white bedding and a pale knitted runner. Rounded side tables and shaded lamps sit against sheer-covered windows with palms and water beyond.",
+      "spatialReading": "The close three-quarter view makes the bed primary. Diffuse window light separates cream layers; the crop leaves limited evidence of side circulation.",
+      "brandMeaning": "A soft, tactile mattress-and-bedding mood.",
+      "application": "Borrow light diffusion and subtle surface contrast, not the reference bed design. Reduce tropical styling if it reads as a holiday suite.",
+      "authorityAndLimits": "No frame material or construction is verified."
+    },
+    {
+      "imageId": "R12",
+      "visibleEvidence": "Floral pillows and curtains, pink-striped bedding and a sage throw fill a compact room with exposed beams, candle-style sconces and a radiator below the left window.",
+      "spatialReading": "Left daylight illuminates the bed diagonally. Layered rugs and numerous patterns compress the foreground, while the bed dominates the portrait frame.",
+      "brandMeaning": "Domestic warmth is present, but cottage decoration conflicts with contemporary restraint.",
+      "application": "Borrow the modest room scale and tactile throw; simplify patterns, antique-style lighting and excess rug layers.",
+      "authorityAndLimits": "No demographic or regional identity follows from this styling."
+    },
+    {
+      "imageId": "R13",
+      "visibleEvidence": "A tall cream headboard sits against a high panelled wall with a small framed landscape. A timber-looking bench, patterned rug, potted tree and oversized knitted throw add layers.",
+      "spatialReading": "Left daylight opens the pale room. The portrait composition includes ample height and floor, but the bench and pooling throw obscure the bed's lower edge.",
+      "brandMeaning": "Approachable bedroom warmth, with a farmhouse-style undertone.",
+      "application": "Borrow scale, greenery and tonal texture; simplify the bench and contain the throw away from circulation.",
+      "authorityAndLimits": "No product specification is visible beneath the dressing."
+    },
+    {
+      "imageId": "R14",
+      "visibleEvidence": "A large bed shares a vaulted room with a lit fireplace, tall gridded windows, several chairs and a foot bench. Pale textiles contrast with stone-looking and wood-toned surfaces.",
+      "spatialReading": "Rear daylight and warm lamps establish multiple zones. The wide view conveys generous circulation, but the fireplace and seating compete with the bed.",
+      "brandMeaning": "Sheltered comfort is useful; lodge-like grandeur is less aligned with ordinary daily reset.",
+      "application": "Borrow seating separation; reduce suite scale, fireplace emphasis and heavy winter styling.",
+      "authorityAndLimits": "The image does not demonstrate thermal comfort."
+    },
+    {
+      "imageId": "R15",
+      "visibleEvidence": "White bedding and sage cushions sit beneath pale beams and a woven-looking pendant. A foot bench, slim black chair, leaning mirror and plant complete the room.",
+      "spatialReading": "Rear and left daylight create an airy envelope. The tall frame shows clear left-side circulation, while the bench partly blocks the bed base.",
+      "brandMeaning": "A fresh, informal bedroom mood with an adjacent reading zone.",
+      "application": "Borrow light furniture profiles and restrained greenery; simplify farmhouse ceiling cues and move the bench for product visibility.",
+      "authorityAndLimits": "Reference furnishings are not substitutes for the selected SKU."
+    },
+    {
+      "imageId": "R16",
+      "visibleEvidence": "A low bed occupies a broad platform beneath a woven-looking ceiling. Left gridded glazing illuminates a tree, recessed shelves, bowls and taupe textured walls.",
+      "spatialReading": "Sharp left-side light casts foliage shadows across the platform and floor. The bed is cropped at right; bowls on its projecting ledge complicate access.",
+      "brandMeaning": "Useful tonal depth and stillness, but the styling feels highly curated.",
+      "application": "Borrow light-shadow structure and recesses; remove platform clutter and accommodate the actual SKU height without redesigning it.",
+      "authorityAndLimits": "Low-profile bedding is not evidence of mattress construction."
+    },
+    {
+      "imageId": "R17",
+      "visibleEvidence": "Dark structural-looking frames surround pale sliding panels and a garden opening. A very low sleeping surface, segmented mat-like floor, woven basket and hanging lamp fill the room.",
+      "spatialReading": "Rear daylight draws the eye through the opening. The portrait crop retains a right-side route, with the sleeping surface low in the foreground.",
+      "brandMeaning": "Filtered nature and enclosure are useful; literal vernacular imitation is not.",
+      "application": "Borrow framed greenery and restrained contrast; translate them into contemporary domestic architecture around the exact product.",
+      "authorityAndLimits": "The setting's geographic origin and floor materials remain unverified."
+    },
+    {
+      "imageId": "R18",
+      "visibleEvidence": "A dark bed frame with woven-looking headboard panels is dressed in neutrals, wine and mustard. A carved screen, patterned rug, slim pendants and left-side chair add detail.",
+      "spatialReading": "Soft left daylight keeps the bed dominant in a three-quarter view. Side tables and the chair occupy distinct zones, but ornament repeats across several surfaces.",
+      "brandMeaning": "Craft warmth is useful; accumulated decoration risks ornate luxury.",
+      "application": "Borrow one crafted detail and restrained deep accents; simplify the screen, rug or cushion pattern.",
+      "authorityAndLimits": "Wine accents do not establish a brand-red treatment."
+    },
+    {
+      "imageId": "R19",
+      "visibleEvidence": "A compact bedroom combines a full-height wardrobe, slatted headwall, stone-looking panels, circular rug, window seat and a dressing surface with an illuminated round mirror.",
+      "spatialReading": "The entry-side view reveals a left passage toward rear windows. Soft daylight mixes with ceiling coves and wall lighting; integrated storage makes everyday functions legible.",
+      "brandMeaning": "Useful contemporary domestic planning, though layered feature lighting feels suite-like.",
+      "application": "Borrow storage and circulation; reduce illuminated architectural accents and keep the product distinct from the surround.",
+      "authorityAndLimits": "The image cannot verify clearance dimensions or buildability."
+    },
+    {
+      "imageId": "R21",
+      "visibleEvidence": "An asymmetrical woven-looking headboard rises above taupe bedding beside a rounded dark table and pendant. Bold black-and-cream floor pattern contrasts with a broad pale wall.",
+      "spatialReading": "The portrait crop cuts the bed at left and leaves real upper-wall space. Soft lateral light reveals texture; no opening is shown, and full circulation is unavailable.",
+      "brandMeaning": "A useful tactile bedroom detail, but sculptural furniture and flooring compete.",
+      "application": "Borrow wall breathing room and material contrast; simplify the floor and avoid copying the reference headboard.",
+      "authorityAndLimits": "Lighting source and complete room layout are outside the crop."
+    },
+    {
+      "imageId": "R22",
+      "visibleEvidence": "A wood-toned box bed sits below a vertically padded headboard and pale textured wall. Corner windows, a striped chair, a plant and restrained geometric cushions complete the room.",
+      "spatialReading": "Soft right daylight reveals the bed base clearly. The three-quarter view shows a modest seating corner and open foreground, with the mattress covered.",
+      "brandMeaning": "A strong domestic-scale starting point for contemporary mattress presentation.",
+      "application": "Borrow architectural texture and compact zoning; quiet the striped chair and dress the exact SKU for visibility.",
+      "authorityAndLimits": "Visible base proportions do not establish actual dimensions."
+    },
+    {
+      "imageId": "R23",
+      "visibleEvidence": "A broad rounded headboard spans a beige room with a tiered pendant, paired sconces, lounge chairs, foot bench, wardrobe and illuminated dressing niche.",
+      "spatialReading": "The frontal wide view is highly ordered. Left daylight combines with decorative lighting; ample circulation surrounds the bed, but coordinated furnishings and wall treatments share attention.",
+      "brandMeaning": "Tonal richness is useful; the complete composition reads as formal luxury.",
+      "application": "Borrow surface variation within a narrow tonal range; reduce suite scale, lighting layers and foreground furniture.",
+      "authorityAndLimits": "Visual polish is not evidence of Duroflex quality approval."
+    },
+    {
+      "imageId": "R24",
+      "visibleEvidence": "A small central bed with woven-looking headboard panels and matching tables stands against taupe walls. Tiny pendants and a side artwork punctuate the otherwise sparse room.",
+      "spatialReading": "Left daylight crosses a large reflective-looking tiled foreground. Frontal symmetry clarifies the bed, but the distant framing makes it relatively small.",
+      "brandMeaning": "Quiet product surroundings are useful; excessive emptiness weakens warmth and hierarchy.",
+      "application": "Borrow simple geometry and genuine wall space; crop excess floor and add one credible everyday-use cue.",
+      "authorityAndLimits": "Floor appearance does not verify material or finish."
+    },
+    {
+      "imageId": "R25",
+      "visibleEvidence": "A bed sits inside a tall pale arched recess below a dark ceiling. Black lamps, a patterned rug, small stool, tasseled throw and shoes near the curtain add contrast.",
+      "spatialReading": "The frontal portrait view exaggerates height while revealing tight side clearances. Left light brightens the walls; the stool occupies the foot approach.",
+      "brandMeaning": "Architectural quiet and small lived cues are useful, but the setting is strongly stylized.",
+      "application": "Borrow the real wall recess; widen usable circulation and simplify rug and tassel detailing.",
+      "authorityAndLimits": "Photographic framing cannot establish safe clearance measurements."
+    },
+    {
+      "imageId": "R27",
+      "visibleEvidence": "A pale bed faces an arched glazed balcony opening. Layered backlit wall arches, shaggy woven-looking pendants, a ceiling fan, leaning mirror and desk chair surround it.",
+      "spatialReading": "Left daylight and the mirror expand the wide corner view. The foreground is open, but repeated arches and statement pendants compete with the bed.",
+      "brandMeaning": "Breezy domestic potential is obscured by resort-like decorative staging.",
+      "application": "Borrow the opening and practical fan; simplify illuminated arches, hanging textures and mirror placement around the SKU.",
+      "authorityAndLimits": "The reference does not verify climate suitability or provenance."
+    },
+    {
+      "imageId": "R28",
+      "visibleEvidence": "A low platform bed sits beneath a tall woven-looking roof and fan. Rear cupboards flank an arched bathing-area opening; a desk, patterned rug, sculpture and plants occupy the right.",
+      "spatialReading": "The wide view exposes a clear rear passage. Daylight mixes with warm eave lighting, while roof volume and the bathing vista reduce product prominence.",
+      "brandMeaning": "Airy zoning is useful; the full scene strongly suggests destination retreat.",
+      "application": "Borrow clear circulation and broad wall planes; remove bathing spectacle and reduce decorative staging.",
+      "authorityAndLimits": "Neither roof material nor hospitality origin is established."
+    },
+    {
+      "imageId": "R29",
+      "visibleEvidence": "Woven-looking surfaces repeat across the pitched ceiling, large pendant, bed, bench and chairs. White bedding and a pale green runner sit beside large plants and a sea-facing window.",
+      "spatialReading": "Rear-right daylight outlines the furnishings. The portrait composition is crowded by the pendant and foliage; the bench blocks the bed foot.",
+      "brandMeaning": "Natural-looking warmth is useful, but repeated weaving and decorative planting become thematic.",
+      "application": "Borrow one tactile accent and a garden connection; reduce plants, matching furniture and pendant scale.",
+      "authorityAndLimits": "Natural appearance does not establish composition or sustainability."
+    },
+    {
+      "imageId": "R30",
+      "visibleEvidence": "A blush channelled headboard and matching accents sit against pale grey walls. Metallic-looking tables and lamps, a round mirror, abstract artwork and a small window-side stool surround white bedding.",
+      "spatialReading": "Right daylight defines a compact three-quarter view. The bed remains primary, with visible foreground access but numerous small decorative elements.",
+      "brandMeaning": "A gentle, approachable bedroom mood without demographic implications.",
+      "application": "Borrow soft contrast and modest proportions; reduce shiny accessories and adapt surrounding colours to the product.",
+      "authorityAndLimits": "Blush styling does not imply a particular audience identity."
+    },
+    {
+      "imageId": "R31",
+      "visibleEvidence": "A rounded cream bed and ribbed pouf sit beneath ornate wall mouldings and framed relief artwork. Gold-toned pendants, a fringed ceiling fixture and an arched window add detail.",
+      "spatialReading": "Left daylight illuminates the tall portrait composition. The bed base is visible, but ceiling ornament and the foreground pouf compete for attention.",
+      "brandMeaning": "Soft curves are useful; accumulated classical ornament conflicts with restrained modernism.",
+      "application": "Borrow gentle geometry only; simplify mouldings and fixtures without altering the selected product design.",
+      "authorityAndLimits": "Curved reference furniture does not authorize SKU redesign."
+    },
+    {
+      "imageId": "R32",
+      "visibleEvidence": "A cream bed with stacked pillows and a heavy throw sits beneath floral artwork. Ceiling coves, spotlights, metallic-looking pendants and a bedside lamp illuminate the neutral room.",
+      "spatialReading": "Right-window daylight mixes with several artificial sources. A padded bench obscures the foot in the tight three-quarter view, while curtains occupy much of the background.",
+      "brandMeaning": "Softness is useful, but layered lighting and coordinated furniture feel hotel-like.",
+      "application": "Borrow restrained tonal contrast; simplify lighting and remove bench obstruction for product clarity.",
+      "authorityAndLimits": "A neutral palette alone does not establish draft alignment."
+    },
+    {
+      "imageId": "R33",
+      "visibleEvidence": "A scalloped, loop-textured bed is surrounded by cream bedding, a shaggy rug, veined-looking tables and a tall arched mirror. Books and a small lamp sit at left.",
+      "spatialReading": "Warm left daylight creates patches across the bed and floor. Tight framing and the mirror amplify the product shape, but similar tones reduce edge separation.",
+      "brandMeaning": "Tactility is useful; all-over softness and sculptural styling risk trend dependence.",
+      "application": "Borrow subtle texture contrast; improve product separation and simplify surrounding curves and reflection complexity.",
+      "authorityAndLimits": "Visible texture does not identify upholstery fibre."
+    },
+    {
+      "imageId": "R35",
+      "visibleEvidence": "A beige bed with a gridded quilt sits against tall padded-looking wall panels. Shelving, a curved seat and low table lead toward broad terrace glazing and greenery.",
+      "spatialReading": "The wide diagonal view gives the bed foreground weight and separates seating from circulation. Rear-left daylight mixes with warm concealed lighting.",
+      "brandMeaning": "Useful integrated bedroom zoning, though extensive coordinated upholstery feels suite-like.",
+      "application": "Borrow the garden connection and functional layers; reduce wall-treatment dominance and introduce a modest everyday-use cue.",
+      "authorityAndLimits": "The small image cannot support fine construction assessment."
+    }
+  ],
+  "relationships": [
+    {
+      "finding": "Domestic functionality provides a stronger starting point than scenic luxury.",
+      "evidenceIds": [
+        "R20",
+        "R19",
+        "R22",
+        "V018",
+        "P055",
+        "P057"
+      ],
+      "interpretation": "R20 includes a workstation and fan; R19 integrates storage, dressing and window seating; R22 fits a small chair beside corner windows. These concrete functions can support the supplied dependable-companion positioning more directly than spectacular surroundings. Their suitability remains an interpretation against draft guidance, not approval."
+    },
+    {
+      "finding": "Daylight can organize the entire composition without added contrast effects.",
+      "evidenceIds": [
+        "R02",
+        "R10",
+        "R16",
+        "R36"
+      ],
+      "interpretation": "Visible openings correspond to directional light, cast shadows and illuminated floor planes. Borrow those spatial relationships when constructing a scene, ensuring the exact product shares the same light direction, contact shadows and occlusion. Do not imitate the brightness with haze, blur masks, white patches or photographic fades."
+    },
+    {
+      "finding": "Useful negative space is already present in the architecture.",
+      "evidenceIds": [
+        "R21",
+        "R24",
+        "R25",
+        "R36",
+        "V014"
+      ],
+      "interpretation": "Broad wall planes and recesses create genuine breathing room. R24 also shows the risk of excessive empty foreground, while R21 and R36 have pendants interrupting otherwise quiet wall areas. Plan framing and any copy placement around these actual surfaces rather than manufacturing blank areas."
+    },
+    {
+      "finding": "Tactile variety works better than repeating one decorative material everywhere.",
+      "evidenceIds": [
+        "R11",
+        "R15",
+        "R43",
+        "R29",
+        "V012",
+        "V014"
+      ],
+      "interpretation": "R11, R15 and R43 separate pale textiles, darker outlines and wood- or woven-looking accents. R29 repeats weaving across roof, lighting and furniture until it becomes a theme. Borrow balanced surface contrast, not a requirement for any presumed natural material."
+    },
+    {
+      "finding": "Several references frame rest as a destination experience rather than an everyday reset.",
+      "evidenceIds": [
+        "R04",
+        "R07",
+        "R26",
+        "R28",
+        "P028",
+        "P057",
+        "V018"
+      ],
+      "interpretation": "Sea panoramas, a pool directly adjoining the bed and a visible bathing suite pull attention toward escape and exceptional surroundings. Retain openness or shaded greenery where useful, but translate them into ordinary domestic settings. These visual cues do not establish the references' actual location or hospitality use."
+    },
+    {
+      "finding": "Colour depth need not come from brand-red room styling.",
+      "evidenceIds": [
+        "R20",
+        "R34",
+        "R58",
+        "R18",
+        "V036",
+        "V128"
+      ],
+      "interpretation": "Sage, blush-mint, rust and wine accents demonstrate different ways to distinguish textiles from architectural backgrounds. They are reference relationships, not additional Duroflex palette rules. Orange artwork or wine cushions should not be labelled brand red; surrounding colours must adapt to the exact SKU."
+    },
+    {
+      "finding": "Furniture hierarchy and mattress visibility are different problems.",
+      "evidenceIds": [
+        "R09",
+        "R22",
+        "R23",
+        "R24",
+        "R32",
+        "V065"
+      ],
+      "interpretation": "R22 and R24 show bed bases clearly, while benches obstruct the foot in R09, R23 and R32. Yet all five substantially dress the mattress. A Duroflex product hero requires deliberate camera and bedding decisions to reveal the relevant SKU features, not merely placing a bed at the centre."
+    },
+    {
+      "finding": "The batch can inform room-scale and detail framing, but not all draft shot classes.",
+      "evidenceIds": [
+        "R07",
+        "R28",
+        "R16",
+        "R21",
+        "R22",
+        "R24",
+        "V065"
+      ],
+      "interpretation": "R07 and R28 emphasize the surrounding world; R16 and R21 offer cropped spatial details; R22 and R24 offer clearer whole-bed views. These are useful framing analogies only. None supplies an inhabited product interaction or credible technology-detail evidence for the draft Inhabited Hero and Intelligence classes."
+    },
+    {
+      "finding": "Selective borrowing is essential where references carry strong stylistic signatures.",
+      "evidenceIds": [
+        "R01",
+        "R03",
+        "R17",
+        "R31",
+        "V013"
+      ],
+      "interpretation": "Rustic arches and beams, cottage-like pattern layering, traditional sliding-panel grammar and classical mouldings each impose a distinctive setting. Borrow an aperture, shadow pattern or proportion—not the full decorative package. The draft global-style filter itself calls for borrowing rather than copying."
+    },
+    {
+      "finding": "Multiple architectural features can compete even within a quiet palette.",
+      "evidenceIds": [
+        "R19",
+        "R23",
+        "R31",
+        "R32",
+        "V004",
+        "V014"
+      ],
+      "interpretation": "Backlit mirrors, coves, slats, statement pendants, relief art and ornate mouldings create competing focal points across these rooms. Beige or cream does not automatically make the world quieter around the product. Simplifying feature count is more useful than merely reducing colour saturation."
+    },
+    {
+      "finding": "Small use cues offer a route toward humanity, but do not replace people or activity.",
+      "evidenceIds": [
+        "R20",
+        "R25",
+        "R36",
+        "R10",
+        "P055",
+        "V014"
+      ],
+      "interpretation": "Screens, shoes, an open publication and a casually draped throw suggest ordinary routines without showing an occupant. Such cues can reduce showroom sterility, but they do not demonstrate rest, body support, emotional recovery or natural human-product contact."
+    },
+    {
+      "finding": "Pattern competition appears across otherwise very different styles.",
+      "evidenceIds": [
+        "R03",
+        "R05",
+        "R09",
+        "R12",
+        "R21"
+      ],
+      "interpretation": "Repeated stripes, florals, rug motifs and patterned flooring distribute attention away from the mattress. Keep at most the reference detail that helps the selected product stand out; do not transfer the entire pattern stack into a Duroflex scene."
+    },
+    {
+      "finding": "The references offer a range of bedroom moods, not evidence of a complete category system.",
+      "evidenceIds": [
+        "R34",
+        "R43",
+        "R58",
+        "R35",
+        "V095",
+        "V108"
+      ],
+      "interpretation": "Airy pastels, enclosed wood-toned warmth, informal rust accents and restrained contemporary neutrals demonstrate mood variation through light and surroundings. This may inform bedroom executions, but no sofa or recliner comparison is present to validate the draft same-world test across categories."
+    }
+  ],
+  "contradictions": [
+    "R04, R07, R26 and R28 favour exceptional retreat settings, while P028 and P057 emphasize restoration for everyday life rather than luxurious wellness escape. User selection does not remove that strategic tension.",
+    "R01, R03, R05 and R12 rely heavily on rustic or historical decoration; R23, R31 and R32 lean toward formal luxury. These are selective inspiration sources, not blanket matches to draft V013–V018.",
+    "R24 approaches emptiness, whereas R29 and R31 accumulate decorative features. Both extremes challenge the draft principle of 'calm, never empty' in different ways.",
+    "Beds frequently dominate the images while the mattresses remain covered or partly obstructed. Attractive bedroom hierarchy therefore does not equal adequate Duroflex product visibility.",
+    "Every reference is unoccupied. The batch cannot substantiate the draft 'human, never posed' principle or the Inhabited Hero shot class through visible human behaviour.",
+    "Draft V128 permits a 'single object' under red usage while also prohibiting 'red props'. That distinction needs clarification; these references do not resolve it, and it cannot justify recolouring an exact SKU."
+  ],
+  "gaps": [
+    "No exact Duroflex SKU references, approved product photography, dimensions, fabric specifications or branding-placement assets are supplied for scene matching.",
+    "No people are shown, so supported anatomy, body-product contact, believable loading and inhabited activities cannot be assessed.",
+    "The batch contains bedrooms only. It does not test living-room circulation, sofa or recliner hierarchy, or cross-category continuity.",
+    "No current website captures or rendered brand-system pages are attached here. Logo application, typography, red behaviour and current campaign practice cannot be visually audited from this batch.",
+    "The positioning and guide excerpts are text context, not visual proof of implementation. Hidden slides, substituted fonts, videos and the full 151-slide draft have not been visually reviewed here.",
+    "Reference origins, authenticity, real materials, measured clearances and lighting setups remain unverified; plausible-looking images are not construction documentation.",
+    "Neither these rooms nor the supplied strategic propositions establish exact-product stress relief, pain relief, airflow, cooling or other efficacy claims."
+  ]
+}

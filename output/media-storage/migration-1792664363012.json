@@ -1,0 +1,12 @@
+{
+  "startedAt": "2026-10-22T10:04:12.652Z",
+  "uploaded": 4020,
+  "failed": [
+    {
+      "file": "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8.pptx",
+      "error": "The operation was aborted due to timeout"
+    }
+  ],
+  "bytes": 2526009581,
+  "completedAt": "2026-10-22T10:19:23.012Z"
+}

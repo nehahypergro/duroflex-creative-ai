@@ -1,0 +1,205 @@
+{
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "imageIds": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P007",
+    "P008",
+    "P009",
+    "P010",
+    "P011",
+    "P012",
+    "P013",
+    "P014",
+    "P015",
+    "P016",
+    "P017",
+    "P018",
+    "P019",
+    "P020",
+    "P021",
+    "P022",
+    "P023",
+    "P024",
+    "P025",
+    "P026",
+    "P027",
+    "P028",
+    "P029",
+    "P030",
+    "P031",
+    "P032",
+    "P033",
+    "P034",
+    "P035",
+    "P036",
+    "P037",
+    "P038"
+  ],
+  "imageHashes": [
+    {
+      "id": "P001",
+      "sha256": "4b244354304a24fb19f735d0c0ce6cb3d355f802da418012465df697e2d040cf"
+    },
+    {
+      "id": "P002",
+      "sha256": "afd2c9900e18459abf6058bd1798d94203e760f1a695d446b1a2d32979fcaa7e"
+    },
+    {
+      "id": "P003",
+      "sha256": "66fbb5301f34cc10179d24850fd881eba4bd32873873d6cab6a67c0031db72ab"
+    },
+    {
+      "id": "P004",
+      "sha256": "2544ec9a8ca58258ed8f2eff581cbd6fdaaeaa7fa990aa2fcf2e134f4c8d0dce"
+    },
+    {
+      "id": "P005",
+      "sha256": "a7bd9468bc1a5377e2392825c038edd8970f226147a2a6dbe4118ed759f0f035"
+    },
+    {
+      "id": "P006",
+      "sha256": "e78c94e21f99ddffd5998ad58107b46a5bea7cabe19758ead5139decd658308e"
+    },
+    {
+      "id": "P007",
+      "sha256": "4dd3968256fc3c4a92a73cae7d062def139907fb1bfa1877712d5a464a7f4063"
+    },
+    {
+      "id": "P008",
+      "sha256": "44d97d7e61694438a2ba7baa61fd6f382206765cb5401c48349971ef5b365597"
+    },
+    {
+      "id": "P009",
+      "sha256": "85dea010f8369708df638f9a929c95a2d92c119715907828b60b9eebf0129953"
+    },
+    {
+      "id": "P010",
+      "sha256": "da2912a6d53cb7082a28e6229d430eceb06cac6441ebc6c13300c83be012016f"
+    },
+    {
+      "id": "P011",
+      "sha256": "75277ab799d27a6fad3c86653193c8abc4b2571f9c35f5afc7a4b50815fa6217"
+    },
+    {
+      "id": "P012",
+      "sha256": "170f297443be65ea04b86ac8c7d9a2b978d4d9d1791b4142bfff68b4feea1fca"
+    },
+    {
+      "id": "P013",
+      "sha256": "7619de116afe50c75a210f6d922ff3aaee0c1f11882d7508de95eaade7a02017"
+    },
+    {
+      "id": "P014",
+      "sha256": "7b015fb5af814b6e7c92a547f06a4da97187dc483a4ea04e9b91f3809c35252c"
+    },
+    {
+      "id": "P015",
+      "sha256": "36bb06d5f35eefee9a4a0a62d4c7ad4688b6909bac706bd33fa56b8db3a2854e"
+    },
+    {
+      "id": "P016",
+      "sha256": "60c144e27807ac1a85484811b456bf7aa82a6b0d2aae1b4ae9a517aefa440256"
+    },
+    {
+      "id": "P017",
+      "sha256": "73e36327ac19ba0190fba97411e76bfeca5b8a2b95d5b13e3ac0306d19e9d604"
+    },
+    {
+      "id": "P018",
+      "sha256": "cb85b402aceb2cd8095f5b1b710b1c1ae3cc0c18d87542d0030badd55e62b943"
+    },
+    {
+      "id": "P019",
+      "sha256": "66bc0e4406c32d958fd8ef9f2eed06f8abff98954cb81e18d2ec9b99b8847479"
+    },
+    {
+      "id": "P020",
+      "sha256": "14c19dee5e26a2cb5ea479cb841d14ff560ea5cbab76618c40c2d729ed556d8c"
+    },
+    {
+      "id": "P021",
+      "sha256": "594b5bd2e738cca818db9495705b2e52bdd5a3e4ff3e2d73b6b32ad8e9808f5e"
+    },
+    {
+      "id": "P022",
+      "sha256": "4c2c86644a75190a0ee308f8d5e10341f7c11c19586dcc4e212b3b19027c20a8"
+    },
+    {
+      "id": "P023",
+      "sha256": "e0021eae222a88703dc1a84413628b0fd22a3847d9bb9d797498e2401b1b916e"
+    },
+    {
+      "id": "P024",
+      "sha256": "aa03c6fb49f8a43e3702a92d6d0c7299e3e76ab65ee6156ba76da0fa7300735e"
+    },
+    {
+      "id": "P025",
+      "sha256": "f36ba9148e97c59bba511c02be2f172f06f18d2f0dd34f4d00c7a63ce74a2a25"
+    },
+    {
+      "id": "P026",
+      "sha256": "6dc3bbb8a3f2f0b23c61848de4a21c9479cbbd81b82581f4c797debc15b40be1"
+    },
+    {
+      "id": "P027",
+      "sha256": "f1ed010792b6db54d3e29e9a055ff1965819016c581fbac77f4df6e0a966461f"
+    },
+    {
+      "id": "P028",
+      "sha256": "65c2d11e340139ebd1e8832eeee3137f3c9dc20551d842a26d3638a77fcb4ab6"
+    },
+    {
+      "id": "P029",
+      "sha256": "7777fef5984894c9633060275a3823cbbd000c0565a001b37c4f458c334fd4cb"
+    },
+    {
+      "id": "P030",
+      "sha256": "dbcef6b94b9dc02b121efe7c7647366b3a74fc3ab78f807000efecf1c3d1d44a"
+    },
+    {
+      "id": "P031",
+      "sha256": "5e54baaaa2c3750e7392a106859a77e80b4e978dacbe147d2dcb2ee5a8ef5c07"
+    },
+    {
+      "id": "P032",
+      "sha256": "b8f3b9948d4833293bf1160df50a448e96a4ac1a50865940d1eaaf12b6ba0dc6"
+    },
+    {
+      "id": "P033",
+      "sha256": "f8199ca5df3948f1e17ba2d52af3ae03c0c3489fa7b55333a5ef3ec47a87e31f"
+    },
+    {
+      "id": "P034",
+      "sha256": "c4d964100ce3bde5f195315b39f7a5130c5149b537d573c8e8075430f0909f84"
+    },
+    {
+      "id": "P035",
+      "sha256": "bec68ed429ad540c4759f64a3f0bd5838455edd91918a9d8a141d2ec488c704c"
+    },
+    {
+      "id": "P036",
+      "sha256": "0a32823107224bd654e8f317af61e5ac15a8d5b9665d484b226aa47c9430edab"
+    },
+    {
+      "id": "P037",
+      "sha256": "0fb37d7859801cd2de09d9e810c5821c03e979bc642aa10df8da4f19136c17f8"
+    },
+    {
+      "id": "P038",
+      "sha256": "ff5f8813c8abf8a188bdc151362ff1fa089f99e360451ea0fcc765d59ff9f2c0"
+    }
+  ],
+  "contextHash": "c4d1cb9900e033b615af20096168b8cb93bfb5caee8d14808e515d3a12fbfdb3",
+  "model": "gpt-6-astra",
+  "reasoning": {
+    "effort": "high"
+  },
+  "maxOutputTokens": 15000,
+  "requestHash": "a96031d59ab30f2885d0da1312e7cd10a23d8e020d6b5691a3f6a5ba8b9cf294",
+  "startedAt": "2026-10-11T21:15:41.158Z"
+}

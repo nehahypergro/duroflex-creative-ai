@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "key": "8514fa7727bd9ddf53e201ff38ef6e1c3e0735a6667103ca387388b1736b4444",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "productId": "product-dfb69ef80bb5fad29770",
+  "variantId": "51541059993732",
+  "photoHashes": [
+    "f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2",
+    "513bc81d136dd07f8d34388d700dad80b649341585bf8c438eff1084cdf085bd",
+    "e79afa5148563298ea973d1726a64b1f8c88ab395f2b8fb1bbbc119bfde3b304"
+  ],
+  "features": [
+    {
+      "feature": "Rectangular mattress with a white quilted top, patterned with repeated curved geometric motifs and tufted points.",
+      "where": "Top surface"
+    },
+    {
+      "feature": "Blue piping outlines the top edge, with a narrow light-blue band directly below it.",
+      "where": "Top perimeter and upper sidewall"
+    },
+    {
+      "feature": "White sidewalls have fine vertical ribbing and a thin dark-blue horizontal stripe near the lower edge.",
+      "where": "Sidewalls"
+    },
+    {
+      "feature": "A dark-blue rectangular product label with red and green accents is attached to the sidewall.",
+      "where": "Sidewall near a corner"
+    }
+  ],
+  "labelWords": "duroflex\nDUROPEDIC\nPOSTURE PERFECT",
+  "jobId": "creative-aee5f630-ca2b-419a-b41d-2129f32b29c6",
+  "createdAt": "2026-11-10T14:08:05.823Z"
+}

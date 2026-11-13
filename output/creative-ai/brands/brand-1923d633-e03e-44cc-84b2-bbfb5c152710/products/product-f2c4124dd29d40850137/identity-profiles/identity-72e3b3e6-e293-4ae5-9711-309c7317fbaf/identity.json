@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-72e3b3e6-e293-4ae5-9711-309c7317fbaf",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-f2c4124dd29d40850137",
+  "productName": "Tatva Natural Latex and Coir Mattress",
+  "pageUrl": "https://www.duroflexworld.com/products/tatva-natural-latex-and-coir-mattress?variant=41734983516292",
+  "productSnapshot": "snapshot-1791893373480-42fee3",
+  "variant": {
+    "id": "41734983516292",
+    "sku": "TATVA720060000600GREEN",
+    "name": "Queen / 72 x 60 (183 cm x 152 cm) / 6 (15.2cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 72 x 60 (183 cm x 152 cm) / 6 (15.2cm)",
+    "configuration": "Official website variant Queen / 72 x 60 (183 cm x 152 cm) / 6 (15.2cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-f23bab9ff81496cf",
+    "snapshot": "snapshot-1791893373480-42fee3",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/1_600390ff-4966-4d39-95fc-ea03cc1c945b_600x600.jpg?v=1749639356",
+    "sha256": "6543f9b304c3eeb67975a798817ec2e85859188797aaaf5ab5a2f65cff30a784",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "07f3bf80489224c42d30d0f73e6d9b79252c3b96af1b9c3e7510ad81a00914d8",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-09T20:33:10.727Z"
+  },
+  "createdAt": "2026-11-09T20:33:10.727Z",
+  "profileHash": "81faebdc6f282c97b6c1c15ba5cab03389d8e47df7dbc213c7f1964a4176a45b"
+}

@@ -1,0 +1,232 @@
+{
+  "id": 10357441036420,
+  "title": "Cove Brushed Nickel Grey Leatherette + Pumice Stone Grey Fabric 3 Seater Sofa + Lounger",
+  "handle": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+  "description": "",
+  "published_at": "2026-07-03T18:15:01+05:30",
+  "created_at": "2026-06-12T16:35:54+05:30",
+  "vendor": "Duroflex",
+  "type": "Sofas",
+  "tags": [
+    "1 seater",
+    "2 seater",
+    "2 Seater With Lounger",
+    "3 seater",
+    "3 Seater With Lounger",
+    "3+1+1 Sofa",
+    "3+2 Sofa Set",
+    "5 Seater Sofa",
+    "All Furniture",
+    "all_products2025",
+    "BAUSALE25",
+    "Bedroom Sofa",
+    "BFSALE16",
+    "CARNIVAL18",
+    "CART5",
+    "Cushion Sofa",
+    "Diwali2024",
+    "FEST16",
+    "Furniture",
+    "Furniture 2025",
+    "Furniture Sofa",
+    "furniture_off",
+    "INDIA",
+    "L Shape Lounger",
+    "Luxury Sofa",
+    "Modern Sofa",
+    "PAYDAY",
+    "PAYDAY5",
+    "Pink Sofa",
+    "RDAY10OFF",
+    "REST5",
+    "SALE5",
+    "Seater 6 Sofa",
+    "Simple Sofa Set",
+    "sofa",
+    "Sofa & Recliners",
+    "Sofa Seater 7",
+    "Sofa Set For Hall",
+    "SOFA16",
+    "Sofas Sets",
+    "Summer",
+    "Updated furniture",
+    "video_shop"
+  ],
+  "price": 6261300,
+  "price_min": 6261300,
+  "price_max": 6261300,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 8348400,
+  "compare_at_price_min": 8348400,
+  "compare_at_price_max": 8348400,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 52329088745604,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "COVESOFADGREYLGREY3SL",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Cove Brushed Nickel Grey Leatherette + Pumice Stone Grey Fabric 3 Seater Sofa + Lounger",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 6261300,
+      "weight": 0,
+      "compare_at_price": 8348400,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-2_9fe06b81-d24d-4a6e-b908-057c2b368e9e.jpg?v=1786345989",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-1_638dd4bc-9ddd-42cd-ae47-af6d114eee82.jpg?v=1786345989",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-3_969a39cd-3ef0-4876-93af-055f6ce8e09f.jpg?v=1786345989",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-4_87dc9bbd-19f9-43dc-90eb-d051615208e8.jpg?v=1786345988",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-5_2527e4d8-1451-4bd0-b5a2-10202d58cc1c.jpg?v=1786345989",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-6_794dce3b-c5cb-4740-9e1b-7fa2adc4f7f0.jpg?v=1786345989",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-7_2191b15e-fde4-4a55-88b0-0d513448af00.jpg?v=1786345989"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-2_9fe06b81-d24d-4a6e-b908-057c2b368e9e.jpg?v=1786345989",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+  "media": [
+    {
+      "alt": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "id": 53051468349572,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-2_9fe06b81-d24d-4a6e-b908-057c2b368e9e.jpg?v=1786345989"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-2_9fe06b81-d24d-4a6e-b908-057c2b368e9e.jpg?v=1786345989",
+      "width": 1000
+    },
+    {
+      "alt": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "id": 53051468316804,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-1_638dd4bc-9ddd-42cd-ae47-af6d114eee82.jpg?v=1786345989"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-1_638dd4bc-9ddd-42cd-ae47-af6d114eee82.jpg?v=1786345989",
+      "width": 1000
+    },
+    {
+      "alt": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "id": 53051468382340,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-3_969a39cd-3ef0-4876-93af-055f6ce8e09f.jpg?v=1786345989"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-3_969a39cd-3ef0-4876-93af-055f6ce8e09f.jpg?v=1786345989",
+      "width": 1000
+    },
+    {
+      "alt": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "id": 53051468415108,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-4_87dc9bbd-19f9-43dc-90eb-d051615208e8.jpg?v=1786345988"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-4_87dc9bbd-19f9-43dc-90eb-d051615208e8.jpg?v=1786345988",
+      "width": 1000
+    },
+    {
+      "alt": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "id": 53051468447876,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-5_2527e4d8-1451-4bd0-b5a2-10202d58cc1c.jpg?v=1786345989"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-5_2527e4d8-1451-4bd0-b5a2-10202d58cc1c.jpg?v=1786345989",
+      "width": 1000
+    },
+    {
+      "alt": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "id": 53051468480644,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-6_794dce3b-c5cb-4740-9e1b-7fa2adc4f7f0.jpg?v=1786345989"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-6_794dce3b-c5cb-4740-9e1b-7fa2adc4f7f0.jpg?v=1786345989",
+      "width": 1000
+    },
+    {
+      "alt": "cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+      "id": 53051468513412,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-7_2191b15e-fde4-4a55-88b0-0d513448af00.jpg?v=1786345989"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/PDP-7_2191b15e-fde4-4a55-88b0-0d513448af00.jpg?v=1786345989",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

@@ -1,0 +1,199 @@
+{
+  "id": 10172933505208,
+  "title": "Sofa Kiki - 3 Seater Sofa (Fabric, Sapling Green)",
+  "handle": "sofa-kiki-3-seater-sofa-green-color",
+  "description": "<p>The Kiki Sofa is soft, comfortable, and roomy. Made in a contemporary design it’s just the modern chic sofa that you need to liven up your space. Covered in lavish upholstery and made with a solid, sturdy wood frame, this sofa is built to last. The wood used is termite and mould-resistant. It comes in two and three-seater variants and will fit into any home with ease. Its sole mission is to provide you with the best comfort as you plonk down on its padded seat cushions. It's comfortable and affordable, and it doesn't skimp on style. There are a variety of colour choices available: a graphite grey and earth brown that will suit most environments and a sapling green and lava orange if you're looking for a statement piece that pops. With four colour options, you're sure to find one that suits your space. Available in two, and three-seater combos, you can pick a sofa that will suit any home or decor. It is the perfect choice for social occasions and guest seating. Let Sleepyhead’s Kiki statement sofa inject some personality into your home. It offers comfortable all-around cushions filled with supportive high-density foam.It also features high arms and plush cushions in a soft touch premium fabric that’s perfect for cuddling up with. Whether it's extra seating for your home office or a statement piece for your living room, you will adore this trendy sofa for its design and comfort.</p>",
+  "published_at": "2025-12-22T17:19:28+05:30",
+  "created_at": "2025-12-22T17:19:28+05:30",
+  "vendor": "Sleepyhead",
+  "type": "Sofa",
+  "tags": [
+    "BAU26",
+    "COMFORT20",
+    "DEALS20",
+    "FEST16",
+    "FESTGRAND",
+    "OLDMONEY5",
+    "PAYDAY5",
+    "SALE5",
+    "Sofas",
+    "Summer"
+  ],
+  "price": 1529900,
+  "price_min": 1529900,
+  "price_max": 1529900,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 2359900,
+  "compare_at_price_min": 2359900,
+  "compare_at_price_max": 2359900,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 52400345645240,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "SHKK3SSSG",
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": null,
+      "available": true,
+      "name": "Sofa Kiki - 3 Seater Sofa (Fabric, Sapling Green)",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 1529900,
+      "weight": 38,
+      "compare_at_price": 2359900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_1.jpg?v=1768928771",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_2.jpg?v=1768928770",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_7.jpg?v=1768928769",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_3.jpg?v=1768928771",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_6.jpg?v=1768928771",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_4.jpg?v=1768928771",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_5.jpg?v=1768928771"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_1.jpg?v=1768928771",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/sofa-kiki-3-seater-sofa-green-color",
+  "media": [
+    {
+      "alt": "Sofa|Kiki|3|Seater|Sofa|Fabric|Sapling|Green",
+      "id": 59108444766392,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_1.jpg?v=1768928771"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_1.jpg?v=1768928771",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Kiki|3|Seater|Sofa|Fabric|Sapling|Green",
+      "id": 59108444668088,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_2.jpg?v=1768928770"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_2.jpg?v=1768928770",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Kiki|3|Seater|Sofa|Fabric|Sapling|Green",
+      "id": 59108444537016,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_7.jpg?v=1768928769"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_7.jpg?v=1768928769",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Kiki|3|Seater|Sofa|Fabric|Sapling|Green",
+      "id": 59108444733624,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_3.jpg?v=1768928771"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_3.jpg?v=1768928771",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Kiki|3|Seater|Sofa|Fabric|Sapling|Green",
+      "id": 59108444963000,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_6.jpg?v=1768928771"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_6.jpg?v=1768928771",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Kiki|3|Seater|Sofa|Fabric|Sapling|Green",
+      "id": 59108444831928,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_4.jpg?v=1768928771"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_4.jpg?v=1768928771",
+      "width": 2000
+    },
+    {
+      "alt": "Sofa|Kiki|3|Seater|Sofa|Fabric|Sapling|Green",
+      "id": 59108444799160,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_5.jpg?v=1768928771"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Kiki_3S_Sapling_Green_5.jpg?v=1768928771",
+      "width": 2000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

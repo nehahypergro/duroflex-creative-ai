@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-336c4d02-1170-4b91-b091-5c4e8c6b8f47",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-63cfb9d009461f5b00eb",
+  "productName": "Wave Kinect Propel Arctic Ice Mattress",
+  "pageUrl": "https://www.duroflexworld.com/products/propel-wave-kinect-mattress?_gl=1*20p93k*_up*MQ..*_gs*MQ..",
+  "productSnapshot": "snapshot-1792609793966-742ecf",
+  "variant": {
+    "id": "50679939858564",
+    "sku": "PROPWAVEKINCF780060000800CREAM",
+    "name": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+    "configuration": "Official website variant Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-61069d98f2f24f86",
+    "snapshot": "snapshot-1792609793966-742ecf",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/2_383d2d6d-79d0-49e2-ab7d-99a09f5215c5_600x600.jpg?v=1749722106",
+    "sha256": "5c9d18f3cef9041421540714c1a94b26676e6b0ff38374c605b2b028e977107e",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "9978b946b188276c1dabd5066748df6e477231233ceaf389fa7a046560351d0c",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-09T20:33:57.935Z"
+  },
+  "createdAt": "2026-11-09T20:33:57.935Z",
+  "profileHash": "04a75374e4bed0d2bb1d17e3091569369abeb631d75cd8c6aa3ad68d32c9ea25"
+}

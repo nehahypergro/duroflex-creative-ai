@@ -1,0 +1,651 @@
+{
+  "version": 1,
+  "id": "product-c59347f7ba8d81723530",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "name": "Sense Ortho Ultra Mattress - Ivory White",
+  "sku": "SNSORTHOULTRA720036000800WHITE",
+  "description": "Sleepyhead Sense Ortho Ultra – Cool. Smart. Seriously Supportive. When sleep’s your superpower, you need a mattress that doesn’t just keep up—it levels up. The new Sense Ortho Ultra is a total upgrade in comfort tech and cooling design. With a thicker layer of BodyIQ memory foam that intuitively adapts to every body curve (and yes, zero motion transfer), this mattress makes every sleep feel customized. Wrapped in cool-to-the-touch, high GSM knitted fabric, it doesn’t just look luxe—it feels cooler. Perfect for hot sleepers or those who want their bed to double as a chill zone. Beneath the memory foam, a smart profile foam layer with egg tray structure keeps airflow flowing and pressure points zeroed out. It’s also a built-in shock absorber for your spine. And here’s the part your back will thank you for: the firm base layer offers deep orthopedic support and better posture alignment through the night. Toss in a zipper cover that’s removable and washable? It’s sleep hygiene made stylish. Oh—and did we mention the 100-Night Trial and 12-Year Warranty? This mattress doesn’t just promise sleep. It delivers it, smarter.",
+  "brand": "",
+  "taxonomy": [
+    {
+      "name": "Mattresses",
+      "url": "https://mysleepyhead.com/collections/mattresses",
+      "basis": "Website breadcrumb"
+    }
+  ],
+  "category": "Mattresses",
+  "variants": [
+    {
+      "id": "52531740082360",
+      "sku": "SNSORTHOULTRA720036000800WHITE",
+      "name": "Single / 72 x 36 (183 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "72 x 36 (183 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "52531740115128",
+      "sku": "SNSORTHOULTRA750036000800WHITE",
+      "name": "Single / 75 x 36 (191 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "75 x 36 (191 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "52531740147896",
+      "sku": "SNSORTHOULTRA780036000800WHITE",
+      "name": "Single / 78 x 36 (198 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "78 x 36 (198 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "52531740180664",
+      "sku": "SNSORTHOULTRA720048000800WHITE",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": false
+    },
+    {
+      "id": "52531740213432",
+      "sku": "SNSORTHOULTRA750048000800WHITE",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "52531740246200",
+      "sku": "SNSORTHOULTRA780048000800WHITE",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": false
+    },
+    {
+      "id": "52531740278968",
+      "sku": "SNSORTHOULTRA720060000800WHITE",
+      "name": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "72 x 60 (183 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": false
+    },
+    {
+      "id": "52531740311736",
+      "sku": "SNSORTHOULTRA750060000800WHITE",
+      "name": "Queen / 75 x 60 (191 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "75 x 60 (191 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": false
+    },
+    {
+      "id": "52531740344504",
+      "sku": "SNSORTHOULTRA780060000800WHITE",
+      "name": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "78 x 60 (198 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "52531740377272",
+      "sku": "SNSORTHOULTRA720072000800WHITE",
+      "name": "King / 72 x 72 (183 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "72 x 72 (183 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "52531740410040",
+      "sku": "SNSORTHOULTRA750072000800WHITE",
+      "name": "King / 75 x 72 (191 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "75 x 72 (191 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": false
+    },
+    {
+      "id": "52531740442808",
+      "sku": "SNSORTHOULTRA780072000800WHITE",
+      "name": "King / 78 x 72 (198 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "78 x 72 (198 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "available": false
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Single",
+        "Double",
+        "Queen",
+        "King"
+      ]
+    },
+    {
+      "name": "Dimensions",
+      "position": 2,
+      "values": [
+        "72 x 36 (183 cm x 92 cm)",
+        "75 x 36 (191 cm x 92 cm)",
+        "78 x 36 (198 cm x 92 cm)",
+        "72 x 48 (183 cm x 122 cm)",
+        "75 x 48 (191 cm x 122 cm)",
+        "78 x 48 (198 cm x 122 cm)",
+        "72 x 60 (183 cm x 152 cm)",
+        "75 x 60 (191 cm x 152 cm)",
+        "78 x 60 (198 cm x 152 cm)",
+        "72 x 72 (183 cm x 183 cm)",
+        "75 x 72 (191 cm x 183 cm)",
+        "78 x 72 (198 cm x 183 cm)"
+      ]
+    },
+    {
+      "name": "Height",
+      "position": 3,
+      "values": [
+        "8 (20.3cm)"
+      ]
+    }
+  ],
+  "contentSections": [
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Home Mattresses Sense Ortho Ultra Mattress - Ivory White"
+    },
+    {
+      "heading": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "supporting-content",
+      "text": "Skip to product information Link Close share Copy link Open media 1 in modal Open media 2 in modal Open media 3 in modal Open media 4 in modal Open media 5 in modal Open media 6 in modal 1 / of 6 Zero Motion Transfer Pressure Relief Sleep 100 Night Free Trial Sense Ortho Ultra Mattress - Ivory White Sense Ortho Ultra Mattress - Ivory White Targeted orthopedic support paired with cooling fabric for refreshing sleep ★★★★★ ★★★★★ 4.6/5 (200 reviews) Single / 72 x 36 (183 cm x 92 cm) / 8 (20.3cm) Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Dimensions 72 x 36 (183 cm x 92 cm) Variant sold out or unavailable 75 x 36 (191 cm x 92 cm) Variant sold out or unavailable 78 x 36 (198 cm x 92 cm) Variant sold out or unavailable 72 x 48 (183 cm x 122 cm) Variant sold out or unavailable 75 x 48 (191 cm x 122 cm) Variant sold out or unavailable 78 x 48 (198 cm x 122 cm) Variant sold out or unavailable 72 x 60 (183 cm x 152 cm) Variant sold out or unavailable 75 x 60 (191 cm x 152 cm) Variant sold out or unavailable 78 x 60 (198 cm x 152 cm) Variant sold out or unavailable 72 x 72 (183 cm x 183 cm) Variant sold out or unavailable 75 x 72 (191 cm x 183 cm) Variant sold out or unavailable 78 x 72 (198 cm x 183 cm) Variant sold out or unavailable Height 8 (20.3cm) Variant sold out or unavailable Regular price ₹ 9,207 Sale price MRP: Regular price ₹ 13,999 ₹ 9,207 34% OFF (Inclusive of all taxes) Sale Sold out Taxes included. Get it as low as ₹8286 (41%OFF) With Bank or UPI offer Check Schedule Delivery Schedule Delivery Delivery date Confirm Close Single / 72 x 36 (183 cm x 92 cm) / 8 (20.3cm) Choose from 13 customisation options Product added to cart Add to cart Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Product Description",
+      "group": "supporting-content",
+      "text": "Product Description Sleepyhead Sense Ortho Ultra – Cool. Smart. Seriously Supportive. When sleep’s your superpower, you need a mattress that doesn’t just keep up—it levels up. The new Sense Ortho Ultra is a total upgrade in comfort tech and cooling design. With a thicker layer of BodyIQ memory foam that intuitively adapts to every body curve (and yes, zero motion transfer), this mattress makes every sleep feel customized. Wrapped in cool-to-the-touch, high GSM knitted fabric, it doesn’t just look luxe—it feels cooler. Perfect for hot sleepers or those who want their bed to double as a chill zone. Beneath the memory foam, a smart profile foam layer with egg tray structure keeps airflow flowing and pressure points zeroed out. It’s also a built-in shock absorber for your spine. And here’s the part your back will thank you for: the firm base layer offers deep orthopedic support and better posture alignment through the night. Toss in a zipper cover that’s removable and washable? It’s sleep hygiene made stylish. Oh—and did we mention the 100-Night Trial and 12-Year Warranty? This mattress doesn’t just promise sleep. It delivers it, smarter. Read more Product information Mattres Feel Medium Firm Dimension 72\" x 36\" x 8\" Length 72\" Depth 36\" Heigth 8\" Material High Resilence Foam Size Single Model sense ortho ultra Warranty 12 Years Assembly Required DIY (Do-It-Yourself) Color White Additional Details Features Cool-to-Touch Knitted Fabric - Luxe, breathable, and ready for summer BodyIQ® Memory Foam - Personalized support + zero motion transfer Egg Tray Foam Layer - Enhanced airflow + shock absorption Orthopedic Base - Real alignment, real support Removable Zipper Cover - Sleep clean, live easy Benefits Built for better sleep Hygiene-friendly Relieves pressure points Breathable all night Try before you commit Warranty Period 12 Years Warranty Care Instructions Spot clean only Avoid direct sunlight Rotate regularly Returns & Replacements Returnable under 100 Nights Trial Policy"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "FREE SHIPPING BEST PRICE GUARANTEE 100 NIGHTS TRIAL"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Bought Together Overview Reviews FAQs Product added to cart Add to cart Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Pressure Relieving Comfort",
+      "group": "a-plus-content",
+      "text": "Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort"
+    },
+    {
+      "heading": "Sense Ortho Ultra – The Mattress That Gets You (and Your Back)",
+      "group": "supporting-content",
+      "text": "Sense Ortho Ultra – The Mattress That Gets You (and Your Back) Not just cool. Not just comfy. But smart enough to know exactly how you sleep. ✔ Cool-to-the-touch knit fabric ✔ BodyIQ memory foam that adapts ✔ Orthopedic support, always aligned ✔ Egg-tray foam for airflow ✔ 12-year warranty + 100-night trial This is comfort that doesn't just sleep. It thinks. Sense Ortho Ultra – Where Smart Sleep Begins You’re not basic. So why should your mattress be? With smarter tech, cooler materials, and better back support, Sense Ortho Ultra brings a whole new level of chill to your bedroom. Built for people who want more from their mattress—more breathability, more support, and more reason to never hit snooze again. Choose your comfort identity: BodyIQ Orthopedic Memory Foam: The BodyIQ memory foam layer understands your curves and cradles them with zero motion transfer. Cool to the Touch: High GSM knit fabric feels cool at first touch, and stays breathable all night. Orthopedic Support: The orthopedic base + profile foam with egg-tray design = pressure relief + spinal alignment. For Hot Sleepers, Hectic Sleepers & Hygiene Heroes Sense Ortho Ultra brings the full package—cool comfort, custom contouring, and serious support. It’s not just about feeling soft—it’s about waking up with zero joint complaints and no 3 AM sweat sessions. Wrapped in a high-GSM knit cover that’s removable and washable, it’s a mattress that keeps up with your sleep and your schedule. Cools You Down. Lifts You Up. Cleans Up Easy Let’s break it down. The surface is high-GSM knitted fabric—soft, luxe, and cooling like a breeze. Next comes the BodyIQ memory foam. It’s not just soft, it’s responsive—adapting to how you sleep, move, and recover. Then you’ve got the egg-tray foam—a shock absorber for your spine and a ventilation hero for airflow. And anchoring it all? A firm orthopedic base for alignment that lasts longer than your longest nap. Easy-to-remove zipper cover? That’s just the hygiene cherry on top."
+    },
+    {
+      "heading": "WHAT OUR SLEEP ADDICTS SAY",
+      "group": "supporting-content",
+      "text": "WHAT OUR SLEEP ADDICTS SAY"
+    },
+    {
+      "heading": "Customer Reviews",
+      "group": "supporting-content",
+      "text": "Customer Reviews Based on 200 reviews Write a review 60% (119) 39% (78) 2% (3) 0% (0) 0% (0) S Sunny Extremely good Fantastic durbaility S Sathishkumar K Good nice H Harshvi Shah good choice and help from brand parents feel comfortable j jaganath A good so far good one S Sharath Nadig suggested by store its wow 1 2 3"
+    },
+    {
+      "heading": "FAQs",
+      "group": "supporting-content",
+      "text": "FAQs 1. What is Sense Ortho Ultra Mattress? Sense Ortho Ultra is an 8-inch mattress with cool-to-touch high-GSM knit fabric cover, BodyIQ orthopedic memory foam layer, and firm orthopedic base foam. You get targeted orthopedic support paired with cooling fabric for refreshing sleep every night. 2. What problem does it solve? It solves back pain, night sweats, partner disturbance, adaptive contouring, superior airflow, zero motion transfer, and zoned spinal alignment for deeper sleep. 3. Who is it best for? Best for back pain sufferers, couples, hot sleepers, and those needing Medium firm yet responsive support with hygiene features like washable cover and hypoallergenic materials. 4. How does Sense Ortho Ultra Mattress work? BodyIQ foam contours to your body for pressure relief; egg-tray foam circulates air to regulate temperature; orthopedic base supports your spine; cooling fabric wicks moisture. 5. How is it different from alternatives? Differs from standard memory foams with BodyIQ adaptive tech for faster response, egg-tray cooling (better than gel-infused), zoned ortho support, and washable zipper cover for longevity. 6. How does it feel? The mattress feels medium-firm that offers deep orthopedic support and optimal posture alignment through the night. 7. Does it come with a warranty? Yes, 12-year warranty, plus 100-night risk-free trial. 8. How to care for this product? Use a mattress protector, keep it on a flat, supportive base, rotate periodically if recommended. Avoid folding or standing on the mattress."
+    }
+  ],
+  "identityBasis": "Product structured metadata",
+  "pageUrl": "https://mysleepyhead.com/products/sense-ortho-ultra-mattress",
+  "requestedUrl": "https://mysleepyhead.com/products/sense-ortho-ultra-mattress",
+  "collectedAt": "2026-10-21T19:10:21.980Z",
+  "snapshot": "snapshot-1792609821980-36fc46",
+  "pageHash": "ae596b45f170114bdaa7553cb3eddf770ce5a42403517ae16b1b471faf7a257d",
+  "assets": [
+    {
+      "id": "media-d32f8691075302e9",
+      "url": "https://mysleepyhead.com/cdn/shop/files/SenseOrthoUltra_PDP_2.jpg?v=1768818093",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Product structured metadata",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/product-images/media-d32f8691075302e9.jpg",
+      "bytes": 189814,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "4df6c15059fe157fa49e402acff0634996014a94ffdec2d8a944d79c7ce23282",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/SenseOrthoUltra_PDP_2.jpg?v=1768818093",
+      "preview": "snapshot-1792609821980-36fc46/product-images/media-d32f8691075302e9-preview.png"
+    },
+    {
+      "id": "media-21e8b9f59369025a",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_1.png?v=1768818093",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/product-images/media-21e8b9f59369025a.png",
+      "bytes": 600788,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "a59aa5f884ade958e4f6e86fb123ea80d9153aedd51723896efd7a85bd37554d",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_1.png?v=1768818093",
+      "preview": "snapshot-1792609821980-36fc46/product-images/media-21e8b9f59369025a-preview.png"
+    },
+    {
+      "id": "media-a119bfdb664d3abc",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_3.png?v=1768818093",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/product-images/media-a119bfdb664d3abc.png",
+      "bytes": 1851985,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "d756694740e9b838d50d08c6fcdb60f3dcb3363c834e17855fbf4ed5b6e42532",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_3.png?v=1768818093",
+      "preview": "snapshot-1792609821980-36fc46/product-images/media-a119bfdb664d3abc-preview.png"
+    },
+    {
+      "id": "media-3b83ac5c80436d1e",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_2.png?v=1768818093",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/product-images/media-3b83ac5c80436d1e.png",
+      "bytes": 1100314,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "3ba1f0ff7ce103eab9bbe5e1cc8ba3724f5bb1febf9af8cfcab3fa8d028cadcb",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_2.png?v=1768818093",
+      "preview": "snapshot-1792609821980-36fc46/product-images/media-3b83ac5c80436d1e-preview.png"
+    },
+    {
+      "id": "media-aa4bd955be21ce5c",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_1.jpg?v=1768818093",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/product-images/media-aa4bd955be21ce5c.jpg",
+      "bytes": 158458,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "ed5ac80bcb224cf27b93c1cb069595ce64bab7f19359edfd2ecc91bfa05cdb32",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/SenseOrthoUltra_PDP_1.jpg?v=1768818093",
+      "preview": "snapshot-1792609821980-36fc46/product-images/media-aa4bd955be21ce5c-preview.png"
+    },
+    {
+      "id": "media-5a185f4446dfe8fb",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/product-images/media-5a185f4446dfe8fb.jpg",
+      "bytes": 877201,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 4096,
+      "height": 4096,
+      "sha256": "e49f6db5bee6c24de5e57d9b16cb7e5c1dd201c50f049762befc4f54eecaf610",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "preview": "snapshot-1792609821980-36fc46/product-images/media-5a185f4446dfe8fb-preview.png"
+    },
+    {
+      "id": "media-fbaa829472ef9045",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Zero_Motion_Transfer.svg?v=18189233046525080115",
+      "label": "Zero Motion Transfer",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/tiles/media-fbaa829472ef9045.svg",
+      "bytes": 4063,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "8ac321fcbdc54dd866f3d9cffa2d3552b60687f334f08f0b97514f62e1edbf38",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Zero_Motion_Transfer.svg?v=18189233046525080115",
+      "preview": "snapshot-1792609821980-36fc46/tiles/media-fbaa829472ef9045-preview.png"
+    },
+    {
+      "id": "media-59a77f77d327ee04",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Preasure_Relief_Sleep.svg?v=14284801494349883673",
+      "label": "Pressure Relief Sleep",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/tiles/media-59a77f77d327ee04.svg",
+      "bytes": 1922,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "be9d8dd31e3f7e44accffe937e7fa048a089f9fa90d3dc3ab8120d2b01068d1f",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Preasure_Relief_Sleep.svg?v=14284801494349883673",
+      "preview": "snapshot-1792609821980-36fc46/tiles/media-59a77f77d327ee04-preview.png"
+    },
+    {
+      "id": "media-f1b1dcf3968f3934",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_100_Nights_Free_Trail.svg?v=4993833255583898332",
+      "label": "100 Night Free Trial",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/tiles/media-f1b1dcf3968f3934.svg",
+      "bytes": 2163,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 97,
+      "height": 97,
+      "sha256": "2881e890437e592243fd8213d449552154430e7a3ff128f6332cc6e896963b91",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_100_Nights_Free_Trail.svg?v=4993833255583898332",
+      "preview": "snapshot-1792609821980-36fc46/tiles/media-f1b1dcf3968f3934-preview.png"
+    },
+    {
+      "id": "media-3e8e29521dae4c65",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Ultra_Web_1.jpg?v=1769532116",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/a-plus-content/media-3e8e29521dae4c65.jpg",
+      "bytes": 178453,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "f66280afdd718c3fdf3112c6dcf1d073f2ff7f12f01ae00b0301d5ea76bd8e46",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Ultra_Web_1.jpg?v=1769532116",
+      "preview": "snapshot-1792609821980-36fc46/a-plus-content/media-3e8e29521dae4c65-preview.png"
+    },
+    {
+      "id": "media-90c1a60b4b5d2a7a",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Ultra_Web_2.jpg?v=1769532116",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/a-plus-content/media-90c1a60b4b5d2a7a.jpg",
+      "bytes": 165839,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "93c9fc79ef2faf8b47d7bcbe9787897709a271948edbd5060ca7961e6db7d215",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Ultra_Web_2.jpg?v=1769532116",
+      "preview": "snapshot-1792609821980-36fc46/a-plus-content/media-90c1a60b4b5d2a7a-preview.png"
+    },
+    {
+      "id": "media-a6c156dcb25d5e78",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Ultra_Web_3.jpg?v=1769532116",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/a-plus-content/media-a6c156dcb25d5e78.jpg",
+      "bytes": 176535,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "1d645367f03fe54c5f97dfd10b927068df253664c0b958657f5a56cb6e7d5f8a",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Ultra_Web_3.jpg?v=1769532116",
+      "preview": "snapshot-1792609821980-36fc46/a-plus-content/media-a6c156dcb25d5e78-preview.png"
+    },
+    {
+      "id": "media-e5b638f208ac5379",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Web_4.jpg?v=1769532116",
+      "label": "Sense Ortho Ultra Mattress - Ivory White",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609821980-36fc46/a-plus-content/media-e5b638f208ac5379.jpg",
+      "bytes": 168217,
+      "collectedAt": "2026-10-21T19:10:21.980Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "845c405172b385af312b275e1b5be9a831607e0d5c5bcedf69a3bf9001c2a4b5",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Sense_Ortho_Web_4.jpg?v=1769532116",
+      "preview": "snapshot-1792609821980-36fc46/a-plus-content/media-e5b638f208ac5379-preview.png"
+    }
+  ],
+  "gaps": [
+    "No videos exposed in the collected page / product JSON."
+  ],
+  "downloadedBytes": 5475752,
+  "jobId": null,
+  "history": [],
+  "limits": [
+    "Website snapshot, not approved product substantiation.",
+    "Category comes from website breadcrumbs or product type; missing taxonomy remains Uncategorized.",
+    "Asset folder roles inferred from page sections; inspect before reuse.",
+    "Only media exposed in HTML / official product JSON is discoverable; protected or client-only assets may be missing."
+  ],
+  "audit": {
+    "pageUrl": "https://mysleepyhead.com/products/sense-ortho-ultra-mattress",
+    "snapshot": "snapshot-1792609821980-36fc46",
+    "identityStatus": "matched",
+    "identityNote": "The requested Sense Ortho Ultra Mattress - Ivory White matches the selected product page title. The saved selected variant is Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3cm), SKU SNSORTHOULTRA720060000800WHITE. The page’s Single metadata is a default display and does not override the saved variant.",
+    "facts": [
+      {
+        "id": "sku-selected-variant",
+        "kind": "product",
+        "text": "The explicitly selected official product variant is Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3cm); SKU SNSORTHOULTRA720060000800WHITE; variant ID 52531740278968. Exact saved options: Size: Queen; Dimensions: 72 x 60 (183 cm x 152 cm); Height: 8 (20.3cm).",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-variant-record"
+        ],
+        "essential": true
+      },
+      {
+        "id": "sku-fact-1",
+        "kind": "product",
+        "text": "Sense Ortho Ultra Mattress - Ivory White.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-2",
+        "kind": "product",
+        "text": "Selected variant: Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3cm).",
+        "status": "unverified",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-3",
+        "kind": "product",
+        "text": "Sense Ortho Ultra has an 8-inch mattress with cool-to-touch high-GSM knit fabric cover, BodyIQ orthopedic memory foam layer, and firm orthopedic base foam.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-4",
+        "kind": "product",
+        "text": "With a thicker layer of BodyIQ memory foam that intuitively adapts to every body curve (and yes, zero motion transfer), this mattress makes every sleep feel customized.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-5",
+        "kind": "product",
+        "text": "Beneath the memory foam, a smart profile foam layer with egg tray structure keeps airflow flowing and pressure points zeroed out.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-6",
+        "kind": "product",
+        "text": "The firm base layer offers deep orthopedic support and better posture alignment through the night.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-7",
+        "kind": "product",
+        "text": "Removable and washable zipper cover.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-8",
+        "kind": "product",
+        "text": "100-Night Trial and 12-Year Warranty.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      }
+    ],
+    "evidence": [
+      {
+        "factId": "sku-fact-1",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-1",
+        "quote": "Sense Ortho Ultra Mattress - Ivory White Sleepyhead Sense Ortho Ultra – Cool."
+      },
+      {
+        "factId": "sku-fact-2",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-16",
+        "quote": "Home Mattresses Sense Ortho Ultra Mattress - Ivory White Skip to product information Link Close share Copy link Open media 1 in modal Open media 2 in modal Open media 3 in modal Open media 4 in modal Open media 5 in modal Open media 6 in modal 1 / of 6 Zero Motion Transfer Pressure Relief Sleep 100 Night Free Trial Sense Ortho Ultra Mattress - Ivory White Sense Ortho Ultra Mattress - Ivory White Targeted orthopedic support paired with cooling fabric for refreshing sleep ★★★★★ ★★★★★ 4.6/5 (200 reviews) Single / 72 x 36 (183 cm x 92 cm) / 8 (20.3cm) Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Dimensions 72 x 36 (183 cm x 92 cm) Variant sold out or unavailable 75 x 36 (191 cm x 92 cm) Variant sold out or unavailable 78 x 36 (198 cm x 92 cm) Variant sold out or unavailable 72 x 48 (183 cm x 122 cm) Variant sold out or unavailable 75 x 48 (191 cm x 122 cm) Variant sold out or unavailable 78 x 48 (198 cm x 122 cm) Variant sold out or unavailable 72 x 60 (183 cm x 152 cm) Variant sold out or unavailable 75 x 60 (191 cm x 152 cm) Variant sold out or unavailable 78 x 60 (198 cm x 152 cm) Variant sold out or unavailable 72 x 72 (183 cm x 183 cm) Variant sold out or unavailable 75 x 72 (191 cm x 183 cm) Variant sold out or unavailable 78 x 72 (198 cm x 183 cm) Variant sold out or unavailable Height 8 (20.3cm) Variant sold out or unavailable Regular price ₹ 9,207 Sale price MRP: Regular price ₹ 13,999 ₹ 9,207 34% OFF (Inclusive of all taxes) Sale Sold out Taxes included."
+      },
+      {
+        "factId": "sku-fact-3",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-56",
+        "quote": "Sense Ortho Ultra is an 8-inch mattress with cool-to-touch high-GSM knit fabric cover, BodyIQ orthopedic memory foam layer, and firm orthopedic base foam."
+      },
+      {
+        "factId": "sku-fact-4",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-5",
+        "quote": "With a thicker layer of BodyIQ memory foam that intuitively adapts to every body curve (and yes, zero motion transfer), this mattress makes every sleep feel customized."
+      },
+      {
+        "factId": "sku-fact-5",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-8",
+        "quote": "Beneath the memory foam, a smart profile foam layer with egg tray structure keeps airflow flowing and pressure points zeroed out."
+      },
+      {
+        "factId": "sku-fact-6",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-10",
+        "quote": "And here’s the part your back will thank you for: the firm base layer offers deep orthopedic support and better posture alignment through the night."
+      },
+      {
+        "factId": "sku-fact-7",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-28",
+        "quote": "Toss in a zipper cover that’s removable and washable?"
+      },
+      {
+        "factId": "sku-fact-8",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-30",
+        "quote": "Oh—and did we mention the 100-Night Trial and 12-Year Warranty?"
+      },
+      {
+        "factId": "sku-selected-variant",
+        "sourceId": "source-selected-variant-record",
+        "passageId": "source-selected-variant-record-passage-1",
+        "quote": "The explicitly selected official product variant is Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3cm); SKU SNSORTHOULTRA720060000800WHITE; variant ID 52531740278968. Exact saved options: Size: Queen; Dimensions: 72 x 60 (183 cm x 152 cm); Height: 8 (20.3cm)."
+      }
+    ],
+    "collectedAt": "2026-10-21T19:10:21.980Z",
+    "jobId": "creative-b0697fde-dd24-4bd6-a335-dd1ef57b9133"
+  }
+}

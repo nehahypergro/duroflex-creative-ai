@@ -1,0 +1,165 @@
+{
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "imageIds": [
+    "P086",
+    "P087",
+    "P088",
+    "P089",
+    "P090",
+    "P091",
+    "P092",
+    "P093",
+    "P094",
+    "P095",
+    "P096",
+    "P097",
+    "P098",
+    "P099",
+    "P100",
+    "P101",
+    "P102",
+    "P103",
+    "P104",
+    "P105",
+    "P106",
+    "P107",
+    "P108",
+    "P109",
+    "P110",
+    "P111",
+    "P112",
+    "P113",
+    "P114",
+    "P115"
+  ],
+  "imageHashes": [
+    {
+      "id": "P086",
+      "sha256": "680a23af0f01edca508b3c6b19ec173f3eb6ca661a8d88666643fdabbc211efb"
+    },
+    {
+      "id": "P087",
+      "sha256": "cf59949f1a91c775276ca976ea84f655b9f51b1a29105c2a0311782f4db11f5f"
+    },
+    {
+      "id": "P088",
+      "sha256": "d6f5529c567f0d8da43a9f07e32ef300a226edfe44c4735974a0b45ea9cec44d"
+    },
+    {
+      "id": "P089",
+      "sha256": "220a92f1137f625f77c67c33f5c86c2e81e62983c1688c9c03e7e4d23431d59d"
+    },
+    {
+      "id": "P090",
+      "sha256": "1a978711303b1eb0957e60373a97c6d4cb0b2dab9906802cdc2adb4b7f363c70"
+    },
+    {
+      "id": "P091",
+      "sha256": "360918487449c7db0f0fe9d2591fe2a9c24e43d0e50d990b77ad25564ea65144"
+    },
+    {
+      "id": "P092",
+      "sha256": "74bc6f373470d84d3589c4c91b1d8aa771f08c210883d0d8712f05bffe206052"
+    },
+    {
+      "id": "P093",
+      "sha256": "4d21222135b8827909c95d52b9c0e5cf4c830e6cc11aad5476d28ecd004a4af5"
+    },
+    {
+      "id": "P094",
+      "sha256": "82a26cebb0797a6fd3869f5bd75f8f50578485f31525608aaba4a65934fa9d60"
+    },
+    {
+      "id": "P095",
+      "sha256": "1926c907dc2f3d8fb48d733680fd003b9cbb65425cbbf05a20a35d02dea48b73"
+    },
+    {
+      "id": "P096",
+      "sha256": "e0eb89cd869e71b6dcc033fd2f864ece156e9eb3a4fb20abfc96e316811a5e60"
+    },
+    {
+      "id": "P097",
+      "sha256": "e69be5391d3d00a9aa4df68ab3daa777922b094b012041f03d9e5c2692b5f76b"
+    },
+    {
+      "id": "P098",
+      "sha256": "afd22251dd2d18e560883a31ebe07808736ec5b779e8e76fc6d29f0b0be7b694"
+    },
+    {
+      "id": "P099",
+      "sha256": "f5db95a678b12c2403fc5ce464e52ade03fcd73e3a056513b0d8a122c2bfa6f4"
+    },
+    {
+      "id": "P100",
+      "sha256": "26156ffba420d1a58ce3401d12ed93e8a6d33656e03dbbdafb80b866efd5963f"
+    },
+    {
+      "id": "P101",
+      "sha256": "36704cf53c3695e527e823d833b1d62e5f0af16f3f016dcc918d32d6c5b572d8"
+    },
+    {
+      "id": "P102",
+      "sha256": "a2bff14dd3d60a39a9c8b7bb13b8c8d466f04e19e1e9079aa66223e33309664a"
+    },
+    {
+      "id": "P103",
+      "sha256": "f68520b2aa177b09e7712c8cfec8487c531d8ec82ba07ce9969652ca86743617"
+    },
+    {
+      "id": "P104",
+      "sha256": "60bd92797f80c14d667ec75c1f2d0ed97b45ab2fcdbc68ce705d9fdee8e17957"
+    },
+    {
+      "id": "P105",
+      "sha256": "aef3c51cf36fc3d9fd390b681c6f47137bee0afdb175158cb886a4f66c3e6245"
+    },
+    {
+      "id": "P106",
+      "sha256": "9342544f9706a54019bd2a2db54232923f850de3275e55a6adb10857773641f7"
+    },
+    {
+      "id": "P107",
+      "sha256": "205dfdb4308a602cea54d5fc521e0817b454f89c90d38405a97a9b782bbec5a4"
+    },
+    {
+      "id": "P108",
+      "sha256": "9c7578eff51a115197c14fdcb0d3373f854e993e71e7a61baceb2188428ddf3f"
+    },
+    {
+      "id": "P109",
+      "sha256": "e4fe90773e7dece36e0dfa92113fdd0f8e9c982c0f536b5c995a5d98ba2fd3d1"
+    },
+    {
+      "id": "P110",
+      "sha256": "7e7e66f04e61c5b09f84d9dd29f757d00fa6fd973c42a7cde43973c33181832f"
+    },
+    {
+      "id": "P111",
+      "sha256": "068fff2a5f316fa365edd4d5d9112425cf691e6b1f4cef10b6cbe3cb08d235c8"
+    },
+    {
+      "id": "P112",
+      "sha256": "86860df6673ad8e91a0adbcdcc6c1eed2816f4b36732e59b42276f2f5efca3d0"
+    },
+    {
+      "id": "P113",
+      "sha256": "a7b60837196adaed243cc6df514adfd67795139aed9f1b18614029497f702917"
+    },
+    {
+      "id": "P114",
+      "sha256": "d40cb5a3adc5038e357a4e4e91ab45989daec8c49c285335ba8601459147d7b5"
+    },
+    {
+      "id": "P115",
+      "sha256": "2c5b232b5202472dd370da16ae263850e7a35b47079bc119b7d89e75304119f5"
+    }
+  ],
+  "contextHash": "c28b848854ccdd1225809aa42f6d015cdc10ff767697eca9cb9648c163eefaa3",
+  "model": "gpt-6-astra",
+  "reasoning": {
+    "effort": "high"
+  },
+  "maxOutputTokens": 15000,
+  "requestHash": "9c70785230a62926e140fad2005811dfe05da51a81fcc27e6281e87bbfb05858",
+  "startedAt": "2026-10-11T21:18:47.148Z"
+}

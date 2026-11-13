@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "key": "03dbb5e2f8bd009ffd41ca6bfe1f7087bf846628e989eef73afec61d55d9d257",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "productId": "product-20b8cdb128e5b41b7655",
+  "variantId": "52529775476920",
+  "photoHashes": [
+    "b2c476bab1965e16594afb497c65e341e5fbc1ed1c404f52947709cbdd1991f4",
+    "39c2b85befd024a1623c4bd71a3709f1f779861dced145d9a843a80a1c3f889d",
+    "f44cfaf5dceeedc2bde170d8ff7a6832bed08eb8429b21a7d87c4b21c3e0a98a"
+  ],
+  "features": [
+    {
+      "feature": "Three-panel folding mattress with broad rectangular panels, shown flat or folded into an A-shaped profile.",
+      "where": "Overall mattress"
+    },
+    {
+      "feature": "Plain, smooth dark navy fabric on the top surfaces of all three panels.",
+      "where": "Panel tops"
+    },
+    {
+      "feature": "Blue side fabric with a repeating light blue and tan angular geometric pattern.",
+      "where": "Sides and fold edges"
+    },
+    {
+      "feature": "Narrow dark piping outlines the panel edges and joins.",
+      "where": "Panel edges and seams"
+    },
+    {
+      "feature": "Narrow navy fabric tabs with small metal eyelets extend from the side edge.",
+      "where": "Side edges"
+    },
+    {
+      "feature": "Orange rectangular label with a fine white border and white lettering.",
+      "where": "Long patterned side, near one end"
+    }
+  ],
+  "labelWords": "sleepyhead",
+  "jobId": "creative-9de36c2a-217a-4f52-8e82-13d85bd4ffc5",
+  "createdAt": "2026-11-10T14:12:05.113Z"
+}

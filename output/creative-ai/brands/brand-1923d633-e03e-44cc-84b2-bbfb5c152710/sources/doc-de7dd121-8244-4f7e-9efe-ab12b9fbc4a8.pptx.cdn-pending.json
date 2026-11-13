@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "status": "pending",
+  "file": "output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8.pptx",
+  "error": "Upload service rejected the 407240392-byte source document with HTTP 413. Original is retained locally; a higher upload limit is required.",
+  "recordedAt": "2026-10-22T10:21:13.180Z"
+}

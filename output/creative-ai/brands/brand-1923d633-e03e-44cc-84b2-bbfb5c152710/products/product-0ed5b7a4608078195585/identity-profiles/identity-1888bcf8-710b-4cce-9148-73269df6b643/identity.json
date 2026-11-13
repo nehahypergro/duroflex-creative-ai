@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-1888bcf8-710b-4cce-9148-73269df6b643",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-0ed5b7a4608078195585",
+  "productName": "Duro Safe - Waterproof Mattress Protector",
+  "pageUrl": "https://www.duroflexworld.com/products/mattress-protector",
+  "productSnapshot": "snapshot-1791916695354-20d399",
+  "variant": {
+    "id": "41775148761220",
+    "sku": "PROT78006000GREYMP",
+    "name": "Queen / 78\" x 60\" (1.98m x 152.4cm) / GREY",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 78\" x 60\" (1.98m x 152.4cm) / GREY",
+    "configuration": "Official website variant Queen / 78\" x 60\" (1.98m x 152.4cm) / GREY",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-3640cbd598ba06ed",
+    "snapshot": "snapshot-1791916695354-20d399",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/1_b3fad4e6-724f-4822-ab5a-84eef472df55_600x600.png?v=1746516059",
+    "sha256": "bed1cf12a8a18781580fcd8f8aee92d6fb9ca186e644085a72c174ea748ed5a1",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "796b6e83b0a68c6bcb833f6566a40e3f7d060ea195fedcfa472dd104327f0f47",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-08T08:49:25.711Z"
+  },
+  "createdAt": "2026-11-08T08:49:25.711Z",
+  "profileHash": "550247c964395af142afc2903b522a96bc761db7983c54b68d55a4709a21c2b9"
+}

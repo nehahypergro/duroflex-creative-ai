@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-c143795b-d237-49ad-8bf2-6ad93016990d",
+  "status": "verified",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "productId": "product-6f9744f296e8981956a1",
+  "productName": "Sofa Bubbles - 3 Seater Sofa (Fabric, Teal Blue)",
+  "pageUrl": "https://mysleepyhead.com/products/sofa-bubbles-3-seater-sofa-fabric-teal-blue",
+  "productSnapshot": "snapshot-1791916722368-0f9496",
+  "variant": {
+    "id": "52485277876408",
+    "sku": "SHBU3SSBL",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-1f0a47a29b20b213",
+    "snapshot": "snapshot-1791916722368-0f9496",
+    "sourceUrl": "https://mysleepyhead.com/cdn/shop/files/Bubble_3S_Teal_Blue_7.jpg?v=1768928729",
+    "sha256": "9a0b5e35c03cb91235bc52d0b878fa2efb7ee5f8f746299e5c5c4569c34426f0",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 2000,
+    "height": 2000,
+    "rasterHash": "2cb3c53f16823a1b4410e81427c97a2f15fe50be651f877fffe8032608a973a2",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-13T20:29:11.935Z"
+  },
+  "createdAt": "2026-10-13T20:29:11.935Z",
+  "profileHash": "647a02f9d29b60c5df5d1e1ce83bde4cf46e5be7cb247a5057467e91dc9153e4"
+}

@@ -1,0 +1,71 @@
+{
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "approvedBy": "User explicitly supplied approved logos on 2026-10-15",
+  "originals": [
+    {
+      "source": "/Users/neha/Downloads/duroflex-vector-logo_logoshape.com/duroflex-vector-logo_logoshape.com.svg",
+      "file": "originals/duroflex-vector-logo_logoshape.com.svg",
+      "sha256": "f66490ea825db173da6a0ef287a0452f789457c5973a863ed15affa19e63d955"
+    },
+    {
+      "source": "/Users/neha/Downloads/duroflex-vector-logo_logoshape.com/duroflex-vector-logo_logoshape.com.png",
+      "file": "originals/duroflex-vector-logo_logoshape.com.png",
+      "sha256": "8d8b2eb7ee90f4776c5405105350a7ff0345b8cb6b59f0614bd15c3e7d2aee62"
+    },
+    {
+      "source": "/Users/neha/Downloads/83eab720-1a74-4853-b50a-00028866000b._CR0,0,3000,600_SX1500_.jpeg",
+      "file": "originals/83eab720-1a74-4853-b50a-00028866000b._CR0,0,3000,600_SX1500_.jpeg",
+      "sha256": "72426a16f34c0bb58fc649f22300354b3527f5565bf2204a7ee2f93222279528"
+    }
+  ],
+  "derivation": "Native vector derivative of supplied approved SVG: all 9 visible path data strings unchanged; invisible no-fill paths omitted; tight viewBox; white fill only for white variant. JPEG retained as white-logo reference. No raster redraw or image-generation call.",
+  "variants": [
+    {
+      "name": "red",
+      "svg": "duroflex-red-transparent.svg",
+      "png": "duroflex-red-transparent.png"
+    },
+    {
+      "name": "white",
+      "svg": "duroflex-white-transparent.svg",
+      "png": "duroflex-white-transparent.png"
+    }
+  ],
+  "registry": [
+    {
+      "id": "asset-6306adf45256a69ef7583b76",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "kind": "logo",
+      "name": "Duroflex official website red symbol and wordmark",
+      "sourceReference": "Official website header asset, observed 2026-10-15: https://www.duroflexworld.com/cdn/shop/files/duroflex-logo-min.png?v=1766829777",
+      "approved": true,
+      "sha256": "6306adf45256a69ef7583b76ddcc4660601e4e065b02dd639e5d2252f581d538",
+      "filename": "asset-6306adf45256a69ef7583b76.png",
+      "url": "/creative-ai/api/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/canvas-assets/asset-6306adf45256a69ef7583b76.png"
+    },
+    {
+      "id": "asset-6e5fd8bea6f5ca7cbda1c6f9",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "kind": "logo",
+      "name": "Duroflex approved red \u00b7 transparent vector",
+      "sourceReference": "User supplied and approved 2026-10-15. Native derivative of duroflex-vector-logo_logoshape.com.svg; original path geometry preserved. Source archive: approved-logos/2026-10-15/manifest.json",
+      "approved": true,
+      "sha256": "6e5fd8bea6f5ca7cbda1c6f99c3ef81f2d2f6317c60c8307b2c5b02e1c9c98cb",
+      "filename": "asset-6e5fd8bea6f5ca7cbda1c6f9.svg",
+      "url": "/creative-ai/api/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/canvas-assets/asset-6e5fd8bea6f5ca7cbda1c6f9.svg",
+      "colour": "#ed2e25"
+    },
+    {
+      "id": "asset-43092a7d4f29a15110b5dfd7",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "kind": "logo",
+      "name": "Duroflex approved white \u00b7 transparent vector",
+      "sourceReference": "User supplied and approved 2026-10-15. Native derivative of duroflex-vector-logo_logoshape.com.svg; original path geometry preserved. Source archive: approved-logos/2026-10-15/manifest.json",
+      "approved": true,
+      "sha256": "43092a7d4f29a15110b5dfd738b80ec7f6a66441018aac03aaf15593c2ad0ac2",
+      "filename": "asset-43092a7d4f29a15110b5dfd7.svg",
+      "url": "/creative-ai/api/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/canvas-assets/asset-43092a7d4f29a15110b5dfd7.svg",
+      "colour": "#ffffff"
+    }
+  ]
+}

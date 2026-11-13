@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-478bb135-7693-4105-b2f1-9ab8e3ec0fba",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-02901c97d9167e33fbb4",
+  "productName": "Octave 3 Seater Water & Stain Repellent Fabric - Honey",
+  "pageUrl": "https://www.duroflexworld.com/products/duro-octave-sofa-3s-fab-dian003",
+  "productSnapshot": "snapshot-1791916674368-4c38e7",
+  "variant": {
+    "id": "50533517918340",
+    "sku": "OCTAVESOFA3SFABDIAN003",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-f136e02e41a40a38",
+    "snapshot": "snapshot-1791916674368-4c38e7",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/1_4e8456e5-cf05-461d-bd48-669b1aa6c051_600x600.jpg?v=1757057194",
+    "sha256": "45d7bde79fe33e37fe4cf2250c415ccd7fce1877dc208418834771fc709f85e6",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "77260268705022c41978d06119111c7424195b5888ebf55d9efe66ffb9104c2b",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-13T20:29:09.462Z"
+  },
+  "createdAt": "2026-10-13T20:29:09.462Z",
+  "profileHash": "9d3e991ee1e71c1719794e8690d5caf6c22703eb3804991ce8cb0cf5f485b6a8"
+}

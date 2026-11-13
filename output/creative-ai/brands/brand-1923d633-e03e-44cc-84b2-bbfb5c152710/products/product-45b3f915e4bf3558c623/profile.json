@@ -1,0 +1,1790 @@
+{
+  "version": 1,
+  "id": "product-45b3f915e4bf3558c623",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "name": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+  "sku": "AIRBOOST68AIPRO720030000800BLUE",
+  "description": "Airboost is Duroflex's proprietary open-matrix mattress technology made from over one lakh independently responsive fibres, designed to improve airflow, movement response and postural support. Trusted by athletes around the world, this sleep technology is brought to India for the first time by D...",
+  "brand": "Duroflex",
+  "taxonomy": [
+    {
+      "name": "Mattress",
+      "url": "",
+      "basis": "Website product type metadata"
+    }
+  ],
+  "category": "Mattress",
+  "variants": [
+    {
+      "id": "51476983939204",
+      "sku": "AIRBOOST68AIPRO720030000800BLUE",
+      "name": "Single / 72 x 30 (183 cm x 76 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "72 x 30 (183 cm x 76 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476983971972",
+      "sku": "AIRBOOST68AIPRO720035000800BLUE",
+      "name": "Single / 72 x 35 (183 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "72 x 35 (183 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984004740",
+      "sku": "AIRBOOST68AIPRO720036000800BLUE",
+      "name": "Single / 72 x 36 (183 cm x 91 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "72 x 36 (183 cm x 91 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984234116",
+      "sku": "AIRBOOST68AIPRO750030000800BLUE",
+      "name": "Single / 75 x 30 (191 cm x 76 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "75 x 30 (191 cm x 76 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984266884",
+      "sku": "AIRBOOST68AIPRO750035000800BLUE",
+      "name": "Single / 75 x 35 (191 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "75 x 35 (191 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984299652",
+      "sku": "AIRBOOST68AIPRO750036000800BLUE",
+      "name": "Single / 75 x 36 (191 cm x 91 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "75 x 36 (191 cm x 91 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984529028",
+      "sku": "AIRBOOST68AIPRO780030000800BLUE",
+      "name": "Single / 78 x 30 (198 cm x 76 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "78 x 30 (198 cm x 76 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984561796",
+      "sku": "AIRBOOST68AIPRO780035000800BLUE",
+      "name": "Single / 78 x 35 (198 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "78 x 35 (198 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984594564",
+      "sku": "AIRBOOST68AIPRO780036000800BLUE",
+      "name": "Single / 78 x 36 (198 cm x 91 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "78 x 36 (198 cm x 91 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984037508",
+      "sku": "AIRBOOST68AIPRO720042000800BLUE",
+      "name": "Double / 72 x 42 (183 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "72 x 42 (183 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984070276",
+      "sku": "AIRBOOST68AIPRO720048000800BLUE",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984332420",
+      "sku": "AIRBOOST68AIPRO750042000800BLUE",
+      "name": "Double / 75 x 42 (191 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "75 x 42 (191 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984365188",
+      "sku": "AIRBOOST68AIPRO750048000800BLUE",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984627332",
+      "sku": "AIRBOOST68AIPRO780042000800BLUE",
+      "name": "Double / 78 x 42 (198 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "78 x 42 (198 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984660100",
+      "sku": "AIRBOOST68AIPRO780048000800BLUE",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984103044",
+      "sku": "AIRBOOST68AIPRO720060000800BLUE",
+      "name": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "72 x 60 (183 cm x 152 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984135812",
+      "sku": "AIRBOOST68AIPRO720066000800BLUE",
+      "name": "Queen / 72 x 66 (183 cm x 168 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "72 x 66 (183 cm x 168 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984397956",
+      "sku": "AIRBOOST68AIPRO750060000800BLUE",
+      "name": "Queen / 75 x 60 (191 cm x 152 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "75 x 60 (191 cm x 152 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984430724",
+      "sku": "AIRBOOST68AIPRO750066000800BLUE",
+      "name": "Queen / 75 x 66 (191 cm x 168 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "75 x 66 (191 cm x 168 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984692868",
+      "sku": "AIRBOOST68AIPRO780060000800BLUE",
+      "name": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "78 x 60 (198 cm x 152 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984725636",
+      "sku": "AIRBOOST68AIPRO780066000800BLUE",
+      "name": "Queen / 78 x 66 (198 cm x 168 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "78 x 66 (198 cm x 168 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984168580",
+      "sku": "AIRBOOST68AIPRO720070000800BLUE",
+      "name": "King / 72 x 70 (183 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "72 x 70 (183 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984201348",
+      "sku": "AIRBOOST68AIPRO720072000800BLUE",
+      "name": "King / 72 x 72 (183 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "72 x 72 (183 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984463492",
+      "sku": "AIRBOOST68AIPRO750070000800BLUE",
+      "name": "King / 75 x 70 (191 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "75 x 70 (191 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984496260",
+      "sku": "AIRBOOST68AIPRO750072000800BLUE",
+      "name": "King / 75 x 72 (191 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "75 x 72 (191 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984758404",
+      "sku": "AIRBOOST68AIPRO780070000800BLUE",
+      "name": "King / 78 x 70 (198 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "78 x 70 (198 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51476984791172",
+      "sku": "AIRBOOST68AIPRO780072000800BLUE",
+      "name": "King / 78 x 72 (198 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "78 x 72 (198 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51592914796676",
+      "sku": "MATNSAIRBOOST68AIPRO0800",
+      "name": "Custom / 84 x 72 (213 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "Custom",
+        "84 x 72 (213 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005722244",
+      "sku": "AIRBOOST68AIPRO840030000800BLUE",
+      "name": "Single / 84 x 30 (213 cm x 76.2 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "84 x 30 (213 cm x 76.2 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005755012",
+      "sku": "AIRBOOST68AIPRO840035000800BLUE",
+      "name": "Single / 84 x 35 (213 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "84 x 35 (213 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005787780",
+      "sku": "AIRBOOST68AIPRO840036000800BLUE",
+      "name": "Single / 84 x 36 (213 cm x 91.4 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "84 x 36 (213 cm x 91.4 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005820548",
+      "sku": "AIRBOOST68AIPRO840042000800BLUE",
+      "name": "Double / 84 x 42 (213 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "84 x 42 (213 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005853316",
+      "sku": "AIRBOOST68AIPRO840048000800BLUE",
+      "name": "Double / 84 x 48 (213 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "84 x 48 (213 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005886084",
+      "sku": "AIRBOOST68AIPRO840060000800BLUE",
+      "name": "Queen / 84 x 60 (213 cm x 152.4 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "84 x 60 (213 cm x 152.4 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005918852",
+      "sku": "AIRBOOST68AIPRO840066000800BLUE",
+      "name": "Queen / 84 x 66 (213 cm x 168 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "84 x 66 (213 cm x 168 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005951620",
+      "sku": "AIRBOOST68AIPRO840070000800BLUE",
+      "name": "King / 84 x 70 (213 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "84 x 70 (213 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51768005984388",
+      "sku": "AIRBOOST68AIPRO840072000800BLUE",
+      "name": "King / 84 x 72 (213 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "84 x 72 (213 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Single",
+        "Double",
+        "Queen",
+        "King",
+        "Custom"
+      ]
+    },
+    {
+      "name": "Dimension",
+      "position": 2,
+      "values": [
+        "72 x 30 (183 cm x 76 cm)",
+        "72 x 35 (183 cm x 89 cm)",
+        "72 x 36 (183 cm x 91 cm)",
+        "75 x 30 (191 cm x 76 cm)",
+        "75 x 35 (191 cm x 89 cm)",
+        "75 x 36 (191 cm x 91 cm)",
+        "78 x 30 (198 cm x 76 cm)",
+        "78 x 35 (198 cm x 89 cm)",
+        "78 x 36 (198 cm x 91 cm)",
+        "72 x 42 (183 cm x 107 cm)",
+        "72 x 48 (183 cm x 122 cm)",
+        "75 x 42 (191 cm x 107 cm)",
+        "75 x 48 (191 cm x 122 cm)",
+        "78 x 42 (198 cm x 107 cm)",
+        "78 x 48 (198 cm x 122 cm)",
+        "72 x 60 (183 cm x 152 cm)",
+        "72 x 66 (183 cm x 168 cm)",
+        "75 x 60 (191 cm x 152 cm)",
+        "75 x 66 (191 cm x 168 cm)",
+        "78 x 60 (198 cm x 152 cm)",
+        "78 x 66 (198 cm x 168 cm)",
+        "72 x 70 (183 cm x 178 cm)",
+        "72 x 72 (183 cm x 183 cm)",
+        "75 x 70 (191 cm x 178 cm)",
+        "75 x 72 (191 cm x 183 cm)",
+        "78 x 70 (198 cm x 178 cm)",
+        "78 x 72 (198 cm x 183 cm)",
+        "84 x 72 (213 cm x 183 cm)",
+        "84 x 30 (213 cm x 76.2 cm)",
+        "84 x 35 (213 cm x 89 cm)",
+        "84 x 36 (213 cm x 91.4 cm)",
+        "84 x 42 (213 cm x 107 cm)",
+        "84 x 48 (213 cm x 122 cm)",
+        "84 x 60 (213 cm x 152.4 cm)",
+        "84 x 66 (213 cm x 168 cm)",
+        "84 x 70 (213 cm x 178 cm)"
+      ]
+    },
+    {
+      "name": "Height",
+      "position": 3,
+      "values": [
+        "8 (20.3 cm)"
+      ]
+    }
+  ],
+  "contentSections": [
+    {
+      "heading": "100-Nights Trial",
+      "group": "supporting-content",
+      "text": "Product Details Overview Reviews Mattress Quiz --> Home Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial Skip to product information Zoom Open media 1 in modal --> --> Link Close share Copy link Zoom Open media 2 in modal --> --> Link Close share Copy link Zoom Open media 3 in modal --> --> Link Close share Copy link Zoom Open media 4 in modal --> --> Link Close share Copy link Zoom Open media 5 in modal --> --> Link Close share Copy link Zoom Open media 6 in modal --> --> Link Close share Copy link Zoom Open media 7 in modal --> --> Link Close share Copy link Zoom Open media 8 in modal --> --> Link Close share Copy link Zoom Open media 9 in modal --> --> Link Close share Copy link Zoom Open media 10 in modal --> --> Link Close share Copy link 100-Nights Trial 10-Years Warranty Free Shipping & Returns No Cost EMI Skip to product information Zoom Open media 1 in modal --> --> Link Close share Copy link Zoom Open media 2 in modal --> --> Link Close share Copy link Zoom Open media 3 in modal --> --> Link Close share Copy link Zoom Open media 4 in modal --> --> Link Close share Copy link Zoom Open media 5 in modal --> --> Link Close share Copy link Zoom Open media 6 in modal --> --> Link Close share Copy link Open media 7 in modal Play video --> --> Link Close share Copy link Zoom Open media 8 in modal --> --> Link Close share Copy link Zoom Open media 9 in modal --> --> Link Close share Copy link Zoom Open media 10 in modal --> --> Link Close share Copy link 100-Nights Trial 10-Years Warranty Free Shipping & Returns No Cost EMI Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial 4.7/5 (506 reviews) Claim your Free Gift Hamper upto ₹8,498* *T&C applied See My Hamper ₹ Unlock Gold Voucher ₹8,000 on orders above ₹2L · ₹15,000 above ₹2.5L · ₹30,000 above ₹3L ₹8,000 on orders above ₹2L ₹15,000 above ₹2.5L ₹30,000 above ₹3L ₹8,000 on orders above ₹2L Size Choose a size Custom | 84 x 72 (213 cm x 183 cm) | 8 (20.3 cm) Single | 72 x 30 (183 cm x 76 cm) | 8 (20.3 cm) Single | 72 x 35 (183 cm x 89 cm) | 8 (20.3 cm) Single | 72 x 36 (183 cm x 91 cm) | 8 (20.3 cm) Single | 75 x 30 (191 cm x 76 cm) | 8 (20.3 cm) Single | 75 x 35 (191 cm x 89 cm) | 8 (20.3 cm) Single | 75 x 36 (191 cm x 91 cm) | 8 (20.3 cm) Single | 78 x 30 (198 cm x 76 cm) | 8 (20.3 cm) Single | 78 x 35 (198 cm x 89 cm) | 8 (20.3 cm) Single | 78 x 36 (198 cm x 91 cm) | 8 (20.3 cm) Double | 72 x 42 (183 cm x 107 cm) | 8 (20.3 cm) Double | 72 x 48 (183 cm x 122 cm) | 8 (20.3 cm) Double | 75 x 42 (191 cm x 107 cm) | 8 (20.3 cm) Double | 75 x 48 (191 cm x 122 cm) | 8 (20.3 cm) Double | 78 x 42 (198 cm x 107 cm) | 8 (20.3 cm) Double | 78 x 48 (198 cm x 122 cm) | 8 (20.3 cm) Queen | 72 x 60 (183 cm x 152 cm) | 8 (20.3 cm) Queen | 72 x 66 (183 cm x 168 cm) | 8 (20.3 cm) Queen | 75 x 60 (191 cm x 152 cm) | 8 (20.3 cm) Queen | 75 x 66 (191 cm x 168 cm) | 8 (20.3 cm) Queen | 78 x 60 (198 cm x 152 cm) | 8 (20.3 cm) Queen | 78 x 66 (198 cm x 168 cm) | 8 (20.3 cm) King | 72 x 70 (183 cm x 178 cm) | 8 (20.3 cm) King | 72 x 72 (183 cm x 183 cm) | 8 (20.3 cm) King | 75 x 70 (191 cm x 178 cm) | 8 (20.3 cm) King | 75 x 72 (191 cm x 183 cm) | 8 (20.3 cm) King | 78 x 70 (198 cm x 178 cm) | 8 (20.3 cm) King | 78 x 72 (198 cm x 183 cm) | 8 (20.3 cm) Custom | 84 x 72 (213 cm x 183 cm) | 8 (20.3 cm) Single | 84 x 30 (213 cm x 76.2 cm) | 8 (20.3 cm) Single | 84 x 35 (213 cm x 89 cm) | 8 (20.3 cm) Single | 84 x 36 (213 cm x 91.4 cm) | 8 (20.3 cm) Double | 84 x 42 (213 cm x 107 cm) | 8 (20.3 cm) Double | 84 x 48 (213 cm x 122 cm) | 8 (20.3 cm) Queen | 84 x 60 (213 cm x 152.4 cm) | 8 (20.3 cm) Queen | 84 x 66 (213 cm x 168 cm) | 8 (20.3 cm) King | 84 x 70 (213 cm x 178 cm) | 8 (20.3 cm) King | 84 x 72 (213 cm x 183 cm) | 8 (20.3 cm) Qty ( 0 in cart) Decrease quantity for Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial Increase quantity for Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial Choose a size Hamper value varies by mattress size GIFT HAMPER ✕ Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Custom Variant sold out or unavailable Dimension 72 x 30 (183x76) Variant sold out or unavailable 72 x 35 (183x89) Variant sold out or unavailable 72 x 36 (183x91) Variant sold out or unavailable 75 x 30 (191x76) Variant sold out or unavailable 75 x 35 (191x89) Variant sold out or unavailable 75 x 36 (191x91) Variant sold out or unavailable 78 x 30 (198x76) Variant sold out or unavailable 78 x 35 (198x89) Variant sold out or unavailable 78 x 36 (198x91) Variant sold out or unavailable 72 x 42 (183x107) Variant sold out or unavailable 72 x 48 (183x122) Variant sold out or unavailable 75 x 42 (191x107) Variant sold out or unavailable 75 x 48 (191x122) Variant sold out or unavailable 78 x 42 (198x107) Variant sold out or unavailable 78 x 48 (198x122) Variant sold out or unavailable 72 x 60 (183x152) Variant sold out or unavailable 72 x 66 (183x168) Variant sold out or unavailable 75 x 60 (191x152) Variant sold out or unavailable 75 x 66 (191x168) Variant sold out or unavailable 78 x 60 (198x152) Variant sold out or unavailable 78 x 66 (198x168) Variant sold out or unavailable 72 x 70 (183x178) Variant sold out or unavailable 72 x 72 (183x183) Variant sold out or unavailable 75 x 70 (191x178) Variant sold out or unavailable 75 x 72 (191x183) Variant sold out or unavailable 78 x 70 (198x178) Variant sold out or unavailable 78 x 72 (198x183) Variant sold out or unavailable 84 x 72 (213x183) Variant sold out or unavailable 84 x 30 (213 cm x 76.2 cm) Variant sold ou"
+    },
+    {
+      "heading": "ISSR Accreditation",
+      "group": "supporting-content",
+      "text": "ISSR Accreditation Trusted by Indian Society of Sleep Research to enhance N3 sleep NHA Accreditation Exclusively approved by doctors at NHA TUV Accreditation German certified How does the dual firmness work? This Airboost mattress features a reversible latex topper with firm support on one side and medium firm on the other. Simply flip the mattress to switch between firmness levels. The zipper cover makes it easy to remove and identify each side. What is inside the Airboost mattress? The mattress features a 6-inch Airboost layer combined with latex for responsive support, superior breathability, and pressure relief while keeping you cool throughout the night. Is the cover washable? The zipper cover is machine washable but softer wash settings should be used to increase durability. Is there a trial period? Yes. This Airboost mattresses comes with a 100 day sleep trial period that allows you to experience the mattress at home before making a final decision × 1 / 1 ❮ ❯"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Benefits Reviews Compare FAQs Add To Cart"
+    },
+    {
+      "heading": "Why airboost?",
+      "group": "supporting-content",
+      "text": "Why airboost? 1 Lakh+ Airknit Fibres 3X Breathability 5-Zone support"
+    },
+    {
+      "heading": "Air",
+      "group": "supporting-content",
+      "text": "Air Up to 1,000 individually wrapped coils help cradle your body while also limiting motion transfer.  1 Lakh Touchpoints Up to 1,000 individually wrapped coils help cradle your body while also limiting motion transfer."
+    },
+    {
+      "heading": "Recognized By",
+      "group": "supporting-content",
+      "text": "Recognized By The Duroflex Airboost delivers on its promises in a way that feels convincing and real from the very first night. The Airboost wins clearly on temperature regulation and loses nothing on support. A revolution in the making from Duroflex. Most comfortable mattress I’ve personally used. Duroflex’s Airboost hands down the best mattress in 2026."
+    },
+    {
+      "heading": "Real People, Real Stories",
+      "group": "supporting-content",
+      "text": "Real People, Real Stories Ashish Khazanchi Managing Partner, Enormous Brands 4.5/5 Between running an agency and my morning cycling, Airboost didn’t just feel comfortable, it aided my daily recovery.  The cool fabric helped me sleep without night sweats & wake up fully refreshed. Ashish Khazanchi Managing Partner, Enormous Brands 4.5/5 Saurabh Agarwal CEO, DAIOM 4/5 Because I travel a lot & sleep on different hotel mattresses, I experience back and neck pain. The firm surface of the Airboost mattress has really helped with my back pain & stiffness and I wake up with a lot more energy in the morning. Saurabh Agarwal CEO, DAIOM 4/5 Akshaja Singh Marketing Manager, Diageo 4.5/5 Becoming a new mom means I have an erratic sleep schedule & constant back pain. My Airboost mattress’s firmness is just-right instead of being rock hard which has completely resolved my back pain. My fitness tracker also shows more deep sleep time, helping me wake up more refreshed. Akshaja Singh Marketing Manager, Diageo 4.5/5 Arun Kanojia Marketing Head, Subway 4/5 I drive every day for 3.5 hours to and from office which means I’m completely exhausted by sleep time. With the Airboost, I fall asleep quickly & stay asleep through the night. Deep, uninterrupted sleep has made a real difference to my day. Arun Kanojia Marketing Head, Subway 4/5 Upasna A Agarwal Professor, IIM Mumbai 5/5 For 2 years now, I tried various ways to improve my sleep quality but my night sweats and broken sleep persists. I finally decided to try the Airboost and after 40 days, I've stopped waking up from night sweats & my sleep has become deeper and more settled. Upasna A Agarwal Professor, IIM Mumbai 5/5 ← ←"
+    },
+    {
+      "heading": "Customer Reviews",
+      "group": "supporting-content",
+      "text": "Customer Reviews Based on 506 reviews Write a review 82% (414) 11% (56) 5% (27) 1% (5) 1% (4) I Ishita Rao Balanced Feel Throughout The mattress feels supportive without being overly hard, making it comfortable for everyday sleep. R Rohan Malhotra Two Comfort Levels in One Mattress I started with the medium firm side and later switched to the firm side. Having both options in one mattress is incredibly useful. D Dev Khanna Refreshing Sleep Every Morning I wake up feeling more energetic and don't experience the body stiffness I had with my old mattress. K Karan Mehta Perfect for Different Sleep Preferences Duropedic Airboost 6.8 Adjustable Firmness Mattress lets me choose the firmness that suits my body without buying another mattress. A Arjun Nair Easy to Move Without Sinking Changing sleeping positions feels effortless because the mattress responds quickly without trapping movement. 1 2 3"
+    },
+    {
+      "heading": "Better Sleep, No Comparison",
+      "group": "supporting-content",
+      "text": "Better Sleep, No Comparison Postural Alignment Airflow and heat dissipation Never sink-in Ease of movement Moisture repellent Airboost 1 Lakh+ support points 3X more breathable Max rebound Very high Yes 24.6k Shop now Foam NA Moderate Medium Moderate No Coir NA Less Low Restricted Absorbs Grid NA NA NA Moderate Absorbs"
+    },
+    {
+      "heading": "FAQs",
+      "group": "supporting-content",
+      "text": "FAQs What is Airboost? Airboost is a mattress technology that uses an adaptive air-filament structure to provide stable support, improved airflow, and easier movement during sleep. Instead of behaving like a solid block, Airboost distributes body weight across thousands of micro-support points while allowing air to flow through the mattress core. This helps manage pressure, heat, and movement throughout the night. How is Duroflex Airboost mattress different from memory foam mattress? Airboost feels more breathable and stable than memory foam, which typically sinks and retains heat. Memory foam softens with body heat and responds slowly, which can trap warmth and create a stuck feeling. Airboost responds instantly to pressure and movement, distributes load without collapse, and allows continuous airflow through its structure. Is Airboost mattress better than memory foam for hot sleepers? Hot sleepers often experience discomfort because heat and moisture get trapped under the body.  Airboost allows heat and moisture to dissipate through airflow, while memory foam tends to trap warmth due to its dense structure. How does Airboost help with sweating at night? Night-time sweating is often caused by trapped heat rather than room temperature alone.  Airboost’s open air-filament structure supports heat and moisture dissipation through the mattress core, helping maintain a more stable sleep surface. What is the difference between rebound and bounce in a mattress? Bounce feels springy and transfers movement, while rebound restores shape smoothly without disturbing the surface. Spring mattresses store and release energy across the entire mattress, which can cause motion transfer. Airboost provides localized rebound where only the compressed area recovers, helping maintain surface stability. Does Airboost reduce partner disturbance? Yes. Airboost helps reduce motion transfer compared to bouncy mattress systems. Because Airboost rebounds locally instead of across the mattress, movement does not travel far. This helps limit disturbances when a partner changes position. Is Airboost suitable for side sleepers? Yes. Airboost cushions pressure at the shoulders and hips while supporting the waist. Side sleeping concentrates body weight at specific points. Airboost adapts locally to heavier areas while maintaining support in lighter zones, helping keep the spine aligned. Is Airboost suitable for back sleepers? Yes. Airboost helps maintain natural spinal alignment for back sleepers. Back sleepers need balanced support that prevents hip sink while supporting the lower back. Airboost distributes load evenly and adapts to body shape. Is Airboost suitable for stomach sleepers? Yes. Airboost provides stable support that helps prevent excessive hip sink. Is Airboost good for people who toss and turn? Yes. Airboost supports easier movement without feeling stuck. Materials with slow recovery can increase effort during movement. Airboost responds instantly, reducing the effort needed to change positions and re-settle. Is Airboost good for heavy weight or high BMI sleepers? Yes. Airboost is designed to support higher body weight without deep sagging. Higher body weight increases pressure concentration. Airboost distributes load across thousands of filaments, improving stability, mobility, and long-term shape integrity. How is Airboost different from a grid mattress? Airboost adapts continuously, while grid mattresses rely on fixed geometric cells. Grid designs compress at defined points based on geometry. Airboost uses independent filaments that respond fluidly to body weight, creating smoother pressure distribution and stable support. How is Airboost different from rebonded foam? Rebonded foam relies on density and can create pressure hotspots. Airboost supports firmness through structure while adapting to the body and allowing airflow. How is Airboost different from coir mattresses? Coir mattresses are firm but not adaptive, while Airboost balances support, comfort, and breathability. Does Airboost help with back discomfort or back pain? Airboost supports alignment and pressure distribution, which can improve sleep comfort. Back discomfort during sleep often arises from misalignment and pressure buildup. Airboost helps maintain neutral posture by preventing collapse in heavy zones. How long does it take to adjust to Airboost? Most people adjust within a few weeks of regular use. Any change in sleep surface can require an adaptation period as posture and muscle memory adjust. Airboost does not rely on break-in softening, but the body may still need time to adapt. Does Airboost feel like an air bed? No. Airboost is not inflatable and does not feel like an air bed. It uses air as part of a fixed structural matrix, not adjustable air chambers. Is cooling only from the mattress fabric? Surface fabrics influence first touch. Long-term thermal comfort comes from airflow through the Airboost layer. How do I choose the right Airboost mattress? Greater Airboost layer thickness supports stronger load handling. Cooling fabrics and latex layers influence feel and premium positioning. Refer to the SKU table for final selection. Is there a sleep Trial / return policy on Airboost? Yes. Some Airboost mattresses come with a 100-day sleep trial period that allows you to experience the mattress at home before making a final decision.  What is the warranty period for Airboost mattresses? Airboost mattresses come with a long-term manufacturer warranty that covers manufacturing defects and material issues under normal use conditions. Warranty duration varies from 7-10 years depending on the variant. Where to buy Airboost mattress in India? Duroflex Airboost mattresses are available online at Duroflex’s official website and at select Duroflex brand stores and partner retail outlets across India. To find the nearest Duroflex experience centre near you click here . What are the main features of Airboost mattress? Adaptive air-filament suppor"
+    },
+    {
+      "heading": "Step into the Spotlight",
+      "group": "supporting-content",
+      "text": "Step into the Spotlight airboost airboost"
+    }
+  ],
+  "identityBasis": "Product structured metadata",
+  "pageUrl": "https://www.duroflexworld.com/products/duropedic-airboost-68-adjustable-firmness-mattress?_gl=1*20p93k*_up*MQ..*_gs*MQ..",
+  "requestedUrl": "https://www.duroflexworld.com/products/duropedic-airboost-68-adjustable-firmness-mattress?_gl=1*20p93k*_up*MQ..*_gs*MQ..",
+  "collectedAt": "2026-10-21T19:09:29.891Z",
+  "snapshot": "snapshot-1792609769891-291d6d",
+  "pageHash": "942464bf8afccfa98009a803a0a3b06da121cb41140528a54ad5b7a707eb91a6",
+  "assets": [
+    {
+      "id": "media-615e647da152ae09",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/Airboost-6_8_jpg_600x600.jpg?v=1773923691",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Product structured metadata",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-615e647da152ae09.jpg",
+      "bytes": 67976,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 600,
+      "height": 600,
+      "sha256": "31a7007092048adc7435a74ce94f6d2f6c9bf3f3cfe60e673f874c638925bcc1",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/Airboost-6_8_jpg_600x600.jpg?v=1773923691",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-615e647da152ae09-preview.png"
+    },
+    {
+      "id": "media-a0f5814c8fac19b0",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Airboost-6_8_jpg.jpg?v=1773923691",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-a0f5814c8fac19b0.jpg",
+      "bytes": 171794,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "3d13bc29a66269211d22200a146eba0a463ebc351c9687cb5e945410b0805a5a",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Airboost-6_8_jpg.jpg?v=1773923691",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-a0f5814c8fac19b0-preview.png"
+    },
+    {
+      "id": "media-d490fdf9a375a2b4",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_5d5a4526-f1f2-4245-b686-e9f8fde33431.jpg?v=1781087140",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-d490fdf9a375a2b4.jpg",
+      "bytes": 324538,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "39be9c0471e0ee32b114fdd47fd5c8f78d53215db005070d07da6ff04eba3cc1",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_5d5a4526-f1f2-4245-b686-e9f8fde33431.jpg?v=1781087140",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-d490fdf9a375a2b4-preview.png"
+    },
+    {
+      "id": "media-399a1c613eb8f122",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_d4c2692a-c2ed-4a75-a54b-96a629a96819.jpg?v=1781087140",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-399a1c613eb8f122.jpg",
+      "bytes": 375942,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "24df52de22713f45564d4fde7ddaf08f99cf7317af1e4443182354e14821481c",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_d4c2692a-c2ed-4a75-a54b-96a629a96819.jpg?v=1781087140",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-399a1c613eb8f122-preview.png"
+    },
+    {
+      "id": "media-3fe5c04b69a750e5",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_db1f100a-0ccc-43f2-8b4e-0dbe02dab516.jpg?v=1781087140",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-3fe5c04b69a750e5.jpg",
+      "bytes": 449299,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "62787f047c40851d5c5845e284814ab1e2a3ce3740d5459b3551bc8c24b135ea",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_db1f100a-0ccc-43f2-8b4e-0dbe02dab516.jpg?v=1781087140",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-3fe5c04b69a750e5-preview.png"
+    },
+    {
+      "id": "media-2d496446e1330a0a",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_183da723-7177-479e-b5dd-1478aa8eb971.jpg?v=1781087139",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-2d496446e1330a0a.jpg",
+      "bytes": 200275,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "dc2bcddbdd2664233b09f456246d6ffd09052a083b1be0d28a639fbd1436a9dd",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_183da723-7177-479e-b5dd-1478aa8eb971.jpg?v=1781087139",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-2d496446e1330a0a-preview.png"
+    },
+    {
+      "id": "media-7a66b7cc586fce5c",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_7d6bc999-a3fa-4ac1-a209-d9e49bbc2572.jpg?v=1781087140",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-7a66b7cc586fce5c.jpg",
+      "bytes": 252661,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "40536a96ce61ef794062669fd599e2485d34a74c6ea47cd1a32e8a0786273ddf",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_7d6bc999-a3fa-4ac1-a209-d9e49bbc2572.jpg?v=1781087140",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-7a66b7cc586fce5c-preview.png"
+    },
+    {
+      "id": "media-a5799a0a2fa76173",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_6f563215-5cec-40fc-92c1-99695c47570f.jpg?v=1781087140",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-a5799a0a2fa76173.jpg",
+      "bytes": 142763,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "436f10bc472ba47f42135f823bc9ca2012a6f2ad982b5ca147d94330a97bda31",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_6f563215-5cec-40fc-92c1-99695c47570f.jpg?v=1781087140",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-a5799a0a2fa76173-preview.png"
+    },
+    {
+      "id": "media-223c8e1f3ad1444f",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_9a21314e-40df-4f00-9e37-bc7845720e95.jpg?v=1781087139",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-223c8e1f3ad1444f.jpg",
+      "bytes": 129364,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "6fc2f5915591ae179113159cb4d2a88cbebc7b8ca7cd22556778a11327316c65",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_9a21314e-40df-4f00-9e37-bc7845720e95.jpg?v=1781087139",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-223c8e1f3ad1444f-preview.png"
+    },
+    {
+      "id": "media-71e6d71756c31b3b",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/8_2ffb07a8-1a2d-4a26-919b-64e939e76f94.jpg?v=1781087140",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-71e6d71756c31b3b.jpg",
+      "bytes": 201700,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "f1a8b5bb45b6b4d96e5e7bc6f945b8ab3893bddf10bcaa722ae398d372b25e36",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/8_2ffb07a8-1a2d-4a26-919b-64e939e76f94.jpg?v=1781087140",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-71e6d71756c31b3b-preview.png"
+    },
+    {
+      "id": "media-5c1e1183e1e9af6e",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Artboard_1_903b5fb7-aaad-416e-9d12-817b7f4bb492.jpg?v=1781087139",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-5c1e1183e1e9af6e.jpg",
+      "bytes": 82402,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "fd80c1496e886c8a3d083971438cc19cba48ca4d315cdbdd0746de28f5a2774d",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Artboard_1_903b5fb7-aaad-416e-9d12-817b7f4bb492.jpg?v=1781087139",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-5c1e1183e1e9af6e-preview.png"
+    },
+    {
+      "id": "media-c2f238646a795ca3",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Airboost-Size_chart.jpg?v=1786710066",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-c2f238646a795ca3.jpg",
+      "bytes": 94342,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1921,
+      "height": 911,
+      "sha256": "7c542a73a34c24f2892efd740e73301abb017a596a0ad8f2de7cd795f6a357a0",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Airboost-Size_chart.jpg?v=1786710066",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-c2f238646a795ca3-preview.png"
+    },
+    {
+      "id": "media-54c649537a35203a",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/night-trail-100.svg?v=1781602611",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-54c649537a35203a.svg",
+      "bytes": 10491,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 55,
+      "height": 55,
+      "sha256": "26a9cfae0fa0ed7969820fc33d1b0d21dc13533349c1ad4b67ff0f57c7aded2b",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/night-trail-100.svg?v=1781602611",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-54c649537a35203a-preview.png"
+    },
+    {
+      "id": "media-7f9a274e217d52b8",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/warranty-10.svg?v=1781602611",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-7f9a274e217d52b8.svg",
+      "bytes": 8455,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 55,
+      "height": 55,
+      "sha256": "7e69377d3ef17f571336d1ef46bbc7eec1a5f35686af846492faa9b423e48236",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/warranty-10.svg?v=1781602611",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-7f9a274e217d52b8-preview.png"
+    },
+    {
+      "id": "media-689c8e66adf75b11",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/free-shipping.svg?v=1781602611",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-689c8e66adf75b11.svg",
+      "bytes": 16054,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 55,
+      "height": 55,
+      "sha256": "0e923209647b25272877c29087ffa69a6f40fdc35f42b79b333a11b307b6ef89",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/free-shipping.svg?v=1781602611",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-689c8e66adf75b11-preview.png"
+    },
+    {
+      "id": "media-34615c7b237c277e",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/no-cost-emi.svg?v=1781602611",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-34615c7b237c277e.svg",
+      "bytes": 8398,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 55,
+      "height": 55,
+      "sha256": "42d0f69245f7f7d6f165b4636147610fbe5646d4b6edbb905d914b326f00f839",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/no-cost-emi.svg?v=1781602611",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-34615c7b237c277e-preview.png"
+    },
+    {
+      "id": "media-778dc0876605fc29",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/1_7fd4b492-6c60-4842-a0a9-8885bdd18eda.jpg?v=1768937994",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-778dc0876605fc29.jpg",
+      "bytes": 108531,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 750,
+      "height": 820,
+      "sha256": "c2a524c554b7c3331754a42f22e7db5e6ce7aa9b564cb236bb87026ab622b614",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/1_7fd4b492-6c60-4842-a0a9-8885bdd18eda.jpg?v=1768937994",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-778dc0876605fc29-preview.png"
+    },
+    {
+      "id": "media-5dfdd38ef227f24f",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/6_8_mobile_2_jpg.jpg?v=1771320013",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-5dfdd38ef227f24f.jpg",
+      "bytes": 41595,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 375,
+      "height": 410,
+      "sha256": "6083ccf4e9ac301ffbecfb0011aaea771df2bfe1324fd26269b305c389e54f61",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/6_8_mobile_2_jpg.jpg?v=1771320013",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-5dfdd38ef227f24f-preview.png"
+    },
+    {
+      "id": "media-1524e86860175357",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/6_8_Mobile_3_jpg.jpg?v=1771320014",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-1524e86860175357.jpg",
+      "bytes": 51471,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 375,
+      "height": 410,
+      "sha256": "8c28de03ce80fca1e6276b246cd54b9bb8fdb9e7a7e6f201830f04e72d31294f",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/6_8_Mobile_3_jpg.jpg?v=1771320014",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-1524e86860175357-preview.png"
+    },
+    {
+      "id": "media-6f73540c9a0ebfd2",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/Mobile-375X410.jpg?v=1779019704",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-6f73540c9a0ebfd2.jpg",
+      "bytes": 91579,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 750,
+      "height": 820,
+      "sha256": "34bbfe1b417bb368542042f4df9b741e0fd72a97cb775c81fbe2539e9ce6b22b",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/Mobile-375X410.jpg?v=1779019704",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-6f73540c9a0ebfd2-preview.png"
+    },
+    {
+      "id": "media-06f072d55f7b9166",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/5_04b855df-9233-4a86-9054-261900d428e6.jpg?v=1768937994",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-06f072d55f7b9166.jpg",
+      "bytes": 176516,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 750,
+      "height": 820,
+      "sha256": "2576a1ec717f49016bb37ad8486de7f88a5ebd947127cbd27e99c2ce2d749bd8",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/5_04b855df-9233-4a86-9054-261900d428e6.jpg?v=1768937994",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-06f072d55f7b9166-preview.png"
+    },
+    {
+      "id": "media-5a4bbd7a0bb2b0d1",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/7_2a688a4e-e40e-4676-b40a-d302ddf0d141.jpg?v=1768937994",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-5a4bbd7a0bb2b0d1.jpg",
+      "bytes": 151277,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 750,
+      "height": 820,
+      "sha256": "75df342b494cff30a8df34969063dcc138b9163afc7a907ed10e6bde10438d29",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/7_2a688a4e-e40e-4676-b40a-d302ddf0d141.jpg?v=1768937994",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-5a4bbd7a0bb2b0d1-preview.png"
+    },
+    {
+      "id": "media-0c8c2c311cff44d0",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/7ef4320774884c02892ee103db69081e.thumbnail.0000000000.jpg?v=1768938089&width=1946",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-0c8c2c311cff44d0.jpg",
+      "bytes": 19858,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 374,
+      "height": 410,
+      "sha256": "79f1eb4168fa42f441dec85429f2b88d1dc60f3fd1250893ac716320bed75e2f",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/7ef4320774884c02892ee103db69081e.thumbnail.0000000000.jpg?v=1768938089&width=1946",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-0c8c2c311cff44d0-preview.png"
+    },
+    {
+      "id": "media-335f3f428ce0654a",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/7ef4320774884c02892ee103db69081e.thumbnail.0000000000_2048x.jpg?v=1768938089",
+      "label": "Video poster",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-335f3f428ce0654a.jpg",
+      "bytes": 19772,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 374,
+      "height": 410,
+      "sha256": "826e30b436f18b89c99e8586fcf47dff6cb831985b9ff4d05edd2a9297caa62f",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/7ef4320774884c02892ee103db69081e.thumbnail.0000000000_2048x.jpg?v=1768938089",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-335f3f428ce0654a-preview.png"
+    },
+    {
+      "id": "media-61090f19a4a67c81",
+      "url": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/7ef4320774884c02892ee103db69081e/7ef4320774884c02892ee103db69081e.SD-480p-1.5Mbps-67383219.mp4?v=0",
+      "label": "videos",
+      "group": "videos",
+      "type": "video",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/videos/media-61090f19a4a67c81.mp4",
+      "bytes": 607938,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "sha256": "7a6cb25dc6fcb3e7e5dc5ff877e777f3e5156c3239dea7ec622a2731de9b8e93",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/7ef4320774884c02892ee103db69081e/7ef4320774884c02892ee103db69081e.SD-480p-1.5Mbps-67383219.mp4?v=0"
+    },
+    {
+      "id": "media-72b2cf73a90479c4",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/9_d6db7cbd-e09b-44ec-b26d-b1ae9b9e4a15.jpg?v=1768937994",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-72b2cf73a90479c4.jpg",
+      "bytes": 64008,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 750,
+      "height": 820,
+      "sha256": "af91295c4e3e58bff57538ed04429c88e5393d2b3c97f2bd5e99eed1bd3526ee",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/9_d6db7cbd-e09b-44ec-b26d-b1ae9b9e4a15.jpg?v=1768937994",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-72b2cf73a90479c4-preview.png"
+    },
+    {
+      "id": "media-b3a36e9513948b0c",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/10_70449f74-3f85-4bb3-9ac6-00ae972ba931.jpg?v=1768937994",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-b3a36e9513948b0c.jpg",
+      "bytes": 124758,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 750,
+      "height": 820,
+      "sha256": "bf1883adea0621e933bf089b1d7b8e9443b948da4e55e29c3279427ba42a4131",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/10_70449f74-3f85-4bb3-9ac6-00ae972ba931.jpg?v=1768937994",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-b3a36e9513948b0c-preview.png"
+    },
+    {
+      "id": "media-9ae71069a78637c2",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/11_26c7e0a0-db91-4f7a-b269-e676ffc3f126.jpg?v=1768937994",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/product-images/media-9ae71069a78637c2.jpg",
+      "bytes": 67875,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 750,
+      "height": 820,
+      "sha256": "36d1097f8e37a37199a76e7619789934f30ed58a65b3902aa9470c47680b5198",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/11_26c7e0a0-db91-4f7a-b269-e676ffc3f126.jpg?v=1768937994",
+      "preview": "snapshot-1792609769891-291d6d/product-images/media-9ae71069a78637c2-preview.png"
+    },
+    {
+      "id": "media-096b2c09cbf372a2",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/FestiveMax.jpg?v=1790949741",
+      "label": "Festive Max Hamper",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-096b2c09cbf372a2.jpg",
+      "bytes": 145704,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 960,
+      "height": 1350,
+      "sha256": "66c8a5553085f59389bbbd65578259eb2077f17d862770fabd833d0f08071638",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/FestiveMax.jpg?v=1790949741",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-096b2c09cbf372a2-preview.png"
+    },
+    {
+      "id": "media-11ea1373b974486a",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/free___easy_shipping_1-removebg-preview.png?v=1742213701",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-11ea1373b974486a.png",
+      "bytes": 82725,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 633,
+      "height": 359,
+      "sha256": "3f1af1c715ba8b745c457c7bd1fe029bc3a8a9452a46a203ede2d6831c495d02",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/free___easy_shipping_1-removebg-preview.png?v=1742213701",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-11ea1373b974486a-preview.png"
+    },
+    {
+      "id": "media-59c915d5d9414807",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/maps-and-flags.png?v=1742218406",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-59c915d5d9414807.png",
+      "bytes": 6499,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 512,
+      "height": 512,
+      "sha256": "79ee5e3aa451335079e3217e2f14879166987c23ce4268118d0113a9e9a77e5b",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/maps-and-flags.png?v=1742218406",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-59c915d5d9414807-preview.png"
+    },
+    {
+      "id": "media-df578693a89473e8",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/store_img.png?v=1742218038",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-df578693a89473e8.png",
+      "bytes": 28508,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 125,
+      "height": 125,
+      "sha256": "cf43518069c50ccbdac31a0f66a6e23efa49843430ac887546f15320ce6c9575",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/store_img.png?v=1742218038",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-df578693a89473e8-preview.png"
+    },
+    {
+      "id": "media-b8b98d764e302953",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/icons8-clock-24.png?v=1742290134",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "note": "Tiny image excluded from product library"
+    },
+    {
+      "id": "media-6d36874a9c8670de",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/icons8-navigation-16.png?v=1742292606",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "note": "Tiny image excluded from product library"
+    },
+    {
+      "id": "media-dc19c46ec97833ae",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/icons8-phone-24.png?v=1742292819",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "note": "Tiny image excluded from product library"
+    },
+    {
+      "id": "media-05a3c0d43df2ec6b",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/6.8_6.10_frimnesss-scale_Pre_A.jpg?v=1770621116",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-05a3c0d43df2ec6b.jpg",
+      "bytes": 65584,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1135,
+      "height": 770,
+      "sha256": "ae9557e92a76a80c8644e635c1aaf940e6261805af01b727032b9979dfa8a51d",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/6.8_6.10_frimnesss-scale_Pre_A.jpg?v=1770621116",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-05a3c0d43df2ec6b-preview.png"
+    },
+    {
+      "id": "media-fe9e4c7ba6a3d5ee",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/2_f46a578e-8682-40a6-99db-55333fe3979f.jpg?v=1768912444",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-fe9e4c7ba6a3d5ee.jpg",
+      "bytes": 58034,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1135,
+      "height": 770,
+      "sha256": "5f165a49547dac69896e5c4cbba4650ce072108fabfb29d4c9f1ef60835a8d53",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/2_f46a578e-8682-40a6-99db-55333fe3979f.jpg?v=1768912444",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-fe9e4c7ba6a3d5ee-preview.png"
+    },
+    {
+      "id": "media-e63915c6e6871fce",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/AB-1135-x-770_jpg.jpg?v=1781686013",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-e63915c6e6871fce.jpg",
+      "bytes": 98104,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1135,
+      "height": 770,
+      "sha256": "deb7d299cf21ecf0cd6ef576408b9a0abece0156f8bbc09feaa5b9d84875c451",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/AB-1135-x-770_jpg.jpg?v=1781686013",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-e63915c6e6871fce-preview.png"
+    },
+    {
+      "id": "media-e22de6942b2eca30",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/product-6.8-A-1.jpg?v=1768849936",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-e22de6942b2eca30.jpg",
+      "bytes": 141663,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1135,
+      "height": 770,
+      "sha256": "d6ec5f16033f1fbf9df7e5b710690f755b0d72bfd5ad1cff0c738bd280108a8a",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/product-6.8-A-1.jpg?v=1768849936",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-e22de6942b2eca30-preview.png"
+    },
+    {
+      "id": "media-c29e83fc90289643",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/3_c9a8deef-4198-4b07-9aed-f3b7e368e700.jpg?v=1768827740",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-c29e83fc90289643.jpg",
+      "bytes": 54903,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 1135,
+      "height": 770,
+      "sha256": "276084d197a8f6102ceb4905cc8ae953d2958374fffc6463845461f6a2244171",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/3_c9a8deef-4198-4b07-9aed-f3b7e368e700.jpg?v=1768827740",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-c29e83fc90289643-preview.png"
+    },
+    {
+      "id": "media-c46bda63f7d04faa",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/ISSR_60a4cc3e-9c75-4031-b222-4d346f935d3e.png?v=1768927077",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-c46bda63f7d04faa.png",
+      "bytes": 56477,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 500,
+      "height": 500,
+      "sha256": "d38867fe87cc93dd2713c879656e49f59e1bee57b0e7730a622a9494eff0b757",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/ISSR_60a4cc3e-9c75-4031-b222-4d346f935d3e.png?v=1768927077",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-c46bda63f7d04faa-preview.png"
+    },
+    {
+      "id": "media-a693a872db316142",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/NHA_82508b6e-b0e9-4eb0-9dda-d5a9ff1915dc.png?v=1768927108",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-a693a872db316142.png",
+      "bytes": 53182,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 500,
+      "height": 500,
+      "sha256": "dbf978e32dfe2c91cb23a22e90da0938205fc840b8a9384e6b4b2e5384fa5188",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/NHA_82508b6e-b0e9-4eb0-9dda-d5a9ff1915dc.png?v=1768927108",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-a693a872db316142-preview.png"
+    },
+    {
+      "id": "media-dffa0ebf453109c3",
+      "url": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/fc812d8ec6db400fa737960c0f0e11a0/fc812d8ec6db400fa737960c0f0e11a0.HD-1080p-7.2Mbps-67521705.mp4?v=0",
+      "label": "videos",
+      "group": "videos",
+      "type": "video",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/videos/media-dffa0ebf453109c3.mp4",
+      "bytes": 7684299,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "sha256": "3d42f557e28467c93ae0f237f729c71d39dd7253e56c92c04088e0ad61eedf24",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/fc812d8ec6db400fa737960c0f0e11a0/fc812d8ec6db400fa737960c0f0e11a0.HD-1080p-7.2Mbps-67521705.mp4?v=0"
+    },
+    {
+      "id": "media-9943163eec0cd749",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/fc812d8ec6db400fa737960c0f0e11a0.thumbnail.0000000000_small.jpg?v=1769082491",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-9943163eec0cd749.jpg",
+      "bytes": 3026,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 56,
+      "height": 100,
+      "sha256": "e2d28a44b5ab4ae906fa7aeea4bf0f02c2c75d871d34bbbf23450f084e327992",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/fc812d8ec6db400fa737960c0f0e11a0.thumbnail.0000000000_small.jpg?v=1769082491",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-9943163eec0cd749-preview.png"
+    },
+    {
+      "id": "media-e9ea9e613b97d5d0",
+      "url": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/4bb2cd8a349b4edbbea08d7830a973fe/4bb2cd8a349b4edbbea08d7830a973fe.HD-1080p-7.2Mbps-67521704.mp4?v=0",
+      "label": "videos",
+      "group": "videos",
+      "type": "video",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/videos/media-e9ea9e613b97d5d0.mp4",
+      "bytes": 2662849,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "sha256": "f6d8e9c2320354aa10aa08692d51d55eb58c35cc5ca2b3faa794a25c15b34e9f",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/4bb2cd8a349b4edbbea08d7830a973fe/4bb2cd8a349b4edbbea08d7830a973fe.HD-1080p-7.2Mbps-67521704.mp4?v=0"
+    },
+    {
+      "id": "media-b89ad0052b1d517e",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/4bb2cd8a349b4edbbea08d7830a973fe.thumbnail.0000000000_small.jpg?v=1769082487",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-b89ad0052b1d517e.jpg",
+      "bytes": 3838,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 56,
+      "height": 100,
+      "sha256": "7057e9114e07f5f6cecc7d67dd70e2d4c4547580cec56b5c096cbd4e33ff58f4",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/4bb2cd8a349b4edbbea08d7830a973fe.thumbnail.0000000000_small.jpg?v=1769082487",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-b89ad0052b1d517e-preview.png"
+    },
+    {
+      "id": "media-2a2d11532b1b53b9",
+      "url": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/63a213bc49424b24b320b414822c5cc8/63a213bc49424b24b320b414822c5cc8.HD-1080p-7.2Mbps-67521703.mp4?v=0",
+      "label": "videos",
+      "group": "videos",
+      "type": "video",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/videos/media-2a2d11532b1b53b9.mp4",
+      "bytes": 2756952,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "sha256": "ba5bb8edb7095b28267a8090afa3079ecf1ec355dace01785849da14b4d727b9",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/63a213bc49424b24b320b414822c5cc8/63a213bc49424b24b320b414822c5cc8.HD-1080p-7.2Mbps-67521703.mp4?v=0"
+    },
+    {
+      "id": "media-6b85efc9ba9c7854",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/63a213bc49424b24b320b414822c5cc8.thumbnail.0000000000_small.jpg?v=1769082487",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-6b85efc9ba9c7854.jpg",
+      "bytes": 1721,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 56,
+      "height": 100,
+      "sha256": "2c0ee151d86ca54412dd40136dbaa5d48aa590ec9733182b4b1a29a7009dd8c4",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/63a213bc49424b24b320b414822c5cc8.thumbnail.0000000000_small.jpg?v=1769082487",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-6b85efc9ba9c7854-preview.png"
+    },
+    {
+      "id": "media-325ef23e408cbb52",
+      "url": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/0d84569332dc4cce943014107178d21f/0d84569332dc4cce943014107178d21f.HD-720p-2.1Mbps-67367231.mp4?v=0",
+      "label": "videos",
+      "group": "videos",
+      "type": "video",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/videos/media-325ef23e408cbb52.mp4",
+      "bytes": 1695625,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "sha256": "583d24b63b832684fb21687e9d25e76feffccf44c6de94cd372f499d50ea9c9d",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/0d84569332dc4cce943014107178d21f/0d84569332dc4cce943014107178d21f.HD-720p-2.1Mbps-67367231.mp4?v=0"
+    },
+    {
+      "id": "media-b94fe821e92182da",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/0d84569332dc4cce943014107178d21f.thumbnail.0000000000_small.jpg?v=1768922584",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-b94fe821e92182da.jpg",
+      "bytes": 3311,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 100,
+      "height": 51,
+      "sha256": "a838b4b81e6d7d7a027d84331db4a2964b4ccf353c2fa0dfa106ec83b71b16fa",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/0d84569332dc4cce943014107178d21f.thumbnail.0000000000_small.jpg?v=1768922584",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-b94fe821e92182da-preview.png"
+    },
+    {
+      "id": "media-2333c88422f21013",
+      "url": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/efd8b978a553498c955f50c9d5561753/efd8b978a553498c955f50c9d5561753.HD-720p-2.1Mbps-67367310.mp4?v=0",
+      "label": "videos",
+      "group": "videos",
+      "type": "video",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/videos/media-2333c88422f21013.mp4",
+      "bytes": 1776082,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "sha256": "1a03ae2caac689f6c1dc62833c906393ef73edf550649b18028604703ffab5e3",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/efd8b978a553498c955f50c9d5561753/efd8b978a553498c955f50c9d5561753.HD-720p-2.1Mbps-67367310.mp4?v=0"
+    },
+    {
+      "id": "media-2c8c1e0fdfe364d8",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/efd8b978a553498c955f50c9d5561753.thumbnail.0000000000_small.jpg?v=1768922647",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-2c8c1e0fdfe364d8.jpg",
+      "bytes": 1557,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 100,
+      "height": 51,
+      "sha256": "05d43922ebcb9bfb531ef5e3646f0ec836717cb3101b41f10050210cbddefc3e",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/efd8b978a553498c955f50c9d5561753.thumbnail.0000000000_small.jpg?v=1768922647",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-2c8c1e0fdfe364d8-preview.png"
+    },
+    {
+      "id": "media-96c308a138101a4e",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/ashish-khezanchi.jpg?v=1768830955",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-96c308a138101a4e.jpg",
+      "bytes": 37988,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 666,
+      "height": 374,
+      "sha256": "f3a7ee4a34bde516a5bb07bd8eb652204b2c4eaf0224466957ec2e2e254c69d7",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/ashish-khezanchi.jpg?v=1768830955",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-96c308a138101a4e-preview.png"
+    },
+    {
+      "id": "media-04d35aa45f1a5ac7",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/saurabh-agarwal.jpg?v=1768830990",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-04d35aa45f1a5ac7.jpg",
+      "bytes": 29723,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 666,
+      "height": 374,
+      "sha256": "f52efcfe9c589dc44f1976c92c2b69bb90dc877a61bdc30ec7fff626f28831b1",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/saurabh-agarwal.jpg?v=1768830990",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-04d35aa45f1a5ac7-preview.png"
+    },
+    {
+      "id": "media-5391c495d6d2c7c9",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/akshaja-singh.jpg?v=1768831013",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-5391c495d6d2c7c9.jpg",
+      "bytes": 50862,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 666,
+      "height": 374,
+      "sha256": "62d33ec2abfa880783aa50f6701e25a2b84db743e2bc27b2410499e8a79eb2d3",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/akshaja-singh.jpg?v=1768831013",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-5391c495d6d2c7c9-preview.png"
+    },
+    {
+      "id": "media-17809190c2829e79",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/arun-kanojia.jpg?v=1768831039",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-17809190c2829e79.jpg",
+      "bytes": 87819,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 666,
+      "height": 374,
+      "sha256": "6b01a09439b21eb69831328e5965ecc6dd90afbd946c3883437f72c2a327c0ba",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/arun-kanojia.jpg?v=1768831039",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-17809190c2829e79-preview.png"
+    },
+    {
+      "id": "media-52607594efd6ab18",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/upasana-agarwal.jpg?v=1768831064",
+      "label": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/supporting-content/media-52607594efd6ab18.jpg",
+      "bytes": 46142,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 666,
+      "height": 374,
+      "sha256": "82f4561c903542d4874cc18b43d9909a6582d663b6c044fdd455119b051ef815",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/upasana-agarwal.jpg?v=1768831064",
+      "preview": "snapshot-1792609769891-291d6d/supporting-content/media-52607594efd6ab18-preview.png"
+    },
+    {
+      "id": "media-8833b3fc2942f03f",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/compare-1-posture-alignment.svg?v=1768737482",
+      "label": "Postural Alignment",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/tiles/media-8833b3fc2942f03f.svg",
+      "bytes": 3401,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "606d0e4a36331b2972611163d7c074c56584eb3ff8cabecfd8e76abc67b14349",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/compare-1-posture-alignment.svg?v=1768737482",
+      "preview": "snapshot-1792609769891-291d6d/tiles/media-8833b3fc2942f03f-preview.png"
+    },
+    {
+      "id": "media-ac3ca3ffb9af2bf7",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/compare-2-airflow-heat-dissipation.svg?v=1768737482",
+      "label": "Airflow and heat dissipation",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/tiles/media-ac3ca3ffb9af2bf7.svg",
+      "bytes": 2030,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "de40b3c36787a84a5ae082e393c9cae4872133d361bc5bf6a1441ae7e63af3f0",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/compare-2-airflow-heat-dissipation.svg?v=1768737482",
+      "preview": "snapshot-1792609769891-291d6d/tiles/media-ac3ca3ffb9af2bf7-preview.png"
+    },
+    {
+      "id": "media-264ab439773e9625",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/compare-3-no-sink-in.svg?v=1768737481",
+      "label": "Never sink-in",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/tiles/media-264ab439773e9625.svg",
+      "bytes": 3441,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "f80dc76f9a3880f36d92715dc8257095256a828cd21577471a805ac16f6af567",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/compare-3-no-sink-in.svg?v=1768737481",
+      "preview": "snapshot-1792609769891-291d6d/tiles/media-264ab439773e9625-preview.png"
+    },
+    {
+      "id": "media-85fd07df12cfbe98",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/compare-4-ease-movement.svg?v=1768737481",
+      "label": "Ease of movement",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/tiles/media-85fd07df12cfbe98.svg",
+      "bytes": 904,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "bcb9973ceb560a8eca1c25ff089862fb4f07834387c44c57b0feb5cbce90bff3",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/compare-4-ease-movement.svg?v=1768737481",
+      "preview": "snapshot-1792609769891-291d6d/tiles/media-85fd07df12cfbe98-preview.png"
+    },
+    {
+      "id": "media-464ff2460f968296",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/compare-5-response-moisture.svg?v=1768737481",
+      "label": "Moisture repellent",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609769891-291d6d/tiles/media-464ff2460f968296.svg",
+      "bytes": 1839,
+      "collectedAt": "2026-10-21T19:09:29.891Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "bab350850f7973128bf89e5a19f4749658dbe3057a8d8d065ba7efd6570247da",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/compare-5-response-moisture.svg?v=1768737481",
+      "preview": "snapshot-1792609769891-291d6d/tiles/media-464ff2460f968296-preview.png"
+    }
+  ],
+  "gaps": [
+    "3 media assets could not be downloaded; their source links and errors are retained.",
+    "No a plus content exposed in the collected page / product JSON."
+  ],
+  "downloadedBytes": 21706424,
+  "jobId": null,
+  "history": [],
+  "limits": [
+    "Website snapshot, not approved product substantiation.",
+    "Category comes from website breadcrumbs or product type; missing taxonomy remains Uncategorized.",
+    "Asset folder roles inferred from page sections; inspect before reuse.",
+    "Only media exposed in HTML / official product JSON is discoverable; protected or client-only assets may be missing."
+  ],
+  "audit": {
+    "pageUrl": "https://www.duroflexworld.com/products/duropedic-airboost-68-adjustable-firmness-mattress?_gl=1*20p93k*_up*MQ..*_gs*MQ..",
+    "snapshot": "snapshot-1792609769891-291d6d",
+    "identityStatus": "matched",
+    "identityNote": "Selected page title and exact saved variant record match Duropedic Airboost 6.8 Arctic Ice and the Queen option. The page metadata SKU reflects a different default size; it does not override the selected catalogue record. Differently marked images remain references.",
+    "facts": [
+      {
+        "id": "sku-selected-variant",
+        "kind": "product",
+        "text": "The explicitly selected official product variant is Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm); SKU AIRBOOST68AIPRO720060000800BLUE; variant ID 51476984103044. Exact saved options: Size: Queen; Dimension: 72 x 60 (183 cm x 152 cm); Height: 8 (20.3 cm).",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-variant-record"
+        ],
+        "essential": true
+      },
+      {
+        "id": "sku-fact-1",
+        "kind": "product",
+        "text": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-2",
+        "kind": "product",
+        "text": "Selected variant: Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm).",
+        "status": "unverified",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-3",
+        "kind": "product",
+        "text": "Airboost is Duroflex's proprietary open-matrix mattress technology made from over one lakh independently responsive fibres, designed to improve airflow, movement response and postural support.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-4",
+        "kind": "product",
+        "text": "This Airboost mattress features a reversible latex topper with firm support on one side and medium firm on the other.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-5",
+        "kind": "product",
+        "text": "The mattress features a 6-inch Airboost layer combined with latex.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-6",
+        "kind": "product",
+        "text": "The zipper cover is machine washable but softer wash settings should be used to increase durability.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-7",
+        "kind": "product",
+        "text": "Its duo comfort flippable topper lets you choose between a firmer or medium-firm feel, while the Arctic Ice cooling fabric and the open-cell 3D matrix create a breathable, fresher sleep surface throughout the year.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      }
+    ],
+    "evidence": [
+      {
+        "factId": "sku-fact-1",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-1",
+        "quote": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial Airboost is Duroflex's proprietary open-matrix mattress technology made from over one lakh independently responsive fibres, designed to improve airflow, movement response and postural support."
+      },
+      {
+        "factId": "sku-fact-2",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-4",
+        "quote": "Airknit fibres with latex and adjustable firmness | 100 nights trial 4.7/5 (506 reviews) Claim your Free Gift Hamper upto ₹8,498* *T&C applied See My Hamper ₹ Unlock Gold Voucher ₹8,000 on orders above ₹2L · ₹15,000 above ₹2.5L · ₹30,000 above ₹3L ₹8,000 on orders above ₹2L ₹15,000 above ₹2.5L ₹30,000 above ₹3L ₹8,000 on orders above ₹2L Size Choose a size Custom | 84 x 72 (213 cm x 183 cm) | 8 (20.3 cm) Single | 72 x 30 (183 cm x 76 cm) | 8 (20.3 cm) Single | 72 x 35 (183 cm x 89 cm) | 8 (20.3 cm) Single | 72 x 36 (183 cm x 91 cm) | 8 (20.3 cm) Single | 75 x 30 (191 cm x 76 cm) | 8 (20.3 cm) Single | 75 x 35 (191 cm x 89 cm) | 8 (20.3 cm) Single | 75 x 36 (191 cm x 91 cm) | 8 (20.3 cm) Single | 78 x 30 (198 cm x 76 cm) | 8 (20.3 cm) Single | 78 x 35 (198 cm x 89 cm) | 8 (20.3 cm) Single | 78 x 36 (198 cm x 91 cm) | 8 (20.3 cm) Double | 72 x 42 (183 cm x 107 cm) | 8 (20.3 cm) Double | 72 x 48 (183 cm x 122 cm) | 8 (20.3 cm) Double | 75 x 42 (191 cm x 107 cm) | 8 (20.3 cm) Double | 75 x 48 (191 cm x 122 cm) | 8 (20.3 cm) Double | 78 x 42 (198 cm x 107 cm) | 8 (20.3 cm) Double | 78 x 48 (198 cm x 122 cm) | 8 (20.3 cm) Queen | 72 x 60 (183 cm x 152 cm) | 8 (20.3 cm) Queen | 72 x 66 (183 cm x 168 cm) | 8 (20.3 cm) Queen | 75 x 60 (191 cm x 152 cm) | 8 (20.3 cm) Queen | 75 x 66 (191 cm x 168 cm) | 8 (20.3 cm) Queen | 78 x 60 (198 cm x 152 cm) | 8 (20.3 cm) Queen | 78 x 66 (198 cm x 168 cm) | 8 (20.3 cm) King | 72 x 70 (183 cm x 178 cm) | 8 (20.3 cm) King | 72 x 72 (183 cm x 183 cm) | 8 (20.3 cm) King | 75 x 70 (191 cm x 178 cm) | 8 (20.3 cm) King | 75 x 72 (191 cm x 183 cm) | 8 (20.3 cm) King | 78 x 70 (198 cm x 178 cm) | 8 (20.3 cm) King | 78 x 72 (198 cm x 183 cm) | 8 (20.3 cm) Custom | 84 x 72 (213 cm x 183 cm) | 8 (20.3 cm) Single | 84 x 30 (213 cm x 76.2 cm) | 8 (20.3"
+      },
+      {
+        "factId": "sku-fact-3",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-1",
+        "quote": "Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial Airboost is Duroflex's proprietary open-matrix mattress technology made from over one lakh independently responsive fibres, designed to improve airflow, movement response and postural support."
+      },
+      {
+        "factId": "sku-fact-4",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-15",
+        "quote": "This Airboost mattress features a reversible latex topper with firm support on one side and medium firm on the other."
+      },
+      {
+        "factId": "sku-fact-5",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-19",
+        "quote": "The mattress features a 6-inch Airboost layer combined with latex for responsive support, superior breathability, and pressure relief while keeping you cool throughout the night."
+      },
+      {
+        "factId": "sku-fact-6",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-21",
+        "quote": "The zipper cover is machine washable but softer wash settings should be used to increase durability."
+      },
+      {
+        "factId": "sku-fact-7",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-159",
+        "quote": "Its duo comfort flippable topper lets you choose between a firmer or medium-firm feel, while the Arctic Ice cooling fabric and the open-cell 3D matrix create a breathable, fresher sleep surface throughout the year."
+      },
+      {
+        "factId": "sku-selected-variant",
+        "sourceId": "source-selected-variant-record",
+        "passageId": "source-selected-variant-record-passage-1",
+        "quote": "The explicitly selected official product variant is Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm); SKU AIRBOOST68AIPRO720060000800BLUE; variant ID 51476984103044. Exact saved options: Size: Queen; Dimension: 72 x 60 (183 cm x 152 cm); Height: 8 (20.3 cm)."
+      }
+    ],
+    "collectedAt": "2026-10-21T19:09:29.891Z",
+    "jobId": "creative-7eadcda7-e3ef-49c6-93c0-8416d9f6cd76"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "key": "3dd267a304554d44f472b9890a747a68c05e6ea3e5dba40b84ab3c0ab2326cd2",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "productId": "product-c59347f7ba8d81723530",
+  "variantId": "52531740278968",
+  "photoHashes": [
+    "fbd508e0031c0def533d2d0bcddcd3d60a7c5717e8df6e5dc3680e8075b6eb96",
+    "f4f5027c94e163fc1329bb73bd90ab1de81adbca48e38eef26bc8d2d2a8be208",
+    "e0a01f278d940542c4e01e27709d5cb286aec98a9542abb651ba89f71d4e316f"
+  ],
+  "features": [
+    {
+      "feature": "Rectangular mattress with a flat ivory-white top.",
+      "where": "Overall mattress"
+    },
+    {
+      "feature": "Top cover has a repeating grid of stitched rectangular quilted sections.",
+      "where": "Top surface"
+    },
+    {
+      "feature": "White quilted upper side band with a diamond-pattern stitch, above a deep charcoal side wall.",
+      "where": "Side wall"
+    },
+    {
+      "feature": "Small orange rectangular brand tag.",
+      "where": "Side wall near a corner"
+    }
+  ],
+  "labelWords": "",
+  "jobId": "creative-9de36c2a-217a-4f52-8e82-13d85bd4ffc5",
+  "createdAt": "2026-11-10T14:10:57.764Z"
+}

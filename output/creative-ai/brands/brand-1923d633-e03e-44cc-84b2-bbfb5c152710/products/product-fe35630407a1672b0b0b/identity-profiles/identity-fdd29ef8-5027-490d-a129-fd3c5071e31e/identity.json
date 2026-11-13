@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-fdd29ef8-5027-490d-a129-fd3c5071e31e",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-fe35630407a1672b0b0b",
+  "productName": "LiveIn Orthopedic Memory Foam Mattress",
+  "pageUrl": "https://www.duroflexworld.com/products/livein-duropedic-roll-pack-orthopedic-support-memory-foam-mattress-with-triple-anti-microbial-fabric",
+  "productSnapshot": "snapshot-1791815018953-41829d",
+  "variant": {
+    "id": "51541029617796",
+    "sku": "LIVEINDUP780060000600GREY",
+    "name": "Queen / 78 x 60 (198 cm x 152 cm) / 6 (15.2 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 78 x 60 (198 cm x 152 cm) / 6 (15.2 cm)",
+    "configuration": "Official website variant Queen / 78 x 60 (198 cm x 152 cm) / 6 (15.2 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-8409fd6d26f46e13",
+    "snapshot": "snapshot-1791815018953-41829d",
+    "sourceUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/LiveIn_Duropedic_1.webp?v=1790333898",
+    "sha256": "0b2da1b3ead70145203c708b340c17bcea22bf6dce1deb6d3378983dd833f407",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 1000,
+    "height": 1000,
+    "rasterHash": "01ed8af9b0ab8efedb55121de4de3b52881ef69dc1fb5f012ec2158a5d130581",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-12T23:06:19.484Z"
+  },
+  "createdAt": "2026-10-12T23:06:19.484Z",
+  "profileHash": "c59ade174c945bb11062623379cf62b4f1bd33c1b1401297416930328043d204"
+}

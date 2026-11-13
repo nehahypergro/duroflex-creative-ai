@@ -1,0 +1,78 @@
+{
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "approvedSource": "User supplied and approved for Sleepyhead 2026-10-15",
+  "methodAuthorization": "User explicitly chose code to preserve original logo after image-edit tool failures.",
+  "variants": [
+    {
+      "name": "orange-charcoal",
+      "file": "sleepyhead-orange-charcoal-transparent.png",
+      "source": "/Users/neha/Downloads/Sleepyhead.webp",
+      "sourceSha256": "856082d2ddcc08f9091b652eba9e4dd269decad02cdcaeac95f47085282ad049",
+      "sha256": "bc73e039c13b91fe41fd295198200e7e73ac2728b0212b42f35767ed92e45278",
+      "width": 1191,
+      "height": 219,
+      "hasAlpha": true,
+      "sourceBackground": [
+        255,
+        255,
+        255
+      ],
+      "backgroundRecompositionRMSE": 1.14938085295427,
+      "method": "Deterministic two-colour alpha matting; opaque original pixels retained; anti-aliased edge colours decontaminated; no redrawing. Tight crop with 8px margin."
+    },
+    {
+      "name": "white-charcoal",
+      "file": "sleepyhead-white-charcoal-transparent.png",
+      "source": "/Users/neha/Downloads/574d6bb814a2f27a6f12c20d63a6deea.w3000.h600.jpg",
+      "sourceSha256": "dbb79dcd00033d9522c9180831f0a58ada01e6d93b7c2878173bf74a3ded6fd1",
+      "sha256": "fb38d2e4d8ccf43b6a95910218254082abc09baf3d67c0efa2443d7b64a0fc68",
+      "width": 1297,
+      "height": 236,
+      "hasAlpha": true,
+      "sourceBackground": [
+        241,
+        90,
+        37
+      ],
+      "backgroundRecompositionRMSE": 0.20826185578563927,
+      "method": "Deterministic two-colour alpha matting; opaque original pixels retained; anti-aliased edge colours decontaminated; no redrawing. Tight crop with 8px margin."
+    }
+  ],
+  "rejectedImageToolOutputs": [
+    "exec-2d0b0a6c-0e75-4880-8f97-80840708a962.png",
+    "exec-dfc26090-0af2-4f87-be09-38242a52891d.png",
+    "exec-7cd69add-427a-4ff1-9a5b-9f9a775da4d8.png"
+  ],
+  "cost": {
+    "studioApiCalls": 0,
+    "builtInImageToolCalls": 3,
+    "builtInUsageCostINR": null,
+    "note": "Built-in tool exposed no billing receipt; unknown, not zero."
+  },
+  "registry": [
+    {
+      "id": "asset-bc73e039c13b91fe41fd2951",
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "kind": "logo",
+      "name": "Sleepyhead approved orange-charcoal \u00b7 transparent",
+      "sourceReference": "User-approved uploaded logo 2026-10-15. Deterministic background removal explicitly authorized; shapes and opaque source pixels preserved. See approved-logos/2026-10-15/manifest.json. Two-tone logo; ensure BOTH colours contrast with background.",
+      "approved": true,
+      "sha256": "bc73e039c13b91fe41fd295198200e7e73ac2728b0212b42f35767ed92e45278",
+      "filename": "asset-bc73e039c13b91fe41fd2951.png",
+      "url": "/creative-ai/api/brands/brand-3a5870df-d114-43eb-ba02-e5d8c3c729de/canvas-assets/asset-bc73e039c13b91fe41fd2951.png",
+      "colour": "#f25c26"
+    },
+    {
+      "id": "asset-fb38d2e4d8ccf43b6a959102",
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "kind": "logo",
+      "name": "Sleepyhead approved white-charcoal \u00b7 transparent",
+      "sourceReference": "User-approved uploaded logo 2026-10-15. Deterministic background removal explicitly authorized; shapes and opaque source pixels preserved. See approved-logos/2026-10-15/manifest.json. Two-tone logo; ensure BOTH colours contrast with background.",
+      "approved": true,
+      "sha256": "fb38d2e4d8ccf43b6a95910218254082abc09baf3d67c0efa2443d7b64a0fc68",
+      "filename": "asset-fb38d2e4d8ccf43b6a959102.png",
+      "url": "/creative-ai/api/brands/brand-3a5870df-d114-43eb-ba02-e5d8c3c729de/canvas-assets/asset-fb38d2e4d8ccf43b6a959102.png",
+      "colour": "#ffffff"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "id": 10362543079556,
+  "title": "Avalon Grande Brown Fabric Recliner - Rock, Rotate & Recline",
+  "handle": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+  "description": "",
+  "published_at": "2026-06-22T19:04:50+05:30",
+  "created_at": "2026-06-18T15:32:29+05:30",
+  "vendor": "Duroflex",
+  "type": "Recliner",
+  "tags": [
+    "1 Seater",
+    "All Furniture",
+    "all_products2025",
+    "BAUSALE25",
+    "BAUSALE26",
+    "CARNIVAL18",
+    "CART5",
+    "Crimson Red",
+    "DEALS15",
+    "Diwali2024",
+    "FEST16",
+    "Furniture",
+    "furniture_off",
+    "INDIA",
+    "PAYDAY",
+    "PAYDAY5",
+    "Pvr Recliner Seats",
+    "RDAY10OFF",
+    "Recliner",
+    "Recliner Chairs Wooden",
+    "Recliner Couch",
+    "Recliner Movie Theater",
+    "Recliner16",
+    "Recliners",
+    "Red Sofa",
+    "REST5",
+    "Rocking & Revolving Recliner",
+    "Single Seater Recliner",
+    "Sofa & Recliners",
+    "Suede Fabric",
+    "Summer",
+    "Updated furniture",
+    "video_shop"
+  ],
+  "price": 2249900,
+  "price_min": 2249900,
+  "price_max": 2249900,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 3125000,
+  "compare_at_price_min": 3125000,
+  "compare_at_price_max": 3125000,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 52348538192004,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "GRANDRECRRRFABBR1S",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Avalon Grande Brown Fabric Recliner - Rock, Rotate & Recline",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 2249900,
+      "weight": 0,
+      "compare_at_price": 3125000,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/2_a610ea44-d931-4083-a8eb-d46fd2727158.jpg?v=1781856094",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/1_aa5e6683-b8f8-4d81-a5ee-5b0013f54963.jpg?v=1781856094",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/3_1823f2fc-3300-4305-a46c-52bfaa3d01cf.jpg?v=1781856094",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/4_7e045551-d06f-4a20-81d1-3da981f8e65b.jpg?v=1781856094",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Brown_5bd34335-8bc7-4fdc-bddb-79fba9cb2f49.jpg?v=1782893873",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/5_96fa5d13-9eda-471b-9790-b8cc4a145b03.jpg?v=1781856094",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/6_eadea8d7-4769-4319-a5c6-c9276dc4c0d7.jpg?v=1781856094",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/7_c7713d18-c04d-4dee-aca7-88a07782e4c0.jpg?v=1781856094"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/2_a610ea44-d931-4083-a8eb-d46fd2727158.jpg?v=1781856094",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+  "media": [
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52505481478276,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_a610ea44-d931-4083-a8eb-d46fd2727158.jpg?v=1781856094"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_a610ea44-d931-4083-a8eb-d46fd2727158.jpg?v=1781856094",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52505481314436,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_aa5e6683-b8f8-4d81-a5ee-5b0013f54963.jpg?v=1781856094"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_aa5e6683-b8f8-4d81-a5ee-5b0013f54963.jpg?v=1781856094",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52505481347204,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_1823f2fc-3300-4305-a46c-52bfaa3d01cf.jpg?v=1781856094"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_1823f2fc-3300-4305-a46c-52bfaa3d01cf.jpg?v=1781856094",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52505481511044,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_7e045551-d06f-4a20-81d1-3da981f8e65b.jpg?v=1781856094"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_7e045551-d06f-4a20-81d1-3da981f8e65b.jpg?v=1781856094",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52616506441860,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Brown_5bd34335-8bc7-4fdc-bddb-79fba9cb2f49.jpg?v=1782893873"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Brown_5bd34335-8bc7-4fdc-bddb-79fba9cb2f49.jpg?v=1782893873",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52505481379972,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_96fa5d13-9eda-471b-9790-b8cc4a145b03.jpg?v=1781856094"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_96fa5d13-9eda-471b-9790-b8cc4a145b03.jpg?v=1781856094",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52505481412740,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_eadea8d7-4769-4319-a5c6-c9276dc4c0d7.jpg?v=1781856094"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_eadea8d7-4769-4319-a5c6-c9276dc4c0d7.jpg?v=1781856094",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-grande-brown-fabric-recliner-rock-rotate-recline",
+      "id": 52505481445508,
+      "position": 8,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_c7713d18-c04d-4dee-aca7-88a07782e4c0.jpg?v=1781856094"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_c7713d18-c04d-4dee-aca7-88a07782e4c0.jpg?v=1781856094",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

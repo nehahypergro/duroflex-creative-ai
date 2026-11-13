@@ -1,0 +1,105 @@
+{
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "imageIds": [
+    "W08-I005",
+    "W08-I007",
+    "W09-I002",
+    "W09-I003",
+    "W09-I004",
+    "W09-I005",
+    "W10-I002",
+    "W10-I003",
+    "W10-I004",
+    "W10-I010",
+    "W11-I000",
+    "W11-I001",
+    "W11-I002",
+    "W11-I003",
+    "W12-I003",
+    "W12-I004",
+    "W12-I005",
+    "W12-I007"
+  ],
+  "imageHashes": [
+    {
+      "id": "W08-I005",
+      "sha256": "91557bfbe77b4d60badee1584210613aab7255db861e8528ba81208431bd0861"
+    },
+    {
+      "id": "W08-I007",
+      "sha256": "ba5f97ac055bd78b2e3a1688666e1c662d7c06e33c081df38ae93af08cbbb3fb"
+    },
+    {
+      "id": "W09-I002",
+      "sha256": "a511d303b38cd52a1dbe5fecb0cae0696c503db9ad02499902969d9cbb3ed52f"
+    },
+    {
+      "id": "W09-I003",
+      "sha256": "b4c5a044c4a1e0fe01dfef4ae9d3ef9d7c20a21cf90e8b46699e5365cba212dc"
+    },
+    {
+      "id": "W09-I004",
+      "sha256": "4d390e025cae081429ef2a0dbb78872043225c2e808aee624b8d50e03122342d"
+    },
+    {
+      "id": "W09-I005",
+      "sha256": "6e51ec4e9ec6f239c651b8b2ecde1c6304512c5c757e32d94aef0a9556d2f6d5"
+    },
+    {
+      "id": "W10-I002",
+      "sha256": "d796cee025d50d00abd07aeb88349b0b7a236da4082937b6eba33c0bc0ee78c2"
+    },
+    {
+      "id": "W10-I003",
+      "sha256": "f9041f730e1b782fc4b9b2460be3ca6388a872b964af034e46f6bb170933ada8"
+    },
+    {
+      "id": "W10-I004",
+      "sha256": "242548e1fd30952767a1b29fe99cecdf517969f9067c73f84db5cd09f94c7d61"
+    },
+    {
+      "id": "W10-I010",
+      "sha256": "b04e1151fde7cbd9355c1fe091496c737ce776d873f4ae3cd74b29c1c5931a57"
+    },
+    {
+      "id": "W11-I000",
+      "sha256": "0dacd3f170fa7ecb97c10da2c310c451e4e310c5d0eb9b61589603e41b97cdb3"
+    },
+    {
+      "id": "W11-I001",
+      "sha256": "22a314de5e07218172ce03f714d6e84495ccad2d939d9d68b896f808d3cfcbaa"
+    },
+    {
+      "id": "W11-I002",
+      "sha256": "9ee39891c77ecab651ae810003f9c44905db74379373f8e838bb3aa05f1bb43b"
+    },
+    {
+      "id": "W11-I003",
+      "sha256": "f2132b7aac86f84ad58213ff146ad109a7c4ee6203af1598c0368c0d64fbef43"
+    },
+    {
+      "id": "W12-I003",
+      "sha256": "6d3f7bf7641798c509877d6a02b767f96189702c7220ed148e8e3bdaaa48c08f"
+    },
+    {
+      "id": "W12-I004",
+      "sha256": "9fea130fb4315b68212ec6c467e1d762b2f5fa2164bc7f111dd6d13eaad35fa6"
+    },
+    {
+      "id": "W12-I005",
+      "sha256": "48e2f6f0a2a87fca34b34383ccd3a2acff7c0104f4816fd4b0943ca1ec8a6758"
+    },
+    {
+      "id": "W12-I007",
+      "sha256": "f917961628ab137c2ef00833d492e2f423d781dcbb61e25ef2d81b62639a07a2"
+    }
+  ],
+  "contextHash": "818d00575f19b19853346a1ed12199c6f0e5e4ef3292dbb84287a8f0aa8f9b54",
+  "model": "gpt-6-astra",
+  "reasoning": {
+    "effort": "high"
+  },
+  "maxOutputTokens": 15000,
+  "requestHash": "56dcedd385b0d127ef2802a1fb42703834843ea3bbc8b1382bc45b9ee09f458e",
+  "startedAt": "2026-10-11T21:27:30.631Z"
+}

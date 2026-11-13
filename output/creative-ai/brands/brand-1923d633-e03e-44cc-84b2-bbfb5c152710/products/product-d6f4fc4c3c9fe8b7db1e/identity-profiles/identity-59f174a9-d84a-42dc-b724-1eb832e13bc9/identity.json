@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-59f174a9-d84a-42dc-b724-1eb832e13bc9",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-d6f4fc4c3c9fe8b7db1e",
+  "productName": "Cove Brushed Nickel Grey Leatherette + Pumice Stone Grey Fabric 3 Seater Sofa + Lounger",
+  "pageUrl": "https://www.duroflexworld.com/products/cove-brushed-nickel-grey-leatherette-pumice-stone-grey-fabric-3-seater-sofa-lounger",
+  "productSnapshot": "snapshot-1791887601691-743f47",
+  "variant": {
+    "id": "52329088745604",
+    "sku": "COVESOFADGREYLGREY3SL",
+    "name": "Default Title",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Default Title",
+    "configuration": "Official website variant Default Title",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-a1d57547b3d983fb",
+    "snapshot": "snapshot-1791887601691-743f47",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/PDP-2_9fe06b81-d24d-4a6e-b908-057c2b368e9e_600x600.jpg?v=1786345989",
+    "sha256": "ed0c191c18c0d03a25a081c42915a36b6c30673912f6531fd106be86c1f795d6",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "d419fc46a97b5e9334f614417967635c853b4f46252718ea3646ec7e17b378c6",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-10-13T10:33:36.391Z"
+  },
+  "createdAt": "2026-10-13T10:33:36.391Z",
+  "profileHash": "d1fc48853f8553b8fa22a5eeb4b2df27b3f51a4460a6ff8bdf3e8f2c3d0a71d7"
+}

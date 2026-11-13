@@ -1,0 +1,1479 @@
+{
+  "version": 1,
+  "id": "product-dfb69ef80bb5fad29770",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "name": "Posture Perfect Pocket Spring Orthopedic Mattress",
+  "sku": "NPOS7800360006000200WHITE",
+  "description": "A pocket spring mattress with memory foam, Posture Perfect by Duroflex combines the latest orthopedic technologies to help your body unwind at the end of a long day. The core of the mattress features a 3-zoned pocket spring layer, which gives the mattress just the right amount of firmness and...",
+  "brand": "Duroflex",
+  "taxonomy": [
+    {
+      "name": "Mattress",
+      "url": "",
+      "basis": "Website product type metadata"
+    }
+  ],
+  "category": "Mattress",
+  "variants": [
+    {
+      "id": "51541059698820",
+      "sku": "NPOS7200350006000200WHITE",
+      "name": "Single / 72 x 35 (183 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "72 x 35 (183 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059731588",
+      "sku": "NPOS7200360006000200WHITE",
+      "name": "Single / 72 x 36 (183 cm x 92 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "72 x 36 (183 cm x 92 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059764356",
+      "sku": "NPOS7500350006000200WHITE",
+      "name": "Single / 75 x 35 (191 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "75 x 35 (191 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059797124",
+      "sku": "NPOS7500360006000200WHITE",
+      "name": "Single / 75 x 36 (191 cm x 92 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "75 x 36 (191 cm x 92 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059829892",
+      "sku": "NPOS7800350006000200WHITE",
+      "name": "Single / 78 x 35 (198 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "78 x 35 (198 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059862660",
+      "sku": "NPOS7800360006000200WHITE",
+      "name": "Single / 78 x 36 (198 cm x 92 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "78 x 36 (198 cm x 92 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059895428",
+      "sku": "NPOS7200480006000200WHITE",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059928196",
+      "sku": "NPOS7500480006000200WHITE",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059960964",
+      "sku": "NPOS7800480006000200WHITE",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541059993732",
+      "sku": "NPOS7200600006000200WHITE",
+      "name": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "72 x 60 (183 cm x 152 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060026500",
+      "sku": "NPOS7200660006000200WHITE",
+      "name": "Queen / 72 x 66 (183 cm x 168 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "72 x 66 (183 cm x 168 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060059268",
+      "sku": "NPOS7500600006000200WHITE",
+      "name": "Queen / 75 x 60 (191 cm x 152 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "75 x 60 (191 cm x 152 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060092036",
+      "sku": "NPOS7500660006000200WHITE",
+      "name": "Queen / 75 x 66 (191 cm x 168 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "75 x 66 (191 cm x 168 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060124804",
+      "sku": "NPOS7800600006000200WHITE",
+      "name": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "78 x 60 (198 cm x 152 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060157572",
+      "sku": "NPOS7800660006000200WHITE",
+      "name": "Queen / 78 x 66 (198 cm x 168 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "78 x 66 (198 cm x 168 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060190340",
+      "sku": "NPOS8400600006000200WHITE",
+      "name": "Queen / 84 x 60 (214 cm x 152 cm) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "84 x 60 (214 cm x 152 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060223108",
+      "sku": "NPOS7200700006000200WHITE",
+      "name": "King / 72 x 70 (183 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "72 x 70 (183 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060255876",
+      "sku": "NPOS7200720006000200WHITE",
+      "name": "King / 72 x 72 (183 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "72 x 72 (183 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060288644",
+      "sku": "NPOS7500700006000200WHITE",
+      "name": "King / 75 x 70 (191 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "75 x 70 (191 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060321412",
+      "sku": "NPOS7500720006000200WHITE",
+      "name": "King / 75 x 72 (191 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "75 x 72 (191 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060354180",
+      "sku": "NPOS7800700006000200WHITE",
+      "name": "King / 78 x 70 (198 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "78 x 70 (198 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060386948",
+      "sku": "NPOS7800720006000200WHITE",
+      "name": "King / 78 x 72 (198 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "78 x 72 (198 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060419716",
+      "sku": "NPOS8400720006000200WHITE",
+      "name": "King / 84 x 72 (214 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "84 x 72 (214 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060452484",
+      "sku": "MATNSNPOS06000200",
+      "name": "Custom / 84 x 72 (214 cm x 183 cm) / 8 (20.3 cm)",
+      "options": [
+        "Custom",
+        "84 x 72 (214 cm x 183 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060485252",
+      "sku": "NPOS7200300006000200WHITE",
+      "name": "Single / 72 x 30 (183 cm x 76 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "72 x 30 (183 cm x 76 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51544991301764",
+      "sku": "NPOS7500300006000200WHITE",
+      "name": "Single / 75 x 30 (191 cm x 76 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "75 x 30 (191 cm x 76 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060550788",
+      "sku": "NPOS7800300006000200WHITE",
+      "name": "Single / 78 x 30 (198 cm x 76 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "78 x 30 (198 cm x 76 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060583556",
+      "sku": "NPOS8400300006000200WHITE",
+      "name": "Single / 84 x 30 (214 cm x 76 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "84 x 30 (214 cm x 76 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060616324",
+      "sku": "NPOS8400350006000200WHITE",
+      "name": "Single / 84 x 35 (214 cm x 89 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "84 x 35 (214 cm x 89 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060649092",
+      "sku": "NPOS8400360006000200WHITE",
+      "name": "Single / 84 x 36 (214 cm x 92 cm) / 8 (20.3 cm)",
+      "options": [
+        "Single",
+        "84 x 36 (214 cm x 92 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060681860",
+      "sku": "NPOS8400420006000200WHITE",
+      "name": "Double / 84 x 42 (214 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "84 x 42 (214 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060714628",
+      "sku": "NPOS8400480006000200WHITE",
+      "name": "Double / 84 x 48 (214 cm x 122 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "84 x 48 (214 cm x 122 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060747396",
+      "sku": "NPOS8400660006000200WHITE",
+      "name": "Queen / 84 x 66 (2.14 cm x 168 cm ) / 8 (20.3 cm)",
+      "options": [
+        "Queen",
+        "84 x 66 (2.14 cm x 168 cm )",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060780164",
+      "sku": "NPOS8400700006000200WHITE",
+      "name": "King / 84 x 70 (214 cm x 178 cm) / 8 (20.3 cm)",
+      "options": [
+        "King",
+        "84 x 70 (214 cm x 178 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060812932",
+      "sku": "NPOS7200420006000200WHITE",
+      "name": "Double / 72 x 42 (183 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "72 x 42 (183 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060845700",
+      "sku": "NPOS7500420006000200WHITE",
+      "name": "Double / 75 x 42 (191 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "75 x 42 (191 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    },
+    {
+      "id": "51541060878468",
+      "sku": "NPOS7800420006000200WHITE",
+      "name": "Double / 78 x 42 (198 cm x 107 cm) / 8 (20.3 cm)",
+      "options": [
+        "Double",
+        "78 x 42 (198 cm x 107 cm)",
+        "8 (20.3 cm)"
+      ],
+      "available": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Single",
+        "Double",
+        "Queen",
+        "King",
+        "Custom"
+      ]
+    },
+    {
+      "name": "Dimension",
+      "position": 2,
+      "values": [
+        "72 x 35 (183 cm x 89 cm)",
+        "72 x 36 (183 cm x 92 cm)",
+        "75 x 35 (191 cm x 89 cm)",
+        "75 x 36 (191 cm x 92 cm)",
+        "78 x 35 (198 cm x 89 cm)",
+        "78 x 36 (198 cm x 92 cm)",
+        "72 x 48 (183 cm x 122 cm)",
+        "75 x 48 (191 cm x 122 cm)",
+        "78 x 48 (198 cm x 122 cm)",
+        "72 x 60 (183 cm x 152 cm)",
+        "72 x 66 (183 cm x 168 cm)",
+        "75 x 60 (191 cm x 152 cm)",
+        "75 x 66 (191 cm x 168 cm)",
+        "78 x 60 (198 cm x 152 cm)",
+        "78 x 66 (198 cm x 168 cm)",
+        "84 x 60 (214 cm x 152 cm)",
+        "72 x 70 (183 cm x 178 cm)",
+        "72 x 72 (183 cm x 183 cm)",
+        "75 x 70 (191 cm x 178 cm)",
+        "75 x 72 (191 cm x 183 cm)",
+        "78 x 70 (198 cm x 178 cm)",
+        "78 x 72 (198 cm x 183 cm)",
+        "84 x 72 (214 cm x 183 cm)",
+        "72 x 30 (183 cm x 76 cm)",
+        "75 x 30 (191 cm x 76 cm)",
+        "78 x 30 (198 cm x 76 cm)",
+        "84 x 30 (214 cm x 76 cm)",
+        "84 x 35 (214 cm x 89 cm)",
+        "84 x 36 (214 cm x 92 cm)",
+        "84 x 42 (214 cm x 107 cm)",
+        "84 x 48 (214 cm x 122 cm)",
+        "84 x 66 (2.14 cm x 168 cm )",
+        "84 x 70 (214 cm x 178 cm)",
+        "72 x 42 (183 cm x 107 cm)",
+        "75 x 42 (191 cm x 107 cm)",
+        "78 x 42 (198 cm x 107 cm)"
+      ]
+    },
+    {
+      "name": "Height",
+      "position": 3,
+      "values": [
+        "8 (20.3 cm)"
+      ]
+    }
+  ],
+  "contentSections": [
+    {
+      "heading": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "text": "Product Details Overview Reviews Mattress Quiz --> FAQs Home Posture Perfect Pocket Spring Orthopedic Mattress Skip to product information Zoom Open media 1 in modal --> --> Link Close share Copy link Zoom Open media 2 in modal --> --> Link Close share Copy link Zoom Open media 3 in modal --> --> Link Close share Copy link Zoom Open media 4 in modal --> --> Link Close share Copy link Zoom Open media 5 in modal --> --> Link Close share Copy link Zoom Open media 6 in modal --> --> Link Close share Copy link Open media 7 in modal Play video --> --> Link Close share Copy link Zoom Open media 8 in modal --> --> Link Close share Copy link Zoom Open media 9 in modal --> --> Link Close share Copy link Zoom Open media 10 in modal --> --> Link Close share Copy link Zoom Open media 11 in modal --> --> Link Close share Copy link Skip to product information Zoom Open media 1 in modal Zoom Open media 2 in modal --> --> Link Close share Copy link Zoom Open media 3 in modal --> --> Link Close share Copy link Zoom Open media 4 in modal --> --> Link Close share Copy link Zoom Open media 5 in modal --> --> Link Close share Copy link Zoom Open media 6 in modal --> --> Link Close share Copy link Open media 7 in modal Play video --> --> Link Close share Copy link Zoom Open media 8 in modal --> --> Link Close share Copy link Zoom Open media 9 in modal --> --> Link Close share Copy link Zoom Open media 10 in modal --> --> Link Close share Copy link Zoom Open media 11 in modal --> --> Link Close share Copy link 4.8/5 (149 reviews) Posture Perfect Pocket Spring Orthopedic Mattress Posture Perfect Pocket Spring Orthopedic Mattress Euro top pocket spring orthopedic mattress Size (584 Standard & Custom Options) Choose a size Custom | 84 x 72 (214 cm x 183 cm) | 8 (20.3 cm) Single | 72 x 35 (183 cm x 89 cm) | 8 (20.3 cm) Single | 72 x 36 (183 cm x 92 cm) | 8 (20.3 cm) Single | 75 x 35 (191 cm x 89 cm) | 8 (20.3 cm) Single | 75 x 36 (191 cm x 92 cm) | 8 (20.3 cm) Single | 78 x 35 (198 cm x 89 cm) | 8 (20.3 cm) Single | 78 x 36 (198 cm x 92 cm) | 8 (20.3 cm) Double | 72 x 48 (183 cm x 122 cm) | 8 (20.3 cm) Double | 75 x 48 (191 cm x 122 cm) | 8 (20.3 cm) Double | 78 x 48 (198 cm x 122 cm) | 8 (20.3 cm) Queen | 72 x 60 (183 cm x 152 cm) | 8 (20.3 cm) Queen | 72 x 66 (183 cm x 168 cm) | 8 (20.3 cm) Queen | 75 x 60 (191 cm x 152 cm) | 8 (20.3 cm) Queen | 75 x 66 (191 cm x 168 cm) | 8 (20.3 cm) Queen | 78 x 60 (198 cm x 152 cm) | 8 (20.3 cm) Queen | 78 x 66 (198 cm x 168 cm) | 8 (20.3 cm) Queen | 84 x 60 (214 cm x 152 cm) | 8 (20.3 cm) King | 72 x 70 (183 cm x 178 cm) | 8 (20.3 cm) King | 72 x 72 (183 cm x 183 cm) | 8 (20.3 cm) King | 75 x 70 (191 cm x 178 cm) | 8 (20.3 cm) King | 75 x 72 (191 cm x 183 cm) | 8 (20.3 cm) King | 78 x 70 (198 cm x 178 cm) | 8 (20.3 cm) King | 78 x 72 (198 cm x 183 cm) | 8 (20.3 cm) King | 84 x 72 (214 cm x 183 cm) | 8 (20.3 cm) Custom | 84 x 72 (214 cm x 183 cm) | 8 (20.3 cm) Single | 72 x 30 (183 cm x 76 cm) | 8 (20.3 cm) Single | 75 x 30 (191 cm x 76 cm) | 8 (20.3 cm) Single | 78 x 30 (198 cm x 76 cm) | 8 (20.3 cm) Single | 84 x 30 (214 cm x 76 cm) | 8 (20.3 cm) Single | 84 x 35 (214 cm x 89 cm) | 8 (20.3 cm) Single | 84 x 36 (214 cm x 92 cm) | 8 (20.3 cm) Double | 84 x 42 (214 cm x 107 cm) | 8 (20.3 cm) Double | 84 x 48 (214 cm x 122 cm) | 8 (20.3 cm) Queen | 84 x 66 (2.14 cm x 168 cm ) | 8 (20.3 cm) King | 84 x 70 (214 cm x 178 cm) | 8 (20.3 cm) Double | 72 x 42 (183 cm x 107 cm) | 8 (20.3 cm) Double | 75 x 42 (191 cm x 107 cm) | 8 (20.3 cm) Double | 78 x 42 (198 cm x 107 cm) | 8 (20.3 cm) Qty ( 0 in cart) Decrease quantity for Posture Perfect Pocket Spring Orthopedic Mattress Increase quantity for Posture Perfect Pocket Spring Orthopedic Mattress Choose a size ✕ Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Custom Variant sold out or unavailable Dimension 72 x 35 (183x89) Variant sold out or unavailable 72 x 36 (183x92) Variant sold out or unavailable 75 x 35 (191x89) Variant sold out or unavailable 75 x 36 (191x92) Variant sold out or unavailable 78 x 35 (198x89) Variant sold out or unavailable 78 x 36 (198x92) Variant sold out or unavailable 72 x 48 (183x122) Variant sold out or unavailable 75 x 48 (191x122) Variant sold out or unavailable 78 x 48 (198x122) Variant sold out or unavailable 72 x 60 (183x152) Variant sold out or unavailable 72 x 66 (183x168) Variant sold out or unavailable 75 x 60 (191x152) Variant sold out or unavailable 75 x 66 (191x168) Variant sold out or unavailable 78 x 60 (198x152) Variant sold out or unavailable 78 x 66 (198x168) Variant sold out or unavailable 84 x 60 (214x152) Variant sold out or unavailable 72 x 70 (183x178) Variant sold out or unavailable 72 x 72 (183x183) Variant sold out or unavailable 75 x 70 (191x178) Variant sold out or unavailable 75 x 72 (191x183) Variant sold out or unavailable 78 x 70 (198x178) Variant sold out or unavailable 78 x 72 (198x183) Variant sold out or unavailable 84 x 72 (214x183) Variant sold out or unavailable 72 x 30 (183x76) Variant sold out or unavailable 75 x 30 (191x76) Variant sold out or unavailable 78 x 30 (198x76) Variant sold out or unavailable 84 x 30 (214x76) Variant sold out or unavailable 84 x 35 (214x89) Variant sold out or unavailable 84 x 36 (214x92) Variant sold out or unavailable 84 x 42 (214x107) Variant sold out or unavailable 84 x 48 (214x122) Variant sold out or unavailable 84 x 66 (2.14 cm x 168 cm ) Variant sold out or unavailable 84 x 70 (214x178) Variant sold out or unavailable 72 x 42 (183x107) Variant sold out or unavailable 75 x 42 (191x107) Variant sold out or unavailable 78 x 42 (198x107) Variant sold out or unavailable Height 8 (20.3 cm) Variant sold out or unavailable Length 72 73 74 75 76 77 78 79 80 81 82 83 84 Width 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 Confirm size Regular price ₹ 37,"
+    },
+    {
+      "heading": "Customer Reviews",
+      "group": "supporting-content",
+      "text": "Customer Reviews Based on 149 reviews Write a review 76% (113) 23% (35) 1% (1) 0% (0) 0% (0) S Sunny good one best product U Usha Swaminathan Posture Perfect Pocket Spring Orthopedic Mattress V VIDYA M no problem very comfortable M Mr. Ranganathan its comfortable good one K Karthikeya Maturi Nice excellent one 1 2 3"
+    },
+    {
+      "heading": "Frequently asked Questions",
+      "group": "supporting-content",
+      "text": "Frequently asked Questions 1. What is Posture Perfect Pocket Spring Orthopedic Mattress? Posture Perfect is a premium medium firm hybrid orthopedic mattress featuring 3-zone pocket springs, 5-zone dual density orthopedic support, and Heat Away™ technology. It has a Euro top finish with memory foam quilting, zero motion transfer technology, and uses 40% recycled yarn in its eco-friendly fabric. It’s part of Duroflex’s Duropedic range, which is doctor-recommended for targeted support and exclusively approved by the National Health Academy. 2. What problem does Posture Perfect Pocket Spring Orthopedic Mattress solve? It addresses multiple sleep concerns: back pain and poor posture -- through 5-zone certified orthopedic support, partner disturbance with zero motion transfer technology, heat buildup during night sweats using Heat Away™ technology, and pressure point discomfort. The combination of pocket springs and memory foam solves the choice between bounce and support. 3. Who is the Posture Perfect Pocket Spring Orthopedic Mattress best for? Ideal for desk job professionals with extended sitting hours, back/neck pain sufferers, sleepers prone to night sweat and anyone seeking doctor-recommended orthopedic support with luxury comfort. It is also suitable for those looking for a supportive spring mattress. 4. How does Posture Perfect Pocket Spring Orthopedic Mattress work? Multi-layered hybrid construction delivers targeted support: Euro top padding provides plush comfort on contact; memory foam quilting contours to your body. The 5-Zone Support System keeps your spine straight and reduces pressure on sore spots like your neck, back, shoulders, and hips. 3-zone individually wrapped pocket springs provide responsive support with zero motion transfer; Heat Away™ technology helps release body heat, keeping your mattress cool and comfortable all night long. 5. How is Posture Perfect Pocket Spring Orthopedic Mattress different from alternatives? Unlike basic spring mattresses, the 5-zone dual density layer is exclusive to Duroflex, providing region-specific spinal alignment. The Heat Away™ technology outperforms standard cooling methods. Euro top construction with memory foam quilting adds luxury comfort. 6. How does Posture Perfect Pocket Spring Orthopedic Mattress feel? Firmness: Medium -- Combines plush surface comfort with responsive support. The Euro top feels luxurious and soft, while the dual-density orthopedic layer prevents excessive sinking and maintains spinal alignment. 7. Does the Posture Perfect Pocket Spring Orthopedic Mattress come with a warranty? Yes, the mattress comes with a 10 year conditional warranty and 10 day replacement policy. 8. How to care for Posture Perfect Pocket Spring Orthopedic Mattress? Always use a mattress protector to protect against dust, spills, and allergens, and get it professionally deep-cleaned twice a year for better hygiene. Do not flip or turn the mattress, avoid ironing on it, and never fold or bend it as it may damage the mattress structure."
+    }
+  ],
+  "identityBasis": "Product structured metadata",
+  "pageUrl": "https://www.duroflexworld.com/products/new-posture-perfect?variant=51541059862660",
+  "requestedUrl": "https://www.duroflexworld.com/products/new-posture-perfect?variant=51541059862660",
+  "collectedAt": "2026-10-21T19:08:41.322Z",
+  "snapshot": "snapshot-1792609721322-766fee",
+  "pageHash": "c176cf87988391734e0ec68867d2a6ed980c76fdb8517272c4e957bf25f03627",
+  "assets": [
+    {
+      "id": "media-1650faeeb38b3c08",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/1_41295d54-6ede-4a59-8823-86b722ee4437_600x600.png?v=1749639398",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Product structured metadata",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-1650faeeb38b3c08.png",
+      "bytes": 557625,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 600,
+      "height": 600,
+      "sha256": "fdebaaec1f46551f9870128140c878e17db574fec161f86b4c3a208df930b703",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/1_41295d54-6ede-4a59-8823-86b722ee4437_600x600.png?v=1749639398",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-1650faeeb38b3c08-preview.png"
+    },
+    {
+      "id": "media-88f7073b6dd66375",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_41295d54-6ede-4a59-8823-86b722ee4437.png?v=1749639398",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-88f7073b6dd66375.png",
+      "bytes": 1562864,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "7b482b2ab55b45e6904211eea1d270eeac2e11f083f8ac07cc154fdbfdfb3519",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_41295d54-6ede-4a59-8823-86b722ee4437.png?v=1749639398",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-88f7073b6dd66375-preview.png"
+    },
+    {
+      "id": "media-06ac6e026cb0c550",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_46cece9d-3e0c-4d55-af9b-0b5f0dacbaa7.jpg?v=1749639398",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-06ac6e026cb0c550.jpg",
+      "bytes": 120621,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "b23a01c7215f2f87a1a622cb9042d5db1ff133a11d1eafaccb65363246ff26e2",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_46cece9d-3e0c-4d55-af9b-0b5f0dacbaa7.jpg?v=1749639398",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-06ac6e026cb0c550-preview.png"
+    },
+    {
+      "id": "media-d8a1bab1931f9c9a",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_dbff6b2f-8d2e-4721-8d61-f7e094d497af.jpg?v=1749639398",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-d8a1bab1931f9c9a.jpg",
+      "bytes": 165715,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "71ed45457a5867d1905fc91dae01c10ddb4af8b7a6a232c30fc41f78775334c0",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_dbff6b2f-8d2e-4721-8d61-f7e094d497af.jpg?v=1749639398",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-d8a1bab1931f9c9a-preview.png"
+    },
+    {
+      "id": "media-db270b8f33757d60",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4new.jpg?v=1749639398",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-db270b8f33757d60.jpg",
+      "bytes": 175378,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "200d3ae3c659c6cee946eaa07b18a50a274381c20d74cba18d6191c9e55ab3bc",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4new.jpg?v=1749639398",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-db270b8f33757d60-preview.png"
+    },
+    {
+      "id": "media-17b0f38393ff9088",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Duropedic-1x1_jpg.jpg?v=1779862821",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-17b0f38393ff9088.jpg",
+      "bytes": 136268,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "bc2ae3ac72f87dddaaa56a646af48ae92e2302b51792f091eecc7bda273f50d6",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Duropedic-1x1_jpg.jpg?v=1779862821",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-17b0f38393ff9088-preview.png"
+    },
+    {
+      "id": "media-f5c268ac16a36cce",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_fcd049ae-720c-44d6-98ba-7c69c4794a86.jpg?v=1749639398",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-f5c268ac16a36cce.jpg",
+      "bytes": 240447,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "1b0207b070cfe32363e331c03a4c57135d68307e36e90ef1adb47e6530e28363",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_fcd049ae-720c-44d6-98ba-7c69c4794a86.jpg?v=1749639398",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-f5c268ac16a36cce-preview.png"
+    },
+    {
+      "id": "media-b8cde52ec5e92871",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/8_040fc92f-a378-4191-a273-e0ea338df621.jpg?v=1762152992",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-b8cde52ec5e92871.jpg",
+      "bytes": 171848,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "05a40c3e8ab10257d7a5ed31b3449fe9a094e4c76aae19fee3cecf228e85e26c",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/8_040fc92f-a378-4191-a273-e0ea338df621.jpg?v=1762152992",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-b8cde52ec5e92871-preview.png"
+    },
+    {
+      "id": "media-0754397cb41565d9",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/9_9f7e5a1e-4294-44b1-b620-dea4d02a804b.jpg?v=1762152992",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-0754397cb41565d9.jpg",
+      "bytes": 89295,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "7e7fc7c78effedc9ef2d394873142ba59b38dc18a7ae8bc18b3221c95bac628b",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/9_9f7e5a1e-4294-44b1-b620-dea4d02a804b.jpg?v=1762152992",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-0754397cb41565d9-preview.png"
+    },
+    {
+      "id": "media-0513ef28bbeb149b",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_1aa21a7e-3572-44c1-b988-d8e800cbb0aa.jpg?v=1762152992",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-0513ef28bbeb149b.jpg",
+      "bytes": 239601,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "5b121c391c57ff0e7ab4338b04b872ec886207b85d9b23c407564c16c4df13d8",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_1aa21a7e-3572-44c1-b988-d8e800cbb0aa.jpg?v=1762152992",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-0513ef28bbeb149b-preview.png"
+    },
+    {
+      "id": "media-cd1a41196a8cbb18",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mattress_Size_Guide.jpg?v=1783601042",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-cd1a41196a8cbb18.jpg",
+      "bytes": 877201,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 4096,
+      "height": 4096,
+      "sha256": "e49f6db5bee6c24de5e57d9b16cb7e5c1dd201c50f049762befc4f54eecaf610",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mattress_Size_Guide.jpg?v=1783601042",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-cd1a41196a8cbb18-preview.png"
+    },
+    {
+      "id": "media-696b8ee498b799c9",
+      "url": "https://cdn.shopify.com/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.SD-480p-0.9Mbps-61513373.mp4",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "videos",
+      "type": "video",
+      "basis": "Official product JSON media",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/videos/media-696b8ee498b799c9.mp4",
+      "bytes": 3287591,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "sha256": "085ecba94f9527623fd769a93e0e3480a2f209de01aa3f8c13d36e26c00cccf3",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://cdn.shopify.com/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.SD-480p-0.9Mbps-61513373.mp4"
+    },
+    {
+      "id": "media-afd7ed75a9e1c0a2",
+      "url": "https://cdn.shopify.com/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.HD-1080p-2.5Mbps-61513373.mp4",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "videos",
+      "type": "video",
+      "basis": "Official product JSON media",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "note": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "media-db29454fc9f3eaee",
+      "url": "https://cdn.shopify.com/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.HD-720p-1.6Mbps-61513373.mp4",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "videos",
+      "type": "video",
+      "basis": "Official product JSON media",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/videos/media-db29454fc9f3eaee.mp4",
+      "bytes": 5405498,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "sha256": "bfc8271ea045e8d239c19d3a13d0940f72444baa37d7daabda54308add263b69",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://cdn.shopify.com/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.HD-720p-1.6Mbps-61513373.mp4"
+    },
+    {
+      "id": "media-04b86bd2d250e0ad",
+      "url": "https://cdn.shopify.com/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.m3u8",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "videos",
+      "type": "video",
+      "basis": "Official product JSON media",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "note": "Source did not return a supported video"
+    },
+    {
+      "id": "media-129de7c4d7e3af5c",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/6645f08a169b45f7b5ee5379557e5923.thumbnail.0000000000.jpg?v=1762151610&width=1946",
+      "label": "Mattress | Duroflex",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/product-images/media-129de7c4d7e3af5c.jpg",
+      "bytes": 77061,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "39fb5c44b5821f62bcea6b67d401d6854c677aba457141ec2328137d7df60920",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/6645f08a169b45f7b5ee5379557e5923.thumbnail.0000000000.jpg?v=1762151610&width=1946",
+      "preview": "snapshot-1792609721322-766fee/product-images/media-129de7c4d7e3af5c-preview.png"
+    },
+    {
+      "id": "media-1749e8dba51516a0",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/preview_images/6645f08a169b45f7b5ee5379557e5923.thumbnail.0000000000_2048x.jpg?v=1762151610",
+      "label": "Video poster",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-1749e8dba51516a0.jpg",
+      "bytes": 77061,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1080,
+      "height": 1080,
+      "sha256": "39fb5c44b5821f62bcea6b67d401d6854c677aba457141ec2328137d7df60920",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/preview_images/6645f08a169b45f7b5ee5379557e5923.thumbnail.0000000000_2048x.jpg?v=1762151610",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-1749e8dba51516a0-preview.png"
+    },
+    {
+      "id": "media-f4f19da698a7fd88",
+      "url": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.HD-1080p-2.5Mbps-61513373.mp4?v=0",
+      "label": "videos",
+      "group": "videos",
+      "type": "video",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/videos/media-f4f19da698a7fd88.mp4",
+      "bytes": 7942829,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "sha256": "0bf00cdf3758dc7727c6787ba6c295a527582dc1bb7754dcc354f278781398ce",
+      "mime": "video/mp4",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/videos/c/vp/6645f08a169b45f7b5ee5379557e5923/6645f08a169b45f7b5ee5379557e5923.HD-1080p-2.5Mbps-61513373.mp4?v=0"
+    },
+    {
+      "id": "media-11ea1373b974486a",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/free___easy_shipping_1-removebg-preview.png?v=1742213701",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-11ea1373b974486a.png",
+      "bytes": 82725,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 633,
+      "height": 359,
+      "sha256": "3f1af1c715ba8b745c457c7bd1fe029bc3a8a9452a46a203ede2d6831c495d02",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/free___easy_shipping_1-removebg-preview.png?v=1742213701",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-11ea1373b974486a-preview.png"
+    },
+    {
+      "id": "media-59c915d5d9414807",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/maps-and-flags.png?v=1742218406",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-59c915d5d9414807.png",
+      "bytes": 6499,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 512,
+      "height": 512,
+      "sha256": "79ee5e3aa451335079e3217e2f14879166987c23ce4268118d0113a9e9a77e5b",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/maps-and-flags.png?v=1742218406",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-59c915d5d9414807-preview.png"
+    },
+    {
+      "id": "media-df578693a89473e8",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/store_img.png?v=1742218038",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-df578693a89473e8.png",
+      "bytes": 28508,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 125,
+      "height": 125,
+      "sha256": "cf43518069c50ccbdac31a0f66a6e23efa49843430ac887546f15320ce6c9575",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/store_img.png?v=1742218038",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-df578693a89473e8-preview.png"
+    },
+    {
+      "id": "media-b8b98d764e302953",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/icons8-clock-24.png?v=1742290134",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "note": "Tiny image excluded from product library"
+    },
+    {
+      "id": "media-6d36874a9c8670de",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/icons8-navigation-16.png?v=1742292606",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "note": "Tiny image excluded from product library"
+    },
+    {
+      "id": "media-dc19c46ec97833ae",
+      "url": "https://cdn.shopify.com/s/files/1/0926/7537/5382/files/icons8-phone-24.png?v=1742292819",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "unavailable",
+      "file": null,
+      "bytes": 0,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "note": "Tiny image excluded from product library"
+    },
+    {
+      "id": "media-f5e58c87b6198cd7",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/coupon_1.png?v=1778913621",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-f5e58c87b6198cd7.png",
+      "bytes": 661681,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 963,
+      "height": 963,
+      "sha256": "2a76bdac9ac7db8634381192112207fa875757e2a99dfafd8db5b0b434294017",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/coupon_1.png?v=1778913621",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-f5e58c87b6198cd7-preview.png"
+    },
+    {
+      "id": "media-300281adfff9e15a",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/gyftr.jpg?v=1763617342",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-300281adfff9e15a.jpg",
+      "bytes": 4351,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 197,
+      "height": 148,
+      "sha256": "2554c37ed4379d5d82d226bb2c69865d8f67f5299677de23239495585259abea",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/gyftr.jpg?v=1763617342",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-300281adfff9e15a-preview.png"
+    },
+    {
+      "id": "media-20391fa32f1e3fdf",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/video-pop-in-1.png?v=1757065491",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-20391fa32f1e3fdf.png",
+      "bytes": 342368,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "269778bfaec7737428bc4c4700b3db0ba2b3da88fc31d98bce37dbed9a2ef9e9",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/video-pop-in-1.png?v=1757065491",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-20391fa32f1e3fdf-preview.png"
+    },
+    {
+      "id": "media-179943ed3ad2a0f8",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/10_years_warranty.png?v=1746406155",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-179943ed3ad2a0f8.png",
+      "bytes": 2770,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "48399c3ed5d82b3ad30144f1803f9dd12d0bcf01c1d37f6de1c19c4e11c61350",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/10_years_warranty.png?v=1746406155",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-179943ed3ad2a0f8-preview.png"
+    },
+    {
+      "id": "media-15127ff9b85e1199",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Replacement.png?v=1746406154",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-15127ff9b85e1199.png",
+      "bytes": 3487,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "8bbcae707b939bdabe5b79b93a7e4b38e701822af4ac5a9b08d563098b953cac",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Replacement.png?v=1746406154",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-15127ff9b85e1199-preview.png"
+    },
+    {
+      "id": "media-2e14f458682526a0",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Heat_away_technology_69165c50-1509-43d9-ae0d-7889452eebc6.png?v=1751616222",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-2e14f458682526a0.png",
+      "bytes": 3201,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "5ef645d9867ef48552d6504a7ba68f6a735679e710080afac21f193723681baf",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Heat_away_technology_69165c50-1509-43d9-ae0d-7889452eebc6.png?v=1751616222",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-2e14f458682526a0-preview.png"
+    },
+    {
+      "id": "media-fcada5e2af4842b0",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_zone_orthopedic_support.png?v=1746406154",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-fcada5e2af4842b0.png",
+      "bytes": 1893,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "0b7033629e9d9cb5202ad2a3a4bf451e4b465af703adb7c323501105cffbfc2e",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_zone_orthopedic_support.png?v=1746406154",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-fcada5e2af4842b0-preview.png"
+    },
+    {
+      "id": "media-6f4d0fb5109427a3",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Doctor_recommended.png?v=1746406155",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-6f4d0fb5109427a3.png",
+      "bytes": 45556,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "2f3a284a2134c25a029a07191fba5e58d5774b44449658c2df40e540030e5eae",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Doctor_recommended.png?v=1746406155",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-6f4d0fb5109427a3-preview.png"
+    },
+    {
+      "id": "media-af1807bc7fb12223",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care2.png?v=1745761937",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-af1807bc7fb12223.png",
+      "bytes": 3330,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "ebb8c83053e2027ef58209ea2a637c66d089b53499226a9dc03d03b224f150a6",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care2.png?v=1745761937",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-af1807bc7fb12223-preview.png"
+    },
+    {
+      "id": "media-a6c44bb6e7a0df85",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care3.png?v=1745761937",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-a6c44bb6e7a0df85.png",
+      "bytes": 3804,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "6833d2b2dfcbab364d1f28397926ad046d7d6f1323dbc338dfc9aa0719e9e3b8",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care3.png?v=1745761937",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-a6c44bb6e7a0df85-preview.png"
+    },
+    {
+      "id": "media-8bf4b822d391429a",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care5.png?v=1745761937",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-8bf4b822d391429a.png",
+      "bytes": 3768,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "68aa32eb43f4b5f985ef44397f41fb158d08d045978893a78f635e2fcc08df66",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care5.png?v=1745761937",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-8bf4b822d391429a-preview.png"
+    },
+    {
+      "id": "media-56dd9d82e69191ec",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care4.png?v=1745761937",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-56dd9d82e69191ec.png",
+      "bytes": 8244,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "6f0ca196a8dd42ef6a636d1b5922a69c170e8a70adda3370912f16f2994ae9c2",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care4.png?v=1745761937",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-56dd9d82e69191ec-preview.png"
+    },
+    {
+      "id": "media-be502e11266b6f5a",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care6.png?v=1745761937",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-be502e11266b6f5a.png",
+      "bytes": 3363,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "eba3551b10f14334f6c5ce410e434d8643d42aba4f2d542eb2fb1d3758ff7f65",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care6.png?v=1745761937",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-be502e11266b6f5a-preview.png"
+    },
+    {
+      "id": "media-884437a1fb2575b7",
+      "url": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care7.png?v=1745761937",
+      "label": "Posture Perfect Pocket Spring Orthopedic Mattress",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-884437a1fb2575b7.png",
+      "bytes": 4318,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "ef2aea197e8f059ac48db0d6d7bb8b7f062382566b666bb06ce976531e2aaac3",
+      "mime": "image/png",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/care7.png?v=1745761937",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-884437a1fb2575b7-preview.png"
+    },
+    {
+      "id": "media-caf5746ec0b108aa",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/A_1_9d6b0db7-ce80-4d7a-a620-c8080b61e0f1.png?v=16363849714579888810",
+      "label": "Duroflex | Product Detail Experience",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/a-plus-content/media-caf5746ec0b108aa.png",
+      "bytes": 425230,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1200,
+      "height": 400,
+      "sha256": "daaf315cbf9fc17fa61401c4ef5920e2914e5dc5a196e28d146885302f957a20",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/A_1_9d6b0db7-ce80-4d7a-a620-c8080b61e0f1.png?v=16363849714579888810",
+      "preview": "snapshot-1792609721322-766fee/a-plus-content/media-caf5746ec0b108aa-preview.png"
+    },
+    {
+      "id": "media-a75561bb91ec6d6f",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/duropedic_55b8c7c3-44a5-43fc-99a6-009b87ac7edd.jpg?v=13365642597431039676",
+      "label": "Duroflex | Product Detail Experience",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/a-plus-content/media-a75561bb91ec6d6f.jpg",
+      "bytes": 37006,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 380,
+      "height": 320,
+      "sha256": "7b7a3c5765f84548d6232ad115ab00a9203094545b9753b0fb6447d11ef8e793",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/duropedic_55b8c7c3-44a5-43fc-99a6-009b87ac7edd.jpg?v=13365642597431039676",
+      "preview": "snapshot-1792609721322-766fee/a-plus-content/media-a75561bb91ec6d6f-preview.png"
+    },
+    {
+      "id": "media-fd0f9720d2872638",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/A_3.png?v=7702027677119473832",
+      "label": "Duroflex | Product Detail Experience",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/a-plus-content/media-fd0f9720d2872638.png",
+      "bytes": 300633,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1200,
+      "height": 400,
+      "sha256": "8d9a2f0ad38eeb62f4fd03ce8ebc72d8e2edd95ebe4c914e645a9feb9c316239",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/A_3.png?v=7702027677119473832",
+      "preview": "snapshot-1792609721322-766fee/a-plus-content/media-fd0f9720d2872638-preview.png"
+    },
+    {
+      "id": "media-f02fa28df6b2e515",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/5zonemob.jpg?v=18445465735259378365",
+      "label": "Duroflex | Product Detail Experience",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/a-plus-content/media-f02fa28df6b2e515.jpg",
+      "bytes": 34907,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 380,
+      "height": 320,
+      "sha256": "ef72aa699ebd150371eb8b28714da127e7b5175f2381f4f97a468327ad62664f",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/5zonemob.jpg?v=18445465735259378365",
+      "preview": "snapshot-1792609721322-766fee/a-plus-content/media-f02fa28df6b2e515-preview.png"
+    },
+    {
+      "id": "media-30fe54d0dfd6048f",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/A_4.png?v=6971437785063022902",
+      "label": "Duroflex | Product Detail Experience",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/a-plus-content/media-30fe54d0dfd6048f.png",
+      "bytes": 440834,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 1200,
+      "height": 400,
+      "sha256": "c107a4208f1229519f8eecfa93b02f08d7d36718f8e9fde476071ed523b4e8f8",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/A_4.png?v=6971437785063022902",
+      "preview": "snapshot-1792609721322-766fee/a-plus-content/media-30fe54d0dfd6048f-preview.png"
+    },
+    {
+      "id": "media-a2519a763a189d6c",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/reccommendmobif.jpg?v=3820979479243149728",
+      "label": "Duroflex | Product Detail Experience",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/a-plus-content/media-a2519a763a189d6c.jpg",
+      "bytes": 25026,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 380,
+      "height": 320,
+      "sha256": "e1a0e36873be58ca03a17123fdf67ce56d32dcf8aef2a0439073c21d97e3c610",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/reccommendmobif.jpg?v=3820979479243149728",
+      "preview": "snapshot-1792609721322-766fee/a-plus-content/media-a2519a763a189d6c-preview.png"
+    },
+    {
+      "id": "media-f88dc45360ab7e75",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/dfx-store-2x.png?v=1761851451",
+      "label": "Duroflex | Omnichannel Experience",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-f88dc45360ab7e75.png",
+      "bytes": 284544,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 500,
+      "height": 500,
+      "sha256": "d211c2e89cc84da28121865e4d3fd3d89bb97f9f1930407cce06ed14257420ef",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/dfx-store-2x.png?v=1761851451",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-f88dc45360ab7e75-preview.png"
+    },
+    {
+      "id": "media-3cea753f0582ce80",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/CRM.png?v=1746024394",
+      "label": "Duroflex | Omnichannel Experience",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-3cea753f0582ce80.png",
+      "bytes": 412667,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 500,
+      "height": 500,
+      "sha256": "07972819ae778baa7b92753fc8ba97dce6e337294eaa72475d5f3c49c7d15322",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/CRM.png?v=1746024394",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-3cea753f0582ce80-preview.png"
+    },
+    {
+      "id": "media-4dff76422c18c7e2",
+      "url": "https://www.duroflexworld.com/cdn/shop/files/LIVE_SHOPPING.png?v=1746024394",
+      "label": "Duroflex | Omnichannel Experience",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1792609721322-766fee/supporting-content/media-4dff76422c18c7e2.png",
+      "bytes": 359773,
+      "collectedAt": "2026-10-21T19:08:41.322Z",
+      "width": 500,
+      "height": 500,
+      "sha256": "f1f3659574e6ed7e92e532568e0cebfa190e5454ac34133f0acc9627b793d8d4",
+      "mime": "image/png",
+      "resolvedUrl": "https://www.duroflexworld.com/cdn/shop/files/LIVE_SHOPPING.png?v=1746024394",
+      "preview": "snapshot-1792609721322-766fee/supporting-content/media-4dff76422c18c7e2-preview.png"
+    }
+  ],
+  "gaps": [
+    "5 media assets could not be downloaded; their source links and errors are retained.",
+    "No tiles exposed in the collected page / product JSON."
+  ],
+  "downloadedBytes": 24657389,
+  "jobId": null,
+  "history": [],
+  "limits": [
+    "Website snapshot, not approved product substantiation.",
+    "Category comes from website breadcrumbs or product type; missing taxonomy remains Uncategorized.",
+    "Asset folder roles inferred from page sections; inspect before reuse.",
+    "Only media exposed in HTML / official product JSON is discoverable; protected or client-only assets may be missing."
+  ],
+  "audit": {
+    "pageUrl": "https://www.duroflexworld.com/products/new-posture-perfect?variant=51541059862660",
+    "snapshot": "snapshot-1792609721322-766fee",
+    "identityStatus": "matched",
+    "identityNote": "The requested name matches the selected page title. The selected Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm) option appears in the page’s variant list. The different metadata SKU reflects another default option, not a conflict with the saved selected variant.",
+    "facts": [
+      {
+        "id": "sku-selected-variant",
+        "kind": "product",
+        "text": "The explicitly selected official product variant is Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm); SKU NPOS7200600006000200WHITE; variant ID 51541059993732. Exact saved options: Size: Queen; Dimension: 72 x 60 (183 cm x 152 cm); Height: 8 (20.3 cm).",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-variant-record"
+        ],
+        "essential": true
+      },
+      {
+        "id": "sku-fact-1",
+        "kind": "product",
+        "text": "Posture Perfect Pocket Spring Orthopedic Mattress.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-2",
+        "kind": "product",
+        "text": "Selected variant: Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm).",
+        "status": "unverified",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-3",
+        "kind": "product",
+        "text": "The mattress combines pocket springs and memory foam.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-4",
+        "kind": "product",
+        "text": "The mattress core features a 3-zoned pocket spring layer.",
+        "status": "supported",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-5",
+        "kind": "product",
+        "text": "For the Queen 72 x 60 (183 cm x 152 cm) option, the listed mattress feel is Medium.",
+        "status": "unverified",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-6",
+        "kind": "product",
+        "text": "For the Queen 72 x 60 (183 cm x 152 cm) option, the listed top style is Euro Top.",
+        "status": "unverified",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      },
+      {
+        "id": "sku-fact-7",
+        "kind": "product",
+        "text": "For the Queen 72 x 60 (183 cm x 152 cm) option, the listed color is White.",
+        "status": "unverified",
+        "sourceIds": [
+          "source-selected-product"
+        ],
+        "essential": false
+      }
+    ],
+    "evidence": [
+      {
+        "factId": "sku-fact-1",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-1",
+        "quote": "Posture Perfect Pocket Spring Orthopedic Mattress A pocket spring mattress with memory foam, Posture Perfect by Duroflex combines the latest orthopedic technologies to help your body unwind at the end of a long day."
+      },
+      {
+        "factId": "sku-fact-2",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-4",
+        "quote": "x 89 cm) | 8 (20.3 cm) Single | 72 x 36 (183 cm x 92 cm) | 8 (20.3 cm) Single | 75 x 35 (191 cm x 89 cm) | 8 (20.3 cm) Single | 75 x 36 (191 cm x 92 cm) | 8 (20.3 cm) Single | 78 x 35 (198 cm x 89 cm) | 8 (20.3 cm) Single | 78 x 36 (198 cm x 92 cm) | 8 (20.3 cm) Double | 72 x 48 (183 cm x 122 cm) | 8 (20.3 cm) Double | 75 x 48 (191 cm x 122 cm) | 8 (20.3 cm) Double | 78 x 48 (198 cm x 122 cm) | 8 (20.3 cm) Queen | 72 x 60 (183 cm x 152 cm) | 8 (20.3 cm) Queen | 72 x 66 (183 cm x 168 cm) | 8 (20.3 cm) Queen | 75 x 60 (191 cm x 152 cm) | 8 (20.3 cm) Queen | 75 x 66 (191 cm x 168 cm) | 8 (20.3 cm) Queen | 78 x 60 (198 cm x 152 cm) | 8 (20.3 cm) Queen | 78 x 66 (198 cm x 168 cm) | 8 (20.3 cm) Queen | 84 x 60 (214 cm x 152 cm) | 8 (20.3 cm) King | 72 x 70 (183 cm x 178 cm) | 8 (20.3 cm) King | 72 x 72 (183 cm x 183 cm) | 8 (20.3 cm) King | 75 x 70 (191 cm x 178 cm) | 8 (20.3 cm) King | 75 x 72 (191 cm x 183 cm) | 8 (20.3 cm) King | 78 x 70 (198 cm x 178 cm) | 8 (20.3 cm) King | 78 x 72 (198 cm x 183 cm) | 8 (20.3 cm) King | 84 x 72 (214 cm x 183 cm) | 8 (20.3 cm) Custom | 84 x 72 (214 cm x 183 cm) | 8 (20.3 cm) Single | 72 x 30 (183 cm x 76 cm) | 8 (20.3 cm) Single | 75 x 30 (191 cm x 76 cm) | 8 (20.3 cm) Single | 78 x 30 (198 cm x 76 cm) | 8 (20.3 cm) Single | 84 x 30 (214 cm x 76 cm) | 8 (20.3 cm) Single | 84 x 35 (214 cm x 89 cm) | 8 (20.3 cm) Single | 84 x 36 (214 cm x 92 cm) | 8 (20.3 cm) Double | 84 x 42 (214 cm x 107 cm) | 8 (20.3 cm) Double | 84 x 48 (214 cm x 122 cm) | 8 (20.3 cm) Queen | 84 x 66 (2.14 cm x 168 cm ) | 8 (20.3 cm) King | 84 x 70 (214 cm x 178 cm) | 8 (20.3 cm) Double | 72 x 42 (183 cm x 107 cm) | 8 (20.3 cm) Double | 75 x 42 (191 cm x 107 cm) | 8 (20.3 cm) Double | 78 x 42 (198 cm x 107 cm) | 8 (20.3 cm) Qty ( 0 in cart) Decrease quantity for Posture"
+      },
+      {
+        "factId": "sku-fact-3",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-1",
+        "quote": "Posture Perfect Pocket Spring Orthopedic Mattress A pocket spring mattress with memory foam, Posture Perfect by Duroflex combines the latest orthopedic technologies to help your body unwind at the end of a long day."
+      },
+      {
+        "factId": "sku-fact-4",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-2",
+        "quote": "The core of the mattress features a 3-zoned pocket spring layer, which gives the mattress just the right amount of firmness and..."
+      },
+      {
+        "factId": "sku-fact-5",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-12",
+        "quote": "48\" (122 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Double Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 48\" (122 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Double Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 72\" (183 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 72\" (183 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 75\" (191 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 75\" (191 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top"
+      },
+      {
+        "factId": "sku-fact-6",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-12",
+        "quote": "48\" (122 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Double Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 48\" (122 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Double Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 72\" (183 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 72\" (183 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 75\" (191 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 75\" (191 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top"
+      },
+      {
+        "factId": "sku-fact-7",
+        "sourceId": "source-selected-product",
+        "passageId": "source-selected-product-passage-12",
+        "quote": "48\" (122 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Double Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 48\" (122 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Double Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 72\" (183 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 72\" (183 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 75\" (191 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 75\" (191 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 60\" (152 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top Color White Warranty 10 Years Assembly Required DIY (Do It Yourself) Product specifications + Features Details Mattress Feel Medium Length 78\" (198 cm) Depth 66\" (168 cm) Height 8\" (20.3 cm) Material Pocket Spring Size Queen Top Style Euro Top"
+      },
+      {
+        "factId": "sku-selected-variant",
+        "sourceId": "source-selected-variant-record",
+        "passageId": "source-selected-variant-record-passage-1",
+        "quote": "The explicitly selected official product variant is Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm); SKU NPOS7200600006000200WHITE; variant ID 51541059993732. Exact saved options: Size: Queen; Dimension: 72 x 60 (183 cm x 152 cm); Height: 8 (20.3 cm)."
+      }
+    ],
+    "collectedAt": "2026-10-21T19:08:41.322Z",
+    "jobId": "creative-4cd1ae63-49be-4cd5-9a44-33aaff398afd"
+  }
+}

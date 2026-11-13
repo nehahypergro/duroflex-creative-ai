@@ -1,0 +1,219 @@
+{
+  "id": 10357428191364,
+  "title": "Cocoon Cool Grey Fabric 3 Seater Sofa",
+  "handle": "cocoon-cool-grey-fabric-3-seater-sofa",
+  "description": "",
+  "published_at": "2026-07-22T14:52:32+05:30",
+  "created_at": "2026-06-12T14:52:28+05:30",
+  "vendor": "Duroflex",
+  "type": "Sofas",
+  "tags": [
+    "1 seater",
+    "2 seater",
+    "2 Seater With Lounger",
+    "3 seater",
+    "3 Seater With Lounger",
+    "3+1+1 Sofa",
+    "3+2 Sofa Set",
+    "5 Seater Sofa",
+    "All Furniture",
+    "all_products2025",
+    "BAUSALE25",
+    "Bedroom Sofa",
+    "BFSALE16",
+    "CARNIVAL18",
+    "CART5",
+    "color:dusky pink",
+    "Corner Sofa Set",
+    "Cushion Sofa",
+    "Diwali2024",
+    "Dusky Pink",
+    "FEST16",
+    "Furniture",
+    "Furniture 2025",
+    "Furniture Sofa",
+    "furniture_off",
+    "INDIA",
+    "Luxury Sofa",
+    "Modern Sofa",
+    "PAYDAY",
+    "PAYDAY5",
+    "Pink Sofa",
+    "RDAY10OFF",
+    "REMOVEOFF",
+    "REST5",
+    "SALE5",
+    "Seater 6 Sofa",
+    "Simple Sofa Set",
+    "sofa",
+    "Sofa & Recliners",
+    "Sofa Cum Lounger",
+    "Sofa Seater 7",
+    "Sofa Set For Hall",
+    "SOFA16",
+    "Sofas Sets",
+    "Summer",
+    "Updated furniture",
+    "video_shop"
+  ],
+  "price": 5613800,
+  "price_min": 5613800,
+  "price_max": 5613800,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 7485000,
+  "compare_at_price_min": 7485000,
+  "compare_at_price_max": 7485000,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 52328997159044,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "COCOONSOFAFABGREY3S",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Cocoon Cool Grey Fabric 3 Seater Sofa",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 5613800,
+      "weight": 0,
+      "compare_at_price": 7485000,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/2_948a9e8f-91e0-4018-bdf4-d6421b63373e.jpg?v=1784626918",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/1_5c50a088-5d72-47c1-b822-b242d9772c2c.jpg?v=1784626918",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/5_5a1684f6-22f3-4f0f-bc39-ccbc7f6b3dfb.jpg?v=1784626918",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/4_015260af-2bae-4529-887b-c2955a438e78.jpg?v=1784626918",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/3_e6e6c1bf-4abf-4fea-83a0-9114fe1cc6ea.jpg?v=1784626918",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/6_26a856e9-2626-485c-88c6-504c7952b7da.jpg?v=1784626918"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/2_948a9e8f-91e0-4018-bdf4-d6421b63373e.jpg?v=1784626918",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/cocoon-cool-grey-fabric-3-seater-sofa",
+  "media": [
+    {
+      "alt": "cocoon-cool-grey-fabric-3-seater-sofa",
+      "id": 52855560339588,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_948a9e8f-91e0-4018-bdf4-d6421b63373e.jpg?v=1784626918"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_948a9e8f-91e0-4018-bdf4-d6421b63373e.jpg?v=1784626918",
+      "width": 1000
+    },
+    {
+      "alt": "cocoon-cool-grey-fabric-3-seater-sofa",
+      "id": 52855560306820,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_5c50a088-5d72-47c1-b822-b242d9772c2c.jpg?v=1784626918"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_5c50a088-5d72-47c1-b822-b242d9772c2c.jpg?v=1784626918",
+      "width": 1000
+    },
+    {
+      "alt": "cocoon-cool-grey-fabric-3-seater-sofa",
+      "id": 52855560437892,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_5a1684f6-22f3-4f0f-bc39-ccbc7f6b3dfb.jpg?v=1784626918"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_5a1684f6-22f3-4f0f-bc39-ccbc7f6b3dfb.jpg?v=1784626918",
+      "width": 1000
+    },
+    {
+      "alt": "cocoon-cool-grey-fabric-3-seater-sofa",
+      "id": 52855560405124,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_015260af-2bae-4529-887b-c2955a438e78.jpg?v=1784626918"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_015260af-2bae-4529-887b-c2955a438e78.jpg?v=1784626918",
+      "width": 1000
+    },
+    {
+      "alt": "cocoon-cool-grey-fabric-3-seater-sofa",
+      "id": 52855560372356,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_e6e6c1bf-4abf-4fea-83a0-9114fe1cc6ea.jpg?v=1784626918"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_e6e6c1bf-4abf-4fea-83a0-9114fe1cc6ea.jpg?v=1784626918",
+      "width": 1000
+    },
+    {
+      "alt": "cocoon-cool-grey-fabric-3-seater-sofa",
+      "id": 52855560470660,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_26a856e9-2626-485c-88c6-504c7952b7da.jpg?v=1784626918"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_26a856e9-2626-485c-88c6-504c7952b7da.jpg?v=1784626918",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

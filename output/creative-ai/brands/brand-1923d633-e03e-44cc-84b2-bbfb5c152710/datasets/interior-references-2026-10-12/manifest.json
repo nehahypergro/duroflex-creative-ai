@@ -1,0 +1,480 @@
+{
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "authority": "User-supplied interior inspiration, not mandatory brand rules or product evidence",
+  "archiveSha256": "ed7a6996c61d5ec7dbcc97d046402a5aed629c4e2e6ea0f8650fbdca6445f380",
+  "images": [
+    {
+      "ref": "R01",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_14.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_02_14.jpg",
+      "sha256": "6719121128102a3bcaebc8b45c0edcb945bf59fae96a2ddd990f226384203b43",
+      "width": 1076,
+      "height": 1290
+    },
+    {
+      "ref": "R02",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_21.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_02_21.jpg",
+      "sha256": "95ccc089da3052da06972620a92aec46ba9b180ceb50e257bb13d1da86aa2d51",
+      "width": 1200,
+      "height": 992
+    },
+    {
+      "ref": "R03",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_32.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_02_32.jpg",
+      "sha256": "45d580da4e491686399841695c2ee07370c52ebefc5ffd3aa8e1924d0b4940e6",
+      "width": 1200,
+      "height": 670
+    },
+    {
+      "ref": "R04",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_38.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_02_38.jpg",
+      "sha256": "6f47a62272f1bc76c227c480625c54b4cfb31af7d45799776180a3eb271c175b",
+      "width": 735,
+      "height": 1318
+    },
+    {
+      "ref": "R05",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_42.webp",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_02_42.webp",
+      "sha256": "50de0025e748f497be2a56c0ba72f81dcb9a5cd8484cccbb4a60edc624edd1f1",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "ref": "R06",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_53.png",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_02_53.png",
+      "sha256": "bc602c1d59485a7a1b2b28130f12567dce67583dc44aaa2b994a16717100216e",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "ref": "R07",
+      "name": "ChatGPT Image 7 Oct 2026, 15_02_57.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_02_57.jpg",
+      "sha256": "97dfac962590b80d07f0d52f104e62c1466cb441ae6740dd869d80a93a32e430",
+      "width": 2000,
+      "height": 1333
+    },
+    {
+      "ref": "R08",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_02.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_03_02.jpg",
+      "sha256": "4e9f103005b3ef6ac4b0387fadadd10f9db4f303f9f230b0ad5b43bbcb07c385",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "ref": "R09",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_14.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_03_14.jpg",
+      "sha256": "e0fb2c82d0a6e71c0dce77788411e4f403d9539da77d43a89ac483661fea8018",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "ref": "R10",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_20.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_03_20.jpg",
+      "sha256": "b336ed7012aeabd8b52cc3c67c50357b741fe4f41eb8231f3d834525a84bfa7e",
+      "width": 960,
+      "height": 1440
+    },
+    {
+      "ref": "R11",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_24.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_03_24.jpg",
+      "sha256": "376ef2d102b664a982c4b3b43299ac19ff7857df3b603ee149e870e00fe0cd3f",
+      "width": 1184,
+      "height": 864
+    },
+    {
+      "ref": "R12",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_51.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_03_51.jpg",
+      "sha256": "0acbe6e9ce79581166961f34ab6aebccb8837f334d783e39aacc5b35d3a910cb",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "ref": "R13",
+      "name": "ChatGPT Image 7 Oct 2026, 15_03_56.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_03_56.jpg",
+      "sha256": "1f2724784c314d85e0d0765fe99f99f2e1e5b6e168708c74b7738190cfd12c1c",
+      "width": 3024,
+      "height": 4536
+    },
+    {
+      "ref": "R14",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_01.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_01.jpg",
+      "sha256": "7853de988a5d525625935dfca9b064610e07fe2792738d2b99eefe7b35036e24",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "ref": "R15",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_05.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_05.jpg",
+      "sha256": "c55dbf109f1156a7c57d0feb46053e9392049a8645a50a7f2a6bbda64155d4c8",
+      "width": 1706,
+      "height": 2560
+    },
+    {
+      "ref": "R16",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_15.png",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_15.png",
+      "sha256": "8eadf9fd71f10462182b31e363875f30b7c31238f0680014fa65647a8104cdee",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "ref": "R17",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_24.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_24.jpg",
+      "sha256": "e750cf59fa71cbc87e44eb85cd8c821a7b70593acd8f408a9664346894383920",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "ref": "R18",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_33.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_33.jpg",
+      "sha256": "3046aaf3f0c33266c64251330ab748ed3642b56ed995ba2d3e4907a841fab474",
+      "width": 1137,
+      "height": 807
+    },
+    {
+      "ref": "R19",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_40.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_40.jpg",
+      "sha256": "0d9c2c601d9634a779612c5b457a8e89e134085987dc69802cff740d93814331",
+      "width": 980,
+      "height": 895
+    },
+    {
+      "ref": "R20",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_44.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_44.jpg",
+      "sha256": "300b3715cb75133d7e427e6b232c9a6fda19fd5408ff80527a6863109b2544a8",
+      "width": 1440,
+      "height": 1253
+    },
+    {
+      "ref": "R21",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_48.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_48.jpg",
+      "sha256": "91f82e4e83da7952b48a2914fa17b30328b80bbad315d13edfbb3a39babab793",
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "ref": "R22",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_52.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_52.jpg",
+      "sha256": "384835c1a0866a0b663db6e91897982c6c23541c8fa1f86b40562128cb6ac87e",
+      "width": 700,
+      "height": 907
+    },
+    {
+      "ref": "R23",
+      "name": "ChatGPT Image 7 Oct 2026, 15_04_56.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_04_56.jpg",
+      "sha256": "b21f0e450743b764aa914be85afba82c024826122bc1602ffb79a15f114d55f8",
+      "width": 3500,
+      "height": 1969
+    },
+    {
+      "ref": "R24",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_00.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_05_00.jpg",
+      "sha256": "dd6a0e9e071901b73ed2f3dc860f7ab04d56b04aacb225c61f8f583230b8a4ac",
+      "width": 533,
+      "height": 533
+    },
+    {
+      "ref": "R25",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_18.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_05_18.jpg",
+      "sha256": "d4258d95e210e0a43c25240bd6d620837699250a4bc5644ab685e222132692dd",
+      "width": 1012,
+      "height": 1265
+    },
+    {
+      "ref": "R26",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_36.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_05_36.jpg",
+      "sha256": "52cca699422fbe5fcef0e8b827f375fa076b7df5954388706b11471a85ad73ea",
+      "width": 735,
+      "height": 553
+    },
+    {
+      "ref": "R27",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_41.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_05_41.jpg",
+      "sha256": "cfd33058494961a19858c9badc63b70ce49d373accf0d071a2a0b82a387b7473",
+      "width": 863,
+      "height": 575
+    },
+    {
+      "ref": "R28",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_48.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_05_48.jpg",
+      "sha256": "584d2c897b0dcf650d0f281622a9adcf91b1f3983294a4b8d2082758b922ab3a",
+      "width": 5110,
+      "height": 3650
+    },
+    {
+      "ref": "R29",
+      "name": "ChatGPT Image 7 Oct 2026, 15_05_52.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_05_52.jpg",
+      "sha256": "c940aad94e26979a4bd873b892e7e99e531ca451cfa6a1ea82ec0e95122b8b8a",
+      "width": 800,
+      "height": 1200
+    },
+    {
+      "ref": "R30",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_02.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_06_02.jpg",
+      "sha256": "ce791a45ec76da8791245902acbd9928f95f333b9c6a27790a2a3dedae0d5607",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "ref": "R31",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_08.png",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_06_08.png",
+      "sha256": "f899bbd1fa7bad729ffc3d877fe24c47af7227a2ea080a8bba3a566e0c3e4739",
+      "width": 1024,
+      "height": 1820
+    },
+    {
+      "ref": "R32",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_12.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_06_12.jpg",
+      "sha256": "61f312d3a1cba3f792f648284fe3302be6d29f236b9754099099232a863a63cb",
+      "width": 736,
+      "height": 1104
+    },
+    {
+      "ref": "R33",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_25.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_06_25.jpg",
+      "sha256": "712cac43ec9fd46fc063d92fe363a087e6ebf7024d8e86a2471daa8026ac9ee3",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "ref": "R34",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_32.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_06_32.jpg",
+      "sha256": "fcd194390c50416cc8c2914b4a8ff7aa2e306616243ef8e3e716cdcab3942ea0",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "ref": "R35",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_52.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_06_52.jpg",
+      "sha256": "c38dc428dee6abd4f820ef91bc8223a34397c111c4d00fdbc98eda85af8a323c",
+      "width": 600,
+      "height": 455
+    },
+    {
+      "ref": "R36",
+      "name": "ChatGPT Image 7 Oct 2026, 15_06_58.png",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_06_58.png",
+      "sha256": "df6158ab217f5d1d235a91871735631dce894cbb38dfbdb81fad65eaaf8df37a",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "ref": "R37",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_02.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_07_02.jpg",
+      "sha256": "9694995889f10302266d886d95c96ccaad26be2683b2150e59e43fb0600c86f3",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "ref": "R38",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_13.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_07_13.jpg",
+      "sha256": "1cc43090834c1bf3c64c26261f118fed7e4641917f7b6cb523f00800b699615f",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "ref": "R39",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_25.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_07_25.jpg",
+      "sha256": "6f8c1b2f0a9eb01d61713a9461b2d1677810c9bf5ba37b763c206ae8711161f0",
+      "width": 4000,
+      "height": 3000
+    },
+    {
+      "ref": "R40",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_32.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_07_32.jpg",
+      "sha256": "2611adbe7ebfc65d410ff89bc079ae7d300301698d1dde6b8e1a130a4a2ba9e6",
+      "width": 450,
+      "height": 450
+    },
+    {
+      "ref": "R41",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_45.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_07_45.jpg",
+      "sha256": "48bed31918416c600c9a65632372a94cae5fb26146c1b4200c3b032e1bf133dd",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "ref": "R42",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_52.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_07_52.jpg",
+      "sha256": "10e9d93800f09ad6d7d4cf23601bc1215fb5a79b3dd368cbff54eda1efbaa269",
+      "width": 736,
+      "height": 915
+    },
+    {
+      "ref": "R43",
+      "name": "ChatGPT Image 7 Oct 2026, 15_07_59.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_07_59.jpg",
+      "sha256": "a6435fbee930a168b6035d3dee33666b2e3a4c8d2d40faf681ab179bcd8e5ea2",
+      "width": 667,
+      "height": 1000
+    },
+    {
+      "ref": "R44",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_07.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_08_07.jpg",
+      "sha256": "81f43f35f1ad1a44c9fef38c651ecd3898fa1cc649b57996f230161e3ea4773a",
+      "width": 832,
+      "height": 1248
+    },
+    {
+      "ref": "R45",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_18.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_08_18.jpg",
+      "sha256": "a00617e3d5ac98f2e0fbcfa14b05a745bc50777f3f0e53b83e052f5dec2d9a9a",
+      "width": 736,
+      "height": 1040
+    },
+    {
+      "ref": "R46",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_50.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_08_50.jpg",
+      "sha256": "f24a657980c2f08d8643f0aafb4ca11ed73af07dfdfab773b668774f8cbe5cbe",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "ref": "R47",
+      "name": "ChatGPT Image 7 Oct 2026, 15_08_57.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_08_57.jpg",
+      "sha256": "1bd1d6e4518857297486bf33d978ba5842d6a28862fb529992dc91253cedeb91",
+      "width": 992,
+      "height": 1440
+    },
+    {
+      "ref": "R48",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_01.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_09_01.jpg",
+      "sha256": "af492f87bd34da28597cddebcca750ca4ce002b821a986fb78e2cf10a19ac0e6",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "ref": "R49",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_07.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_09_07.jpg",
+      "sha256": "47c98c39eff4fac00ac2b6d42451b1a7d8807531ba67901302b3917f141f4f15",
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "ref": "R50",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_11.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_09_11.jpg",
+      "sha256": "6d51921df193ef281e22bf62d66df67768a54b17da6cdc11406bcfa0a6325b10",
+      "width": 1728,
+      "height": 2304
+    },
+    {
+      "ref": "R51",
+      "name": "ChatGPT Image 7 Oct 2026, 15_09_23.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_09_23.jpg",
+      "sha256": "84167a8b1d0f35a23d3965057ffcd0288e1a78d2ca47bbb26555041a54e6b9de",
+      "width": 736,
+      "height": 920
+    },
+    {
+      "ref": "R52",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_44.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_17_44.jpg",
+      "sha256": "084869e8989baab6a712b0d63c1864cc65a6384fe94826382e174cf0d92417e4",
+      "width": 683,
+      "height": 1024
+    },
+    {
+      "ref": "R53",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_48.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_17_48.jpg",
+      "sha256": "c5a13f2ae77662ce1cd7cd9655d0cabfd2194ef5e5b65b086e91b44d4aa89e97",
+      "width": 736,
+      "height": 736
+    },
+    {
+      "ref": "R54",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_52.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_17_52.jpg",
+      "sha256": "178198662d6673b84a2815b0c8afbff041764b9dcb35973077329f10715444da",
+      "width": 736,
+      "height": 736
+    },
+    {
+      "ref": "R55",
+      "name": "ChatGPT Image 7 Oct 2026, 15_17_56.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_17_56.jpg",
+      "sha256": "2cb9e397677429b9353240ea7594543e8210800992e568c34494f107333e4872",
+      "width": 932,
+      "height": 1200
+    },
+    {
+      "ref": "R56",
+      "name": "ChatGPT Image 7 Oct 2026, 15_18_02.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_18_02.jpg",
+      "sha256": "211d9f9007171659a840b6a269cb52f9bc8bdf6da1d0e09eb7bf73218beb9fb5",
+      "width": 736,
+      "height": 1104
+    },
+    {
+      "ref": "R57",
+      "name": "ChatGPT Image 7 Oct 2026, 15_18_09.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_18_09.jpg",
+      "sha256": "178198662d6673b84a2815b0c8afbff041764b9dcb35973077329f10715444da",
+      "width": 736,
+      "height": 736
+    },
+    {
+      "ref": "R58",
+      "name": "ChatGPT Image 7 Oct 2026, 15_18_19.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_18_19.jpg",
+      "sha256": "e51bda4487d57e46db43414256915abcb846b34eee5c59d0abfe9f5f107493de",
+      "width": 731,
+      "height": 1024
+    },
+    {
+      "ref": "R59",
+      "name": "ChatGPT Image 7 Oct 2026, 15_18_24.jpg",
+      "path": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-1923d633-e03e-44cc-84b2-bbfb5c152710/datasets/interior-references-2026-10-12/originals/ChatGPT Image 7 Oct 2026, 15_18_24.jpg",
+      "sha256": "ff99328346f803d342182aa2da08798c642dcf0e89426f98a6e22e06a3cf086b",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

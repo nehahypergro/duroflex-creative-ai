@@ -1,0 +1,553 @@
+SLEEPYHEAD — SPATIAL WORLD RESEARCH AND APPLICATION
+12 October 2026
+
+USER DIRECTION
+The user selected this Pinterest board for Sleepyhead and clarified: it is more than decor; it is the spaces Sleepyhead should be inspired by. Treat the whole room as the unit of inspiration: architecture, proportions, layout, colour relationships, material appearance, light, furniture grouping, lived-in activity and atmosphere. Objects are only one layer. Board: https://in.pinterest.com/nehas4991/sofa/
+
+AUTHORITY AND COVERAGE
+100 board entries accounted for; 102 rendered still images/thumbnails saved, including four carousel images. One video entry has no exposed still image. Videos were not downloaded, played or analysed. All 102 saved images inspected in six labelled contact sheets plus one full-size image; overview-level visual interpretation, not fine-detail/authenticity/material/licensing audit. Pinterest captions and alt text retained as unverified source descriptions. Screenshots S01–S15 inspected as supplied.
+The board is client-selected inspiration, not mandatory brandbook rules or exact Sleepyhead product evidence. Some captions disclose AI imagery and P072 visibly includes an AI label; other creation histories are unknown. Descriptive family names below are assistant interpretations, not verified geographic origin or architecture attribution. Third-party brands/lettering appear in P096–P101; preserve source attribution but never transfer their logos, products or claims to Sleepyhead. Full videos remain unreviewed. Uploaded image files are board-resolution stills, not guaranteed original masters.
+
+SPATIAL SYNTHESIS
+The dominant language is optimistic, expressive and domestic. Soft rounded upholstery sits within recognisable rooms with windows, storage and activity zones. White/cream shells often allow pink, orange, yellow, cobalt, green and lilac to define furniture, wall planes or rugs; some rooms use a strong single-colour envelope. Pattern appears at a readable scale in checkerboards, stripes, waves and flowers. Timber, woven/ribbed/soft-textured surfaces temper glossy coloured lamps, transparent tables and ceramics. Daylight, plants, books and music/reading corners make spaces inhabited. A quieter subset proves that playful does not require saturation everywhere. Avoid reducing this collection to orange sofas, novelty props or a single maximalist formula.
+
+SPATIAL FAMILIES — SELECTION AIDS
+A. Bright expressive apartment: P001,P009,P017,P019,P030,P050,P060,P061,P063,P081,P094. Pale architecture, colour in a few large zones, graphic rug/art, sculptural low table, sunlit domestic layout. Useful default when brief needs youthful accessibility.
+B. Pastel sculptural living: P004,P007,P012,P024,P034,P039,P051,P059,P062,P102. Curves, rounded furniture, ribbed softness, pastel walls, controlled stronger contrasts. Retain practical scale and avoid toy/showroom excess.
+C. Retro graphic/creative home: P006,P025,P031,P035,P036,P048,P049,P054,P055,P057,P070,P071,P075,P078,P082,P090. Timber plus saturated colours, patterned rugs, records/art/books; an expressive resident rather than anonymous showroom. Industrial shell is optional.
+D. Real compact connected home: P010,P022,P038,P065,P068,P069,P084,P086,P092,P095. Respect passageways, dining/living adjacency, storage and room depth; practical everyday architecture can carry playful style. P092 also has a ceiling fan. Adapt to an Indian brief without claiming reference locations are Indian.
+E. Reading/social corners: P040–P044,P053,P074,P079,P082,P083. Window-side soft seat, useful shelf and light, intimate scale. P040–P043 are carousel variants, not four independent style endorsements.
+F. Playful bedrooms: P005,P026,P073,P091. Colour repeats between wall/art/rug/textiles with real daylight and functional bedside space. Actual selected mattress/bed remains recognisable; never infer construction or change its fabric from these pictures.
+G. Quieter colour-aware rooms: P002,P013,P016,P027,P044,P047,P076,P077,P078,P085,P087,P089,P090. Restrained shell, tactile grounding and selected bold accents. Useful alternative to busy rooms; preserve personality in shape/art/colour.
+H. Adjacent architectural/detail vocabulary: P008,P011,P015,P018,P020,P029,P037,P045,P058,P067,P072,P088. Bathroom/kitchen/niche/detail references inform surfaces, geometry, colour transitions or light; they do not independently establish a complete living-room composition.
+I. Lifestyle and competitor video stills: P096–P101. Limited evidence for relaxation, human scale, contact and atmosphere. Motion and claims unreviewed; these are weak spatial evidence compared with full-room images.
+
+HOW TO BUILD A SLEEPYHEAD SPACE — ASSISTANT APPLICATION
+1. Lock the exact Sleepyhead SKU and variant using its official product page. Product colour, fabric/pattern, proportions, construction, branding and documented features belong to that evidence, never to Pinterest furniture.
+2. Choose one spatial family and a small coherent reference set. Write the room's purpose, scale, architecture/openings, circulation, wall/floor/ceiling relationship and light direction before choosing props.
+3. Define a neutral or tonal envelope, one dominant chromatic anchor and a few recurring accents as a proposed compositional method, not a supplied numeric brand rule. Orange identifies the brand but need not recolour every wall/sofa. Complement the exact SKU.
+4. Balance rounded upholstered forms with useful tables/storage and selected graphic pattern. Pick which layer carries pattern; avoid a dense pattern on every surface. Express personality through real resident activities: reading, music, socialising or lounging as relevant to the brief.
+5. Choose plausible materials by appearance: painted walls, wood grain, fabric texture, reflective glass/metal or matte ceramics. Source photographs cannot prove exact composition, dimensions, costs or manufacturers.
+6. Use physically coherent daylight/practical lamps, credible furniture scale, contact shadows, occlusion and body support. Some inspiration is synthetic; architectural fantasy is not physical evidence.
+7. Reserve copy/logo space on a real wall/backdrop in the composition; no white patches, haze, artificial fades or blur masks. Borrow design principles, not literal slogans, branded artwork or competitor features.
+8. Explain each chosen guideline-to-design connection in the new brief; distinguish intended application from actual rendered compliance. This archive is indexed guidance and inspiration, not a guarantee of rendering fidelity.
+
+CONNECTION TO SUPPLIED GUIDELINES
+S01–S03 justify youthful Jester energy and connection; room interpretation is assistant synthesis. S04 directly supports colour, pattern, asymmetry, mixed styles and coherent themes. S14–S15 define supplied colour choices with S14 conflict retained. S06–S12 govern identity legibility; references cannot recolour or distort the logo. S13 names brand/web typefaces but no licensed binaries are supplied. S05 informs approachable copy, not generic novelty signage copied from a pin.
+
+MODEL COVERAGE
+All saved images were reviewed here at contact-sheet level with per-image notes below. Runtime research receives indexed text plus bounded representative images (up to64 contextual assets and8 inspected images per call); it must not claim that one API call viewed all102 or that every source was deeply audited. Full hashes, captions, pin URLs and asset IDs are retained in the dataset manifest.
+
+MISSING STILL IMAGE
+https://in.pinterest.com/pin/907545762440091894/ | No still image exposed in board DOM; video link retained, motion unreviewed.
+
+PER-IMAGE OBSERVATIONS
+P001 | https://in.pinterest.com/pin/907545762442626457/
+Asset: asset-1bdc023f-440d-4f44-8f17-0662226f73f8
+SHA256: 118f4c5284d4c0d7eed857bd58e153ca5e65ea190c501bb6f23dd956cf8f92d6
+Observed/suggested borrowing: Peach sectional, white walls, orange tiered pendant and rust rug; flower cushions and framed art make a bright domestic corner. Borrow warm colour repetition and daylight.
+
+P002 | https://in.pinterest.com/pin/907545762442626337/
+Asset: asset-2a8db41c-0aa8-43d2-996b-ef866b11ec28
+SHA256: 0ebf98b356df9ec0f984182b5a41046da4177f15eb8efd08a47e0e7151af9c20
+Observed/suggested borrowing: White modular sofa, pale moulded wall, pink art and concentric oval rug; black branching light adds linework. Borrow restrained architectural base with selective personality.
+
+P003 | https://in.pinterest.com/pin/907545762442626333/
+Asset: asset-e98141b1-1db5-4957-bab9-7581d184821b
+SHA256: 12fcde04b276d16d63794fae338d8e613512e1a45c2397ecc374368b1fd79dd0
+Observed/suggested borrowing: Large red-on-pink abstract print leaned against a sunlit wall beside timber and pale upholstery. Borrow art scale and saturated counterpoint; do not copy the specific print.
+
+P004 | https://in.pinterest.com/pin/907545762442626327/
+Asset: asset-af2692b6-6c65-4cd2-9c68-e2d0721a3bf1
+SHA256: 721bb8846fa19aed30c408b3855983c5afea139e5943cd06e266442a7bde52f5
+Observed/suggested borrowing: Timber slat wall, faceted mirror, pink curved sofa, oval coffee table and geometric colour wall. Borrow contrast between vertical texture and soft volumes.
+
+P005 | https://in.pinterest.com/pin/907545762442626319/
+Asset: asset-6ce9ef50-c7b1-4cef-97fe-a049b6aa5cce
+SHA256: 8e5960b0021896cf7831758e5841159cf9cf9c443a5a5d16bfb0fb23852f9a43
+Observed/suggested borrowing: Sage rounded bed, pink bedding, coral circular stools and yellow-green bedside table. Bedroom colour zoning and upholstered curves; bed is reference furniture only.
+
+P006 | https://in.pinterest.com/pin/907545762442626317/
+Asset: asset-84f5acd1-15b8-486f-8e1a-c2cdbdeb00a2
+SHA256: f8d43242d5801e244953c8f4b9e8825abef7a77fc888dbd2683417ff637e92d0
+Observed/suggested borrowing: Timber cabinet, cream sofa, pink table, orange lamp and graphic cushions. Layered retro domestic character with plant and book details.
+
+P007 | https://in.pinterest.com/pin/907545762442626316/
+Asset: asset-2926cfe7-6f5a-4604-b3f3-48f92b14f3fe
+SHA256: 4877b86a555c791c723e8390093a608a0fae1bf41069f431cf7b26927b02221a
+Observed/suggested borrowing: Peach-pink curved banquette/sofa, round-ended table, coral cylindrical legs and sheer window light. Borrow intimate conversational layout and rounded geometry.
+
+P008 | https://in.pinterest.com/pin/907545762442626315/
+Asset: asset-339c60cd-4bea-47f1-ab7f-e82af5dcdff1
+SHA256: 29d2752d3b9d82a77fe6496d397cea82e503c66e7c74cd91854d3818d1324105
+Observed/suggested borrowing: Pink speckled vase, lemon branches, striped vessel and cobalt accents; close-up palette/material relationship only. Caption explicitly says AI-assisted; objects not proven real or for sale.
+
+P009 | https://in.pinterest.com/pin/907545762442626312/
+Asset: asset-3a6260fe-46b4-4d6d-98a1-a86845cc87d9
+SHA256: d777452f79bd2fd3cef40ec7900a40b66772094b5616188650f5ba8f164ceb76
+Observed/suggested borrowing: Bright cream living room with pink sectional, yellow accents, framed art and rounded pink tables. Borrow daylight and repeated warm accents within open circulation.
+
+P010 | https://in.pinterest.com/pin/907545762442626311/
+Asset: asset-79addebe-2e40-496a-9896-235714ae4ddf
+SHA256: 79c341d31cef9078f988027da931780e7782a24094f082e2300677df3f768c86
+Observed/suggested borrowing: Long bright apartment with repeated narrow windows, red sculptural chairs, white sofa and reflective table. Borrow room depth and architectural rhythm; protect sensible walking space.
+
+P011 | https://in.pinterest.com/pin/907545762442626308/
+Asset: asset-f6954ddd-9f4c-4ee4-acbf-2f5855eed8f3
+SHA256: efa4c34ca0e93802460f136cbd2d5b3da1f0b8765746592b8dd937bea9f7dc17
+Observed/suggested borrowing: Bathroom-like alcove: green ceiling, peach wall, arch, patterned floor and timber vanity. Surface/colour-transition reference, not a literal sofa setting.
+
+P012 | https://in.pinterest.com/pin/907545762442626305/
+Asset: asset-2c1b7887-222a-41c0-8d38-1266ebfb806c
+SHA256: 1c6387481c8acf49d0060e80ddb844938379adbecaa8d77d511fc0f17e5b09c5
+Observed/suggested borrowing: Soft peach room, lilac sofa, green chair, sculptural shelf, round rug and warm lamps. Borrow a contained pastel palette and low soft volumes; avoid overly toy-like staging.
+
+P013 | https://in.pinterest.com/pin/907545762442626304/
+Asset: asset-3850d87a-f037-4813-9799-9f1852433430
+SHA256: eb9eb0414ea579360f6066fa1eea6bf50cb07fd58027fe47bd94f0c3617f6bfc
+Observed/suggested borrowing: Cream sofa, arched floor mirror, timber floor, sideboard and plants under warm side light. Borrow believable domestic scale and gently eclectic personal details.
+
+P014 | https://in.pinterest.com/pin/907545762442626300/
+Asset: asset-b7de99aa-9a19-4e43-a120-dad66f100c5c
+SHA256: ab592e8c42dd7773b5d4ba66f3c4ae9699e8d8ff7cacb58417dbd73049375fbb
+Observed/suggested borrowing: Peach lounge corner with painted rainbow arch, green chair, floor cushions, wavy rug and plants. Borrow wall colour zoning and informal relaxation, not literal neon wording.
+
+P015 | https://in.pinterest.com/pin/907545762442626298/
+Asset: asset-2b9e4b2f-c880-4bfe-a90f-344312c1b8ae
+SHA256: da757073869d7e92de881bd2707506c63b8fbcc26d3efabf4d978a9382bd8422
+Observed/suggested borrowing: Kitchen with white/light timber base, cobalt stools, pink pendants and red checks. Borrow colour at functional architectural touchpoints rather than copying the kitchen into a sofa brief.
+
+P016 | https://in.pinterest.com/pin/907545762442626295/
+Asset: asset-502f560e-607d-4058-afec-efb540686af1
+SHA256: 2d1a34b0e4ad30ff854228d12c2dc4d4b3ab1a490c2247b8ef9ab2e8a3d5e9f5
+Observed/suggested borrowing: Minimal high-ceiling room with white glazing, large olive artwork, green chair, black low table and muted rug. A quieter spatial alternative; not every room needs maximal colour.
+
+P017 | https://in.pinterest.com/pin/907545762442626291/
+Asset: asset-49f1a4fa-1d5f-4674-b0f9-5d25de25ccbf
+SHA256: c8a3db5aea112b0c21e46097bae93b8d28097e603d109d983fad0dc8cfa39234
+Observed/suggested borrowing: City apartment with curved cream sofa, warm timber floor, abstract rug, gallery wall and plant. Borrow compact urban scale, window connection and art-led identity.
+
+P018 | https://in.pinterest.com/pin/907545762442626287/
+Asset: asset-e1add2f3-416d-4624-b6a9-457be7c1068d
+SHA256: fa2dda9defdba5278525f7ce1ac7998035493d0521c0b2d03a0ce108f3943f77
+Observed/suggested borrowing: Shelf detail: orange and pink vases, flowers, books and slim candle against pale wall. Object-scale colour echo; does not establish full room architecture.
+
+P019 | https://in.pinterest.com/pin/907545762442626284/
+Asset: asset-a65651f4-7e04-4b0c-913c-d001a444427c
+SHA256: 25f939b8b0fd54e6afecc88e1062180003088fd7da7d41e55f6f3c49f9621244
+Observed/suggested borrowing: Airy lounge with white sofa, yellow/blue/pink cushions, framed prints and pink sculptural table. Borrow colour repetition across room layers with a neutral anchor.
+
+P020 | https://in.pinterest.com/pin/907545762442626283/
+Asset: asset-32ccc8f0-c467-42c9-9b9c-bf990bc56abf
+SHA256: 8ad5aea8f66d5031487b1af028baa5631783b38ddc509b9a7315fb2c52306bb4
+Observed/suggested borrowing: Sunlit timber credenza with pink/orange abstract artwork, flowers and books. Borrow warm material against vivid graphic art, without copying lettering.
+
+P021 | https://in.pinterest.com/pin/907545762442626277/
+Asset: asset-948909d6-e4f7-4a30-ba44-e354d7058156
+SHA256: c6678127ae139000e3d7f0716708e246627b3ff6cafc7ca61eec0dcee83fa2a8
+Observed/suggested borrowing: Terracotta room with exposed timber ceiling, orange pendant, sofa and flower cushions. Deeper warm envelope alternative with coordinated playful accents.
+
+P022 | https://in.pinterest.com/pin/907545762442626276/
+Asset: asset-4ad0772f-7386-4f4b-9bbc-385d115a7455
+SHA256: b3c5b820af7f2ee3ff5a691c254d71f9531bd1d3f6e482f1166cd03de8892f15
+Observed/suggested borrowing: Open-plan apartment with curved ceiling/wall transition, pale wood floor, blue cabinetry and yellow door. Borrow architectural colour zoning and connected functional zones.
+
+P023 | https://in.pinterest.com/pin/907545762442626275/
+Asset: asset-c8a94f6f-1feb-4e3d-85e4-8e41b76d38a4
+SHA256: 19845bc873fbf13a88a4e58b4b2ce33a603d877d01d87f5d249d6bef14cabc88
+Observed/suggested borrowing: Small sunlit pastel lounge with blush sofa, round timber table, checker rug and flowers. Soft playful mood with real domestic circulation.
+
+P024 | https://in.pinterest.com/pin/907545762442626270/
+Asset: asset-76b67ee3-0c23-44c8-8918-f03bc875e33b
+SHA256: 289eb8bc425e8da345f2945435e4bd5fa5601f8c0a4a121f522804049b077914
+Observed/suggested borrowing: Symmetrical coral curved seating, circular cream/red table, abstract art and wall lights. Borrow conversation geometry; reduce overly staged symmetry when needed.
+
+P025 | https://in.pinterest.com/pin/907545762442626269/
+Asset: asset-f2572482-1593-437b-8a70-7dd0b7eebd34
+SHA256: 2c9ac2ab86fe05980f9170a96533653a771a15d55ea6670b5b5fba8a9a509c50
+Observed/suggested borrowing: Dining room with glossy red pendants, bright blue credenza, pink table/chairs and herringbone floor. Borrow confident complementary blocks and warm floor grounding.
+
+P026 | https://in.pinterest.com/pin/907545762442626266/
+Asset: asset-36e13706-9305-441b-a3f6-96f35b9089ba
+SHA256: 4ca9b4393b3e3e95465020bfd5cbff8c7ac11b1fb1f1dbb72457307eb65bd6b2
+Observed/suggested borrowing: Bright bedroom with paper pendant, tall windows and red/pink wavy bedding. Borrow daylight, large simple light volume and textile rhythm; never change exact SKU fabric.
+
+P027 | https://in.pinterest.com/pin/907545762442626259/
+Asset: asset-b98d63d6-91ac-4fb4-89f4-75e96b79b04e
+SHA256: 7e039a55176c14d24244073fe8476091c7948b35431f1ba173d710ae231056f7
+Observed/suggested borrowing: Tall glazed living space with rust rounded chair, tan sofa, spotted rug and blue art. Borrow sculptural seating versus strict architecture and controlled pattern.
+
+P028 | https://in.pinterest.com/pin/907545762442626257/
+Asset: asset-930cdec4-6780-4e97-a31b-b35423aa8560
+SHA256: 72d33914fa485e46b70367a421cf66d209622292782f5d78e3bad147cd13a6cd
+Observed/suggested borrowing: Loft-like room with tall windows, white modular sofa, green chair, cloud pendant, gallery wall and plants. Borrow vertical volume and lived-in layering without assuming all homes are lofts.
+
+P029 | https://in.pinterest.com/pin/907545762442626256/
+Asset: asset-dda2c51d-baba-420e-b4d7-4d3b14ca9781
+SHA256: 632a7cbcbae48156db3f30aa3239c3e5d95e2f83ef4b161fe56eaac7241a5530
+Observed/suggested borrowing: Yellow wavy side table and colourful typography/flowers beside window. A corner vignette demonstrating playful silhouette, not whole-room evidence.
+
+P030 | https://in.pinterest.com/pin/907545762442626245/
+Asset: asset-32fd1bd3-5424-4e9a-b7bc-1a67409fff62
+SHA256: 85021a49cb293dc2c30b077d0d5a9072fa9aef6b8a6a9bc43b1a455f5ab18d39
+Observed/suggested borrowing: White moulded room with grey sofa, bold red textile, yellow cushion, paper lamp and plants. Borrow red/yellow accents in an otherwise quiet room.
+
+P031 | https://in.pinterest.com/pin/907545762442626242/
+Asset: asset-e03eaf38-b6e2-488d-a272-0381a21d5bf3
+SHA256: 76b2b8833835e5509a3eef3f42c643e3da0665fa46fa51a6b972973b33454b4b
+Observed/suggested borrowing: Teal/mint colour-block wall behind pink sofa with yellow pendant and rust rug. Borrow a few strong colour planes and visible tactile grounding.
+
+P032 | https://in.pinterest.com/pin/907545762442626241/
+Asset: asset-d94e2c5b-d293-42b3-8b00-c198913d5554
+SHA256: 8f42c07eeac6b087e0df0efd226324a0399075b304e14fb456d68f1eed571edd
+Observed/suggested borrowing: Tan sofa beneath large cobalt-framed artwork, lilac side table and sculptural vessels. Borrow one oversized graphic anchor and small colour echoes.
+
+P033 | https://in.pinterest.com/pin/907545762442626239/
+Asset: asset-b1c4c17b-0126-4a87-af75-c909af16e2bf
+SHA256: c098c48ab8e3207522b3cf5ca57ef6f214b4e878b836da42731a69c04594126c
+Observed/suggested borrowing: Cream room with flower rug, art cluster, playful pink shelf and plants. Whimsical extreme; borrow selected shapes, edit childlike prop density for a grown-up home.
+
+P034 | https://in.pinterest.com/pin/907545762442626238/
+Asset: asset-c05d35e9-d154-41f0-98ec-ce27abc32b08
+SHA256: 6e1be714b8a3e5473afb78a160da430a5f1ee1eda39dc4d361d46579a2adc3e7
+Observed/suggested borrowing: Pink room and ribbed low sofa with orange globe pendant and warm window shadows. Borrow tonal immersion plus one contrasting object; reference sofa is not a SKU.
+
+P035 | https://in.pinterest.com/pin/907545762442626236/
+Asset: asset-022fb4a0-d185-4ff9-a200-b5ab417d6d04
+SHA256: 6df542859b7c8aa297481aeb787586f68c72b76c8fe0f6ce2a2b43703c89782c
+Observed/suggested borrowing: Muted sofa with navy rug, blue cushions, timber tables and one yellow textile. Borrow restrained graphic contrast and an adult, edited mood.
+
+P036 | https://in.pinterest.com/pin/907545762442626234/
+Asset: asset-edb8f810-e68f-4bd6-81cb-89b6c491d576
+SHA256: 080bb393e6a191c0f01f611eaae730c892d5d5c9ed2124122dd1cbc7f95ee0de
+Observed/suggested borrowing: Orange chair and yellow striped wall beside cobalt cabinet. Borrow a compact reading corner and strong vertical graphic rhythm.
+
+P037 | https://in.pinterest.com/pin/907545762442626231/
+Asset: asset-bf1143bc-cf1c-4a96-b55c-806bda18a838
+SHA256: dd2ea825bc986bba96fc752da4bc372a193516b44e10c45c9f46e3d0cbcc9d97
+Observed/suggested borrowing: Close-up of sofa cushions, coloured books, flowers and candles on pink table and striped rug. Texture/pattern layering reference; no full layout claim.
+
+P038 | https://in.pinterest.com/pin/907545762442626228/
+Asset: asset-8455f42c-d2d0-4e04-9a02-627e62dd0353
+SHA256: ab649e920fa9d46f6529c5f40d98fa1a72b1657cad0b93ece19ae4dac5582ab0
+Observed/suggested borrowing: Bright apartment, red sculptural armchairs, white sofa, reflective table and yellow stool. Related to P010; avoid treating near-duplicate styling as independent prevalence evidence.
+
+P039 | https://in.pinterest.com/pin/907545762442626223/
+Asset: asset-5ca75e17-52b6-4a96-b9e2-42149a1fce5e
+SHA256: 051c68a30a291863a18b4409f835c9bada6f42bf6fc187b85d63ed16cbad908f
+Observed/suggested borrowing: Blush room with yellow rounded sofa, pink low table, checker rug and purple wavy mirror. Borrow shape repetition and colour pairing; use practical scale.
+
+P040 | https://in.pinterest.com/pin/907545762442626219/
+Asset: asset-434abe60-326e-47ad-847a-f62484214755
+SHA256: 3f948996e9b96b1db230462a9f5bc541fe94d5d4d2268a8cf13eb599ea3cbb0c
+Observed/suggested borrowing: Window-side reading nook with striped round chair, wavy coral mirror, shelves and plants. Borrow a cosy functional zone, not that chair as Sleepyhead product.
+
+P041 | https://in.pinterest.com/pin/907545762442626219/
+Asset: asset-2713470f-5702-43f2-b1cf-b2f2dcac184a
+SHA256: d4befa72b98eae6cb836b7c52fe4e0e8b48f4292e1ace92feefa61d8b38b5827
+Observed/suggested borrowing: Reading nook with floral upholstered round chair, cobalt wavy mirror and scalloped checker rug. One carousel variant; same corner concept as P040–P043.
+
+P042 | https://in.pinterest.com/pin/907545762442626219/
+Asset: asset-3f8312b5-6e36-48ec-9c85-b87909b801b7
+SHA256: b148e8c6b420f65735222f11cdc13ba9013ec3c8d3f854bf8d63d4d0f1fa5733
+Observed/suggested borrowing: Reading nook with lilac/orange wavy chair, yellow mirror and green rug. Carousel variant illustrating controlled palette changes in one architectural shell.
+
+P043 | https://in.pinterest.com/pin/907545762442626219/
+Asset: asset-ac551c04-2cc2-490c-9193-767afd207cdf
+SHA256: b2b93b026a890706f8ba90881f35e418af3b9bb1728672eb38d5b6892da20064
+Observed/suggested borrowing: Reading nook with orange checked lounge chair, cobalt mirrors, coloured shelves and plants. Carousel variant; borrow corner zoning and vertical storage.
+
+P044 | https://in.pinterest.com/pin/907545762442626211/
+Asset: asset-99012c45-69b0-4e7f-b0cb-03c1e58560df
+SHA256: 3a6fd59590914571b593ab3cf8cbe276ddb5e38d99a1efd33ac2586c311b59f8
+Observed/suggested borrowing: Quiet pale living room, tall arched mirror, soft green patterned chair/ottoman and pink sofa. Borrow gentle fabric contrast and calm volume as a secondary mood.
+
+P045 | https://in.pinterest.com/pin/907545762442626201/
+Asset: asset-c4e724cf-452d-4681-8d03-37b9a92afe9d
+SHA256: 397af05e439841bab83e89157c73b82f79c18aeea248c7a7ebeb25181ef25c42
+Observed/suggested borrowing: Cobalt ribbed vase with orange flowers on white shelf plus dice object. Object-scale complementary colour/shape cue, not architecture or material proof.
+
+P046 | https://in.pinterest.com/pin/907545762442626197/
+Asset: asset-e1dbb3a4-ce85-4501-b96c-e4e292854248
+SHA256: caf6193dbc83c6eb3466b9668167fbe8fa4273a540673129e0767ac1191fd6ef
+Observed/suggested borrowing: Compact orange sofa on pale wall, aligned small prints, flower rug and sculptural cherry-like prop. Borrow crisp framing and graphic repetition; edit novelty props.
+
+P047 | https://in.pinterest.com/pin/907545762442626194/
+Asset: asset-b4f2e5ce-499f-4ba6-acb9-1f68f31c3d19
+SHA256: 31fa36220e6771f7d78b92d14d5b6de592ad909d8939f139cea4de630ba2af99
+Observed/suggested borrowing: Cream textured rounded armchair with glass lamps and pastel abstract art. Borrow tactile contrast and subtle colours as a quieter branch.
+
+P048 | https://in.pinterest.com/pin/907545762442626192/
+Asset: asset-72440e6c-f075-426b-a194-ff83f3317cb7
+SHA256: e1d45a6c3b2a083a26c0afe9a95b90d48fe5e0e1d7227a1c4a448523f9e1589e
+Observed/suggested borrowing: Everyday bright flat with sofa textile, black-white striped rug, shelving and arc lamp. Borrow lived-in arrangement and pattern scale rather than showroom perfection.
+
+P049 | https://in.pinterest.com/pin/907545762442626190/
+Asset: asset-e785f3f1-b784-4d69-b7d9-8be42af31f7c
+SHA256: 9db21970ee4b68a937739148d4b15484a9ac3fef58547c277fa2c175f514de6f
+Observed/suggested borrowing: Blue sectional, lilac checker rug, red-white pendant and gallery wall. Borrow retro lighting and layering within a functional room.
+
+P050 | https://in.pinterest.com/pin/907545762442626189/
+Asset: asset-ec2556a3-445f-44dd-a791-208fe672f898
+SHA256: f39e903bbff54ee63532e9e60fb08a81f5ae6ccdb67c0f263dbf44d8bf42c55b
+Observed/suggested borrowing: White curving sofa, green-white checker rug, purple chair, yellow ottoman and paper globe. Borrow balanced blocks and playful circulation around a low table.
+
+P051 | https://in.pinterest.com/pin/907545762442626187/
+Asset: asset-365a7c8d-bb27-42be-b321-3509b2555c5d
+SHA256: 25bf2d46276494c94543d518734bc92144447fb2be226ed06ba3c88b37e6af49
+Observed/suggested borrowing: TV room with sage sofa, blush chair, wave-edged wall feature and illuminated niche. Borrow integrated storage/architecture; artificial backdrop fades remain prohibited.
+
+P052 | https://in.pinterest.com/pin/907545762442626179/
+Asset: asset-979a83fd-c85c-4be7-bca5-828b1f65afe5
+SHA256: 2b14d34aaa4cd3545fef9adc20d4520964aaa876925db7e0afc37c6f1755f766
+Observed/suggested borrowing: Yellow sofa, red ceiling stripe, small art grid and red floor lamp. Borrow colour as an architectural boundary and restrained graphic order.
+
+P053 | https://in.pinterest.com/pin/907545762442626171/
+Asset: asset-2e1d3ad4-f614-4e18-acf3-7beab46a9ad5
+SHA256: 100d6193d7fdb9b9f3acf084afafbd370266666923dbad9f9b356adb042e4307
+Observed/suggested borrowing: Sunlit plant-rich corner with rounded cream chair, floral prints, wavy mirror and transparent orange table. Borrow natural light and colour-filtered accents selectively.
+
+P054 | https://in.pinterest.com/pin/907545762442626169/
+Asset: asset-c4fa9e47-8051-4839-9252-09dc8518a466
+SHA256: 68164ec55b9a220c6891c86869786402cf2623ebce1d6b5ed1577bb8e37026f9
+Observed/suggested borrowing: Cobalt dome lamp on red record console beside tall window and large type poster. Borrow media/reading identity and primary-colour contrast, not poster text.
+
+P055 | https://in.pinterest.com/pin/907545762442626167/
+Asset: asset-13c14248-fffa-4dd5-89cc-77d94042938d
+SHA256: aa5f5a11eb4d8d494cf3a5121a9c16bb5c915f84f018a6edd187ba5e00dc4777
+Observed/suggested borrowing: Mustard sofa, timber cabinet, orange chair, wavy red rug and gallery wall. Borrow warm retro room coherence and tactile flooring.
+
+P056 | https://in.pinterest.com/pin/907545762442626164/
+Asset: asset-0c59deaa-5dee-49f2-a386-0f3581a6a02c
+SHA256: 6e10b09519b12aee8312a8e7ea92d994d806930a309e881e93e5869b4455986d
+Observed/suggested borrowing: Yellow arched shelving wall within coral envelope with colourful seats and flower props. Borrow usable architectural niches, avoid oversized themed-set excess.
+
+P057 | https://in.pinterest.com/pin/907545762442626159/
+Asset: asset-f5262d07-b6c7-4936-af00-790fec499f4a
+SHA256: 2c945ffe2bbb8d6753c8504083706fa5b9d0da2406957581c7d5a075edac4442
+Observed/suggested borrowing: Industrial shell with track lights, orange sofa, black-white checker rug and six bold posters. Borrow graphic loft branch selectively; warehouse structure is optional.
+
+P058 | https://in.pinterest.com/pin/907545762442626154/
+Asset: asset-ad28c8a1-f00f-49d4-a97b-6fda20ad4f0a
+SHA256: 2355b48aa007f4952b8f71a0037ab92faacca1c7551ed630d0a41094eb0d2918
+Observed/suggested borrowing: Pink walls, cobalt cabinet, orange lamp and checker rug. Borrow colour relationship across a storage wall and floor; not enough evidence for a full seating plan.
+
+P059 | https://in.pinterest.com/pin/907545762442626148/
+Asset: asset-4f55130a-ae49-44c5-9390-7e8a2625ea9a
+SHA256: a09987d623dca74e14dbd39f3ed08825f59d7c9cc70100d825964ca084a9bb84
+Observed/suggested borrowing: Cream sofa, orange tiered pendant, turquoise wavy mirror and purple shelf. Borrow playful vertical focal points balanced by quiet upholstery.
+
+P060 | https://in.pinterest.com/pin/907545762442626145/
+Asset: asset-61d3f1b4-9cc2-467b-89f1-9a924414fa55
+SHA256: 7b5ecd1103bfb78c6345535d3dc70975a093edc233bf3ed7741167d539301547
+Observed/suggested borrowing: White sofa, pink cabinet, graphic cushions, wavy mirror and sculptural objects. Borrow collected domestic character; edit detail to preserve product visibility.
+
+P061 | https://in.pinterest.com/pin/907545762442626144/
+Asset: asset-9536b084-1035-40db-ba5c-d7e03d8e8702
+SHA256: b1e513b372efb5bc165ce6f74d1e5d91ac8d0bd81aec5750bb48a78ca5e32765
+Observed/suggested borrowing: Pink segmented sofa, white flower table, patterned rug, bookshelves and disco ball. Borrow playful lounging and a defined functional zone, not a universal disco prop rule.
+
+P062 | https://in.pinterest.com/pin/907545762442626139/
+Asset: asset-f23dbd66-83ff-4070-bdb7-e31eab75a96e
+SHA256: 82996aedcbc0565e0a13a5750d0b94f8b275f3773c83a9f081d6a2d4b9ecd0f6
+Observed/suggested borrowing: Pink ribbed sofa with green checker rug, pale walls and coloured side chairs. Borrow contrasting pattern under a soft hero form.
+
+P063 | https://in.pinterest.com/pin/907545762442626138/
+Asset: asset-b9aee322-5bf1-4f9a-88f7-73db6d9023d2
+SHA256: e7fa26691b11ef875a981cead28552a32a35aa5ac3ca1c75d8d237444eb9fcee
+Observed/suggested borrowing: Cream sofa, peach wavy rug, mirrors and orange floor lamp. Borrow restrained surrounding wall palette plus a graphic floor anchor.
+
+P064 | https://in.pinterest.com/pin/907545762442626134/
+Asset: asset-d1ba91f7-1050-4894-aada-5fa3f6e71259
+SHA256: 02379a495d37acd14a7f8215228b48be25763dcdb59012ede68f4429ae40882a
+Observed/suggested borrowing: Sunlit corner with red chair, green checker cabinet, type art and rounded table. Borrow oblique warm light and coordinated small-scale colour.
+
+P065 | https://in.pinterest.com/pin/907545762442626133/
+Asset: asset-2748c4fd-a40c-43e4-91ed-6a5a78cb1e7a
+SHA256: 303bac9aa0a4b6dde762cdc0794f71c8502ee497b91ed31a3faecd75b0d18287
+Observed/suggested borrowing: Compact open-plan space: white sofa, blue/yellow stools, arch to kitchen, small art and plants. Borrow plausible home scale, passage clarity and primary accents.
+
+P066 | https://in.pinterest.com/pin/907545762442626130/
+Asset: asset-8e27c4b9-92d2-4856-b778-aa4869a0311a
+SHA256: ea75559d08e106cb6bb792131fba2de50f403b9514544ebb5723231b21a2cf46
+Observed/suggested borrowing: Pale sofa with pink wavy throw and yellow/purple pedestal table. Styling/detail reference with familiar furniture and a singular playful object.
+
+P067 | https://in.pinterest.com/pin/907545762442626126/
+Asset: asset-978209d8-068c-4f5e-b5b8-aff108f19b38
+SHA256: ecb05495a4c19e00f540efac5f69addcba96ceea512a4b98a0ec466f07c9135c
+Observed/suggested borrowing: Blue/white wall, cream cabinet, mirrored sphere, blue U-shaped object and striped rug. Borrow graphic colour blocking and mixed reflective/matte accents.
+
+P068 | https://in.pinterest.com/pin/907545762442626124/
+Asset: asset-0e7aacd9-8a0c-486d-a53e-68a3fd157811
+SHA256: 9e5f1fea82c0fb4068a7d4cf65c8beabe49dfc70d44797c570232d7619271981
+Observed/suggested borrowing: Small kitchen-living apartment with green cabinets, green sofa, pink flower table and dining area. Borrow functional adjacency and a repeat colour system across zones.
+
+P069 | https://in.pinterest.com/pin/907545762442626123/
+Asset: asset-63045b9c-f908-42fa-8b5f-e7c3e01f9058
+SHA256: b76362d5409409f6164aac494e013730d885cd11fbeb2c9c851377fd5c997fed
+Observed/suggested borrowing: Living room with olive sectional, timber slat media wall, niches and bold multicolour rug. Borrow a usable domestic plan and architecture with controlled pattern.
+
+P070 | https://in.pinterest.com/pin/907545762442626122/
+Asset: asset-d71916cf-ccc7-4daf-b1e0-f50b397db902
+SHA256: 19fad78ea007b3bee7950f02068084ce1ddc0aa2d045f979cf6a77717ba26629
+Observed/suggested borrowing: Timber credenza, gallery posters, green/pink seats, curved glass table and vivid rug. Borrow layered retro personality without copying branded/text artwork.
+
+P071 | https://in.pinterest.com/pin/907545762442626117/
+Asset: asset-af8d7ae8-f07e-4df1-a977-2379adb27cf6
+SHA256: abab9e90d6942a7880c7e86e64c26952195dd3aa3165d3092c218f708483ff78
+Observed/suggested borrowing: Music room with records, orange arc lamp, type posters and wavy dark rug. Borrow evidence of a resident's activity and conversational informal atmosphere.
+
+P072 | https://in.pinterest.com/pin/907545762442626111/
+Asset: asset-b5cb8838-94b0-44d3-9a5c-56c434339432
+SHA256: ee406faf4d21a1ecee01324bbf9af163890b852f73e62d3211f627bf16cff392
+Observed/suggested borrowing: Bright sculptural room with wavy wall relief, rounded openings and orange transparent table; visible AI label. Borrow colour/light ideas, check feasibility rather than reproducing impossible architecture.
+
+P073 | https://in.pinterest.com/pin/907545762442626105/
+Asset: asset-49189fe3-a2ee-44a1-9f1d-e38eb5132334
+SHA256: 6c920bdfb40c77f376d1c264e43faedcadd3067f4b0fd7c100decbe36d39b30a
+Observed/suggested borrowing: Pink/white bedroom with red stripe bedding, paper globe and soft curved furniture. Borrow bedroom colour rhythm and daylight; keep chosen mattress/bed identity intact.
+
+P074 | https://in.pinterest.com/pin/907545762442626104/
+Asset: asset-9f6e9d97-2e21-4c12-b6d0-0bd60d393fcb
+SHA256: 0da79bd6baaac7a5a255d8bd9ad3e72f4894bb9a99d13bbeb3c6d90162ffa8c9
+Observed/suggested borrowing: Quiet shelving corner with yellow circular mirror, pink lamp, books and orange stool. Borrow one statement shape and edited functional display.
+
+P075 | https://in.pinterest.com/pin/907545762442626101/
+Asset: asset-83a0586b-f0f2-47d9-abce-f8d0f4b7a753
+SHA256: 00b5522dba9f80b3a4afb5cbc709e05df7a5a01d1b96ab2522ae51ac3c7176db
+Observed/suggested borrowing: Dining zone with cobalt chairs/pendant, neutral fluted table and blue graphic art. Borrow concentrated hue around one activity and warm timber grounding.
+
+P076 | https://in.pinterest.com/pin/907545762442626097/
+Asset: asset-36382855-0ed0-48f8-a661-9c385971fb01
+SHA256: 2b5969c3aa5c206d0f8561ba61d42e7a49bae003ffc94c50f5f6adfb9c8dd044
+Observed/suggested borrowing: Sunlit room with cream ribbed sofa, sage wall, large plants and woven table. Quieter botanical branch; borrow window light and tactile softness without forcing maximalism.
+
+P077 | https://in.pinterest.com/pin/907545762442626095/
+Asset: asset-411f9d06-9a41-49a8-82b2-bd36f54ad8bb
+SHA256: d3bb35cda6a84f2ea8cf49141f631ddbb84b34547e10496bd5e43a1704749180
+Observed/suggested borrowing: Everyday living room in golden side light with pale modular sofa, blue cushions and black-white checker rug. Borrow sunlight geometry, functional desk and lived-in scale.
+
+P078 | https://in.pinterest.com/pin/907545762442626093/
+Asset: asset-cfb811bd-31cb-432e-b229-07b04bc72d10
+SHA256: 395a4f50b9f85e74252f85da0b6f1a252495adb052a162bbb98ef6c10a736643
+Observed/suggested borrowing: White high-ceiling room with mustard sofa, arc lamp, records and small gallery. Borrow restrained retro personality and real wall negative space.
+
+P079 | https://in.pinterest.com/pin/907545762442626090/
+Asset: asset-989541a8-4ea2-4120-b78a-5bb6fb65aff4
+SHA256: 55ea755e2f53190e70cbb4ae269eaf1ee2157de8bc8f11c83322c5baac6f403c
+Observed/suggested borrowing: Yellow reading chair under framed graphic, warm arched niche and lilac circular rug. Borrow a contained reading zone; niche light should have a physical source.
+
+P080 | https://in.pinterest.com/pin/907545762442626089/
+Asset: asset-c0173df7-2bdf-4a3d-8939-f839f0bda25a
+SHA256: 20969c3b91013fef85274cd25ed1c8d6096fd493a95fa472071a541739e60339
+Observed/suggested borrowing: White living room with orange circular wall zone, curved table, green checker runner and plants. Borrow architectural colour zoning and open composition.
+
+P081 | https://in.pinterest.com/pin/907545762442626081/
+Asset: asset-b8787571-b029-4c7e-8afb-5c269532b850
+SHA256: a64a92797f550df8fc8776b6f1d7f6b49b6c8511b6a838a4b97b30618a375ba2
+Observed/suggested borrowing: White sofa/round table, vivid flower print, small blue/yellow/pink objects. Borrow a quiet foundation with a small number of joyful colour hits.
+
+P082 | https://in.pinterest.com/pin/907545762442626080/
+Asset: asset-795cefce-fbac-4613-9c0c-6ab1276c264c
+SHA256: 7329ec16e5f3ba5bdd71b74bd6ab41dd025ea2ffd117c45d965f3bd6c1ab3fd3
+Observed/suggested borrowing: Cobalt lounge chair, red textile, asymmetric shelf and red/blue graphic floor. Borrow a confident compact reading zone with warm daylight.
+
+P083 | https://in.pinterest.com/pin/907545762442626076/
+Asset: asset-137a428a-0715-460e-92aa-492a1262b050
+SHA256: 0c065befbe9ea8f12a39a6ef0d99f3b15f81a3d2e78061067a5c3c63a84c822a
+Observed/suggested borrowing: Blue-white striped low lounge, blue wavy mirror, bookshelves and red accents. Borrow informal nest-like comfort and pattern dialogue; do not alter SKU upholstery.
+
+P084 | https://in.pinterest.com/pin/907545762442626074/
+Asset: asset-6b82d377-de26-4fb1-96ea-cedbcc6f758d
+SHA256: ba08ce6b9d7e665b16954eaa1adf450032385acf0f95501f0324b95d6f5ebda7
+Observed/suggested borrowing: Dining nook with mixed primary-colour chairs, simple timber table, blue pendant and garden-facing window. Borrow usable social space and colour-coded furniture.
+
+P085 | https://in.pinterest.com/pin/907545762442626071/
+Asset: asset-b8e675aa-ab9d-4550-a059-1f7eac4b4d3c
+SHA256: 93b637531112398b2a1b7d85e9689b1bc045967b6a96d010dccb8c8c22ad628f
+Observed/suggested borrowing: Restrained room with cream sofa, burgundy pendant, olive low table, blue chair and striped rug. More mature palette branch; vibrant need not mean rainbow.
+
+P086 | https://in.pinterest.com/pin/907545762442626070/
+Asset: asset-91201d5f-1c3a-4ff7-86c4-ff9930f8cfb9
+SHA256: 338117498c1d3ac98391c644e68a68676586e67c360b1b703345985db0f7af6c
+Observed/suggested borrowing: Narrow high-rise living room with olive sofa, orange chair, gallery art and balcony window. Borrow compact scale, long sightline and credible circulation.
+
+P087 | https://in.pinterest.com/pin/907545762442626069/
+Asset: asset-cc1a2148-a645-4717-8fbc-eb97fe4c4544
+SHA256: b8a11b185816ad9840d17dc00ac3eaa78b6e597b0253401201fe8b09a5af2672
+Observed/suggested borrowing: Garden room with arched windows, timber ceiling, cream sofa, green-white striped ottoman and red table. Borrow indoor/outdoor connection and colour through supporting pieces.
+
+P088 | https://in.pinterest.com/pin/907545762442626067/
+Asset: asset-6c93591b-25df-421a-a104-26b1f9fc2610
+SHA256: 6e4e728a05ad21f1dd63659df9475990c9b2470fa9e3fef0abd363987b47cea3
+Observed/suggested borrowing: Arched display niche with integrated warm light, coloured books, pottery and pink shelf. Architectural storage reference, not just decorative objects.
+
+P089 | https://in.pinterest.com/pin/907545762442626065/
+Asset: asset-9fd8c873-cf9a-4450-a526-1d14e1bc7c30
+SHA256: 9671cdfd7caaaee55dd9b4d0a436d0775cb2f9b311d0f58fb05934b3b61a87e7
+Observed/suggested borrowing: Quiet cream room with large arch, pastel artwork, shelving and light fabric sofa. Secondary calmer branch; borrow openness and curve continuity without erasing brand personality.
+
+P090 | https://in.pinterest.com/pin/907545762442626063/
+Asset: asset-8308e8ea-0e3b-4386-9246-c09ec4c715ba
+SHA256: a3d89551098cd7243f6c068498270e40ae989de9ba1ba7e89b97bf32faf8e608
+Observed/suggested borrowing: Deep-blue sofa, timber sideboard, large navy/cream type poster, orange lamp and tiled table. Borrow limited bold hues and graphic scale; do not copy SOUL lettering as brand copy.
+
+P091 | https://in.pinterest.com/pin/907545762442626060/
+Asset: asset-c7bcf045-6cc0-472a-9b4e-cbff547cbc24
+SHA256: 423a7e48950b56f89c02a1b2d1b27885021630444b252be78895bedda4fd0064
+Observed/suggested borrowing: Bedroom with striped blue bedding, checker rug, green mirror, open shelves and purple pendant. Borrow a playful but usable bedroom setting, not exact product evidence.
+
+P092 | https://in.pinterest.com/pin/907545762442626053/
+Asset: asset-7f2148d4-72ce-47fa-a643-0d4a7e7c58ac
+SHA256: 292cd2438c95d1c8a569d81f8b98c7c9cddf5e10685911af52cbb7ce443a1198
+Observed/suggested borrowing: White compact living room, blue/yellow accents, simple tiled-pattern rug, ceiling fan and bright doorway. Borrow approachable domestic scale and ventilation-friendly practical details.
+
+P093 | https://in.pinterest.com/pin/907545762442626050/
+Asset: asset-e75b63e5-9c2f-4e63-95d7-d3aaa278b76a
+SHA256: 6b6b89862d5225c115d161ed4865d35bf722ec48c3ce79c1357dec4c139040ba
+Observed/suggested borrowing: Blue arched door, plum sofa, pastel blue chair, yellow table and checker rug with cat. Borrow harmonious unexpected colour pairing and inhabited atmosphere; assess pet brief separately.
+
+P094 | https://in.pinterest.com/pin/907545762442626015/
+Asset: asset-547ac582-2d08-47fd-958e-23eaa916fe36
+SHA256: f53c21db457b7cef9cea79783df3deaf2772fb4c591ea21ee6b457c212fb9a82
+Observed/suggested borrowing: Cream sofa, olive low table, bold framed prints, checker cushions and warm natural-fibre-looking rug. Borrow art/colour hierarchy with tactile grounding.
+
+P095 | https://in.pinterest.com/pin/907545762442625986/
+Asset: asset-c23f32ee-8b48-4094-8a32-d5533d95867a
+SHA256: 8d6d31fd433d3160f6e6cbfcc1777b5e8c322610eea9ca3979836d4625490a5d
+Observed/suggested borrowing: Everyday pale sofa, green throw, small colourful art and orange lamp. Borrow attainable lived-in styling rather than expensive architecture as a requirement.
+
+P096 | https://in.pinterest.com/pin/907545762440092163/
+Asset: asset-a1ec9695-9894-4ab3-8379-e64890a3ac2a
+SHA256: 56d20bd9ed9e3286a1fefabc66e4cd77e0db350d32319ed1d059f22ef632a768
+Observed/suggested borrowing: Video thumbnail: reclining person on dark sofa with book/cup and Sofology branding. Only this still inspected; relaxation/people-product contact cue, not Sleepyhead product/claim or motion evidence.
+
+P097 | https://in.pinterest.com/pin/907545762440092090/
+Asset: asset-ec321e04-3264-40e0-a32e-76d284efb9d8
+SHA256: 32b5da5b1415efc2dafb164249c54eb8071df30feaa7845d17cdac4b75cb9899
+Observed/suggested borrowing: Video thumbnail: pale sofa beside tall window, curtains and a standing person. Only still inspected; borrow shared daylight and spatial scale, not choreography or brand/product identity.
+
+P098 | https://in.pinterest.com/pin/907545762440092061/
+Asset: asset-b6f321d5-4bc2-4ded-b29d-43b6e224df7b
+SHA256: bc2ba49e87fb327a56c9170d062fd6c243dce3e5ca481c98bd36eafc2900241e
+Observed/suggested borrowing: Video thumbnail: grey sofa under sloped pale ceiling and skylight, dark low table and person. Only still inspected; borrow everyday architectural volume, not competitor branding or claims.
+
+P099 | https://in.pinterest.com/pin/907545762440092004/
+Asset: asset-04c5ebb8-2f76-46cc-9562-79b6c1d8422d
+SHA256: 86064bce6b7433977e8369ef902eb731cf48f198402b8fccd5eb5b559958b80a
+Observed/suggested borrowing: Video thumbnail: recliner in timber-panelled room with Stressless branding. Only still inspected; darker quiet outlier, not a leading Sleepyhead spatial rule or efficacy proof.
+
+P100 | https://in.pinterest.com/pin/907545762440091871/
+Asset: asset-69836b38-1861-45b3-a6f4-3d76c4ec7ef4
+SHA256: 141e3df9e58e8fd5df8909047fe969cc47e7e21125601a6239741cd7b8b226ae
+Observed/suggested borrowing: Portrait-format still: mustard sofa with standing person and plain bright sky-like background. Lifestyle/scale cue; not whole-room architecture, product proof or reviewed motion.
+
+P101 | https://in.pinterest.com/pin/907545762440091840/
+Asset: asset-be42c837-e6b8-41d9-9f0c-b7691a05eb92
+SHA256: ff09a38ec8101eee5c486d7831b175df0339deec95869843c322abc4722a3311
+Observed/suggested borrowing: Video thumbnail: child drawing on pale upholstery with Four Hands/Crypton text. Only still inspected. Do not infer Sleepyhead stain resistance, durability or copy competitor claims from this image.
+
+P102 | https://in.pinterest.com/pin/AZb2DxZMo5uQG_bphDG10rjF6WnPFGhQYCKPlooDYPWZcA80vGKl1FJ6PrueoM61f73vAdHOBPzNfzQkDBblkPc/
+Asset: asset-a08a6e2e-ba91-412d-8291-8c6388583a43
+SHA256: 5988552b506e599fb6e697e41fd1a14293acaac191c8dc0beb16ef66b9b9b822
+Observed/suggested borrowing: Pale architectural room with a real arch, green sideboard, ribbed pink sofa, purple floor lamp and blue scalloped table. Borrow full-room colour relationships, visible texture and arch-to-furniture curve rhythm. Shop-this-room entry was confirmed inside the board selectable-pin list; its opaque pin URL is retained.

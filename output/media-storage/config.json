@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "enabled": true,
+  "uploadUrl": "https://media-upload-service-519223215267.asia-south1.run.app/internal/media-upload-service/v1/upload-file",
+  "deliveryHosts": [
+    "cdn2.hypergro.ai",
+    "cdn2.gro.care"
+  ],
+  "activatedAt": "2026-10-22T10:03:03.803Z",
+  "imagePolicy": "cdn-delivery-with-local-working-copy",
+  "videoPolicy": "cdn-after-byte-verification"
+}

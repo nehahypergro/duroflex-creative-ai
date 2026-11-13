@@ -1,0 +1,198 @@
+{
+  "id": 10345145794692,
+  "title": "Avalon Elite mov.E Yellow Fabric 3 Seater Sofa",
+  "handle": "avalon-elite-mov-e-3-seater-yellow",
+  "description": "",
+  "published_at": "2026-06-03T11:18:42+05:30",
+  "created_at": "2026-06-01T14:08:07+05:30",
+  "vendor": "Duroflex",
+  "type": "Sofas",
+  "tags": [
+    "all_products2025",
+    "CART5",
+    "Furniture 2025",
+    "HSR Coco",
+    "INDIA",
+    "sofa",
+    "Sofa & Recliners",
+    "Sofas Sets",
+    "video_shop"
+  ],
+  "price": 6880000,
+  "price_min": 6880000,
+  "price_max": 6880000,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 8600000,
+  "compare_at_price_min": 8600000,
+  "compare_at_price_max": 8600000,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 51907413803140,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "AVALONELITEMOVFABYELLOW3S",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Avalon Elite mov.E Yellow Fabric 3 Seater Sofa",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 6880000,
+      "weight": 0,
+      "compare_at_price": 8600000,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/2_941dc63d-04b9-42b2-b710-ade2687e2bdc.jpg?v=1780378805",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/1_20de0fb1-18f1-4ce6-b939-841c8ba24fdb.jpg?v=1780378805",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/3_ac4fe7f6-d3ab-407f-b1b1-0187df54880a.jpg?v=1780378804",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/4_abd94bb7-9e7e-4f76-9cbb-75296820d06f.jpg?v=1780378805",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/5_8d579a6a-00ca-4375-9a43-3f8633ed3406.jpg?v=1780378805",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/6_5947e27d-6d57-46f8-a04a-f4c101405791.jpg?v=1780378805",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/7_9364f8fc-a5ca-4e1d-9b3e-49993a5d57d7.jpg?v=1780378804"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/2_941dc63d-04b9-42b2-b710-ade2687e2bdc.jpg?v=1780378805",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/avalon-elite-mov-e-3-seater-yellow",
+  "media": [
+    {
+      "alt": "avalon-elite-mov-e-3-seater-yellow",
+      "id": 52382541054084,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_941dc63d-04b9-42b2-b710-ade2687e2bdc.jpg?v=1780378805"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/2_941dc63d-04b9-42b2-b710-ade2687e2bdc.jpg?v=1780378805",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-elite-mov-e-3-seater-yellow",
+      "id": 52382541021316,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_20de0fb1-18f1-4ce6-b939-841c8ba24fdb.jpg?v=1780378805"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/1_20de0fb1-18f1-4ce6-b939-841c8ba24fdb.jpg?v=1780378805",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-elite-mov-e-3-seater-yellow",
+      "id": 52382541086852,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_ac4fe7f6-d3ab-407f-b1b1-0187df54880a.jpg?v=1780378804"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/3_ac4fe7f6-d3ab-407f-b1b1-0187df54880a.jpg?v=1780378804",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-elite-mov-e-3-seater-yellow",
+      "id": 52382541119620,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_abd94bb7-9e7e-4f76-9cbb-75296820d06f.jpg?v=1780378805"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/4_abd94bb7-9e7e-4f76-9cbb-75296820d06f.jpg?v=1780378805",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-elite-mov-e-3-seater-yellow",
+      "id": 52382541152388,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_8d579a6a-00ca-4375-9a43-3f8633ed3406.jpg?v=1780378805"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/5_8d579a6a-00ca-4375-9a43-3f8633ed3406.jpg?v=1780378805",
+      "width": 2000
+    },
+    {
+      "alt": "avalon-elite-mov-e-3-seater-yellow",
+      "id": 52382541185156,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_5947e27d-6d57-46f8-a04a-f4c101405791.jpg?v=1780378805"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/6_5947e27d-6d57-46f8-a04a-f4c101405791.jpg?v=1780378805",
+      "width": 1000
+    },
+    {
+      "alt": "avalon-elite-mov-e-3-seater-yellow",
+      "id": 52382541217924,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_9364f8fc-a5ca-4e1d-9b3e-49993a5d57d7.jpg?v=1780378804"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/7_9364f8fc-a5ca-4e1d-9b3e-49993a5d57d7.jpg?v=1780378804",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

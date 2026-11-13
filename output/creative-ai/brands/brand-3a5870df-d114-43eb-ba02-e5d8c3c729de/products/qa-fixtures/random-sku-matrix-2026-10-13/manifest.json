@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "mode": "website-source-fixtures-only",
+  "seed": "brand-ratio-sku-20261013-v1",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "brandUrl": "https://mysleepyhead.com/",
+  "researchId": "creative-a5835af7-6943-4fe6-b7ff-e7bcdf0cb1a7",
+  "collectedAt": "2026-10-13T17:53:18.444Z",
+  "catalogSources": [
+    {
+      "url": "https://mysleepyhead.com/products.json?limit=250&page=1",
+      "file": "catalog-1.json",
+      "sha256": "82bad5af2b693b84857e9ae5657c56a8d01a906734414d84aea32605e6f7b662",
+      "count": 250
+    },
+    {
+      "url": "https://mysleepyhead.com/products.json?limit=250&page=2",
+      "file": "catalog-2.json",
+      "sha256": "c0494c09ac3b60618a3a67875fc2c162b7815f888151ef6db0213c2318536813",
+      "count": 55
+    }
+  ],
+  "catalogProducts": 305,
+  "sampling": "Ten product handles ranked by seeded SHA-256 from up to four public catalog pages; one seeded exact SKU variant each. Availability is retained, not filtered.",
+  "directory": "/Users/neha/Documents/Codex/Neha-Projects/duroflex-creative-ai/output/creative-ai/brands/brand-3a5870df-d114-43eb-ba02-e5d8c3c729de/products/qa-fixtures/random-sku-matrix-2026-10-13",
+  "products": [
+    {
+      "productId": "product-e347763988e6eb92e714",
+      "handle": "sofa-yolo-3-seater-lhs-l-shape-sofa-set-grey-color",
+      "name": "Sofa Yolo - 3 Seater LHS L Shape Sofa Set (Fabric, Sesame Grey)",
+      "category": "Sofas",
+      "variant": {
+        "id": "52455659012280",
+        "sku": "SHYL3SLHSSG",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/sofa-yolo-3-seater-lhs-l-shape-sofa-set-grey-color?variant=52455659012280",
+      "sourceUrl": "https://mysleepyhead.com/products/sofa-yolo-3-seater-lhs-l-shape-sofa-set-grey-color",
+      "file": "product-e347763988e6eb92e714.html",
+      "jsonFile": "product-e347763988e6eb92e714.json",
+      "pageHash": "0fafdbf5d8b7d04497b9dc1e9366316b891d169a58bd30311a9313999053fa2e",
+      "jsonHash": "ce3e777a2bf66df08b6932cd4da391f3f8c4c3458036263916fb54fedfa656fa",
+      "selectionRank": "01101f6c297414b313bec9f73399bddd59679099141bd03b907280615096a7ec",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-6f9744f296e8981956a1",
+      "handle": "sofa-bubbles-3-seater-sofa-fabric-teal-blue",
+      "name": "Sofa Bubbles - 3 Seater Sofa (Fabric, Teal Blue)",
+      "category": "Sofas",
+      "variant": {
+        "id": "52485277876408",
+        "sku": "SHBU3SSBL",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/sofa-bubbles-3-seater-sofa-fabric-teal-blue?variant=52485277876408",
+      "sourceUrl": "https://mysleepyhead.com/products/sofa-bubbles-3-seater-sofa-fabric-teal-blue",
+      "file": "product-6f9744f296e8981956a1.html",
+      "jsonFile": "product-6f9744f296e8981956a1.json",
+      "pageHash": "6cf02f6739be3bb97ef7033e6586644865ef82542d54ead1442084200093a172",
+      "jsonHash": "e0fb196e347ff397f82358aa570742adc3f45376bf8b35360079063d0d85add3",
+      "selectionRank": "0230ce9d1f5e54e705a9365a29504fe4e4ea9bfafe6cbc76df01a096d1575654",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-2c0c7ed2573c5a07e952",
+      "handle": "bamboo-terry-waterproof-mattress-protector-72-60-inches-queen-size-white-color",
+      "name": "Bamboo Terry Waterproof Mattress Protector, (72 x 60 inches, Queen Size, White).",
+      "category": "Home Furnishings",
+      "variant": {
+        "id": "52455660454072",
+        "sku": "SHPRO720060000120",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/bamboo-terry-waterproof-mattress-protector-72-60-inches-queen-size-white-color?variant=52455660454072",
+      "sourceUrl": "https://mysleepyhead.com/products/bamboo-terry-waterproof-mattress-protector-72-60-inches-queen-size-white-color",
+      "file": "product-2c0c7ed2573c5a07e952.html",
+      "jsonFile": "product-2c0c7ed2573c5a07e952.json",
+      "pageHash": "6b97f82d2cec3a00c49dd0bb3927071a634275219a42ea324850bbe92fad46a1",
+      "jsonHash": "1114d2fc15c747ae2e14c300306a8b35bad6116f2ef80df722af781392682dd3",
+      "selectionRank": "02645d422a4d7259ad6cc868810607f89aa01a468ab59bc2653614cfbe92e26c",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-866ed1f8e026a97a1607",
+      "handle": "sofa-bite-2-seater-fabric-gunmetal-grey",
+      "name": "Sofa BITE - 2 Seater (Fabric, Gunmetal Grey)",
+      "category": "Sofas",
+      "variant": {
+        "id": "52497454268600",
+        "sku": "SHBT2SSGY",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/sofa-bite-2-seater-fabric-gunmetal-grey?variant=52497454268600",
+      "sourceUrl": "https://mysleepyhead.com/products/sofa-bite-2-seater-fabric-gunmetal-grey",
+      "file": "product-866ed1f8e026a97a1607.html",
+      "jsonFile": "product-866ed1f8e026a97a1607.json",
+      "pageHash": "f871fd1ba71f76546d040820d10d7412b71ff23ab59a0b5ac62f5376aed3804f",
+      "jsonHash": "d84c4f2bd7feef1f7a1c92c6d6bd33493579b2e8b3990e7321bdcecfc58da739",
+      "selectionRank": "02af6431a791fb5ebd94329aad538a49c6e8177208278280785fc7edae839be2",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-647a751e43b77312ddd1",
+      "handle": "boba-move-adjustable-bed-elise-upholstered-bed-king-size-brown-sense-mattress-8-20-3-cm",
+      "name": "Boba Move - Adjustable Bed Elise Upholstered Bed King Size (Brown) + Sense Mattress 8\" (20.3 cm)",
+      "category": "Mattresses",
+      "variant": {
+        "id": "52992509837496",
+        "sku": "SHBOBAMOVEKINGELISEBROWNSENSEWHKING8IN",
+        "name": "Default Title",
+        "options": [],
+        "available": false
+      },
+      "variantUrl": "https://mysleepyhead.com/products/boba-move-adjustable-bed-elise-upholstered-bed-king-size-brown-sense-mattress-8-20-3-cm?variant=52992509837496",
+      "sourceUrl": "https://mysleepyhead.com/products/boba-move-adjustable-bed-elise-upholstered-bed-king-size-brown-sense-mattress-8-20-3-cm",
+      "file": "product-647a751e43b77312ddd1.html",
+      "jsonFile": "product-647a751e43b77312ddd1.json",
+      "pageHash": "6eba9b28e1fd5d99fe460d5248ae3f5e7c7bd3b35d97b1fd2201b12d4f236144",
+      "jsonHash": "ae65199c993cb72956dd2e4cd6cecc9db2fd21604ad0b60973b3110cd63ebbeb",
+      "selectionRank": "0588e8e30a973475a8033b6a0e766d0d669395d6624f2f4c0cb02bbc8541ebc4",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-44f068aa7256814af91c",
+      "handle": "sofa-bae-3-2-seater-sofa-set-grey-color",
+      "name": "Sofa Bae - 3+2 Seater Sofa Set (Fabric, Stone Grey)",
+      "category": "Sofas",
+      "variant": {
+        "id": "52455651737784",
+        "sku": "SHBE32SSSSG",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/sofa-bae-3-2-seater-sofa-set-grey-color?variant=52455651737784",
+      "sourceUrl": "https://mysleepyhead.com/products/sofa-bae-3-2-seater-sofa-set-grey-color",
+      "file": "product-44f068aa7256814af91c.html",
+      "jsonFile": "product-44f068aa7256814af91c.json",
+      "pageHash": "57c235d2b26a254b2447ebd4f8be7fd91795667c4cdfaaaf3ccdaed017c3d022",
+      "jsonHash": "4b6e9c6b8e7c9db58ba203ce13ddc42a7985bd37ba15c3d8e7180e70ba874555",
+      "selectionRank": "05b24610285263efca74c162df36d12934e94d6369a179fea1ffc4e9581baff4",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-3298d00e74908c758f1d",
+      "handle": "nooks-blue-geometric-cushion-cover-with-white-cushion-fillers-set-of-5",
+      "name": "Nooks - Cushion Cover with Premium Cushion Fillers ( Blue-White, Set of 5 )",
+      "category": "Home Furnishings",
+      "variant": {
+        "id": "53017173885112",
+        "sku": "SHCCNKBLCFWH1616C",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/nooks-blue-geometric-cushion-cover-with-white-cushion-fillers-set-of-5?variant=53017173885112",
+      "sourceUrl": "https://mysleepyhead.com/products/nooks-blue-geometric-cushion-cover-with-white-cushion-fillers-set-of-5",
+      "file": "product-3298d00e74908c758f1d.html",
+      "jsonFile": "product-3298d00e74908c758f1d.json",
+      "pageHash": "43badaa04256e5674b0d04cbdbb5d9aedeb9d2dfafe779c3f3df39f6fd1bbbae",
+      "jsonHash": "a250087a2aa5998c057ee62df27063223d8e7f41e5ea62097ab657a3fe37ad0f",
+      "selectionRank": "05c2fb256378f6531466a5987652d04c820a07261a1e61bbc7129273eecb75af",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-3448433665b71925e179",
+      "handle": "sofa-kiki-3-seater-sofa-grey-color",
+      "name": "Sofa Kiki - 3 Seater Sofa (Fabric, Graphite Grey)",
+      "category": "Sofas",
+      "variant": {
+        "id": "52400345546936",
+        "sku": "SHKK3SSGG",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/sofa-kiki-3-seater-sofa-grey-color?variant=52400345546936",
+      "sourceUrl": "https://mysleepyhead.com/products/sofa-kiki-3-seater-sofa-grey-color",
+      "file": "product-3448433665b71925e179.html",
+      "jsonFile": "product-3448433665b71925e179.json",
+      "pageHash": "5a2e17c03a8e9347669094020b50bf71a108d0f3742809f7727151f8fce8dee7",
+      "jsonHash": "abd10387f6f6d1906a91179a33edd30bf648107bb3ab90925d9175dd6a929481",
+      "selectionRank": "060d82de0c4d91dfe7058f74834ddd494a7764855d1f3f5533ea634eeb6f569d",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-a0e8b726d4d0888dcada",
+      "handle": "sofa-yolo-1-seater-sofa-brown-color",
+      "name": "Sofa Yolo - 1 Seater Sofa (Fabric, Coco Brown)",
+      "category": "Sofas",
+      "variant": {
+        "id": "52400343810232",
+        "sku": "SHYL1SSCB",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/sofa-yolo-1-seater-sofa-brown-color?variant=52400343810232",
+      "sourceUrl": "https://mysleepyhead.com/products/sofa-yolo-1-seater-sofa-brown-color",
+      "file": "product-a0e8b726d4d0888dcada.html",
+      "jsonFile": "product-a0e8b726d4d0888dcada.json",
+      "pageHash": "c97a44e4c530da62f5955b1a7a83e98207dc07dffa966f02b8afb8bedc7024e6",
+      "jsonHash": "30c0ee311b1630f4b1ed0238a1abe72b806fc2bfbf22ed6e3a9575938500a15a",
+      "selectionRank": "069f38fe3ffa94be84a9555eaca6c458464e1a2b774c68a7750d06a15ae350db",
+      "reusedSavedPage": false
+    },
+    {
+      "productId": "product-eb52a1fa7ff8c48a3de3",
+      "handle": "bamboo-terry-waterproof-mattress-protector-75-48-inches-double-bed-white-color",
+      "name": "Bamboo Terry Waterproof Mattress Protector, (75 x 48 inches, Double Size, White)",
+      "category": "Home Furnishings",
+      "variant": {
+        "id": "52407261200568",
+        "sku": "SHPRO750048000120",
+        "name": "Default Title",
+        "options": [],
+        "available": true
+      },
+      "variantUrl": "https://mysleepyhead.com/products/bamboo-terry-waterproof-mattress-protector-75-48-inches-double-bed-white-color?variant=52407261200568",
+      "sourceUrl": "https://mysleepyhead.com/products/bamboo-terry-waterproof-mattress-protector-75-48-inches-double-bed-white-color",
+      "file": "product-eb52a1fa7ff8c48a3de3.html",
+      "jsonFile": "product-eb52a1fa7ff8c48a3de3.json",
+      "pageHash": "eea4761745f552ba481227f0fc45f9e6c387315bd44b45d3104254dafff10073",
+      "jsonHash": "2b44812a58ca39148adab7ae605cc04f3df438af292a4e1654a8b13af05cde1b",
+      "selectionRank": "081c9845a0bc566e3bc65379eaf670d4defadb84242390c03e36b76bdae49186",
+      "reusedSavedPage": false
+    }
+  ],
+  "limits": [
+    "Source snapshots only; no image download, audit, approved claims or visual inspection.",
+    "QA variant choices do not authorize production campaigns. Existing product profiles and historical jobs remain unchanged."
+  ]
+}

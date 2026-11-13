@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-71b9de5a-f031-427d-94ae-503e3423fd38",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-dfb69ef80bb5fad29770",
+  "productName": "Posture Perfect Pocket Spring Orthopedic Mattress",
+  "pageUrl": "https://www.duroflexworld.com/products/new-posture-perfect?variant=51541059862660",
+  "productSnapshot": "snapshot-1792609721322-766fee",
+  "variant": {
+    "id": "51541059993732",
+    "sku": "NPOS7200600006000200WHITE",
+    "name": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+    "configuration": "Official website variant Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-1650faeeb38b3c08",
+    "snapshot": "snapshot-1792609721322-766fee",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/1_41295d54-6ede-4a59-8823-86b722ee4437_600x600.png?v=1749639398",
+    "sha256": "fdebaaec1f46551f9870128140c878e17db574fec161f86b4c3a208df930b703",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "f6c25382dff68f44151cde3fb9e06905ba6f1ad13b9d436f74e0349cf186ece2",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-09T10:48:49.492Z"
+  },
+  "createdAt": "2026-11-09T10:48:49.492Z",
+  "profileHash": "64a7d548d84a35b4d9b616caaa29d61399af0d5deab128091aec814912c350dd"
+}

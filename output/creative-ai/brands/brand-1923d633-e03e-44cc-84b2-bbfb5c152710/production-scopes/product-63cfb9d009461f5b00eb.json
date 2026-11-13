@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "productIds": [
+    "product-63cfb9d009461f5b00eb"
+  ],
+  "logoSha256": "6e5fd8bea6f5ca7cbda1c6f99c3ef81f2d2f6317c60c8307b2c5b02e1c9c98cb",
+  "authorization": {
+    "sourceJobId": "creative-c63617f2-3b49-4e71-963a-b914ad53afde",
+    "note": "User requested end-to-end static tests for this exact product URL on 22 October 2026 and confirmed selected variants. Prior source job records this brand’s approved identity/font choice only; its artwork or SKU is not reused. User chose current official website identity, supplied approved logo, and exact saved Cocoon product name; production scope retained from the approved Cocoon campaign and current conversation."
+  },
+  "clarification": {
+    "version": 1,
+    "text": "Use current official website identity and exact selected saved Wave Kinect Propel Arctic Ice Mattress SKU. User specifically authorized downloading online fonts for editable output; actual Poppins files served by the official website and its original red symbol/wordmark are registered in the Duroflex canvas asset registry. Draft visual-world adoption is advisory; it does not block this test. Reuse the archived exact SKU snapshot without rechecking freshness. No current price or availability claim. Alternative fonts are permitted by the user’s later instruction for both studios: “Let there be other fonts no need to flag.” For this raster-image test, choose appropriate legible typography; do not block strategy solely to obtain the guideline-named font files. When reconstructing editable text, use available library fonts and preserve their provenance. This permission does not assert possession or licensing of any missing proprietary font, and does not approve generated artwork.",
+    "nonEssentialFactIds": [
+      "duroflex-portfolio-adoption",
+      "duroflex-identity-production-status"
+    ],
+    "createdAt": "2026-10-21T19:17:55.469Z"
+  },
+  "factBindings": {
+    "duroflex-portfolio-adoption": "6d16fdb99e4ca55d71338ea6d87328b2c9122750d6cdc1677fbcab3a0c805fa9",
+    "duroflex-identity-production-status": "7d439dadb50bacf020dae062b632ed5c0c0c26edf5ae4df40fd601577ab19d5d"
+  }
+}

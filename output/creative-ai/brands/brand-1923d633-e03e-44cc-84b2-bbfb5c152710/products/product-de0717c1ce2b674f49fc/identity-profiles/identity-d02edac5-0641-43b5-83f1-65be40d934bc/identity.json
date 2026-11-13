@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "id": "identity-d02edac5-0641-43b5-83f1-65be40d934bc",
+  "status": "verified",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "productId": "product-de0717c1ce2b674f49fc",
+  "productName": "Quboid Arctic Ice Qube Cell Technology Mattress",
+  "pageUrl": "https://www.duroflexworld.com/products/quboid-qube-cell-technology-cooling-mattress",
+  "productSnapshot": "snapshot-1793627062127-e9a68d",
+  "variant": {
+    "id": "51541037613188",
+    "sku": "QUBCF720035000800CRM",
+    "name": "Single / 72 x 35 (183 cm x 89 cm) / 8 (20.3 cm)",
+    "colour": "As shown in the official website reference; not independently classified.",
+    "size": "Single / 72 x 35 (183 cm x 89 cm) / 8 (20.3 cm)",
+    "configuration": "Official website variant Single / 72 x 35 (183 cm x 89 cm) / 8 (20.3 cm)",
+    "dimensions": {
+      "status": "unknown",
+      "length": null,
+      "width": null,
+      "height": null,
+      "unit": null,
+      "centimetres": null,
+      "source": "Dimensions not confirmed; never infer them from an image."
+    }
+  },
+  "details": {
+    "logoPlacement": "Preserve the website photograph’s logo and label pixels exactly.",
+    "construction": "Preserve the website photograph’s visible shape, proportions, seams and panels.",
+    "surface": "Preserve the website photograph’s fabric, stitching, quilting and markings.",
+    "sections": "Use only sections visible in this website photograph; no invented internal cutaway."
+  },
+  "reference": {
+    "kind": "approved-photograph",
+    "assetId": "media-98298b2823b08c37",
+    "snapshot": "snapshot-1793627062127-e9a68d",
+    "sourceUrl": "https://www.duroflexworld.com/cdn/shop/files/Quboid_600x600.webp?v=1793617371",
+    "sha256": "439c0b0bbe4020eacd9cb1a9ae3054d32398e3bfc380ab90d08d77e17836197e",
+    "sourceKind": "product-library",
+    "angle": "Website photograph as supplied; camera view not independently classified",
+    "width": 600,
+    "height": 600,
+    "rasterHash": "2b0539b96a8d13f0f6270f667055defc0a7b22b9dfe90d536671c8079134f0d7",
+    "hasTransparency": false
+  },
+  "approval": {
+    "basis": "Website reference trusted under the user’s instruction to assume official product-page images are correct. No human visual inspection or dimension verification is claimed.",
+    "confirmed": true,
+    "approvedAt": "2026-11-07T19:45:46.588Z"
+  },
+  "createdAt": "2026-11-07T19:45:46.588Z",
+  "profileHash": "5bfb2f646bf51e2ff6f8f27cee02a2a86c5ccdad685b0f1ca17d19875ed8a931"
+}

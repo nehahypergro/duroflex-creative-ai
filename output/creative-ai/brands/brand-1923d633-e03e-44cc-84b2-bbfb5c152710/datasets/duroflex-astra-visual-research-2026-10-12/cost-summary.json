@@ -1,0 +1,7 @@
+{
+  "model": "gpt-6-astra",
+  "receipts": 12,
+  "estimatedUsd": 17.576835,
+  "unknown": 0,
+  "rateSource": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+}

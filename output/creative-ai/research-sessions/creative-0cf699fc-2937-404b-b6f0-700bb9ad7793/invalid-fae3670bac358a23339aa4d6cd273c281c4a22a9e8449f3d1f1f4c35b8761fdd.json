@@ -1,0 +1,221 @@
+{
+  "output": {
+    "brandName": "Duroflex",
+    "findings": [
+      {
+        "section": "overview",
+        "basis": "evidence",
+        "title": "Home and sleep products across multiple categories",
+        "text": "Duroflex’s official site lists mattresses, smart sleep solutions, sofas, recliners, beds, pillows and sleep accessories. This establishes the breadth of the displayed catalogue, not the availability of every item at all times.",
+        "sourceIds": [
+          "source-1",
+          "source-2"
+        ]
+      },
+      {
+        "section": "products",
+        "basis": "evidence",
+        "title": "Mattress range and listed features",
+        "text": "The mattress collection includes Airboost, Duropedic, LiveIn, Natural Living and Energise lines. The site lists selected Airboost mattresses with a 100-night trial and 10-year warranty; terms may vary by SKU.",
+        "sourceIds": [
+          "source-1",
+          "source-3"
+        ]
+      },
+      {
+        "section": "identity",
+        "basis": "evidence",
+        "title": "Official visual identifiers",
+        "text": "The official site screenshot and supplied logo images show a red Duroflex symbol and wordmark. The screenshot uses a white navigation area and red accents; this is observed site presentation, not a full identity specification.",
+        "sourceIds": [
+          "source-1",
+          "source-5",
+          "source-6"
+        ],
+        "assetIds": [
+          "official-site-screenshot",
+          "official-image-2",
+          "official-image-3"
+        ],
+        "direction": "continuity"
+      },
+      {
+        "section": "tone",
+        "basis": "evidence",
+        "title": "Warm, direct commerce language",
+        "text": "Website copy uses conversational prompts such as “Let’s find Your Perfect Match” and “Email? We’ll bring the calm!”, alongside practical product and offer details.",
+        "sourceIds": [
+          "source-1",
+          "source-2"
+        ]
+      },
+      {
+        "section": "tone",
+        "basis": "evidence",
+        "title": "Positioning intent is supplied strategy, not proof of product effects",
+        "text": "The supplied Strategic Blueprint describes a warm, dependable companion and a restorative-reset role, while cautioning against overselling. This is strategic direction, not evidence that a product treats stress or produces health outcomes.",
+        "sourceIds": [
+          "doc-3d51ae63-ac10-47e4-8deb-da27fd857244"
+        ],
+        "assetIds": [
+          "guideline-page-doc-3d51ae63-ac10-47e4-8deb-da27fd857244-56"
+        ]
+      },
+      {
+        "section": "creative",
+        "basis": "evidence",
+        "title": "Draft visual world direction",
+        "text": "The supplied Visual World Guide is explicitly a draft structure/art-direction blueprint. It proposes warm Indian modernism, tactile natural-looking materials, calm daylight, edited styling and restrained Duroflex red; these are draft directions, not approved rules.",
+        "sourceIds": [
+          "doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8"
+        ],
+        "assetIds": [
+          "guideline-page-doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-18"
+        ],
+        "direction": "exploration"
+      },
+      {
+        "section": "creative",
+        "basis": "inference",
+        "title": "Interior references are optional inspiration",
+        "text": "The supplied interior analysis describes varied warm, tactile bedroom references. For new work, borrow selected light, surfaces or room details only after confirming the exact SKU; these references are not official product photographs, mandatory styling, or product evidence.",
+        "sourceIds": [
+          "doc-b6a286fa-7d7f-4138-80bf-69a0e01b53a3"
+        ],
+        "assetIds": [
+          "supplied-asset-library-asset-c359ad93-b65d-41d9-9c07-400e170eedd0",
+          "supplied-asset-library-asset-61431423-84d7-4a18-a0f3-2e22d2b68620"
+        ],
+        "direction": "exploration"
+      },
+      {
+        "section": "opportunities",
+        "basis": "inference",
+        "title": "Keep SKU proof distinct from the broader brand story",
+        "text": "A new brief can use the supplied restoration and reset positioning as context, while grounding product features, trial terms and warranties in current official evidence for the exact SKU.",
+        "sourceIds": [
+          "doc-3d51ae63-ac10-47e4-8deb-da27fd857244",
+          "source-1",
+          "source-3"
+        ]
+      },
+      {
+        "section": "conflicts",
+        "basis": "evidence",
+        "title": "Promotion and strategy claims need careful qualification",
+        "text": "The homepage snapshot contains sale, voucher and card-discount messaging; such terms are time- and condition-dependent, not standing brand rules. The supplied strategy deck includes stress, pain and health-related positioning, which does not substantiate product-specific efficacy.",
+        "sourceIds": [
+          "source-1",
+          "doc-3d51ae63-ac10-47e4-8deb-da27fd857244"
+        ]
+      },
+      {
+        "section": "conflicts",
+        "basis": "evidence",
+        "title": "Advertiser evidence unavailable",
+        "text": "The Meta Ads Library access attempt returned HTTP 403 and advertiser identity was not verified. No advertising findings are established from the supplied evidence.",
+        "sourceIds": [
+          "source-12"
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "id": "duroflex-catalogue",
+        "kind": "product",
+        "text": "The official site lists mattresses, smart sleep solutions, sofas, recliners, beds, pillows and sleep accessories.",
+        "status": "supported",
+        "sourceIds": [
+          "source-1",
+          "source-2"
+        ],
+        "essential": true
+      },
+      {
+        "id": "airboost-trial-warranty",
+        "kind": "product",
+        "text": "Selected Airboost mattress listings show a 100-night trial and 10-year warranty; terms are SKU-specific.",
+        "status": "supported",
+        "sourceIds": [
+          "source-1",
+          "source-3"
+        ],
+        "essential": false
+      },
+      {
+        "id": "homepage-promotions-snapshot",
+        "kind": "offer",
+        "text": "The homepage snapshot displays a Great Comfort Fest sale, a free hamper worth up to ₹24,996, a gold voucher up to ₹30,000 and selected card-EMI discounts. Offers are subject to conditions and may change.",
+        "status": "supported",
+        "sourceIds": [
+          "source-1"
+        ],
+        "essential": false
+      },
+      {
+        "id": "official-site-destination",
+        "kind": "destination",
+        "text": "Duroflex’s official online shop is duroflexworld.com; the site also links store-finding and live-shopping experiences.",
+        "status": "supported",
+        "sourceIds": [
+          "source-1",
+          "source-4"
+        ],
+        "essential": true
+      },
+      {
+        "id": "strategic-restoration-positioning",
+        "kind": "brand",
+        "text": "A supplied Strategic Blueprint frames Duroflex around restoration, reset and a warm, dependable companion role. This is supplied positioning, not product-specific efficacy evidence.",
+        "status": "supported",
+        "sourceIds": [
+          "doc-3d51ae63-ac10-47e4-8deb-da27fd857244"
+        ],
+        "essential": false
+      }
+    ],
+    "assetLabels": [
+      {
+        "assetId": "official-site-screenshot",
+        "label": "Official Duroflex website screenshot; shows homepage layout and promotional merchandising",
+        "kind": "screenshot"
+      },
+      {
+        "assetId": "official-image-2",
+        "label": "Red Duroflex symbol",
+        "kind": "logo"
+      },
+      {
+        "assetId": "official-image-3",
+        "label": "Duroflex symbol and wordmark",
+        "kind": "logo"
+      },
+      {
+        "assetId": "official-image-4",
+        "label": "Dark image with no legible contents",
+        "kind": "reference"
+      },
+      {
+        "assetId": "guideline-page-doc-3d51ae63-ac10-47e4-8deb-da27fd857244-56",
+        "label": "Supplied Strategic Blueprint slide: purpose and philosophy",
+        "kind": "reference"
+      },
+      {
+        "assetId": "guideline-page-doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8-18",
+        "label": "Supplied draft Visual World Guide slide: warm Indian modernism",
+        "kind": "reference"
+      },
+      {
+        "assetId": "supplied-asset-library-asset-c359ad93-b65d-41d9-9c07-400e170eedd0",
+        "label": "Interior inspiration reference: warm contemporary bedroom",
+        "kind": "reference"
+      },
+      {
+        "assetId": "supplied-asset-library-asset-61431423-84d7-4a18-a0f3-2e22d2b68620",
+        "label": "Interior inspiration reference: light timber bedroom",
+        "kind": "reference"
+      }
+    ]
+  },
+  "error": "Evidence needs accessible sources"
+}

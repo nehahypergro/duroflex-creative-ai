@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "key": "75fe0be3138f8b474be122caabb4d2993cb925aef4a4184df6661f757406d903",
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "productId": "product-1866c9dd503945191711",
+  "variantId": "51542132588676",
+  "photoHashes": [
+    "790e970df9e514a7174467dfc75584535345611f66d9a4856bdc051086cafdde",
+    "f680f92ee5209150befde6b5b0f60fc5d23020bd02ce77722e3722efe13631e5",
+    "71d23797c58766900510354347f14d70c91fe265553c15416a9ba9407b296520"
+  ],
+  "features": [
+    {
+      "feature": "Rectangular mattress with gently rounded corners and a low, even profile.",
+      "where": "Overall shape"
+    },
+    {
+      "feature": "Blue-gray quilted top with repeating staggered rows of raised, elongated rounded rectangles.",
+      "where": "Top surface"
+    },
+    {
+      "feature": "Light gray upper side band above a dark gray vertically ribbed side wall; thin pale horizontal piping runs across the lower side, with dark blue edging at the base.",
+      "where": "Side walls and edges"
+    },
+    {
+      "feature": "Dark navy, angled-bottom label with a turquoise lower strip attached to the long side panel near the middle.",
+      "where": "Long side panel"
+    },
+    {
+      "feature": "The side label reads “DUROFLEX”, “DUROPEDIC” and “BACK MAGIC PRO +”.",
+      "where": "Long-side physical label"
+    }
+  ],
+  "labelWords": "DUROFLEX DUROPEDIC BACK MAGIC PRO +",
+  "jobId": "creative-3b45a0ef-804c-4514-80e1-dc00f46ed245",
+  "createdAt": "2026-11-10T14:11:41.905Z"
+}
