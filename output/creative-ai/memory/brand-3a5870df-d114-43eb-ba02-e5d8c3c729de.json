@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "revision": 1,
+  "feedback": [],
+  "preferences": [
+    {
+      "id": "preference-af45fa99-bb3b-4560-9474-745d0af81fa6",
+      "version": 1,
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "active": true,
+      "scope": "brand",
+      "productUrl": null,
+      "placementId": null,
+      "text": "Reuse the user-approved Sleepyhead logos stored in the brand canvas registry and approved-logos/2026-10-15 archive instead of searching online again. Use the saved transparent orange-and-charcoal primary logo, or transparent white-and-charcoal reverse logo according to the scene. BOTH versions retain charcoal head, closed-eye e lower halves and TM: the reverse is not an all-white logo. Ensure contrast for every colour; do not place charcoal on an equally dark background or white lettering on white. Preserve exact shapes, two-tone colouring, spacing, trademark and proportions; never redraw. Original background versions are archived; use transparent derivatives when placing on artwork.",
+      "provenance": {
+        "kind": "named-brand-training",
+        "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+        "brandName": "Sleepyhead",
+        "knowledgeRevision": "10842f8c765b0caac3b626b08d8b3968ccc4563a6388431e89f49346ec0a28c7",
+        "actor": {
+          "kind": "local-pilot",
+          "attribution": "Unauthenticated local operator"
+        }
+      },
+      "createdAt": "2026-10-15T10:14:40.196Z",
+      "updatedAt": "2026-10-15T10:14:40.196Z"
+    }
+  ],
+  "history": [
+    {
+      "revision": 1,
+      "action": "created",
+      "preference": {
+        "id": "preference-af45fa99-bb3b-4560-9474-745d0af81fa6",
+        "version": 1,
+        "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+        "active": true,
+        "scope": "brand",
+        "productUrl": null,
+        "placementId": null,
+        "text": "Reuse the user-approved Sleepyhead logos stored in the brand canvas registry and approved-logos/2026-10-15 archive instead of searching online again. Use the saved transparent orange-and-charcoal primary logo, or transparent white-and-charcoal reverse logo according to the scene. BOTH versions retain charcoal head, closed-eye e lower halves and TM: the reverse is not an all-white logo. Ensure contrast for every colour; do not place charcoal on an equally dark background or white lettering on white. Preserve exact shapes, two-tone colouring, spacing, trademark and proportions; never redraw. Original background versions are archived; use transparent derivatives when placing on artwork.",
+        "provenance": {
+          "kind": "named-brand-training",
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "brandName": "Sleepyhead",
+          "knowledgeRevision": "10842f8c765b0caac3b626b08d8b3968ccc4563a6388431e89f49346ec0a28c7",
+          "actor": {
+            "kind": "local-pilot",
+            "attribution": "Unauthenticated local operator"
+          }
+        },
+        "createdAt": "2026-10-15T10:14:40.196Z",
+        "updatedAt": "2026-10-15T10:14:40.196Z"
+      },
+      "recordedAt": "2026-10-15T10:14:40.196Z"
+    }
+  ]
+}

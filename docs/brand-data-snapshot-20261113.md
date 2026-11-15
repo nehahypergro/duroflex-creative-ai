@@ -11,8 +11,12 @@ Added with `git add -f` (the `.gitignore` rule for `output/` stays, so new gener
 | `output/creative-ai/brands/` | Brand settings, product records and website snapshots, approved logos and fonts (as CDN records), brand documents, datasets, headline history, product fingerprints |
 | `output/creative-ai/research-sessions/` | Each brand's research |
 | `output/media-storage/` | CDN settings and upload indexes |
+| `output/creative-ai/reference-images/<brandId>/` (149 files only, added 15 Nov) | The saved pictures the research above points to. Without them research does not open and every readiness check fails with CA-404 |
+| `output/creative-ai/memory/` (added 15 Nov) | Each brand's saved preferences (one per brand: reuse the approved logos) |
 
-That is 10,359 files, about 216 MB.
+That is 10,359 files, about 216 MB, plus 151 files (about 136 MB) added on 15 Nov 2026.
+
+**15 Nov fix:** the live site could not create any design ("The readiness check could not finish", Error CA-404), because the research's reference pictures were left out of the first snapshot. Only the 149 pictures that the saved research uses were added; the rest of that folder (3.7 GB) belongs to past projects. Checked by running the live site's readiness request against a clean copy of this branch: it failed with the same error before and passed all 7 checks after.
 
 ## What is not in Git
 
@@ -25,7 +29,7 @@ That is 10,359 files, about 216 MB.
   Each download is checked against its saved hash.
 - **One Duroflex brand document** (`brands/brand-1923d633-…/sources/doc-de7dd121-8244-4f7e-9efe-ab12b9fbc4a8.pptx`, 388 MB). GitHub refuses files over 100 MB, and it has no CDN copy. Ask Neha for it if the brand library needs the original.
 - **`output/cost-tracking/`**: cost records stay private (project rule).
-- **Past projects (`output/creative-ai/jobs/`), reference images and old brand dossiers**: history only, about 53 GB.
+- **Past projects (`output/creative-ai/jobs/`), their reference images and old brand dossiers**: history only, about 53 GB.
 - **`.env` and secrets**: never in Git. See the handover note for the settings list.
 
 ## Checks before committing

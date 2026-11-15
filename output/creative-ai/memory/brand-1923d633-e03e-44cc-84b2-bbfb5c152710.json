@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "revision": 1,
+  "feedback": [
+    {
+      "id": "feedback-08b3a999-c963-4bd8-9571-1681f4f6a306",
+      "jobId": "creative-c538f1cf-5a65-49a3-8d0f-31fca63f6550",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "productUrl": "https://www.duroflexworld.com/products/cocoon-cool-grey-fabric-3-seater-sofa",
+      "placementId": "custom_studio-social-story",
+      "formatId": "custom_studio-social-story",
+      "route": "continuity",
+      "knowledgeRevision": "412c73eefa32d5111b299a316c5ab555132b0c1c36ccfa2a28a8ad9c87a99a46",
+      "memoryRevision": 1,
+      "imageUrl": "/creative-ai/api/jobs/creative-c538f1cf-5a65-49a3-8d0f-31fca63f6550/files/static-editable-continuity-custom_studio-social-story.png",
+      "artifactHash": "436b0d6a627e83562a0f500924771f0aec268d20bba7d0937897257859128407",
+      "artifactVersion": 0,
+      "creativeVersionId": "original",
+      "qualityVerified": false,
+      "ready": false,
+      "reviewStatus": "editable-needs-review",
+      "synthetic": true,
+      "correctionCycles": 0,
+      "text": "Failed test output: copy/product or subject overlap and oversized CTA remain unresolved. Preserve as negative QA evidence only; do not use as an approved creative or desired style example.",
+      "rating": "change",
+      "createdAt": "2026-10-15T11:56:13.593Z",
+      "actor": {
+        "kind": "local-pilot",
+        "attribution": "Unauthenticated local operator"
+      },
+      "approvedLearningExample": false,
+      "captureMode": "stored-only",
+      "learningEligible": false,
+      "evaluatedExample": false
+    },
+    {
+      "id": "feedback-59665bc6-e23c-45b7-b59f-692ba00facf0",
+      "jobId": "creative-c538f1cf-5a65-49a3-8d0f-31fca63f6550",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "productUrl": "https://www.duroflexworld.com/products/cocoon-cool-grey-fabric-3-seater-sofa",
+      "placementId": "custom_studio-social-story",
+      "formatId": "custom_studio-social-story",
+      "route": "exploration",
+      "knowledgeRevision": "412c73eefa32d5111b299a316c5ab555132b0c1c36ccfa2a28a8ad9c87a99a46",
+      "memoryRevision": 1,
+      "imageUrl": "/creative-ai/api/jobs/creative-c538f1cf-5a65-49a3-8d0f-31fca63f6550/files/static-editable-exploration-custom_studio-social-story.png",
+      "artifactHash": "c10082507a0f207518691a467a7444e998618a0ac0d03986093bd2fd1cfdb7ec",
+      "artifactVersion": 0,
+      "creativeVersionId": "original",
+      "qualityVerified": false,
+      "ready": false,
+      "reviewStatus": "editable-needs-review",
+      "synthetic": true,
+      "correctionCycles": 0,
+      "text": "Failed test output: copy/product or subject overlap and oversized CTA remain unresolved. Preserve as negative QA evidence only; do not use as an approved creative or desired style example.",
+      "rating": "change",
+      "createdAt": "2026-10-15T11:56:13.619Z",
+      "actor": {
+        "kind": "local-pilot",
+        "attribution": "Unauthenticated local operator"
+      },
+      "approvedLearningExample": false,
+      "captureMode": "stored-only",
+      "learningEligible": false,
+      "evaluatedExample": false
+    },
+    {
+      "id": "feedback-ff0b9612-782d-4a1b-9755-13b4b9331d94",
+      "jobId": "creative-0f03d9cd-c96f-4ce5-baae-0d92fc48aee4",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "productUrl": "https://www.duroflexworld.com/products/cocoon-cool-grey-fabric-3-seater-sofa",
+      "placementId": "custom_studio-social-story",
+      "formatId": "custom_studio-social-story",
+      "route": "continuity",
+      "knowledgeRevision": "412c73eefa32d5111b299a316c5ab555132b0c1c36ccfa2a28a8ad9c87a99a46",
+      "memoryRevision": 1,
+      "imageUrl": "/creative-ai/api/jobs/creative-0f03d9cd-c96f-4ce5-baae-0d92fc48aee4/files/static-editable-continuity-custom_studio-social-story.png",
+      "artifactHash": "e9fbb803b38f1982e139e39a447900d111d242595de50fb4567524dee4c0c44f",
+      "artifactVersion": 0,
+      "creativeVersionId": "original",
+      "qualityVerified": false,
+      "ready": false,
+      "reviewStatus": "editable-needs-review",
+      "synthetic": true,
+      "correctionCycles": 0,
+      "text": "Assistant visual QA: failed test output, not desired-quality evidence. Oversized headline crosses the seated person’s head; supporting copy moved into requested Story top clearance; product-name has weak contrast. Automated review unavailable at token counting; no corrective revision. Preserve as negative QA evidence only.",
+      "rating": "change",
+      "createdAt": "2026-10-15T12:14:11.856Z",
+      "actor": {
+        "kind": "local-pilot",
+        "attribution": "Unauthenticated local operator"
+      },
+      "approvedLearningExample": false,
+      "captureMode": "stored-only",
+      "learningEligible": false,
+      "evaluatedExample": false
+    },
+    {
+      "id": "feedback-83deeb95-1f35-40b5-b89d-c40c7fbdea52",
+      "jobId": "creative-0f03d9cd-c96f-4ce5-baae-0d92fc48aee4",
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "productUrl": "https://www.duroflexworld.com/products/cocoon-cool-grey-fabric-3-seater-sofa",
+      "placementId": "custom_studio-social-story",
+      "formatId": "custom_studio-social-story",
+      "route": "exploration",
+      "knowledgeRevision": "412c73eefa32d5111b299a316c5ab555132b0c1c36ccfa2a28a8ad9c87a99a46",
+      "memoryRevision": 1,
+      "imageUrl": "/creative-ai/api/jobs/creative-0f03d9cd-c96f-4ce5-baae-0d92fc48aee4/files/static-editable-exploration-custom_studio-social-story.png",
+      "artifactHash": "54625c3b45bcee9de058f76315a7a076808d82a95713235cdcf69e5946c96a22",
+      "artifactVersion": 0,
+      "creativeVersionId": "original",
+      "qualityVerified": false,
+      "ready": false,
+      "reviewStatus": "editable-needs-review",
+      "synthetic": true,
+      "correctionCycles": 0,
+      "text": "Assistant visual QA: failed test output, not desired-quality evidence. Black copy loses contrast against the dark wall; product-name moved into requested Story top clearance; text hierarchy is poor. Automated review unavailable at token counting; no corrective revision. Preserve as negative QA evidence only.",
+      "rating": "change",
+      "createdAt": "2026-10-15T12:14:11.880Z",
+      "actor": {
+        "kind": "local-pilot",
+        "attribution": "Unauthenticated local operator"
+      },
+      "approvedLearningExample": false,
+      "captureMode": "stored-only",
+      "learningEligible": false,
+      "evaluatedExample": false
+    }
+  ],
+  "preferences": [
+    {
+      "id": "preference-fc527189-6ae6-4788-8949-f4ff9179c595",
+      "version": 1,
+      "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+      "active": true,
+      "scope": "brand",
+      "productUrl": null,
+      "placementId": null,
+      "text": "Use the saved user-approved Duroflex logos in the brand canvas asset registry and approved-logos/2026-10-15 archive. Reuse these files instead of searching online again. Use the supplied red transparent mark or its white transparent vector derivative according to background contrast. The white logo must have a transparent background, never a red rectangle. Preserve the logo symbol, wordmark and proportions; do not redraw. Originals and provenance are preserved in the archive.",
+      "provenance": {
+        "kind": "named-brand-training",
+        "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+        "brandName": "Duroflex",
+        "knowledgeRevision": "412c73eefa32d5111b299a316c5ab555132b0c1c36ccfa2a28a8ad9c87a99a46",
+        "actor": {
+          "kind": "local-pilot",
+          "attribution": "Unauthenticated local operator"
+        }
+      },
+      "createdAt": "2026-10-15T10:07:21.165Z",
+      "updatedAt": "2026-10-15T10:07:21.165Z"
+    }
+  ],
+  "history": [
+    {
+      "revision": 1,
+      "action": "created",
+      "preference": {
+        "id": "preference-fc527189-6ae6-4788-8949-f4ff9179c595",
+        "version": 1,
+        "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+        "active": true,
+        "scope": "brand",
+        "productUrl": null,
+        "placementId": null,
+        "text": "Use the saved user-approved Duroflex logos in the brand canvas asset registry and approved-logos/2026-10-15 archive. Reuse these files instead of searching online again. Use the supplied red transparent mark or its white transparent vector derivative according to background contrast. The white logo must have a transparent background, never a red rectangle. Preserve the logo symbol, wordmark and proportions; do not redraw. Originals and provenance are preserved in the archive.",
+        "provenance": {
+          "kind": "named-brand-training",
+          "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+          "brandName": "Duroflex",
+          "knowledgeRevision": "412c73eefa32d5111b299a316c5ab555132b0c1c36ccfa2a28a8ad9c87a99a46",
+          "actor": {
+            "kind": "local-pilot",
+            "attribution": "Unauthenticated local operator"
+          }
+        },
+        "createdAt": "2026-10-15T10:07:21.165Z",
+        "updatedAt": "2026-10-15T10:07:21.165Z"
+      },
+      "recordedAt": "2026-10-15T10:07:21.165Z"
+    }
+  ]
+}
