@@ -1,0 +1,244 @@
+{
+  "id": 10552274976952,
+  "title": "Memory Foam Topper",
+  "handle": "memory-foam-topper",
+  "description": "<p>For all the discomfort you've had to endure sleeping on an uncomfortable mattress, we’ve come up with a solution to transform the way you sleep. Introducing the Sleepyhead Memory Foam Topper, designed to enhance the comfort and durability of your existing mattress without ever replacing it.</p>\n\n<p>This 2-inch Memory Foam Topper is designed to relieve pressure points while providing body-conforming support that helps reduce your muscle pain. It also features High-Resilience (HR) foam, delivering plush comfort with the right balance of support so you can sleep peacefully through the night. The pinhole memory foam technology inside the topper promotes enhanced airflow to keep your sleep surface cooler and fresher every night.</p>\n\n<p>If you share your bed with a partner or a child, the topper's memory foam absorbs motion transfer, minimizing sleep disruptions caused by movement so you get to enjoy a dope, uninterrupted rest.</p>\n\n<p>Wrapped in a premium, luxurious fabric, the topper feels soft for your skin and the anti-skid fabric on the bottom helps keep it securely in place on your mattress. It also has four super elastic corner straps to ensure a snug, stable fit. Simply place it over your existing mattress, secure the straps, and enjoy enhanced comfort without worrying about the topper shifting its place; even if you're busy dreaming dragons, deadlines, or your crush. </p>\n\n<p>Whether you're coming home exhausted after a long day or simply looking for a more comfortable sleep surface, this topper helps reduce pressure points, eases fatigue, and prepares your body for deeper, more restorative sleep. The Sleepyhead Memory Foam Topper is ideal for anyone seeking plush comfort with balanced body support.</p>",
+  "published_at": "2026-09-25T11:26:23+05:30",
+  "created_at": "2026-08-27T15:48:16+05:30",
+  "vendor": "Sleepyhead",
+  "type": "Mattress Topper",
+  "tags": [
+    "DEALS15",
+    "FEST10",
+    "FESTGRAND",
+    "OLDMONEY5",
+    "PAYDAY5",
+    "SALE5",
+    "Summer"
+  ],
+  "price": 618600,
+  "price_min": 618600,
+  "price_max": 755900,
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": 687400,
+  "compare_at_price_min": 687400,
+  "compare_at_price_max": 839900,
+  "compare_at_price_varies": true,
+  "variants": [
+    {
+      "id": 53995932647608,
+      "title": "Queen 78\" x 60\" x 2\" (198cm  x 152cm x 5cm)",
+      "option1": "Queen 78\" x 60\" x 2\" (198cm  x 152cm x 5cm)",
+      "option2": null,
+      "option3": null,
+      "sku": "SHMFTOP780060000200GREY",
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": null,
+      "available": true,
+      "name": "Memory Foam Topper - Queen 78\" x 60\" x 2\" (198cm  x 152cm x 5cm)",
+      "public_title": "Queen 78\" x 60\" x 2\" (198cm  x 152cm x 5cm)",
+      "options": [
+        "Queen 78\" x 60\" x 2\" (198cm  x 152cm x 5cm)"
+      ],
+      "price": 618600,
+      "weight": 0,
+      "compare_at_price": 687400,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 53995932680376,
+      "title": "King 78\" x 72\" x 2\" (198cm  x 183cm x 5cm)",
+      "option1": "King 78\" x 72\" x 2\" (198cm  x 183cm x 5cm)",
+      "option2": null,
+      "option3": null,
+      "sku": "SHMFTOP780072000200GREY",
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": null,
+      "available": true,
+      "name": "Memory Foam Topper - King 78\" x 72\" x 2\" (198cm  x 183cm x 5cm)",
+      "public_title": "King 78\" x 72\" x 2\" (198cm  x 183cm x 5cm)",
+      "options": [
+        "King 78\" x 72\" x 2\" (198cm  x 183cm x 5cm)"
+      ],
+      "price": 755900,
+      "weight": 0,
+      "compare_at_price": 839900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_2.jpg?v=1789456209",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_1.jpg?v=1789456209",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_3.jpg?v=1789456209",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_4.jpg?v=1789456209",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_5.jpg?v=1789456209",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_6.jpg?v=1789456209",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_7.jpg?v=1789456209",
+    "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_8.jpg?v=1789456210"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_2.jpg?v=1789456209",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Queen 78\" x 60\" x 2\" (198cm  x 152cm x 5cm)",
+        "King 78\" x 72\" x 2\" (198cm  x 183cm x 5cm)"
+      ]
+    }
+  ],
+  "url": "/products/memory-foam-topper",
+  "media": [
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518654005432,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_2.jpg?v=1789456209"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_2.jpg?v=1789456209",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518653972664,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_1.jpg?v=1789456209"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_1.jpg?v=1789456209",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518654038200,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_3.jpg?v=1789456209"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_3.jpg?v=1789456209",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518654070968,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2700,
+        "width": 2700,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_4.jpg?v=1789456209"
+      },
+      "aspect_ratio": 1,
+      "height": 2700,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_4.jpg?v=1789456209",
+      "width": 2700
+    },
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518654103736,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_5.jpg?v=1789456209"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_5.jpg?v=1789456209",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518654136504,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 4500,
+        "width": 4500,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_6.jpg?v=1789456209"
+      },
+      "aspect_ratio": 1,
+      "height": 4500,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_6.jpg?v=1789456209",
+      "width": 4500
+    },
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518654169272,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_7.jpg?v=1789456209"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_7.jpg?v=1789456209",
+      "width": 3000
+    },
+    {
+      "alt": "Mattress_Topper",
+      "id": 63518654202040,
+      "position": 8,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_8.jpg?v=1789456210"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Topper_PDP_8.jpg?v=1789456210",
+      "width": 3000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

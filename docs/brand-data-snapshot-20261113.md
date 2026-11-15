@@ -14,7 +14,7 @@ Added with `git add -f` (the `.gitignore` rule for `output/` stays, so new gener
 | `output/creative-ai/reference-images/<brandId>/` (149 files only, added 15 Nov) | The saved pictures the research above points to. Without them research does not open and every readiness check fails with CA-404 |
 | `output/creative-ai/memory/` (added 15 Nov) | Each brand's saved preferences (one per brand: reuse the approved logos) |
 
-That is 10,359 files, about 216 MB, plus 151 files (about 136 MB) added on 15 Nov 2026.
+That is 10,359 files, about 216 MB, plus 151 files (about 136 MB) added on 15 Nov 2026, plus 8 new SKUs (370 files, 11.7 MB; pictures on the CDN) so each brand has at least five products per category (see `docs/readiness-matrix-20261115.md`).
 
 **15 Nov fix:** the live site could not create any design ("The readiness check could not finish", Error CA-404), because the research's reference pictures were left out of the first snapshot. Only the 149 pictures that the saved research uses were added; the rest of that folder (3.7 GB) belongs to past projects. Checked by running the live site's readiness request against a clean copy of this branch: it failed with the same error before and passed all 7 checks after.
 

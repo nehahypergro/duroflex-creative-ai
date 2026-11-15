@@ -1,0 +1,4949 @@
+{
+  "version": 1,
+  "id": "product-827ab7462f52c46c5ad8",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "features": [
+    "100 Nights Trial",
+    "Dual comfort (Firm and Soft)",
+    "High density foam"
+  ],
+  "specificationFields": [
+    {
+      "label": "Mattres Feel",
+      "value": "Dual Side Comfort (Firm & Soft feel)",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Dimension",
+      "value": "72\" x 35\" x 5\"",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Length",
+      "value": "72\"",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Depth",
+      "value": "35\"",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Heigth",
+      "value": "5\"",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Material",
+      "value": "Foam",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Size",
+      "value": "Single",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Color",
+      "value": "Grey",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Model",
+      "value": "Flip",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Warranty",
+      "value": "7 Years",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Assembly Required",
+      "value": "DIY (Do-It-Yourself)",
+      "origin": "official-page-table"
+    }
+  ],
+  "catalogVersion": 2,
+  "officialProductId": "10408230453432",
+  "name": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+  "sku": "SHFLIP720035000500GREY",
+  "description": "Experience the versatility and comfort of Sleepyhead Flip, the mattress that offers you two choices in one. With its unique design, you can easily find the perfect fit for your sleep preferences. On one side of the mattress, you'll discover a soft and plush feel that gently cradles your body. Sink into a cloud-like embrace as you drift off to sleep, surrounded by luxurious soft foam. This side is perfect for those who enjoy a softer, more cushioned sleeping surface with a medium-firm feel. But what if you prefer a firmer level of support? Simply flip the mattress over, and you'll be greeted by the other side, designed to provide a firm and supportive feel. Experience the gentle yet firm support that keeps your body aligned and promotes a restful night's sleep. With Sleepyhead Flip, you no longer have to compromise on finding the right fit for you. This innovative mattress offers you two options, two chances to discover the perfect level of comfort and support tailored to your needs. Whether you prefer a soft and plush experience or a firm and supportive feel, Sleepyhead Flip has you covered. Embrace the freedom of choice with Sleepyhead Flip, where you can effortlessly switch between two mattresses in one. Say goodbye to restless nights and hello to the perfect sleep experience that suits your unique preferences. Elevate your comfort and enjoy the best of both worlds with Sleepyhead Flip.",
+  "brand": "",
+  "taxonomy": [
+    {
+      "name": "Mattresses",
+      "url": "https://mysleepyhead.com/collections/mattresses",
+      "basis": "Website breadcrumb"
+    }
+  ],
+  "category": "Mattresses",
+  "variants": [
+    {
+      "id": "53482088693944",
+      "sku": "SHFLIP720035000500GREY",
+      "name": "Single / 72 X 35 (183 cm x 89 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "72 X 35 (183 cm x 89 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 35 (183 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088726712",
+      "sku": "SHFLIP720035000600GREY",
+      "name": "Single / 72 X 35 (183 cm x 89 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "72 X 35 (183 cm x 89 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 35 (183 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088759480",
+      "sku": "SHFLIP720036000400GREY",
+      "name": "Single / 72 X 36 (183 cm x 92 cm) / 4 (10.16cm)",
+      "options": [
+        "Single",
+        "72 X 36 (183 cm x 92 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 36 (183 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088792248",
+      "sku": "SHFLIP720036000500GREY",
+      "name": "Single / 72 X 36 (183 cm x 92 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "72 X 36 (183 cm x 92 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 36 (183 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088825016",
+      "sku": "SHFLIP720036000600GREY",
+      "name": "Single / 72 X 36 (183 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "72 X 36 (183 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 36 (183 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090135736",
+      "sku": "SHFLIP720036000800GREY",
+      "name": "Single / 72 X 36 (183 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "72 X 36 (183 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 36 (183 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088857784",
+      "sku": "SHFLIP750035000500GREY",
+      "name": "Single / 75 X 35 (191 cm x 89 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "75 X 35 (191 cm x 89 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 35 (191 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088890552",
+      "sku": "SHFLIP750035000600GREY",
+      "name": "Single / 75 X 35 (191 cm x 89 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "75 X 35 (191 cm x 89 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 35 (191 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090168504",
+      "sku": "SHFLIP750035000800GREY",
+      "name": "Single / 75 X 35 (191 cm x 89 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "75 X 35 (191 cm x 89 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 35 (191 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088923320",
+      "sku": "SHFLIP750036000500GREY",
+      "name": "Single / 75 X 36 (191 cm x 92 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "75 X 36 (191 cm x 92 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 36 (191 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088956088",
+      "sku": "SHFLIP750036000600GREY",
+      "name": "Single / 75 X 36 (191 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "75 X 36 (191 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 36 (191 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090201272",
+      "sku": "SHFLIP750036000800GREY",
+      "name": "Single / 75 X 36 (191 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "75 X 36 (191 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 36 (191 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482088988856",
+      "sku": "SHFLIP780035000500GREY",
+      "name": "Single / 78 X 35 (198 cm x 89 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "78 X 35 (198 cm x 89 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 35 (198 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089021624",
+      "sku": "SHFLIP780035000600GREY",
+      "name": "Single / 78 X 35 (198 cm x 89 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "78 X 35 (198 cm x 89 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 35 (198 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090234040",
+      "sku": "SHFLIP780035000800GREY",
+      "name": "Single / 78 X 35 (198 cm x 89 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "78 X 35 (198 cm x 89 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 35 (198 cm x 89 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089054392",
+      "sku": "SHFLIP780036000500GREY",
+      "name": "Single / 78 X 36 (198 cm x 92 cm) / 5 (12.7cm)",
+      "options": [
+        "Single",
+        "78 X 36 (198 cm x 92 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 36 (198 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089087160",
+      "sku": "SHFLIP780036000600GREY",
+      "name": "Single / 78 X 36 (198 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "78 X 36 (198 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 36 (198 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090266808",
+      "sku": "SHFLIP780036000800GREY",
+      "name": "Single / 78 X 36 (198 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "78 X 36 (198 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 36 (198 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089119928",
+      "sku": "SHFLIP720048000400GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 4 (10.16cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 48 (183 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089152696",
+      "sku": "SHFLIP720048000500GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 5 (12.7cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 48 (183 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089185464",
+      "sku": "SHFLIP720048000600GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 48 (183 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090299576",
+      "sku": "SHFLIP720048000800GREY",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 48 (183 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089218232",
+      "sku": "SHFLIP750048000400GREY",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 4 (10.16cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 48 (191 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089251000",
+      "sku": "SHFLIP750048000500GREY",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 5 (12.7cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 48 (191 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089283768",
+      "sku": "SHFLIP750048000600GREY",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 48 (191 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090332344",
+      "sku": "SHFLIP750048000800GREY",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 48 (191 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089316536",
+      "sku": "SHFLIP780048000500GREY",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 5 (12.7cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 48 (198 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089349304",
+      "sku": "SHFLIP780048000600GREY",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 48 (198 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090365112",
+      "sku": "SHFLIP780048000800GREY",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 48 (198 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089382072",
+      "sku": "SHFLIP720060000400GREY",
+      "name": "Queen / 72 X 60 (183 cm x 152 cm) / 4 (10.16cm)",
+      "options": [
+        "Queen",
+        "72 X 60 (183 cm x 152 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 60 (183 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089414840",
+      "sku": "SHFLIP720060000500GREY",
+      "name": "Queen / 72 X 60 (183 cm x 152 cm) / 5 (12.7cm)",
+      "options": [
+        "Queen",
+        "72 X 60 (183 cm x 152 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 60 (183 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089447608",
+      "sku": "SHFLIP720060000600GREY",
+      "name": "Queen / 72 X 60 (183 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "72 X 60 (183 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 60 (183 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090397880",
+      "sku": "SHFLIP720060000800GREY",
+      "name": "Queen / 72 X 60 (183 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "72 X 60 (183 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 60 (183 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089480376",
+      "sku": "SHFLIP780060000400GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 4 (10.16cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 60 (198 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089513144",
+      "sku": "SHFLIP780060000500GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 5 (12.7cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 60 (198 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089545912",
+      "sku": "SHFLIP780060000600GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 60 (198 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090463416",
+      "sku": "SHFLIP780060000800GREY",
+      "name": "Queen / 78 X 60 (198 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "78 X 60 (198 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 60 (198 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089578680",
+      "sku": "SHFLIP750060000400GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 4 (10.16cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 60 (191 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089611448",
+      "sku": "SHFLIP750060000500GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 5 (12.7cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 60 (191 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089644216",
+      "sku": "SHFLIP750060000600GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 60 (191 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090430648",
+      "sku": "SHFLIP750060000800GREY",
+      "name": "Queen / 75 X 60 (191 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "75 X 60 (191 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 60 (191 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089676984",
+      "sku": "SHFLIP720070000500GREY",
+      "name": "King / 72 X 70 (183 cm x 178 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "72 X 70 (183 cm x 178 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 70 (183 cm x 178 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089709752",
+      "sku": "SHFLIP720070000600GREY",
+      "name": "King / 72 X 70 (183 cm x 178 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "72 X 70 (183 cm x 178 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 70 (183 cm x 178 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089742520",
+      "sku": "SHFLIP720072000400GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 4 (10.16cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 72 (183 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089775288",
+      "sku": "SHFLIP720072000500GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 72 (183 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089808056",
+      "sku": "SHFLIP720072000600GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 72 (183 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090496184",
+      "sku": "SHFLIP720072000800GREY",
+      "name": "King / 72 X 72 (183 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "72 X 72 (183 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 X 72 (183 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089840824",
+      "sku": "SHFLIP750070000500GREY",
+      "name": "King / 75 X 70 (191 cm x 178 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "75 X 70 (191 cm x 178 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 70 (191 cm x 178 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089873592",
+      "sku": "SHFLIP750070000600GREY",
+      "name": "King / 75 X 70 (191 cm x 178 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "75 X 70 (191 cm x 178 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 70 (191 cm x 178 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090561720",
+      "sku": "SHFLIP750070000800GREY",
+      "name": "King / 75 X 70 (191 cm x 178 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "75 X 70 (191 cm x 178 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 70 (191 cm x 178 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089906360",
+      "sku": "SHFLIP750072000500GREY",
+      "name": "King / 75 X 72 (191 cm x 183 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "75 X 72 (191 cm x 183 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 72 (191 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089939128",
+      "sku": "SHFLIP750072000600GREY",
+      "name": "King / 75 X 72 (191 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "75 X 72 (191 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 72 (191 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090528952",
+      "sku": "SHFLIP750072000800GREY",
+      "name": "King / 75 X 72 (191 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "75 X 72 (191 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 X 72 (191 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482089971896",
+      "sku": "SHFLIP780070000500GREY",
+      "name": "King / 78 X 70 (198 cm x 178 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "78 X 70 (198 cm x 178 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 70 (198 cm x 178 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090004664",
+      "sku": "SHFLIP780070000600GREY",
+      "name": "King / 78 X 70 (198 cm x 178 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "78 X 70 (198 cm x 178 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 70 (198 cm x 178 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090037432",
+      "sku": "SHFLIP780072000400GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 4 (10.16cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "4 (10.16cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 72 (198 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "4 (10.16cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090070200",
+      "sku": "SHFLIP780072000500GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 5 (12.7cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "5 (12.7cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 72 (198 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "5 (12.7cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090102968",
+      "sku": "SHFLIP780072000600GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 72 (198 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "53482090594488",
+      "sku": "SHFLIP780072000800GREY",
+      "name": "King / 78 X 72 (198 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "78 X 72 (198 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 X 72 (198 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Single",
+        "Double",
+        "Queen",
+        "King"
+      ]
+    },
+    {
+      "name": "Dimensions",
+      "position": 2,
+      "values": [
+        "72 X 35 (183 cm x 89 cm)",
+        "72 X 36 (183 cm x 92 cm)",
+        "75 X 35 (191 cm x 89 cm)",
+        "75 X 36 (191 cm x 92 cm)",
+        "78 X 35 (198 cm x 89 cm)",
+        "78 X 36 (198 cm x 92 cm)",
+        "72 x 48 (183 cm x 122 cm)",
+        "75 x 48 (191 cm x 122 cm)",
+        "78 x 48 (198 cm x 122 cm)",
+        "72 X 60 (183 cm x 152 cm)",
+        "78 X 60 (198 cm x 152 cm)",
+        "75 X 60 (191 cm x 152 cm)",
+        "72 X 70 (183 cm x 178 cm)",
+        "72 X 72 (183 cm x 183 cm)",
+        "75 X 70 (191 cm x 178 cm)",
+        "75 X 72 (191 cm x 183 cm)",
+        "78 X 70 (198 cm x 178 cm)",
+        "78 X 72 (198 cm x 183 cm)"
+      ]
+    },
+    {
+      "name": "Height",
+      "position": 3,
+      "values": [
+        "5 (12.7cm)",
+        "6 (15.2cm)",
+        "4 (10.16cm)",
+        "8 (20.3cm)"
+      ]
+    }
+  ],
+  "contentSections": [
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Home Mattresses Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey"
+    },
+    {
+      "heading": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "supporting-content",
+      "text": "Skip to product information Link Close share Copy link Open media 1 in modal Open media 2 in modal Open media 3 in modal Open media 4 in modal Open media 5 in modal Open media 6 in modal Open media 7 in modal 1 / of 7 Dual Side Usage Firm Back Support 100 Night Free Trial Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey Dual Side Usage - Firm and Soft ★★★★★ ★★★★★ 4.5/5 (1994 reviews) Single / 72 X 35 (183 cm x 89 cm) / 5 (12.7cm) Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Dimensions 72 X 35 (183 cm x 89 cm) Variant sold out or unavailable 72 X 36 (183 cm x 92 cm) Variant sold out or unavailable 75 X 35 (191 cm x 89 cm) Variant sold out or unavailable 75 X 36 (191 cm x 92 cm) Variant sold out or unavailable 78 X 35 (198 cm x 89 cm) Variant sold out or unavailable 78 X 36 (198 cm x 92 cm) Variant sold out or unavailable 72 x 48 (183 cm x 122 cm) Variant sold out or unavailable 75 x 48 (191 cm x 122 cm) Variant sold out or unavailable 78 x 48 (198 cm x 122 cm) Variant sold out or unavailable 72 X 60 (183 cm x 152 cm) Variant sold out or unavailable 78 X 60 (198 cm x 152 cm) Variant sold out or unavailable 75 X 60 (191 cm x 152 cm) Variant sold out or unavailable 72 X 70 (183 cm x 178 cm) Variant sold out or unavailable 72 X 72 (183 cm x 183 cm) Variant sold out or unavailable 75 X 70 (191 cm x 178 cm) Variant sold out or unavailable 75 X 72 (191 cm x 183 cm) Variant sold out or unavailable 78 X 70 (198 cm x 178 cm) Variant sold out or unavailable 78 X 72 (198 cm x 183 cm) Variant sold out or unavailable Height 5 (12.7cm) Variant sold out or unavailable 6 (15.2cm) Variant sold out or unavailable 4 (10.16cm) Variant sold out or unavailable 8 (20.3cm) Variant sold out or unavailable Regular price ₹ 6,329 Sale price MRP: Regular price ₹ 9,899 ₹ 6,329 36% OFF (Inclusive of all taxes) Sale Sold out Taxes included. Get it as low as ₹5712 (43%OFF) using coupon SALE5 With Bank or UPI offer Check Reaches You Before Diwali ✦ Schedule Delivery Schedule Delivery Delivery date Confirm Close Single / 72 X 35 (183 cm x 89 cm) / 5 (12.7cm) Choose from 61 customisation options Product added to cart Add to cart Connect Us Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Product Description",
+      "group": "supporting-content",
+      "text": "Product Description Experience the versatility and comfort of Sleepyhead Flip, the mattress that offers you two choices in one. With its unique design, you can easily find the perfect fit for your sleep preferences. On one side of the mattress, you'll discover a soft and plush feel that gently cradles your body. Sink into a cloud-like embrace as you drift off to sleep, surrounded by luxurious soft foam. This side is perfect for those who enjoy a softer, more cushioned sleeping surface with a medium-firm feel. But what if you prefer a firmer level of support? Simply flip the mattress over, and you'll be greeted by the other side, designed to provide a firm and supportive feel. Experience the gentle yet firm support that keeps your body aligned and promotes a restful night's sleep. With Sleepyhead Flip, you no longer have to compromise on finding the right fit for you. This innovative mattress offers you two options, two chances to discover the perfect level of comfort and support tailored to your needs. Whether you prefer a soft and plush experience or a firm and supportive feel, Sleepyhead Flip has you covered. Embrace the freedom of choice with Sleepyhead Flip, where you can effortlessly switch between two mattresses in one. Say goodbye to restless nights and hello to the perfect sleep experience that suits your unique preferences. Elevate your comfort and enjoy the best of both worlds with Sleepyhead Flip. Read more Product information Mattres Feel Dual Side Comfort (Firm & Soft feel) Dimension 72\" x 35\" x 5\" Length 72\" Depth 35\" Heigth 5\" Material Foam Size Single Color Grey Model Flip Warranty 7 Years Assembly Required DIY (Do-It-Yourself) Additional Details Features 100 Nights Trial Dual comfort (Firm and Soft) High density foam Benefits Free home delivery 7 Years Warranty Soft Knit fabric removes body humidity built up during sleep Warranty Period 7 Years Warranty Care Instructions Always place the mattress on flat surface Returns & Replacements Returnable under 100 Nights Trial Policy"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "FREE SHIPPING BEST PRICE GUARANTEE 100 NIGHTS TRIAL"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Bought Together Overview Reviews FAQs Product added to cart Add to cart Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Dual Side Usage",
+      "group": "a-plus-content",
+      "text": "Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage Dual Side Usage"
+    },
+    {
+      "heading": "Who says you can't have it all?",
+      "group": "supporting-content",
+      "text": "Who says you can't have it all? Experience the perfect balance of comfort and support with the Sleepyhead Flip mattress. Its innovative design incorporates carefully selected layers to provide you with a night of uninterrupted sleep. The top layer features a soft knit fabric with loose pores that effectively wick away body humidity, ensuring a fresh and breathable sleep environment. This, combined with the plushy soft foam layer, creates a cozy and cushiony feel that adapts to your body, regardless of your sleeping position. For individuals seeking additional support, the mattress includes a layer of hard foam. This firm layer offers exceptional support, making it ideal for those with back pain or those who prefer a more supportive sleep surface. It’s time to take a side The Soft Side Indulge in the ultimate cozy experience with the Sleepyhead Flip mattress's soft side. Designed to cradle you in comfort, this side of the mattress features a plush comfort layer that provides a gentle cushioning effect. Sink into the mattress like a warm cocoon as it contours to your body, enveloping you in softness. Whether you enjoy a cloud-like feel or prefer a softer sleeping surface, the soft side of the Sleepyhead Flip mattress offers the perfect solution. So, go ahead and flip to the softer side to experience a blissful and luxurious sleep that feels like a dream. The Firm Side Experience exceptional support and alignment with the Sleepyhead Flip mattress's firm side. When you crave a sturdy and stable sleeping surface, simply flip the mattress to unveil its firm side. Crafted with high-density foam layers, this side provides optimal support that helps align your body in a natural and comfortable position. Whether you prefer a firmer feel or need extra support for your back, the firm side of the Sleepyhead Flip mattress is designed to deliver. Enjoy the confidence of a well-supported sleep as you rest peacefully on this side, knowing that your body is properly aligned for a rejuvenating night's rest."
+    },
+    {
+      "heading": "WHAT OUR SLEEP ADDICTS SAY",
+      "group": "supporting-content",
+      "text": "WHAT OUR SLEEP ADDICTS SAY"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "5 stars: 1109 (56%) 4 stars: 793 (40%) 3 stars: 92 (5%) 2 stars: 0 (0%) 1 star: 0 (0%) Some of the reviews shown are from related products the merchant grouped with this one. P Partha Just wow Very good product.now second time purchase L Lakshmanaraja . Very good My mother was happy C Chirag Dungarwal best brand go for it, no issues j jaganath A so happy so far trustworthy brand V Vedang Mayekar great one excellent one S Swapnil Sinha happy purchase very comfortable R Rathinavel Pandiyan good service just go for it D Deepak Kumar Das good range of mattress we lked it A Arun Ravi very relaxing trustworthy brand N Neha Haveli Best one in market parents feel comfortable S Shradha Prasad Good offers we lked it S Suchit Patil Great product very comfortable A Abhishek Patel Loved the range great product for back pain A Ashraf PK Moidu Great one its wow D Divya Dinesh great choice provides good support while also giving that soft feel D Devishree Verma Good one trustworthy brand E Ezhilkumar V its comfortable good one k kumarika SAHOO its comfortable great product for back pain N Nirmala Thangam T C great one Its very comfortable A Abhirami Santhosh serves the purpose very comfortable M Manoj kumar sharma very comfortable good one S Shanthan racha trustworthy brand we feel the difference wth the mattress N Nishchay Panchal Best mattress ever Very comfortable mattress... D Dhruv Joshi perfect for relaxing good one S Sevvanthi S great one we lked it B Bianca Menezes huge collections using this brand from 3 yrs V Vineet Singh fine until today good warranty claims A Aditi N Great value feature Two comfort styles in one mattress setup V Varun J Elegant color tone Grey shade blends nicely with room decor R Rakesh V Easy comfort switch Flipping mattress changes sleeping feel K Kiran R Comfortable side choice Soft side feels cozy during longer sleep M Mehul T Great firm support Firm side gives stable sleeping comfort H Harish S Flexible firmness option Firm and soft sides are very practical R Ravi Singh purchased on call products are worth purchasing"
+    },
+    {
+      "heading": "FAQs",
+      "group": "supporting-content",
+      "text": "FAQs 1. What is Flip – Dual‑Sided Foam Mattress with Firm & Soft Sides? Flip is a Sleepyhead high‑density foam mattress designed with two distinct fiirmness sides: one soft and plush, and one firm and supportive, giving you dual side comfort options in a single mattress. 2. What problem does Flip solve? With Sleepyhead Flip, you no longer have to compromise on finding the right fit for you. It solves the problem of being unsure whether you prefer a soft or firm mattress by letting you flip the mattress to the softer side if you like plush like comfort or to the firm side if you need more back support and alignment. 3. Who is Flip best for? Flip is best for people who want flexibility in firmness, side sleepers who like the soft side for cushioning, and back or stomach sleepers who prefer the firm side for spinal support. 4. How does Flip work? The mattress has a soft comfort‑foam layer on one side for a plush, contouring feel and a high‑density, hard foam layer on the other side for strong support; you simply flip it over to switch between the two feels. It is covered with Soft knit fabric ensuring breathable and fresh sleep environment. 5. How is Flip different from alternatives? Unlike a standard single‑firmness foam mattress, Flip offers truly dual‑sided comfort: soft and firm. You can change your support level without buying a new mattress. It features soft knit fabric that wicks away moisture. It has long lasting foam with anti sagging technology that ensures durability. 6. How does Flip feel? The soft side is plush, cushiony and gives you cloud like comfort, while the firm side feels supportive and stable. 7. Does Flip come with a warranty? Yes, Flip comes with a 7‑year warranty and 100 nights trial. 8. How to care for Flip? To care for Flip, use a breathable mattress protector, keep it on a flat, supportive base, rotate periodically if recommended, avoid folding or standing on the mattress."
+    }
+  ],
+  "identityBasis": "Product structured metadata",
+  "pageUrl": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+  "requestedUrl": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+  "collectedAt": "2026-11-15T07:21:36.338Z",
+  "snapshot": "snapshot-1794727296338-5cffd3",
+  "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+  "assets": [
+    {
+      "id": "media-e044e71d98498431",
+      "url": "https://mysleepyhead.com/cdn/shop/files/6_1_91741f41-1d10-4882-9889-ce1cf9229adf.jpg?v=1779439100",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Product structured metadata",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/product-images/media-e044e71d98498431.jpg",
+      "bytes": 173186,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "993ecbb56c8ad6c2f1a23b3b3c749208af408d7979d2cb3f8dc081fd4af26b94",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/6_1_91741f41-1d10-4882-9889-ce1cf9229adf.jpg?v=1779439100",
+      "preview": "snapshot-1794727296338-5cffd3/product-images/media-e044e71d98498431-preview.png"
+    },
+    {
+      "id": "media-4ef1e775738de111",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Flip_Grey_5.jpg?v=1779189668",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/product-images/media-4ef1e775738de111.jpg",
+      "bytes": 625684,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 2001,
+      "height": 2001,
+      "sha256": "4447ed25a8d43d25c02b7087fceff2d8188c6a717360b90074a358fe22107a47",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Flip_Grey_5.jpg?v=1779189668",
+      "preview": "snapshot-1794727296338-5cffd3/product-images/media-4ef1e775738de111-preview.png"
+    },
+    {
+      "id": "media-18f3569482199330",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/3_2_f4ed928f-4656-4e96-b189-6b3f0145b331.jpg?v=1779439099",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/product-images/media-18f3569482199330.jpg",
+      "bytes": 262755,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "41116993c43d51acf0b36f90afc13cedb3b6e9c65f37f5686815a7b2f63dca07",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/3_2_f4ed928f-4656-4e96-b189-6b3f0145b331.jpg?v=1779439099",
+      "preview": "snapshot-1794727296338-5cffd3/product-images/media-18f3569482199330-preview.png"
+    },
+    {
+      "id": "media-dbb7858008546023",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Flip_Grey_2.jpg?v=1779189668",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/product-images/media-dbb7858008546023.jpg",
+      "bytes": 443411,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 2001,
+      "height": 2001,
+      "sha256": "49626850461c4010d6ba73c04cc05ea63c8888eee9ee338c9479a189973d4f98",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Flip_Grey_2.jpg?v=1779189668",
+      "preview": "snapshot-1794727296338-5cffd3/product-images/media-dbb7858008546023-preview.png"
+    },
+    {
+      "id": "media-9d9606d894a1754c",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/5_1_9bf7bd64-6926-42b5-98eb-88e0ae3305f7.jpg?v=1779439100",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/product-images/media-9d9606d894a1754c.jpg",
+      "bytes": 201549,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "96fc67fa98d1ec917247c4b9d309f3e89b45d9318cf9cb408b8108693b08e3c4",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/5_1_9bf7bd64-6926-42b5-98eb-88e0ae3305f7.jpg?v=1779439100",
+      "preview": "snapshot-1794727296338-5cffd3/product-images/media-9d9606d894a1754c-preview.png"
+    },
+    {
+      "id": "media-1447578f41ed6e4c",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/1_9.jpg?v=1779439100",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/product-images/media-1447578f41ed6e4c.jpg",
+      "bytes": 174290,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "aa7fb9231dbbd709d3f9efde4771864df76ea2d55774d946e8a476c6d7383da6",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/1_9.jpg?v=1779439100",
+      "preview": "snapshot-1794727296338-5cffd3/product-images/media-1447578f41ed6e4c-preview.png"
+    },
+    {
+      "id": "media-5a185f4446dfe8fb",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/product-images/media-5a185f4446dfe8fb.jpg",
+      "bytes": 877201,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 4096,
+      "height": 4096,
+      "sha256": "e49f6db5bee6c24de5e57d9b16cb7e5c1dd201c50f049762befc4f54eecaf610",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "preview": "snapshot-1794727296338-5cffd3/product-images/media-5a185f4446dfe8fb-preview.png"
+    },
+    {
+      "id": "media-3c925aadebb7743e",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Dual_Side_Usage.svg?v=1656058408320755709",
+      "label": "Dual Side Usage",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/tiles/media-3c925aadebb7743e.svg",
+      "bytes": 933,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "f04c4a2bd3d31976a27e7d380ec50ab354d281dcd11cb3cccad58629e8f1fcec",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Dual_Side_Usage.svg?v=1656058408320755709",
+      "preview": "snapshot-1794727296338-5cffd3/tiles/media-3c925aadebb7743e-preview.png"
+    },
+    {
+      "id": "media-29555d4ad404a0c8",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Firm_Back_Suport.svg?v=43799898375477007",
+      "label": "Firm Back Support",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/tiles/media-29555d4ad404a0c8.svg",
+      "bytes": 2291,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "2719e072fee20b3968bb2e0cc1eb2178caeef569740cb73235e8c2e95d305c1d",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Firm_Back_Suport.svg?v=43799898375477007",
+      "preview": "snapshot-1794727296338-5cffd3/tiles/media-29555d4ad404a0c8-preview.png"
+    },
+    {
+      "id": "media-f1b1dcf3968f3934",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_100_Nights_Free_Trail.svg?v=4993833255583898332",
+      "label": "100 Night Free Trial",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/tiles/media-f1b1dcf3968f3934.svg",
+      "bytes": 2163,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 97,
+      "height": 97,
+      "sha256": "2881e890437e592243fd8213d449552154430e7a3ff128f6332cc6e896963b91",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_100_Nights_Free_Trail.svg?v=4993833255583898332",
+      "preview": "snapshot-1794727296338-5cffd3/tiles/media-f1b1dcf3968f3934-preview.png"
+    },
+    {
+      "id": "media-c77ea9b00260c82d",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Flip_Grey_A_1.jpg?v=1779189723",
+      "label": "flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/a-plus-content/media-c77ea9b00260c82d.jpg",
+      "bytes": 252474,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "092103ed40e09bcc715c9ab4cad212b776b426b0d7693bb70c99aab4faa94ad3",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Flip_Grey_A_1.jpg?v=1779189723",
+      "preview": "snapshot-1794727296338-5cffd3/a-plus-content/media-c77ea9b00260c82d-preview.png"
+    },
+    {
+      "id": "media-9c822e8d11070482",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Flip_Grey_A_2.jpg?v=1779189723",
+      "label": "flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/a-plus-content/media-9c822e8d11070482.jpg",
+      "bytes": 217644,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "cd3db5c37387f2e74c5506bbd4244829787b3a06ee50a6932bbe3a54656d6dec",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Flip_Grey_A_2.jpg?v=1779189723",
+      "preview": "snapshot-1794727296338-5cffd3/a-plus-content/media-9c822e8d11070482-preview.png"
+    },
+    {
+      "id": "media-4fa1deca53d35f57",
+      "url": "https://mysleepyhead.com/cdn/shop/files/A_-Desktop_3.jpg?v=1779438662",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/a-plus-content/media-4fa1deca53d35f57.jpg",
+      "bytes": 306695,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "3edaa15b7a31c7a844b93c09fe547c28916e3eb266eb1a75deae6c2143163471",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/A_-Desktop_3.jpg?v=1779438662",
+      "preview": "snapshot-1794727296338-5cffd3/a-plus-content/media-4fa1deca53d35f57-preview.png"
+    },
+    {
+      "id": "media-bc364f7b8063c6ee",
+      "url": "https://mysleepyhead.com/cdn/shop/files/A_-Desktop_4.jpg?v=1779438661",
+      "label": "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727296338-5cffd3/a-plus-content/media-bc364f7b8063c6ee.jpg",
+      "bytes": 221012,
+      "collectedAt": "2026-11-15T07:21:36.338Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "7433303523f515dc1ce84f95fb5bba98e7d35c68ab2e2215ac41d17b88052239",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/A_-Desktop_4.jpg?v=1779438661",
+      "preview": "snapshot-1794727296338-5cffd3/a-plus-content/media-bc364f7b8063c6ee-preview.png"
+    }
+  ],
+  "gaps": [
+    "No videos exposed in the collected page / product JSON."
+  ],
+  "downloadedBytes": 3761288,
+  "jobId": null,
+  "history": [],
+  "limits": [
+    "Exact-SKU official website statements are client-approved source evidence; preserve conditions and unresolved conflicts. Generated artwork is reviewed separately.",
+    "Category comes from website breadcrumbs or product type; missing taxonomy remains Uncategorized.",
+    "Asset folder roles inferred from page sections; inspect before reuse.",
+    "Only media exposed in HTML / official product JSON is discoverable; protected or client-only assets may be missing."
+  ],
+  "audit": null,
+  "productFields": {
+    "version": 1,
+    "entries": [
+      {
+        "id": "field-dbcda8f206e328d5c865",
+        "category": "other",
+        "label": "Mattres Feel",
+        "value": "Dual Side Comfort (Firm & Soft feel)",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-cca743dd184f3e1e2cdf",
+        "category": "dimensions",
+        "label": "Dimension",
+        "value": "72\" x 35\" x 5\"",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-cc0e5c123374df98d4d5",
+        "category": "dimensions",
+        "label": "Length",
+        "value": "72\"",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-dc2e45d8012bcb2b80db",
+        "category": "other",
+        "label": "Depth",
+        "value": "35\"",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-8215fe410ce2be221bb3",
+        "category": "other",
+        "label": "Heigth",
+        "value": "5\"",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-1da497e17826edd894f5",
+        "category": "materials",
+        "label": "Material",
+        "value": "Foam",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-ec590fef8f1cf22baa68",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-0933c80b6f8ed80a63b7",
+        "category": "other",
+        "label": "Color",
+        "value": "Grey",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-824216079d2153c24705",
+        "category": "other",
+        "label": "Model",
+        "value": "Flip",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-798371726547e70cd6a9",
+        "category": "warranty",
+        "label": "Warranty",
+        "value": "7 Years",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-a7cf8a03cf8ea3a1c655",
+        "category": "other",
+        "label": "Assembly Required",
+        "value": "DIY (Do-It-Yourself)",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-f1e9a13a321dd5c9130d",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088693944",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-ff95a92b785e109d5035",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 35 (183 cm x 89 cm)",
+        "variantId": "53482088693944",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b8f88354a1b6fd797887",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482088693944",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-591a5d8ee64d0b8fb685",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088726712",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-cae88796750e030e1d14",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 35 (183 cm x 89 cm)",
+        "variantId": "53482088726712",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9f43e27a260f6821b743",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482088726712",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c287d9352b0cb04c899c",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088759480",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-165aefb382e1141ff512",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 36 (183 cm x 92 cm)",
+        "variantId": "53482088759480",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-1d9706089c0beede9d80",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482088759480",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-513b2a2d6d808a3b34d2",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088792248",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-cd2b826d3faa20451545",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 36 (183 cm x 92 cm)",
+        "variantId": "53482088792248",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-22f48b3b8a4a005d71f3",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482088792248",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-6171e0684f31e53547f7",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088825016",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e654ade04e6f78b0c131",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 36 (183 cm x 92 cm)",
+        "variantId": "53482088825016",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-edbcf868b1c464b27b44",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482088825016",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b7e32d055c85d1323ab6",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482090135736",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-0865ec4d0b8043767340",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 36 (183 cm x 92 cm)",
+        "variantId": "53482090135736",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-11e07e5ad3db2c15f9c6",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090135736",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b3e983ededa4ecaea34a",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088857784",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-621a1e1e815dc2ff3735",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 35 (191 cm x 89 cm)",
+        "variantId": "53482088857784",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-604f3426e81a2c63d14e",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482088857784",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4737e3f7f6cc8351378b",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088890552",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-057a6b7f9028330a2cc8",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 35 (191 cm x 89 cm)",
+        "variantId": "53482088890552",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-5faf3acd1a66243de54d",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482088890552",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-338f196542da2fb2b0e3",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482090168504",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-2db3fb418aea2b0e628c",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 35 (191 cm x 89 cm)",
+        "variantId": "53482090168504",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-26f013dde3954f42604c",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090168504",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-5ed2bdf7e4ca1b8eb5be",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088923320",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-191f99afed6c63166111",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 36 (191 cm x 92 cm)",
+        "variantId": "53482088923320",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b035e1b163a21766bea0",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482088923320",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-007411201d205eabd19c",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088956088",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a04909f157a2760f7ca2",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 36 (191 cm x 92 cm)",
+        "variantId": "53482088956088",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-95b38684b01421da5d59",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482088956088",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-3896463468f9d318bef4",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482090201272",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-191a93143b9d27078489",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 36 (191 cm x 92 cm)",
+        "variantId": "53482090201272",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4d13eaaa34db0a2d5abb",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090201272",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d12be3b4a03f72385397",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482088988856",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-52739f57efb281616eca",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 35 (198 cm x 89 cm)",
+        "variantId": "53482088988856",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8b2246b62b07d564e967",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482088988856",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-6444b9ccf79d29ce09b6",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482089021624",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-64eecf40c9c5e830291f",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 35 (198 cm x 89 cm)",
+        "variantId": "53482089021624",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e0c37af8b06753eb701a",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089021624",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-83cce7e349d9be490148",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482090234040",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-311dc84613a9a9965895",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 35 (198 cm x 89 cm)",
+        "variantId": "53482090234040",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-62775153b3be07f77bd2",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090234040",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e301cde8c460b25bcf16",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482089054392",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b571ff7d3b917254cf7f",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 36 (198 cm x 92 cm)",
+        "variantId": "53482089054392",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-1f6a12b1a68d20b7530f",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089054392",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d5b39258f26fd11577cf",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482089087160",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c8343d574f82891b6260",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 36 (198 cm x 92 cm)",
+        "variantId": "53482089087160",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9d99b64503432b7aeaa4",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089087160",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-386b6e6d25272383353c",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "53482090266808",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-2c33b99c4d637565f9ec",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 36 (198 cm x 92 cm)",
+        "variantId": "53482090266808",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e87b7ce876b6f15b1701",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090266808",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4c1e7953a5bf283ebff3",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089119928",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-eb2d151ba3c3fcf02d43",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 48 (183 cm x 122 cm)",
+        "variantId": "53482089119928",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-74f03b3109fb14200834",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482089119928",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d32870e64dcf4daf8a2b",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089152696",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-be28390531a92f8811db",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 48 (183 cm x 122 cm)",
+        "variantId": "53482089152696",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-66ad35b87c01a1f842ca",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089152696",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e5279fad3d7dc18f49c1",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089185464",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-0a0b71667f6ebfcf9db3",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 48 (183 cm x 122 cm)",
+        "variantId": "53482089185464",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c1680e77ef0074609b01",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089185464",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4e22c524371284e7b43d",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482090299576",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4d2a7846c15e4457c00c",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 48 (183 cm x 122 cm)",
+        "variantId": "53482090299576",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c310049339184252cb5b",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090299576",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e6c26a8c11d322114411",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089218232",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-5de1ea139706c0f6f900",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 48 (191 cm x 122 cm)",
+        "variantId": "53482089218232",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-777983341810c29e9e8a",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482089218232",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-675472cd8bced0a9d0b7",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089251000",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4d9c1638182a2989389c",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 48 (191 cm x 122 cm)",
+        "variantId": "53482089251000",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8cb4fb967e88f739a6a6",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089251000",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e589918ac1077572b7f3",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089283768",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a7ec4dbcc42b18b1f3bc",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 48 (191 cm x 122 cm)",
+        "variantId": "53482089283768",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-eccabef3af07d1edb5f9",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089283768",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c96f6403765ccb492839",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482090332344",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-1b8a7991e196667db0b1",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 48 (191 cm x 122 cm)",
+        "variantId": "53482090332344",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-537c26f7eb68288613d6",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090332344",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-bda4ae803fd8a9197115",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089316536",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-6323327f01069f9bf3f2",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 48 (198 cm x 122 cm)",
+        "variantId": "53482089316536",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-5d3ce671c04e7ab87681",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089316536",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-f99283ae085de021df63",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482089349304",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-3e4beafa04cee84d6fc7",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 48 (198 cm x 122 cm)",
+        "variantId": "53482089349304",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-0e103a71e729f403a49f",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089349304",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b5b657a85e0854089995",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "53482090365112",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8a98d142ed2c8b381fb3",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 48 (198 cm x 122 cm)",
+        "variantId": "53482090365112",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-38b69e1f876234873ed8",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090365112",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e488d29bfd08029a0722",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089382072",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a4f65f6afb8202ed5f77",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 60 (183 cm x 152 cm)",
+        "variantId": "53482089382072",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c157e6e1638f1150006a",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482089382072",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-56379361bda412b3688c",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089414840",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9187a79b89f6004e3d92",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 60 (183 cm x 152 cm)",
+        "variantId": "53482089414840",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4d4c3873fcf46ece97f4",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089414840",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4c7b98a13c2345964275",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089447608",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-63bf5bbe1c80a8318864",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 60 (183 cm x 152 cm)",
+        "variantId": "53482089447608",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-0c902872ab0bd3acc5bb",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089447608",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-157b67158a2eec0147bc",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482090397880",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b6a581f72da004811556",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 60 (183 cm x 152 cm)",
+        "variantId": "53482090397880",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8c68bb5f63673ddf9f41",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090397880",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e2b336a9ce1e25802a86",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089480376",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4285f23853ac99c6e755",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 60 (198 cm x 152 cm)",
+        "variantId": "53482089480376",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-53d86f756711f60e2367",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482089480376",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a02109863f01785ba20f",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089513144",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-2b3329694fc12f92aefe",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 60 (198 cm x 152 cm)",
+        "variantId": "53482089513144",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-5bd13af81396edc04588",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089513144",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-db6a094fe6d4e6f446e7",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089545912",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-abd8d3c9fa4c6c9588d8",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 60 (198 cm x 152 cm)",
+        "variantId": "53482089545912",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-181660756ffb4f76ac1e",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089545912",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-fab4555baec90609a57b",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482090463416",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-26e0f4bb9907e0a3a8d2",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 60 (198 cm x 152 cm)",
+        "variantId": "53482090463416",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8b8dce8270ab0a10fa10",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090463416",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-615d376cfbe7c50144cc",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089578680",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-979e65fbe1415636649b",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 60 (191 cm x 152 cm)",
+        "variantId": "53482089578680",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-696ee272f2af71170123",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482089578680",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-55acb4d9e2723b41cd95",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089611448",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-6737fb82b218c8a0fadf",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 60 (191 cm x 152 cm)",
+        "variantId": "53482089611448",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-720c4d75eeb2a552b615",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089611448",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-32314ffe8e0456cb5ef9",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482089644216",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-6e657ad64168f852429a",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 60 (191 cm x 152 cm)",
+        "variantId": "53482089644216",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-687e79289fd19b275d28",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089644216",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-15a0dc5a44a4b0606366",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "53482090430648",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-08ea90fa0d1796e0df8b",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 60 (191 cm x 152 cm)",
+        "variantId": "53482090430648",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-1071144c3c27fb3f07f4",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090430648",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-dede3991fdbbdda47eb0",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089676984",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d4b63623594cb21102c6",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 70 (183 cm x 178 cm)",
+        "variantId": "53482089676984",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e2e779047db9696b646d",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089676984",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-3c3823da7950ec04e6e1",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089709752",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-290e59ac7743ce49a975",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 70 (183 cm x 178 cm)",
+        "variantId": "53482089709752",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9ad6100bacce11788e75",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089709752",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-2c281bf0f093a2cd7dd4",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089742520",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-049c5627a5e984feddde",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 72 (183 cm x 183 cm)",
+        "variantId": "53482089742520",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9cbdcdba49cfbcfa7ff0",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482089742520",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-17b00eb9fc557794ccf7",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089775288",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-282724df8f11eab21e75",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 72 (183 cm x 183 cm)",
+        "variantId": "53482089775288",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-97d10633b581ccaffd9f",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089775288",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-6e73e7848bb2035b002e",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089808056",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b203d7831314e7bb45fb",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 72 (183 cm x 183 cm)",
+        "variantId": "53482089808056",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d6b79e120a3012831f6c",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089808056",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c04103ff70df3f9caedf",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090496184",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-963ffac09203798d4b01",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 X 72 (183 cm x 183 cm)",
+        "variantId": "53482090496184",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e649ca3800e721e90a9b",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090496184",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-0d39ed0f28ea49304793",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089840824",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-bde6438bb5887d0c4ffa",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 70 (191 cm x 178 cm)",
+        "variantId": "53482089840824",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-ad8c711b30df7ad6ac3e",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089840824",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e0ea2ad1f8f38b2f0673",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089873592",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-054c0b6428f02eb8bb36",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 70 (191 cm x 178 cm)",
+        "variantId": "53482089873592",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-463f4bc5ad43442431c8",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089873592",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-5422bb965f0d2d1ffe38",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090561720",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-5c0a90496885a7ec59a6",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 70 (191 cm x 178 cm)",
+        "variantId": "53482090561720",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8f99adb64b0d361fc806",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090561720",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-2a5a2d6e077a15480a71",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089906360",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-501c6b60198753ab50b6",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 72 (191 cm x 183 cm)",
+        "variantId": "53482089906360",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-7acc95cd4194475f85a8",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089906360",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-835d3a9136466abc95e7",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089939128",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c47fbb51f3af4e2738af",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 72 (191 cm x 183 cm)",
+        "variantId": "53482089939128",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4b8444f31205d23191c8",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482089939128",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9b6a26c3734f0dbb22a1",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090528952",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8b31bd15a8a573ed94c4",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 X 72 (191 cm x 183 cm)",
+        "variantId": "53482090528952",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4e366468a1a93dd49eb2",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090528952",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8646ccb478c8771215c7",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482089971896",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-574c0737882c4ff05a6e",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 70 (198 cm x 178 cm)",
+        "variantId": "53482089971896",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c12bf5d06964e7fe762e",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482089971896",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-85d5cf307b94e496f378",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090004664",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-2aec47dc466d5018269f",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 70 (198 cm x 178 cm)",
+        "variantId": "53482090004664",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-64a85ed37fda13bccfa6",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482090004664",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-7ec79d3ea7e5909dc6db",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090037432",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9c4b0fd128a49ac9d489",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 72 (198 cm x 183 cm)",
+        "variantId": "53482090037432",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-1c834e9c658132279d4a",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "4 (10.16cm)",
+        "variantId": "53482090037432",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9df95749cb33903b68ee",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090070200",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-1bf76512520cab96d36f",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 72 (198 cm x 183 cm)",
+        "variantId": "53482090070200",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-044dc046e9fd906d5f35",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "5 (12.7cm)",
+        "variantId": "53482090070200",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-77b890956c3e9f4d23b5",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090102968",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-690172b695688a524b28",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 72 (198 cm x 183 cm)",
+        "variantId": "53482090102968",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8757a76f88e899470615",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "53482090102968",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d1972fdd2e3dddb668e5",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "53482090594488",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-77fec773bdfee95b28c5",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 X 72 (198 cm x 183 cm)",
+        "variantId": "53482090594488",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-496c27ad31997ca7a79d",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "53482090594488",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-827ab7462f52c46c5ad8",
+          "snapshot": "snapshot-1794727296338-5cffd3",
+          "pageHash": "173772334b03d89caa1e44b005b698f9eae7f804650793a918daebe61c4f6df1",
+          "url": "https://mysleepyhead.com/products/flip-dual-sided-foam-mattress-with-firm-soft-sides-grey",
+          "origin": "saved-official-variant"
+        }
+      }
+    ],
+    "missing": [
+      "care",
+      "service",
+      "certification"
+    ],
+    "basis": "Client-approved official source statements. Values retain full source wording and conditions; extraction does not resolve conflicts, infer units, independently certify claims or approve generated artwork."
+  }
+}

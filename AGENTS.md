@@ -1,5 +1,13 @@
 # Creative AI brand isolation
 
+## Readiness matrix and brief options (15 Nov 2026)
+
+- `scripts/creative-ai/qa-card-readiness-matrix.js --root <copy>` runs every ready card × product, every brief-page option and random campaigns through the real readiness route with no paid calls. Run it on a clean checkout of what is deployed after changing cards, presets or readiness.
+- The brief page's select handler is `StudioModel.applyStaticChange` (studio.js only calls it). A changed retail Format starts from its own defaults; a unit change converts width and height; Google Display banners hide Platform; Category tile and Collection card hide Website asset; WhatsApp → RCS starts from "Single card · medium image"; Landing Page Hero defaults the branded header to Yes; ready cards do not list planning-only retail formats.
+- Members may also use the home brief box, add a product from the brand's official URL and make push icons (Neha approved, 15 Nov 2026); other brand administration stays admin-only.
+- Each brand has at least five saved SKUs per category (mattress, sofa, accessories) where its website has them.
+- See `docs/readiness-matrix-20261115.md`, including the hosted Studio's missing spend allowance and its Vertex provider setting.
+
 ## Channel craft (11 Nov 2026, after the grade-by-grade review)
 
 - New lean jobs pin `channelCraftVersion: 1` (`lean/channel-craft.js`; user request, 11 Nov 2026). Earlier jobs keep their contracts.

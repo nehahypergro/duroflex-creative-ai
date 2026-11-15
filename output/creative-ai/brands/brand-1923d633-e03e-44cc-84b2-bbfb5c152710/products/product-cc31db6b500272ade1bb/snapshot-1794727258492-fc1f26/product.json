@@ -1,0 +1,266 @@
+{
+  "id": 10464019677316,
+  "title": "Memory Foam Topper",
+  "handle": "memory-foam-topper",
+  "description": "",
+  "published_at": "2026-09-09T11:28:26+05:30",
+  "created_at": "2026-08-27T15:47:39+05:30",
+  "vendor": "Duroflex",
+  "type": "Accessories",
+  "tags": [
+    "BAUSALE26",
+    "CART5",
+    "INDIA",
+    "King Size Mattress",
+    "Memory Foam",
+    "Queen Size Mattress",
+    "SAVENOW5",
+    "searchfilter",
+    "searchfilter_Sleep Accessories",
+    "video_shop"
+  ],
+  "price": 674900,
+  "price_min": 674900,
+  "price_max": 809900,
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": 749900,
+  "compare_at_price_min": 749900,
+  "compare_at_price_max": 899900,
+  "compare_at_price_varies": true,
+  "variants": [
+    {
+      "id": 52730463813764,
+      "title": "Queen / 78 x 60 (198cm  x 152cm) / 2 (5.08cm)",
+      "option1": "Queen",
+      "option2": "78 x 60 (198cm  x 152cm)",
+      "option3": "2 (5.08cm)",
+      "sku": "DFXMFTOP780060000200GREY",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Memory Foam Topper - Queen / 78 x 60 (198cm  x 152cm) / 2 (5.08cm)",
+      "public_title": "Queen / 78 x 60 (198cm  x 152cm) / 2 (5.08cm)",
+      "options": [
+        "Queen",
+        "78 x 60 (198cm  x 152cm)",
+        "2 (5.08cm)"
+      ],
+      "price": 674900,
+      "weight": 0,
+      "compare_at_price": 749900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 52730463846532,
+      "title": "King / 78 x 72 (198cm  x 183cm) / 2 (5.08cm)",
+      "option1": "King",
+      "option2": "78 x 72 (198cm  x 183cm)",
+      "option3": "2 (5.08cm)",
+      "sku": "DFXMFTOP780072000200GREY",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Memory Foam Topper - King / 78 x 72 (198cm  x 183cm) / 2 (5.08cm)",
+      "public_title": "King / 78 x 72 (198cm  x 183cm) / 2 (5.08cm)",
+      "options": [
+        "King",
+        "78 x 72 (198cm  x 183cm)",
+        "2 (5.08cm)"
+      ],
+      "price": 809900,
+      "weight": 0,
+      "compare_at_price": 899900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_2.jpg?v=1788503930",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_1.jpg?v=1788503930",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_3.jpg?v=1788503930",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_4.jpg?v=1788503930",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_5.jpg?v=1788503931",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_6.jpg?v=1788503930",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_7.jpg?v=1788503930",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_8.jpg?v=1788503930"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_2.jpg?v=1788503930",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Queen",
+        "King"
+      ]
+    },
+    {
+      "name": "Dimension",
+      "position": 2,
+      "values": [
+        "78 x 60 (198cm  x 152cm)",
+        "78 x 72 (198cm  x 183cm)"
+      ]
+    },
+    {
+      "name": "Height (in inch)",
+      "position": 3,
+      "values": [
+        "2 (5.08cm)"
+      ]
+    }
+  ],
+  "url": "/products/memory-foam-topper",
+  "media": [
+    {
+      "alt": null,
+      "id": 53369240879236,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_2.jpg?v=1788503930"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_2.jpg?v=1788503930",
+      "width": 3000
+    },
+    {
+      "alt": null,
+      "id": 53369240846468,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_1.jpg?v=1788503930"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_1.jpg?v=1788503930",
+      "width": 3000
+    },
+    {
+      "alt": null,
+      "id": 53369240912004,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_3.jpg?v=1788503930"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_3.jpg?v=1788503930",
+      "width": 3000
+    },
+    {
+      "alt": null,
+      "id": 53369240944772,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_4.jpg?v=1788503930"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_4.jpg?v=1788503930",
+      "width": 3000
+    },
+    {
+      "alt": null,
+      "id": 53369240977540,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_5.jpg?v=1788503931"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_5.jpg?v=1788503931",
+      "width": 3000
+    },
+    {
+      "alt": null,
+      "id": 53369241010308,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_6.jpg?v=1788503930"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_6.jpg?v=1788503930",
+      "width": 3000
+    },
+    {
+      "alt": null,
+      "id": 53369241043076,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_7.jpg?v=1788503930"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_7.jpg?v=1788503930",
+      "width": 3000
+    },
+    {
+      "alt": null,
+      "id": 53369241075844,
+      "position": 8,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 3000,
+        "width": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_8.jpg?v=1788503930"
+      },
+      "aspect_ratio": 1,
+      "height": 3000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Mat_Topper_PDP_8.jpg?v=1788503930",
+      "width": 3000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

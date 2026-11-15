@@ -1,0 +1,190 @@
+{
+  "id": 5011279806596,
+  "title": "Flexi -Lightweight Travel Friendly Slim Mattress (Grey)",
+  "handle": "flexi-grey",
+  "description": "<p></p>",
+  "published_at": "2026-04-27T11:25:58+05:30",
+  "created_at": "2020-06-23T12:59:47+05:30",
+  "vendor": "Duroflex",
+  "type": "Accessories",
+  "tags": [
+    "all_products2025",
+    "BAUSALE26",
+    "BFSALE5",
+    "Binary",
+    "CARNIVAL7",
+    "CART5",
+    "custom_product",
+    "DEALS12",
+    "FEST5",
+    "Furniture 2025",
+    "furniture_off",
+    "HF2024",
+    "INDIA",
+    "matress",
+    "nosavenow",
+    "offer section",
+    "PAYDAY",
+    "PAYDAY5",
+    "REST5",
+    "SALE5",
+    "SAVENOW5",
+    "searchfilter_Sleep Accessories",
+    "searchfilter_Slim Mattress",
+    "Single Bed Mattress",
+    "Slim Mattress",
+    "Summer",
+    "video_shop"
+  ],
+  "price": 149900,
+  "price_min": 149900,
+  "price_max": 149900,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 253000,
+  "compare_at_price_min": 253000,
+  "compare_at_price_max": 253000,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 41734922043524,
+      "title": "Single / 78\" x 30\" (1.98m x 76.2cm)",
+      "option1": "Single",
+      "option2": "78\" x 30\" (1.98m x 76.2cm)",
+      "option3": null,
+      "sku": "FLEXI780030000100GREY",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Flexi -Lightweight Travel Friendly Slim Mattress (Grey) - Single / 78\" x 30\" (1.98m x 76.2cm)",
+      "public_title": "Single / 78\" x 30\" (1.98m x 76.2cm)",
+      "options": [
+        "Single",
+        "78\" x 30\" (1.98m x 76.2cm)"
+      ],
+      "price": 149900,
+      "weight": 0,
+      "compare_at_price": 253000,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/products/Flexi-01.jpg?v=1737956066",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/products/Flexi-02.jpg?v=1737956066",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigrey1.jpg?v=1737956066",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigrey3.jpg?v=1737956066",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigroup_abe5af31-7576-4ea7-80b8-b39a6b849a9e.jpg?v=1737956066"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/products/Flexi-01.jpg?v=1737956066",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Single"
+      ]
+    },
+    {
+      "name": "Dimensions",
+      "position": 2,
+      "values": [
+        "78\" x 30\" (1.98m x 76.2cm)"
+      ]
+    }
+  ],
+  "url": "/products/flexi-grey",
+  "media": [
+    {
+      "alt": "flexi|Duroflex |Home furnishings",
+      "id": 23280000237700,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Flexi-01.jpg?v=1737956066"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Flexi-01.jpg?v=1737956066",
+      "width": 1000
+    },
+    {
+      "alt": "flexi|Duroflex |Home furnishings",
+      "id": 23280000270468,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Flexi-02.jpg?v=1737956066"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Flexi-02.jpg?v=1737956066",
+      "width": 1000
+    },
+    {
+      "alt": "flexi|Duroflex |Home furnishings",
+      "id": 24762000310404,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigrey1.jpg?v=1737956066"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigrey1.jpg?v=1737956066",
+      "width": 1000
+    },
+    {
+      "alt": "flexi|Duroflex |Home furnishings",
+      "id": 24762000277636,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigrey3.jpg?v=1737956066"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigrey3.jpg?v=1737956066",
+      "width": 1000
+    },
+    {
+      "alt": "flexi|Duroflex |Home furnishings",
+      "id": 24762000343172,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 1000,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigroup_abe5af31-7576-4ea7-80b8-b39a6b849a9e.jpg?v=1737956066"
+      },
+      "aspect_ratio": 1,
+      "height": 1000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/products/Copyofflexigroup_abe5af31-7576-4ea7-80b8-b39a6b849a9e.jpg?v=1737956066",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

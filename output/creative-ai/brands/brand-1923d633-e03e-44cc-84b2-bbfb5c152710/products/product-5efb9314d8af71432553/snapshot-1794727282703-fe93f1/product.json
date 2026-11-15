@@ -1,0 +1,223 @@
+{
+  "id": 15395600531588,
+  "title": "All Weather Comforter - White & Grey",
+  "handle": "all-weather-comforter-white-grey",
+  "description": "<p></p>",
+  "published_at": "2026-10-01T16:06:15+05:30",
+  "created_at": "2026-09-30T16:15:28+05:30",
+  "vendor": "Duroflex",
+  "type": "Accessories",
+  "tags": [
+    "all_products2025",
+    "BFSALE5",
+    "Binary",
+    "CARNIVAL7",
+    "CART5",
+    "Comforter",
+    "custom_product",
+    "Furniture 2025",
+    "furniture_off",
+    "HF2024",
+    "HSR Coco",
+    "INDIA",
+    "no-selling",
+    "nosavenow",
+    "offer section",
+    "PAYDAY",
+    "PAYDAY5",
+    "searchfilter_Sleep Accessories",
+    "Summer",
+    "video_shop"
+  ],
+  "price": 269900,
+  "price_min": 269900,
+  "price_max": 359900,
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": 299900,
+  "compare_at_price_min": 299900,
+  "compare_at_price_max": 399900,
+  "compare_at_price_varies": true,
+  "variants": [
+    {
+      "id": 67582979276932,
+      "title": "Double",
+      "option1": "Double",
+      "option2": null,
+      "option3": null,
+      "sku": "AWC90001000WHGRY",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "All Weather Comforter - White & Grey - Double",
+      "public_title": "Double",
+      "options": [
+        "Double"
+      ],
+      "price": 359900,
+      "weight": 0,
+      "compare_at_price": 399900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 67582979244164,
+      "title": "Single",
+      "option1": "Single",
+      "option2": null,
+      "option3": null,
+      "sku": "AWC90006000WHGRY",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "All Weather Comforter - White & Grey - Single",
+      "public_title": "Single",
+      "options": [
+        "Single"
+      ],
+      "price": 269900,
+      "weight": 0,
+      "compare_at_price": 299900,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_1.webp?v=1790764116",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_2.webp?v=1790764116",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_3.webp?v=1790764116",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_4.webp?v=1790764116",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_5.webp?v=1790764116",
+    "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_6.webp?v=1790764116"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_1.webp?v=1790764116",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Double",
+        "Single"
+      ]
+    }
+  ],
+  "url": "/products/all-weather-comforter-white-grey",
+  "media": [
+    {
+      "alt": "all-weather-comforter-white-grey",
+      "id": 53945841778820,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_1.webp?v=1790764116"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_1.webp?v=1790764116",
+      "width": 2000
+    },
+    {
+      "alt": "all-weather-comforter-white-grey",
+      "id": 53945841811588,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_2.webp?v=1790764116"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_2.webp?v=1790764116",
+      "width": 2000
+    },
+    {
+      "alt": "all-weather-comforter-white-grey",
+      "id": 53945841844356,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_3.webp?v=1790764116"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_3.webp?v=1790764116",
+      "width": 2000
+    },
+    {
+      "alt": "all-weather-comforter-white-grey",
+      "id": 53945841877124,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_4.webp?v=1790764116"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_4.webp?v=1790764116",
+      "width": 2000
+    },
+    {
+      "alt": "all-weather-comforter-white-grey",
+      "id": 53945841909892,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_5.webp?v=1790764116"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_5.webp?v=1790764116",
+      "width": 2000
+    },
+    {
+      "alt": "all-weather-comforter-white-grey",
+      "id": 53945841942660,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2000,
+        "width": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_6.webp?v=1790764116"
+      },
+      "aspect_ratio": 1,
+      "height": 2000,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0389/7812/5956/files/Comforter_G_6.webp?v=1790764116",
+      "width": 2000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

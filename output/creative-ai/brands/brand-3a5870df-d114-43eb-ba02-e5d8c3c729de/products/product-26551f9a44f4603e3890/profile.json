@@ -1,0 +1,2424 @@
+{
+  "version": 1,
+  "id": "product-26551f9a44f4603e3890",
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "features": [
+    "BodyIQ Orthopedic Memory Foam: Crafted through thorough scientific processes, India's exclusive innovation, intelligently adapting to and accommodating any sleeping posture. It proudly holds the title of being the sole memory foam in the industry that offers unmatched personal comfort and optimal orthopedic support",
+    "Zero Motion Transfer: Memory foam can isolate and absorb any movement on the mattress to achieve a desirable zero motion transfer. Now you won't be disturbed by your partner's movements while you sleep"
+  ],
+  "specificationFields": [
+    {
+      "label": "Mattress Feel",
+      "value": "Medium Firm",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Dimension",
+      "value": "72\" x 36\" x 6\"",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Length",
+      "value": "72\" (183 cm)",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Depth",
+      "value": "36\" (91 cm)",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Heigth",
+      "value": "6\" (15.2 cm)",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Size",
+      "value": "Single",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Color",
+      "value": "White",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Model",
+      "value": "Prime",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Warranty",
+      "value": "10 Years Warranty",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Assembly Required",
+      "value": "DIY (Do-It-Yourself)",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Mattres Feel",
+      "value": "Medium Firm",
+      "origin": "official-page-table"
+    },
+    {
+      "label": "Material",
+      "value": "Memory Foam",
+      "origin": "official-page-table"
+    }
+  ],
+  "catalogVersion": 2,
+  "officialProductId": "10155006230712",
+  "name": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+  "sku": "SHPRM720036000600FP",
+  "description": "Two-sided design: Offers a choice between plush Advanced Convoluted Comfort Foam and firm Ultra Support Foam for personalized comfort. Plush comfort: One side features Advanced Convoluted Comfort Foam for gentle cushioning and exceptional contouring, perfect for relaxation. Superior support: The other side boasts Ultra Support Foam for long-lasting durability and proper spinal alignment, ensuring a refreshing night's sleep. Meticulously crafted: Tailored to meet specific needs, combining luxury and comfort for the ultimate sleep experience. Luxury of choice: Experience the convenience of two exceptional mattresses in one.",
+  "brand": "",
+  "taxonomy": [
+    {
+      "name": "Mattresses",
+      "url": "https://mysleepyhead.com/collections/mattresses",
+      "basis": "Website breadcrumb"
+    }
+  ],
+  "category": "Mattresses",
+  "variants": [
+    {
+      "id": "52531737002168",
+      "sku": "SHPRM720036000600FP",
+      "name": "Single / 72 x 36 (183 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "72 x 36 (183 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 36 (183 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737034936",
+      "sku": "SHPRM720036000800FP",
+      "name": "Single / 72 x 36 (183 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "72 x 36 (183 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 36 (183 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737100472",
+      "sku": "SHPRM750036000600FP",
+      "name": "Single / 75 x 36 (191 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "75 x 36 (191 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 36 (191 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737133240",
+      "sku": "SHPRM750036000800FP",
+      "name": "Single / 75 x 36 (191 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "75 x 36 (191 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 36 (191 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737198776",
+      "sku": "SHPRM780036000600FP",
+      "name": "Single / 78 x 36 (198 cm x 92 cm) / 6 (15.2cm)",
+      "options": [
+        "Single",
+        "78 x 36 (198 cm x 92 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 36 (198 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737231544",
+      "sku": "SHPRM780036000800FP",
+      "name": "Single / 78 x 36 (198 cm x 92 cm) / 8 (20.3cm)",
+      "options": [
+        "Single",
+        "78 x 36 (198 cm x 92 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Single"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 36 (198 cm x 92 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737297080",
+      "sku": "SHPRM720048000600FP",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 48 (183 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737329848",
+      "sku": "SHPRM720048000800FP",
+      "name": "Double / 72 x 48 (183 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "72 x 48 (183 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 48 (183 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737395384",
+      "sku": "SHPRM750048000600FP",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 48 (191 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737428152",
+      "sku": "SHPRM750048000800FP",
+      "name": "Double / 75 x 48 (191 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "75 x 48 (191 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 48 (191 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737493688",
+      "sku": "SHPRM780048000600FP",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 6 (15.2cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 48 (198 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737526456",
+      "sku": "SHPRM780048000800FP",
+      "name": "Double / 78 x 48 (198 cm x 122 cm) / 8 (20.3cm)",
+      "options": [
+        "Double",
+        "78 x 48 (198 cm x 122 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Double"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 48 (198 cm x 122 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737591992",
+      "sku": "SHPRM720060000600FP",
+      "name": "Queen / 72 x 60 (183 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "72 x 60 (183 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 60 (183 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737624760",
+      "sku": "SHPRM720060000800FP",
+      "name": "Queen / 72 x 60 (183 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "72 x 60 (183 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 60 (183 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737690296",
+      "sku": "SHPRM750060000600FP",
+      "name": "Queen / 75 x 60 (191 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "75 x 60 (191 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 60 (191 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737723064",
+      "sku": "SHPRM750060000800FP",
+      "name": "Queen / 75 x 60 (191 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "75 x 60 (191 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 60 (191 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737788600",
+      "sku": "SHPRM780060000600FP",
+      "name": "Queen / 78 x 60 (198 cm x 152 cm) / 6 (15.2cm)",
+      "options": [
+        "Queen",
+        "78 x 60 (198 cm x 152 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 60 (198 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737821368",
+      "sku": "SHPRM780060000800FP",
+      "name": "Queen / 78 x 60 (198 cm x 152 cm) / 8 (20.3cm)",
+      "options": [
+        "Queen",
+        "78 x 60 (198 cm x 152 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "Queen"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 60 (198 cm x 152 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737886904",
+      "sku": "SHPRM720072000600FP",
+      "name": "King / 72 x 72 (183 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "72 x 72 (183 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 72 (183 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737919672",
+      "sku": "SHPRM720072000800FP",
+      "name": "King / 72 x 72 (183 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "72 x 72 (183 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "72 x 72 (183 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531737985208",
+      "sku": "SHPRM750072000600FP",
+      "name": "King / 75 x 72 (191 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "75 x 72 (191 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 72 (191 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531738017976",
+      "sku": "SHPRM750072000800FP",
+      "name": "King / 75 x 72 (191 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "75 x 72 (191 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "75 x 72 (191 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531738083512",
+      "sku": "SHPRM780072000600FP",
+      "name": "King / 78 x 72 (198 cm x 183 cm) / 6 (15.2cm)",
+      "options": [
+        "King",
+        "78 x 72 (198 cm x 183 cm)",
+        "6 (15.2cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 72 (198 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "6 (15.2cm)"
+        }
+      ],
+      "available": true
+    },
+    {
+      "id": "52531738116280",
+      "sku": "SHPRM780072000800FP",
+      "name": "King / 78 x 72 (198 cm x 183 cm) / 8 (20.3cm)",
+      "options": [
+        "King",
+        "78 x 72 (198 cm x 183 cm)",
+        "8 (20.3cm)"
+      ],
+      "attributes": [
+        {
+          "name": "Size",
+          "value": "King"
+        },
+        {
+          "name": "Dimensions",
+          "value": "78 x 72 (198 cm x 183 cm)"
+        },
+        {
+          "name": "Height",
+          "value": "8 (20.3cm)"
+        }
+      ],
+      "available": true
+    }
+  ],
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "Single",
+        "Double",
+        "Queen",
+        "King"
+      ]
+    },
+    {
+      "name": "Dimensions",
+      "position": 2,
+      "values": [
+        "72 x 36 (183 cm x 92 cm)",
+        "75 x 36 (191 cm x 92 cm)",
+        "78 x 36 (198 cm x 92 cm)",
+        "72 x 48 (183 cm x 122 cm)",
+        "75 x 48 (191 cm x 122 cm)",
+        "78 x 48 (198 cm x 122 cm)",
+        "72 x 60 (183 cm x 152 cm)",
+        "75 x 60 (191 cm x 152 cm)",
+        "78 x 60 (198 cm x 152 cm)",
+        "72 x 72 (183 cm x 183 cm)",
+        "75 x 72 (191 cm x 183 cm)",
+        "78 x 72 (198 cm x 183 cm)"
+      ]
+    },
+    {
+      "name": "Height",
+      "position": 3,
+      "values": [
+        "6 (15.2cm)",
+        "8 (20.3cm)"
+      ]
+    }
+  ],
+  "contentSections": [
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Home Mattresses Prime - Premium BodyIQ Orthopedic Memory Foam Mattress"
+    },
+    {
+      "heading": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "supporting-content",
+      "text": "Skip to product information 4.7/5 ★ | 120 4.7/5 ★ | 120 Link Close share Copy link Open media 1 in modal Open media 2 in modal Open media 3 in modal Open media 4 in modal Open media 5 in modal Open media 6 in modal Open media 7 in modal 1 / of 7 Zero Motion Transfer Pressure Relief Sleep Prime - Premium BodyIQ Orthopedic Memory Foam Mattress Prime - Premium BodyIQ Orthopedic Memory Foam Mattress Pressure relieving comfort with BodyIQ Memory Foam ★★★★★ ★★★★★ 4.5/5 (75 reviews) Single / 72 x 36 (183 cm x 92 cm) / 6 (15.2cm) Size Single Variant sold out or unavailable Double Variant sold out or unavailable Queen Variant sold out or unavailable King Variant sold out or unavailable Dimensions 72 x 36 (183 cm x 92 cm) Variant sold out or unavailable 75 x 36 (191 cm x 92 cm) Variant sold out or unavailable 78 x 36 (198 cm x 92 cm) Variant sold out or unavailable 72 x 48 (183 cm x 122 cm) Variant sold out or unavailable 75 x 48 (191 cm x 122 cm) Variant sold out or unavailable 78 x 48 (198 cm x 122 cm) Variant sold out or unavailable 72 x 60 (183 cm x 152 cm) Variant sold out or unavailable 75 x 60 (191 cm x 152 cm) Variant sold out or unavailable 78 x 60 (198 cm x 152 cm) Variant sold out or unavailable 72 x 72 (183 cm x 183 cm) Variant sold out or unavailable 75 x 72 (191 cm x 183 cm) Variant sold out or unavailable 78 x 72 (198 cm x 183 cm) Variant sold out or unavailable Height 6 (15.2cm) Variant sold out or unavailable 8 (20.3cm) Variant sold out or unavailable 4.7/5 ★ | 120 4.7/5 ★ | 120 Regular price ₹ 12,853 Sale price MRP: Regular price ₹ 13,529 ₹ 12,853 5% OFF (Inclusive of all taxes) Sale Sold out Taxes included. Get it as low as ₹11568 (15%OFF) With Bank or UPI offer Check Reaches You Before Diwali ✦ Schedule Delivery Schedule Delivery Delivery date Confirm Close Single / 72 x 36 (183 cm x 92 cm) / 6 (15.2cm) Choose from 24 customisation options Product added to cart Add to cart Connect Us Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Product Description",
+      "group": "supporting-content",
+      "text": "Product Description Two-sided design: Offers a choice between plush Advanced Convoluted Comfort Foam and firm Ultra Support Foam for personalized comfort. Plush comfort: One side features Advanced Convoluted Comfort Foam for gentle cushioning and exceptional contouring, perfect for relaxation. Superior support: The other side boasts Ultra Support Foam for long-lasting durability and proper spinal alignment, ensuring a refreshing night's sleep. Meticulously crafted: Tailored to meet specific needs, combining luxury and comfort for the ultimate sleep experience. Luxury of choice: Experience the convenience of two exceptional mattresses in one. Read more Product information Mattress Feel Medium Firm Dimension 72\" x 36\" x 6\" Length 72\" (183 cm) Depth 36\" (91 cm) Heigth 6\" (15.2 cm) Size Single Color White Model Prime Warranty 10 Years Warranty Assembly Required DIY (Do-It-Yourself) Mattres Feel Medium Firm Material Memory Foam Additional Details Features BodyIQ Orthopedic Memory Foam: Crafted through thorough scientific processes, India's exclusive innovation, intelligently adapting to and accommodating any sleeping posture. It proudly holds the title of being the sole memory foam in the industry that offers unmatched personal comfort and optimal orthopedic support Zero Motion Transfer: Memory foam can isolate and absorb any movement on the mattress to achieve a desirable zero motion transfer. Now you won't be disturbed by your partner's movements while you sleep Benefits Multi-layered Support: With 3 layers - Advanced convoluted comfort foam, BodyIQ orthopedic memory foam and Ultra support foam Luxurious Quilted Fabric: Experience the ultimate in softness and comfort with our premium knitted, breathable fabric cover. It wicks moisture and dries quickly, it is abrasion and pilling-resistant Washable zipper cover Warranty Period 10 Years Warranty Care Instructions Always place the mattress on flat surface Returns & Replacements 10 days Replacement Policy"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "FREE SHIPPING BEST PRICE GUARANTEE AESTHETIC LOOK"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "Bought Together Overview Reviews FAQs Product added to cart Add to cart Couldn't load pickup availability Refresh"
+    },
+    {
+      "heading": "Pressure Relieving Comfort",
+      "group": "a-plus-content",
+      "text": "Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort Pressure Relieving Comfort"
+    },
+    {
+      "heading": "Get ready to elevate your sleep game with the Sleepyhead Prime Mattress",
+      "group": "supporting-content",
+      "text": "Get ready to elevate your sleep game with the Sleepyhead Prime Mattress Introducing the Sleepyhead Prime Mattress, a game-changer in the world of sleep technology. Powered by BodyIQ Orthopedic Memory Foam, this mattress offers unmatched personal comfort and optimal orthopedic support, adapting intelligently to any sleeping posture. With its unique multi-layered support system featuring Advanced convoluted comfort foam, BodyIQ orthopedic memory foam, and Ultra support foam, it's designed to cater to everyone's comfort needs. You'll enjoy an undisturbed sleep thanks to its zero motion transfer properties, isolating and absorbing any movement. Plus, the luxurious quilted fabric cover adds a touch of softness and breathability to your sleep experience. It's time to elevate your rest with the Sleepyhead Prime Mattress. Luxury Layers for Better Sleep This incredible mattress redefines the way you experience sleep. Thanks to the exclusive BodyIQ Orthopedic Memory Foam, it's not just any memory foam; it's the only one in the industry that offers exceptional personalized comfort and top-notch orthopedic support. And there's more – the mattress is thoughtfully designed with three layers, featuring Advanced convoluted comfort foam, BodyIQ orthopedic memory foam, and Ultra support foam. This blend of support and comfort caters to everyone's needs, promising to provide you with unparalleled cosiness and proper spinal alignment. Discover Luxurious Comfort Our high-quality knitted fabric cover is a game-changer, offering a luxurious sleep experience. This fabric is both breathable and excellent at moisture-wicking, keeping you cool and comfortable all night long. It's quick-drying, eliminating worries about discomfort from dampness. With its durability against abrasion and pilling, this cover is built to last. We've even added a washable zipper cover for extra convenience, ensuring your mattress stays fresh and inviting, making it easier than ever to maintain your ideal sleep environment."
+    },
+    {
+      "heading": "WHAT OUR SLEEP ADDICTS SAY",
+      "group": "supporting-content",
+      "text": "WHAT OUR SLEEP ADDICTS SAY"
+    },
+    {
+      "heading": "Supporting product content",
+      "group": "supporting-content",
+      "text": "5 stars: 42 (56%) 4 stars: 30 (40%) 3 stars: 3 (4%) 2 stars: 0 (0%) 1 star: 0 (0%) D Divya Prakash Great options kids loved the product K Kabir Joshi Best Purchase Ever Happy with the purchase. It's sturdy, stylish and Best Purchase Ever! T Tanvi Choudhary Value for Money Absolutely love it! The quality exceeded my expectations. Very Value for Money! A Arjun Malhotra Highly Recommended Suits our home perfectly. It's Highly Recommended and fits like a charm! R Ritika Kaul Family Favorite Absolutely love it! The quality exceeded my expectations. Very Family Favorite! A Aditya Kapoor Excellent Quality If you're considering it, go ahead. It's Excellent Quality and reliable A Anika Singh Perfect Fit The design and comfort are unbeatable. Truly Perfect Fit for the price! B Bhimesh G Good product Happy with the product K Kabir Joshi Best Purchase Ever Great value! The craftsmanship and comfort make it Best Purchase Ever M Meera Iyer Best Purchase Ever Great value! The craftsmanship and comfort make it Best Purchase Ever V Varun Saxena Value for Money This product is Value for Money and looks amazing. Would highly recommend it N Nisha Das Durable and Stylish Absolutely love it! The quality exceeded my expectations. Very Durable and Stylish! B Bhimesh G Good product I liked the product H Hrithik Bansal Highly Recommended Great value! The craftsmanship and comfort make it Highly Recommended N Nisha Das Value for Money Absolutely love it! The quality exceeded my expectations. Very Value for Money! A Ayaan Khanna Durable and Stylish Excellent service and fantastic product. Really Durable and Stylish! S Sneha Nair Superb Comfort Excellent service and fantastic product. Really Superb Comfort! A Ayaan Khanna Top-Notch Quality Happy with the purchase. It's sturdy, stylish and Top-Notch Quality! K Krishna Murthy very relaxing its wow R Rohan Mehra Excellent Quality Feels premium and durable. Couldn't have asked for a better Excellent Quality P Priya Rao Excellent Quality The design and comfort are unbeatable. Truly Excellent Quality for the price! V Vivaan Reddy Superb Comfort Feels premium and durable. Couldn't have asked for a better Superb Comfort A Ayaan Khanna Superb Comfort Feels premium and durable. Couldn't have asked for a better Superb Comfort N Neha Menon Superb Comfort Absolutely love it! The quality exceeded my expectations. Very Superb Comfort! N Noyel Johns Its our second purchase Sleepyhead is always nice N Nisha Das Value for Money Absolutely love it! The quality exceeded my expectations. Very Value for Money! S Sneha Nair Superb Comfort Excellent service and fantastic product. Really Superb Comfort! M Manav Deshmukh Top-Notch Quality Excellent service and fantastic product. Really Top-Notch Quality! A Ananya Mallick Luxurious Comfort Suits our home perfectly. It’s Luxurious Comfort and fits like a charm! D Devansh Goyal Perfect Fit Suits our home perfectly. It’s Perfect Fit and fits like a charm! K Karan Verma Excellent Quality Absolutely love it! The quality exceeded my expectations. Very Excellent Quality! N Nisha Das Highly Recommended Absolutely love it! The quality exceeded my expectations. Very Highly Recommended! S Siddharth Shetty Family Favorite If you’re considering it, go ahead. It’s Family Favorite and reliable. M Meera Iyer Best Purchase Ever Great value! The craftsmanship and comfort make it Best Purchase Ever."
+    },
+    {
+      "heading": "FAQs",
+      "group": "supporting-content",
+      "text": "FAQs 1. What is Prime - Premium BodyIQ Orthopedic Memory Foam Mattress? Prime is a 5-inch mattress featuring advanced convoluted comfort foam top with BodyIQ Memory Foam. Tailored to meet specific needs, combining luxury and comfort for the ultimate sleep experience. One side features Advanced Convoluted Comfort Foam for gentle cushioning and exceptional contouring, perfect for relaxation. The other side boasts Ultra Support Foam for long-lasting durability and proper spinal alignment, ensuring a refreshing night's sleep. 2. What problem does it solve? It solves pressure points, spinal misalignment, partner disturbances, and overheating with adaptive contouring, zero motion transfer, orthopedic alignment, and moisture-wicking breathability. 3. Who is it best for? Best for those needing personalized orthopedic support, couples sharing a bed, hot sleepers, and anyone seeking pressure-relieving comfort that adapts to various postures. 4. How does Prime - Premium BodyIQ Orthopedic Memory Foam Mattress work? Offers a choice between plush Advanced Convoluted Comfort Foam and firm Ultra Support Foam for personalized comfort. You get premium knitted, breathable fabric cover, that wicks moisture and dries quickly, it is abrasion and pilling-resistant. It also has washable zipper cover 5. How is it different from alternatives? Unique BodyIQ memory foam provides industry-leading adaptive orthopedic support unlike standard foams; multi-layer (convoluted + memory + ultra support foam ) with zero motion isolation and washable zipper cover. 6. How does the product feel (talk about material, firmness)? The mattress feels medium-firm. 7. Does the product come with a warranty? Yes, 10-year warranty + 10 days replacement policy. 8. How to care for this product? Use a mattress protector, keep it on a flat, supportive base, rotate periodically if recommended. Avoid folding or standing on the mattress."
+    }
+  ],
+  "identityBasis": "Product structured metadata",
+  "pageUrl": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+  "requestedUrl": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+  "collectedAt": "2026-11-15T07:21:42.021Z",
+  "snapshot": "snapshot-1794727302021-b546de",
+  "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+  "assets": [
+    {
+      "id": "media-133a1264b17be5ea",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Prime_PDP_2.jpg?v=1768928277",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Product structured metadata",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/product-images/media-133a1264b17be5ea.jpg",
+      "bytes": 201945,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "46b396b46438360853fef58e9a328008590ce04dd7b1eccf73d32e5d00aa0eed",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Prime_PDP_2.jpg?v=1768928277",
+      "preview": "snapshot-1794727302021-b546de/product-images/media-133a1264b17be5ea-preview.png"
+    },
+    {
+      "id": "media-f85307c3881497a1",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_1.jpg?v=1768928275",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/product-images/media-f85307c3881497a1.jpg",
+      "bytes": 204327,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "e0c04f792121e2b5b08e10f70de15f2365eb2a99fd72d67c40712bcbbcff9861",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_1.jpg?v=1768928275",
+      "preview": "snapshot-1794727302021-b546de/product-images/media-f85307c3881497a1-preview.png"
+    },
+    {
+      "id": "media-0fde9a40b35d9dd9",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_4.jpg?v=1768928274",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/product-images/media-0fde9a40b35d9dd9.jpg",
+      "bytes": 62074,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "0bba1d10df83b2b249e8aecae56385801848821381596843fe0d902094c408c5",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_4.jpg?v=1768928274",
+      "preview": "snapshot-1794727302021-b546de/product-images/media-0fde9a40b35d9dd9-preview.png"
+    },
+    {
+      "id": "media-df2c65d4d990fdae",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_6.jpg?v=1768928275",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/product-images/media-df2c65d4d990fdae.jpg",
+      "bytes": 221833,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "371e50e9623eba43c7f046565860a5f95bc0eafd5e775591aaa83a8567981312",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_6.jpg?v=1768928275",
+      "preview": "snapshot-1794727302021-b546de/product-images/media-df2c65d4d990fdae-preview.png"
+    },
+    {
+      "id": "media-225477c3c7510ec7",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_3.jpg?v=1768928274",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/product-images/media-225477c3c7510ec7.jpg",
+      "bytes": 55905,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "3e79c436204cd7b5fd6da5afd567db99649723d580cb4f4422933fb78d3a5f47",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_3.jpg?v=1768928274",
+      "preview": "snapshot-1794727302021-b546de/product-images/media-225477c3c7510ec7-preview.png"
+    },
+    {
+      "id": "media-ac3c988c37d340b0",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_5.jpg?v=1768928274",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/product-images/media-ac3c988c37d340b0.jpg",
+      "bytes": 72765,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "208921f3a512a5304fc198865162ca0c9896212413ac256a2a4c419d9f03c427",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Prime_PDP_5.jpg?v=1768928274",
+      "preview": "snapshot-1794727302021-b546de/product-images/media-ac3c988c37d340b0-preview.png"
+    },
+    {
+      "id": "media-5a185f4446dfe8fb",
+      "url": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "product-images",
+      "type": "image",
+      "basis": "Official product JSON gallery",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/product-images/media-5a185f4446dfe8fb.jpg",
+      "bytes": 877201,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 4096,
+      "height": 4096,
+      "sha256": "e49f6db5bee6c24de5e57d9b16cb7e5c1dd201c50f049762befc4f54eecaf610",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://cdn.shopify.com/s/files/1/0918/6479/3272/files/Mattress_Size_Guide_1f922884-ee96-4faa-946f-cbe9b3020aaa.jpg?v=1783600177",
+      "preview": "snapshot-1794727302021-b546de/product-images/media-5a185f4446dfe8fb-preview.png"
+    },
+    {
+      "id": "media-fbaa829472ef9045",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Zero_Motion_Transfer.svg?v=18189233046525080115",
+      "label": "Zero Motion Transfer",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/tiles/media-fbaa829472ef9045.svg",
+      "bytes": 4063,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "8ac321fcbdc54dd866f3d9cffa2d3552b60687f334f08f0b97514f62e1edbf38",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Zero_Motion_Transfer.svg?v=18189233046525080115",
+      "preview": "snapshot-1794727302021-b546de/tiles/media-fbaa829472ef9045-preview.png"
+    },
+    {
+      "id": "media-59a77f77d327ee04",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Preasure_Relief_Sleep.svg?v=14284801494349883673",
+      "label": "Pressure Relief Sleep",
+      "group": "tiles",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/tiles/media-59a77f77d327ee04.svg",
+      "bytes": 1922,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 48,
+      "height": 48,
+      "sha256": "be9d8dd31e3f7e44accffe937e7fa048a089f9fa90d3dc3ab8120d2b01068d1f",
+      "mime": "image/svg+xml",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Mattrerss_Icons_Preasure_Relief_Sleep.svg?v=14284801494349883673",
+      "preview": "snapshot-1794727302021-b546de/tiles/media-59a77f77d327ee04-preview.png"
+    },
+    {
+      "id": "media-a1617c2185c90a98",
+      "url": "https://mysleepyhead.com/cdn/shop/files/flipkart-image.png?v=1764763220",
+      "label": "flipkart",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/supporting-content/media-a1617c2185c90a98.png",
+      "bytes": 2746,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "14511e3b13ed44058bbcf8f499ffbd7439af7582d1ac409b8e8234ce1b44bad3",
+      "mime": "image/png",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/flipkart-image.png?v=1764763220",
+      "preview": "snapshot-1794727302021-b546de/supporting-content/media-a1617c2185c90a98-preview.png"
+    },
+    {
+      "id": "media-b5279dda7d278daf",
+      "url": "https://mysleepyhead.com/cdn/shop/files/amazon-image.png?v=1764763218",
+      "label": "amazon",
+      "group": "supporting-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/supporting-content/media-b5279dda7d278daf.png",
+      "bytes": 2610,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 100,
+      "height": 100,
+      "sha256": "22b7a6b77cfe0592d53f9bb962df2153d88d7e6456692e744195c71efb00d1c0",
+      "mime": "image/png",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/amazon-image.png?v=1764763218",
+      "preview": "snapshot-1794727302021-b546de/supporting-content/media-b5279dda7d278daf-preview.png"
+    },
+    {
+      "id": "media-bcc0aae6f74ffa17",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_1.jpg?v=1769532107",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/a-plus-content/media-bcc0aae6f74ffa17.jpg",
+      "bytes": 166834,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "83a0a2923bf3130baf4bbf725f4725deb9d562fe1be37276d73a1575d824a4c9",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_1.jpg?v=1769532107",
+      "preview": "snapshot-1794727302021-b546de/a-plus-content/media-bcc0aae6f74ffa17-preview.png"
+    },
+    {
+      "id": "media-30f13b631cb412ff",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_2.jpg?v=1769532107",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/a-plus-content/media-30f13b631cb412ff.jpg",
+      "bytes": 209698,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "5d180a246c8c4678c72a9839c7244693016e6054837cf2389c546e1940fc3277",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_2.jpg?v=1769532107",
+      "preview": "snapshot-1794727302021-b546de/a-plus-content/media-30f13b631cb412ff-preview.png"
+    },
+    {
+      "id": "media-11188edbd1470302",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_3.jpg?v=1769532107",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/a-plus-content/media-11188edbd1470302.jpg",
+      "bytes": 156565,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "1ee82cddc0bd95b8edf1bd72650a18bf1bc61b8f2398404e92babf06f24d3300",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_3.jpg?v=1769532107",
+      "preview": "snapshot-1794727302021-b546de/a-plus-content/media-11188edbd1470302-preview.png"
+    },
+    {
+      "id": "media-242675d8b9f2e620",
+      "url": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_4.jpg?v=1769532107",
+      "label": "Prime - Premium BodyIQ Orthopedic Memory Foam Mattress",
+      "group": "a-plus-content",
+      "type": "image",
+      "basis": "Page-linked asset; role inferred from its section",
+      "status": "stored",
+      "file": "snapshot-1794727302021-b546de/a-plus-content/media-242675d8b9f2e620.jpg",
+      "bytes": 177489,
+      "collectedAt": "2026-11-15T07:21:42.021Z",
+      "width": 1920,
+      "height": 777,
+      "sha256": "4127fccc5ef99778327438658d26b089a69b1be7b1150a9b1ee09a636013a243",
+      "mime": "image/jpeg",
+      "resolvedUrl": "https://mysleepyhead.com/cdn/shop/files/Prime_Web_4.jpg?v=1769532107",
+      "preview": "snapshot-1794727302021-b546de/a-plus-content/media-242675d8b9f2e620-preview.png"
+    }
+  ],
+  "gaps": [
+    "No videos exposed in the collected page / product JSON."
+  ],
+  "downloadedBytes": 2417977,
+  "jobId": null,
+  "history": [],
+  "limits": [
+    "Exact-SKU official website statements are client-approved source evidence; preserve conditions and unresolved conflicts. Generated artwork is reviewed separately.",
+    "Category comes from website breadcrumbs or product type; missing taxonomy remains Uncategorized.",
+    "Asset folder roles inferred from page sections; inspect before reuse.",
+    "Only media exposed in HTML / official product JSON is discoverable; protected or client-only assets may be missing."
+  ],
+  "audit": null,
+  "productFields": {
+    "version": 1,
+    "entries": [
+      {
+        "id": "field-7264d943e929c1f58e39",
+        "category": "other",
+        "label": "Mattress Feel",
+        "value": "Medium Firm",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-f0ce4c4d88cb39819ff0",
+        "category": "dimensions",
+        "label": "Dimension",
+        "value": "72\" x 36\" x 6\"",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-1fbbefbfd0a1ccede246",
+        "category": "dimensions",
+        "label": "Length",
+        "value": "72\" (183 cm)",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-bd62e7d0ec99a2a049cd",
+        "category": "other",
+        "label": "Depth",
+        "value": "36\" (91 cm)",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-ceff2c628df4fc5c3ea8",
+        "category": "other",
+        "label": "Heigth",
+        "value": "6\" (15.2 cm)",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-ec590fef8f1cf22baa68",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-f36dcdab54c5d57554f4",
+        "category": "other",
+        "label": "Color",
+        "value": "White",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-98d8c398d66f0369d230",
+        "category": "other",
+        "label": "Model",
+        "value": "Prime",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-c8f5e9549baedf5f5ee4",
+        "category": "warranty",
+        "label": "Warranty",
+        "value": "10 Years Warranty",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-a7cf8a03cf8ea3a1c655",
+        "category": "other",
+        "label": "Assembly Required",
+        "value": "DIY (Do-It-Yourself)",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-de5031d446aa69bf06c6",
+        "category": "other",
+        "label": "Mattres Feel",
+        "value": "Medium Firm",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-d45f5448e10c7e819d86",
+        "category": "materials",
+        "label": "Material",
+        "value": "Memory Foam",
+        "variantId": null,
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "official-page-table"
+        }
+      },
+      {
+        "id": "field-1349c2b8f26f3b6939a5",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "52531737002168",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-62324688b32953fa4c8c",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 36 (183 cm x 92 cm)",
+        "variantId": "52531737002168",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-60a9bfc06984a4c41b79",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737002168",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-70572e8ba700598e2e41",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "52531737034936",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-f3d4971a016fe0732154",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 36 (183 cm x 92 cm)",
+        "variantId": "52531737034936",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9132e31fc21786093965",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737034936",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-dd52d8ca7e3db7a3619d",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "52531737100472",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-3b03df36a905daa768fb",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 36 (191 cm x 92 cm)",
+        "variantId": "52531737100472",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-f3235c8ab3c5dc520f3a",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737100472",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a49abac65de9db3ff415",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "52531737133240",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c795ad22b149d024cdcd",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 36 (191 cm x 92 cm)",
+        "variantId": "52531737133240",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9bc136fa88fa56bad5c8",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737133240",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-1eebf7a13411e77eeae2",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "52531737198776",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-377bfb09f5742ed33e27",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 36 (198 cm x 92 cm)",
+        "variantId": "52531737198776",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8c45986cbd1b4ecbaf69",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737198776",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-627cc47d2db97065256f",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Single",
+        "variantId": "52531737231544",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-bcb43fc03589d714da4c",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 36 (198 cm x 92 cm)",
+        "variantId": "52531737231544",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d803bcec221f84727122",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737231544",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b1bb0006f6c7187d077d",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "52531737297080",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-3c70d9b08947a45eae58",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 48 (183 cm x 122 cm)",
+        "variantId": "52531737297080",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-08ae6f90d33fbd9ff49f",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737297080",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-59c6ed3ce0e83c59e294",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "52531737329848",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-85dcbaca0c0281f78ed1",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 48 (183 cm x 122 cm)",
+        "variantId": "52531737329848",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-03be58337a3997c24b09",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737329848",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-e00fbbb7aa3ba6aba043",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "52531737395384",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-bc98726128d52609fae0",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 48 (191 cm x 122 cm)",
+        "variantId": "52531737395384",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-aecf542a2e281996b8e5",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737395384",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-73287a09222b4e71967d",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "52531737428152",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-40c11842f943dcf4ee99",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 48 (191 cm x 122 cm)",
+        "variantId": "52531737428152",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-7a8d108248129d7bb647",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737428152",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c63de5d6ccf0173b7f38",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "52531737493688",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a88e3e3245a08bfd1b8b",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 48 (198 cm x 122 cm)",
+        "variantId": "52531737493688",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-0d5acd55425ee9f9c55b",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737493688",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-dd837316e25d7e0c8128",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Double",
+        "variantId": "52531737526456",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-f85f75392af792c34f16",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 48 (198 cm x 122 cm)",
+        "variantId": "52531737526456",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-67ba1f0ca881e4cbb608",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737526456",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a81103b5306449de090e",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "52531737591992",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-c3aa953581e460e3486f",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 60 (183 cm x 152 cm)",
+        "variantId": "52531737591992",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-2978d8f49374f3a53eba",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737591992",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-82532e24e0d41b37818a",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "52531737624760",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-42090484245c5a1f6f29",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 60 (183 cm x 152 cm)",
+        "variantId": "52531737624760",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-16cf4da94d2688c19bf6",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737624760",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-ee2600b6504b15fc159d",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "52531737690296",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-29864e19c4033d5c6484",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 60 (191 cm x 152 cm)",
+        "variantId": "52531737690296",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b88cdd66bc9d357b070a",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737690296",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-097c1b7995c29f53f7c9",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "52531737723064",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-105f5170052c7c5f920c",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 60 (191 cm x 152 cm)",
+        "variantId": "52531737723064",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-3d715e6f000519452480",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737723064",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9e83057d0bda0370cf60",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "52531737788600",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-67bb700027ad275c6879",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 60 (198 cm x 152 cm)",
+        "variantId": "52531737788600",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-7128b2fd97743ba5d799",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737788600",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-0974c2216bfd09a15d7e",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "Queen",
+        "variantId": "52531737821368",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-7f2fc2aae0d82e4982df",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 60 (198 cm x 152 cm)",
+        "variantId": "52531737821368",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-dd0b470d47d891de33c9",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737821368",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4484dc70e7a6c3bd328c",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "52531737886904",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a979094143d7af7692d5",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 72 (183 cm x 183 cm)",
+        "variantId": "52531737886904",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-133ce11f0abe5de81c64",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737886904",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-be4315ef7b09e9c35766",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "52531737919672",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a28faef422835e242bbd",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "72 x 72 (183 cm x 183 cm)",
+        "variantId": "52531737919672",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-cf7e6a5bc6cbda27f060",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531737919672",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-ca19cdbfdbe514ef2b67",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "52531737985208",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-3485ffd2fb7ebb3c3649",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 72 (191 cm x 183 cm)",
+        "variantId": "52531737985208",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-8e316bd095f26984c6af",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531737985208",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-4a8c5b7a7d30829fa186",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "52531738017976",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-549ec270c1b692128a52",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "75 x 72 (191 cm x 183 cm)",
+        "variantId": "52531738017976",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-20336213399a470a39fa",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531738017976",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-9dac6f6ebe8bd605476e",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "52531738083512",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-d912adfa41fb74e63fee",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 72 (198 cm x 183 cm)",
+        "variantId": "52531738083512",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-7b7a8b473b32018ffe26",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "6 (15.2cm)",
+        "variantId": "52531738083512",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-b4070940d095c6c343e7",
+        "category": "dimensions",
+        "label": "Size",
+        "value": "King",
+        "variantId": "52531738116280",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-be9de475f078ff31fa9d",
+        "category": "dimensions",
+        "label": "Dimensions",
+        "value": "78 x 72 (198 cm x 183 cm)",
+        "variantId": "52531738116280",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      },
+      {
+        "id": "field-a4c85b24f222906b08a1",
+        "category": "dimensions",
+        "label": "Height",
+        "value": "8 (20.3cm)",
+        "variantId": "52531738116280",
+        "status": "stated",
+        "source": {
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "productId": "product-26551f9a44f4603e3890",
+          "snapshot": "snapshot-1794727302021-b546de",
+          "pageHash": "00283d1eeaa7bd8a692da79a76db53774530b96a2d1f30a5ffc20628d3492d79",
+          "url": "https://mysleepyhead.com/products/prime-premium-bodyiq-orthopedic-memory-foam-mattress",
+          "origin": "saved-official-variant"
+        }
+      }
+    ],
+    "missing": [
+      "care",
+      "service",
+      "certification"
+    ],
+    "basis": "Client-approved official source statements. Values retain full source wording and conditions; extraction does not resolve conflicts, infer units, independently certify claims or approve generated artwork."
+  }
+}
