@@ -1,5 +1,12 @@
 # Creative AI brand isolation
 
+## Live test batch fixes (17 Nov 2026)
+
+- Neha asked for every asset card to be made on the hosted Studio with a new SKU each time. Duroflex ran first (52 cards); Sleepyhead waits for the redeploy (its research picture was missing on the hosted Studio). Results and team notes: `docs/live-batch-20261117.md`.
+- New lean jobs pin `warrantyCheckVersion: 1` (the image check applies the 11 Nov "N-year warranty" decision; a missing "conditional" is not a mismatch) and `featureEvidenceVersion: 1` (when a saved product reading contradicts the official photos, the check follows the photos). Earlier jobs keep their saved checks.
+- Shared fixes (no pin): Indian-script words keep their vowel signs (`\p{M}`) in story-headline, headline-repeat, opening-word and text-size word splitting; a product photo whose 1600 px PNG evidence would exceed the dossier limit is drawn at 1280/1024/800 px (`sku-research.evidencePng`; photos that fitted keep their bytes); a product-citation planning error names the unsupported words; a damaged hash-named reference staging copy is replaced and re-read.
+- The admin dashboard counts each lean job's pinned image options, not the intake's old two-route default.
+
 ## Readiness matrix and brief options (15 Nov 2026)
 
 - `scripts/creative-ai/qa-card-readiness-matrix.js --root <copy>` runs every ready card × product, every brief-page option and random campaigns through the real readiness route with no paid calls. Run it on a clean checkout of what is deployed after changing cards, presets or readiness.
