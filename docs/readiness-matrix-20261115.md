@@ -53,3 +53,14 @@ Duroflex already had 10 mattresses and 7 sofas; Sleepyhead 9 sofas. The matrix t
 ## Known, not changed
 
 - After choosing RCS on a WhatsApp card the channel select is no longer shown, so the card cannot be switched back (existing behaviour).
+
+## Live re-check (17 Nov 2026)
+
+Neha reported the hosted Studio redeployed. Checked on the hosted Studio as an administrator:
+
+- **The fixes are not deployed.** The hosted `studio-model.js` and `studio.js` are byte-identical to `b58122b`; GitHub `main` is still `b58122b` and `brand-data-20261113` still `122786d` (without the reference pictures). The brief-option fixes, member access and the 8 new SKUs are not live.
+- **Sleepyhead cannot create anything.** Its current research (`creative-c7afc38d…`) is missing reference picture `dd62a382…bin`, so all 156 Sleepyhead card × product readiness checks fail with CA-404. Duroflex passed 153 of 156; the 3 left are the 12-image PDP pack, refused because the project allowance is still the $100 default.
+- **No ₹ on the hosted Studio.** `output/cost-tracking/currency.json` is absent there, so the Spend page has no INR values, readiness shows "INR estimate unavailable" and AI edits show "Cost: not known yet".
+- The hosted Studio now uses OpenAI (`gpt-6.1-sol` planning and checks, `gpt-image-2`), matching this repository.
+- End to end on the hosted Studio worked: an Instagram post (via the API; flagged "check before using": the topper turn was not shown, and the product fingerprint wrongly expected white "DUROFLEX" lettering), a Website Banner through the home brief box (Ready, all checks passed, about 6 minutes) and one pinned AI edit (lamp removed, product check passed). Estimated cost ≈ ₹59 (₹96.6149/USD).
+- **Admin dashboard fixed here:** every finished one-design lean job showed "Needs attention", 1 of 2 images and an incomplete set, because the dashboard read the intake's old two-route default instead of the job's pinned image options. `lib/admin/analytics-metrics.js` `jobRoutes`; test in `tests/admin/analytics.test.js` (fails before). Replaying saved jobs: 90 of 90 one-design lean jobs (20 Duroflex, 70 Sleepyhead) went from "attention" to their real check status; no other job changed.

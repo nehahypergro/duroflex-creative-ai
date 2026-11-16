@@ -49,3 +49,15 @@ test('CSV cannot execute spreadsheet formulas; HTML escapes stored titles and ca
 test('explicit user-requested stops are separate from failures and no-output problems',()=>{const s=calc([job('ok'),job('stop',{status:'failed',results:[],error:'Stopped at user request: experiment changed. Saved work retained.'})]);assert.equal(s.metrics.terminal,2);assert.equal(s.metrics.evaluatedTerminal,1);assert.equal(s.metrics.stoppedByUser,1);assert.equal(s.metrics.failed,0);assert.equal(s.metrics.attentionRate,0);assert.equal(s.metrics.zeroOutputTerminal,0);assert.equal(s.failurePatterns.length,0);assert.equal(s.requests[1].status,'failed');});
 test('Option 1 batch slice excludes unrelated historical work without pretending it is client adoption',()=>{const batch=job('batch');batch.intake.requestKey='static-option1-duroflex-example';const s=calc([batch,job('old')],{params:new URLSearchParams('run=option1')});assert.equal(s.metrics.requests,1);assert.equal(s.requests[0].id,'batch');assert.equal(s.adoption.activeCreators,0);});
 test('login activity from an excluded synthetic account is not counted in the account funnel',()=>{const s=calc([],{users:[],logins:[{actorId:'synthetic',at:'2026-10-27T06:00:00Z'}]});assert.equal(s.adoption.signedInUsers,0);assert.equal(s.adoption.enabledAccounts,0);});
+test('lean jobs count the designs they pinned, not the old two-route intake default (live check, 17 Nov 2026)',()=>{
+ // A finished one-design lean banner whose intake still says continuity + exploration showed "Needs attention",
+ // 1 of 2 images and an incomplete set on the admin dashboard although it passed its check.
+ const lean=(over={})=>job('lean',{intake:{brandId:'d',conceptRoutes:['continuity','exploration'],leanWorkflowVersion:1,productName:'Cocoon'},runtimeConfig:{leanImageOptions:[{route:'continuity',model:'gpt-image-2',quality:'high'}]},results:[{route:'continuity',placementId:'hero',imageUrl:'/creative-ai/api/jobs/creative-lean/files/static-lean-0123456789abcdef01234567.png',ready:true,qualityVerified:true,reviewDecision:'ready',correctionCycles:0,visualReview:{conclusion:'no_mismatch'}}],...over});
+ for(const brandId of ['d','s']){const j=lean();j.intake.brandId=brandId;const s=summary(j,brands);
+  assert.equal(s.requestedImages,1);assert.equal(s.displayStage,'ready');assert.equal(s.analytics.requested,1);assert.equal(s.analytics.complete,true);assert.equal(s.analytics.completePassing,true);}
+ // Lean jobs admitted before 8 Nov pinned two options and still need both.
+ const two=lean({runtimeConfig:{leanImageOptions:[{route:'continuity',model:'gpt-image-2'},{route:'exploration',model:'gpt-image-2.6-sunburst'}]}});
+ assert.equal(summary(two,brands).requestedImages,2);assert.equal(summary(two,brands).displayStage,'attention');assert.equal(M.projectJob(two).complete,false);
+ // Non-lean jobs keep their intake routes.
+ assert.equal(M.projectJob(job('old')).requested,1);
+});
