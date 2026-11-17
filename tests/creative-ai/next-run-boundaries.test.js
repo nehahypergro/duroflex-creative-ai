@@ -17,9 +17,11 @@ test('invalid UTF-8 and oversized multibyte bodies reject without replacement ch
 });
 test('invalid brief metadata rejects before loading research, creating jobs or paid dispatch',async()=>{
  const {CreativeRuntime}=require('../../lib/creative-ai/runtime/engine');let entered=0;
- const runtime={researchSessions:{prepare:async()=>{entered++;throw Error('Too late');}}};
+ // createRequest reads <root>/workspace.json since 7 Nov 2026 (original-delivery.prepare); an empty temp root keeps the default intake.
+ const root=require('fs').mkdtempSync(require('path').join(require('os').tmpdir(),'next-run-boundaries-'));
+ const runtime={root,researchSessions:{prepare:async()=>{entered++;throw Error('Too late');}}};
  for(const change of [{language:{}},{language:'x'.repeat(161)},{language:'  '},{language:null},{audience:[]},{audience:'x'.repeat(2001)},{objective:'sales'},{objective:4},{market:'x'.repeat(161)},{brief:'bad\u0000text'},{brief:'bad\ud800text'},{brief:'x'.repeat(5001)}])await assert.rejects(()=>CreativeRuntime.prototype.createRequest.call(runtime,{brief:'Sleepyhead test',...change}),/campaign input|Brief/);
- assert.equal(entered,0);
+ assert.equal(entered,0);require('fs').rmSync(root,{recursive:true,force:true});
  assert.equal(normalize({brief:' '}).language,'English');assert.equal(normalize({brief:'x'.repeat(5000)}).brief.length,5000);
 });
 test('script-aware numeric checks preserve values, repetition and reject new hidden digits',()=>{

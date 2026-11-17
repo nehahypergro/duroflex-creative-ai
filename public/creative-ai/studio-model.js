@@ -216,7 +216,7 @@ default:return frame(14,9,36,38)} }
   }
   function newDraft(brandId,group='social') {
     const createdAt=new Date().toISOString();
-    return {schemaVersion:1,id:uid(),brandId,revision:0,createdAt,updatedAt:createdAt,name:'',brief:'',creativeCount:2,audience:'',message:'',objective:'Awareness',focus:'product',productId:'',productName:'',productUrl:'',variant:'',group,language:'English',people:'Decide from the brief',lighting:'Decide from the brief',setting:'Decide from the brief',details:{},outputs:[],references:[],status:'draft'};
+    return {schemaVersion:1,id:uid(),brandId,revision:0,createdAt,updatedAt:createdAt,name:'',brief:'',creativeCount:1,audience:'',message:'',objective:'Awareness',focus:'product',productId:'',productName:'',productUrl:'',variant:'',group,language:'English',people:'Decide from the brief',lighting:'Decide from the brief',setting:'Decide from the brief',details:{},outputs:[],references:[],status:'draft'};
   }
   // A project owns its brief and plan. Studio is a destination, never a new project.
   const workspaces=[{id:'static',name:'Static Studio',available:true},{id:'video',name:'Video Studio',available:false},{id:'copy',name:'Copy Studio',available:false},{id:'adaptation',name:'Adaptation Studio',available:false}];
@@ -614,7 +614,8 @@ default:return frame(14,9,36,38)} }
 
   // Adapted from Static Studio's field/progress patterns; all data stays in this Studio.
   const intakeOptions={themes:['Functional','Emotional','Tactical','Seasonal','Trends'],tonalities:['Direct','Celebratory','Sincere','Reminding','Regulatory']};
-  function creativeCount(d){return 2;}
+  // One design per format since 8 Nov 2026 (one image model); the page still said "2 sets" / "Create two sets" (17 Nov 2026 QA).
+  function creativeCount(d){return 1;}
   function baseRequiredAssetFields(o){if(amazonImageTemplate(o)||retailEntry(o))return [];return ({2:['technology','source'],3:['offer','terms','offerStart','offerEnd','destination'],4:['claim','proof'],6:['marketplace','template','eligibility'],10:['storeName','address','destination'],12:['partner','partnerAsset','lockup','reviewer'],15:['articleTitle','facts']})[o.featureId]||[];}
   function productRtbSources(p){
     const facts=(Array.isArray(p?.features)?p.features:[]).map(v=>typeof v==='string'?v:v?.text||v?.description||'');
@@ -813,7 +814,7 @@ default:return frame(14,9,36,38)} }
     for(const seg of segments){
       for(const language of languages){const escaped=language.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');if(new RegExp('(?:\\b(?:in|language)\\s*:?\\s*)'+escaped+'\\b|\\b'+escaped+'\\s+(?:(?:Instagram|Facebook|LinkedIn|WhatsApp|social|website|email)\\s+)?(?:posts?|carousels?|stories|story|creatives?|banners?|copy|ads?)\\b','i').test(seg))add('language',language,seg,'Language');}
       const range=seg.match(/\b(?:aged?|ages)\s*:?\s*(\d{1,2})\s*(?:[-–]|to)\s*(\d{1,2})\b/i);if(range&&+range[1]<=+range[2])add('customerAge',range[1]+'–'+range[2],seg,'Age');
-      const count=seg.match(/\b(one|two|1|2)\s+(?:creative\s+)?(?:options?|creatives?|concepts?|sets?)\b/i);if(count)add('creativeCount',2,seg,'Two complete options');
+      const count=seg.match(/\b(one|two|1|2)\s+(?:creative\s+)?(?:options?|creatives?|concepts?|sets?)\b/i);if(count)add('creativeCount',1,seg,'One complete set');
       for(const [stage,objective]of [['TOFU','Awareness'],['MOFU','Consideration'],['BOFU','Purchase']])if(new RegExp('\\b'+stage+'\\b','i').test(seg)){add('funnelStage',stage,seg,'Funnel stage');add('objective',objective,seg,'Objective');}
       const objective=seg.match(/\b(?:objective|goal)\s*:\s*(awareness|consideration|purchase|engagement|education)\b/i);if(objective)add('objective',objective[1][0].toUpperCase()+objective[1].slice(1).toLowerCase(),seg,'Objective');
     }

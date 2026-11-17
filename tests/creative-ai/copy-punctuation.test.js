@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const copy=require('../../lib/creative-ai/runtime/copy-checks'),focus=require('../../lib/creative-ai/runtime/focused-ocr').focus;
 function inspect(expected,observed,{confidence=1,decoration='none',brand='Sleepyhead',route='continuity'}={}){
@@ -15,7 +16,7 @@ test('meaningful punctuation, words, numbers and case still fail; uncertain read
  for(const [expected,observed] of [['₹1,499','1,499'],['₹1,499','₹14,999'],['2.5 inches','25 inches'],['20% off','20 off'],['3-seater','3 seater'],['Bubbles · Canyon Rose','Bubbles · Pine Green'],['LiveIn','Liveln'],['Find Yours','find Yours'],['Find Yours','Find Yours!'],['1·5','1•5']])assert.equal(inspect(expected,observed).evidence.critical[0].status,'fail',expected+' vs '+observed);
  for(const options of [{confidence:.4},{decoration:'ambiguous'}])assert.equal(inspect('Bubbles · Canyon Rose','Bubbles • Canyon Rose',options).evidence.critical[0].status,'unknown');
 });
-test('saved same-brief square copy reviews for both brands: no history mutation or unrelated flag removal',()=>{
+test('saved same-brief square copy reviews for both brands: no history mutation or unrelated flag removal',{skip:missingJobs('creative-b421f4a4-3a63-48ec-b573-361048edabbe','creative-e9f8c2ce-6138-4120-9043-68d4de847c6f')},()=>{
  const root=path.resolve(__dirname,'../../output/creative-ai/jobs');
  for(const [job,route,attempt] of [['creative-e9f8c2ce-6138-4120-9043-68d4de847c6f','continuity',1],['creative-e9f8c2ce-6138-4120-9043-68d4de847c6f','exploration',1],['creative-b421f4a4-3a63-48ec-b573-361048edabbe','continuity',0]]){
   const suffix=route+'-custom_studio-social-square-'+attempt+'.json',names=['package-','review-copy-','ocr-','review-'].map(prefix=>path.join(root,job,prefix+suffix)),bytes=names.map(name=>fs.readFileSync(name)),[record,observations,ocr]=bytes.map(b=>JSON.parse(b));

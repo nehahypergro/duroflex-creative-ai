@@ -1,6 +1,7 @@
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
 const agents=require('../../lib/creative-ai/runtime/agents');
-test('recorded Yolo blocked concepts stop before downstream dispatch',()=>{
+test('recorded Yolo blocked concepts stop before downstream dispatch',{skip:missingJobs('creative-c3537e34-bc28-45db-b584-ea888f9c6a8d')},()=>{
  const saved=JSON.parse(fs.readFileSync('output/creative-ai/jobs/creative-c3537e34-bc28-45db-b584-ea888f9c6a8d/concepts.json'));
  assert.throws(()=>agents.requireConceptDispatch(saved),e=>e.code==='CONCEPT_DEPENDENCY_REQUIRED');
 });

@@ -3,7 +3,8 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const root=path.resolve(__dirname,'../..'),{CreativeRuntime}=require('../../lib/creative-ai/runtime/engine');
 for(const brandId of ['brand-1923d633-e03e-44cc-84b2-bbfb5c152710','brand-3a5870df-d114-43eb-ba02-e5d8c3c729de'])test('new '+brandId+' requests retain original model-rendered logo flow',async t=>{
  const brand=JSON.parse(await fs.readFile(path.join(root,'output/creative-ai/brands',brandId,'brand.json')));brand.latestResearchId=require('./helpers/pinned-research-fixture').ids[brandId];let intake;
- const runtime={config:{maxReasoningCalls:40},brands:{read:async()=>brand,dir:id=>path.join(root,'output/creative-ai/brands',id)},researchSessions:{prepare:async i=>{intake=i;throw Error('Captured before dispatch');}}};
+ // createRequest reads <root>/workspace.json since 7 Nov 2026 (original-delivery.prepare); use this checkout's real workspace settings.
+ const runtime={root,config:{maxReasoningCalls:40},brands:{read:async()=>brand,dir:id=>path.join(root,'output/creative-ai/brands',id)},researchSessions:{prepare:async i=>{intake=i;throw Error('Captured before dispatch');}}};
  await assert.rejects(()=>CreativeRuntime.prototype.createRequest.call(runtime,{brandId,brandUrl:brand.brandUrl,researchId:brand.latestResearchId,brief:'Same brief',placementIds:['custom:studio-social-square'],logoOverlayPolicy:{version:1,brandId,variants:brand.canvasAssets.logos}}),/Captured before dispatch/);
  assert.ok(intake.approvedLogoReference,'Approved reference remains pinned');assert.equal(intake.logoOverlayPolicy,undefined,'New jobs must not opt into the rejected overlay experiment');
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'original-logo-flow-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));

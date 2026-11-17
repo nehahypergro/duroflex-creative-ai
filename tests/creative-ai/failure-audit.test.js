@@ -25,7 +25,10 @@ test('new prompt policy rejects a copy/document mismatch before any provider cal
 });
 test('new jobs pin the clean-image prompt policy without changing older job files',async t=>{
  let intake;t.mock.method(require('../../lib/creative-ai/runtime/approved-identity'),'snapshot',async(r,value)=>{intake=value;throw Error('Captured admission');});
- const runtime={config:{maxReasoningCalls:40,estimatedSpend:{maxUsd:100,reasoningUsd:2,imageUsd:3}}};
+ // createRequest reads <root>/workspace.json since 7 Nov 2026 (original-delivery.prepare). An empty temp root has no
+ // original-delivery setting, so this exercises the composed-job admission that historical workspaces still use.
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'composed-admission-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
+ const runtime={root,config:{maxReasoningCalls:40,estimatedSpend:{maxUsd:100,reasoningUsd:2,imageUsd:3}}};
  await assert.rejects(()=>require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype.createRequest.call(runtime,{brief:'Offline fixture',composedTextVersion:1,placementIds:['merchant-primary']}),/Captured admission/);
  assert.equal(intake.composedPromptVersion,2);assert.equal(intake.composedLogoDetectionVersion,2);assert.equal(intake.approvedLogoOverlayVersion,1);
 });

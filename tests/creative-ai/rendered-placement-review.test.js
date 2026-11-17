@@ -1,7 +1,8 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('../../lib/creative-ai/runtime/artifact-fs'),path=require('path');
 const root=path.resolve(__dirname,'../..'),reviewer=require('../../lib/creative-ai/creative-reviewer');
-test('saved Duroflex and Sleepyhead rendered rules use explicit pixel review; missing evidence and bad files remain blocked',async()=>{
+test('saved Duroflex and Sleepyhead rendered rules use explicit pixel review; missing evidence and bad files remain blocked',{skip:missingJobs('creative-fb8c9abb-e4cf-4c4d-a0bd-9f8cf8e78676','creative-0c9b259c-56af-4380-a33b-5f9e398d417f')},async()=>{
  for(const id of ['creative-fb8c9abb-e4cf-4c4d-a0bd-9f8cf8e78676','creative-0c9b259c-56af-4380-a33b-5f9e398d417f']){
  const dir=path.join(root,'output/creative-ai/jobs',id),file=(await fs.readdir(dir)).find(n=>/^package-continuity-.*-0.json$/.test(n)),record=JSON.parse(await fs.readFile(path.join(dir,file))),catalog=JSON.parse(await fs.readFile(path.join(dir,'placement-catalog.json'))),rules=require('../../lib/creative-ai/runtime/rendered-placement-review').rules(record);assert.ok(rules.length);
  const ctx={input:{package:record,evidence:{mode:'runtime-attestation',critical:[],quality:[],findings:[],placementObservations:rules.map(r=>({ruleId:r.id,status:'pass',confidence:.95,method:'vision-attestation',observation:'Authored test attestation: all requested content fits the canvas and displayed preview with readable hierarchy.',location:'Entire rendered canvas and reduced preview'}))}},catalog,measurement:{width:record.canvas.width,height:record.canvas.height,bytes:2000,format:'png'}};
@@ -13,7 +14,7 @@ test('unmarked product branding can be explicitly inapplicable; product identity
  p.applyChecks({productReference:{}},e,obs);assert.equal(e.critical[0].status,'pass');obs[2].status='not-applicable';assert.throws(()=>p.applyChecks({productReference:{}},e,obs),/not-applicable/);
  obs[2].status='pass';obs[0].confidence=.4;p.applyChecks({productReference:{}},e,obs);assert.equal(e.critical[0].status,'unknown');
 });
-test('production reviewer requests rendered placement evidence in its existing fixed-key call',async t=>{
+test('production reviewer requests rendered placement evidence in its existing fixed-key call',{skip:missingJobs('creative-fb8c9abb-e4cf-4c4d-a0bd-9f8cf8e78676','creative-0c9b259c-56af-4380-a33b-5f9e398d417f')},async t=>{
  const io=require('fs/promises'),os=require('os'),sharp=require('sharp'),helper=require('../../lib/creative-ai/runtime/rendered-placement-review');
  for(const id of ['creative-fb8c9abb-e4cf-4c4d-a0bd-9f8cf8e78676','creative-0c9b259c-56af-4380-a33b-5f9e398d417f']){
  const source=path.join(root,'output/creative-ai/jobs',id),name=(await fs.readdir(source)).find(n=>/^package-continuity-.*-0.json$/.test(n)),record=JSON.parse(await fs.readFile(path.join(source,name))),dir=await io.mkdtemp(path.join(os.tmpdir(),'placement-wire-'));t.after(()=>io.rm(dir,{recursive:true,force:true}));await io.writeFile(path.join(dir,'placement-catalog.json'),await fs.readFile(path.join(source,'placement-catalog.json')));

@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict');
 const composition=require('../../lib/creative-ai/runtime/editable-composition');
 const quality=require('../../lib/creative-ai/runtime/editable-quality');
@@ -14,7 +15,7 @@ for(const brand of ['Duroflex','Sleepyhead']){
 }
 test('stage guidance uses existing model calls and leaves legacy jobs untouched',async()=>{const seen=[],r={provider:{reason:async req=>{seen.push(req);return req;}},editable:{generate:async()=> 'legacy'},store:{read:async()=>({intake:{}})}};composition.install(r);const base={contextKind:'strategy',instructions:'Original',wire:{instructions:'Original wire',input:{}}};await r.provider.reason(base,{brandContext:async()=>({intake:{editableTextVersion:1}})});assert.match(seen[0].wire.instructions,/visual priority/i);assert.match(seen[0].wire.instructions,/viewing/i);assert.equal(base.wire.instructions,'Original wire');await r.provider.reason(base,{brandContext:async()=>({intake:{}})});assert.equal(seen[1],base);assert.equal(await r.editable.generate('legacy'),'legacy');});
 module.exports={document,review};
-test('saved Cocoon review reproduces omitted overlap; shared bookkeeping recovers the existing safe corrections without rewriting history',()=>{
+test('saved Cocoon review reproduces omitted overlap; shared bookkeeping recovers the existing safe corrections without rewriting history',{skip:missingJobs('creative-b4575b9c-f9ea-44f3-9eee-d3894fa1093c')},()=>{
  const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),root=path.resolve(__dirname,'../..'),dir=path.join(root,'output/creative-ai/jobs/creative-b4575b9c-f9ea-44f3-9eee-d3894fa1093c');
  const name=fs.readdirSync(dir).find(n=>/^editable-.*-original.json$/.test(n)),paths=[path.join(dir,name),path.join(root,'work/text-layer-live-20261027/returned-review.json')],bytes=paths.map(p=>fs.readFileSync(p)),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
  const doc=JSON.parse(bytes[0]),raw=JSON.parse(bytes[1]);assert.throws(()=>quality.apply(doc,raw),/omitted.*overlap/);

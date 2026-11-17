@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict');
 const {photoPrompt}=require('../../lib/creative-ai/runtime/editable');
 const {generationSize}=require('../../lib/creative-ai/runtime/placements');
@@ -19,7 +20,7 @@ for(const brandId of ['Duroflex','Sleepyhead'])for(const [width,height] of [[120
   assert.ok(!prompt.includes('DO_NOT_RENDER_THIS_COPY'));assert.equal(doc.objects[0].left,width*.05);
  });
 }
-test('saved Cocoon failure retains its failed visual review and maps the actual text and whole-subject regions',()=>{
+test('saved Cocoon failure retains its failed visual review and maps the actual text and whole-subject regions',{skip:missingJobs('creative-b4becbb8-cfeb-4151-bf6f-e9aff2e98fc7')},()=>{
  const fs=require('node:fs'),path=require('node:path'),dir=path.resolve(__dirname,'../../output/creative-ai/jobs/creative-b4becbb8-cfeb-4151-bf6f-e9aff2e98fc7'),k='continuity-custom_studio-linkedin-post';
  const names=[`editable-${k}.json`,`editable-review-outcome-${k}.json`,`editable-text-fitting-${k}.json`],before=names.map(n=>fs.readFileSync(path.join(dir,n))),state=JSON.parse(before[0]),review=JSON.parse(before[1]),fitting=JSON.parse(before[2]);
  assert.deepEqual(fitting.unresolved,[]);assert.ok(review.observations.some(o=>o.status==='fail'));

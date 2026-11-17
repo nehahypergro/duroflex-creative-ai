@@ -41,7 +41,10 @@ test('typography guide remains last after product detail attachments',async t=>{
 });
 test('new composed jobs automatically pin the reference policy at admission',async t=>{
  let captured;t.mock.method(require('../../lib/creative-ai/runtime/approved-identity'),'snapshot',async(runtime,intake)=>{captured=intake;throw Error('Admission captured');});
- const runtime={config:{maxReasoningCalls:40,estimatedSpend:{maxUsd:100,reasoningUsd:2,imageUsd:3}}};
+ // createRequest reads <root>/workspace.json since 7 Nov 2026 (original-delivery.prepare). An empty temp root has no
+ // original-delivery setting, so this exercises the composed-job admission that historical workspaces still use.
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'composed-admission-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
+ const runtime={root,config:{maxReasoningCalls:40,estimatedSpend:{maxUsd:100,reasoningUsd:2,imageUsd:3}}};
  await assert.rejects(()=>require('../../lib/creative-ai/runtime/engine').CreativeRuntime.prototype.createRequest.call(runtime,{brief:'Synthetic exact-SKU fixture',composedTextVersion:1,placementIds:['merchant-primary']}),/Admission captured/);
  assert.equal(captured.skuReferenceDetailVersion,1);
 });

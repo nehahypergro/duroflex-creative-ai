@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs/promises'),path=require('path'),sharp=require('sharp');
 const root=path.resolve(__dirname,'../..');
 test('transient counting failure recovers before any paid dispatch; diagnostics retain both attempts',async()=>{
@@ -6,7 +7,7 @@ test('transient counting failure recovers before any paid dispatch; diagnostics 
  global.fetch=async()=>{if(++calls===1)throw TypeError('fetch failed');return {ok:true,json:async()=>({object:'response.input_tokens',input_tokens:123})};};
  try{const r=await check({model:'gpt-6-luna',max_output_tokens:100,input:'fixture'},{inputTokenCountTimeoutMs:2000},{remainingMs:async()=>2000,preflight:async d=>diagnostic=d});assert.equal(r.inputTokens,123);assert.equal(calls,2);assert.equal(diagnostic.attempts.length,2);assert.equal(diagnostic.attempts[0].status,'unavailable');}finally{global.fetch=old;}
 });
-test('saved Duroflex white headline is not mistaken for a dark background colour',async()=>{
+test('saved Duroflex white headline is not mistaken for a dark background colour',{skip:missingJobs('creative-c5f646b0-c61d-4034-97c8-ac873327619d')},async()=>{
  const ocr=require('../../lib/creative-ai/runtime/editor-ocr');assert.equal(typeof ocr.ink,'function');
  const dir=path.join(root,'output/creative-ai/jobs/creative-c5f646b0-c61d-4034-97c8-ac873327619d'),proposal=JSON.parse(await fs.readFile(path.join(dir,'editor-ocr-continuity-custom_studio-social-story-proposal.json'))),raw=await sharp(path.join(dir,'static-continuity-custom_studio-social-story-1.png')).removeAlpha().raw().toBuffer({resolveWithObject:true});
  const result=ocr.ink(raw,proposal.matches[0].lines[0].box);assert.ok(result.rgb.every(v=>v>220),JSON.stringify(result));
@@ -32,7 +33,7 @@ test('counting retries stop after three transient attempts and never retry perma
  const check=require('../../lib/creative-ai/runtime/context-preflight').check,old=global.fetch;
  try{for(const status of [503,401]){let n=0,d;global.fetch=async()=>{n++;return {ok:false,status};};await assert.rejects(()=>check({model:'gpt-6-luna',max_output_tokens:100,input:'fixture'},{inputTokenCountTimeoutMs:3000},{remainingMs:async()=>3000,preflight:async v=>d=v}),/not dispatched/);assert.equal(n,status===503?3:1);assert.equal(d.attempts.length,n);}}finally{global.fetch=old;}
 });
-test('saved Sleepyhead adjacent lines do not contaminate the surrounding-background estimate',async()=>{
+test('saved Sleepyhead adjacent lines do not contaminate the surrounding-background estimate',{skip:missingJobs('creative-3d7db977-ab11-4258-9bfe-7c05f32af691')},async()=>{
  const pixels=require('../../lib/creative-ai/runtime/editor-pixels'),dir=path.join(root,'output/creative-ai/jobs/creative-3d7db977-ab11-4258-9bfe-7c05f32af691'),p=JSON.parse(await fs.readFile(path.join(dir,'editor-ocr-exploration-custom_studio-social-story-proposal.json'))),raw=await sharp(path.join(dir,'static-exploration-custom_studio-social-story-0.png')).removeAlpha().raw().toBuffer({resolveWithObject:true});
  for(const r of p.matches[0].lines){const found=pixels.ink(raw,r.box);assert.ok(found.rgb.every(v=>v<60),r.text+': '+JSON.stringify(found));}
 });

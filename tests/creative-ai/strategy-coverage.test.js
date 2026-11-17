@@ -67,6 +67,7 @@ test('assignment action preserves supplied destinations rather than injecting a 
  assert.match(recipeIntent({featureId:15},{}).desiredAction,/article/);assert.equal(recipeIntent({featureId:1},{}),null);
 });
 test('partner strategy readiness does not claim its attachment workflow is complete',async()=>{
+ // studio-generation.prepare reads runtime.root/workspace.json since 7 Nov 2026; use this checkout's real workspace.
  const d={focus:'product',outputs:[{...M.output(12),staticValues:{partner:'Supplied partner',partnerAsset:'Supplied logo name',lockup:'Lead brand first',reviewer:'Partner owner'}}]};
- await assert.rejects(()=>require('../../lib/creative-ai/runtime/studio-generation').prepare({},d),/attached partner asset and lockup/);
+ await assert.rejects(()=>require('../../lib/creative-ai/runtime/studio-generation').prepare({root:require('node:path').resolve(__dirname,'../..')},d),/attached partner asset and lockup/);
 });

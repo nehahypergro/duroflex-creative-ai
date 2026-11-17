@@ -34,6 +34,27 @@ test('change buttons are hidden and refused on a teammate\'s project; viewing bu
  const set=/const VIEW_ONLY_ACTIONS=new Set\(\[([^\]]+)\]\)/.exec(src);assert.ok(set,'list of change actions');const actions=set[1].match(/'([a-z-]+)'/g).map(x=>x.slice(1,-1));
  for(const a of ['resume-work','retry-image-checks','lean-recheck','edit-image','save-feedback','restart-project'])assert.ok(actions.includes(a),a);
  for(const a of ['download','card-download','download-set','report-issue'])assert.ok(!actions.includes(a),a+' stays available');
- assert.match(src,/if\(VIEW_ONLY_ACTIONS\.has\(action\)&&madeBy\(state\.project\)\)\{toast\(/);assert.match(src,/syncViewOnly\(\);/);
+ assert.match(src,/if\(VIEW_ONLY_ACTIONS\.has\(action\)&&viewOnlyBy\(\)\)\{toast\(/);assert.match(src,/function viewOnlyBy\(\)\{return \/\^\(project\|review\|download\|versions\|progress\|editor\)\\\//);assert.match(src,/syncViewOnly\(\);/);
  for(const a of actions)assert.ok(css.includes('body[data-view-only] [data-action="'+a+'"]'),a+' hidden');
+});
+// Client-ready QA (17 Nov 2026): an AI-edited version in use downloaded correctly but was named "…_Original.png" and
+// reported as "Downloaded original generated image".
+test('a download of the AI-edited version in use is named and reported as edited',async()=>{
+ const model=require('../../public/creative-ai/canvas-model.js'),base={brand:'Sleepyhead',project:'Sofa Bubbles',width:1920,height:700,option:'continuity',extension:'png'};
+ assert.match(model.downloadName({...base,edited:true}),/_Edited\.png$/);assert.match(model.downloadName(base),/_Original\.png$/);assert.match(model.downloadName({...base,revision:3,edited:true}),/_R3\.png$/);
+ const src=await fs.readFile(path.resolve('public/creative-ai/studio.js'),'utf8');
+ assert.match(src,/aiEdited=!!current\.versionId&&current\.versionId!=='original'/);assert.match(src,/'AI-edited version in use'/);assert.match(src,/'-ai-edited':'-original'/);
+});
+// Client-ready QA (17 Nov 2026): a mistyped or unknown address said "This project is not available in this brand".
+test('an unknown address shows Page not found, not a project error',async()=>{
+ const src=await fs.readFile(path.resolve('public/creative-ai/studio.js'),'utf8');
+ assert.match(src,/const PROJECT_VIEWS=new Set\(\['project','progress','review','download','versions','campaign','static','video','writing'\]\)/);
+ assert.match(src,/else if\(!PROJECT_VIEWS\.has\(view\)\|\|!id\)\{main\.innerHTML=stateCard\('Page not found'/);
+});
+test('downloads read files through the server (direct), not a CDN redirect',async()=>{
+ const src=await fs.readFile(path.resolve('public/creative-ai/studio.js'),'utf8');
+ const def=/const directAsset=(url=>[^;]+);/.exec(src);assert.ok(def,'directAsset defined');const directAsset=eval(def[1]);
+ assert.equal(directAsset('/creative-ai/api/jobs/creative-1/files/static-lean-a.png'),'/creative-ai/api/jobs/creative-1/files/static-lean-a.png?direct=1');
+ for(const u of ['data:image/png;base64,AAAA','blob:http://x/1','https://cdn.example/a.png',null])assert.equal(directAsset(u),u,'unchanged: '+u);
+ assert.match(src,/await fetchAsset\(r\.imageUrl\)/);assert.match(src,/await fetchAsset\(M\.safeAsset\(r\.imageUrl\)\)/);assert.match(src,/try\{const r=await fetch\(url\);if\(r\.ok\|\|direct===url\)return r;\}catch\(e\)\{if\(direct===url\)throw e;\}return fetch\(direct\);/,'normal link first, then through the server');
 });

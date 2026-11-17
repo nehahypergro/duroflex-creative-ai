@@ -13,7 +13,7 @@ for(const brandId of ['brand-1923d633-e03e-44cc-84b2-bbfb5c152710','brand-3a5870
  await store.update(job.id,j=>{j.status='failed';j.error='Processing stopped because the Studio process ended.';j.errorCode='PROCESSING_INTERRUPTED';j.budget.deadline=Date.now()+30*60e3;return j;});
  const before=await store.read(job.id,{hydrate:false});
  const info=await resume.inspect(runtime,job.id,brandId);
- assert.equal(info.canResume,false);assert.equal(info.blockedRequestKey,key);assert.equal(info.continueAnyway.requestKey,key);assert.match(info.continueAnyway.warning,/may also have been charged.*stays marked unknown/);
+ assert.equal(info.canResume,false);assert.equal(info.blockedRequestKey,key);assert.equal(info.continueAnyway.requestKey,key);assert.match(info.continueAnyway.warning,/may also have been charged.*stays marked unknown/);assert.match(info.continueAnyway.message,/never saved its answer/);assert.doesNotMatch(info.continueAnyway.message+info.continueAnyway.warning,/no replacement will be submitted/,'the panel never contradicts its button');assert.equal(info.continueAnyway.estimateBasis,'reservation allowance (upper bound)');
  await assert.rejects(resume.resume(runtime,job.id,{brandId,token:'wrong',continueAnyway:key}),/Recovery state changed/);
  await assert.rejects(resume.resume(runtime,job.id,{brandId,token:info.continueAnyway.token}),/no saved response/,'a plain Continue stays blocked');
  await resume.resume(runtime,job.id,{brandId,token:info.continueAnyway.token,continueAnyway:key});

@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs/promises'),path=require('path'),os=require('os');
 const {fingerprint}=require('../../lib/creative-ai/art-director');
 test('both brands: persisted production scope preserves old conflicts, rejects changed evidence and never waives product facts',async()=>{
@@ -15,7 +16,7 @@ test('both brands: persisted production scope preserves old conflicts, rejects c
  await assert.rejects(()=>scope.validatePolicy({...policy,brandId:'other'},brand,product,research,logo),/brand/i);
  }finally{await fs.rm(dir,{recursive:true,force:true});}}
 });
-test('recorded research-required response with no alternative uses code-owned none without promoting readiness',async()=>{
+test('recorded research-required response with no alternative uses code-owned none without promoting readiness',{skip:missingJobs('creative-ad132906-405c-45ab-89e0-fde4b1d64259')},async()=>{
  const f=require('../../lib/creative-ai/runtime/artifact-fs'),root=path.resolve(__dirname,'../..'),file=path.join(root,'output/creative-ai/jobs/creative-ad132906-405c-45ab-89e0-fde4b1d64259/invalid-0888fdf94ac65240d5eedeb9f6e75fde9363c6aa1f0c295054137a949a752c84.json');
  const out=JSON.parse(await f.readFile(file,'utf8')).output,before=structuredClone(out);require('../../lib/creative-ai/runtime/decision-wire').bindUnselectedDirection(out);assert.equal(out.selection.directionId,'none');assert.equal(out.status,'research_required');assert.deepEqual(out.researchRequests,before.researchRequests);assert.deepEqual(out.alternatives,[]);
  const ready={status:'ready',alternatives:[],selection:{directionId:'bad'}};require('../../lib/creative-ai/runtime/decision-wire').bindUnselectedDirection(ready);assert.equal(ready.selection.directionId,'bad');

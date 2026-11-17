@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs/promises'),os=require('node:os'),path=require('node:path'),sharp=require('sharp');
 const overlay=require('../../lib/creative-ai/runtime/logo-overlay');
 const root=path.resolve(__dirname,'../..');
@@ -28,7 +29,7 @@ test('removing campaign-logo attachments retains genuine product reference marki
  const r={canvas:{width:1080,height:1080},prompt:'Copy stays unchanged',artDirection:{logo:{assetIds:['campaign-logo']}},attachmentManifest:[{assetId:'campaign-logo',roles:['logo']},{assetId:'sku',roles:['product','logo']}]},before=JSON.stringify(r);
  const request=overlay.request(r,{box:{left:10,top:10,width:100,height:20}});assert.deepEqual(request.attachments.map(a=>a.assetId),['sku']);assert.deepEqual(request.attachments[0].roles,['product']);assert.equal(JSON.stringify(r),before);
 });
-for(const [brandId,jobId,attempt] of [['brand-1923d633-e03e-44cc-84b2-bbfb5c152710','creative-b421f4a4-3a63-48ec-b573-361048edabbe',0],['brand-3a5870df-d114-43eb-ba02-e5d8c3c729de','creative-e9f8c2ce-6138-4120-9043-68d4de847c6f',1]])test('saved '+brandId+' package through mocked generation, review and separate editable logo',async t=>{
+for(const [brandId,jobId,attempt] of [['brand-1923d633-e03e-44cc-84b2-bbfb5c152710','creative-b421f4a4-3a63-48ec-b573-361048edabbe',0],['brand-3a5870df-d114-43eb-ba02-e5d8c3c729de','creative-e9f8c2ce-6138-4120-9043-68d4de847c6f',1]])test('saved '+brandId+' package through mocked generation, review and separate editable logo',{skip:missingJobs(jobId)},async t=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'logo-pipeline-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
  const disk=require('../../lib/creative-ai/runtime/artifact-fs'),savedDir=path.join(root,'output/creative-ai/jobs',jobId),suffix='continuity-custom_studio-social-square-'+attempt,read=async n=>JSON.parse(await disk.readFile(path.join(savedDir,n)));
  const record=await read('package-'+suffix+'.json'),saved=(await read('review-recovery-'+suffix+'.json')).outcome,brand=JSON.parse(await fs.readFile(path.join(root,'output/creative-ai/brands',brandId,'brand.json')));

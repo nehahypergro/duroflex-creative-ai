@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const composition=require('../../lib/creative-ai/runtime/editable-composition');
 const fontkit=require('fontkit');
@@ -26,7 +27,7 @@ test('native copy and historical layout decoding remain outside the new planning
  assert.doesNotThrow(()=>composition.validate(p,{text:[{delivery:'native',fieldId:'caption',exactText:'Native text'}]},a,false,{canvas:{width:1200,height:627},fonts:new Map()}));
 });
 
-test('saved failed LinkedIn plan cannot pass the shared font-metric gate; history stays unchanged',async()=>{
+test('saved failed LinkedIn plan cannot pass the shared font-metric gate; history stays unchanged',{skip:missingJobs('creative-557033af-96a2-47cd-825a-46eeccb1c261')},async()=>{
  const root=path.resolve(__dirname,'../..'),dir=path.join(root,'output/creative-ai/jobs/creative-557033af-96a2-47cd-825a-46eeccb1c261');
  const files=['editable-continuity-custom_studio-linkedin-post-original.json','editable-review-outcome-continuity-custom_studio-linkedin-post.json','job.json'];
  const bytes=files.map(n=>fs.readFileSync(path.join(dir,n))),doc=JSON.parse(bytes[0]),outcome=JSON.parse(bytes[1]),job=JSON.parse(bytes[2]);
@@ -51,7 +52,7 @@ test('font loading rejects altered pinned files before they can inform a paid pl
  const temp=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'planning-font-hash-'));try{fs.symlinkSync('/System/Library/Fonts/Supplemental',path.join(temp,'canvas-assets'));const a={brandId:'test',fonts:[{id:'font',brandId:'test',filename:'Arial.ttf',sha256:'incorrect'}]};await assert.rejects(()=>require('../../lib/creative-ai/runtime/layout-text-metrics').load({brands:{dir:()=>temp}},a),/pinned hash/);}finally{fs.rmSync(temp,{recursive:true,force:true});}
 });
 
-test('real production reconciliation wrapper resolves the selected pinned canvas',async()=>{
+test('real production reconciliation wrapper resolves the selected pinned canvas',{skip:missingJobs('creative-b4becbb8-cfeb-4151-bf6f-e9aff2e98fc7')},async()=>{
  const root=path.resolve(__dirname,'../..'),dir=path.join(root,'output/creative-ai/jobs/creative-b4becbb8-cfeb-4151-bf6f-e9aff2e98fc7');
  const job=JSON.parse(fs.readFileSync(path.join(dir,'job.json'))),inputFile=fs.readdirSync(dir).find(n=>/^plan-.*-art-input.json$/.test(n));
  const input=JSON.parse(await require('../../lib/creative-ai/runtime/artifact-fs').readFile(path.join(dir,inputFile),'utf8'));

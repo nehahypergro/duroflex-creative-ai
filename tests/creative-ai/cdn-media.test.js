@@ -22,3 +22,16 @@ test('Shared artifact I/O keeps metadata local, serves CDN video after removal a
  await io.writeFile(path.join(dir,'private.json'),'{}');assert.equal(posts,1,'Briefs, receipts and metadata never upload');
  global.fetch=async()=>{throw Error('Connection interrupted');};const failed=path.join(dir,'failure.mp4');await io.writeFile(failed,Buffer.from('unuploaded content'));await require('../../lib/creative-ai/runtime/media-outbox').drain();assert.deepEqual(await fs.readFile(failed),Buffer.from('unuploaded content'));assert.equal(JSON.parse(await fs.readFile(failed+'.cdn-pending.json')).status,'pending');assert.equal(await cdn.receipt(failed),null);
  }finally{global.fetch=original;await f.close();}});
+
+// Client-ready QA (17 Nov 2026): the CDN's cache sometimes served a copy without its cross-origin header, so a script
+// download of a redirected file was blocked ("This image could not load"). ?direct=1 returns the bytes from the server.
+for(const brand of ['brand-duroflex','brand-sleepyhead'])test('a direct request gets the file from the server, not a CDN redirect: '+brand,async()=>{const f=await fixture(),original=global.fetch;try{
+ const png=Buffer.from('fixture png bytes for '+brand),file=path.join(f.root,'output/creative-ai/brands',brand,'assets/hero.png');await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file,png);
+ await fs.writeFile(file+'.cdn.json',JSON.stringify({version:1,brandId:brand,url:'https://cdn2.hypergro.ai/hero.png',sha256:cdn.digest(png),bytes:png.length}));
+ const out=()=>{const o={writeHead:(s,h)=>{o.status=s;o.headers=h;},end:b=>{o.body=b;}};return o;};
+ const plain=out();assert.equal(await cdn.redirect({url:'/x/hero.png'},plain,file),true);assert.equal(plain.status,302);
+ const local=out();assert.equal(await cdn.redirect({url:'/x/hero.png?direct=1'},local,file),true);assert.equal(local.status,200);assert.equal(local.headers['Content-Type'],'image/png');assert.deepEqual(local.body,png);
+ await fs.rm(file);let fetched=0;global.fetch=async()=>{fetched++;return response(png);};
+ const remote=out();await cdn.redirect({url:'/x/hero.png?direct=1'},remote,file);assert.equal(remote.status,200);assert.deepEqual(remote.body,png);assert.equal(fetched,1,'read from the CDN by the server');
+ global.fetch=async()=>response(Buffer.from('changed bytes!!!!!!!!!!!!!!!!!!!!!!!!!'.slice(0,png.length)));await assert.rejects(cdn.redirect({url:'/x/hero.png?direct=1'},out(),file),/changed/);
+}finally{global.fetch=original;await f.close();}});

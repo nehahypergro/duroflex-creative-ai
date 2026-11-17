@@ -75,8 +75,9 @@ test('asset picker opens from the sidebar, filters, starts campaigns and quick d
   d=await saved(page);assert.deepEqual([d.creationMode,d.outputs[0].assetCardId,d.outputs[0].formatId],['quick','instagram-story','story']);
   // A coming-soon card is a planning brief and never reaches generation.
   await page.locator('[data-nav=home]').click();await page.locator('.creation-hero').waitFor();
-  await page.getByRole('button',{name:'Browse all tools',exact:true}).click();await page.locator('#assetPickerSearch').fill('hiring');await page.locator('#assetPickerGrid [data-card=hiring-post]').click();
-  assert.match(await page.locator('#assetPickerTray').innerText(),/not generated yet/);
+  // Coming soon cards are shown but cannot be chosen (Neha, 17 Nov 2026); the planning-only Catalogue card still saves a planning brief.
+  await page.getByRole('button',{name:'Browse all tools',exact:true}).click();await page.locator('#assetPickerSearch').fill('hiring');assert.equal(await page.locator('#assetPickerGrid [data-card=hiring-post]').isDisabled(),true);
+  await page.locator('#assetPickerSearch').fill('catalogue');await page.locator('#assetPickerGrid [data-card=catalogue]').click();
   await page.getByRole('button',{name:'Continue',exact:true}).click();await page.locator('#field-brief').waitFor();
   d=await saved(page);assert.equal(d.outputs[0].planningOnly,true);assert.match(await page.locator('.planning-only-note').innerText(),/planning brief/);
   assert.equal(await page.locator('[data-action=generation-submit]').count(),0);

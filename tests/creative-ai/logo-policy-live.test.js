@@ -1,4 +1,5 @@
 'use strict';
+const {missingJobs}=require('./helpers/saved-jobs.cjs'); // skip saved-job replays when output/ lacks the job
 const test=require('node:test'),assert=require('node:assert/strict'),P=require('../../lib/creative-ai/runtime/placement-logo-policy'),M=require('../../public/creative-ai/studio-model');
 const selected=(id,extra={})=>({id:id.replace(/\W/g,'_'),description:{profileId:id,...extra},jobInputs:{}});
 test('policy matrix resolves publishing context for both brands and keeps physical product marks',()=>{for(const brandId of ['Duroflex','Sleepyhead'])for(const [id,context,expected] of [['custom:studio-social-story',{publishing:'organic'},'omit'],['custom:studio-social-story',{publishing:'paid'},'include'],['custom:studio-web-hero',{brandedHost:true},'omit'],['custom:studio-web-hero',{brandedHost:false},'include'],['custom:studio-commerce-product',{},'omit'],['custom:studio-commerce-feature',{},'omit'],['custom:studio-linkedin-post',{},'include']]){const p=P.resolvePolicy({brandId,placementPublishing:{[id]:context}},selected(id));assert.equal(p.treatment,expected);assert.equal(p.preserveProductMarkings,true);}});
@@ -23,7 +24,7 @@ test('editable omitted placements do not synthesize a logo layer',()=>{
  const d=E.layout({canvas:{width:1200,height:627},placementContext:{selection:{jobInputs:{logoPolicy:{version:1,treatment:'omit'}}}},exactCopy:{fields:[{id:'headline',text:'Hello',delivery:'embedded'}]},artDirection:{text:[]}}, {fonts:[{id:'font',weight:400}],logo:null},'brand','/photo','Product');
  assert.equal(d.objects.some(o=>o.role==='logo'),false);assert.equal(d.assets.length,1);
 });
-test('observed LinkedIn margin ambiguity has explicit final-canvas context without inventing publisher margins',()=>{
+test('observed LinkedIn margin ambiguity has explicit final-canvas context without inventing publisher margins',{skip:missingJobs('creative-7b1152d4-bbae-471c-9d42-f0a8bafbd50f')},()=>{
  const fs=require('fs'),path=require('path'),file=path.resolve(__dirname,'../../output/creative-ai/jobs/creative-7b1152d4-bbae-471c-9d42-f0a8bafbd50f/package-exploration-custom_studio-linkedin-post-0.json');
  const record=JSON.parse(fs.readFileSync(file));const c=P.reviewContext(record);
  assert.deepEqual(c.finalCanvasBounds,{left:0,top:0,right:1200,bottom:627});assert.equal(c.extraPublisherMarginSupplied,false);assert.match(c.instruction,/do not require/i);

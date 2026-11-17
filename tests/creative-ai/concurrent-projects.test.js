@@ -5,10 +5,12 @@ const {CreativeRuntime}=require('../../lib/creative-ai/runtime/engine');
 test('multiple brand projects start together, queue remains bounded and duplicate scheduling is ignored',async()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'studio-concurrency-'));
  try{const config=loadConfig(root);assert.equal(config.maxConcurrentJobs,2);config.maxConcurrentJobs=5;
- const started=[],release=[],fake={config,active:new Set(),pending:[],execute:id=>new Promise(resolve=>{started.push(id);release.push(resolve);}),store:{update:async()=>{}},log:async()=>{}};
+ const started=[],release=[],fake={config,active:new Set(),pending:[],execute:id=>new Promise(resolve=>{started.push(id);release.push(resolve);}),store:{read:async()=>({intake:{}}),update:async()=>{}},log:async()=>{}};
+ // Since 5 Nov 2026 schedule() reads the job first; original-artwork jobs go to the planning/image stage queues
+ // (docs/independent-stage-queues-20261105.md). These fixture jobs have no such pin, so they use the bounded project queue.
  fake.pump=()=>CreativeRuntime.prototype.pump.call(fake);
- for(const id of ['Duroflex-1','Sleepyhead-1','Duroflex-2','Sleepyhead-2','Duroflex-3','Duroflex-4'])CreativeRuntime.prototype.schedule.call(fake,id);
- CreativeRuntime.prototype.schedule.call(fake,'Duroflex-1');assert.equal(started.length,5);assert.equal(fake.pending.length,1);
+ for(const id of ['Duroflex-1','Sleepyhead-1','Duroflex-2','Sleepyhead-2','Duroflex-3','Duroflex-4'])await CreativeRuntime.prototype.schedule.call(fake,id);
+ await CreativeRuntime.prototype.schedule.call(fake,'Duroflex-1');assert.equal(started.length,5);assert.equal(fake.pending.length,1);
  release.shift()();await new Promise(r=>setImmediate(r));assert.equal(started.length,6);assert.equal(fake.active.size,5);
  release.forEach(r=>r());await new Promise(r=>setImmediate(r));assert.equal(fake.active.size,0);
  }finally{fs.rmSync(root,{recursive:true,force:true});}
