@@ -63,6 +63,19 @@ Then the Sleepyhead half of this batch can run.
 
 The hosted Studio was redeployed from `main` (page files, admin dashboard, $1,035.04 allowance and Sleepyhead readiness confirmed; `currency.json` still missing). New jobs pin `brandRuleNoteVersion`, `warrantyCheckVersion` and `featureEvidenceVersion`; models are `gpt-6.1-sol` (planning, checks) and `gpt-image-2` (images).
 
+**Final Sleepyhead results (17 Nov 2026, hosted Studio, including continued projects):**
+
+| Outcome | Projects |
+|---|---|
+| Asked | 52 |
+| Designs made | 38 projects, 62 images (42 Ready, 6 fully checked; most others held back only by the typeface rule, fixed for new jobs) |
+| Every image Ready | 19 |
+| Some images Ready | 6 |
+| Made, none Ready | 13 |
+| No design | 14: Memory Foam Topper ×3 (photo too big, fixed), story hyphen count and "Meet the…" carousel (fixed), homepage hero and standee (refused picture link, fixed), LinkedIn post (cut-off answer; Continue retry added), Nooks (website colour conflict), landing page modules and web push (server instance replaced; modules has an unresolved paid request), product page images (call limit, cancellation unconfirmed), email product block ("operation was aborted") and RCS carousel (stale request lock) during server restarts (stuck-project fix) |
+
+Estimated cost ≈ ₹1,479 ($15.31 at ₹96.6149/USD); 23 requests have no usage receipt yet and stay unknown, not zero.
+
 Bugs found in the first projects and fixed (shared engine, both brands; `tests/creative-ai/live-batch-sleepyhead-20261117.test.js`, failing before):
 
 | # | Symptom | Fix |
