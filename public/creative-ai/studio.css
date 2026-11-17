@@ -1590,6 +1590,8 @@ html body #reviewRequiredErrors .button{padding:3px 6px;min-height:24px;font-siz
 .asset-badge.soon{background:#eef0f5;color:#58627b}
 .asset-badge.plan{background:#e9f6ff;color:#245e8f}
 .asset-card.is-soon .asset-card-thumb,.asset-card.is-plan .asset-card-thumb{filter:saturate(.55)}
+.asset-card.is-soon:disabled{cursor:not-allowed;opacity:.62}
+.asset-card.is-soon:disabled:hover{transform:none;box-shadow:none}
 .asset-card-check{position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;border:1.5px solid #cdd2e3;background:#fff;display:flex;align-items:center;justify-content:center;color:#fff}
 .asset-card[aria-checked=true] .asset-card-check{background:var(--purple);border-color:var(--purple)}
 .asset-card-check .icon{width:14px;height:14px}
