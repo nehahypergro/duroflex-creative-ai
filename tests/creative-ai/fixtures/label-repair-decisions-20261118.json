@@ -1,0 +1,120 @@
+{
+ "misspelt-label": {
+  "instruction": "Correct only the malformed lettering in the turquoise lower label strip so it reads “POSTURE PERFECT.” Preserve the label shape, colors, placement, remaining physical markings, mattress, and all other artwork.",
+  "protectedRegions": [
+   {
+    "height": 286,
+    "x": 74,
+    "y": 450,
+    "label": "Visible mattress: upper body and surface, including label area above repair",
+    "width": 899
+   },
+   {
+    "height": 20,
+    "x": 74,
+    "y": 736,
+    "label": "Visible mattress to the left of the repair",
+    "width": 375
+   },
+   {
+    "height": 20,
+    "x": 543,
+    "y": 736,
+    "label": "Visible mattress to the right of the repair",
+    "width": 430
+   },
+   {
+    "height": 30,
+    "x": 74,
+    "y": 756,
+    "label": "Visible mattress lower edge and sidewall",
+    "width": 899
+   },
+   {
+    "height": 32,
+    "x": 443,
+    "y": 704,
+    "label": "Unaffected upper physical label: duroflex and DUROPEDIC",
+    "width": 103
+   },
+   {
+    "height": 190,
+    "x": 100,
+    "y": 140,
+    "label": "Unaffected headline copy",
+    "width": 670
+   },
+   {
+    "height": 35,
+    "x": 100,
+    "y": 292,
+    "label": "Unaffected technology copy",
+    "width": 490
+   }
+  ],
+  "regions": [
+   {
+    "height": 20,
+    "x": 449,
+    "y": 736,
+    "label": "Malformed lettering in turquoise label strip",
+    "width": 94
+   }
+  ],
+  "action": "local_edit",
+  "requirementIds": [
+   "product",
+   "product-label",
+   "label-wording"
+  ],
+  "reason": "The visible physical label’s lower line is malformed; all three findings identify the same localized lettering defect."
+ },
+ "short-label": {
+  "instruction": "Correct the physical label only: match the official label’s size, outline, placement, wording, and lower edge meeting the bottom piping. Preserve the rest of the mattress and all copy.",
+  "protectedRegions": [
+   {
+    "height": 210,
+    "x": 45,
+    "y": 55,
+    "label": "Unaffected headline and construction copy",
+    "width": 690
+   },
+   {
+    "height": 470,
+    "x": 0,
+    "y": 200,
+    "label": "Unaffected quilted top and upper mattress",
+    "width": 1000
+   },
+   {
+    "height": 250,
+    "x": 50,
+    "y": 690,
+    "label": "Unaffected sidewall left of label",
+    "width": 600
+   },
+   {
+    "height": 250,
+    "x": 860,
+    "y": 690,
+    "label": "Unaffected sidewall right of label",
+    "width": 140
+   }
+  ],
+  "regions": [
+   {
+    "height": 200,
+    "x": 650,
+    "y": 690,
+    "label": "Physical mattress label",
+    "width": 210
+   }
+  ],
+  "action": "local_edit",
+  "requirementIds": [
+   "product",
+   "product-label"
+  ],
+  "reason": "The visible label is oversized and extends below the horizontal stripe; the supplied official label reference shows a different outline and its lower edge meeting the bottom piping."
+ }
+}

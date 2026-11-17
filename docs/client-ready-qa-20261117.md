@@ -40,3 +40,29 @@ The 38 engine tests that already failed were triaged: 8 were bug 4; 10 were out 
 - On a phone, Brand library → Products appears slightly zoomed out when a product with long size names is expanded (the size drop-down widens the table row). Nothing becomes unusable.
 - The lean server-side brief text still mentions "two model-rendered options" (`studio-generation.js`, `conceptRoutes` for lean intakes). The planner uses the pinned single option; not changed without a planner test.
 - The live site needs the redeploy for all of today's fixes.
+
+## Big sets not getting Ready (18 Nov 2026)
+
+Neha: "amazon marketplace or anything that is huge is not getting ready". Saved local big sets since 10 Nov all finished, but few pictures were fully checked (product page images: 0 of 24). The planning failures with no pictures date from 9–11 Nov and were fixed then; the live 17 Nov failures (product photo size, restarts, damaged staging copy, skipped brand-rule note) are fixed too. Paid local runs on the current code then found three more causes, all fixed in the shared engine with failing-before tests for both brands:
+
+| # | Cause | Fix | Test |
+|---|---|---|---|
+| 1 | Product page images: three gallery-wide rules (`pdp-distinct-purpose`, `pdp-review-boundary`, `pdp-test-source-authority`) were judged on each picture and always came back "can't tell"; A+/PMax/carousel picture-job rules did the same for their whole-set parts | New jobs pin `setRuleCheckVersion: 1`: the gallery rules stay in planning only; picture-job rules ask only about this page's own job | `set-rules-20261118.test.js` |
+| 2 | Amazon A+ failed in planning for any product whose official name is over 8 words (the wide-panel limit), and the repair then failed on a 227-character shared rule (limit 200) | The exact product name is exempt from the 8-word block limit and counts as at most 8 of the 24 words; shared rules may be 300 characters | `aplus-pages.test.js` |
+| 3 | A misspelt label on the product ("PEEFCT") was never corrected: the diagnosis protected the product as "Visible mattress", only "product" was accepted, and a repair could not sit inside the product | New jobs pin `labelRepairVersion: 1`: product-type names count as product protection; a label-only repair may repaint a patch of 5% or less inside the product, with the official label close-up; the re-check still decides | `label-repair-20261118.test.js` (uses the model's real saved answers) |
+
+Replay of saved product page images: fully checked 0 → 11 of 24 with fix 1, 18 of 24 with yesterday's font note too. Saved diagnoses from the run: 4 of 5 label repairs would now go ahead (the fifth mixed the label with other problems and still needs a whole new picture).
+
+Paid local runs (current code before fixes 2 and 3 unless noted):
+
+| Set | Pictures | Ready | Fully checked |
+|---|---|---|---|
+| Duroflex Marketplace images (Spine Contour Pillow) | 6 | 6 | 6 |
+| Duroflex Product Page Images (Posture Perfect) | 12 | 7 | 7 (the 5 others: misspelt label, fix 3) |
+| Sleepyhead Amazon A+ Premium (Original BodyIQ) | failed in planning (fix 2) | | |
+| Same A+ page, with fix 2 | 14 | 13 | 11 (2 only "can't tell" on picture jobs, fix 1) |
+| Same product page set, with fixes 1–3 | 12 | 7 | 7 |
+
+The second product page run shows fix 3 working as a mechanism: 4 repairs ran (3 label patches, 1 whole-page redraw) where none ran before. None was accepted: each repaired picture damaged the label another way (doubled "DUROPEDIC", cut-off letters, a stray piping strip, the label still on the wrong side), and the re-check kept the original every time. Small printed product labels are a limit of the picture model; those pictures stay "check before using" with the reason. The attempts cost about ₹77 for the set (about ₹19 each).
+
+Cost of these paid runs ≈ ₹954 ($9.88 at ₹96.6149/USD, estimates from recorded usage); 1 request has no usage receipt yet and stays unknown, not zero.

@@ -232,3 +232,19 @@ for(const brand of brands)test(brand+': the technology panel keeps few, large la
  assert.match(f.records[0].input.format.guidance.mandatory.find(x=>x.id.startsWith('aplus')).text,/layer name.*Amazon text body/i);
  assert.equal(f.records[0].input.aplus.technologyLabelsVersion,1);
 });
+
+// Regression (18 Nov 2026, local Sleepyhead A+ Premium run): the planner put the full product name on each wide panel, as
+// the page rule asks, and every panel failed "8 words or fewer" because the official name has 11 words; the repair split
+// the name and then failed on a 227-character shared rule. The exact name is exempt from the block limit and counts as at
+// most 8 words of the total; shared set rules may be up to 300 characters. Failing before.
+const LONG={Duroflex:'Strength Plus Memory Foam Coir Orthopedic Mattress With Euro Top',Sleepyhead:'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey'};
+for(const brand of brands)test(brand+': a long official product name fits an A+ wide panel; other long blocks still fail',async t=>{
+ const f=await fixture(t,{brand}),input=structuredClone(f.records[0].input);input.product.name=LONG[brand];
+ const ok=planFor(input);assert.doesNotThrow(()=>planning.validatePlan(ok,input));
+ const chips=planFor(input);chips.pages[0].copy.push(...['Zoned support','Breathable knit cover','Edge support'].map(text=>({role:'chip',text,factIds:[]})));assert.doesNotThrow(()=>planning.validatePlan(chips,input),'name counts as 8 of the 24 words');
+ const wordy=planFor(input);wordy.pages[0].copy[1].text='A headline that is far too long for a wide panel';assert.throws(()=>planning.validatePlan(wordy,input),/wide panel needs 1-5/);
+ const other=planFor(input);other.pages[0].copy[1].text=LONG[brand].split(' ').reverse().join(' ');assert.throws(()=>planning.validatePlan(other,input),/wide panel needs 1-5/,'only the product name is exempt');
+ const crowded=planFor(input);crowded.pages[0].copy[1].text='Sleep that resets you every single night now';crowded.pages[0].copy.push(...['Zoned support here','Breathable knit cover now','Strong edge support too'].map(text=>({role:'chip',text,factIds:[]})));assert.throws(()=>planning.validatePlan(crowded,input),/wide panel needs 1-5/,'the total limit still applies');
+ if(input.checklist?.setRules){const rules=planFor(input);rules.setRules=['Keep the exact product name and module headline identical across each desktop/mobile pair; recompose rather than crop the desktop artwork. Set the full name across two consecutive copy blocks, read together with a single space.','The same bright bedroom family on every page'];assert.equal(rules.setRules[0].length,227);assert.doesNotThrow(()=>planning.validatePlan(rules,input));
+  rules.setRules[0]='x'.repeat(301);assert.throws(()=>planning.validatePlan(rules,input),/setRules/);}
+});
