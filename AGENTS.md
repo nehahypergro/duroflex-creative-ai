@@ -14,6 +14,7 @@
 
 - `scripts/creative-ai/qa-card-readiness-matrix.js --root <copy>` runs every ready card × product, every brief-page option and random campaigns through the real readiness route with no paid calls. Run it on a clean checkout of what is deployed after changing cards, presets or readiness.
 - The brief page's select handler is `StudioModel.applyStaticChange` (studio.js only calls it). A changed retail Format starts from its own defaults; a unit change converts width and height; Google Display banners hide Platform; Category tile and Collection card hide Website asset; WhatsApp → RCS starts from "Single card · medium image"; Landing Page Hero defaults the branded header to Yes; ready cards do not list planning-only retail formats.
+- Members see every project on the home page and open it **view only** (Neha, 17 Nov 2026: "only viewing no editing"): any change to a teammate's project (continue, re-check, AI edit, feedback, sharing) returns 403; viewers get the creator's name only; internal test work stays hidden; admins keep full access (`lib/admin/studio-access.js`, `tests/admin/studio-access.test.js`).
 - Members may also use the home brief box, add a product from the brand's official URL and make push icons (Neha approved, 15 Nov 2026); other brand administration stays admin-only.
 - Each brand has at least five saved SKUs per category (mattress, sofa, accessories) where its website has them.
 - See `docs/readiness-matrix-20261115.md`, including the hosted Studio's missing spend allowance and its Vertex provider setting.
