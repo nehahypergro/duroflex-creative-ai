@@ -24,7 +24,7 @@ for(const brand of brands){
 test('an unsupported product line names the words the planner must fix',()=>{
  const planning=require('../../lib/creative-ai/lean/planning');
  const product={id:'p1',name:'Tatva Natural Latex and Coir Mattress',variant:{id:'v1',name:'Queen'},facts:[{id:'f1',text:'Natural latex and coir layers'}]};
- assert.throws(()=>planning.validateCitations([{role:'supporting line',text:'Tatva natural latex for cooler nights',factIds:['p1','f1']}],product),e=>/does not support copy: supporting line/.test(e.message)&&/for, cooler, nights/.test(e.message));
+ assert.throws(()=>planning.validateCitations([{role:'supporting line',text:'Tatva natural latex for cooler nights',factIds:['p1','f1']}],product),e=>/does not support copy: supporting line/.test(e.message)&&/: cooler, nights;/.test(e.message));
  assert.doesNotThrow(()=>planning.validateCitations([{role:'supporting line',text:'Tatva natural latex and coir layers',factIds:['p1','f1']}],product));
 });
 

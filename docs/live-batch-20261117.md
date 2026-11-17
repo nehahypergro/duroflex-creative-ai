@@ -58,3 +58,15 @@ Related engine tests: 674 run, 667 pass; the 7 failures are the same tests that 
 5. Check the storage behind `output/` supports hard links and consistent reads (fix 6 repairs the symptom).
 
 Then the Sleepyhead half of this batch can run.
+
+## Sleepyhead run (started 17 Nov 2026, after the redeploy)
+
+The hosted Studio was redeployed from `main` (page files, admin dashboard, $1,035.04 allowance and Sleepyhead readiness confirmed; `currency.json` still missing). New jobs pin `brandRuleNoteVersion`, `warrantyCheckVersion` and `featureEvidenceVersion`; models are `gpt-6.1-sol` (planning, checks) and `gpt-image-2` (images).
+
+Bugs found in the first projects and fixed (shared engine, both brands; `tests/creative-ai/live-batch-sleepyhead-20261117.test.js`, failing before):
+
+| # | Symptom | Fix |
+|---|---|---|
+| 9 | Memory Foam Topper Facebook story: "Images must be embedded PNG/JPEG data URLs under 6MB" again. The protected SKU picture (`product-identity.js`) is the full website photo as PNG; a 3000 x 3000 photo is over the research limit. Fix 3 covered only the product-page copies. | A new protected picture that would exceed the limit is drawn at 2048/1600/1280/1024 px (pictures that fit keep their bytes); an oversized saved website identity is not reused, and a fitted one is saved beside it (the old one is kept). |
+| 10 | Sofa Bubbles Instagram story: "Get ultra-plush seating with Sofa Bubbles" (six words) counted as seven. | A hyphenated or apostrophe word counts once in the story headline count. |
+| 11 | Napster Mini Mattress Instagram carousel: "Meet the Napster Mini Mattress" failed on "meet" and "the" after every repair. | Product-name lines may use grammar words (the, a, with, your, …) and a leading Meet / Introducing / Presenting; claim words still need a cited fact. |
