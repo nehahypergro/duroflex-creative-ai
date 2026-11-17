@@ -28,3 +28,12 @@ test('Coming soon cards are shown but cannot be chosen in the format picker',asy
  assert.match(src,/M\.assetCard\(id\)\.status==='soon'&&!p\.selected\.includes\(id\)\)return;/);
  const css=await fs.readFile(path.resolve('public/creative-ai/studio.css'),'utf8');assert.match(css,/\.asset-card\.is-soon:disabled\{cursor:not-allowed/);
 });
+// View only (17 Nov 2026): a teammate's project showed buttons that change it; clicking them only showed a refusal.
+test('change buttons are hidden and refused on a teammate\'s project; viewing buttons stay',async()=>{
+ const src=await fs.readFile(path.resolve('public/creative-ai/studio.js'),'utf8'),css=await fs.readFile(path.resolve('public/creative-ai/studio.css'),'utf8');
+ const set=/const VIEW_ONLY_ACTIONS=new Set\(\[([^\]]+)\]\)/.exec(src);assert.ok(set,'list of change actions');const actions=set[1].match(/'([a-z-]+)'/g).map(x=>x.slice(1,-1));
+ for(const a of ['resume-work','retry-image-checks','lean-recheck','edit-image','save-feedback','restart-project'])assert.ok(actions.includes(a),a);
+ for(const a of ['download','card-download','download-set','report-issue'])assert.ok(!actions.includes(a),a+' stays available');
+ assert.match(src,/if\(VIEW_ONLY_ACTIONS\.has\(action\)&&madeBy\(state\.project\)\)\{toast\(/);assert.match(src,/syncViewOnly\(\);/);
+ for(const a of actions)assert.ok(css.includes('body[data-view-only] [data-action="'+a+'"]'),a+' hidden');
+});

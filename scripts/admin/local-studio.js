@@ -75,6 +75,8 @@ async function run() {
   const service = await start();
   console.log('Creative AI with login and admin is ready at http://127.0.0.1:1842/admin. Automatic batch resumption is disabled.');
   for (const signal of ['SIGTERM', 'SIGINT']) process.once(signal, async () => {
+    // Mark running projects interrupted before closing, so Continue is offered (17 Nov 2026).
+    try { await service.app?.runtime?.interruptActive?.(); } catch {}
     await service.close(); process.exit(0);
   });
   return service;
