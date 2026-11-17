@@ -33,8 +33,9 @@ The design engine on the hosted Studio is the same code as `main` (only brand da
 | 5 | Tatva homepage hero failed after every repair: "Product identity citation does not support copy" | The error now names the unsupported words, so the planner's repair can fix them; the rule is unchanged | same |
 | 6 | Prana landing page modules: `REFERENCE_SOURCE_CHANGED` (never seen locally) | A damaged hash-named staging copy is replaced with the correct bytes and re-read | same |
 | 7 | Admin dashboard: every finished one-design job "Needs attention", 1 of 2 images | Count each lean job's pinned image options (committed earlier, `909a1c8`) | `tests/admin/analytics.test.js` |
+| 8 | Display banners (Cocoon) failed planning: "Missing brand requirement/preference decision: strategy-as-intent" (the planner skipped its note for one Duroflex brand-guide requirement) | User decision (17 Nov 2026): new jobs pin `brandRuleNoteVersion: 1`; a skipped brand-rule note is filled as "apply" with a reason saying so, and the rule still reaches the image brief and the check. A mandatory rule written as "not-applicable" still fails. The 4 older local jobs with this error had skipped Studio process or format rules, which are filled since 10 Nov | `brand-rule-note-20261117.test.js` |
 
-Related engine tests: 674 run, 667 pass; the 7 failures are the same tests that fail on the unchanged code.
+Related engine tests: 674 run, 667 pass; the 7 failures are the same tests that fail on the unchanged code. For fix 8 the whole `tests/creative-ai` folder (2,795 tests, browser tests excluded) fails the same 38 tests with and without the change; one more failed once under parallel load and passes 3 of 3 alone, with and without the change.
 
 ## Worked as designed
 
@@ -42,9 +43,8 @@ Related engine tests: 674 run, 667 pass; the 7 failures are the same tests that 
 - Queued OpenAI calls were cancelled and re-sent directly after about 90 s.
 - Layout problems (product cut at the edge, story words in the covered bands, logo outside the square preview) were caught and, by design, not auto-corrected.
 
-## Still open (needs Neha's decision or the team)
+## Still open (needs the team or a later decision)
 
-- **Planner skipped a brand-rule note** (Display banners, Cocoon): "Missing brand requirement/preference decision: strategy-as-intent". By the 10 Nov decision brand rules need the planner, so the job fails; 4 earlier local jobs failed the same way. Display banners has not yet completed on the hosted Studio.
 - **Label often unreadable**: label-wording `unable_to_verify` kept about 10 otherwise clean designs out of Ready.
 - **Story formats**: 3 of 4 stories put words or the logo in the covered top 14% / bottom 20%.
 - **Cresendo 3 Seater (Golden Orange)**: the Duroflex website page names Golden Orange in the title and "Black forest" in the specification; the Studio asks which is right. The website page needs correcting.

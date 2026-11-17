@@ -14,7 +14,7 @@ function planFor(input,copyFor,pageExtra=()=>({})){return {...(input?.checklist?
 const HEADS={'page-1':'Sink into the corner seat','page-2':'Arms that angle outward','story-1':'Lift a cushion, lean back','pdp-1':'Legs that lift the look'};
 const freshCopy=(input,p)=>[{role:'headline',text:HEADS[p.id]+(input.marketing?.recentHeadlines?.length?' tonight':''),factIds:[]},{role:'support',text:'Backed by a 3-year conditional warranty.',factIds:['fact-1']}];
 
-async function fixture(t,{brand='Duroflex',root:sharedRoot=null,selection=[square(1)],copyFor=freshCopy,pageExtra,pinned=true,unpin=['marketingRulesVersion'],ocrRows=[]}={}){
+async function fixture(t,{brand='Duroflex',root:sharedRoot=null,selection=[square(1)],copyFor=freshCopy,pageExtra,pinned=true,unpin=['marketingRulesVersion'],ocrRows=[],planEdit=null}={}){
  const root=sharedRoot||await fs.mkdtemp(path.join(os.tmpdir(),'marketing-'));if(!sharedRoot)t.after(()=>fs.rm(root,{recursive:true,force:true}));
  const store=new JobStore(path.join(root,'output/creative-ai/jobs')),brandId='brand-'+brand.toLowerCase();
  const bytes=await sharp({create:{width:1080,height:1080,channels:3,background:brand==='Duroflex'?'#345678':'#7a3456'}}).png().toBuffer(),data='data:image/png;base64,'+bytes.toString('base64');
@@ -24,7 +24,7 @@ async function fixture(t,{brand='Duroflex',root:sharedRoot=null,selection=[squar
  const calls=[];
  const reason=async request=>{calls.push({kind:request.contextKind,input:request.input,instructions:request.instructions});
   if(request.contextKind==='lean-fingerprint')throw Error('No reading in this test');
-  if(request.contextKind==='lean-planning'){const out=planFor(request.input,copyFor,pageExtra);if(request.validate)await request.validate(out);return out;}
+  if(request.contextKind==='lean-planning'){const out=planFor(request.input,copyFor,pageExtra);if(planEdit)planEdit(out,request.input);if(request.validate)await request.validate(out);return out;}
   if(request.contextKind==='lean-correction')throw Error('No correction in this test');
   const out={checks:request.input.requirements.map(r=>({id:r.id,result:'no_mismatch',evidence:'Observed '+r.name,location:'Whole image'}))};if(request.validate)request.validate(out);return out;};
  const runtime={root,store,config,readCarouselPlan:async()=>null,checklistOcr:async()=>({status:'measured',rows:ocrRows}),provider:{reason,generate:async request=>{calls.push({kind:'image',...request});return {imageData:data};}}};
