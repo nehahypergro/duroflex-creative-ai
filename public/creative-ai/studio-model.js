@@ -1081,7 +1081,8 @@ default:return frame(14,9,36,38)} }
   // Project labels describe the assignment. Product evidence and user titles stay intact.
   function shortProductName(value){
     if(['Brand-only','Product not selected','Choose a product'].includes(value))return value;
-    const words=String(value||'').trim().split(/[|\n]/)[0].replace(/^(?:(?:Duroflex|Sleepyhead|Duropedic)\s+)+/i,'').replace(/\s+\d+\s*seater\b.*$/i,'').trim().split(/\s+/).slice(0,2).join(' ');
+    // 19 Nov 2026 QA: "Original - 3 Layered BodyIQ …" was named "Original -"; the name stops at a spaced dash first.
+    const words=String(value||'').trim().split(/[|\n]/)[0].split(/\s[-–—:]\s/)[0].replace(/^(?:(?:Duroflex|Sleepyhead|Duropedic)\s+)+/i,'').replace(/\s+\d+\s*seater\b.*$/i,'').trim().split(/\s+/).slice(0,2).join(' ').replace(/[\s\-–—,.;:]+$/,'');
     return words.length>32?words.slice(0,31).trimEnd()+'…':words;
   }
   function projectBriefFocus(p){
@@ -1121,7 +1122,9 @@ default:return frame(14,9,36,38)} }
     const existing=p.intake?.campaignName||p.name||'';
     if(!automatic&&existing&&existing!==full&&!['Untitled project','Saved project'].includes(existing))return existing;
     const labels=(Array.isArray(p.outputs)?p.outputs:[]).map(o=>({5:'PDP images',6:'A+ content',9:'Carousel'}[o.featureId]||features.find(f=>f.id===o.featureId)?.name||o.name||'Creative'));
-    if(!labels.length)for(const slot of p.placements||[])labels.push(slot.pdp?'PDP images':slot.carousel?'Carousel':slot.amazon||slot.aplus?'A+ content':String(slot.name||'Creative').split(/\s*[·|]\s*/)[0]);
+    // 19 Nov 2026 QA: numbered slots of one set ("RCS card 1", "RCS card 2", "RCS card 3") were read as three formats, so
+    // the project was called "Campaign"; a trailing slot number is not part of the format.
+    if(!labels.length)for(const slot of p.placements||[])labels.push(slot.pdp?'PDP images':slot.carousel?'Carousel':slot.amazon||slot.aplus?'A+ content':String(slot.name||'Creative').split(/\s*[·|]\s*/)[0].replace(/\s+\d+$/,''));
     const kinds=[...new Set(labels)],asset=kinds.length>1?'Campaign':kinds[0]||((p.creationMode==='campaign')?'Campaign':'Creative');
     const subject=shortProductName(full)||(p.focus==='brand'||p.intake?.focus==='brand'?'Brand':'');
     // Naming v2 (user decision, 10 Nov 2026): Product · Format · Goal · date. The format is the chosen asset
