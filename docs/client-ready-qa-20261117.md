@@ -164,3 +164,24 @@ Neha: "also remove all coming soon remarks".
 - The brief reader already suggests only ready formats.
 - Tests: `studio-asset-picker-browser.test.js`, `studio-checks-20261117.test.js` (both fail before). This replaces the 17 Nov "shown but disabled" behaviour.
 
+
+## Live rerun test (19 Nov 2026)
+
+Neha: "check now and rerun tests on the live site to see any flow errors, bugs, failures".
+
+What was run on the hosted Studio after the 18 Nov redeploy:
+
+- Free: every data endpoint for both brands; Check brief for all 52 ready formats × 2 products × both brands (208 of 208 passed); every saved project and design page (61 Duroflex, 55 Sleepyhead: no page errors, no broken images); the admin dashboard.
+- Paid (about ₹177 known at ₹96.6149/USD, estimate; 9 calls with no usage record stay unknown): 7 reruns of formats that failed on 16–17 Nov. All 7 finished (the over-6 MB photo, Hindi headline, refused picture link and Landing Page Modules failures are gone); all came back "Check before using".
+
+Bugs found and fixed:
+
+- **Correction refused** ("Local repair requires product protection") on both Sleepyhead stories and the Sleepyhead homepage hero, plus 4 earlier live jobs: the diagnosis protected the product by its type ("Teal sofa") and only the word "product" was accepted once label repair was turned off. New lean jobs pin `productNameProtectionVersion: 1`. Test: `correction-product-name-20261119.test.js` (both brands; fails before).
+- **Design page said "Artwork has not been created"** for a finished job opened by link or reload, because it used the browser's saved project list. It now fetches the latest project once. Test: `studio-design-stale-20261119-browser.test.js` (both brands; fails before).
+- **No rupee estimates or costs on the hosted Studio**: `output/cost-tracking/currency.json` was ignored by Git. It is now tracked. Test: `currency-file-tracked-20261119.test.js` (fails before). If the hosted deployment does not build from the repository files, the team must copy this file to the server's `output/cost-tracking/`.
+
+Found, not code in this repository:
+
+- The hosted database (`34.93.180.5:27017`) refused connections for about 3 minutes (20:08–20:11 UTC); every page request failed with `ECONNREFUSED`, jobs kept running. The team should check that machine.
+- Slow steps: planning sometimes over 4 minutes (the backup model took over, as designed); each image check took 4–6 minutes; the admin analytics request took about 23 s.
+- Not yet confirmed: all three Landing Page Modules also failed `set-rules`; this may need the same whole-set handling as product-page sets.
