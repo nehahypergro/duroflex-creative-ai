@@ -48,6 +48,17 @@ window.StudioData = (() => {
       saved.at=0;workspaces.set(brandId,saved);return saved;
     }catch{return;}
   }
+  // 18 Nov 2026 (Neha: "cant it be in cache"): the product list is kept in this browser for 7 days, per brand and
+  // signed-in account. A kept list is used at once and refreshed from the server in the background; the fresh list
+  // replaces it (and the saved workspace copy) and is announced with the 'studio:products' event. Every kept product
+  // must belong to the brand it is kept for, or the copy is not used.
+  const PRODUCT_KEEP_MS=7*24*3600*1000,productKey=id=>'products:'+id,productRefresh=new Map();
+  const ownProducts=(brandId,rows)=>Array.isArray(rows)&&rows.every(p=>p?.brandId===brandId);
+  async function fetchProducts(brandId){const rows=await get('brands/'+encodeURIComponent(brandId)+'/products',{timeout:60000});if(ownProducts(brandId,rows))await disk('put',productKey(brandId),{brandId,at:Date.now(),rows});return rows;}
+  async function keptProducts(brandId){const saved=await disk('get',productKey(brandId));return saved?.brandId===brandId&&Date.now()-saved.at<PRODUCT_KEEP_MS&&ownProducts(brandId,saved.rows)?saved.rows:null;}
+  function refreshProducts(brandId,kept){if(productRefresh.has(brandId))return productRefresh.get(brandId);const started=version;const r=fetchProducts(brandId).then(rows=>{if(started!==version)return;
+    // Same products as the kept copy (readiness check times aside): nothing to redraw, so an open picker is left alone.
+    const same=(a,b)=>JSON.stringify(a,(k,v)=>k==='checkedAt'?undefined:v)===JSON.stringify(b,(k,v)=>k==='checkedAt'?undefined:v);if(kept&&same(kept,rows))return;const snap=workspaces.get(brandId);if(snap?.value?.[1]?.status==='fulfilled'){snap.value[1]={status:'fulfilled',value:rows};persist(brandId,snap);}window.dispatchEvent(new CustomEvent('studio:products',{detail:{brandId,rows}}));},()=>{}).finally(()=>productRefresh.delete(brandId));productRefresh.set(brandId,r);return r;}
   return {
     responseJson,
     get version(){return version;},
@@ -112,10 +123,11 @@ window.StudioData = (() => {
     componentRepair:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/component-recovery',input),
     retryImageChecks:(id,scope)=>post('jobs/'+encodeURIComponent(id)+'/retry-checks',scope),leanRecheck:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/lean-recheck',body),
     // 18 Nov 2026: a large product list may take longer than other reads; give it a minute before giving up.
-    products:brandId=>get('brands/'+encodeURIComponent(brandId)+'/products',{timeout:60000}),
+    async products(brandId){const kept=await keptProducts(brandId);if(!kept)return fetchProducts(brandId);void refreshProducts(brandId,kept);return kept;},
+    freshProducts:fetchProducts,
     // One small paid reasoning call; the result only fills the appreciation page for confirmation.
     readBrief:(brand,body)=>post('brands/'+encodeURIComponent(brand.id)+'/brief-read',{...body,brandName:brand.name}),
-    async saveProduct(brand,url,refresh=false){const result=await post('brands/'+encodeURIComponent(brand.id)+'/products',{brandName:brand.name,url,refresh});this.invalidateWorkspace(brand.id);return result;},
+    async saveProduct(brand,url,refresh=false){const result=await post('brands/'+encodeURIComponent(brand.id)+'/products',{brandName:brand.name,url,refresh});productRefresh.delete(brand.id);await disk('delete',productKey(brand.id));this.invalidateWorkspace(brand.id);return result;},
     assets:brandId=>get('brands/'+encodeURIComponent(brandId)+'/assets'),
     product:(brandId,id)=>get('brands/'+encodeURIComponent(brandId)+'/products/'+encodeURIComponent(id)),
     rebuildPrint:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/print-proofs/rebuild',body),
