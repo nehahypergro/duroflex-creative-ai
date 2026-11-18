@@ -35,3 +35,9 @@ for(const brand of brands){
   assert.match(String(g.planError?.message),/Mandatory rule cannot be omitted: current-source-acceptance/);
  });
 }
+// The one repair is told what to do, not only what failed (19 Nov 2026: tonight's three planning failures all repeated
+// "not-applicable" after their repair). Pass/fail is unchanged.
+for(const brand of brands)test(brand+': a mandatory rule left as not-applicable tells the repair to write "apply"',async t=>{
+ const f=await fixture(t,{brand,planEdit:out=>{Object.assign(out.guidanceDecisions.find(d=>d.id==='identity'),{decision:'not-applicable',reason:'Not needed'});}});
+ assert.match(String(f.planError?.message),/Mandatory rule cannot be omitted: identity \(write decision "apply" for it, and say in its reason how this page meets it/);
+});
