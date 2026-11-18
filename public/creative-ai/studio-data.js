@@ -5,10 +5,10 @@ window.StudioData = (() => {
     if(!response.ok&&!allowError)throw Object.assign(Error(value?.error||'The request could not finish. Your saved work is preserved.'),{status:response.status,code:value?.code,clientCode:value?.clientCode,reference:value?.reference});
     return value;
   }
-  async function get(path,{signal}={}) {
+  async function get(path,{signal,timeout=20000}={}) {
     const controller=new AbortController(),abort=()=>controller.abort();
     if(signal?.aborted)abort();else signal?.addEventListener('abort',abort,{once:true});
-    const timer=setTimeout(abort,20000);
+    const timer=setTimeout(abort,timeout);
     try{const response=await fetch('/creative-ai/api/'+path,{cache:'no-store',signal:controller.signal});
       return await responseJson(response);
     }finally{clearTimeout(timer);signal?.removeEventListener('abort',abort);}
@@ -111,7 +111,8 @@ window.StudioData = (() => {
     componentRepairPlan:(id,scope)=>get('jobs/'+encodeURIComponent(id)+'/component-recovery?route='+encodeURIComponent(scope.route)+'&placementId='+encodeURIComponent(scope.placementId)),
     componentRepair:(id,input)=>post('jobs/'+encodeURIComponent(id)+'/component-recovery',input),
     retryImageChecks:(id,scope)=>post('jobs/'+encodeURIComponent(id)+'/retry-checks',scope),leanRecheck:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/lean-recheck',body),
-    products:brandId=>get('brands/'+encodeURIComponent(brandId)+'/products'),
+    // 18 Nov 2026: a large product list may take longer than other reads; give it a minute before giving up.
+    products:brandId=>get('brands/'+encodeURIComponent(brandId)+'/products',{timeout:60000}),
     // One small paid reasoning call; the result only fills the appreciation page for confirmation.
     readBrief:(brand,body)=>post('brands/'+encodeURIComponent(brand.id)+'/brief-read',{...body,brandName:brand.name}),
     async saveProduct(brand,url,refresh=false){const result=await post('brands/'+encodeURIComponent(brand.id)+'/products',{brandName:brand.name,url,refresh});this.invalidateWorkspace(brand.id);return result;},

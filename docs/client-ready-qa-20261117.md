@@ -88,3 +88,15 @@ Six admin tests had been failing since the 3 and 9 Nov redesigns. Two were real 
 | Brief documents (`brief-documents.test.js`) | The language box is now `#field-language`; the message is built from Get / To / By; the brief saves itself with no Save button | Tests use the current fields and autosave |
 
 All 91 admin tests pass after the fixes, and the 105 Studio tests that use dashboard code. The new stage and phone-width tests fail on the earlier code.
+
+## Product picker empty on the hosted Studio (18 Nov 2026)
+
+Neha: "why are the skus not visible when i click on product selection". On the hosted Studio the product picker said "No products match your search." with nothing listed.
+
+| Cause | Fix | Test |
+|---|---|---|
+| The hosted copy keeps only the CDN receipt of each saved product photo (photos are not in Git). To mark each product "Ready to use", the product list downloaded one photo per product from the CDN, one product after another. The Duroflex list (27 products, 2.8 MB) took about 37 s; the browser gives up after 20 s, so the list never arrived | A photo with no local copy counts as readable when its CDN receipt has the saved photo's hash and size (the upload already checked those bytes); it is not downloaded just to list products. A local photo is still opened and checked. Products are read six at a time (`product-library.js` `catalog`) | `product-catalog-cdn-20261118.test.js` (both brands) |
+| The browser waited 20 s for the product list | The product list may take up to 60 s (`studio-data.js` `products`) | — |
+| The picker said "No products match your search." when the list had failed or was still loading, with no way to load it again | It now says "Products could not load. Your brief is saved." with Retry, "Loading products…" while waiting, and "No products saved yet…" for an empty library; a search with no match still says "No products match your search." (`studio.js` `productListMessage`, `retryProducts`) | `studio-product-picker-load-20261118-browser.test.js` (both brands) |
+
+Both tests fail on the earlier code. The live site needs a redeploy to get the fix.
