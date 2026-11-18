@@ -4,15 +4,16 @@
 // label close-up, but every diagnosis was refused ("Local repair requires product protection"): the model protected the
 // product as "Visible mattress …" (only the word "product" was accepted), and a repair could never sit inside the
 // product, where the label is. The two decisions below are the model's real saved answers from that run (no paid calls).
-// New jobs pin labelRepairVersion 1. Failing before.
+// The repair was pinned as labelRepairVersion 1, then turned off for new jobs the same day (Neha, 18 Nov 2026: 0 of 4
+// repairs worked, about ₹19 each). The rule stays for jobs that already pinned it.
 const test=require('node:test'),assert=require('node:assert/strict');
 const correction=require('../../lib/creative-ai/lean/correction'),policy=require('../../lib/creative-ai/runtime/lean-policy'),pc=require('../../lib/creative-ai/runtime/provider-config');
 const {brands,fixture}=require('./lean-marketing-fixture');
 const saved=require('./fixtures/label-repair-decisions-20261118.json');
 const findings=d=>d.requirementIds.map(id=>({id}));
 
-test('new lean jobs pin label repair v1 and the snapshot keeps it',()=>{
- const c=policy.configure({},{leanWorkflowVersion:1});assert.equal(c.labelRepairVersion,1);assert.equal(pc.snapshot(c).labelRepairVersion,1);assert.equal(pc.snapshot({}).labelRepairVersion,undefined);
+test('label repair is off for new lean jobs; a job that already pinned it keeps it',()=>{
+ const c=policy.configure({},{leanWorkflowVersion:1});assert.equal(c.labelRepairVersion,undefined);assert.equal(pc.snapshot(c).labelRepairVersion,undefined);assert.equal(pc.snapshot({labelRepairVersion:1}).labelRepairVersion,1);
  assert.match(correction.LABEL_REPAIR,/tight box around that label/);
 });
 test('the saved label repairs are accepted for pinned records and refused for earlier ones',()=>{
@@ -33,7 +34,6 @@ test('protection named after the product type counts for other local repairs too
  const copyFix={action:'local_edit',requirementIds:['copy-0'],reason:'Typo',instruction:'Fix the typo',regions:[{label:'Headline typo',x:100,y:100,width:200,height:50}],protectedRegions:[{label:'Visible sofa',x:100,y:400,width:800,height:400}]};
  assert.throws(()=>correction.validateDecision(copyFix,[{id:'copy-0'}]),/product protection/);assert.doesNotThrow(()=>correction.validateDecision(copyFix,[{id:'copy-0'}],{labelRepair:true}));
 });
-for(const brand of brands)test(brand+': new design records carry the label repair pin; earlier ones do not',async t=>{
- const f=await fixture(t,{brand});assert.equal(f.planError,null);assert.equal(f.records[0].labelRepairVersion,1);
- const old=await fixture(t,{brand,pinned:false,unpin:['labelRepairVersion']});assert.equal(old.records[0].labelRepairVersion,undefined);
+for(const brand of brands)test(brand+': new design records do not carry the label repair pin',async t=>{
+ const f=await fixture(t,{brand});assert.equal(f.planError,null);assert.equal(f.records[0].labelRepairVersion,undefined);
 });

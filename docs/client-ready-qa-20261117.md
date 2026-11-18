@@ -65,4 +65,6 @@ Paid local runs (current code before fixes 2 and 3 unless noted):
 
 The second product page run shows fix 3 working as a mechanism: 4 repairs ran (3 label patches, 1 whole-page redraw) where none ran before. None was accepted: each repaired picture damaged the label another way (doubled "DUROPEDIC", cut-off letters, a stray piping strip, the label still on the wrong side), and the re-check kept the original every time. Small printed product labels are a limit of the picture model; those pictures stay "check before using" with the reason. The attempts cost about ₹77 for the set (about ₹19 each).
 
+**Fix 3 turned off (Neha, 18 Nov 2026):** because 0 of 4 repairs worked, new jobs no longer pin `labelRepairVersion`. A misspelt product label is reported as before ("check before using") and costs nothing extra. The rule stays in `correction.js` for the local test jobs that already pinned it.
+
 Cost of these paid runs ≈ ₹954 ($9.88 at ₹96.6149/USD, estimates from recorded usage); 1 request has no usage receipt yet and stays unknown, not zero.
