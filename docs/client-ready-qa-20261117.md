@@ -74,3 +74,17 @@ Cost of these paid runs ≈ ₹954 ($9.88 at ₹96.6149/USD, estimates from reco
 The hosted Studio runs the latest `main`: its page files match `bff8cd9` byte for byte, and a new test project (Duroflex Instagram Post, Posture Perfect, `creative-3ab87877`) pinned `setRuleCheckVersion` and did not pin `labelRepairVersion`. The costs page still says INR conversion is unavailable (`currency.json` not added on the hosted Studio).
 
 The test post finished with every check passed except one: the image model drew "→" after "Explore the mattress", and the composition rule banned every added arrow, so the post was "check before using". Neha decided a small arrow beside the button text is fine. New lean jobs pin `ctaArrowVersion: 1`: one small arrow or chevron right after the call-to-action words is part of the button; other added arrows, counters and marks still fail. Test: `cta-arrow-20261118.test.js` (both brands; 4 failing before, 4 passing after). Cost of the test post: about ₹17 recorded, about ₹33 still without a usage record (unknown).
+
+## Admin dashboard tests (18 Nov 2026)
+
+Six admin tests had been failing since the 3 and 9 Nov redesigns. Two were real dashboard bugs; four were tests still looking for old screens.
+
+| Test | Cause | Fix |
+|---|---|---|
+| Stage filter (`operations.test.js`) | **Bug.** Since 9 Nov the Studio has a fifth project stage, "Check before using" (`check`). The dashboard knew only four, so those projects were missing from the stage filter and the summary ring | The stage filter, analytics filter, badge, summary ring and legend now include "Check before using" (`lib/admin/requests.js`, `lib/admin/operations.js`, `lib/admin/analytics-metrics.js`, `public/admin/*`). The summary ring also uses the Studio's own stage; before, it guessed from older fields and counted a finished set with flagged pictures as Ready |
+| Phone width (`console.test.js`) | **Bug.** A later colour-theme rule set the sidebar to 212 px at every width, so on a phone the pages were squeezed into a narrow right column and scrolled sideways. It had been patched for the Creative feedback page only | The phone rule (≤800 px) now sets the sidebar to 0 for every page (`public/admin/style.css`) |
+| Ready label (`client-readiness.test.js`) | The Studio says "Ready", not "Checks passed" (since 3 Nov) | Test updated |
+| Overview title and operations panels (`console.test.js`, `operations.test.js`) | The overview title is now a live summary, and the operations panels sit in a collapsed "Operations" section | Tests open that section |
+| Brief documents (`brief-documents.test.js`) | The language box is now `#field-language`; the message is built from Get / To / By; the brief saves itself with no Save button | Tests use the current fields and autosave |
+
+All 91 admin tests pass after the fixes, and the 105 Studio tests that use dashboard code. The new stage and phone-width tests fail on the earlier code.

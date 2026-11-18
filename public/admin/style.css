@@ -134,7 +134,7 @@ body>header>.wordmark{display:flex;align-items:center;align-self:stretch;flex:0 
 #tabs{top:77px;background:linear-gradient(160deg,#fff 50%,#f8f7ff)}
 #tabs button[aria-current]{background:#ebe7ff;color:#4932e9;box-shadow:inset 3px 0 #7051ff}
 @media(min-width:801px) and (max-width:1200px){:root{--sidebar:190px}body>header{padding-right:22px;gap:22px}body>header>.wordmark{font-size:19px;padding-left:9px}#identity{gap:12px}}
-@media(max-width:800px){body>header{padding:0 14px;gap:12px}body>header>.wordmark{flex-basis:auto;border:0;padding:0}.workspace-location{display:none}#identity{gap:8px}.admin-account>summary>span:not(.account-avatar){display:none}}
+@media(max-width:800px){:root{--sidebar:0px}body>header{padding:0 14px;gap:12px}body>header>.wordmark{flex-basis:auto;border:0;padding:0}.workspace-location{display:none}#identity{gap:8px}.admin-account>summary>span:not(.account-avatar){display:none}}
 
 /* Executive workspace: same light Studio palette, clear visual hierarchy. */
 body[data-admin-view="overview"] #metrics,body[data-admin-view="analytics"] #metrics{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
@@ -269,7 +269,7 @@ textarea, select, .studio-select-trigger { border-color: var(--line); border-rad
 .status.purple, .stage-draft { background: var(--tone-blush); color: var(--text-blush); }
 .status.blue, .stage-creating, .running, .preparing { background: var(--tone-lavender); color: var(--text-lavender); }
 .status.green, .stage-ready, .finished, .health-ok { background: var(--tone-mint); color: var(--text-mint); }
-.status.amber, .stage-attention, .partial, .needs-input, .health-attention { background: var(--tone-peach); color: var(--text-peach); }
+.status.amber, .stage-attention, .stage-check, .partial, .needs-input, .health-attention { background: var(--tone-peach); color: var(--text-peach); }
 .health-unknown, .health-idle { background: var(--tone-neutral); color: var(--muted); }
 .health-observed { background: var(--tone-blue); color: var(--text-blue); }
 /* Validation remains red; an unspecified optional value is never an error. */
@@ -330,6 +330,7 @@ textarea, select, .studio-select-trigger { border-color: var(--line); border-rad
 .dot-ready { background: var(--plot-mint); }
 .dot-creating { background: var(--plot-lavender); }
 .dot-attention { background: var(--plot-peach); }
+.dot-check { background: var(--plot-blue); }
 .dot-draft { background: var(--plot-blush); }
 .analytics-warning { background: var(--tone-peach); color: var(--text-peach); border-color: #EDDBBF; }
 

@@ -3,7 +3,7 @@ window.AdminOperations=(()=>{
  const h=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const date=v=>v&&Number.isFinite(Date.parse(v))?new Date(v).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',dateStyle:'medium',timeStyle:'short'}):'Not recorded';
  const duration=n=>!Number.isFinite(n)?'Not recorded':n<1?'Under a minute':n<60?Math.round(n)+' min':Math.floor(n/60)+' hr '+Math.round(n%60)+' min';
- const states={draft:'Draft',creating:'Creating',ready:'Ready',attention:'Needs attention'};
+ const states={draft:'Draft',creating:'Creating',ready:'Ready',check:'Check before using',attention:'Needs attention'};
  function stage(j){return j.displayStage||(['running','queued','preparing'].includes(j.status)?'creating':j.status==='draft'?'draft':j.status==='finished'&&j.images>0?'ready':'attention');}
  function badge(j){const s=stage(j);return `<span class="badge stage-${h(s)}">${h(states[s])}</span>`;}
  function substage(j){if(stage(j)!=='creating')return '';if(j.status==='queued')return 'Waiting to start';return /generation|statics/i.test(j.stage)?'Generating images':/review|quality/i.test(j.stage)?'Checking images':'Planning';}
