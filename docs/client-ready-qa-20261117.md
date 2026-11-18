@@ -152,5 +152,15 @@ Neha: Create in the Home brief box "should go to the og form and not the brief a
 - Each value read from the brief shows the green "From your brief" mark; values the reading chose show the amber "Suggested" mark (`studio-model.js` `draftFromReading` keeps `briefReading.sources`; `fieldProvenance` reads them). A value the marketer changes is labelled as their choice.
 - The free local pattern autofill stays off for a read brief, so it cannot overwrite the reading and its Undo link does not appear.
 - Nothing paid starts here: Check brief, the estimate and Create still come first. The read-back page still opens from saved links.
-- Test: `studio-home-create-form-20261118-browser.test.js` (both brands; fails before).
+- **What the reading assumed** (Neha: "Yes, add them"): the brief form lists, under the brief, what the read-back page used to show: the objective or language the reading chose, the reading's own assumptions, "No phone number, store address or QR code", an offer start date of today, print sizes from the brief, open questions about the brief (each with Done), and a warning if the brief mentions another brand (`studio.js` `readingNotesView`, shared `readingAssumptions`). A value changed in the form is no longer listed as an assumption.
+- Test: `studio-home-create-form-20261118-browser.test.js` (both brands; both tests fail before).
+
+## No more "Coming soon" (18 Nov 2026)
+
+Neha: "also remove all coming soon remarks".
+
+- The 23 formats that cannot be made yet (for example YouTube Community Post, Hiring Post, Battlecard, Training Deck) are no longer listed in the format picker, its search or its group tabs. Every group still has at least one ready format; 54 formats are listed (53 ready, plus the planning-only Catalogue).
+- A format chosen before this change still shows while it is selected, so it can be removed; it now carries the "Plan" badge, and saved planning briefs say "Plan · Saved as a planning brief" instead of "Coming soon".
+- The brief reader already suggests only ready formats.
+- Tests: `studio-asset-picker-browser.test.js`, `studio-checks-20261117.test.js` (both fail before). This replaces the 17 Nov "shown but disabled" behaviour.
 

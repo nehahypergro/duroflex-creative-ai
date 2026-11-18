@@ -22,11 +22,12 @@ for(const brandId of ['brand-1923d633-e03e-44cc-84b2-bbfb5c152710','brand-3a5870
 test('the Studio download uses the upload-ready banner file for display banner projects',async()=>{
  const src=await fs.readFile(path.resolve('public/creative-ai/studio.js'),'utf8');assert.match(src,/p\.displayBanners\?\.version===1\)\{\/\/ Google-ready file/);assert.match(src,/\/display-banner\/'\+encodeURIComponent\(r\.placementId\)/);
 });
-test('Coming soon cards are shown but cannot be chosen in the format picker',async()=>{
+// 18 Nov 2026 (Neha: "remove all coming soon remarks"): replaces the 17 Nov check that showed them disabled.
+test('formats that cannot be made yet are not listed in the format picker and nothing says Coming soon',async()=>{
  const src=await fs.readFile(path.resolve('public/creative-ai/studio.js'),'utf8');
- assert.match(src,/soon=c\.status==='soon'&&!on;/);assert.match(src,/\$\{soon\?' disabled aria-disabled="true"/);
- assert.match(src,/M\.assetCard\(id\)\.status==='soon'&&!p\.selected\.includes\(id\)\)return;/);
- const css=await fs.readFile(path.resolve('public/creative-ai/studio.css'),'utf8');assert.match(css,/\.asset-card\.is-soon:disabled\{cursor:not-allowed/);
+ assert.match(src,/M\.assetCatalogue\.filter\(c=>\(c\.status!=='soon'\|\|p\.selected\.includes\(c\.id\)\)/,'not listed unless chosen earlier');
+ assert.match(src,/M\.assetCard\(id\)\.status==='soon'&&!p\.selected\.includes\(id\)\)return;/,'and cannot be added');
+ const shown=src.split('\n').filter(line=>!/^\s*\/\//.test(line)).join('\n');assert.doesNotMatch(shown,/>Coming soon<|· Coming soon|coming soon, saved|Coming-soon assets/,'no Coming soon wording on screen');
 });
 // View only (17 Nov 2026): a teammate's project showed buttons that change it; clicking them only showed a refusal.
 test('change buttons are hidden and refused on a teammate\'s project; viewing buttons stay',async()=>{

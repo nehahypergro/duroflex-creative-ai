@@ -157,3 +157,11 @@
 .review-brief-summary .brief-delivered li.is-unsure .brief-delivered-mark{background:#667085}
 .review-brief-summary .brief-full summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--purple);min-height:32px;display:flex;align-items:center}
 .review-brief-summary .brief-full .review-brief-text{-webkit-line-clamp:unset;display:block}
+/* 18 Nov 2026: the reading's assumptions and questions on the brief form (Create now opens the brief form). */
+.reading-notes{margin:12px 0 0;padding:10px 12px;font-size:13px;line-height:1.45;color:#4a2f08;background:#fdf6ea;border:1px solid #efcf95;border-radius:8px}
+.reading-notes h3{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-size:13px;font-weight:600}
+.reading-notes h3 svg{width:15px;height:15px;flex:none}
+.reading-notes-label{margin:6px 0 2px;font-weight:600}
+.reading-notes ul{margin:0;padding-left:18px}
+.reading-notes li{margin:2px 0;overflow-wrap:anywhere}
+.reading-notes-warning{margin:4px 0;color:#7a1d1d}

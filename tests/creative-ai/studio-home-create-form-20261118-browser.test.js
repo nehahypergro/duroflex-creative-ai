@@ -25,6 +25,30 @@ test('Create from the Home brief box opens the filled brief form, for both brand
   // Everything stays editable here.
   await page.locator('#field-language').selectOption('English');assert.equal(await page.locator('#field-language').inputValue(),'English');
   assert.deepEqual(paid.filter(u=>/generate/.test(u)),[],'nothing is created before Check brief');
-  await context.close();
+  await page.waitForLoadState('networkidle').catch(()=>{});await context.close();
+ }assert.deepEqual(errors,[]);}finally{await browser.close();f.server.closeAllConnections();await new Promise(r=>f.server.close(r));}
+});
+
+// Neha (18 Nov 2026): "Yes, add them" - the reading's assumptions and questions, shown on the read-back page before,
+// are listed on the brief form under the brief. Done clears a question; a changed value is no longer an assumption.
+test('the brief form lists what the reading assumed and asked, for both brands',{timeout:120000},async()=>{
+ const f=await require('./helpers/intake-preview.cjs').createPreview(),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),errors=[];
+ try{for(const b of f.brands){
+  const context=await browser.newContext({viewport:{width:1280,height:1000}}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.stack));
+  await page.goto(f.url+'?brand='+b.id+'#home');await page.locator('#homeBrief').waitFor();
+  const id=await page.evaluate(({brandId,products})=>{const p=products.find(x=>(x.variants||[]).length)||products[0],result={ask:'A post.',assets:[{cardId:'instagram-post',source:'brief'}],product:{productId:p.id,candidateIds:[p.id],variantId:'',evidence:p.name,source:'brief'},messageType:{value:'Benefit',source:'brief'},objective:{value:'Consideration',source:'suggested',reason:'Shows why to choose it'},language:{value:'English',source:'brief'},audience:{value:'',source:'none'},tone:{value:'',source:'none'},keyMessage:{value:'',source:'none'},features:[],offer:{wording:'',terms:'',startDate:'',endDate:''},exactWording:[],occasion:{value:'',source:'none'},cta:{value:'',source:'none'},contactDetails:false,logoRequested:false,otherBrandMentioned:'',assumptions:['Feed post, not a story.'],questions:[{field:'other',question:'Is this for first-time buyers?'}],decision:'design'};
+   const d=StudioModel.draftFromReading(brandId,{id:'read-1',result},{brief:'A post for our mattress',products,today:'2026-11-18'});StudioModel.storage(localStorage).save(d);location.hash='brief/'+d.id;return d.id;},{brandId:b.id,products:f.products[b.id]});
+  const notes=page.locator('#readingNotes');await notes.waitFor();
+  const items=async sel=>notes.locator(sel+' li').allInnerTexts();
+  const assumed=await items('[data-reading-assumptions]');
+  assert.ok(assumed.some(a=>/^Objective: Consideration — Shows why to choose it/.test(a)),b.name+': the suggested objective is listed');
+  assert.ok(assumed.includes('Feed post, not a story.'));assert.ok(assumed.some(a=>/No phone number/.test(a)));
+  assert.match((await items('[data-reading-questions]')).join(),/first-time buyers/);
+  await notes.locator('[data-action=reading-question-done]').click();
+  assert.equal(await page.locator('[data-reading-questions]').count(),0,'Done clears the question');
+  const saved=await page.evaluate(id=>StudioModel.storage(localStorage).read(location.search.match(/brand=([^&]+)/)[1],id).briefReading.answered,id);assert.deepEqual(saved,['Is this for first-time buyers?'],'and it stays cleared');
+  await page.locator('#field-objective').evaluate(el=>{el.value='Purchase';el.dispatchEvent(new Event('change',{bubbles:true}));});
+  await page.waitForFunction(()=>!/Objective: Consideration/.test(document.querySelector('#readingNotes')?.innerText||''));
+  await page.waitForLoadState('networkidle').catch(()=>{});await context.close();
  }assert.deepEqual(errors,[]);}finally{await browser.close();f.server.closeAllConnections();await new Promise(r=>f.server.close(r));}
 });

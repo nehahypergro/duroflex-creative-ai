@@ -4,6 +4,8 @@
 // both brands. Read-only preview server; preflight is mocked and generate must never run.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs/promises');
 const spec=require('../../docs/asset-picker-spec-20261108.json');
+// 18 Nov 2026 (Neha: "remove all coming soon remarks"): formats that cannot be made yet are no longer listed.
+const LISTED=require('../../public/creative-ai/studio-model.js').assetCatalogue.filter(c=>c.status!=='soon');
 const saved=page=>page.evaluate(()=>StudioModel.storage(localStorage).read(new URLSearchParams(location.search).get('brand'),location.hash.slice(1).split('/')[1].split('?')[0]));
 test('asset picker opens from the sidebar, filters, starts campaigns and quick designs for both brands',{timeout:180000},async()=>{
  const f=await require('./helpers/intake-preview.cjs').createPreview(),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),page=await browser.newPage({viewport:{width:1366,height:900}}),errors=[],generate=[];
@@ -21,14 +23,14 @@ test('asset picker opens from the sidebar, filters, starts campaigns and quick d
   assert.match(page.url(),/#tools\/assets\?/);assert.equal(new URLSearchParams(page.url().split('?').pop()).get('group'),'messaging');
   assert.equal(await page.locator('[data-action=picker-tab][aria-selected=true]').innerText(),'Messaging');
   assert.deepEqual(await page.locator('#assetPickerGrid .asset-card strong').allTextContents(),spec.divisions.find(d=>d.name==='Messaging').cards.map(c=>c.name));
-  // All shows one heading per division; Ad and Coming soon badges are visible on cards.
+  // All shows one heading per division; Ad and Plan badges are visible on cards; nothing says Coming soon.
   await page.locator('[data-action=picker-tab][data-division=all]').click();
   assert.deepEqual(await page.locator('#assetPickerGrid .asset-picker-section h2').allTextContents(),spec.divisions.map(d=>d.name));
-  assert.equal(await page.locator('#assetPickerGrid .asset-card').count(),77);
+  assert.equal(await page.locator('#assetPickerGrid .asset-card').count(),LISTED.length);assert.equal(LISTED.length,54);
   // Each card shows its own decorative format icon (public/creative-ai/asset-icons.js).
-  assert.deepEqual(await page.locator('#assetPickerGrid .asset-card').evaluateAll(es=>es.map(e=>e.querySelector('.asset-icon[aria-hidden=true]')?.dataset.assetIcon===e.dataset.card).filter(Boolean).length),77);
+  assert.deepEqual(await page.locator('#assetPickerGrid .asset-card').evaluateAll(es=>es.map(e=>e.querySelector('.asset-icon[aria-hidden=true]')?.dataset.assetIcon===e.dataset.card).filter(Boolean).length),LISTED.length);
   assert.match(await page.locator('#assetPickerGrid [data-card=instagram-feed-ad]').innerText(),/\bAd\b/);
-  assert.match(await page.locator('#assetPickerGrid [data-card=hiring-post]').innerText(),/Coming soon/);
+  assert.equal(await page.locator('#assetPickerGrid [data-card=hiring-post]').count(),0);assert.doesNotMatch(await page.locator('#assetPicker, #assetPickerGrid').first().innerText(),/coming soon/i);
   assert.match(await page.locator('#assetPickerGrid [data-card=catalogue]').innerText(),/Plan/);
   await page.locator('#assetPickerSearch').fill('story');
   const found=await page.locator('#assetPickerGrid .asset-card strong').allTextContents();
@@ -75,8 +77,8 @@ test('asset picker opens from the sidebar, filters, starts campaigns and quick d
   d=await saved(page);assert.deepEqual([d.creationMode,d.outputs[0].assetCardId,d.outputs[0].formatId],['quick','instagram-story','story']);
   // A coming-soon card is a planning brief and never reaches generation.
   await page.locator('[data-nav=home]').click();await page.locator('.creation-hero').waitFor();
-  // Coming soon cards are shown but cannot be chosen (Neha, 17 Nov 2026); the planning-only Catalogue card still saves a planning brief.
-  await page.getByRole('button',{name:'Browse all tools',exact:true}).click();await page.locator('#assetPickerSearch').fill('hiring');assert.equal(await page.locator('#assetPickerGrid [data-card=hiring-post]').isDisabled(),true);
+  // Formats that cannot be made yet are not listed (18 Nov 2026); the planning-only Catalogue card still saves a planning brief.
+  await page.getByRole('button',{name:'Browse all tools',exact:true}).click();await page.locator('#assetPickerSearch').fill('hiring');assert.equal(await page.locator('#assetPickerGrid [data-card=hiring-post]').count(),0);
   await page.locator('#assetPickerSearch').fill('catalogue');await page.locator('#assetPickerGrid [data-card=catalogue]').click();
   await page.getByRole('button',{name:'Continue',exact:true}).click();await page.locator('#field-brief').waitFor();
   d=await saved(page);assert.equal(d.outputs[0].planningOnly,true);assert.match(await page.locator('.planning-only-note').innerText(),/planning brief/);

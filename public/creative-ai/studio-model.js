@@ -1452,7 +1452,7 @@ default:return frame(14,9,36,38)} }
       ]
     };
     // Search-only synonyms; names and labels stay exactly as approved.
-    const keywords=(sizeLabel,publishing,status,preset)=>[/1080 × 1920|Vertical|Phone screen/.test(sizeLabel)?'story vertical status':'',/Slides|slides|Card set/.test(sizeLabel)||preset.slides?'carousel slides':'',publishing==='Paid'?'ad advert paid':'',status==='soon'?'coming soon':status==='plan'?'plan planning':'',preset.retailPreset&&preset.featureId===11?'print':''].filter(Boolean).join(' ');
+    const keywords=(sizeLabel,publishing,status,preset)=>[/1080 × 1920|Vertical|Phone screen/.test(sizeLabel)?'story vertical status':'',/Slides|slides|Card set/.test(sizeLabel)||preset.slides?'carousel slides':'',publishing==='Paid'?'ad advert paid':'',['soon','plan'].includes(status)?'plan planning':'',preset.retailPreset&&preset.featureId===11?'print':''].filter(Boolean).join(' ');
     return assetDivisions.flatMap(division=>rows[division.id].map(([id,name,sizeLabel,channel,publishing,status,glyph,preset])=>Object.freeze({id,name,division:division.name,divisionId:division.id,sizeLabel,channel,...(publishing?{publishing}:{}),status,glyph,keywords:keywords(sizeLabel,publishing,status,preset),preset:Object.freeze(preset)})));
   })();
   function assetCard(id){return assetCatalogue.find(c=>c.id===id)||null;}
