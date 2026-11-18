@@ -125,3 +125,32 @@ Both tests fail on the earlier code. The live site needs a redeploy to get the f
 | Brands, assets, project list | 0.2–0.6 s | similar |
 
 The product list was the slow part: it downloaded product photos from the CDN to check them. Brief reading builds the same list before it asks the model (`brief-reader.js`), so it waited for it too. Adding a product from a URL reads the brand's website, which takes as long as the website does. After the redeploy the list is built once at startup with no photo downloads.
+
+## Opening the Studio and switching brands (18 Nov 2026)
+
+Neha: "even switching between brands is slow". Measured on the hosted Studio (before the redeploy):
+
+| What | Hosted |
+|---|---|
+| Duroflex projects | 61 projects, 183 requests (project, saved edits, design details), 4 at a time: about 9 s and 5.4 MB |
+| Switching Duroflex → Sleepyhead (52 projects) | about 38 s until Home appeared; most of it was the product list fixed above |
+
+Changes (`studio-data.js` `projects`, `studio.js` `loadBrand`):
+
+- Newest projects load first, eight at a time (was four, in no set order).
+- As soon as the newest 12 are ready they are shown; Projects says "Showing your newest 12 of N projects. The rest are loading…". Opening a project that has not loaded yet says "Loading your project", not "not available".
+- Design details (rationale and scores) are no longer part of the list: they are fetched in the background after the list, three at a time, and a design's own page still loads them itself if missing. Opening the Studio now needs two requests per project instead of three.
+- Home already appears once the product list arrives; with the kept product lists above that is almost at once.
+
+Test: `studio-projects-progressive-20261118-browser.test.js` (both brands; fails before).
+
+## Create opens the brief form (18 Nov 2026)
+
+Neha: Create in the Home brief box "should go to the og form and not the brief appreciation - because they would still want to edit. and that feels like a random step".
+
+- After the brief is read, Create opens the brief form (`#brief/<id>`) filled in from the reading: product and size, format, objective, language, message type, features, audience and offer fields (`studio.js` `readHomeBrief`).
+- Each value read from the brief shows the green "From your brief" mark; values the reading chose show the amber "Suggested" mark (`studio-model.js` `draftFromReading` keeps `briefReading.sources`; `fieldProvenance` reads them). A value the marketer changes is labelled as their choice.
+- The free local pattern autofill stays off for a read brief, so it cannot overwrite the reading and its Undo link does not appear.
+- Nothing paid starts here: Check brief, the estimate and Create still come first. The read-back page still opens from saved links.
+- Test: `studio-home-create-form-20261118-browser.test.js` (both brands; fails before).
+

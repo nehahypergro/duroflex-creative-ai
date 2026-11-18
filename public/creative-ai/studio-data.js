@@ -65,14 +65,14 @@ window.StudioData = (() => {
     async restoreWorkspace(brandId){if(restore(brandId))return;const started=version,saved=await disk('get',brandId);if(started!==version)return;if(saved?.visibilityVersion===1&&saved?.brandId===brandId&&Date.now()-saved.at<1800000&&saved.value?.length===3&&saved.value.every(r=>r.status==='fulfilled')&&saved.value[0].value.projects.every(p=>p.brandId===brandId)){saved.at=0;workspaces.set(brandId,saved);}},
     peekWorkspace:brandId=>restore(brandId)?.value,
     invalidateWorkspace(brandId){version++;forget(brandId);workspaces.delete(brandId);workspaceLoads.delete(brandId);for(const key of cache.keys())if(key.startsWith(brandId+':'))cache.delete(key);},
-    async workspace(brandId,{onLibrary}={}){
+    async workspace(brandId,{onLibrary,onProjects}={}){
       const saved=restore(brandId);
       if(saved&&Date.now()-saved.at<30000)return saved.value;
       if(workspaceLoads.has(brandId))return workspaceLoads.get(brandId);
       const started=version;
       const productLoad=this.products(brandId),assetLoad=this.assets(brandId);
       if(onLibrary)Promise.allSettled([productLoad,assetLoad]).then(rows=>{if(started===version)onLibrary(rows);}).catch(()=>{});
-      const pending=Promise.allSettled([this.projects(brandId,!!saved),productLoad,assetLoad]).then(value=>{
+      const pending=Promise.allSettled([this.projects(brandId,!!saved,{onPartial:rows=>{if(started===version)onProjects?.(rows);}}),productLoad,assetLoad]).then(value=>{
         // Cache complete snapshots only; failed reads must remain retryable.
         if(started===version&&value.every(r=>r.status==='fulfilled')&&!value[0].value.errors.length){const snapshot={at:Date.now(),value};workspaces.set(brandId,snapshot);persist(brandId,snapshot);}
         return value;
@@ -91,20 +91,27 @@ window.StudioData = (() => {
     // Resolve only metadata already accessible through the authenticated jobs index.
     // Never fetch an unlisted project's private detail to guess its owner or visibility.
     async projectLocation(id){const jobs=await get('jobs');const row=jobs.find(j=>j.id===id);return row?{brandId:row.brandId||row.intake?.brandId}:null;},
-    async projects(brandId,fresh=false){
-      const started=version,all=await get('jobs'),jobs=all.filter(j=>j.brandId===brandId);
-      const values=await mapLimit(jobs,async j=>{const key=brandId+':'+j.id,previous=cache.get(key),unchanged=j.freshness&&fingerprints.get(key)===j.freshness&&previous&&!previous.editLookupFailed&&!previous.designDetailsError;const project=await this.project(j.id,brandId,(fresh||!!j.freshness)&&!unchanged);if(started===version&&j.freshness)fingerprints.set(key,j.freshness);return project;});
+    // 18 Nov 2026 (Neha: opening the Studio and switching brands was slow; Duroflex has 61 projects, 183 requests,
+    // about 9 s on the hosted Studio): newest projects load first, eight at a time; once the newest 12 (or all, if
+    // fewer) are ready, onPartial shows them while the rest load. Design details (rationale and scores, used only on
+    // a design's own page, which loads them itself if missing) are fetched in the background after the list.
+    async projects(brandId,fresh=false,{onPartial}={}){
+      const started=version,all=await get('jobs'),stamp=j=>String(j.updatedAt||j.createdAt||''),jobs=all.filter(j=>j.brandId===brandId).sort((a,b)=>stamp(b).localeCompare(stamp(a)));
+      const FIRST=Math.min(12,jobs.length),done=new Array(jobs.length);let firstDone=0,partialSent=false;
+      const values=await mapLimit(jobs,async j=>{const i=jobs.indexOf(j);try{const key=brandId+':'+j.id,previous=cache.get(key),unchanged=j.freshness&&fingerprints.get(key)===j.freshness&&previous&&!previous.editLookupFailed&&!previous.designDetailsError;const project=await this.project(j.id,brandId,(fresh||!!j.freshness)&&!unchanged,{details:false});if(started===version&&j.freshness)fingerprints.set(key,j.freshness);done[i]=project;return project;}
+        finally{if(i<FIRST)firstDone++;if(!partialSent&&firstDone===FIRST&&FIRST<jobs.length&&onPartial&&started===version){partialSent=true;try{onPartial({projects:done.filter(Boolean),errors:[],partial:{loaded:done.filter(Boolean).length,total:jobs.length}});}catch{}}}},8);
       const result={projects:values.map(v=>v.value||{
         ...v.item,brandId,local:false,name:'Project temporarily unavailable',
         updatedAt:v.item.createdAt,results:[],loadError:v.error,status:'unavailable'
       }),errors:values.filter(v=>v.error)};
       const saved=workspaces.get(brandId);if(started===version&&saved&&!result.errors.length)saved.value[0]={status:'fulfilled',value:result};
+      if(started===version)void mapLimit(result.projects.filter(p=>!p.designDetails&&!p.loadError&&p.results?.some(r=>r.imageUrl)),p=>designDetails(p,p.sourceJobId||p.id),3);
       return result;
     },
-    async project(id,brandId,fresh=false){
+    async project(id,brandId,fresh=false,{details=true}={}){
       const k=brandId+':'+id,started=version;if(!fresh&&cache.has(k))return cache.get(k);
       const job=StudioModel.normalizeJob(await get('jobs/'+encodeURIComponent(id)),brandId);
-      const detailsReady=designDetails(job,id);
+      const detailsReady=details?designDetails(job,id):Promise.resolve();
       try{const edits=await get('jobs/'+encodeURIComponent(id)+'/edits');if(!Array.isArray(edits))throw Error('Invalid saved edits');job.results=job.results.map(r=>({...r,latestEdit:edits.find(e=>e.route===r.route&&e.placementId===r.placementId&&(!e.sourceImageUrl||e.sourceImageUrl===r.imageUrl))||null}));job.updatedAt=[job.updatedAt,...edits.map(e=>e.updatedAt)].filter(Boolean).sort().at(-1);}catch{job.editLookupFailed=true;}
       await detailsReady;if(started===version)cache.set(k,job);return job;
     },
