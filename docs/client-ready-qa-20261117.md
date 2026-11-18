@@ -108,6 +108,15 @@ Both tests fail on the earlier code. The live site needs a redeploy to get the f
 - When the picker opens after a failed list, it loads the list again by itself; Retry is offered only if that also fails.
 - Tests: `product-catalog-cdn-20261118.test.js` and `studio-product-picker-load-20261118-browser.test.js` (both brands; 5 new tests fail before).
 
+**Product list kept in the browser** (Neha: "cant it be in cache"):
+
+- The browser keeps each brand's product list for 7 days, per signed-in account (`studio-data.js` `products`). A later visit, including the first one after a deploy, shows the kept list at once and asks the server for the fresh list in the background; the fresh list replaces the kept one (and the open picker) only if something changed.
+- A kept list is used only if every product in it belongs to that brand. Adding or refreshing a product clears the kept copy, so the new product is never hidden.
+- Product photos were already "available as images": the picker's thumbnail address sends the browser straight to the CDN copy, so the server does not download them. Since the fix above, the server no longer downloads photos to build the list either; it reads a saved photo only when a design needs it.
+- Test: `studio-product-cache-20261118-browser.test.js` (both brands; the kept-list test fails before, the brand-isolation test guards it).
+
+**Adding a product from its link** (Neha: "fix this smartly"): every photo, video and PDF on the product page was downloaded one after another. A real Duroflex mattress page (51 downloads, 7.3 MB) took 16.8 s on this computer; downloading six at a time takes 2.3 s with the same result (44 files saved, the same 5 unavailable). Same limits (160 files, 2 minutes, 320 MB, space set aside before each download starts) and the page order is kept (`product-library.js` `collect`). Test: `product-capture-parallel-20261118.test.js` (both brands; fails before).
+
 **Why the hosted Studio felt slow** (measured 18 Nov 2026, one request at a time, before this redeploy):
 
 | Request | Hosted | This computer |
