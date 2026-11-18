@@ -68,3 +68,9 @@ The second product page run shows fix 3 working as a mechanism: 4 repairs ran (3
 **Fix 3 turned off (Neha, 18 Nov 2026):** because 0 of 4 repairs worked, new jobs no longer pin `labelRepairVersion`. A misspelt product label is reported as before ("check before using") and costs nothing extra. The rule stays in `correction.js` for the local test jobs that already pinned it.
 
 Cost of these paid runs ≈ ₹954 ($9.88 at ₹96.6149/USD, estimates from recorded usage); 1 request has no usage receipt yet and stays unknown, not zero.
+
+## Live deploy check and the button arrow (18 Nov 2026)
+
+The hosted Studio runs the latest `main`: its page files match `bff8cd9` byte for byte, and a new test project (Duroflex Instagram Post, Posture Perfect, `creative-3ab87877`) pinned `setRuleCheckVersion` and did not pin `labelRepairVersion`. The costs page still says INR conversion is unavailable (`currency.json` not added on the hosted Studio).
+
+The test post finished with every check passed except one: the image model drew "→" after "Explore the mattress", and the composition rule banned every added arrow, so the post was "check before using". Neha decided a small arrow beside the button text is fine. New lean jobs pin `ctaArrowVersion: 1`: one small arrow or chevron right after the call-to-action words is part of the button; other added arrows, counters and marks still fail. Test: `cta-arrow-20261118.test.js` (both brands; 4 failing before, 4 passing after). Cost of the test post: about ₹17 recorded, about ₹33 still without a usage record (unknown).
