@@ -161,10 +161,20 @@ for(const brand of brands)test(brand+': offers appear only when the brief suppli
  assert.equal(aplus.problem('15-Years Warranty',{aplus:{supplied:['Mention the 15-Years Warranty']}}),null,'warranty wording only when the brief supplies it');
 });
 
+// Regression (19 Nov 2026 live QA, Duroflex Spine Contour Pillow A+ Basic): planning failed with "Amazon text for image-3
+// needs a headline of 70 and a body of 300 characters or fewer" after its one repair; the message never said whether the
+// text was missing, too long or cleared by the A+ wording rules, so the repair could not fix the cause. Failing before.
+for(const brand of brands)test(brand+': an A+ text error names its cause and the wording the A+ rules removed',async t=>{
+ const f=await fixture(t,{brand}),input=f.records[0].input;
+ const cleared=planFor(input);cleared.aplus.native[0].headline='Backed by a 3-year warranty';
+ assert.throws(()=>planning.validatePlan(cleared,input),e=>/Amazon headline for hero is empty after A\+ wording rules removed it; write one of 70 characters or fewer/.test(e.message)&&/A\+ wording rules removed: hero Amazon headline "Backed by a 3-year warranty" \(warranty not in brief\)/.test(e.message)&&!/needs a headline of/.test(e.message));
+ const long=planFor(input);long.aplus.native[0].body='y'.repeat(301);
+ assert.throws(()=>planning.validatePlan(long,input),/Amazon body for hero has 301 characters; use 300 or fewer/);
+});
 for(const brand of brands)test(brand+': Amazon text fields, alt text and on-image text limits are enforced',async t=>{
  const f=await fixture(t,{brand}),input=f.records[0].input;
  assert.throws(()=>planning.validatePlan(planFor(input,{longAlt:true}),input),/alt text/);
- const long=planFor(input);long.aplus.native[0].headline='x'.repeat(71);assert.throws(()=>planning.validatePlan(long,input),/Amazon text for hero/);
+ const long=planFor(input);long.aplus.native[0].headline='x'.repeat(71);assert.throws(()=>planning.validatePlan(long,input),/Amazon headline for hero has 71 characters; use 70 or fewer/);
  const crowded=planFor(input);crowded.pages[0].copy.push(...[1,2,3,4].map(n=>({role:'chip',text:'Chip '+n,factIds:[]})));assert.throws(()=>planning.validatePlan(crowded,input),/wide panel needs 1-5/);
  const squashed=planFor(input);squashed.pages[1].copy=[{role:'headline',text:'A different message',factIds:[]}];assert.throws(()=>planning.validatePlan(squashed,input),/mobile version must reuse/);
  /* Live run 9 Nov 2026: the planner copied all four desktop blocks (product name, headline, two chips) to mobile and the

@@ -72,7 +72,8 @@ test('Amazon image presets reach actual saved-brand readiness and preserve each 
   for(const c of cases){const {runtime,d}=await fixture(c);d.outputs=[M.output(6)];M.applyAmazonPreset(d.outputs[0],'Amazon Brand Story');d.focus='brand';d.brief='Show a brand world through spatial design and material details.';d.outputs[0].staticValues.brandIdea='Rest and renewal';d.outputs[0].staticParts[0].visualIntent='Natural architectural framing';
    const g=require('../../lib/creative-ai/runtime/studio-generation'),a=await g.prepare(runtime,d);assert.equal(a.request.focusType,'brand');for(const key of ['productName','productPageUrl','productVariantId','productAssetId','landingPageUrl'])assert.equal(a.request[key],undefined,key);assert.match(a.request.brief,/Natural architectural framing/);assert.match(a.request.brief,/Rest and renewal/);assert.doesNotMatch(a.request.desiredAction,/official product page/);assert.ok(a.checks.every(x=>x.status==='passed'));assert.equal(a.summary.unitsPerOption,4);
    const changed=structuredClone(d);changed.outputs[0].staticParts[0].visualIntent='An open outdoor frame';assert.notEqual((await g.prepare(runtime,changed)).token,a.token);
-   M.applyAmazonPreset(d.outputs[0],'Amazon feature module');await assert.rejects(()=>g.prepare(runtime,d),/connected/);
+   // 19 Nov 2026 QA: the refusal now says what to change (a feature module needs a product).
+   M.applyAmazonPreset(d.outputs[0],'Amazon feature module');await assert.rejects(()=>g.prepare(runtime,d),/needs a product/);
   }
  });
 test('RCS saved-brand readiness carries image intent, ordered slots and no forced CTA for both brands',async()=>{
