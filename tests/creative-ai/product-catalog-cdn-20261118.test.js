@@ -43,6 +43,7 @@ for(const [brandId,name] of Object.entries(BRANDS)){
   const [p]=await w.library.catalog(brandId);
   assert.equal(p.readiness.state,'ready');assert.equal(calls(),0);
   const file=path.join(w.root,'output/creative-ai/brands',brandId,'products',p.id,p.assets[0].file);await fs.writeFile(file,Buffer.from('not a picture'));
+  w.library.forgetCatalog(brandId);// saved photos never change in place; the kept list is rebuilt within 10 minutes anyway
   const [broken]=await w.library.catalog(brandId);
   assert.equal(broken.readiness.state,'images-missing','a damaged local photo is not trusted because of its receipt');
  });
@@ -53,4 +54,31 @@ test('the product list reads products in parallel',async t=>{
  const read=w.library.read.bind(w.library);w.library.read=async(...args)=>{await new Promise(r=>setTimeout(r,60));return read(...args);};
  const started=Date.now(),list=await w.library.catalog(brandId),ms=Date.now()-started;
  assert.equal(list.length,12);assert.ok(ms<450,'12 products listed in '+ms+' ms');
+});
+
+// Neha (18 Nov 2026): "can we ensure that skus are already populated? even when new redeployment happend".
+// The list is built at server startup and kept; it is rebuilt only when a saved product changes. Failing before.
+test('the brand product list is kept between requests and rebuilt when a saved product changes',async t=>{
+ countFetches(t);const brandId=Object.keys(BRANDS)[1],w=await workspace(brandId,{count:3});t.after(w.cleanup);
+ let reads=0;const read=w.library.read.bind(w.library);w.library.read=(...a)=>{reads++;return read(...a);};
+ const first=await w.library.catalog(brandId);const afterFirst=reads;
+ const second=await w.library.catalog(brandId);assert.equal(reads,afterFirst,'the second request reuses the kept list');assert.deepEqual(second,first);
+ second[0].name='changed by a caller';assert.notEqual((await w.library.catalog(brandId))[0].name,'changed by a caller','each caller gets its own copy');
+ const file=path.join(w.root,'output/creative-ai/brands',brandId,'products',first[0].id,'profile.json'),p=JSON.parse(await fs.readFile(file,'utf8'));p.name='Renamed on the website';await fs.writeFile(file,JSON.stringify(p));
+ assert.equal((await w.library.catalog(brandId)).find(x=>x.id===first[0].id).name,'Renamed on the website','a changed profile is read again');
+ await fs.rm(path.dirname(file),{recursive:true});assert.equal((await w.library.catalog(brandId)).length,2,'a removed product leaves the list');
+});
+test('two requests at the same moment share one build',async t=>{
+ countFetches(t);const brandId=Object.keys(BRANDS)[0],w=await workspace(brandId,{count:4});t.after(w.cleanup);
+ let lists=0;const list=w.library.list.bind(w.library);w.library.list=(...a)=>{lists++;return list(...a);};
+ const [a,b]=await Promise.all([w.library.catalog(brandId),w.library.catalog(brandId)]);
+ assert.equal(lists,1);assert.equal(a.length,4);assert.deepEqual(a,b);
+});
+test('the server builds every brand product list at startup, for both brands',async t=>{
+ countFetches(t);const root=await fs.mkdtemp(path.join(os.tmpdir(),'catalog-warm-'));t.after(()=>fs.rm(root,{recursive:true,force:true}));
+ for(const [brandId,name] of Object.entries(BRANDS)){const w=await workspace(brandId,{count:2});await fs.cp(path.join(w.root,'output'),path.join(root,'output'),{recursive:true});await w.cleanup();await fs.writeFile(path.join(root,'output/creative-ai/brands',brandId,'brand.json'),JSON.stringify({id:brandId,name,brandUrl:'https://brand.example/'}));}
+ const {createHandler}=require('../../lib/creative-ai/runtime/http'),log=console.log;console.log=()=>{};t.after(()=>{console.log=log;});
+ const app=createHandler({root,warmProducts:true});const report=await app.runtime.productsWarm;
+ for(const brandId of Object.keys(BRANDS)){assert.equal(report[brandId].products,2);assert.ok(app.runtime.brands.products.catalogCache.has(brandId),'the list is kept for the first visitor');}
+ assert.equal(createHandler({root}).runtime.productsWarm,undefined,'tests start without a background build unless asked');
 });

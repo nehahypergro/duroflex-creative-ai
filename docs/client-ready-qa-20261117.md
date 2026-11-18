@@ -100,3 +100,19 @@ Neha: "why are the skus not visible when i click on product selection". On the h
 | The picker said "No products match your search." when the list had failed or was still loading, with no way to load it again | It now says "Products could not load. Your brief is saved." with Retry, "Loading products…" while waiting, and "No products saved yet…" for an empty library; a search with no match still says "No products match your search." (`studio.js` `productListMessage`, `retryProducts`) | `studio-product-picker-load-20261118-browser.test.js` (both brands) |
 
 Both tests fail on the earlier code. The live site needs a redeploy to get the fix.
+
+**Products ready after every deploy** (Neha: "can we ensure that skus are already populated? even when new redeployment happend"):
+
+- The server builds each brand's product list when it starts (`http.js` `warmProducts`, `ProductLibrary.warm`) and keeps it in memory. It logs "Product lists ready: …".
+- The kept list is rebuilt when a saved product is added, removed or changed (name, time and size of each `profile.json`), when this server saves a product, or after 10 minutes. Two requests at the same moment share one build, and each caller gets its own copy.
+- When the picker opens after a failed list, it loads the list again by itself; Retry is offered only if that also fails.
+- Tests: `product-catalog-cdn-20261118.test.js` and `studio-product-picker-load-20261118-browser.test.js` (both brands; 5 new tests fail before).
+
+**Why the hosted Studio felt slow** (measured 18 Nov 2026, one request at a time, before this redeploy):
+
+| Request | Hosted | This computer |
+|---|---|---|
+| Product list (Duroflex, 27 products, 2.7 MB) | 5–8 s alone; about 37 s while the page loads its projects | about 0.4 s |
+| Brands, assets, project list | 0.2–0.6 s | similar |
+
+The product list was the slow part: it downloaded product photos from the CDN to check them. Brief reading builds the same list before it asks the model (`brief-reader.js`), so it waited for it too. Adding a product from a URL reads the brand's website, which takes as long as the website does. After the redeploy the list is built once at startup with no photo downloads.

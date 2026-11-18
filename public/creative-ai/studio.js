@@ -1253,8 +1253,10 @@ window.currentJob=null;window.activeBrand=null;window.brandList=[];window.resear
       if(b.dataset.assignmentFocus){detailProduct=null;mode=b.dataset.assignmentFocus;if(mode==='brand'){d.focus='brand';M.protectBriefField(d,'focus');finish();return;}dialog.querySelectorAll('[data-assignment-focus]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.assignmentFocus===mode)));show();return;}
       const p=state.products.find(p=>p.id===b.dataset.assignmentProduct);if(!p)return;if(mode==='collection'){if(selected.has(p.id))selected.delete(p.id);else{selected.add(p.id);if(p.variants?.length===1)variants[p.id]=p.variants[0].id;}show();groups.querySelector('[data-assignment-product="'+CSS.escape(p.id)+'"]')?.focus({preventScroll:true});}else choose(p);
     });show();
-    // 18 Nov 2026: the picker can open before the product list arrives; refresh it when the list does.
-    if(state.productsStatus==='loading'){const wait=setInterval(()=>{if(!dialog.isConnected||!dialog.open||state.brand.id!==brand.id){clearInterval(wait);return;}if(state.productsStatus!=='loading'){clearInterval(wait);show();}},400);}
+    // 18 Nov 2026: the picker can open before the product list arrives; refresh it when the list does. A list that
+    // failed earlier is loaded again once, by itself, before Retry is offered.
+    if(state.productsStatus==='failed'&&!state.products.length){void retryProducts(brand.id).then(()=>{if(dialog.isConnected&&dialog.open&&!detailProduct)show();});show();}
+    else if(state.productsStatus==='loading'){const wait=setInterval(()=>{if(!dialog.isConnected||!dialog.open||state.brand.id!==brand.id){clearInterval(wait);return;}if(state.productsStatus!=='loading'){clearInterval(wait);show();}},400);}
   }
   function reviewAssignment(){clearTimeout(briefAutofillTimer);const d=state.draft;M.applyBriefAutofill(d,{products:state.products});state.dirty=true;if(!saveDraft())return;const errors=M.campaignValidation(state.draft,{brand:state.brand,products:state.products,purpose:'review'});state.draftErrors=errors;renderRoute();const current=state.draft,snapshot=JSON.stringify(M.requirementSnapshot(current));const product=state.products.find(p=>p.id===current.productId),features=[...M.selectedProductRtbs(current,product),...M.rtbItems(current.rtbs)];
     const edit=(target,label='Edit')=>`<button type="button" class="text-button" data-review-edit="${h(target)}">${icon('edit')}${h(label)}</button>`;
