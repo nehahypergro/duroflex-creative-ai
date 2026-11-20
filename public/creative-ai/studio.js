@@ -194,7 +194,7 @@ window.currentJob=null;window.activeBrand=null;window.brandList=[];window.resear
     const selected=product.assets?.find(a=>a.id===p.intake?.productAssetId&&a.group==='product-images'&&(a.preview||a.previewUrl));
     return selected?productImage({...product,assets:[selected]}):productImage({...product,assets:(product.assets||[]).filter(a=>a.group==='product-images')});
   }
-  function projectFormat(p){if(p.placements?.some(x=>x.carousel))return 'Carousel';const names=[...new Set((Array.isArray(p.outputs)?p.outputs.map(o=>M.features.find(f=>f.id===o.featureId)?.name).filter(Boolean):null)||(Array.isArray(p.placements)?p.placements.map(x=>x.name).filter(Boolean):[]))];return names.length>1?names[0]+' + '+(names.length-1)+' formats':names[0]||'Creative';}
+  function projectFormat(p){return M.projectFormatLabel(p);}
   // A teammate's project is shown read-only with its creator's name (17 Nov 2026).
   // Buttons that change a project; hidden and refused on a teammate's project (view only, 17 Nov 2026).
   const VIEW_ONLY_ACTIONS=new Set(['resume-work','continue-anyway','reconcile-images','retry','retry-artwork','retry-image','retry-image-checks','lean-recheck','edit-image','repair-component','restart-project','confirm-restart','resume-pdp','save-feedback','save-copy','generation-retry','retry-rationale','save-versions','edit-brief']);

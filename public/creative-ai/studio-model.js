@@ -464,7 +464,8 @@ default:return frame(14,9,36,38)} }
   function aplusPage(o){const t=amazonImageTemplate(o);return t?.page?aplusPageTypes[t.page]:null;}
   function aplusPresetName(typeId){return aplusPresetNames.find(k=>amazonTemplates[k].page===typeId)||null;}
   // Project notes shown with the result (offer warning, technology fallback, left-out modules).
-  function aplusNotes(job){return Array.isArray(job?.aplus?.notes)?job.aplus.notes.filter(n=>typeof n==='string'&&n.trim()):[];}
+  // Saved A+ jobs keep their "Left out for now" notes; the page no longer shows them (Neha, 18 Nov 2026: nothing says "coming soon").
+  function aplusNotes(job){return Array.isArray(job?.aplus?.notes)?job.aplus.notes.filter(n=>typeof n==='string'&&n.trim()&&!/^Left out for now\b/.test(n)):[];}
   staticRecipes[6].fields[0][3]=[...aplusPresetNames,'Custom modules',...Object.keys(amazonTemplates).filter(k=>!amazonTemplates[k].page)];
   function amazonImageSlots(t,values={}){
     if(!t.repeat)return t.parts;
@@ -594,7 +595,7 @@ default:return frame(14,9,36,38)} }
   function aplusModuleRows(typeId){
     const s=aplusSummary(typeId);if(!s)return [];
     const size=i=>i.width+' × '+i.height+(i.device==='mobile'?' mobile':i.device==='desktop'?' desktop':'');
-    return [s.name+' · '+s.moduleCount+' modules · '+s.imageCount+' images in one job',...s.modules.map(m=>m.textOnly?m.name+' · text only (no image)':m.name+' · '+(m.units.length>1?m.units.length+' × ':'')+[...new Set(m.images.map(size))].join(' + ')+(m.units.length>1?' each':'')),'Also delivered: Amazon text fields (headline and body per module) and alt text (100 characters or fewer) for every image','Files: PNG, or JPEG when a PNG is over 2 MB',...s.later.map(x=>'Left out for now · '+x)];
+    return [s.name+' · '+s.moduleCount+' modules · '+s.imageCount+' images in one job',...s.modules.map(m=>m.textOnly?m.name+' · text only (no image)':m.name+' · '+(m.units.length>1?m.units.length+' × ':'')+[...new Set(m.images.map(size))].join(' + ')+(m.units.length>1?' each':'')),'Also delivered: Amazon text fields (headline and body per module) and alt text (100 characters or fewer) for every image','Files: PNG, or JPEG when a PNG is over 2 MB'];
   }
   function assetRequirementSummary(o,d={}){
     const v=assetValues(o,d),a=amazonImageTemplate(o),e=retailEntry(o),p=e?.printId&&retailPrintPresets.find(p=>p.id===v.printPreset),rows=[];
@@ -1115,6 +1116,20 @@ default:return frame(14,9,36,38)} }
     }
     return projects.map(p=>({...p,name:named.get(p)}));
   }
+  // One format name per saved slot. 19 Nov 2026 QA: numbered slots of one set ("RCS card 1", "RCS card 2") and the
+  // sizes of a tagged set (PMax landscape / square / portrait, which share the "PMax image set" tag) were read as
+  // separate formats, so a single PMax set was called "Campaign" and listed as "PMax landscape image + 2 formats".
+  function placementFormats(p){
+    return (Array.isArray(p.placements)?p.placements:[]).map(slot=>{const set=slot.assetSet||slot.description?.assetSet;
+      return slot.pdp?'PDP images':slot.carousel?'Carousel':slot.amazon||slot.aplus?'A+ content':typeof set?.name==='string'&&set.name.trim()?set.name.trim():String(slot.name||'Creative').split(/\s*[·|]\s*/)[0].replace(/\s+\d+$/,'');});
+  }
+  // The format line under a project: a draft's chosen cards, else its saved slots, each set counted once.
+  function projectFormatLabel(p){
+    if(p.placements?.some(x=>x.carousel))return 'Carousel';
+    const fromOutputs=Array.isArray(p.outputs)?p.outputs.map(o=>features.find(f=>f.id===o.featureId)?.name).filter(Boolean):[];
+    const names=[...new Set(fromOutputs.length?fromOutputs:placementFormats(p).filter(Boolean))];
+    return names.length>1?names[0]+' + '+(names.length-1)+' format'+(names.length>2?'s':''):names[0]||'Creative';
+  }
   function projectTitle(p,{override='',automatic=false,productName=''}={}){
     if(override)return override;
     if(p.manualName&&p.name)return p.name;
@@ -1122,9 +1137,7 @@ default:return frame(14,9,36,38)} }
     const existing=p.intake?.campaignName||p.name||'';
     if(!automatic&&existing&&existing!==full&&!['Untitled project','Saved project'].includes(existing))return existing;
     const labels=(Array.isArray(p.outputs)?p.outputs:[]).map(o=>({5:'PDP images',6:'A+ content',9:'Carousel'}[o.featureId]||features.find(f=>f.id===o.featureId)?.name||o.name||'Creative'));
-    // 19 Nov 2026 QA: numbered slots of one set ("RCS card 1", "RCS card 2", "RCS card 3") were read as three formats, so
-    // the project was called "Campaign"; a trailing slot number is not part of the format.
-    if(!labels.length)for(const slot of p.placements||[])labels.push(slot.pdp?'PDP images':slot.carousel?'Carousel':slot.amazon||slot.aplus?'A+ content':String(slot.name||'Creative').split(/\s*[·|]\s*/)[0].replace(/\s+\d+$/,''));
+    if(!labels.length)labels.push(...placementFormats(p));
     const kinds=[...new Set(labels)],asset=kinds.length>1?'Campaign':kinds[0]||((p.creationMode==='campaign')?'Campaign':'Creative');
     const subject=shortProductName(full)||(p.focus==='brand'||p.intake?.focus==='brand'?'Brand':'');
     // Naming v2 (user decision, 10 Nov 2026): Product · Format · Goal · date. The format is the chosen asset
@@ -1723,5 +1736,5 @@ default:return frame(14,9,36,38)} }
     if(!d||d.objective!=='Purchase'||d.messageType==='Offer / price / EMI'||String(d.mandatoryInfo||'').trim())return false;
     return !(d.outputs||[]).some(o=>{const v=o?.staticValues||{};return ['offer','offerText','price','emi'].some(k=>String(v[k]||'').trim());});
   }
-  return {queuedNote,focusUnsupported,planningBriefNote,offerSuggested,briefPaperSize,applyBriefPaperSize,briefSizeMismatch,displayBannerSizes,displayBannerSets,displayBannerSetNames,displayBanners,displayBannerSlots,displayBannerSummary,displayBannerRows,displayBannerNotes,aplusPageTypes,aplusSlots,aplusSummary,aplusPage,aplusPresetName,aplusNotes,aplusModuleRows,technologyPattern,technologyExclusion,technologyFeatures,applyTechnologyDefault,resultNotes,messageTypes,assetDivisions,assetCatalogue,assetCard,assetCardOutput,startAssetDraft,draftFromReading,productNameCheck,readingBriefName,defaultVariant,openReadingQuestions,resolveReadingQuestion,backupModelNote,assetPlatformNote,assetPlatformNotes,applyMessageType,syncMessageTypeOffer,campaignValidation,campaignGenerationSupported,selectBriefProduct,toolFormats,communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,applyStaticChange,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,designCheck,projectStatusMatches,projectProductName,projectProductId,outputsBadge,refreshFailurePlan,safeAsset,normalizeJob,storage};
+  return {queuedNote,focusUnsupported,planningBriefNote,offerSuggested,briefPaperSize,applyBriefPaperSize,briefSizeMismatch,displayBannerSizes,displayBannerSets,displayBannerSetNames,displayBanners,displayBannerSlots,displayBannerSummary,displayBannerRows,displayBannerNotes,aplusPageTypes,aplusSlots,aplusSummary,aplusPage,aplusPresetName,aplusNotes,aplusModuleRows,technologyPattern,technologyExclusion,technologyFeatures,applyTechnologyDefault,resultNotes,messageTypes,assetDivisions,assetCatalogue,assetCard,assetCardOutput,startAssetDraft,draftFromReading,productNameCheck,readingBriefName,defaultVariant,openReadingQuestions,resolveReadingQuestion,backupModelNote,assetPlatformNote,assetPlatformNotes,applyMessageType,syncMessageTypeOffer,campaignValidation,campaignGenerationSupported,selectBriefProduct,toolFormats,communicationParts,communicationText,syncCommunicationGoal,autofillSignature,draftAutosaveReady,searchExplanation,browserTitle,projectTitle,projectFormatLabel,projectBriefFocus,nextProjectName,disambiguateProjectNames,shortProductName,briefUnderstanding,useBriefAsset,assetValues,responsiveSlots,assetRequirementSummary,requirementSnapshot,confirmRequirements,confirmationCurrent,fieldProvenance,briefAutofillCandidates,applyBriefAutofill,protectBriefField,undoBriefAutofill,intakeOptions,creativeCount,requiredAssetFields,productRtbs,selectedProductRtbs,rtbItems,suppliedRtbOptions,intakeContext,intakeProgress,catalogueVisuals,retailPrintPresets,retailEntries,retailSizes,retailEntry,applyRetailPreset,applyStaticChange,retailRecipe,retailProfile,pushDestinations,pushPresets,pushImage,applyPushPreset,pushPreview,rcsPresets,rcsImage,rcsCount,rcsPreview,applyRcsPreset,emailPresets,emailImage,applyEmailPreset,amazonTemplates,amazonImageSlots,amazonImageTemplate,staticRecipeForOutput,applyAmazonPreset,assetCollections,collectionPages,pdpSlots,jobProgress,createProgressPoller,navigation,composerStorage,activeWork,sameDownloadSelection,completeSet,carouselDownload,generationProfile,formatPreviews,staticRecipe,staticParts,featureCoverage,validateBrief,workspaces,workspaceFor,startDraft,assetPlan,planIssues,organization,creativeKey,searchMatch,journeys,reviewSummary,feedbackKey,groups,features,fields,formats,languages,uid,clone,newDraft,output,validate,requiredDetails,units,status,designCheck,projectStatusMatches,projectProductName,projectProductId,outputsBadge,refreshFailurePlan,safeAsset,normalizeJob,storage};
 });

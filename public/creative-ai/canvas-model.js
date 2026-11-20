@@ -161,7 +161,7 @@
    if(/fetch failed|Failed to fetch|ECONN|connection (lost|closed|reset)|network error|socket hang up/i.test(raw))return 'The connection to the creation service was interrupted.'+ending+' Check the project status before starting anything new; the earlier attempt may still be running.';
    if(/timeout|timed out|time budget|deadline/i.test(raw))return 'Creation took longer than the allowed time.'+ending+' Check the project status before starting anything new; earlier charges may still apply.';
    if(/rate limit|too many requests|HTTP 429|service unavailable|HTTP 503/i.test(raw))return 'The creation service is temporarily busy.'+ending+' Please retry shortly.';
-   if(/schema|validated contract|agent output/i.test(raw))return 'We couldn’t use part of the generated response.'+ending+' Use Retry to try again.';
+   if(/schema|validated contract|agent output/i.test(raw))return 'We couldn’t use part of the generated response.'+ending+' You can try again.';
   }
   if(/quota|storage full|Device storage is unavailable/i.test(raw))return 'Your browser could not save this work. Keep this page open and copy or download your brief before leaving.';
   if(error?.status===409&&context==='editor')return 'This design changed while preparing it. Retry opening the latest version.';

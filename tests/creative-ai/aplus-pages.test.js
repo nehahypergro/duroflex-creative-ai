@@ -23,7 +23,7 @@ for(const brand of brands)test(brand+': each A+ page type makes every module in 
  const d=M.startAssetDraft('brand-'+brand.toLowerCase(),['amazon-aplus']),o=d.outputs[0];
  assert.equal(M.aplusPage(o).id,'premium');assert.equal(M.staticParts(o).length,14);
  const presets=M.staticRecipeForOutput(o,d).fields[0][3];assert.deepEqual(presets.slice(0,3),['Amazon A+ page — Premium (recommended)','Amazon A+ page — Basic','Amazon A+ page — Brand Story']);
- const rows=M.assetRequirementSummary(o,d).join('\n');assert.match(rows,/14 images in one job/);assert.match(rows,/Benefits carousel · 3 × 1464 × 600 desktop \+ 600 × 450 mobile each/);assert.match(rows,/FAQ · text only/);assert.match(rows,/alt text/);assert.match(rows,/2 MB/);assert.match(rows,/comparison/i);
+ const rows=M.assetRequirementSummary(o,d).join('\n');assert.match(rows,/14 images in one job/);assert.match(rows,/Benefits carousel · 3 × 1464 × 600 desktop \+ 600 × 450 mobile each/);assert.match(rows,/FAQ · text only/);assert.match(rows,/alt text/);assert.match(rows,/2 MB/);assert.doesNotMatch(rows,/left out|later option/i,'nothing announces a later option (18 Nov 2026)');
  // QR codes and contact details are never asked for A+; the offer question warns about Amazon.
  const fields=M.staticRecipeForOutput(o,{...d,brief:'Add a QR code and our phone number'}).fields;
  assert.ok(!fields.some(f=>['contactMode','qrDestination','contactPhone'].includes(f[0])));assert.match(fields.find(f=>f[0]==='promotionMode')[1],/Amazon may reject prices or offers/);
@@ -124,7 +124,7 @@ for(const brand of brands)test(brand+': one plan covers all 14 Premium pages; ev
  await handoff.generate(f.runtime,f.job.id);const j=await f.store.read(f.job.id);assert.equal(j.status,'finished',JSON.stringify(j.unitErrors));assert.equal(j.results.length,14);
  const images=f.calls.filter(c=>c.kind==='image');assert.equal(images.length,14);
  for(const s of j.selection){const call=images.find(c=>c.scope.placementId===s.id),d=s.description.dimensions;assert.equal(call.size,placements.generationSize(d.width,d.height).size);const r=j.results.find(r=>r.placementId===s.id),m=await sharp(path.join(f.store.dir(f.job.id),r.imageUrl.split('/').pop())).metadata();assert.deepEqual([m.width,m.height],[d.width,d.height],s.id);}
- assert.equal(j.aplus.type,'premium');assert.ok(j.aplus.notes.some(n=>/comparison/i.test(n)));
+ assert.equal(j.aplus.type,'premium');assert.ok(!j.aplus.notes.some(n=>/left out|later option/i.test(n)));
 });
 
 for(const brand of brands)test(brand+': the technology panel cites the SKU technology fact and attaches its official picture; it falls back to a benefit panel without evidence',async t=>{
