@@ -59,9 +59,9 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   assert.equal(await page.evaluate(()=>document.activeElement?.matches('[data-io-comment]')),true,'the comment box is ready to type in');
   assert.equal(await send.isDisabled(),true,'a pin without a comment cannot be sent on its own');
   await dialog.locator('[data-io-comment]').fill('Make this vase white');assert.equal(await send.isDisabled(),false,'a pin comment alone can be sent');
-  /* 9 Nov 2026 ("Yes, protect it"): each pin has an area, Medium by default, drawn as a dashed square. */
-  assert.equal(await pop.locator('[data-io-area=medium]').getAttribute('aria-pressed'),'true','Medium area by default');assert.equal(await dialog.locator('.ec-io-overlay .ec-io-area-box').count(),1,'the area square is drawn');
-  {const ab=await dialog.locator('.ec-io-overlay .ec-io-area-box').boundingBox(),side=.26*Math.min(area.width,area.height);assert.ok(Math.abs(ab.width-side)<3&&Math.abs(ab.height-side)<3,'the drawn square matches the server size '+JSON.stringify(ab));}
+  /* 21 Nov 2026 (Neha: "not literally a box ... let it just be pointers"): a pin only points. No area choice, no dashed square. */
+  assert.equal(await pop.locator('[data-io-area]').count(),0,'no area choice');assert.equal(await dialog.locator('.ec-io-overlay rect').count(),0,'no square is drawn around a pin');
+  assert.match(await dialog.locator('.ec-chat-help').first().innerText(),/your comment decides how far the change goes/);
   assert.match(await dialog.locator('[data-io-pins]').innerText(),/1\s*Make this vase white/);
   /* 8 Nov live test kept: with focus outside the editor, Escape first closes the open comment box and keeps the editor open. */
   await page.evaluate(()=>document.activeElement?.blur());await page.keyboard.press('Escape');
@@ -69,18 +69,12 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   assert.equal(await pop.isHidden(),true,'Escape closes the comment box');assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),1,'a pin with a comment stays');
   /* An empty new pin disappears when its comment box is closed. */
   await at(.72,.25);await pop.waitFor();await page.keyboard.press('Escape');assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),1,'empty pin removed on Escape');
-  await at(.72,.25);await pop.waitFor();await dialog.locator('[data-io-comment]').fill('Remove this lamp');await pop.locator('[data-io-area=small]').click();assert.equal(await pop.locator('[data-io-area=small]').getAttribute('aria-pressed'),'true');await dialog.locator('[data-io-pop-done]').click();
+  await at(.72,.25);await pop.waitFor();await dialog.locator('[data-io-comment]').fill('Make this wall dark blue');await dialog.locator('[data-io-pop-done]').click();
   assert.equal(await pop.isHidden(),true);assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),2);
-  /* Areas covering more than about a third of the design cannot be sent. */
-  for(const [x,y] of [[.2,.8],[.8,.8],[.5,.55]]){await at(x,y);await pop.waitFor();await dialog.locator('[data-io-comment]').fill('Change this');await pop.locator('[data-io-area=large]').click();await dialog.locator('[data-io-pop-done]').click();}
-  assert.equal(await send.isDisabled(),true,'oversized areas cannot be sent');assert.match(await dialog.locator('.ec-chat-status').innerText(),/more than about a third/);
-  for(let i=0;i<3;i++)await dialog.locator('[data-pin-remove]').last().click();
-  assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),2);assert.equal(await send.isDisabled(),false,'back within the limit');assert.doesNotMatch(await dialog.locator('.ec-chat-status').innerText(),/more than about a third/,'the size warning clears');
-  /* A pin on a headline shows the whole text line it will change, before Send. */
-  await at(.3,.15);await pop.waitFor();await dialog.locator('[data-io-comment]').fill('Change this headline to: Rest well');await dialog.locator('[data-io-pop-done]').click();
-  await page.waitForFunction(()=>[...document.querySelectorAll('#editableDialog [data-io-pins] li')].some(li=>/Whole text line/.test(li.textContent)));
-  {const boxes=await dialog.locator('.ec-io-overlay .ec-io-area-box').evaluateAll(els=>els.map(e=>Number(e.getAttribute('width'))));assert.ok(boxes.some(w=>Math.abs(w-0.6*1080)<2),'the drawn area is the server\'s whole-line area');}
-  await dialog.locator('[data-pin-remove]').last().click();
+  /* No size limit: many pins can be sent (the comment, not a square, decides the reach). */
+  for(const [x,y] of [[.2,.8],[.8,.8],[.5,.55]]){await at(x,y);await pop.waitFor();await dialog.locator('[data-io-comment]').fill('Change this');await dialog.locator('[data-io-pop-done]').click();}
+  assert.equal(await send.isDisabled(),false,'five pins can be sent');for(let i=0;i<3;i++)await dialog.locator('[data-pin-remove]').last().click();
+  assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),2);assert.equal(posts.filter(x=>x.p.endsWith('/areas')).length,0,'no area preview is asked for');
   /* A request that changes the product needs a confirmation before anything is paid. */
   await dialog.locator('[data-chat-input]').fill('Make the mattress fabric grey');await send.click();
   await dialog.locator('[data-io-confirm]').waitFor();assert.match(await dialog.locator('.ec-chat-status').innerText(),/changes the product itself/);
@@ -89,14 +83,14 @@ test('lean design opens the annotating image editor for both brands',{timeout:24
   await send.click();
   await dialog.locator('.ec-io-version').nth(2).locator('img').waitFor();
   const sent=posts.filter(x=>x.p.endsWith('/ai-edits')).at(-1).body;assert.equal(sent.instruction,undefined,'no empty note is sent');assert.equal(sent.brandId,b.id);assert.match(sent.requestKey,/^ai-edit-[a-zA-Z0-9-]{8,}$/);assert.equal(sent.sourceVersionId,'original');assert.equal(sent.expectedVersionId,'original');
-  assert.deepEqual(sent.annotations.map(a=>[a.type,a.comment,a.area]),[['pin','Make this vase white','medium'],['pin','Remove this lamp','small']]);assert.ok(Math.abs(sent.annotations[0].x-.3)<.02&&Math.abs(sent.annotations[0].y-.4)<.02,'pin position '+JSON.stringify(sent.annotations[0]));
+  assert.deepEqual(sent.annotations.map(a=>[a.type,a.comment,a.area]),[['pin','Make this vase white',undefined],['pin','Make this wall dark blue',undefined]],'pins are sent as pointers, with no area');assert.ok(Math.abs(sent.annotations[0].x-.3)<.02&&Math.abs(sent.annotations[0].y-.4)<.02,'pin position '+JSON.stringify(sent.annotations[0]));
   assert.equal(await dialog.locator('.ec-io-overlay .ec-io-pin').count(),0,'pins clear after sending');
   // The new version is shown on the canvas (not selected) with a "Use this version" choice.
   await page.waitForFunction(()=>/Version 2 is ready/.test(document.querySelector('#editableDialog .ec-chat-history')?.textContent||''));
   await page.waitForFunction(()=>/Checked — product looks right \(compared with 3 product photos\)/.test(document.querySelector('#editableDialog .ec-chat-history')?.textContent||''),null,{timeout:20000});
   assert.doesNotMatch(await dialog.locator('.ec-io-version').nth(2).innerText(),/Ready|Checks passed/,'a checked edit is never shown as Ready');
   assert.match(await dialog.locator('[data-io-image]').getAttribute('src'),/static-ai-edit-22222222/);assert.match(await dialog.locator('[data-io-banner]').innerText(),/Viewing Version 2/);
-  assert.match(await dialog.locator('.ec-chat-history').innerText(),/Make this vase white[\s\S]*Remove this lamp/);assert.match(await dialog.locator('.ec-chat-history').innerText(),/2 pins/);assert.match(await dialog.locator('.ec-chat-history').innerText(),/₹12\.31 \(estimate/);
+  assert.match(await dialog.locator('.ec-chat-history').innerText(),/Make this vase white[\s\S]*Make this wall dark blue[\s\S]*the rest kept as it was/);assert.match(await dialog.locator('.ec-chat-history').innerText(),/2 pins/);assert.match(await dialog.locator('.ec-chat-history').innerText(),/₹12\.31 \(estimate/);
   assert.equal(await send.isDisabled(),true,'edits start from the version in use, not the one being viewed');
   await page.screenshot({path:path.join(shots,slug+'-result-1366.png')});
   await dialog.locator('[data-io-banner] [data-io-use]').click();await page.waitForFunction(()=>/Now using Version 2/.test(document.querySelector('#editableDialog .ec-chat-status')?.textContent||''));

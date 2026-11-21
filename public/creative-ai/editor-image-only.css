@@ -57,13 +57,6 @@
 #editableDialog .ec-io-turn-pins{list-style:none;margin:0 0 4px;padding:6px 10px;display:flex;flex-direction:column;gap:3px}
 #editableDialog .ec-io-turn-pins b{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;margin-right:4px;border-radius:50%;background:#e0115f;color:#fff;font-size:9px}
 @media(max-width:700px){#editableDialog .ec-io-pins{max-height:96px}#editableDialog .ec-io-pop{padding:8px}#editableDialog .ec-io-pop textarea{min-height:44px}}
-/* Pin areas (9 Nov 2026): the dashed square is the only part of the design that can change. */
-#editableDialog.ec-image-only .ec-io-overlay .ec-io-area-box{fill:#e0115f12;stroke:#e0115f;stroke-width:1.5;stroke-dasharray:6 4;vector-effect:non-scaling-stroke;pointer-events:none}
-#editableDialog.ec-image-only .ec-io-overlay .ec-io-area-box.active{fill:#713bd014;stroke:#713bd0;stroke-width:2}
-#editableDialog .ec-io-area{display:flex;align-items:center;gap:4px;margin-top:8px;flex-wrap:wrap}
-#editableDialog .ec-io-area span{flex:1 0 100%;font-size:11px;color:var(--ec-muted)}
-#editableDialog .ec-io-area button{font-size:11px;padding:4px 8px;border-radius:6px}
-#editableDialog .ec-io-area button[aria-pressed=true]{background:#eadcff;color:#713bd0;border-color:#8c41e2}
 #editableDialog .ec-io-pins .ec-io-pin-edit small{flex:none;margin-left:auto;font-size:10px;color:var(--ec-muted)}
 /* Product-change confirmation (10 Nov 2026): shown only after the server asks for it. */
 #editableDialog.ec-image-only .ec-io-confirm{margin:6px 0 0;min-height:36px;padding:0 14px;border-radius:8px;border:1px solid #b42318;background:#fff;color:#b42318;font:inherit;font-weight:600;cursor:pointer}
