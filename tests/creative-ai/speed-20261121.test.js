@@ -64,8 +64,9 @@ test('the engine routes project views through the cache and drops it on every sa
 for(const [brand,brandId] of BRANDS)test(brand+': one request returns the brand’s visible projects with their edits',async()=>{
  const other=BRANDS.find(b=>b[1]!==brandId)[1],job=(n,b,extra={})=>({id:'creative-'+b.slice(6,14)+'-0000-4000-8000-00000000000'+n,status:'finished',createdAt:'2026-11-2'+n+'T00:00:00Z',intake:{brandId:b,...extra},results:[]});
  const jobs=[job(1,brandId),job(2,brandId),job(3,other),job(4,brandId,{clientVisibility:'internal'}),job(5,brandId)];
- const viewed=[],runtime={store:{list:async()=>jobs,dir:id=>'/nonexistent/'+id},view:async id=>{viewed.push(id);if(id.endsWith('5'))throw Error('broken');return {id,brandId,status:'finished',results:[]};}};
- const root=await fsp.mkdtemp(path.join(os.tmpdir(),'project-list-')),{projects}=require('../../lib/creative-ai/runtime/project-list');
+ const root=await fsp.mkdtemp(path.join(os.tmpdir(),'project-list-')),jobsDir=path.join(root,'jobs');for(const j of jobs){await fsp.mkdir(path.join(jobsDir,j.id),{recursive:true});await fsp.writeFile(path.join(jobsDir,j.id,'job.json'),JSON.stringify(j));}
+ const viewed=[],store={root:jobsDir,dir:id=>path.join(jobsDir,id),read:async id=>JSON.parse(await fsp.readFile(path.join(jobsDir,id,'job.json'),'utf8'))},runtime={store,view:async id=>{viewed.push(id);if(id.endsWith('5'))throw Error('broken');return {id,brandId,status:'finished',results:[]};}};
+ const {projects}=require('../../lib/creative-ai/runtime/project-list');
  const all=await projects(runtime,root,brandId);
  assert.deepEqual(all.projects.map(p=>p.id).sort(),[jobs[0].id,jobs[1].id,jobs[4].id].sort(),'own brand only, internal work hidden');
  assert.equal(all.projects.find(p=>p.id===jobs[4].id).loadError,'This project could not load.');assert.ok(all.projects.filter(p=>!p.loadError).every(p=>'edits' in p));
