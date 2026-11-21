@@ -34,7 +34,11 @@ window.EditableCanvas=(()=>{
   const expected=session+1;
   try{return await openDocument(key,options);}catch(error){if(session!==expected)return;openingError(error,key,options);throw error;}
  }
- async function openDocument(key,options={}){ opacityEditing=false;workspaceTools?.dispose();workspaceTools=null;chatController?.dispose();chatController=null;openOptions=options;collectionAIBusy=false;clearTimeout(retryTimer);pendingSave=null;needsReconcile=false;retryCount=0;const opening=++session;if(!currentJob)throw Error('Open a campaign first.');const [route,placementId]=key.split('|'),r=currentJob.results.find(r=>r.route===route&&r.placementId===placementId&&(!options.sourceImageUrl||r.imageUrl===options.sourceImageUrl));if(!r)throw Error('Creative not found.');
+ // The drawing library (316 KB) loads the first time the layer editor opens, not with every Studio page (21 Nov
+ // 2026, speed review). Pages that already include it (shared editor, proof pages) keep their copy.
+ let fabricLoad=null;
+ function ensureFabric(){if(window.fabric)return Promise.resolve();return fabricLoad||(fabricLoad=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='/creative-ai/vendor/fabric.min.js';s.onload=()=>window.fabric?resolve():reject(Error('The editor could not load. Try again.'));s.onerror=()=>{fabricLoad=null;s.remove();reject(Error('The editor could not load. Check your connection and try again.'));};document.head.appendChild(s);}));}
+ async function openDocument(key,options={}){ await ensureFabric(); opacityEditing=false;workspaceTools?.dispose();workspaceTools=null;chatController?.dispose();chatController=null;openOptions=options;collectionAIBusy=false;clearTimeout(retryTimer);pendingSave=null;needsReconcile=false;retryCount=0;const opening=++session;if(!currentJob)throw Error('Open a campaign first.');const [route,placementId]=key.split('|'),r=currentJob.results.find(r=>r.route===route&&r.placementId===placementId&&(!options.sourceImageUrl||r.imageUrl===options.sourceImageUrl));if(!r)throw Error('Creative not found.');
  dialog.classList.remove('ec-preview','ec-comparing','ec-image-only');
  dialog.innerHTML='<section class="ec-opening"><div role="status" aria-live="polite"><span class="ec-loading-spinner" aria-hidden="true"></span><h2>Opening your design…</h2><p>Loading artwork, fonts and editable layers.</p></div><button data-ec="close">Cancel</button></section>';
  if(!dialog.open)dialog.showModal();

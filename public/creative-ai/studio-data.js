@@ -33,7 +33,7 @@ window.StudioData = (() => {
     try{const data=await get('jobs/'+encodeURIComponent(id)+'/details',{signal});if(!Array.isArray(data.units))throw Error('Saved design details are unavailable.');job.designDetails=data;}
     catch(e){if(signal?.aborted)return;job.designDetailsError='Saved design details could not load.';}
   }
-  const fingerprints=new Map(),cache=new Map(),workspaces=new Map(),workspaceLoads=new Map();
+  const fingerprints=new Map(),cache=new Map(),workspaces=new Map(),workspaceLoads=new Map(),projectLoads=new Map();
   let version=0;
   const diskPrefix='creative-ai-workspace-v2:';
   function disk(action,key,value){return new Promise(done=>{let finished=false;const timer=setTimeout(()=>resolve(null),1500),resolve=value=>{if(finished)return;finished=true;clearTimeout(timer);done(value);};try{const request=indexedDB.open(window.CreativeAccount?.cacheName||'creative-ai-workspace-cache',1);request.onupgradeneeded=()=>request.result.createObjectStore('snapshots');request.onerror=()=>resolve(null);request.onblocked=()=>resolve(null);request.onsuccess=()=>{const db=request.result;if(finished){db.close();return;}const tx=db.transaction('snapshots',action==='get'?'readonly':'readwrite'),store=tx.objectStore('snapshots'),r=action==='get'?store.get(key):action==='put'?store.put(value,key):action==='delete'?store.delete(key):store.clear();r.onsuccess=()=>resolve(r.result);r.onerror=()=>resolve(null);tx.oncomplete=()=>db.close();};}catch{resolve(null);}});}
@@ -95,7 +95,36 @@ window.StudioData = (() => {
     // about 9 s on the hosted Studio): newest projects load first, eight at a time; once the newest 12 (or all, if
     // fewer) are ready, onPartial shows them while the rest load. Design details (rationale and scores, used only on
     // a design's own page, which loads them itself if missing) are fetched in the background after the list.
-    async projects(brandId,fresh=false,{onPartial}={}){
+    // 21 Nov 2026 (speed review): the page asked for every project and its saved edits one by one (about 230
+    // requests per load, and again on each status refresh). Now: the short list (with each project's freshness),
+    // then ONE request for the projects that are new or changed (in groups of 100), with their saved edits.
+    // Unchanged projects come from memory. A server without the bulk route falls back to projectsOneByOne.
+    // Calls that overlap (start-up and the status refresh) share one load instead of fetching the projects twice.
+    projects(brandId,fresh=false,options={}){
+      const running=projectLoads.get(brandId);if(running&&running.version===version)return running.promise;
+      const promise=this.loadProjects(brandId,fresh,options).finally(()=>{if(projectLoads.get(brandId)?.promise===promise)projectLoads.delete(brandId);});
+      projectLoads.set(brandId,{version,promise});return promise;
+    },
+    async loadProjects(brandId,fresh=false,options={}){
+      const started=version,all=await get('jobs'),stamp=j=>String(j.updatedAt||j.createdAt||''),jobs=all.filter(j=>j.brandId===brandId).sort((a,b)=>stamp(b).localeCompare(stamp(a)));
+      const changed=jobs.filter(j=>{const key=brandId+':'+j.id,previous=cache.get(key);return !(j.freshness&&fingerprints.get(key)===j.freshness&&previous&&!previous.editLookupFailed);});
+      const fetched=new Map();
+      for(let i=0;i<changed.length;i+=100){const ids=changed.slice(i,i+100).map(j=>j.id);let bulk=null;
+        try{bulk=await get('jobs?brandId='+encodeURIComponent(brandId)+'&include=projects&ids='+ids.join(','),{timeout:60000});if(bulk?.version!==1||bulk.brandId!==brandId||!Array.isArray(bulk.projects))bulk=null;}catch(e){if(e?.status&&e.status!==404)throw e;bulk=null;}
+        if(!bulk)return this.projectsOneByOne(brandId,fresh,options);
+        for(const v of bulk.projects)fetched.set(v.id,v);}
+      const projects=jobs.map(j=>{const key=brandId+':'+j.id,v=fetched.get(j.id);
+        if(!v){const previous=cache.get(key);return previous||{...j,brandId,local:false,name:'Project temporarily unavailable',updatedAt:j.createdAt,results:[],loadError:'This project could not load.',status:'unavailable'};}
+        if(v.loadError)return {...j,...v,brandId,local:false,name:'Project temporarily unavailable',results:[],status:'unavailable'};
+        const {edits,editLookupFailed,...view}=v,job=StudioModel.normalizeJob(view,brandId);
+        if(Array.isArray(edits)){job.results=job.results.map(r=>({...r,latestEdit:edits.find(e=>e.route===r.route&&e.placementId===r.placementId&&(!e.sourceImageUrl||e.sourceImageUrl===r.imageUrl))||null}));job.updatedAt=[job.updatedAt,...edits.map(e=>e.updatedAt)].filter(Boolean).sort().at(-1);}else job.editLookupFailed=true;
+        const previous=cache.get(key);if(previous?.designDetails&&!job.designDetails)job.designDetails=previous.designDetails;
+        if(started===version){cache.set(key,job);if(j.freshness)fingerprints.set(key,j.freshness);}return job;});
+      const result={projects,errors:projects.filter(p=>p.loadError).map(p=>({item:p,error:p.loadError}))};
+      const saved=workspaces.get(brandId);if(started===version&&saved&&!result.errors.length)saved.value[0]={status:'fulfilled',value:result};
+      return result;
+    },
+    async projectsOneByOne(brandId,fresh=false,{onPartial}={}){
       const started=version,all=await get('jobs'),stamp=j=>String(j.updatedAt||j.createdAt||''),jobs=all.filter(j=>j.brandId===brandId).sort((a,b)=>stamp(b).localeCompare(stamp(a)));
       const FIRST=Math.min(12,jobs.length),done=new Array(jobs.length);let firstDone=0,partialSent=false;
       const values=await mapLimit(jobs,async j=>{const i=jobs.indexOf(j);try{const key=brandId+':'+j.id,previous=cache.get(key),unchanged=j.freshness&&fingerprints.get(key)===j.freshness&&previous&&!previous.editLookupFailed&&!previous.designDetailsError;const project=await this.project(j.id,brandId,(fresh||!!j.freshness)&&!unchanged,{details:false});if(started===version&&j.freshness)fingerprints.set(key,j.freshness);done[i]=project;return project;}
@@ -105,7 +134,6 @@ window.StudioData = (() => {
         updatedAt:v.item.createdAt,results:[],loadError:v.error,status:'unavailable'
       }),errors:values.filter(v=>v.error)};
       const saved=workspaces.get(brandId);if(started===version&&saved&&!result.errors.length)saved.value[0]={status:'fulfilled',value:result};
-      if(started===version)void mapLimit(result.projects.filter(p=>!p.designDetails&&!p.loadError&&p.results?.some(r=>r.imageUrl)),p=>designDetails(p,p.sourceJobId||p.id),3);
       return result;
     },
     async project(id,brandId,fresh=false,{details=true}={}){

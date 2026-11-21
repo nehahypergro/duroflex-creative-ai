@@ -36,7 +36,8 @@ test('newest projects appear first while the rest load, details wait, for both b
   await page.locator('[data-projects-partial]').waitFor({state:'detached',timeout:15000});
   await page.locator('#projectSearch').fill(name(0));await page.locator('main').getByText(name(0)).first().waitFor();
   await page.waitForTimeout(500);
-  assert.equal(detailsBeforeList,0);assert.ok(details>=1,'design details are fetched in the background afterwards');
+  // Speed review (21 Nov 2026): design details are shown nowhere on the page, so the list no longer fetches them.
+  assert.equal(detailsBeforeList,0);assert.equal(details,0,'design details are not fetched for the project list');
   await context.close();
  }assert.deepEqual(errors,[]);}finally{await browser.close();f.server.closeAllConnections();await new Promise(r=>f.server.close(r));}
 });

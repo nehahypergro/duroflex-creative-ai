@@ -10,6 +10,7 @@ function createServer({root=ROOT,resumeJobs=true,provider,access}={}){
  if(access)require('./lib/admin/studio-access').mount(app.runtime,access);
  const costs=new (require('./lib/cost-tracker').CostTracker)(root,policy.config);
  const server=http.createServer(async(req,res)=>{try{
+  require('./lib/http-speed').wrap(req,res); // gzip and page-file ETags (21 Nov 2026)
   const handle=async()=>{try{
    const requestHost=req.headers.host||'',hostName=new URL('http://'+requestHost).hostname;if(!['127.0.0.1','localhost','[::1]'].includes(hostName))throw Error('This pilot accepts local connections only.');if(req.headers.origin&&new URL(req.headers.origin).host!==requestHost)throw Error('Cross-origin requests are not allowed.');const pathname=new URL(req.url,'http://localhost').pathname;
    if(pathname==='/'){res.writeHead(302,{Location:'/creative-ai'});res.end();return;}

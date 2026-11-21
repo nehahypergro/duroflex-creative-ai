@@ -562,7 +562,7 @@ test('Design details: both options have saved rationale and scores before artwor
  const f=await fixture();try{const p=f.page;
  for(const [i,b]of brands.entries()){
  let reads=0;await p.route('**/api/jobs/job-'+i+'/details',route=>{reads++;return route.fulfill({json:{units:['continuity','exploration'].map((route,n)=>({route,placementId:'square',plannedArt:{rationale:b.name+' saved composition'},review:{qualityScores:[{criterion:'communication',score:n?80:90,usedInScore:true,evidence:{method:'vision',observation:'Saved observation'}}]}}))}});});
- await p.goto(f.url+'?brand='+b.id+'#projects');await p.waitForSelector('.project-cover img');assert.ok(reads>=1&&reads<=2);
+ await p.goto(f.url+'?brand='+b.id+'#projects');await p.waitForSelector('.project-cover img');/* Speed review (21 Nov 2026): details are shown nowhere, so the list no longer fetches them. */assert.equal(reads,0);
  await p.locator('.project-cover img').click();await p.waitForSelector('.option-strip');assert.equal(await p.locator('.score-number').count(),0);assert.equal(await p.locator('#rationalePanel').count(),0);
  const cachedReads=reads;await p.locator('.option-thumbnail').nth(1).click();await p.waitForSelector('.option-thumbnail[data-index="1"][aria-pressed=true]');assert.equal(await p.locator('.score-number').count(),0);assert.equal(reads,cachedReads);
  await p.unrouteAll({behavior:'wait'});
