@@ -15,7 +15,7 @@ test('a later visit shows kept products at once and the fresh list replaces them
   await page.waitForFunction(id=>new Promise(done=>{const r=indexedDB.open('creative-ai-workspace-cache',1);r.onsuccess=()=>{const g=r.result.transaction('snapshots').objectStore('snapshots').get('products:'+id);g.onsuccess=()=>{r.result.close();done(!!g.result);};g.onerror=()=>done(false);};r.onerror=()=>done(false);}),b.id);
   await dropWorkspaceCopy(page);
   let release;const held=new Promise(r=>{release=r;});let served=0;
-  await page.route('**/creative-ai/api/brands/'+b.id+'/products',async route=>{served++;await held;return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(all.slice(1))});});
+  await page.route('**/creative-ai/api/brands/'+b.id+'/products*',async route=>{served++;await held;return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(all.slice(1))});});
   await page.reload();await page.waitForSelector('.creation-hero',{timeout:15000});
   await brief(page,f,b);
   assert.equal(await page.locator('[data-assignment-product]').count(),all.length,b.name+': kept products are listed while the server is still answering');
@@ -34,7 +34,7 @@ test('a kept product list is never used for the other brand',{timeout:120000},as
   await page.evaluate(({key,rows})=>new Promise(done=>{const r=indexedDB.open('creative-ai-workspace-cache',1);r.onsuccess=()=>{const db=r.result,tx=db.transaction('snapshots','readwrite');tx.objectStore('snapshots').put({brandId:key.slice(9),at:Date.now(),rows},key);tx.oncomplete=()=>{db.close();done();};};}),{key:'products:'+two.id,rows:f.products[one.id]});
   await dropWorkspaceCopy(page);
   let release;const held=new Promise(r=>{release=r;});
-  await page.route('**/creative-ai/api/brands/'+two.id+'/products',async route=>{await held;return route.continue();});
+  await page.route('**/creative-ai/api/brands/'+two.id+'/products*',async route=>{await held;return route.continue();});
   await page.reload();await page.waitForTimeout(1500);
   assert.ok(!(await page.locator('main').innerText()).includes(f.products[one.id][0].name),'no '+one.name+' product appears in '+two.name);
   release();await page.waitForSelector('.creation-hero');await brief(page,f,two);

@@ -8,7 +8,7 @@ const test=require('node:test'),assert=require('node:assert/strict');
 async function openPicker(browser,f,b,failures,{hold=false}={}){
  const context=await browser.newContext({viewport:{width:1280,height:900}}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.stack));
  let calls=0,release;const held=new Promise(r=>{release=r;});
- await page.route('**/creative-ai/api/brands/'+b.id+'/products',async route=>{calls++;if(calls<=failures)return route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'Slow storage'})});if(hold)await held;return route.continue();});
+ await page.route('**/creative-ai/api/brands/'+b.id+'/products*',async route=>{calls++;if(calls<=failures)return route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({error:'Slow storage'})});if(hold)await held;return route.continue();});
  await page.goto(f.url+'?brand='+b.id);await page.waitForSelector('.creation-hero');
  await page.evaluate(b=>{const d=StudioModel.startDraft(b.id,'quick',1);d.brief='Keep this brief';StudioModel.storage(localStorage).save(d);location.hash='brief/'+d.id;},b);
  await page.locator('[data-action=assignment-product]').click();await page.locator('.product-picker-dialog').waitFor();

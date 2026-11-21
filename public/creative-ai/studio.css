@@ -1690,3 +1690,15 @@ html body #reviewRequiredErrors .button{padding:3px 6px;min-height:24px;font-siz
 
 /* A teammate's project is view only (17 Nov 2026): change buttons are hidden; the click handler also refuses them. */
 body[data-view-only] [data-action="resume-work"],body[data-view-only] [data-action="continue-anyway"],body[data-view-only] [data-action="reconcile-images"],body[data-view-only] [data-action="retry"],body[data-view-only] [data-action="retry-artwork"],body[data-view-only] [data-action="retry-image"],body[data-view-only] [data-action="retry-image-checks"],body[data-view-only] [data-action="lean-recheck"],body[data-view-only] [data-action="edit-image"],body[data-view-only] [data-action="repair-component"],body[data-view-only] [data-action="restart-project"],body[data-view-only] [data-action="confirm-restart"],body[data-view-only] [data-action="resume-pdp"],body[data-view-only] [data-action="save-feedback"],body[data-view-only] [data-action="save-copy"],body[data-view-only] [data-action="generation-retry"],body[data-view-only] [data-action="retry-rationale"],body[data-view-only] [data-action="save-versions"],body[data-view-only] [data-action="edit-brief"]{display:none!important}
+
+/* Status pills fit their space (21 Nov 2026, Neha: "all the status are overflowing, it shouldnt. it should optimise
+   based on screen size"). Supersedes the 9 Nov wrap-inside-the-pill rule ("Draf / t"): a pill is always one line; the
+   card's caption row wraps so the pill can take its own line; a narrow card shows "Check · 1 of 6 flagged" (a very
+   narrow one "Check"; the full text stays in the pill's title); anything still too wide ends in "…". */
+.continue-card-copy,.project-card-info,.project-card-details{container-type:inline-size}
+.continue-meta{flex-wrap:wrap;row-gap:4px}
+.home-page .continue-meta>.project-stage,.project-card-info>.project-stage,.continue-card-copy>.project-stage,.project-stage{flex:0 1 auto;min-width:0;max-width:100%}
+.project-stage .status,.home-page .continue-meta .status,.project-card-info>.project-stage .status,[data-design-check].status{display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;overflow-wrap:normal;vertical-align:middle}
+.project-stage .status:before,.home-page .continue-meta .status:before,[data-design-check].status:before{display:inline-block;vertical-align:middle;margin-right:5px;position:relative;top:-1px}
+@container (max-width:260px){.status-main[data-short]>.status-long{display:none}.status-main[data-short]:after{content:attr(data-short)}}
+@container (max-width:150px){.status-more{display:none}}

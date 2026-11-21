@@ -27,10 +27,10 @@ test('project tiles, headers and the read-back badge tell the truth about design
   const badge=async(scope,name)=>(await page.locator(scope,{hasText:name}).first().locator('.status').first().innerText()).trim();
   // Home "Continue working" and the Projects tiles.
   await page.locator('.continue-card',{hasText:'Flagged test'}).first().waitFor();
-  assert.equal(await badge('.continue-card','Flagged test'),'Check before using · 6 of 12 flagged');
+  assert.match(await badge('.continue-card','Flagged test'),/^(?:Check before using )?· 6 of 12 flagged$/);/* 21 Nov 2026: a narrow card says "Check · …"; the count always shows. */
   assert.equal(await badge('.continue-card','Clean test'),'Ready');
   await page.evaluate(()=>location.hash='projects');await page.locator('.project-card',{hasText:'Flagged test'}).waitFor();
-  assert.equal(await badge('.project-card','Flagged test'),'Check before using · 6 of 12 flagged');
+  assert.match(await badge('.project-card','Flagged test'),/^(?:Check before using )?· 6 of 12 flagged$/);/* 21 Nov 2026: a narrow card says "Check · …"; the count always shows. */
   assert.equal(await badge('.project-card','Clean test'),'Ready');
   await page.locator('[data-filter=ready]').click();await page.waitForTimeout(200);
   assert.equal(await page.locator('.project-card',{hasText:'Flagged test'}).count(),0,'the Ready filter excludes flagged projects');

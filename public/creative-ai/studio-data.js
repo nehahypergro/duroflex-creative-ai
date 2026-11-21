@@ -54,7 +54,7 @@ window.StudioData = (() => {
   // must belong to the brand it is kept for, or the copy is not used.
   const PRODUCT_KEEP_MS=7*24*3600*1000,productKey=id=>'products:'+id,productRefresh=new Map();
   const ownProducts=(brandId,rows)=>Array.isArray(rows)&&rows.every(p=>p?.brandId===brandId);
-  async function fetchProducts(brandId){const rows=await get('brands/'+encodeURIComponent(brandId)+'/products',{timeout:60000});if(ownProducts(brandId,rows))await disk('put',productKey(brandId),{brandId,at:Date.now(),rows});return rows;}
+  async function fetchProducts(brandId){const rows=await get('brands/'+encodeURIComponent(brandId)+'/products?view=studio',{timeout:60000});if(ownProducts(brandId,rows))await disk('put',productKey(brandId),{brandId,at:Date.now(),rows});return rows;}
   async function keptProducts(brandId){const saved=await disk('get',productKey(brandId));return saved?.brandId===brandId&&Date.now()-saved.at<PRODUCT_KEEP_MS&&ownProducts(brandId,saved.rows)?saved.rows:null;}
   function refreshProducts(brandId,kept){if(productRefresh.has(brandId))return productRefresh.get(brandId);const started=version;const r=fetchProducts(brandId).then(rows=>{if(started!==version)return;
     // Same products as the kept copy (readiness check times aside): nothing to redraw, so an open picker is left alone.
@@ -106,7 +106,7 @@ window.StudioData = (() => {
       projectLoads.set(brandId,{version,promise});return promise;
     },
     async loadProjects(brandId,fresh=false,options={}){
-      const started=version,all=await get('jobs'),stamp=j=>String(j.updatedAt||j.createdAt||''),jobs=all.filter(j=>j.brandId===brandId).sort((a,b)=>stamp(b).localeCompare(stamp(a)));
+      const started=version,all=await get('jobs?brandId='+encodeURIComponent(brandId)),stamp=j=>String(j.updatedAt||j.createdAt||''),jobs=all.filter(j=>j.brandId===brandId).sort((a,b)=>stamp(b).localeCompare(stamp(a)));
       const changed=jobs.filter(j=>{const key=brandId+':'+j.id,previous=cache.get(key);return !(j.freshness&&fingerprints.get(key)===j.freshness&&previous&&!previous.editLookupFailed);});
       const fetched=new Map();
       for(let i=0;i<changed.length;i+=100){const ids=changed.slice(i,i+100).map(j=>j.id);let bulk=null;

@@ -15,6 +15,6 @@ test('signed-in Studio shows real account status instead of local preview',{time
 });
 test('slow project history does not block a new brief or replace typed work',{timeout:30000},async()=>{
  const f=await require('./helpers/intake-preview.cjs').createPreview(),browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true}),page=await browser.newPage();let release;const gate=new Promise(r=>release=r);
- await page.route('**/creative-ai/api/jobs',async r=>{await gate;await r.fulfill({json:[]});});
+ await page.route(/\/creative-ai\/api\/jobs(\?brandId=[^&]*)?$/,async r=>{await gate;await r.fulfill({json:[]});});
  try{await page.goto(f.url+'?brand='+f.brands[0].id);await page.locator('.home-create-actions').waitFor({timeout:4000});assert.match(await page.locator('.continue-panel').innerText(),/Loading saved projects/);await page.locator('.format-more').click();await require('./helpers/ui-controls.cjs').pickFormats(page,['instagram-post']);await page.locator('#field-brief').fill('Preserve my work while history finishes');release();await page.waitForTimeout(500);assert.equal(await page.locator('#field-brief').inputValue(),'Preserve my work while history finishes');}finally{release();await browser.close();await new Promise(r=>f.server.close(r));}
 });

@@ -38,7 +38,7 @@ test('the job store reads at most eight projects at once',async()=>{
 
 test('both list routes use the summaries, not the full project list',()=>{
  const http=fs.readFileSync(path.join(repo,'lib/creative-ai/runtime/http.js'),'utf8'),list=fs.readFileSync(path.join(repo,'lib/creative-ai/runtime/project-list.js'),'utf8');
- assert.match(http,/S\.visible\(root,await S\.summaries\(runtime\)\)/);assert.match(list,/S\.visible\(root,await S\.summaries\(runtime\)\)/);
+ assert.match(http,/S\.visible\(root,await S\.summaries\(runtime,\{brandId\}\)\)/);assert.match(list,/S\.visible\(root,await S\.summaries\(runtime,\{brandId\}\)\)/);
  assert.doesNotMatch(list,/store\.list\(/);
 });
 
@@ -64,4 +64,41 @@ for(const [brand,brandId] of BRANDS)test(brand+': a saved product page is parsed
 test('product-list builds decode photos two at a time and remember checked photos',()=>{
  const src=fs.readFileSync(path.join(repo,'lib/creative-ai/runtime/product-library.js'),'utf8');
  assert.match(src,/readablePhotos\.get\(photo\)/);assert.match(src,/if\(decoding>=2\)/);assert.match(src,/ok=await decodeSlot\(/);
+});
+
+// Remaining three (21 Nov 2026, Neha: "fix the remaining three from our side too").
+for(const [brand,brandId] of BRANDS)test(brand+': the status check reads only the viewed brand’s projects',async()=>{
+ const S=require('../../lib/creative-ai/runtime/job-summaries'),other=BRANDS.find(b=>b[1]!==brandId)[1],mine=await savedJobs(brandId,6),theirs=await savedJobs(other,6);
+ for(const id of theirs.ids)await fsp.rename(path.join(theirs.root,id),path.join(mine.root,id));
+ let reads=0;const store={root:mine.root,dir:id=>path.join(mine.root,id),read:async id=>{reads++;return JSON.parse(await fsp.readFile(path.join(mine.root,id,'job.json'),'utf8'));}};
+ const first=await S.summaries({store},{brandId});assert.equal(first.length,6);assert.ok(first.every(s=>s.intake.brandId===brandId));assert.equal(reads,12,'unknown projects are read once to learn their brand');
+ const realStat=fsp.stat;let stats=0;fsp.stat=async(...a)=>{stats++;return realStat(...a);};
+ try{reads=0;assert.equal((await S.summaries({store},{brandId})).length,6);assert.equal(reads,0);assert.equal(stats,6,'the other brand’s projects are not even checked');}finally{fsp.stat=realStat;}
+ await fsp.rm(mine.root,{recursive:true,force:true});await fsp.rm(theirs.root,{recursive:true,force:true});
+ const http=fs.readFileSync(path.join(repo,'lib/creative-ai/runtime/http.js'),'utf8');assert.match(http,/if\(memo\)\{json\(res,200,await memo\.rows\)/);assert.match(http,/finally\{if\(runtime\.projectListMemo\.get\(memoKey\)===entry\)runtime\.projectListMemo\.delete\(memoKey\)/);assert.match(http,/S\.summaries\(runtime,\{brandId\}\)/);
+ assert.match(fs.readFileSync(path.join(repo,'public/creative-ai/studio-data.js'),'utf8'),/get\('jobs\?brandId='\+encodeURIComponent\(brandId\)\)/);
+});
+
+for(const [brand,brandId] of BRANDS)test(brand+': the Studio product list leaves out fields the page never reads',()=>{
+ const {studioList}=require('../../lib/creative-ai/runtime/product-library'),p={id:'product-1',brandId,name:brand+' product',variants:[{id:'1',name:'Queen'}],features:['Support'],contentSections:[{heading:'Features',text:'x'}],productFields:{facts:'x'.repeat(5000)},specificationFields:[{a:1}],audit:{a:1},gaps:['g'],history:[1],identityBasis:{a:1},assets:[{id:'a1',group:'product-images',preview:'/p.png',sha256:'h',resolvedUrl:'https://cdn.example/x.jpg',mime:'image/jpeg'}]};
+ const [slim]=studioList([p]);for(const k of ['productFields','specificationFields','audit','gaps','history','identityBasis'])assert.equal(slim[k],undefined,k);
+ assert.deepEqual(slim.assets,[{id:'a1',group:'product-images',preview:'/p.png',sha256:'h'}]);assert.deepEqual(slim.variants,p.variants);assert.deepEqual(slim.features,p.features);assert.deepEqual(slim.contentSections,p.contentSections);
+ assert.ok(p.productFields&&p.assets[0].mime,'the saved product is not changed');
+ assert.match(fs.readFileSync(path.join(repo,'public/creative-ai/studio-data.js'),'utf8'),/\/products\?view=studio'/);
+});
+
+for(const [brand,brandId] of BRANDS)test(brand+': a checked product photo is not read again after a restart',async()=>{
+ const crypto=require('node:crypto'),sharp=require('sharp'),root=await fsp.mkdtemp(path.join(os.tmpdir(),'photo-checks-'));
+ try{const id='product-12345678901234567890',base=path.join(root,brandId,'products',id),png=await sharp({create:{width:64,height:64,channels:3,background:'#888'}}).png().toBuffer();
+  await fsp.mkdir(path.join(base,'media'),{recursive:true});await fsp.writeFile(path.join(base,'media','a.png'),png);
+  await fsp.writeFile(path.join(base,'profile.json'),JSON.stringify({brandId,id,name:'Product',description:'Source text long enough to count.',pageUrl:'https://example.com/products/a',variants:[{id:'1',name:'Queen'}],specificationFields:[],features:[],assets:[{id:'a',group:'product-images',type:'image',status:'stored',file:'media/a.png',sha256:crypto.createHash('sha256').update(png).digest('hex')}]}));
+  const fresh=()=>{for(const k of Object.keys(require.cache))if(k.includes('product-library'))delete require.cache[k];const {ProductLibrary}=require('../../lib/creative-ai/runtime/product-library');return new ProductLibrary({dir:b=>path.join(root,b),read:async b=>({id:b})});};
+  assert.deepEqual((await fresh().catalog(brandId,id)).readiness.usableImageIds,['a']);
+  const saved=JSON.parse(await fsp.readFile(path.join(base,'catalog-photo-checks.json'),'utf8'));assert.equal(saved.checks[path.join('media','a.png')].ok,true);
+  // After a restart the saved check is used: proved by marking it unreadable in the saved file while the photo is unchanged.
+  saved.checks[path.join('media','a.png')].ok=false;await fsp.writeFile(path.join(base,'catalog-photo-checks.json'),JSON.stringify(saved));
+  assert.deepEqual((await fresh().catalog(brandId,id)).readiness.usableImageIds,[],'no read or decode after a restart');
+  await new Promise(r=>setTimeout(r,20));await fsp.writeFile(path.join(base,'media','a.png'),png);
+  assert.deepEqual((await fresh().catalog(brandId,id)).readiness.usableImageIds,['a'],'a rewritten photo is checked again');
+ }finally{await fsp.rm(root,{recursive:true,force:true});}
 });
