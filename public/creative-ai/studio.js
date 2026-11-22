@@ -979,9 +979,9 @@ window.currentJob=null;window.activeBrand=null;window.brandList=[];window.resear
   // Input next to output (user request, 8 Nov 2026), redesigned 10 Nov 2026 (error fix 23): the one-line ask,
   // a few tags, what this image is for, and "Did it deliver?" from this image's own saved review; the full
   // brief stays one click away.
-  const DELIVERY_GROUPS=[['Words',c=>/^copy-|^campaign-copy$|wording$/.test(c.id)],['Product',c=>['product','extra-products'].includes(c.id)],['Product label',c=>c.id==='product-label'],['Logo',c=>/^logo/.test(c.id)],['Looks real',c=>c.id==='physical-realism'],['Layout',c=>/layout|^structure$|^placement-/.test(c.id)]];
+  // Rows come from M.deliveryRows (22 Nov 2026: every product check is in the Product row).
   function deliveredView(r){const checks=r?.visualReview?.checks;if(!Array.isArray(checks)||!checks.length)return '';
-    const rows=DELIVERY_GROUPS.map(([name,match])=>{const own=checks.filter(match);if(!own.length)return null;const bad=own.find(c=>c.result==='clear_mismatch'),unsure=own.some(c=>c.result==='unable_to_verify');return {name,state:bad?'check':unsure?'unsure':'ok',note:bad?.evidence||''};}).filter(Boolean);
+    const rows=M.deliveryRows(checks);
     if(!rows.length)return '';const label={ok:'Delivered',check:'Check',unsure:'Not sure'};
     return '<div class="brief-delivered"><h3>Did it deliver?</h3><ul>'+rows.map(x=>'<li class="is-'+x.state+'"><span class="brief-delivered-mark" aria-hidden="true">'+(x.state==='ok'?'✓':x.state==='check'?'!':'?')+'</span><span><b>'+h(x.name)+'</b> <small>'+label[x.state]+'</small>'+(x.note?'<em>'+h(clientText(x.note))+'</em>':'')+'</span></li>').join('')+'</ul></div>';}
   function reviewBriefSummary(p,item,r){

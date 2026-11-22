@@ -154,7 +154,7 @@ test('new jobs do not send the protected SKU reference together with its website
  assert.deepEqual(ctx.packet(context,context.job.selection).productRefs.map(r=>r.assetId),['sku-protected-x','sku-product-image-2','sku-product-image-3']);
 });
 test('jobs without the reference pin keep their saved reference selection',async t=>{
- const f=await fixture(t),context=withWebsiteTwin(structuredClone(f.context));delete context.job.runtimeConfig.leanReferenceVersion; // a job admitted before 8 Nov 2026
+ const f=await fixture(t),context=withWebsiteTwin(structuredClone(f.context));delete context.job.runtimeConfig.leanReferenceVersion;delete context.job.runtimeConfig.skuEvidenceVersion; // a job admitted before 8 Nov 2026
  assert.deepEqual(ctx.packet(context,context.job.selection).productRefs.map(r=>r.assetId),['sku-protected-x','sku-product-image-1','sku-product-image-2']);
 });
 test('website photo keys ignore resized copies but keep different photos apart',()=>{
