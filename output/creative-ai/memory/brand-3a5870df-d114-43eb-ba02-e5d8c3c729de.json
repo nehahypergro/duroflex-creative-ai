@@ -1,7 +1,7 @@
 {
   "version": 1,
   "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
-  "revision": 1,
+  "revision": 2,
   "feedback": [],
   "preferences": [
     {
@@ -25,6 +25,28 @@
       },
       "createdAt": "2026-10-15T10:14:40.196Z",
       "updatedAt": "2026-10-15T10:14:40.196Z"
+    },
+    {
+      "id": "preference-f21d9199-6693-4ac1-9edf-6db1851311dd",
+      "version": 1,
+      "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+      "active": true,
+      "scope": "brand",
+      "productUrl": null,
+      "placementId": null,
+      "text": "Wardrobe for people in Sleepyhead scenes: young, playful, expressive at-home style that mixes loungewear and casual streetwear, never formal. One look per person: an oversized tee, hoodie, sweatshirt or knit sweater with joggers, cargo pants or wide-leg trousers; an overshirt over a white tee with chinos; a cami or tank with printed pyjama pants; a matching knit or striped lounge set; or a bold satin pyjama set. Colour: bright and pastel shades (pink, lilac, orange, rust, mustard, cobalt, sage) as one or two pops against cream, oatmeal, white or charcoal; calmer neutral sets suit sleep and rest moments. Playful prints are welcome (stripes, checks, daisies, tie-dye, waves), but no readable words, slogans or brand logos on clothes or shoes. Fun extras in moderation: headphones, hair clips, fun socks, a simple chain. Barefoot, socks, chunky sneakers or clogs; never shoes on a mattress or bedding. Relaxed, oversized fit; tasteful coverage.",
+      "provenance": {
+        "kind": "named-brand-training",
+        "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+        "brandName": "Sleepyhead",
+        "knowledgeRevision": "261b7e1ca3016b4fc4698a9fc8cbd7a20fd4d8f3737c6f021b706a5ad422fc28",
+        "actor": {
+          "kind": "local-pilot",
+          "attribution": "Unauthenticated local operator"
+        }
+      },
+      "createdAt": "2026-11-22T13:26:05.164Z",
+      "updatedAt": "2026-11-22T13:26:05.164Z"
     }
   ],
   "history": [
@@ -54,6 +76,33 @@
         "updatedAt": "2026-10-15T10:14:40.196Z"
       },
       "recordedAt": "2026-10-15T10:14:40.196Z"
+    },
+    {
+      "revision": 2,
+      "action": "created",
+      "preference": {
+        "id": "preference-f21d9199-6693-4ac1-9edf-6db1851311dd",
+        "version": 1,
+        "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+        "active": true,
+        "scope": "brand",
+        "productUrl": null,
+        "placementId": null,
+        "text": "Wardrobe for people in Sleepyhead scenes: young, playful, expressive at-home style that mixes loungewear and casual streetwear, never formal. One look per person: an oversized tee, hoodie, sweatshirt or knit sweater with joggers, cargo pants or wide-leg trousers; an overshirt over a white tee with chinos; a cami or tank with printed pyjama pants; a matching knit or striped lounge set; or a bold satin pyjama set. Colour: bright and pastel shades (pink, lilac, orange, rust, mustard, cobalt, sage) as one or two pops against cream, oatmeal, white or charcoal; calmer neutral sets suit sleep and rest moments. Playful prints are welcome (stripes, checks, daisies, tie-dye, waves), but no readable words, slogans or brand logos on clothes or shoes. Fun extras in moderation: headphones, hair clips, fun socks, a simple chain. Barefoot, socks, chunky sneakers or clogs; never shoes on a mattress or bedding. Relaxed, oversized fit; tasteful coverage.",
+        "provenance": {
+          "kind": "named-brand-training",
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "brandName": "Sleepyhead",
+          "knowledgeRevision": "261b7e1ca3016b4fc4698a9fc8cbd7a20fd4d8f3737c6f021b706a5ad422fc28",
+          "actor": {
+            "kind": "local-pilot",
+            "attribution": "Unauthenticated local operator"
+          }
+        },
+        "createdAt": "2026-11-22T13:26:05.164Z",
+        "updatedAt": "2026-11-22T13:26:05.164Z"
+      },
+      "recordedAt": "2026-11-22T13:26:05.164Z"
     }
   ]
 }
