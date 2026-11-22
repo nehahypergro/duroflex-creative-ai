@@ -28,5 +28,5 @@ for(const [brand,accent] of BRANDS)test(brand+': a thin frame drawn round the pi
 test('new lean jobs pin edgeLineVersion 1 and every new drawing uses it',()=>{
  const repo=path.join(__dirname,'../..'),policy=fs.readFileSync(path.join(repo,'lib/creative-ai/runtime/lean-policy.js'),'utf8'),wf=fs.readFileSync(path.join(repo,'lib/creative-ai/runtime/lean-workflow.js'),'utf8');
  assert.match(policy,/exactCanvasVersion:1,edgeLineVersion:1,/);assert.match(fs.readFileSync(path.join(repo,'lib/creative-ai/runtime/provider-config.js'),'utf8'),/edgeLineVersion:config\.edgeLineVersion/);
- assert.equal((wf.match(/edgeLines:job\.runtimeConfig\?\.edgeLineVersion===1/g)||[]).length,3,'first drawing, story redraw and brochure panels');
+ assert.equal((wf.match(/edgeLines:job\.runtimeConfig\?\.edgeLineVersion===1/g)||[]).length,4,'first drawing, story redraw, layout redraw and brochure panels');
 });

@@ -2,7 +2,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
 function fixture(){
  let now=0;const calls=[];
- const context={window:{},Date:{now:()=>now},AbortController,setTimeout,clearTimeout,StudioModel:{normalizeJob:(j,b)=>{if(j.brandId!==b)throw Error('Wrong brand');return j;}},fetch:async url=>{calls.push(url);if(url.endsWith('/jobs'))return {ok:true,json:async()=>['a','b'].map(brandId=>({id:brandId,brandId}))};if(url.endsWith('/edits'))return {ok:true,json:async()=>[]};if(/\/jobs\/[ab]$/.test(url))return {ok:true,json:async()=>({id:url.at(-1),brandId:url.at(-1),results:[]})};return {ok:true,json:async()=>[]};}};
+ const context={window:{},Date:{now:()=>now},AbortController,setTimeout,clearTimeout,StudioModel:{normalizeJob:(j,b)=>{if(j.brandId!==b)throw Error('Wrong brand');return j;}},fetch:async url=>{calls.push(url);if(/\/jobs(\?brandId=[^&]*)?$/.test(url))return {ok:true,json:async()=>['a','b'].map(brandId=>({id:brandId,brandId}))};if(url.endsWith('/edits'))return {ok:true,json:async()=>[]};if(/\/jobs\/[ab]$/.test(url))return {ok:true,json:async()=>({id:url.at(-1),brandId:url.at(-1),results:[]})};return {ok:true,json:async()=>[]};}};
  vm.runInNewContext(fs.readFileSync(path.resolve(__dirname,'../../public/creative-ai/studio-data.js'),'utf8'),context);
  return {D:context.window.StudioData,calls,context,tick:ms=>now+=ms};
 }
@@ -15,7 +15,7 @@ test('Workspace cache: brand isolation, concurrent load deduplication, expiry an
 });
 test('Workspace cache: failures retry and invalidation prevents stale pending responses repopulating caches',async()=>{
  const f=fixture(),{D,context,calls}=f;const fetch=context.fetch;
- context.fetch=async url=>url.endsWith('/products')?{ok:false}:fetch(url);
+ context.fetch=async url=>/\/products(\?view=studio)?$/.test(url)?{ok:false}:fetch(url);
  const failed=await D.workspace('a');assert.equal(failed[1].status,'rejected');assert.equal(D.peekWorkspace('a'),undefined);
  context.fetch=fetch;await D.workspace('a');assert.ok(D.peekWorkspace('a'));D.clear();
  let release;const gate=new Promise(r=>release=r);context.fetch=async url=>{if(url.endsWith('/jobs/a'))await gate;return fetch(url);};
