@@ -77,6 +77,11 @@
   - **Redraw (what):** a folded face with a layout finding is drawn again panel by panel with every finding described (`redrawLayout` → `drawPanels` with `redraw`). The redrawn panels go in `state.candidatePanels` with their own request identities and files. The first redrawn panel is the continuity reference for the rest (`verifyFoldAnchor` accepts it). The panels are joined at the same folds, checked once and kept only if better (`redrawBetter`). A resumed redraw never redraws a saved panel.
   - **Cost:** the redraw is one picture per panel plus one check (bi-fold: one extra picture, about ₹10 estimate). `maxImageCalls` adds the extra panels a second time, and the estimate's high end counts them ("up to N more if a folded face needs its one redraw").
   - Earlier jobs keep the logo on every panel and no redraw for folded faces.
+- **Delete draft** (Neha, 23 Nov 2026: "Yes, add it", after the hosted check left a test brochure draft; shared, no pin; `tests/admin/draft-delete-20261123.test.js`).
+  - A draft's ··· menu on Projects, and its card in Trash, have "Delete draft" with a confirmation. Move to Trash is unchanged (this browser only, restorable).
+  - The account copy is marked `deletedAt`, not erased: it stays in `studio_briefs` with its attachments, is left out of every list and read, and a later save gets 410 (`brief-documents.remove`, `DELETE /admin/api/briefs/:brand/:draft` with the synced version; a stale device gets 409).
+  - This browser's copy, its Favourites/Trash entry and its unused local reference files are removed (`StudioDocuments.remove`, `storage.remove`, `organization.forget`).
+  - Another device drops its copy on its next load only when it is unchanged since its last sync; unsent edits stay, marked "Deleted on another device" (`?deleted=1` list, `forgetDeleted`).
 
 ## Readiness matrix and brief options (15 Nov 2026)
 
