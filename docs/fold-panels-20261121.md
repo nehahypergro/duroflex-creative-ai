@@ -63,6 +63,28 @@ One extra gpt-image-2 picture per extra panel. That is one per bi-fold face and 
 
 All 8 saved folded faces on this computer are Sleepyhead bi-folds (`6cfc75af`, `9abf4683`, `9e977aab`, `ed731707`). They are unpinned and keep their single drawing. Their saved geometry gives the fold at 895 of 1790 px.
 
+## Logo on one panel and the panel redraw (23 Nov 2026)
+
+The paid local A4 bi-folds of 22 Nov showed two gaps. Neha's decision: "yes fix both".
+
+**One logo per face (`foldLogoVersion: 1`).** Every panel request carried the logo picture, so the model put a logo on every panel. The Duroflex outside face (back and cover) and the Sleepyhead inside face (left and right) each came back with two logos, and the check flagged "logo once".
+
+- The planner now writes `logoPanel` for each folded face. This is the number of the one panel, counted from the left, that carries the face's logo.
+- Only that panel's request gets the logo picture.
+- The other panels get their own brief, saved on the planning record (`record.foldLogo.prompt`). It says there is no logo on that panel and names the panel that has it. It also numbers the attached pictures without the logo picture, so "Image 5 is the construction picture" still points at the right picture.
+- Logos printed on the product itself stay as they are.
+
+**The one layout redraw for folded faces (`foldRedrawVersion: 1`).** Folded faces were left out of the layout redraw. That is why the cut-off cover mattress in the Duroflex brochure stayed.
+
+- A folded face with a layout finding is now drawn again, panel by panel, with every finding described.
+- The redrawn panels are saved separately from the originals. They have their own request identities, and the first redrawn panel is the continuity reference for the next.
+- They are joined at the same folds and checked once. The redraw is kept only if it has fewer problems and nothing new; otherwise the original face stays.
+- If the Studio stops halfway through, Continue draws only the missing panels.
+- Cost: one picture per panel plus one check. For a bi-fold that is one picture more than a normal redraw (about ₹10, estimate).
+- The job's picture allowance and the estimate's high end include it.
+
+Earlier jobs keep the logo on every panel and no redraw for folded faces.
+
 ## Known limits
 
 - The panels are separate pictures. A scene or photograph cannot run across a fold; brochures already forbid a photo across the crease.

@@ -31,7 +31,7 @@ for(const brand of brands){
  test(brand+': each bi-fold panel is drawn separately and joined exactly at the fold',async t=>{
   const f=await fixture(t,{brand,selection:bifold(),copyFor});assert.equal(f.planError,null);
   assert.ok(f.calls.find(c=>c.kind==='lean-planning').input.foldPanels?.rule,'the planner is told the panels are drawn separately');
-  assert.equal((await f.read()).budget.maxImageCalls,6,'two faces × (one original + one correction) + one extra panel per face');
+  assert.equal((await f.read()).budget.maxImageCalls,8,'two faces × (one original + one correction) + one extra panel per face, for the drawing and for the possible panel-by-panel redraw (foldRedrawVersion 1, 23 Nov 2026)');
   let n=0;f.runtime.provider.generate=async request=>{f.calls.push({kind:'image',...request});return {imageData:await colourImage(n++)};};
   await f.run();
   const images=f.calls.filter(c=>c.kind==='image');assert.equal(images.length,4,'two panels per face');
