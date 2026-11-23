@@ -6,19 +6,22 @@
 // and checks the saved Duroflex A4 poster from the same day still builds.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const planning=require('../../lib/creative-ai/lean/planning');
+// 22 Nov 2026: applied brand preferences get their own allowance on top of the limit (at most 3,000 characters).
+const allowance=(plan,input)=>Math.min(3000,(input.brand.preferences||[]).filter(r=>plan.guidanceDecisions.some(d=>d.id===r.id&&d.decision!=='not-applicable')).reduce((n,r)=>n+String(r.text||'').length+1,0));
+const limit=n=>new RegExp(n.toLocaleString('en-US')+'-character');
 const jobs=path.resolve(__dirname,'../../output/creative-ai/jobs');
 function saved(job,stem){const d=path.join(jobs,job);if(!fs.existsSync(d))return null;const f=fs.readdirSync(d).find(f=>f.startsWith('lean-input-'+(stem||'')));const k=f.slice('lean-input-'.length);const plan=JSON.parse(fs.readFileSync(path.join(d,'lean-plan-'+k)));return {input:JSON.parse(fs.readFileSync(path.join(d,f))),plan:plan.plan||plan};}
 const standee=saved('creative-4353a08f-7e6a-4dba-99d6-9a309d819795','d072e7abd69b8fc776c0'),poster=saved('creative-d83d3846-b3ce-4371-90b6-40cdc61c4423');
 test('Sleepyhead: the saved standee brief now builds within the print ceiling',{skip:!standee&&'saved run not available'},()=>{
  const p=planning.imagePrompt(standee.plan,standee.input,standee.plan.pages[0]);assert.ok(p.length>12000&&p.length<=16000,String(p.length));
- const huge=structuredClone(standee.plan);huge.pages[0].artDirection+='x'.repeat(4000);assert.throws(()=>planning.imagePrompt(huge,standee.input,huge.pages[0]),/16,000-character/);
+ const huge=structuredClone(standee.plan);huge.pages[0].artDirection+='x'.repeat(4000);assert.throws(()=>planning.imagePrompt(huge,standee.input,huge.pages[0]),limit(16000+allowance(huge,standee.input)));
 });
 test('Duroflex: the saved A4 poster brief still builds',{skip:!poster&&'saved run not available'},()=>{
  assert.ok(planning.imagePrompt(poster.plan,poster.input,poster.plan.pages[0]).length<=16000);
 });
 test('digital formats keep a compact 14,000-character ceiling',{skip:!standee&&'saved run not available'},()=>{
  const digital=structuredClone(standee.input);delete digital.format.print;
- const big=structuredClone(standee.plan);big.pages[0].artDirection+='x'.repeat(1500);assert.throws(()=>planning.imagePrompt(big,digital,big.pages[0]),/14,000-character/);
+ const big=structuredClone(standee.plan);big.pages[0].artDirection+='x'.repeat(1500+allowance(big,digital));assert.throws(()=>planning.imagePrompt(big,digital,big.pages[0]),limit(14000+allowance(big,digital)));
 });
 // Live run, 10 Nov 2026 (Sleepyhead Sofa Drip Pro, Sales One-pager, creative-6941a572): the brief was 12,034
 // characters. Close-reading documents (one-pagers, cheat sheets, brochures, infographics) carry more words by
@@ -31,7 +34,7 @@ test('Duroflex: the A4 poster and an infographic count as close reading too; a f
  for(const [id,name,want] of [['custom:studio-marketing-infographic','Infographic',16000],['custom:studio-sales-one-pager','Digital sales one-pager',16000],['custom:studio-social-square','Square post',12000]]){
   const input=structuredClone(poster.input);delete input.format.print;input.format.id=id;input.format.name=name;
   const plan=structuredClone(poster.plan);const base=planning.imagePrompt(poster.plan,{...input,format:{...input.format,id:'custom:studio-sales-one-pager',name:'Digital sales one-pager'}},poster.plan.pages[0]).length;plan.pages[0].artDirection+='x'.repeat(Math.max(0,12500-base));
-  if(want===16000)assert.doesNotThrow(()=>planning.imagePrompt(plan,input,plan.pages[0]),name);else assert.throws(()=>planning.imagePrompt({...plan,pages:[{...plan.pages[0],artDirection:plan.pages[0].artDirection+'x'.repeat(2000)}]},input,{...plan.pages[0],artDirection:plan.pages[0].artDirection+'x'.repeat(2000)}),/14,000/,name);
+  if(want===16000)assert.doesNotThrow(()=>planning.imagePrompt(plan,input,plan.pages[0]),name);else{const extra='x'.repeat(2000+allowance(plan,input));assert.throws(()=>planning.imagePrompt({...plan,pages:[{...plan.pages[0],artDirection:plan.pages[0].artDirection+extra}]},input,{...plan.pages[0],artDirection:plan.pages[0].artDirection+extra}),limit(14000+allowance(plan,input)),name);}
  }
 });
 // Live rerun, 10 Nov 2026 (Duroflex Wave Kinect 12-image PDP, creative-81d63009): the plan passed but nine
