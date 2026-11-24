@@ -27,16 +27,19 @@ test('Workspace cache: explicit project refresh updates the cached gallery',asyn
  await D.projects('a',true);assert.equal(D.peekWorkspace('a')[0].value.projects[0].results[0].imageUrl,'/fresh.png');
 });
 
-test('Finished creative loads design details before project/progress resolves and does not manufacture missing evidence',async()=>{
- const {D,context}=fixture(),fetch=context.fetch;let fail=false,reads=0;
+// 23 Nov 2026 (live speed check): design details are shown nowhere since the rationale panel was removed (3 Nov), so
+// project and progress reads no longer fetch them; asked for explicitly, they still load and never invent evidence.
+test('Finished creative reads skip the unused design details, which still load on request without manufacturing missing evidence',async()=>{
+ const {D,context,tick}=fixture(),fetch=context.fetch;let fail=false,reads=0;
  context.fetch=async url=>{
   if(url.endsWith('/jobs/a'))return {ok:true,json:async()=>({id:'a',brandId:'a',status:'finished',results:[{route:'continuity',placementId:'square',imageUrl:'/art.png'}]})};
   if(url.endsWith('/details')){reads++;return {ok:!fail,json:async()=>({units:[{route:'continuity',placementId:'square',plannedArt:{composition:'Recorded composition'},review:null}]})};}
   return fetch(url);
  };
- const initial=await D.project('a','a');assert.equal(initial.designDetails.units[0].plannedArt.composition,'Recorded composition');assert.equal(initial.designDetails.units[0].review,null);
- const completed=await D.progress('a','a');assert.ok(completed.designDetails);assert.equal(reads,2);
- fail=true;const failed=await D.project('a','a',true);assert.equal(failed.designDetails,undefined);assert.match(failed.designDetailsError,/could not load/);assert.equal(failed.results[0].imageUrl,'/art.png');
+ const initial=await D.project('a','a');assert.equal(initial.designDetails,undefined);
+ tick(60001);const completed=await D.progress('a','a');assert.equal(completed.results[0].imageUrl,'/art.png');assert.equal(reads,0);
+ const asked=await D.project('a','a',true,{details:true});assert.equal(asked.designDetails.units[0].plannedArt.composition,'Recorded composition');assert.equal(asked.designDetails.units[0].review,null);assert.equal(reads,1);
+ fail=true;const failed=await D.project('a','a',true,{details:true});assert.equal(failed.designDetails,undefined);assert.match(failed.designDetailsError,/could not load/);assert.equal(failed.results[0].imageUrl,'/art.png');
 });
 
 test('Workspace snapshots survive reload, remain brand-scoped and revalidate',async()=>{

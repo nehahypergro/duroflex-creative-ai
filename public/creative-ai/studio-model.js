@@ -1073,17 +1073,20 @@ default:return frame(14,9,36,38)} }
     return {current,label,substage,description:correcting?display.detail:description,running,correcting,steps};
   }
   // One request at a time, bound to a visible job. Timers never start generation.
+  // read(target,signal,{force}): force is true for an explicit refresh (tab return, focus, online, Check status) and
+  // for the retry after a failed read, so those always reach the server; opening a page is not forced, so a finished
+  // project the list just confirmed can be shown as it is (23 Nov 2026 live speed check).
   function createProgressPoller({read,apply,error,setTimer=setTimeout,clearTimer=clearTimeout}){
-    let target=null,timer=null,flight=null,version=0,failures=0;
+    let target=null,timer=null,flight=null,version=0,failures=0,force=false;
     function clear(){if(timer!==null)clearTimer(timer);timer=null;}
     function plan(ms){clear();if(target&&!flight)timer=setTimer(()=>{timer=null;run();},ms);}
-    async function run(){if(!target||flight)return;const t={...target},v=version,controller=new AbortController(),f={controller};flight=f;
-      try{const result=await read(t,controller.signal);if(v!==version||controller.signal.aborted)return;failures=0;apply(result,t);}
-      catch(e){if(v===version&&!controller.signal.aborted){failures++;error(e,t);}}
+    async function run(){if(!target||flight)return;const t={...target},v=version,controller=new AbortController(),f={controller},forced=force;force=false;flight=f;
+      try{const result=await read(t,controller.signal,{force:forced});if(v!==version||controller.signal.aborted)return;failures=0;apply(result,t);}
+      catch(e){if(v===version&&!controller.signal.aborted){failures++;force=true;error(e,t);}}
       finally{if(flight===f)flight=null;if(target&&!flight){if(v!==version)plan(0);else if(target.repeat||failures)plan(Math.min(30000,5000*2**Math.min(failures,3)));}}
     }
     return {watch(next,{immediate=false}={}){
-      const changed=target?.key!==next?.key;
+      const changed=target?.key!==next?.key;if(changed)force=!!immediate;else if(immediate)force=true;
       if(changed){version++;clear();flight?.controller.abort();failures=0;target=next;if(target&&!flight)plan(0);}
       else{target=next;if(!next){clear();return;}if(!next.repeat)clear();if(immediate&&!flight)plan(0);}
     },stop(){this.watch(null);}};

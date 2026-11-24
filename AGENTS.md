@@ -82,6 +82,13 @@
   - The account copy is marked `deletedAt`, not erased: it stays in `studio_briefs` with its attachments, is left out of every list and read, and a later save gets 410 (`brief-documents.remove`, `DELETE /admin/api/briefs/:brand/:draft` with the synced version; a stale device gets 409).
   - This browser's copy, its Favourites/Trash entry and its unused local reference files are removed (`StudioDocuments.remove`, `storage.remove`, `organization.forget`).
   - Another device drops its copy on its next load only when it is unchanged since its last sync; unsent edits stay, marked "Deleted on another device" (`?deleted=1` list, `forgetDeleted`).
+- **Live recheck fixes** (Neha, 24 Nov 2026: "fix 1 and 3"; shared, no pin; `tests/creative-ai/click-speed-20261123.test.js`, `print-web-address-20261123.test.js`; `docs/speed-20261121.md` "Live check").
+  - **Opening a project or design** (live: 3 and 4 requests every time): a finished project the server confirmed in the last minute (list freshness stamp or its own read) is shown as it is (`studio-data.js` `settled`).
+    - These always read the server: tab return, focus, online, Check status, and the retry after a failed read (`createProgressPoller` `force`).
+    - For a minute after any change sent from the page, every open reads again (`post`, `changedAt`).
+    - Project reads no longer fetch the design details, which nothing shows since 3 Nov; `D.details()` still reads them.
+  - **Brand switch** (live: 3 of 7 requests re-read the brand just left): the other brand is warmed only when this tab has no copy of it (`D.warmWorkspace`).
+  - **Print web address** (live: a Sleepyhead A4 bi-fold failed planning twice with a full product address after being told links belong "in the post, message or page text"): the error now names the bare domain to write ("print may show only the bare domain: write "mysleepyhead.com" …"). Pass/fail is unchanged.
 
 ## Readiness matrix and brief options (15 Nov 2026)
 

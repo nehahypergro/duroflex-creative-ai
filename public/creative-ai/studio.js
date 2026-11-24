@@ -1435,7 +1435,7 @@ window.currentJob=null;window.activeBrand=null;window.brandList=[];window.resear
       if((!cached||viewEpoch===state.viewEpoch)&&!state.dirty&&!taskView&&!activeEditorRoute&&!EditableCanvas.isOpen?.()&&!main.querySelector('[data-refresh-preserve]')&&!document.activeElement?.matches('input,textarea,select,[contenteditable=true]')){if(cached)rememberPage();state.inspectionSnapshot=null;renderRoute();}
     }
     // There are only two supported brands. Warm saved metadata, never images or generation.
-    warmBrandTimer=setTimeout(()=>{if(epoch!==state.epoch||document.hidden||navigator.onLine===false)return;const other=state.brands.find(b=>b.id!==brandId);if(other)D.workspace(other.id).catch(()=>{});},500);
+    warmBrandTimer=setTimeout(()=>{if(epoch!==state.epoch||document.hidden||navigator.onLine===false)return;const other=state.brands.find(b=>b.id!==brandId);if(other)D.warmWorkspace(other.id).catch(()=>{});},500);
   }
   window.addEventListener('creative:edited',event=>{const edit=event.detail;state.inspectionSnapshot=null;D.clear();for(const p of [...state.projects,...(state.project?[state.project]:[])]){if((p.sourceJobId||p.id)!==edit.jobId)continue;p.results=p.results.map(r=>r.route===edit.route&&r.placementId===edit.placementId&&(!edit.sourceImageUrl||edit.sourceImageUrl===r.imageUrl)?{...r,latestEdit:edit}:r);p.updatedAt=edit.updatedAt;}if(!state.dirty&&!activeEditorRoute&&!EditableCanvas.isOpen?.())renderRoute();});
   let refreshingStatus=false,lastStatusRefresh=0,statusFailures=0,statusRetry=null,statusToastShown=false;
@@ -1450,7 +1450,7 @@ window.currentJob=null;window.activeBrand=null;window.brandList=[];window.resear
   function progressFingerprint(p){return JSON.stringify([p.componentRecovery,p.status,p.stage,p.activeStages,p.providerWaits,p.progress,p.stages,p.error,p.results,p.activity?.at(-1)?.sequence]);}
   // Refresh status in place; never navigate away from the user's current artwork.
   const progressPoller=M.createProgressPoller({
-    read:(t,signal)=>D.progress(t.id,t.brandId,signal),
+    read:(t,signal,options)=>D.progress(t.id,t.brandId,signal,options),
     apply:(fresh,t)=>{
       if(t.epoch!==state.epoch||t.brandId!==state.brand.id||t.route!==location.hash)return;
       const prior=getProject(t.id);if(!prior)return;state.confirmedProgress?.set(t.id,fresh.status);

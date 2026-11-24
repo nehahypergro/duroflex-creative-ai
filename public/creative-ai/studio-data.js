@@ -27,7 +27,9 @@ window.StudioData = (() => {
   // Creative reference v1 (10 Nov 2026): studio.js adds the chosen reference picture (kept on this device)
   // to the brief just before readiness and generation, so saved drafts stay small.
   let augmentDraft=async d=>d;
-  async function post(path,body) {const response=await fetch('/creative-ai/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});return responseJson(response);}
+  // For a minute after any change sent from this page (Re-run check, Continue, a restart …), every project or design
+  // opened is read again: the work it started may still be changing the project (23 Nov 2026).
+  async function post(path,body) {try{const response=await fetch('/creative-ai/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});return await responseJson(response);}finally{changedAt=Date.now();confirmed.clear();}}
   async function designDetails(job,id,signal){
     if(!job.results.some(r=>r.imageUrl))return;
     try{const data=await get('jobs/'+encodeURIComponent(id)+'/details',{signal});if(!Array.isArray(data.units))throw Error('Saved design details are unavailable.');job.designDetails=data;}
@@ -35,6 +37,13 @@ window.StudioData = (() => {
   }
   const fingerprints=new Map(),cache=new Map(),workspaces=new Map(),workspaceLoads=new Map(),projectLoads=new Map();
   let version=0;
+  // Clicks re-read nothing new (23 Nov 2026, live speed check: opening a project made 3 requests and a design 4, every
+  // time, even right after the list had loaded it). A finished project that the server confirmed in the last minute
+  // (by the list's freshness stamp or by its own read) is used as it is; a running one is always read again, and any
+  // save or clear starts over (version).
+  const SETTLED_MS=60000,confirmed=new Map();let changedAt=-Infinity;
+  function confirm(key){confirmed.set(key,{at:Date.now(),version});}
+  function settled(key){const job=cache.get(key),seen=confirmed.get(key);return !!(job&&seen&&seen.version===version&&Date.now()-seen.at<SETTLED_MS&&Date.now()-changedAt>=SETTLED_MS&&!['queued','preparing','running'].includes(job.status)&&!job.loadError&&!job.editLookupFailed&&!(job.componentRecovery?.repairing>0));}
   const diskPrefix='creative-ai-workspace-v2:';
   function disk(action,key,value){return new Promise(done=>{let finished=false;const timer=setTimeout(()=>resolve(null),1500),resolve=value=>{if(finished)return;finished=true;clearTimeout(timer);done(value);};try{const request=indexedDB.open(window.CreativeAccount?.cacheName||'creative-ai-workspace-cache',1);request.onupgradeneeded=()=>request.result.createObjectStore('snapshots');request.onerror=()=>resolve(null);request.onblocked=()=>resolve(null);request.onsuccess=()=>{const db=request.result;if(finished){db.close();return;}const tx=db.transaction('snapshots',action==='get'?'readonly':'readwrite'),store=tx.objectStore('snapshots'),r=action==='get'?store.get(key):action==='put'?store.put(value,key):action==='delete'?store.delete(key):store.clear();r.onsuccess=()=>resolve(r.result);r.onerror=()=>resolve(null);tx.oncomplete=()=>db.close();};}catch{resolve(null);}});}
   function persist(brandId,snapshot){disk('put',brandId,{...snapshot,brandId,visibilityVersion:1});try{const text=JSON.stringify({...snapshot,brandId,visibilityVersion:1});if(text.length<3500000)(window.CreativeAccount?.sessionStorage||window.sessionStorage).setItem(diskPrefix+brandId,text);}catch{/* Storage is optional; live loading remains available. */}}
@@ -64,6 +73,10 @@ window.StudioData = (() => {
     get version(){return version;},
     async restoreWorkspace(brandId){if(restore(brandId))return;const started=version,saved=await disk('get',brandId);if(started!==version)return;if(saved?.visibilityVersion===1&&saved?.brandId===brandId&&Date.now()-saved.at<1800000&&saved.value?.length===3&&saved.value.every(r=>r.status==='fulfilled')&&saved.value[0].value.projects.every(p=>p.brandId===brandId)){saved.at=0;workspaces.set(brandId,saved);}},
     peekWorkspace:brandId=>restore(brandId)?.value,
+    // The other brand is warmed only when this tab has no copy of it yet (23 Nov 2026, live speed check: switching
+    // brand also re-read the brand just left, 3 of 7 requests). A brand with a copy opens from it at once and is
+    // refreshed when it is opened, as before.
+    warmWorkspace(brandId){return restore(brandId)?Promise.resolve(null):this.workspace(brandId);},
     invalidateWorkspace(brandId){version++;forget(brandId);workspaces.delete(brandId);workspaceLoads.delete(brandId);for(const key of cache.keys())if(key.startsWith(brandId+':'))cache.delete(key);},
     async workspace(brandId,{onLibrary,onProjects}={}){
       const saved=restore(brandId);
@@ -114,12 +127,12 @@ window.StudioData = (() => {
         if(!bulk)return this.projectsOneByOne(brandId,fresh,options);
         for(const v of bulk.projects)fetched.set(v.id,v);}
       const projects=jobs.map(j=>{const key=brandId+':'+j.id,v=fetched.get(j.id);
-        if(!v){const previous=cache.get(key);return previous||{...j,brandId,local:false,name:'Project temporarily unavailable',updatedAt:j.createdAt,results:[],loadError:'This project could not load.',status:'unavailable'};}
+        if(!v){const previous=cache.get(key);if(previous&&started===version)confirm(key);return previous||{...j,brandId,local:false,name:'Project temporarily unavailable',updatedAt:j.createdAt,results:[],loadError:'This project could not load.',status:'unavailable'};}
         if(v.loadError)return {...j,...v,brandId,local:false,name:'Project temporarily unavailable',results:[],status:'unavailable'};
         const {edits,editLookupFailed,...view}=v,job=StudioModel.normalizeJob(view,brandId);
         if(Array.isArray(edits)){job.results=job.results.map(r=>({...r,latestEdit:edits.find(e=>e.route===r.route&&e.placementId===r.placementId&&(!e.sourceImageUrl||e.sourceImageUrl===r.imageUrl))||null}));job.updatedAt=[job.updatedAt,...edits.map(e=>e.updatedAt)].filter(Boolean).sort().at(-1);}else job.editLookupFailed=true;
         const previous=cache.get(key);if(previous?.designDetails&&!job.designDetails)job.designDetails=previous.designDetails;
-        if(started===version){cache.set(key,job);if(j.freshness)fingerprints.set(key,j.freshness);}return job;});
+        if(started===version){cache.set(key,job);confirm(key);if(j.freshness)fingerprints.set(key,j.freshness);}return job;});
       const result={projects,errors:projects.filter(p=>p.loadError).map(p=>({item:p,error:p.loadError}))};
       const saved=workspaces.get(brandId);if(started===version&&saved&&!result.errors.length)saved.value[0]={status:'fulfilled',value:result};
       return result;
@@ -136,21 +149,21 @@ window.StudioData = (() => {
       const saved=workspaces.get(brandId);if(started===version&&saved&&!result.errors.length)saved.value[0]={status:'fulfilled',value:result};
       return result;
     },
-    async project(id,brandId,fresh=false,{details=true}={}){
+    // Design details (rationale and scores) are shown nowhere since the rationale panel was removed, so a project
+    // read no longer fetches them (23 Nov 2026); details() still reads them on request.
+    async project(id,brandId,fresh=false,{details=false}={}){
       const k=brandId+':'+id,started=version;if(!fresh&&cache.has(k))return cache.get(k);
       const job=StudioModel.normalizeJob(await get('jobs/'+encodeURIComponent(id)),brandId);
       const detailsReady=details?designDetails(job,id):Promise.resolve();
       try{const edits=await get('jobs/'+encodeURIComponent(id)+'/edits');if(!Array.isArray(edits))throw Error('Invalid saved edits');job.results=job.results.map(r=>({...r,latestEdit:edits.find(e=>e.route===r.route&&e.placementId===r.placementId&&(!e.sourceImageUrl||e.sourceImageUrl===r.imageUrl))||null}));job.updatedAt=[job.updatedAt,...edits.map(e=>e.updatedAt)].filter(Boolean).sort().at(-1);}catch{job.editLookupFailed=true;}
-      await detailsReady;if(started===version)cache.set(k,job);return job;
+      await detailsReady;if(started===version){cache.set(k,job);confirm(k);}return job;
     },
     async details(id,brandId){await this.project(id,brandId);return get('jobs/'+encodeURIComponent(id)+'/details');},
-    async progress(id,brandId,signal){
-      const started=version;
+    async progress(id,brandId,signal,{force=false}={}){
+      const started=version,key=brandId+':'+id;if(!force&&settled(key))return cache.get(key);
       const job=StudioModel.normalizeJob(await get('jobs/'+encodeURIComponent(id),{signal}),brandId);
-      const detailsReady=designDetails(job,id,signal);
-      if(!['queued','preparing','running'].includes(job.status))try{const edits=await get('jobs/'+encodeURIComponent(id)+'/edits',{signal});if(!Array.isArray(edits))throw Error('Invalid saved edits');job.results=job.results.map(r=>({...r,latestEdit:edits.find(e=>e.route===r.route&&e.placementId===r.placementId&&(!e.sourceImageUrl||e.sourceImageUrl===r.imageUrl))||null}));job.updatedAt=[job.updatedAt,...edits.map(e=>e.updatedAt)].filter(Boolean).sort().at(-1);}catch(e){if(signal?.aborted){await detailsReady;throw e;}job.editLookupFailed=true;}
-      await detailsReady;
-      if(started===version&&!signal?.aborted){cache.set(brandId+':'+id,job);const saved=workspaces.get(brandId);if(saved)saved.value[0].value.projects=saved.value[0].value.projects.map(p=>p.id===id?job:p);}
+      if(!['queued','preparing','running'].includes(job.status))try{const edits=await get('jobs/'+encodeURIComponent(id)+'/edits',{signal});if(!Array.isArray(edits))throw Error('Invalid saved edits');job.results=job.results.map(r=>({...r,latestEdit:edits.find(e=>e.route===r.route&&e.placementId===r.placementId&&(!e.sourceImageUrl||e.sourceImageUrl===r.imageUrl))||null}));job.updatedAt=[job.updatedAt,...edits.map(e=>e.updatedAt)].filter(Boolean).sort().at(-1);}catch(e){if(signal?.aborted)throw e;job.editLookupFailed=true;}
+      if(started===version&&!signal?.aborted){cache.set(key,job);confirm(key);const saved=workspaces.get(brandId);if(saved)saved.value[0].value.projects=saved.value[0].value.projects.map(p=>p.id===id?job:p);}
       return job;
     },
     resumePdp:id=>post('jobs/'+encodeURIComponent(id)+'/pdp/resume',{}),
@@ -169,6 +182,6 @@ window.StudioData = (() => {
     deliveryCandidates:id=>get('jobs/'+encodeURIComponent(id)+'/delivery-packages'),
     packageSet:(id,body)=>post('jobs/'+encodeURIComponent(id)+'/delivery-packages',body),
     costs:()=>get('costs'),
-    clear(){version++;disk('clear');cache.clear();fingerprints.clear();try{for(let i=(window.CreativeAccount?.sessionStorage||window.sessionStorage).length-1;i>=0;i--){const k=(window.CreativeAccount?.sessionStorage||window.sessionStorage).key(i);if(k?.startsWith(diskPrefix))(window.CreativeAccount?.sessionStorage||window.sessionStorage).removeItem(k);}}catch{}workspaces.clear();workspaceLoads.clear();}
+    clear(){version++;disk('clear');cache.clear();fingerprints.clear();confirmed.clear();try{for(let i=(window.CreativeAccount?.sessionStorage||window.sessionStorage).length-1;i>=0;i--){const k=(window.CreativeAccount?.sessionStorage||window.sessionStorage).key(i);if(k?.startsWith(diskPrefix))(window.CreativeAccount?.sessionStorage||window.sessionStorage).removeItem(k);}}catch{}workspaces.clear();workspaceLoads.clear();}
   };
 })();
