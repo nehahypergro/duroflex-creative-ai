@@ -59,7 +59,8 @@ test('story safe zone is measured on story pages; text-size minimums are bigger 
 
 for(const brand of brands){
  test(brand+': pinned packets carry the copy rule (planning only), the feature rule and the warranty decision; plans use the short name',async t=>{
-  const f=await fixture(t,{brand,selection:[square(1),story()]});assert.equal(f.planError,null);
+  // Jobs admitted before the ad name (adNameVersion 1, 25 Nov 2026) keep this short-name contract; see variety-pop-backup-stack / ad-name tests.
+  const f=await fixture(t,{brand,selection:[square(1),story()],pinned:false,unpin:['adNameVersion']});assert.equal(f.planError,null);
   const plans=f.calls.filter(c=>c.kind==='lean-planning'),input=plans.find(c=>c.input.format.pages[0].id==='page-1').input,storyInput=plans.find(c=>c.input.format.pages[0].id==='story-1').input;
   assert.equal(input.marketing.shortName,SHORT[brand]);assert.deepEqual(input.marketing.shortNamePages,['page-1']);assert.deepEqual(storyInput.marketing.shortNamePages,['story-1']);
   const ids=input.format.guidance.mandatory.map(r=>r.id);for(const id of [mr.COPY_ID,mr.FEATURE_ID])assert.ok(ids.includes(id),id);assert.ok(!ids.includes(mr.STORY_ID),'no story rule on a square post');
@@ -77,7 +78,7 @@ for(const brand of brands){
  });
  test(brand+': the full catalogue name in ad copy fails the plan check; marketplace pages may use it',async t=>{
   const full=(input,p)=>[{role:'headline',text:'Lift a cushion, lean back',factIds:[]},{role:'product name',text:NAMES[brand],factIds:['product-exact']}];
-  const f=await fixture(t,{brand,copyFor:full});assert.match(f.planError.message,/use the short product name "/);
+  const f=await fixture(t,{brand,copyFor:full,pinned:false,unpin:['adNameVersion']});assert.match(f.planError.message,/use the short product name "/);
   const market={id:'pdp-1',description:{name:'Marketplace product images · Key benefit',formatId:'custom:studio-marketplace-set',dimensions:{width:1600,height:1600}},jobInputs:{logoPolicy:{treatment:'include',reason:'Official logo required'}}};
   const g=await fixture(t,{brand,selection:[market],copyFor:full});assert.equal(g.planError,null);
  });

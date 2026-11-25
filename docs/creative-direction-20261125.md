@@ -84,3 +84,11 @@ Neha's local batch made 6 designs per brand. It showed four gaps. Neha said "Yes
 - **Backup planner room** (`backupRoomVersion: 1`). When the backup planner takes over, it gets 30,000 tokens of answer room instead of 12,500. Unused room costs nothing.
 - **Layer stacks** (`layerStackVersion: 1`). When the product's construction picture is attached, the planner keeps the whole layer stack and its labels inside the canvas. A stack cut by an edge is redrawn narrower.
 
+## Product name and editorial shoot (25 Nov 2026, evening)
+
+The client sent two notes for both brands, and a set of reference pictures for Duroflex.
+
+- **Product name.** Ad copy uses a short name with no variant: "Duropedic Airboost", not "Duropedic Airboost 6.8 Arctic Ice Mattress"; "Sofa Yolo", not "Sofa Yolo 3+2 Seater Set". The plan check refuses a model number (6.8), a colour name (Sesame Grey), a size or seat count, or the rest of the catalogue name after the short name. Marketplace, product-page, A+ and close-reading pages keep the listing name.
+- **Editorial shoot.** Each brand's file says how its pictures are photographed, like a fashion editorial. Duroflex's is editorial realism on film. Sleepyhead's is a bold youth fashion story. The line goes into every image brief.
+- **Duroflex models.** The client is particular that people look real, not AI-made: skin texture, pores, moles, laugh lines, stubble, natural hair and candid moments. Outfits follow what the picture is for: pyjamas or lounge sets for sleep, linen and knits at home, athleisure for fitness and Duropedic, tailoring for work, and sarees and kurtas for festive pictures. The rooms follow the references: limewash walls, sheer curtains, warm wood and stone, sculptural pieces, and one oxblood, olive or rust accent. The 29 pictures are kept locally in `work/duroflex-models-rooms-20261125/`. They are described in words and never sent to the image model.
+

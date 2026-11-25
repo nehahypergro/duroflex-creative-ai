@@ -17,7 +17,9 @@ const OFFER={promotionMode:'Yes',offer:'Year-End Sale: Flat 20% off',offerSku:''
 const brief=(name,offer=OFFER)=>'Website sales banner for the year-end sale on '+name+'.\n\nAsset-specific inputs: '+JSON.stringify({...offer,offerSku:name,websiteType:'Banner',brandedHost:'Yes'});
 const CASES={Duroflex:{name:'Cresendo 3 Seater with LH Lounger Leatherette fabric - Golden Orange',fact:{id:'sku-fact-5',status:'supported',sourceIds:[],text:'7-way adjustable headrests'}},
  Sleepyhead:{name:'Sofa Kiki - 3 Seater Sofa (Fabric, Sapling Green)',fact:{id:'sku-fact-3',status:'supported',sourceIds:[],text:'The sofa has a sculpted bucket-seat build and deep-set seating.'}}};
-const plan=(f,lines)=>fixture(f.t,{brand:f.brand,productName:f.c.name,brief:brief(f.c.name,f.offer),selection:[PAGE],facts:[f.c.fact],citeFacts:true,copyFor:(input)=>lines(input.product.id,f.c.fact.id),planEdit:f.edit});
+// These plans keep the live wording (the name up to its dash); jobs pinning the ad name (adNameVersion 1, 25 Nov 2026) would
+// refuse "Cresendo 3 Seater …" on ad pages, so they run as jobs admitted before that pin (ad-name-editorial-20261125.test.js).
+const plan=(f,lines)=>fixture(f.t,{brand:f.brand,productName:f.c.name,brief:brief(f.c.name,f.offer),selection:[PAGE],facts:[f.c.fact],citeFacts:true,copyFor:(input)=>lines(input.product.id,f.c.fact.id),planEdit:f.edit,pinned:false,unpin:['adNameVersion']});
 
 for(const [brand,c] of Object.entries(CASES)){
  test(brand+': the brief\'s own sale dates may sit on the product-name line, so a 3-block sale banner plans',async t=>{
