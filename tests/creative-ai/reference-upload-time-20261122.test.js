@@ -36,6 +36,6 @@ for(const brandId of ['brand-duroflex-test','brand-sleepyhead-test']){
   await assert.rejects(ref.stage(photos(2,0.1),budget,{gate:new Gate(1),maxStageMs:100}),e=>e.code==='REFERENCE_UPLOAD_TIMEOUT'&&/took longer than/.test(e.message)&&/nothing was charged/.test(e.message));
   const media=require('../../lib/creative-ai/runtime/reasoning-media');
   const body={input:[{role:'user',content:[{type:'input_image',image_url:'data:image/png;base64,'+Buffer.alloc(64,1).toString('base64')}]}]};
-  await assert.rejects(media.prepare(body,budget,(r,b)=>ref.stage(r,b,{gate:new Gate(1),maxStageMs:100})),e=>/REFERENCE_UPLOAD_TIMEOUT/.test(e.message)&&!/\(23\)/.test(e.message));
+  await assert.rejects(media.prepare(body,budget,(r,b)=>ref.stage(r,b,{gate:new Gate(1),maxStageMs:100})),e=>/took longer than/.test(e.message)&&/nothing was charged/.test(e.message)&&!/REFERENCE_UPLOAD_TIMEOUT|\(23\)/.test(e.message)); // 25 Nov 2026: the sentence reaches the job, not the bare code
  });
 }

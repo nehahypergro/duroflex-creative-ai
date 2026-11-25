@@ -1,7 +1,7 @@
 {
   "version": 1,
   "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
-  "revision": 3,
+  "revision": 5,
   "feedback": [],
   "preferences": [
     {
@@ -28,9 +28,9 @@
     },
     {
       "id": "preference-f21d9199-6693-4ac1-9edf-6db1851311dd",
-      "version": 1,
+      "version": 2,
       "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
-      "active": true,
+      "active": false,
       "scope": "brand",
       "productUrl": null,
       "placementId": null,
@@ -46,13 +46,13 @@
         }
       },
       "createdAt": "2026-11-22T13:26:05.164Z",
-      "updatedAt": "2026-11-22T13:26:05.164Z"
+      "updatedAt": "2026-11-24T20:44:49.131Z"
     },
     {
       "id": "preference-bf7b59c1-87bf-41ce-88dc-984dfb4d8b54",
-      "version": 1,
+      "version": 2,
       "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
-      "active": true,
+      "active": false,
       "scope": "brand",
       "productUrl": null,
       "placementId": null,
@@ -68,7 +68,7 @@
         }
       },
       "createdAt": "2026-11-22T13:32:53.507Z",
-      "updatedAt": "2026-11-22T13:32:53.507Z"
+      "updatedAt": "2026-11-24T20:44:49.132Z"
     }
   ],
   "history": [
@@ -152,6 +152,60 @@
         "updatedAt": "2026-11-22T13:32:53.507Z"
       },
       "recordedAt": "2026-11-22T13:32:53.507Z"
+    },
+    {
+      "revision": 4,
+      "action": "deactivated",
+      "preference": {
+        "id": "preference-f21d9199-6693-4ac1-9edf-6db1851311dd",
+        "version": 2,
+        "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+        "active": false,
+        "scope": "brand",
+        "productUrl": null,
+        "placementId": null,
+        "text": "Wardrobe for people in Sleepyhead scenes: young, playful, expressive at-home style that mixes loungewear and casual streetwear, never formal. One look per person: an oversized tee, hoodie, sweatshirt or knit sweater with joggers, cargo pants or wide-leg trousers; an overshirt over a white tee with chinos; a cami or tank with printed pyjama pants; a matching knit or striped lounge set; or a bold satin pyjama set. Colour: bright and pastel shades (pink, lilac, orange, rust, mustard, cobalt, sage) as one or two pops against cream, oatmeal, white or charcoal; calmer neutral sets suit sleep and rest moments. Playful prints are welcome (stripes, checks, daisies, tie-dye, waves), but no readable words, slogans or brand logos on clothes or shoes. Fun extras in moderation: headphones, hair clips, fun socks, a simple chain. Barefoot, socks, chunky sneakers or clogs; never shoes on a mattress or bedding. Relaxed, oversized fit; tasteful coverage.",
+        "provenance": {
+          "kind": "named-brand-training",
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "brandName": "Sleepyhead",
+          "knowledgeRevision": "261b7e1ca3016b4fc4698a9fc8cbd7a20fd4d8f3737c6f021b706a5ad422fc28",
+          "actor": {
+            "kind": "local-pilot",
+            "attribution": "Unauthenticated local operator"
+          }
+        },
+        "createdAt": "2026-11-22T13:26:05.164Z",
+        "updatedAt": "2026-11-24T20:44:49.131Z"
+      },
+      "recordedAt": "2026-11-24T20:44:49.131Z"
+    },
+    {
+      "revision": 5,
+      "action": "deactivated",
+      "preference": {
+        "id": "preference-bf7b59c1-87bf-41ce-88dc-984dfb4d8b54",
+        "version": 2,
+        "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+        "active": false,
+        "scope": "brand",
+        "productUrl": null,
+        "placementId": null,
+        "text": "Room look for Sleepyhead scenes: playful, colourful, lived-in Gen-Z homes, from warm and earthy to bold maximalist. Walls: colour-blocked paint (cobalt blue, blush or hot pink, terracotta, coral, mustard, lilac, peach, orange), often with arches, curves or stripes; warm walnut wood floors and furniture. Decor: playful rugs (checkerboard, wavy, geometric, confetti), Matisse-style abstract prints or a poster gallery wall, sculptural lamps (mushroom, globe, pleated paper), curvy mirrors, quirky ceramics, plants and trailing vines, books and personal touches (vinyl, headphones, skateboard, plush toy, home-workout gear). Light: bright sunny daylight, or a warm evening glow from LED strips, fairy lights or a neon shape (heart, wave, smiley). No readable words on signs, posters or walls, and no other brands. The product stays the hero: room colours complement it, the area right around it stays calmer, and no pattern or clutter hides or clashes with it.",
+        "provenance": {
+          "kind": "named-brand-training",
+          "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+          "brandName": "Sleepyhead",
+          "knowledgeRevision": "261b7e1ca3016b4fc4698a9fc8cbd7a20fd4d8f3737c6f021b706a5ad422fc28",
+          "actor": {
+            "kind": "local-pilot",
+            "attribution": "Unauthenticated local operator"
+          }
+        },
+        "createdAt": "2026-11-22T13:32:53.507Z",
+        "updatedAt": "2026-11-24T20:44:49.132Z"
+      },
+      "recordedAt": "2026-11-24T20:44:49.132Z"
     }
   ]
 }

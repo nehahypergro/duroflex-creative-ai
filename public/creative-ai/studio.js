@@ -966,16 +966,30 @@ window.currentJob=null;window.activeBrand=null;window.brandList=[];window.resear
   function generationDraft(){return state.hash.startsWith('brief/')?state.draft:state.project;}
   function readinessKey(p){const {updatedAt,revision,...fields}=p||{};return JSON.stringify(fields);}
   function queueReadiness(){if(state.readiness?.key===readinessKey(generationDraft())&&$('#generationReadiness'))return;clearTimeout(readinessTimer);++readinessSerial;state.readiness=null;const submit=$('[data-action=generation-submit]');if(submit)submit.disabled=true;readinessTimer=setTimeout(()=>checkReadiness(),500);}
-  function blockedAssetsNotice(result){return result.blocked?.length?'<p>These assets remain in your brief and will not be submitted:</p><ul>'+result.blocked.map(b=>'<li>'+h(b.name)+': '+h(b.message)+'</li>').join('')+'</ul>':'';}
+  // Readiness notes (24 Nov 2026): an attached file that is not used in the design is named under the estimate.
+  function blockedAssetsNotice(result){return (result.blocked?.length?'<p>These assets remain in your brief and will not be submitted:</p><ul>'+result.blocked.map(b=>'<li>'+h(b.name)+': '+h(b.message)+'</li>').join('')+'</ul>':'')+(Array.isArray(result.notes)&&result.notes.length?'<ul class="readiness-notes" role="note">'+result.notes.slice(0,5).map(n=>'<li>'+h(n)+'</li>').join('')+'</ul>':'');}
   async function checkReadiness(){const p=generationDraft(),host=$('#generationReadiness'),submit=$('[data-action=generation-submit]');if(!p||!host||!submit||state.demo||host.closest('[hidden]'))return;const serial=++readinessSerial,key=readinessKey(p),epoch=state.viewEpoch;state.readiness=null;submit.disabled=true;const validation=M.campaignValidation(p,{brand:state.brand,products:state.products});window.CreativeTracking?.validation(p,Object.keys(validation));const errors=Object.values(validation);if(errors.length){host.innerHTML='<p>Complete these details:</p><ul>'+[...new Set(errors)].map(e=>'<li>'+h(e)+'</li>').join('')+'</ul>';return;}if(!squareGeneration(p)){host.textContent='This combination is not connected to generation yet. Choose one supported static format and a saved product.';return;}host.textContent=p.focus==='brand'?'Checking brand guidance, references and estimate…':'Checking saved product, references and estimate…';try{const result=await D.preflight(p);if(serial!==readinessSerial||epoch!==state.viewEpoch||key!==readinessKey(generationDraft()))return;state.readiness={id:p.id,key,token:result.token};host.innerHTML='<p class="generation-estimate">'+h(result.cost.message)+'</p><small>'+h(p.focus==='brand'?'Brand guidance and references checked.':'Saved product and references checked.')+'</small>';host.innerHTML+=blockedAssetsNotice(result);submit.textContent=result.blocked?.length?'Create '+result.summary.assets+' ready assets':'Create';submit.disabled=false;}catch(e){if(serial!==readinessSerial||epoch!==state.viewEpoch)return;host.innerHTML='<p role="alert">'+h(clientError(e,'readiness'))+'</p>'+button('Check again','generation-retry','text-button');}}
 
+  // After a Create that starts several designs, the list is read again before Projects → Creating is shown (25 Nov
+  // 2026, local picture test: it said "No work in this status" while both designs ran, because only a window focus
+  // read the list again). "Loading saved projects…" shows meanwhile; a failed read keeps the list and says so.
+  // After Resume or Continue anyway the page draws the fresh project (25 Nov 2026, local picture test: it kept "Creation
+  // stopped" while the job ran, because the fresh copy went only to state.project and the page reads the project list).
+  function showResumed(restored){const at=state.projects.findIndex(x=>x.id===restored.id);if(at>=0)state.projects[at]=restored;else state.projects.push(restored);state.project=restored;state.resumeOffer=null;go('project/'+restored.id);}
+  async function showStartedDesigns(brandId){
+    const epoch=state.epoch;let result=null;
+    try{result=await D.projects(brandId,true);}catch{toast('Could not refresh project status. Your work is preserved.');}
+    if(epoch!==state.epoch||state.brand?.id!==brandId)return;
+    if(result)state.projects=result.projects;state.historyLoading=false;
+    if(['home','projects','favourites'].includes(M.navigation.parse(location.hash.slice(1)||'home').view)&&!state.dirty&&!taskView)renderRoute();
+  }
   async function submitGeneration(draft,token,control,status,isCurrent,onStarted=()=>{}){
     if(state.generationBusy)return;
     state.generationBusy=true;control.disabled=true;const label=control.textContent;control.textContent='Starting…';control.setAttribute('aria-busy','true');
     try{
       status.textContent='Starting creation… Your brief is saved.';
       const result=await D.generate(draft,token);D.clear();if(!isCurrent())return;
-      if(result.ids?.length>1||result.errors?.length){onStarted();D.clear();toast(result.ids.length+' asset jobs queued'+(result.errors?.length?' · '+result.errors.map(e=>e.name+': '+e.message).join('; ')+' — retry the saved brief to resume.':'.'));go('projects?status=creating');return;}
+      if(result.ids?.length>1||result.errors?.length){onStarted();D.clear();toast(result.ids.length+' asset jobs queued'+(result.errors?.length?' · '+result.errors.map(e=>e.name+': '+e.message).join('; ')+' — retry the saved brief to resume.':'.'));state.historyLoading=true;go('projects?status=creating');showStartedDesigns(draft.brandId);return;}
       const project=await D.project(result.id,draft.brandId,true);if(!isCurrent())return;
       state.projects=state.projects.filter(p=>p.id!==project.id);state.projects.push(project);onStarted();go('project/'+result.id);
     }catch(e){if(isCurrent()){status.setAttribute('role','alert');status.textContent=clientError(e,'generation')+' Your brief is saved. Retry to reconnect to the same request.';control.disabled=false;}}
@@ -1623,11 +1637,11 @@ window.currentJob=null;window.activeBrand=null;window.brandList=[];window.resear
     if(action==='continue-anyway'){
       // Continue anyway (17 Nov 2026): one explicit click; the earlier request's charge stays marked unknown.
       const p=state.project,epoch=state.viewEpoch,brandId=state.brand.id,host=$('#restartPanel');if(!p||!host||state.restartBusy)return;state.restartBusy=true;b.disabled=true;
-      try{const info=state.resumeOffer;if(!info?.continueAnyway||info.id!==p.id||info.brandId!==brandId)throw Error('Check recovery options again.');await D.resumeWork(p.id,{brandId,token:info.continueAnyway.token,continueAnyway:info.continueAnyway.requestKey});D.clear();if(epoch===state.viewEpoch&&brandId===state.brand.id){const restored=await D.project(p.id,brandId,true);if(epoch===state.viewEpoch&&brandId===state.brand.id){state.project=restored;go('project/'+p.id);}}}catch(e){if(epoch===state.viewEpoch)host.textContent=clientError(e,'generation');}finally{state.restartBusy=false;if(b.isConnected)b.disabled=false;}return;
+      try{const info=state.resumeOffer;if(!info?.continueAnyway||info.id!==p.id||info.brandId!==brandId)throw Error('Check recovery options again.');await D.resumeWork(p.id,{brandId,token:info.continueAnyway.token,continueAnyway:info.continueAnyway.requestKey});D.clear();if(epoch===state.viewEpoch&&brandId===state.brand.id){const restored=await D.project(p.id,brandId,true);if(epoch===state.viewEpoch&&brandId===state.brand.id)showResumed(restored);}}catch(e){if(epoch===state.viewEpoch)host.textContent=clientError(e,'generation');}finally{state.restartBusy=false;if(b.isConnected)b.disabled=false;}return;
     }
     if(action==='resume-work'){
       const p=state.project,epoch=state.viewEpoch,brandId=state.brand.id,host=$('#restartPanel');if(!p||!host||state.restartBusy)return;state.restartBusy=true;b.disabled=true;
-      try{const info=state.resumeOffer;if(!info||info.id!==p.id||info.brandId!==brandId)throw Error('Check recovery options again.');await D.resumeWork(p.id,{brandId,token:info.token});D.clear();if(epoch===state.viewEpoch&&brandId===state.brand.id){const restored=await D.project(p.id,brandId,true);if(epoch===state.viewEpoch&&brandId===state.brand.id){state.project=restored;go('project/'+p.id);}}}catch(e){if(epoch===state.viewEpoch)host.textContent=clientError(e,'generation');}finally{state.restartBusy=false;if(b.isConnected)b.disabled=false;}return;
+      try{const info=state.resumeOffer;if(!info||info.id!==p.id||info.brandId!==brandId)throw Error('Check recovery options again.');await D.resumeWork(p.id,{brandId,token:info.token});D.clear();if(epoch===state.viewEpoch&&brandId===state.brand.id){const restored=await D.project(p.id,brandId,true);if(epoch===state.viewEpoch&&brandId===state.brand.id)showResumed(restored);}}catch(e){if(epoch===state.viewEpoch)host.textContent=clientError(e,'generation');}finally{state.restartBusy=false;if(b.isConnected)b.disabled=false;}return;
     }
     if(action==='restart-project'||action==='confirm-restart'){
       const p=state.project,epoch=state.viewEpoch,brandId=state.brand.id,host=$('#restartPanel');if(!p||!host||state.restartBusy)return;

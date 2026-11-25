@@ -27,5 +27,5 @@ test('waiting for an upload slot does not use up the staging window',async t=>{
 test('a staging failure keeps its underlying cause in the job error',async()=>{
  const media=require('../../lib/creative-ai/runtime/reasoning-media');
  const body={input:[{role:'user',content:[{type:'input_image',image_url:'data:image/png;base64,'+Buffer.from('x').toString('base64')}]}]};
- await assert.rejects(media.prepare(body,{},async()=>{throw Object.assign(Error('Reference upload time budget reached before generation.'),{code:'REFERENCE_UPLOAD_TIMEOUT'});}),e=>e.code==='REASONING_REFERENCE_UPLOAD_FAILED'&&/REFERENCE_UPLOAD_TIMEOUT/.test(e.message));
+ await assert.rejects(media.prepare(body,{},async()=>{throw Object.assign(Error('Reference upload time budget reached before generation.'),{code:'REFERENCE_UPLOAD_TIMEOUT'});}),e=>e.code==='REASONING_REFERENCE_UPLOAD_FAILED'&&/nothing was charged/.test(e.message)&&!/REFERENCE_UPLOAD_TIMEOUT/.test(e.message)); // 25 Nov 2026: the sentence, not the bare code
 });

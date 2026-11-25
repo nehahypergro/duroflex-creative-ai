@@ -1,7 +1,7 @@
 {
   "version": 1,
   "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
-  "revision": 2,
+  "revision": 3,
   "feedback": [
     {
       "id": "feedback-08b3a999-c963-4bd8-9571-1681f4f6a306",
@@ -153,9 +153,9 @@
     },
     {
       "id": "preference-c7ff3af2-75a3-4b40-b44f-d8ec599d8a9d",
-      "version": 1,
+      "version": 2,
       "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
-      "active": true,
+      "active": false,
       "scope": "brand",
       "productUrl": null,
       "placementId": null,
@@ -171,7 +171,7 @@
         }
       },
       "createdAt": "2026-11-22T13:23:13.009Z",
-      "updatedAt": "2026-11-22T13:23:13.009Z"
+      "updatedAt": "2026-11-24T20:44:49.127Z"
     }
   ],
   "history": [
@@ -228,6 +228,33 @@
         "updatedAt": "2026-11-22T13:23:13.009Z"
       },
       "recordedAt": "2026-11-22T13:23:13.009Z"
+    },
+    {
+      "revision": 3,
+      "action": "deactivated",
+      "preference": {
+        "id": "preference-c7ff3af2-75a3-4b40-b44f-d8ec599d8a9d",
+        "version": 2,
+        "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+        "active": false,
+        "scope": "brand",
+        "productUrl": null,
+        "placementId": null,
+        "text": "Wardrobe for people in at-home scenes (bedroom, living room, lounging): premium, relaxed loungewear that reads as a set. Women: a matching co-ord in soft ribbed or waffle knit, cotton jersey or satin (cami, tank, fitted long-sleeve top or relaxed tee with full-length wide-leg or straight trousers); a satin pyjama set; a knit sweater with matching skirt or trousers; or a satin slip dress or long knit dress, with an optional long open cardigan or robe. Men: a plain crew-neck tee with soft joggers or lounge pants. Colours: soft neutrals (ivory, cream, oatmeal, beige, taupe, mocha, grey, charcoal), muted pastels (blush, dusty rose, powder blue, lilac, sage) or a deep satin tone (emerald, navy, plum); one colour or a tonal pair per person, chosen to sit well with the product and room. Plain fabrics: no prints, slogans or clothing logos. Barefoot or soft slippers; no outdoor shoes, sunglasses, bags or heavy jewellery. Relaxed natural fit, tasteful coverage.",
+        "provenance": {
+          "kind": "named-brand-training",
+          "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+          "brandName": "Duroflex",
+          "knowledgeRevision": "412c73eefa32d5111b299a316c5ab555132b0c1c36ccfa2a28a8ad9c87a99a46",
+          "actor": {
+            "kind": "local-pilot",
+            "attribution": "Unauthenticated local operator"
+          }
+        },
+        "createdAt": "2026-11-22T13:23:13.009Z",
+        "updatedAt": "2026-11-24T20:44:49.127Z"
+      },
+      "recordedAt": "2026-11-24T20:44:49.127Z"
     }
   ]
 }

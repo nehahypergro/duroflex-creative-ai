@@ -134,6 +134,9 @@
   return text.replace(/\bOCR\b/g,'text check').replace(/\braster\b/gi,'image').replace(/\blayer conversion\b/gi,'preparation for editing').replace(/\bFinal asset\b/g,'Creative');
  }
  function clientError(error,context='action'){const text=clientErrorMessage(error,context);const suffix=typeof error==='string'?error.match(/Error (CA-\d{3})(?: · Reference (CAI-[A-F0-9]{12}))?/):null;if(suffix)return text+' Error '+suffix[1]+(suffix[2]?' · Reference '+suffix[2]:'');return /^CA-\d{3}$/.test(error?.clientCode||'')?text+' Error '+error.clientCode+(error.reference?' · Reference '+error.reference:''):text;}
+ const TECHNICAL=/\b(?:creative|brand|product|resp)_[a-z0-9_-]{8,}|\b(?:creative|brand|product|asset)-[a-f0-9-]{16,}|schema|token.?limit|provider|agent output|GPT[- ]|Gemini|ECONN|ENOENT|fetch failed|Failed to fetch|TypeError|SyntaxError|JSON|stack trace|HTTP \d|Request failed \(|<html|\/Users\/|\bat \w+ \(/i;
+ // Programming failures that can reach a 400 answer without a code; never shown as a brief correction.
+ const INTERNAL=/Cannot read propert|is not (?:a function|defined|iterable|a constructor)|\bundefined\b|\bnull\b|Unexpected token|Maximum call stack|EACCES|EISDIR|\/app\/|\.js\b/i;
  function clientErrorMessage(error,context='action'){
   const raw=String(error?.message||error?.error||error||'');
   const fallback={image:'We couldn’t load this image. Your work is safe.',save:'We couldn’t save your changes. Retry saving or download a recovery file.',editor:'We couldn’t prepare your design for editing. Your original is safe. Retry opening it.',generation:'We couldn’t finish this design. Your brief is saved. Check status before trying again.',download:'We couldn’t prepare this download. Retry or return to your creative.',readiness:'The readiness check could not finish. The service did not provide a recognisable reason. Please report this issue for investigation.',review:'We couldn’t load the review. Retry loading the details.',upload:'We couldn’t add this file. Retry or choose another file.',action:'We couldn’t complete this action. Please retry.'};
@@ -153,11 +156,17 @@
    if(/timeout|timed out|deadline/i.test(raw))return 'The readiness check took too long. Please check again shortly.';
    if(error?.status===429||error?.status===503||/HTTP (429|503)|rate limit|service unavailable/i.test(raw))return 'The readiness service is temporarily unavailable. Please check again shortly.';
    if(/The creation estimate is unavailable/i.test(raw))return 'The creation estimate could not be prepared. Check again before starting creation.';
+   // A brief that needs a change (400/422) shows the server's own sentence, written for the user, unless it looks
+   // technical (24 Nov 2026: Poonam saw "did not provide a recognisable reason" for a brief she could fix).
+   if([400,422].includes(error?.status)&&raw.trim()&&raw.length<=800&&!TECHNICAL.test(raw)&&!INTERNAL.test(raw))return clientText(raw);
    if(error?.status>=500)return 'The readiness check encountered an unexpected problem. Please report this issue so your administrator can investigate.';
   }
   if(context==='generation'){
    const ending=' Your brief is saved.';
    if(/already reserved|AMBIGUOUS_PROVIDER_REQUEST|outcome is unresolved/i.test(raw))return 'We couldn’t confirm whether the previous attempt finished. Check its status before restarting; earlier charges may still apply.';
+   // A step stopped while its pictures uploaded was never sent, so it was not charged (25 Nov 2026: the page said "earlier
+   // charges may still apply" for "… failed before paid dispatch (REFERENCE_UPLOAD_TIMEOUT)").
+   if(/before paid dispatch|nothing was charged/i.test(raw)&&/upload|transfer/i.test(raw))return (/timeout|took longer|time left/i.test(raw)?'Pictures took too long to upload':'Pictures could not be uploaded')+', so this step stopped before its paid request was sent; it was not charged.'+ending+' Review recovery options to continue; finished uploads are reused.';
    if(/fetch failed|Failed to fetch|ECONN|connection (lost|closed|reset)|network error|socket hang up/i.test(raw))return 'The connection to the creation service was interrupted.'+ending+' Check the project status before starting anything new; the earlier attempt may still be running.';
    if(/timeout|timed out|time budget|deadline/i.test(raw))return 'Creation took longer than the allowed time.'+ending+' Check the project status before starting anything new; earlier charges may still apply.';
    if(/rate limit|too many requests|HTTP 429|service unavailable|HTTP 503/i.test(raw))return 'The creation service is temporarily busy.'+ending+' Please retry shortly.';
@@ -166,7 +175,7 @@
   if(/quota|storage full|Device storage is unavailable/i.test(raw))return 'Your browser could not save this work. Keep this page open and copy or download your brief before leaving.';
   if(error?.status===409&&context==='editor')return 'This design changed while preparing it. Retry opening the latest version.';
   if(error?.status===409)return 'A newer version is available. Compare versions, load the latest, or save your changes separately.';
-  if(/\b(?:creative|brand|product|resp)_[a-z0-9_-]{8,}|\b(?:creative|brand|product|asset)-[a-f0-9-]{16,}|schema|token.?limit|provider|agent output|GPT[- ]|Gemini|ECONN|ENOENT|fetch failed|Failed to fetch|TypeError|SyntaxError|JSON|stack trace|HTTP \d|Request failed \(|<html|\/Users\/|\bat \w+ \(/i.test(raw))return fallback[context]||fallback.action;
+  if(TECHNICAL.test(raw))return fallback[context]||fallback.action;
   // Local, actionable validation remains useful (sizes, locked selections, missing inputs).
   if(/^(We couldn’t|A newer version|The charge|Choose|Select|Unlock|Use |Add |Enter |Keep |This (design|file|image|creative|brief|draft|project|product|item|campaign)|The (design|workspace|file|image)|Your (saved|work|changes|brief|design|organisation)|File (must|could)|Image (is not readable|content)|Not added|Only |Maximum |Nothing |No (saved|image|creative|product|brand)|Unsaved changes|Upload history is only on screen|Changes only on screen|Saved locally|Save failed|Could not check the latest edit|Could not save|Some images are missing|Export blocked|Missing approved font|Original preview unavailable)/i.test(raw)&&raw.length<=500)return clientText(raw);
   return fallback[context]||fallback.action;

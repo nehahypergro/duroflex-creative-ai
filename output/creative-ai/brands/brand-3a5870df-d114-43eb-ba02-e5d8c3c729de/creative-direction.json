@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "brandId": "brand-3a5870df-d114-43eb-ba02-e5d8c3c729de",
+  "brandName": "Sleepyhead",
+  "source": "Sleepyhead client feedback, relayed by Neha on 25 Nov 2026",
+  "notes": "References named by the client: Diesel-style clothes, a Lego set, pop art and pop culture. Names stay here only as the record; prompts describe them generically, never as real brands, logos, characters or celebrities. The client's earlier Pinterest board stays saved as their source; its room advice ('quieter colour-aware alternatives') no longer reaches new designs. Casting (Neha, 25 Nov 2026): \"the models (people) need to be indian. not any other ethnicity\".",
+  "freedom": "expressive",
+  "rooms": "Rooms for people in their early 20s today: extremely colourful, dopamine-high and energetic, with contrasting colours and eccentric, playful touches: pop-art prints, a colourful building-brick toy set, neon shapes with no readable words, wavy or sculptural furniture, chunky rugs, playful lamps, plants, records and collectibles. The brand's orange appears as at least one accent (a lamp, a t-shirt, a cap, a cushion or a painting); walls do not need to be orange.",
+  "avoidColours": {
+    "text": "No light blue and no light green on walls, backdrops, floors or other large background surfaces (a competitor uses light blue). This includes sky, baby, powder, ice, pastel and duck-egg blue, and mint, sage, pistachio, seafoam and pastel green.",
+    "words": [
+      "light blue",
+      "pale blue",
+      "sky blue",
+      "sky-blue",
+      "baby blue",
+      "powder blue",
+      "ice blue",
+      "pastel blue",
+      "duck-egg",
+      "duck egg",
+      "light green",
+      "pale green",
+      "pastel green",
+      "mint",
+      "sage",
+      "pistachio",
+      "seafoam",
+      "soft sky"
+    ]
+  },
+  "ranges": [],
+  "general": {
+    "person": "Young adults in their early 20s: expressive, fun and full of personality, at ease and having a good time.",
+    "space": ""
+  },
+  "cast": "Every person is Indian: young Indian women and men with Indian features and natural Indian skin tones; expressive styling (coloured hair, braids, caps) never changes that. Never people of another ethnicity.",
+  "wardrobe": "Streetwear drip meets comfort: playful loungewear mixed with bold, colourful, fashion-forward streetwear (oversized tees and hoodies with graphics but no readable words, cargo or track pants, co-ords, colour-blocked sets) and fun accessories (caps, beanies, chunky trainers or slides, bright socks, small bags, statement jewellery), with expressive hair (colour streaks, braids, buns). Popping, contrasting colours; never generic, plain or formal.",
+  "props": {
+    "min": 3,
+    "max": 6
+  },
+  "limboColours": "Extremely bright, saturated pop colours chosen for high contrast with the product, so it pops (for example hot pink, electric orange, sunshine yellow, cobalt, violet or red, or a bright two-colour block). Never light blue or light green.",
+  "limboGraphics": "Bold, playful graphic shapes in the backdrop (circles, arcs, blobs, stars, stacked layer cards, arrows) that help explain the product's layers and features.",
+  "breathingSpace": 0.3,
+  "breathingNote": "The calm area can be a bold, solid colour (a plain wall or backdrop area); it does not need to be muted.",
+  "replacesPreferences": [
+    "preference-f21d9199-6693-4ac1-9edf-6db1851311dd",
+    "preference-bf7b59c1-87bf-41ce-88dc-984dfb4d8b54"
+  ],
+  "replacesAdvice": {
+    "ids": [
+      "spatial-world"
+    ],
+    "observations": true
+  },
+  "neverName": [
+    "Diesel",
+    "Lego"
+  ]
+}

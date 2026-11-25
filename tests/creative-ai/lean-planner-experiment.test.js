@@ -7,7 +7,10 @@ test('identity citations allow a plain product CTA but never invented benefits o
   const product={id:'product-1',name,facts:[],variant:{id:'variant-1',name:'Queen'}};
   assert.doesNotThrow(()=>validateCitations([{role:'cta',text:'Explore '+name,factIds:['product-1']}],product));
   for(const text of ['Explore pain relief','Shop for ₹100','Explore','Explore '+name+' award-winning'])assert.throws(()=>validateCitations([{role:'cta',text,factIds:['product-1']}],product),/identity citation/);
-  assert.throws(()=>validateCitations([{role:'headline',text:'Explore '+name,factIds:['product-1']}],product),/identity citation/);
+  // 25 Nov 2026 (Neha: "Yes, fix both", sale banners): plain invitation words may sit beside the name on any line, so
+  // "Explore <name>" is a valid headline; claim words beside the name still fail.
+  assert.doesNotThrow(()=>validateCitations([{role:'headline',text:'Explore '+name,factIds:['product-1']}],product));
+  assert.throws(()=>validateCitations([{role:'headline',text:'Explore '+name+' award-winning',factIds:['product-1']}],product),/identity citation/);
  }
 });
 const {format}=require('../../lib/creative-ai/experiments/lean-planner/formats');

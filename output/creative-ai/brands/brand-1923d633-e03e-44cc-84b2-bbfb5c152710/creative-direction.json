@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "brandId": "brand-1923d633-e03e-44cc-84b2-bbfb5c152710",
+  "brandName": "Duroflex",
+  "source": "Duroflex client feedback, relayed by Neha on 25 Nov 2026",
+  "notes": "Wardrobe references named by the client: Alo and Skims fitwear ('clean girl' aesthetic), for women and men. Brand names are kept here only as the record; they are never sent to the planner or the image model, so those brands' logos are not drawn. Casting (Neha, 25 Nov 2026): \"the models (people) need to be indian. not any other ethnicity\".",
+  "freedom": "guided",
+  "rooms": "Japandi, Scandinavian or earthy contemporary spaces: natural materials (light and mid-tone wood, linen, cotton, jute, cane, stone, clay), warm natural daylight, calm and uncluttered, with one small pop of colour where it helps (for example a terracotta, ochre, rust or deep olive cushion, throw or vase).",
+  "avoidColours": {
+    "text": "No light blue and no light green on walls, backdrops, floors or other large background surfaces (a competitor uses light blue). This includes sky, baby, powder, ice, pastel and duck-egg blue, and mint, sage, pistachio, seafoam and pastel green.",
+    "words": [
+      "light blue",
+      "pale blue",
+      "sky blue",
+      "sky-blue",
+      "baby blue",
+      "powder blue",
+      "ice blue",
+      "pastel blue",
+      "duck-egg",
+      "duck egg",
+      "light green",
+      "pale green",
+      "pastel green",
+      "mint",
+      "sage",
+      "pistachio",
+      "seafoam",
+      "soft sky"
+    ]
+  },
+  "ranges": [
+    {
+      "id": "duropedic",
+      "name": "Duropedic",
+      "match": [
+        "\\bduropedic\\b"
+      ],
+      "person": "Someone fit and active who works out and takes care of their body: an athletic, healthy build and an energetic, confident look.",
+      "space": "A clean, contemporary, light-filled space with an active-lifestyle feel, for example a rolled yoga mat by the wall, clean trainers or a water bottle, in warm neutral and earthy tones."
+    },
+    {
+      "id": "natural-living",
+      "name": "Natural living (LiveIn, Energise and the Natural Living range)",
+      "match": [
+        "\\blive ?in\\b",
+        "\\benergi[sz]e (collection|range)\\b",
+        "\\bnatural living\\b"
+      ],
+      "person": "Someone who lives sustainably and close to nature: relaxed, mindful and at ease.",
+      "space": "An earthy, natural space: raw and light wood, linen, jute and cane, terracotta and clay, indoor plants and plenty of natural daylight."
+    }
+  ],
+  "general": {
+    "person": "",
+    "space": ""
+  },
+  "cast": "Every person is Indian: Indian women and men (and children when a page shows a family) with Indian features and natural Indian skin tones. Never people of another ethnicity.",
+  "wardrobe": "Clean, fitted athleisure in a polished 'clean girl' fitwear style, for women and men: sculpted seamless or ribbed sets (a fitted top with high-waist leggings or wide-leg lounge pants; for men a fitted tee or henley with joggers or relaxed lounge pants), in matching neutral or earthy tones (bone, oat, taupe, mocha, chocolate, charcoal, black, deep olive), smooth premium fabric with no prints, words or logos. Polished and minimal: neat or slicked-back hair, fresh natural skin, minimal gold jewellery; barefoot or in clean minimal slides at home.",
+  "props": {
+    "min": 1,
+    "max": 3
+  },
+  "limboColours": "One solid, warm or earthy colour: sand, oat, warm stone, clay, terracotta, ochre, rust, deep olive, charcoal or warm white; a stronger pop (terracotta, mustard or burnt orange) when the page needs energy. Never light blue or light green.",
+  "limboGraphics": "Graphics stay calm and minimal: thin lines, small arrows or soft layer outlines, only where a feature needs explaining.",
+  "breathingSpace": 0.3,
+  "replacesPreferences": [
+    "preference-c7ff3af2-75a3-4b40-b44f-d8ec599d8a9d"
+  ],
+  "replacesAdvice": null,
+  "neverName": [
+    "Alo",
+    "Skims"
+  ]
+}
