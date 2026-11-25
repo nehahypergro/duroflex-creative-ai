@@ -74,3 +74,13 @@ There is no new step per design:
 - Each drawing gets one more reference picture (the texture close-up).
 - Casting is one more question in the same check.
 - The photo reading runs once per product and is then reused.
+
+## After the variety batch (25 Nov 2026)
+
+Neha's local batch made 6 designs per brand. It showed four gaps. Neha said "Yes, all four"; new jobs pin each fix.
+
+- **Variety memory** (`varietyVersion: 1`). Each brand remembers the scenes its recent designs used: room or backdrop, the named pieces and the outfits. The planner sees the brand's 8 most recent designs, from any product, and is asked to make the next one clearly different within the brand's direction. It writes each person's outfit in `scene.wardrobe`, and the image brief names that outfit. This is guidance only, with no pass/fail check. Each brand's memory stays in its own folder.
+- **Duroflex's pop of colour.** Duroflex's file now names its "little pop": one small, clearly visible object in a richer accent colour. The planner writes it in `scene.pop` and the image brief asks for it. It is not checked, because taste is not pass/fail. Sleepyhead's file has no pop line, since expressive rooms already carry colour.
+- **Backup planner room** (`backupRoomVersion: 1`). When the backup planner takes over, it gets 30,000 tokens of answer room instead of 12,500. Unused room costs nothing.
+- **Layer stacks** (`layerStackVersion: 1`). When the product's construction picture is attached, the planner keeps the whole layer stack and its labels inside the canvas. A stack cut by an edge is redrawn narrower.
+
