@@ -138,6 +138,11 @@
   - **Older tests:** the 11 Nov short-name and 25 Nov sale-banner tests now run as jobs admitted before `adNameVersion` (their contract is unchanged).
   - **Replay:** 158 saved accepted plans pass before and after (`e30c5b06` failed before too).
   - **Commit note:** both brands' `creative-direction.json` changed; add them with `git add -f`.
+- **Members could not create** (27 Nov 2026, hosted Studio: Poonam and Kedar; shared, no pin; `tests/admin/studio-access.test.js` "members create in both brands").
+  - **What they saw:** Check brief said "INR estimate unavailable: no completed run of this brand to scale from", and Create always failed with Error CA-101, so the brief stayed a draft. No member had ever created a design on the hosted Studio.
+  - **Why:** inside a member's own request (readiness, Create), the job store's own scans read projects through the view-only rule (`studio-access.mount` wraps `store.read`), so every teammate's project was hidden. The list behind the estimate skipped all 70 of Neha's Duroflex runs, and the duplicate-request scan at creation (`findRequest`) stopped at the first one with "Request not found." (a 404 sent as 400 → CA-101).
+  - **Fix:** `JobStore.list` and `findRequest` read saved files with `readSaved`; `read` (opening or changing a teammate's project) keeps the view-only rule. Real readiness replayed locally as a member, before and after, in both brands: 0 → 404 projects scanned, "Request not found" → passes, no estimate → ₹24–₹42 (Duroflex) and ₹22–₹50 (Sleepyhead), the same as an admin.
+  - Reaches the hosted Studio with the next redeploy; saved drafts can then be created again.
 
 ## Readiness matrix and brief options (15 Nov 2026)
 

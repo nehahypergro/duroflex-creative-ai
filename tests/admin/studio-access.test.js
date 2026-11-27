@@ -30,6 +30,26 @@ test('members can read a brief, add an official product and make push icons; bra
 });
 test('cross-site writes and tabs belonging to another signed-in account are rejected',async()=>{assert.equal((await request('/creative-ai/api/studio/generate',{method:'POST',body:{},origin:'https://untrusted.example'})).status,403);assert.equal((await request('/creative-ai/api/jobs',{account:b.id})).status,409);});
 test('new job attribution is server-owned and survives updates for both brands',async()=>{for(const brand of app.policy.config.brands){const owner=brand.name==='Duroflex'?a:b;const job=await context.run({actor:owner,submittedBrief:{brief:'Original brief'}},()=>app.runtime.store.create({brandId:brand.id,brandUrl:brand.brandUrl,brief:'Canonical brief',conceptRoutes:['continuity']},{maxReasoningCalls:1,jobTimeoutMs:1000},[]));assert.equal(job.submittedBy.id,owner.id);assert.equal(job.submittedBrief.brief,'Original brief');await app.runtime.store.update(job.id,j=>{j.status='finished';return j;});assert.equal((await app.runtime.store.read(job.id)).submittedBy.id,owner.id);}assert.equal(app.runtime.active.size,0);});
+// Hosted Studio, 27 Nov 2026 (Poonam and Kedar): every Create by a member failed with CA-101 and the brief stayed a
+// draft, and Check brief said "INR estimate unavailable: no completed run of this brand". Inside a member's own
+// request the job store's scans read teammates' projects through the view-only rule: the list (the estimate's runs)
+// left them all out, and the duplicate-request scan at creation stopped at the first one with "Request not found".
+test('members create in both brands while teammates have projects, and readiness scans teammates\' runs',async()=>{
+ for(const brand of app.policy.config.brands){
+  const scanned=(await context.run({actor:a},()=>app.runtime.store.list({metadataOnly:true}))).map(j=>j.id);
+  for(const id of ['creative-owned','creative-other','creative-legacy'])assert.ok(scanned.includes(id),brand.name+': the estimate scan sees '+id);
+  const key='studio-member-create-'+brand.name.toLowerCase();
+  const job=await context.run({actor:a,submittedBrief:{brief:'Member brief'}},()=>app.runtime.store.create({brandId:brand.id,brandUrl:brand.brandUrl,brief:'Member brief',conceptRoutes:['continuity'],requestKey:key},{maxReasoningCalls:1,jobTimeoutMs:1000},[]));
+  assert.equal(job.submittedBy.id,a.id);assert.equal(job.intake.requestKey,key);
+  // The same request again returns the member's own job; nothing is created twice.
+  const again=await context.run({actor:a,submittedBrief:{brief:'Member brief'}},()=>app.runtime.store.create({brandId:brand.id,brandUrl:brand.brandUrl,brief:'Member brief',conceptRoutes:['continuity'],requestKey:key},{maxReasoningCalls:1,jobTimeoutMs:1000},[]));
+  assert.equal(again.id,job.id);
+  await app.runtime.store.update(job.id,j=>{j.status='finished';return j;});
+ }
+ // Opening or changing a teammate's project from a member's request is unchanged.
+ await assert.rejects(context.run({actor:a},()=>app.runtime.store.read('creative-other')),{status:404});
+ assert.equal(app.runtime.active.size,0);
+});
 test('account-scoped local/session storage and IndexedDB names prevent draft mixing',async()=>{browser=await require('playwright-core').chromium.launch({executablePath:require('../browser-path.cjs')(),headless:true});const page=await browser.newPage();await page.goto(base+'/admin');await page.evaluate(sessionScript(a));await page.evaluate(()=>{CreativeAccount.storage.setItem('draft','Alice only');CreativeAccount.sessionStorage.setItem('snapshot','Alice only');});const first=await page.evaluate(()=>CreativeAccount.cacheName);await page.evaluate(sessionScript(b));assert.equal(await page.evaluate(()=>CreativeAccount.storage.getItem('draft')),null);assert.equal(await page.evaluate(()=>CreativeAccount.sessionStorage.getItem('snapshot')),null);assert.notEqual(await page.evaluate(()=>CreativeAccount.cacheName),first);await page.evaluate(sessionScript(a));assert.equal(await page.evaluate(()=>CreativeAccount.storage.getItem('draft')),'Alice only');await page.close();});
 test('worker queue is independent of the submitting HTTP account',async()=>{let seen;const store={read:async()=>({submittedBy:b}),list:async()=>[]};const runtime={store,schedule(){seen=require('../../lib/admin/context').actor();return this.store.read('other');}};require('../../lib/admin/studio-access').mount(runtime);const result=await context.run({actor:a},()=>runtime.schedule());assert.equal(seen,null);assert.equal(result.submittedBy.id,b.id);});
 
